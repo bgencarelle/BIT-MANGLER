@@ -19,7 +19,7 @@
         <register>
           <name>PWM_6_COMPARE_Reg_</name>
           <description>UDB.D0 - Assigned Compare Value</description>
-          <addressOffset>0x40006421</addressOffset>
+          <addressOffset>0x40006426</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -28,7 +28,7 @@
         <register>
           <name>PWM_6_Control_Reg</name>
           <description>UDB Control Register - Assigned Control Register Value</description>
-          <addressOffset>0x40006475</addressOffset>
+          <addressOffset>0x40006476</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -60,7 +60,7 @@
         <register>
           <name>PWM_6_STATUS_MASK</name>
           <description>UDB Status bits Interrupt Mask Enable Register</description>
-          <addressOffset>0x40006481</addressOffset>
+          <addressOffset>0x40006486</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -106,7 +106,7 @@
         <register>
           <name>PWM_6_STATUS_AUX_CTRL</name>
           <description>UDB Auxilliary Control Register</description>
-          <addressOffset>0x40006491</addressOffset>
+          <addressOffset>0x40006496</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -243,7 +243,7 @@
         <register>
           <name>PWM_8_COMPARE_Reg_</name>
           <description>UDB.D0 - Assigned Compare Value</description>
-          <addressOffset>0x4000642A</addressOffset>
+          <addressOffset>0x40006429</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -252,7 +252,7 @@
         <register>
           <name>PWM_8_Control_Reg</name>
           <description>UDB Control Register - Assigned Control Register Value</description>
-          <addressOffset>0x4000647E</addressOffset>
+          <addressOffset>0x4000647A</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -284,7 +284,7 @@
         <register>
           <name>PWM_8_STATUS_MASK</name>
           <description>UDB Status bits Interrupt Mask Enable Register</description>
-          <addressOffset>0x40006489</addressOffset>
+          <addressOffset>0x4000648A</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -330,7 +330,7 @@
         <register>
           <name>PWM_8_STATUS_AUX_CTRL</name>
           <description>UDB Auxilliary Control Register</description>
-          <addressOffset>0x4000649A</addressOffset>
+          <addressOffset>0x40006499</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -467,7 +467,7 @@
         <register>
           <name>PWM_9_Control_Reg</name>
           <description>UDB Control Register - Assigned Control Register Value</description>
-          <addressOffset>0x4000647A</addressOffset>
+          <addressOffset>0x4000647B</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -497,9 +497,18 @@
           </fields>
         </register>
         <register>
+          <name>PWM_9_COMPARE_Reg_</name>
+          <description>UDB.D0 - Assigned Compare Value</description>
+          <addressOffset>0x40006528</addressOffset>
+          <size>8</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+        <register>
           <name>PWM_9_STATUS_MASK</name>
           <description>UDB Status bits Interrupt Mask Enable Register</description>
-          <addressOffset>0x4000648A</addressOffset>
+          <addressOffset>0x40006588</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -543,18 +552,9 @@
           </fields>
         </register>
         <register>
-          <name>PWM_9_COMPARE_Reg_</name>
-          <description>UDB.D0 - Assigned Compare Value</description>
-          <addressOffset>0x40006529</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
           <name>PWM_9_STATUS_AUX_CTRL</name>
           <description>UDB Auxilliary Control Register</description>
-          <addressOffset>0x40006599</addressOffset>
+          <addressOffset>0x40006598</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -691,7 +691,7 @@
         <register>
           <name>PWM_7_COMPARE_Reg_</name>
           <description>UDB.D0 - Assigned Compare Value</description>
-          <addressOffset>0x4000652A</addressOffset>
+          <addressOffset>0x40006420</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -700,7 +700,7 @@
         <register>
           <name>PWM_7_Control_Reg</name>
           <description>UDB Control Register - Assigned Control Register Value</description>
-          <addressOffset>0x4000657A</addressOffset>
+          <addressOffset>0x40006470</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -732,7 +732,7 @@
         <register>
           <name>PWM_7_STATUS_MASK</name>
           <description>UDB Status bits Interrupt Mask Enable Register</description>
-          <addressOffset>0x4000658A</addressOffset>
+          <addressOffset>0x40006480</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -778,7 +778,7 @@
         <register>
           <name>PWM_7_STATUS_AUX_CTRL</name>
           <description>UDB Auxilliary Control Register</description>
-          <addressOffset>0x4000659A</addressOffset>
+          <addressOffset>0x40006490</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -915,7 +915,7 @@
         <register>
           <name>PWM_10_COMPARE_Reg_</name>
           <description>UDB.D0 - Assigned Compare Value</description>
-          <addressOffset>0x4000652B</addressOffset>
+          <addressOffset>0x40006529</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -924,7 +924,7 @@
         <register>
           <name>PWM_10_Control_Reg</name>
           <description>UDB Control Register - Assigned Control Register Value</description>
-          <addressOffset>0x40006578</addressOffset>
+          <addressOffset>0x40006579</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -956,7 +956,7 @@
         <register>
           <name>PWM_10_STATUS_MASK</name>
           <description>UDB Status bits Interrupt Mask Enable Register</description>
-          <addressOffset>0x40006588</addressOffset>
+          <addressOffset>0x40006589</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1002,7 +1002,7 @@
         <register>
           <name>PWM_10_STATUS_AUX_CTRL</name>
           <description>UDB Auxilliary Control Register</description>
-          <addressOffset>0x4000659B</addressOffset>
+          <addressOffset>0x40006599</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1139,7 +1139,7 @@
         <register>
           <name>PWM_11_COMPARE_Reg_</name>
           <description>UDB.D0 - Assigned Compare Value</description>
-          <addressOffset>0x40006526</addressOffset>
+          <addressOffset>0x4000652A</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1148,7 +1148,7 @@
         <register>
           <name>PWM_11_Control_Reg</name>
           <description>UDB Control Register - Assigned Control Register Value</description>
-          <addressOffset>0x40006576</addressOffset>
+          <addressOffset>0x4000657A</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1180,7 +1180,7 @@
         <register>
           <name>PWM_11_STATUS_MASK</name>
           <description>UDB Status bits Interrupt Mask Enable Register</description>
-          <addressOffset>0x40006586</addressOffset>
+          <addressOffset>0x4000658A</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1226,7 +1226,7 @@
         <register>
           <name>PWM_11_STATUS_AUX_CTRL</name>
           <description>UDB Auxilliary Control Register</description>
-          <addressOffset>0x40006596</addressOffset>
+          <addressOffset>0x4000659A</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1353,7 +1353,7 @@
     <peripheral>
       <name>ADC_1_OUT_MSB</name>
       <description>No description available</description>
-      <baseAddress>0x40006476</baseAddress>
+      <baseAddress>0x4000657B</baseAddress>
       <addressBlock>
         <offset>0</offset>
         <size>0x0</size>
@@ -1374,7 +1374,7 @@
     <peripheral>
       <name>DIV_MASK_MSB</name>
       <description>No description available</description>
-      <baseAddress>0x4000647B</baseAddress>
+      <baseAddress>0x40006479</baseAddress>
       <addressBlock>
         <offset>0</offset>
         <size>0x0</size>
@@ -1395,7 +1395,7 @@
     <peripheral>
       <name>DIV_MASK_LSB</name>
       <description>No description available</description>
-      <baseAddress>0x40006478</baseAddress>
+      <baseAddress>0x40006474</baseAddress>
       <addressBlock>
         <offset>0</offset>
         <size>0x0</size>
@@ -1416,7 +1416,7 @@
     <peripheral>
       <name>ADC_1_OUT_LSB</name>
       <description>No description available</description>
-      <baseAddress>0x40006574</baseAddress>
+      <baseAddress>0x40006577</baseAddress>
       <addressBlock>
         <offset>0</offset>
         <size>0x0</size>
@@ -1437,7 +1437,7 @@
     <peripheral>
       <name>DAC_IN_MSB</name>
       <description>No description available</description>
-      <baseAddress>0x40006465</baseAddress>
+      <baseAddress>0x40006469</baseAddress>
       <addressBlock>
         <offset>0</offset>
         <size>0x0</size>
@@ -1837,7 +1837,7 @@
         <register>
           <name>OPAMP__TR0</name>
           <description>Analog Output Buffer Trim Register 0</description>
-          <addressOffset>0x40004622</addressOffset>
+          <addressOffset>0x40004624</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1855,7 +1855,7 @@
         <register>
           <name>OPAMP__TR1</name>
           <description>Analog Output Buffer Trim Register 1</description>
-          <addressOffset>0x40004623</addressOffset>
+          <addressOffset>0x40004625</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1873,7 +1873,7 @@
         <register>
           <name>OPAMP__CR</name>
           <description>Analog Output Buffer Configuration Register</description>
-          <addressOffset>0x4000585A</addressOffset>
+          <addressOffset>0x4000585C</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -1913,7 +1913,7 @@
         <register>
           <name>OPAMP__MX</name>
           <description>Analog Buffer Input Selection Register</description>
-          <addressOffset>0x40005B42</addressOffset>
+          <addressOffset>0x40005B44</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -2042,7 +2042,7 @@
         <register>
           <name>OPAMP__SW</name>
           <description>Analog Buffer Routing Switch Register</description>
-          <addressOffset>0x40005B43</addressOffset>
+          <addressOffset>0x40005B45</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -3513,7 +3513,7 @@
         <register>
           <name>PWM_5_COMPARE_Reg_</name>
           <description>UDB.D0 - Assigned Compare Value</description>
-          <addressOffset>0x40006524</addressOffset>
+          <addressOffset>0x40006425</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -3522,7 +3522,7 @@
         <register>
           <name>PWM_5_Control_Reg</name>
           <description>UDB Control Register - Assigned Control Register Value</description>
-          <addressOffset>0x40006577</addressOffset>
+          <addressOffset>0x40006472</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -3554,7 +3554,7 @@
         <register>
           <name>PWM_5_STATUS_MASK</name>
           <description>UDB Status bits Interrupt Mask Enable Register</description>
-          <addressOffset>0x40006587</addressOffset>
+          <addressOffset>0x40006482</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -3600,7 +3600,7 @@
         <register>
           <name>PWM_5_STATUS_AUX_CTRL</name>
           <description>UDB Auxilliary Control Register</description>
-          <addressOffset>0x40006594</addressOffset>
+          <addressOffset>0x40006495</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -3737,7 +3737,7 @@
         <register>
           <name>PWM_4_COMPARE_Reg_</name>
           <description>UDB.D0 - Assigned Compare Value</description>
-          <addressOffset>0x40006422</addressOffset>
+          <addressOffset>0x40006525</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -3746,7 +3746,7 @@
         <register>
           <name>PWM_4_Control_Reg</name>
           <description>UDB Control Register - Assigned Control Register Value</description>
-          <addressOffset>0x40006472</addressOffset>
+          <addressOffset>0x40006575</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -3778,7 +3778,7 @@
         <register>
           <name>PWM_4_STATUS_MASK</name>
           <description>UDB Status bits Interrupt Mask Enable Register</description>
-          <addressOffset>0x40006482</addressOffset>
+          <addressOffset>0x40006585</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -3824,7 +3824,7 @@
         <register>
           <name>PWM_4_STATUS_AUX_CTRL</name>
           <description>UDB Auxilliary Control Register</description>
-          <addressOffset>0x40006492</addressOffset>
+          <addressOffset>0x40006595</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -4041,7 +4041,7 @@
         <register>
           <name>OPAMP__TR0</name>
           <description>Analog Output Buffer Trim Register 0</description>
-          <addressOffset>0x40004624</addressOffset>
+          <addressOffset>0x40004622</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -4059,7 +4059,7 @@
         <register>
           <name>OPAMP__TR1</name>
           <description>Analog Output Buffer Trim Register 1</description>
-          <addressOffset>0x40004625</addressOffset>
+          <addressOffset>0x40004623</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -4077,7 +4077,7 @@
         <register>
           <name>OPAMP__CR</name>
           <description>Analog Output Buffer Configuration Register</description>
-          <addressOffset>0x4000585C</addressOffset>
+          <addressOffset>0x4000585A</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -4117,7 +4117,7 @@
         <register>
           <name>OPAMP__MX</name>
           <description>Analog Buffer Input Selection Register</description>
-          <addressOffset>0x40005B44</addressOffset>
+          <addressOffset>0x40005B42</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -4246,7 +4246,7 @@
         <register>
           <name>OPAMP__SW</name>
           <description>Analog Buffer Routing Switch Register</description>
-          <addressOffset>0x40005B45</addressOffset>
+          <addressOffset>0x40005B43</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>

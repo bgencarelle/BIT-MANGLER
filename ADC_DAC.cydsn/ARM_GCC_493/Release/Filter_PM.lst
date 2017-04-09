@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccJOEH9X.s 			page 1
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccSAepFc.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccJOEH9X.s 			page 1
   17:Generated_Source\PSoC5/Filter_PM.c **** #include "Filter_PVT.h"
   18:Generated_Source\PSoC5/Filter_PM.c **** 
   19:Generated_Source\PSoC5/Filter_PM.c **** static Filter_backupStruct  Filter_backup = 
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccJOEH9X.s 			page 2
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccSAepFc.s 			page 2
 
 
   20:Generated_Source\PSoC5/Filter_PM.c **** {
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccJOEH9X.s 			page 1
   50:Generated_Source\PSoC5/Filter_PM.c **** 
   51:Generated_Source\PSoC5/Filter_PM.c ****     /* Put DFB RAM on the bus */
   52:Generated_Source\PSoC5/Filter_PM.c ****     Filter_RAM_DIR_REG = Filter_RAM_DIR_BUS;
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccJOEH9X.s 			page 3
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccSAepFc.s 			page 3
 
 
   59              		.loc 1 52 0
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccJOEH9X.s 			page 1
  105              		.thumb_func
  106              		.type	Filter_RestoreConfig, %function
  107              	Filter_RestoreConfig:
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccJOEH9X.s 			page 4
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccSAepFc.s 			page 4
 
 
  108              	.LFB1:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccJOEH9X.s 			page 1
  134 0018 1B78     		ldrb	r3, [r3]
  135 001a DBB2     		uxtb	r3, r3
  136 001c 43F01003 		orr	r3, r3, #16
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccJOEH9X.s 			page 5
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccSAepFc.s 			page 5
 
 
  137 0020 DBB2     		uxtb	r3, r3
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccJOEH9X.s 			page 1
  180              	.LFE1:
  181              		.size	Filter_RestoreConfig, .-Filter_RestoreConfig
  182              		.section	.text.Filter_Sleep,"ax",%progbits
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccJOEH9X.s 			page 6
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccSAepFc.s 			page 6
 
 
  183              		.align	2
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccJOEH9X.s 			page 1
  209 0014 0122     		movs	r2, #1
  210 0016 1A70     		strb	r2, [r3]
  211 0018 02E0     		b	.L9
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccJOEH9X.s 			page 7
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccSAepFc.s 			page 7
 
 
  212              	.L8:
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccJOEH9X.s 			page 1
  154:Generated_Source\PSoC5/Filter_PM.c **** * Return: 
  155:Generated_Source\PSoC5/Filter_PM.c **** *  void
  156:Generated_Source\PSoC5/Filter_PM.c **** *
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccJOEH9X.s 			page 8
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccSAepFc.s 			page 8
 
 
  157:Generated_Source\PSoC5/Filter_PM.c **** * Global variables:
@@ -477,13 +477,13 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccJOEH9X.s 			page 1
  277 0006 00000000 		.4byte	.Ldebug_abbrev0
  278 000a 04       		.byte	0x4
  279 000b 01       		.uleb128 0x1
- 280 000c 03010000 		.4byte	.LASF24
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccJOEH9X.s 			page 9
+ 280 000c 52010000 		.4byte	.LASF24
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccSAepFc.s 			page 9
 
 
  281 0010 01       		.byte	0x1
- 282 0011 EF010000 		.4byte	.LASF25
- 283 0015 9B010000 		.4byte	.LASF26
+ 282 0011 EA010000 		.4byte	.LASF25
+ 283 0015 05000000 		.4byte	.LASF26
  284 0019 00000000 		.4byte	.Ldebug_ranges0+0
  285 001d 00000000 		.4byte	0
  286 0021 00000000 		.4byte	.Ldebug_line0
@@ -494,70 +494,70 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccJOEH9X.s 			page 1
  291 002c 03       		.uleb128 0x3
  292 002d 04       		.byte	0x4
  293 002e 07       		.byte	0x7
- 294 002f AF000000 		.4byte	.LASF0
+ 294 002f FE000000 		.4byte	.LASF0
  295 0033 03       		.uleb128 0x3
  296 0034 01       		.byte	0x1
  297 0035 06       		.byte	0x6
- 298 0036 27020000 		.4byte	.LASF1
+ 298 0036 22020000 		.4byte	.LASF1
  299 003a 03       		.uleb128 0x3
  300 003b 01       		.byte	0x1
  301 003c 08       		.byte	0x8
- 302 003d 48000000 		.4byte	.LASF2
+ 302 003d 97000000 		.4byte	.LASF2
  303 0041 03       		.uleb128 0x3
  304 0042 02       		.byte	0x2
  305 0043 05       		.byte	0x5
- 306 0044 91010000 		.4byte	.LASF3
+ 306 0044 E0010000 		.4byte	.LASF3
  307 0048 03       		.uleb128 0x3
  308 0049 02       		.byte	0x2
  309 004a 07       		.byte	0x7
- 310 004b 12000000 		.4byte	.LASF4
+ 310 004b 61000000 		.4byte	.LASF4
  311 004f 03       		.uleb128 0x3
  312 0050 04       		.byte	0x4
  313 0051 05       		.byte	0x5
- 314 0052 12020000 		.4byte	.LASF5
+ 314 0052 0D020000 		.4byte	.LASF5
  315 0056 03       		.uleb128 0x3
  316 0057 04       		.byte	0x4
  317 0058 07       		.byte	0x7
- 318 0059 5B000000 		.4byte	.LASF6
+ 318 0059 AA000000 		.4byte	.LASF6
  319 005d 03       		.uleb128 0x3
  320 005e 08       		.byte	0x8
  321 005f 05       		.byte	0x5
- 322 0060 F0000000 		.4byte	.LASF7
+ 322 0060 3F010000 		.4byte	.LASF7
  323 0064 03       		.uleb128 0x3
  324 0065 08       		.byte	0x8
  325 0066 07       		.byte	0x7
- 326 0067 D0000000 		.4byte	.LASF8
+ 326 0067 1F010000 		.4byte	.LASF8
  327 006b 03       		.uleb128 0x3
  328 006c 04       		.byte	0x4
  329 006d 07       		.byte	0x7
- 330 006e E7000000 		.4byte	.LASF9
+ 330 006e 36010000 		.4byte	.LASF9
  331 0072 03       		.uleb128 0x3
  332 0073 01       		.byte	0x1
  333 0074 08       		.byte	0x8
- 334 0075 FE000000 		.4byte	.LASF10
+ 334 0075 4D010000 		.4byte	.LASF10
  335 0079 04       		.uleb128 0x4
- 336 007a 6D000000 		.4byte	.LASF11
+ 336 007a BC000000 		.4byte	.LASF11
  337 007e 02       		.byte	0x2
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccJOEH9X.s 			page 10
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccSAepFc.s 			page 10
 
 
  338 007f 9201     		.2byte	0x192
  339 0081 3A000000 		.4byte	0x3a
  340 0085 04       		.uleb128 0x4
- 341 0086 A8000000 		.4byte	.LASF12
+ 341 0086 F7000000 		.4byte	.LASF12
  342 008a 02       		.byte	0x2
  343 008b 9301     		.2byte	0x193
  344 008d 48000000 		.4byte	0x48
  345 0091 03       		.uleb128 0x3
  346 0092 04       		.byte	0x4
  347 0093 04       		.byte	0x4
- 348 0094 3A000000 		.4byte	.LASF13
+ 348 0094 89000000 		.4byte	.LASF13
  349 0098 03       		.uleb128 0x3
  350 0099 08       		.byte	0x8
  351 009a 04       		.byte	0x4
- 352 009b 81000000 		.4byte	.LASF14
+ 352 009b D0000000 		.4byte	.LASF14
  353 009f 04       		.uleb128 0x4
- 354 00a0 56000000 		.4byte	.LASF15
+ 354 00a0 A5000000 		.4byte	.LASF15
  355 00a4 02       		.byte	0x2
  356 00a5 3C02     		.2byte	0x23c
  357 00a7 AB000000 		.4byte	0xab
@@ -569,7 +569,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccJOEH9X.s 			page 1
  363 00b3 30       		.byte	0x30
  364 00b4 F3000000 		.4byte	0xf3
  365 00b8 07       		.uleb128 0x7
- 366 00b9 1B020000 		.4byte	.LASF16
+ 366 00b9 16020000 		.4byte	.LASF16
  367 00bd 03       		.byte	0x3
  368 00be 32       		.byte	0x32
  369 00bf 79000000 		.4byte	0x79
@@ -593,12 +593,12 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccJOEH9X.s 			page 1
  387 00e1 79000000 		.4byte	0x79
  388 00e5 03       		.byte	0x3
  389 00e6 07       		.uleb128 0x7
- 390 00e7 40000000 		.4byte	.LASF18
+ 390 00e7 8F000000 		.4byte	.LASF18
  391 00eb 03       		.byte	0x3
  392 00ec 36       		.byte	0x36
  393 00ed F3000000 		.4byte	0xf3
  394 00f1 04       		.byte	0x4
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccJOEH9X.s 			page 11
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccSAepFc.s 			page 11
 
 
  395 00f2 00       		.byte	0
@@ -610,12 +610,12 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccJOEH9X.s 			page 1
  401 0101 3F       		.byte	0x3f
  402 0102 00       		.byte	0
  403 0103 0B       		.uleb128 0xb
- 404 0104 BC000000 		.4byte	.LASF19
+ 404 0104 0B010000 		.4byte	.LASF19
  405 0108 03       		.byte	0x3
  406 0109 37       		.byte	0x37
  407 010a B0000000 		.4byte	0xb0
  408 010e 0C       		.uleb128 0xc
- 409 010f 88000000 		.4byte	.LASF20
+ 409 010f D7000000 		.4byte	.LASF20
  410 0113 01       		.byte	0x1
  411 0114 2E       		.byte	0x2e
  412 0115 00000000 		.4byte	.LFB0
@@ -623,7 +623,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccJOEH9X.s 			page 1
  414 011d 01       		.uleb128 0x1
  415 011e 9C       		.byte	0x9c
  416 011f 0C       		.uleb128 0xc
- 417 0120 25000000 		.4byte	.LASF21
+ 417 0120 74000000 		.4byte	.LASF21
  418 0124 01       		.byte	0x1
  419 0125 52       		.byte	0x52
  420 0126 00000000 		.4byte	.LFB1
@@ -631,7 +631,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccJOEH9X.s 			page 1
  422 012e 01       		.uleb128 0x1
  423 012f 9C       		.byte	0x9c
  424 0130 0D       		.uleb128 0xd
- 425 0131 05000000 		.4byte	.LASF22
+ 425 0131 54000000 		.4byte	.LASF22
  426 0135 01       		.byte	0x1
  427 0136 79       		.byte	0x79
  428 0137 00000000 		.4byte	.LFB2
@@ -639,7 +639,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccJOEH9X.s 			page 1
  430 013f 01       		.uleb128 0x1
  431 0140 9C       		.byte	0x9c
  432 0141 0D       		.uleb128 0xd
- 433 0142 73000000 		.4byte	.LASF23
+ 433 0142 C2000000 		.4byte	.LASF23
  434 0146 01       		.byte	0x1
  435 0147 A2       		.byte	0xa2
  436 0148 00000000 		.4byte	.LFB3
@@ -647,7 +647,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccJOEH9X.s 			page 1
  438 0150 01       		.uleb128 0x1
  439 0151 9C       		.byte	0x9c
  440 0152 0E       		.uleb128 0xe
- 441 0153 9A000000 		.4byte	.LASF27
+ 441 0153 E9000000 		.4byte	.LASF27
  442 0157 01       		.byte	0x1
  443 0158 13       		.byte	0x13
  444 0159 03010000 		.4byte	0x103
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccJOEH9X.s 			page 1
  449              		.section	.debug_abbrev,"",%progbits
  450              	.Ldebug_abbrev0:
  451 0000 01       		.uleb128 0x1
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccJOEH9X.s 			page 12
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccSAepFc.s 			page 12
 
 
  452 0001 11       		.uleb128 0x11
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccJOEH9X.s 			page 1
  506 0037 35       		.uleb128 0x35
  507 0038 00       		.byte	0
  508 0039 49       		.uleb128 0x49
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccJOEH9X.s 			page 13
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccSAepFc.s 			page 13
 
 
  509 003a 13       		.uleb128 0x13
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccJOEH9X.s 			page 1
  563 0070 00       		.byte	0
  564 0071 0A       		.uleb128 0xa
  565 0072 21       		.uleb128 0x21
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccJOEH9X.s 			page 14
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccSAepFc.s 			page 14
 
 
  566 0073 00       		.byte	0
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccJOEH9X.s 			page 1
  620 00aa 27       		.uleb128 0x27
  621 00ab 19       		.uleb128 0x19
  622 00ac 11       		.uleb128 0x11
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccJOEH9X.s 			page 15
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccSAepFc.s 			page 15
 
 
  623 00ad 01       		.uleb128 0x1
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccJOEH9X.s 			page 1
  677 0024 00000000 		.4byte	0
  678              		.section	.debug_line,"",%progbits
  679              	.Ldebug_line0:
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccJOEH9X.s 			page 16
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccSAepFc.s 			page 16
 
 
  680 0000 AE000000 		.section	.debug_str,"MS",%progbits,1
@@ -909,150 +909,150 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccJOEH9X.s 			page 1
  681              	.LASF17:
  682 0000 73656D61 		.ascii	"sema\000"
  682      00
- 683              	.LASF22:
- 684 0005 46696C74 		.ascii	"Filter_Sleep\000"
- 684      65725F53 
- 684      6C656570 
- 684      00
- 685              	.LASF4:
- 686 0012 73686F72 		.ascii	"short unsigned int\000"
- 686      7420756E 
- 686      7369676E 
- 686      65642069 
- 686      6E7400
- 687              	.LASF21:
- 688 0025 46696C74 		.ascii	"Filter_RestoreConfig\000"
- 688      65725F52 
- 688      6573746F 
- 688      7265436F 
- 688      6E666967 
- 689              	.LASF13:
- 690 003a 666C6F61 		.ascii	"float\000"
- 690      7400
- 691              	.LASF18:
- 692 0040 73617665 		.ascii	"saveAcu\000"
- 692      41637500 
- 693              	.LASF2:
- 694 0048 756E7369 		.ascii	"unsigned char\000"
- 694      676E6564 
- 694      20636861 
- 694      7200
- 695              	.LASF15:
- 696 0056 72656738 		.ascii	"reg8\000"
- 696      00
- 697              	.LASF6:
- 698 005b 6C6F6E67 		.ascii	"long unsigned int\000"
- 698      20756E73 
- 698      69676E65 
- 698      6420696E 
- 698      7400
- 699              	.LASF11:
- 700 006d 75696E74 		.ascii	"uint8\000"
- 700      3800
- 701              	.LASF23:
- 702 0073 46696C74 		.ascii	"Filter_Wakeup\000"
- 702      65725F57 
- 702      616B6575 
- 702      7000
- 703              	.LASF14:
- 704 0081 646F7562 		.ascii	"double\000"
- 704      6C6500
- 705              	.LASF20:
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccJOEH9X.s 			page 17
+ 683              	.LASF26:
+ 684 0005 433A5C55 		.ascii	"C:\\Users\\ben\\Documents\\PSoC Creator\\New Pedal "
+ 684      73657273 
+ 684      5C62656E 
+ 684      5C446F63 
+ 684      756D656E 
+ 685 0033 5468696E 		.ascii	"Thingz\\BIT-MANGLER\\ADC_DAC.cydsn\000"
+ 685      677A5C42 
+ 685      49542D4D 
+ 685      414E474C 
+ 685      45525C41 
+ 686              	.LASF22:
+ 687 0054 46696C74 		.ascii	"Filter_Sleep\000"
+ 687      65725F53 
+ 687      6C656570 
+ 687      00
+ 688              	.LASF4:
+ 689 0061 73686F72 		.ascii	"short unsigned int\000"
+ 689      7420756E 
+ 689      7369676E 
+ 689      65642069 
+ 689      6E7400
+ 690              	.LASF21:
+ 691 0074 46696C74 		.ascii	"Filter_RestoreConfig\000"
+ 691      65725F52 
+ 691      6573746F 
+ 691      7265436F 
+ 691      6E666967 
+ 692              	.LASF13:
+ 693 0089 666C6F61 		.ascii	"float\000"
+ 693      7400
+ 694              	.LASF18:
+ 695 008f 73617665 		.ascii	"saveAcu\000"
+ 695      41637500 
+ 696              	.LASF2:
+ 697 0097 756E7369 		.ascii	"unsigned char\000"
+ 697      676E6564 
+ 697      20636861 
+ 697      7200
+ 698              	.LASF15:
+ 699 00a5 72656738 		.ascii	"reg8\000"
+ 699      00
+ 700              	.LASF6:
+ 701 00aa 6C6F6E67 		.ascii	"long unsigned int\000"
+ 701      20756E73 
+ 701      69676E65 
+ 701      6420696E 
+ 701      7400
+ 702              	.LASF11:
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccSAepFc.s 			page 17
 
 
- 706 0088 46696C74 		.ascii	"Filter_SaveConfig\000"
- 706      65725F53 
- 706      61766543 
- 706      6F6E6669 
- 706      6700
- 707              	.LASF27:
- 708 009a 46696C74 		.ascii	"Filter_backup\000"
- 708      65725F62 
- 708      61636B75 
- 708      7000
- 709              	.LASF12:
- 710 00a8 75696E74 		.ascii	"uint16\000"
- 710      313600
- 711              	.LASF0:
- 712 00af 756E7369 		.ascii	"unsigned int\000"
- 712      676E6564 
- 712      20696E74 
- 712      00
- 713              	.LASF19:
- 714 00bc 46696C74 		.ascii	"Filter_backupStruct\000"
- 714      65725F62 
- 714      61636B75 
- 714      70537472 
- 714      75637400 
- 715              	.LASF8:
- 716 00d0 6C6F6E67 		.ascii	"long long unsigned int\000"
- 716      206C6F6E 
- 716      6720756E 
- 716      7369676E 
- 716      65642069 
- 717              	.LASF9:
- 718 00e7 73697A65 		.ascii	"sizetype\000"
- 718      74797065 
- 718      00
- 719              	.LASF7:
- 720 00f0 6C6F6E67 		.ascii	"long long int\000"
- 720      206C6F6E 
- 720      6720696E 
- 720      7400
- 721              	.LASF10:
- 722 00fe 63686172 		.ascii	"char\000"
- 722      00
- 723              	.LASF24:
- 724 0103 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 724      4320342E 
- 724      392E3320 
- 724      32303135 
- 724      30333033 
- 725 0136 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 725      20726576 
- 725      6973696F 
- 725      6E203232 
- 725      31323230 
- 726 0169 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
- 726      66756E63 
- 726      74696F6E 
- 726      2D736563 
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccJOEH9X.s 			page 18
+ 703 00bc 75696E74 		.ascii	"uint8\000"
+ 703      3800
+ 704              	.LASF23:
+ 705 00c2 46696C74 		.ascii	"Filter_Wakeup\000"
+ 705      65725F57 
+ 705      616B6575 
+ 705      7000
+ 706              	.LASF14:
+ 707 00d0 646F7562 		.ascii	"double\000"
+ 707      6C6500
+ 708              	.LASF20:
+ 709 00d7 46696C74 		.ascii	"Filter_SaveConfig\000"
+ 709      65725F53 
+ 709      61766543 
+ 709      6F6E6669 
+ 709      6700
+ 710              	.LASF27:
+ 711 00e9 46696C74 		.ascii	"Filter_backup\000"
+ 711      65725F62 
+ 711      61636B75 
+ 711      7000
+ 712              	.LASF12:
+ 713 00f7 75696E74 		.ascii	"uint16\000"
+ 713      313600
+ 714              	.LASF0:
+ 715 00fe 756E7369 		.ascii	"unsigned int\000"
+ 715      676E6564 
+ 715      20696E74 
+ 715      00
+ 716              	.LASF19:
+ 717 010b 46696C74 		.ascii	"Filter_backupStruct\000"
+ 717      65725F62 
+ 717      61636B75 
+ 717      70537472 
+ 717      75637400 
+ 718              	.LASF8:
+ 719 011f 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 719      206C6F6E 
+ 719      6720756E 
+ 719      7369676E 
+ 719      65642069 
+ 720              	.LASF9:
+ 721 0136 73697A65 		.ascii	"sizetype\000"
+ 721      74797065 
+ 721      00
+ 722              	.LASF7:
+ 723 013f 6C6F6E67 		.ascii	"long long int\000"
+ 723      206C6F6E 
+ 723      6720696E 
+ 723      7400
+ 724              	.LASF10:
+ 725 014d 63686172 		.ascii	"char\000"
+ 725      00
+ 726              	.LASF24:
+ 727 0152 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 727      4320342E 
+ 727      392E3320 
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccSAepFc.s 			page 18
 
 
- 726      74696F6E 
- 727              	.LASF3:
- 728 0191 73686F72 		.ascii	"short int\000"
- 728      7420696E 
- 728      7400
- 729              	.LASF26:
- 730 019b 433A5C55 		.ascii	"C:\\Users\\ben\\Documents\\PSoC Creator\\New Pedal "
- 730      73657273 
- 730      5C62656E 
- 730      5C446F63 
- 730      756D656E 
- 731 01c9 5468696E 		.ascii	"Thingz\\PSOC_BIT_MANGLER\\ADC_DAC.cydsn\000"
- 731      677A5C50 
- 731      534F435F 
- 731      4249545F 
- 731      4D414E47 
+ 727      32303135 
+ 727      30333033 
+ 728 0185 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 728      20726576 
+ 728      6973696F 
+ 728      6E203232 
+ 728      31323230 
+ 729 01b8 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 729      66756E63 
+ 729      74696F6E 
+ 729      2D736563 
+ 729      74696F6E 
+ 730              	.LASF3:
+ 731 01e0 73686F72 		.ascii	"short int\000"
+ 731      7420696E 
+ 731      7400
  732              	.LASF25:
- 733 01ef 47656E65 		.ascii	"Generated_Source\\PSoC5\\Filter_PM.c\000"
+ 733 01ea 47656E65 		.ascii	"Generated_Source\\PSoC5\\Filter_PM.c\000"
  733      72617465 
  733      645F536F 
  733      75726365 
  733      5C50536F 
  734              	.LASF5:
- 735 0212 6C6F6E67 		.ascii	"long int\000"
+ 735 020d 6C6F6E67 		.ascii	"long int\000"
  735      20696E74 
  735      00
  736              	.LASF16:
- 737 021b 656E6162 		.ascii	"enableState\000"
+ 737 0216 656E6162 		.ascii	"enableState\000"
  737      6C655374 
  737      61746500 
  738              	.LASF1:
- 739 0227 7369676E 		.ascii	"signed char\000"
+ 739 0222 7369676E 		.ascii	"signed char\000"
  739      65642063 
  739      68617200 
  740              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

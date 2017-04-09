@@ -8,20 +8,20 @@
     <block name="OneTerminal_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="vmCompare" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="PWMUDB" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <register name="PWM_6_COMPARE_Reg_" address="0x40006421" bitWidth="8" desc="UDB.D0 - Assigned Compare Value" hidden="false" />
-    <register name="PWM_6_Control_Reg" address="0x40006475" bitWidth="8" desc="UDB Control Register - Assigned Control Register Value" hidden="false">
+    <register name="PWM_6_COMPARE_Reg_" address="0x40006426" bitWidth="8" desc="UDB.D0 - Assigned Compare Value" hidden="false" />
+    <register name="PWM_6_Control_Reg" address="0x40006476" bitWidth="8" desc="UDB Control Register - Assigned Control Register Value" hidden="false">
       <field name="CTRL_ENABLE" from="7" to="7" access="RW" resetVal="" desc="Enable the PWM" hidden="false" />
       <field name="CTRL_CMPMODE2" from="5" to="3" access="RW" resetVal="" desc="Compare mode 2" hidden="false" />
       <field name="CTRL_CMPMODE1" from="2" to="0" access="RW" resetVal="" desc="Compare mode 1" hidden="false" />
     </register>
-    <register name="PWM_6_STATUS_MASK" address="0x40006481" bitWidth="8" desc="UDB Status bits Interrupt Mask Enable Register" hidden="false">
+    <register name="PWM_6_STATUS_MASK" address="0x40006486" bitWidth="8" desc="UDB Status bits Interrupt Mask Enable Register" hidden="false">
       <field name="PWM_STS_CMP1" from="0" to="0" access="R" resetVal="" desc="Enables the Interrupt on Compare 1" hidden="false" />
       <field name="PWM_STS_CMP2" from="1" to="1" access="R" resetVal="" desc="Enables the Interrupt on Compare 2" hidden="false" />
       <field name="PWM_STS_TC" from="2" to="2" access="R" resetVal="" desc="Enables the Interrupt on Terminal Count" hidden="false" />
       <field name="PWM_STS_FIFO_FULL" from="3" to="3" access="R" resetVal="" desc="FIFO Full Status Mask " hidden="false" />
       <field name="PWM_STS_KILL" from="5" to="5" access="R" resetVal="" desc="Enables the Interrupt on Kill" hidden="false" />
     </register>
-    <register name="PWM_6_STATUS_AUX_CTRL" address="0x40006491" bitWidth="8" desc="UDB Auxilliary Control Register" hidden="false">
+    <register name="PWM_6_STATUS_AUX_CTRL" address="0x40006496" bitWidth="8" desc="UDB Auxilliary Control Register" hidden="false">
       <field name="FIFO0_CLR" from="0" to="0" access="RW" resetVal="" desc="FIFO0 clear" hidden="false">
         <value name="E_FIFO_CLR_0" value="0" desc="Normal FIFO operation" />
         <value name="E_FIFO_CLR_1" value="1" desc="Clear FIFO state" />
@@ -56,20 +56,20 @@
     <block name="OneTerminal_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="vmCompare" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="PWMUDB" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <register name="PWM_8_COMPARE_Reg_" address="0x4000642A" bitWidth="8" desc="UDB.D0 - Assigned Compare Value" hidden="false" />
-    <register name="PWM_8_Control_Reg" address="0x4000647E" bitWidth="8" desc="UDB Control Register - Assigned Control Register Value" hidden="false">
+    <register name="PWM_8_COMPARE_Reg_" address="0x40006429" bitWidth="8" desc="UDB.D0 - Assigned Compare Value" hidden="false" />
+    <register name="PWM_8_Control_Reg" address="0x4000647A" bitWidth="8" desc="UDB Control Register - Assigned Control Register Value" hidden="false">
       <field name="CTRL_ENABLE" from="7" to="7" access="RW" resetVal="" desc="Enable the PWM" hidden="false" />
       <field name="CTRL_CMPMODE2" from="5" to="3" access="RW" resetVal="" desc="Compare mode 2" hidden="false" />
       <field name="CTRL_CMPMODE1" from="2" to="0" access="RW" resetVal="" desc="Compare mode 1" hidden="false" />
     </register>
-    <register name="PWM_8_STATUS_MASK" address="0x40006489" bitWidth="8" desc="UDB Status bits Interrupt Mask Enable Register" hidden="false">
+    <register name="PWM_8_STATUS_MASK" address="0x4000648A" bitWidth="8" desc="UDB Status bits Interrupt Mask Enable Register" hidden="false">
       <field name="PWM_STS_CMP1" from="0" to="0" access="R" resetVal="" desc="Enables the Interrupt on Compare 1" hidden="false" />
       <field name="PWM_STS_CMP2" from="1" to="1" access="R" resetVal="" desc="Enables the Interrupt on Compare 2" hidden="false" />
       <field name="PWM_STS_TC" from="2" to="2" access="R" resetVal="" desc="Enables the Interrupt on Terminal Count" hidden="false" />
       <field name="PWM_STS_FIFO_FULL" from="3" to="3" access="R" resetVal="" desc="FIFO Full Status Mask " hidden="false" />
       <field name="PWM_STS_KILL" from="5" to="5" access="R" resetVal="" desc="Enables the Interrupt on Kill" hidden="false" />
     </register>
-    <register name="PWM_8_STATUS_AUX_CTRL" address="0x4000649A" bitWidth="8" desc="UDB Auxilliary Control Register" hidden="false">
+    <register name="PWM_8_STATUS_AUX_CTRL" address="0x40006499" bitWidth="8" desc="UDB Auxilliary Control Register" hidden="false">
       <field name="FIFO0_CLR" from="0" to="0" access="RW" resetVal="" desc="FIFO0 clear" hidden="false">
         <value name="E_FIFO_CLR_0" value="0" desc="Normal FIFO operation" />
         <value name="E_FIFO_CLR_1" value="1" desc="Clear FIFO state" />
@@ -104,20 +104,20 @@
     <block name="OneTerminal_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="vmCompare" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="PWMUDB" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <register name="PWM_9_Control_Reg" address="0x4000647A" bitWidth="8" desc="UDB Control Register - Assigned Control Register Value" hidden="false">
+    <register name="PWM_9_Control_Reg" address="0x4000647B" bitWidth="8" desc="UDB Control Register - Assigned Control Register Value" hidden="false">
       <field name="CTRL_ENABLE" from="7" to="7" access="RW" resetVal="" desc="Enable the PWM" hidden="false" />
       <field name="CTRL_CMPMODE2" from="5" to="3" access="RW" resetVal="" desc="Compare mode 2" hidden="false" />
       <field name="CTRL_CMPMODE1" from="2" to="0" access="RW" resetVal="" desc="Compare mode 1" hidden="false" />
     </register>
-    <register name="PWM_9_STATUS_MASK" address="0x4000648A" bitWidth="8" desc="UDB Status bits Interrupt Mask Enable Register" hidden="false">
+    <register name="PWM_9_COMPARE_Reg_" address="0x40006528" bitWidth="8" desc="UDB.D0 - Assigned Compare Value" hidden="false" />
+    <register name="PWM_9_STATUS_MASK" address="0x40006588" bitWidth="8" desc="UDB Status bits Interrupt Mask Enable Register" hidden="false">
       <field name="PWM_STS_CMP1" from="0" to="0" access="R" resetVal="" desc="Enables the Interrupt on Compare 1" hidden="false" />
       <field name="PWM_STS_CMP2" from="1" to="1" access="R" resetVal="" desc="Enables the Interrupt on Compare 2" hidden="false" />
       <field name="PWM_STS_TC" from="2" to="2" access="R" resetVal="" desc="Enables the Interrupt on Terminal Count" hidden="false" />
       <field name="PWM_STS_FIFO_FULL" from="3" to="3" access="R" resetVal="" desc="FIFO Full Status Mask " hidden="false" />
       <field name="PWM_STS_KILL" from="5" to="5" access="R" resetVal="" desc="Enables the Interrupt on Kill" hidden="false" />
     </register>
-    <register name="PWM_9_COMPARE_Reg_" address="0x40006529" bitWidth="8" desc="UDB.D0 - Assigned Compare Value" hidden="false" />
-    <register name="PWM_9_STATUS_AUX_CTRL" address="0x40006599" bitWidth="8" desc="UDB Auxilliary Control Register" hidden="false">
+    <register name="PWM_9_STATUS_AUX_CTRL" address="0x40006598" bitWidth="8" desc="UDB Auxilliary Control Register" hidden="false">
       <field name="FIFO0_CLR" from="0" to="0" access="RW" resetVal="" desc="FIFO0 clear" hidden="false">
         <value name="E_FIFO_CLR_0" value="0" desc="Normal FIFO operation" />
         <value name="E_FIFO_CLR_1" value="1" desc="Clear FIFO state" />
@@ -156,20 +156,20 @@
     <block name="OneTerminal_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="vmCompare" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="PWMUDB" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <register name="PWM_7_COMPARE_Reg_" address="0x4000652A" bitWidth="8" desc="UDB.D0 - Assigned Compare Value" hidden="false" />
-    <register name="PWM_7_Control_Reg" address="0x4000657A" bitWidth="8" desc="UDB Control Register - Assigned Control Register Value" hidden="false">
+    <register name="PWM_7_COMPARE_Reg_" address="0x40006420" bitWidth="8" desc="UDB.D0 - Assigned Compare Value" hidden="false" />
+    <register name="PWM_7_Control_Reg" address="0x40006470" bitWidth="8" desc="UDB Control Register - Assigned Control Register Value" hidden="false">
       <field name="CTRL_ENABLE" from="7" to="7" access="RW" resetVal="" desc="Enable the PWM" hidden="false" />
       <field name="CTRL_CMPMODE2" from="5" to="3" access="RW" resetVal="" desc="Compare mode 2" hidden="false" />
       <field name="CTRL_CMPMODE1" from="2" to="0" access="RW" resetVal="" desc="Compare mode 1" hidden="false" />
     </register>
-    <register name="PWM_7_STATUS_MASK" address="0x4000658A" bitWidth="8" desc="UDB Status bits Interrupt Mask Enable Register" hidden="false">
+    <register name="PWM_7_STATUS_MASK" address="0x40006480" bitWidth="8" desc="UDB Status bits Interrupt Mask Enable Register" hidden="false">
       <field name="PWM_STS_CMP1" from="0" to="0" access="R" resetVal="" desc="Enables the Interrupt on Compare 1" hidden="false" />
       <field name="PWM_STS_CMP2" from="1" to="1" access="R" resetVal="" desc="Enables the Interrupt on Compare 2" hidden="false" />
       <field name="PWM_STS_TC" from="2" to="2" access="R" resetVal="" desc="Enables the Interrupt on Terminal Count" hidden="false" />
       <field name="PWM_STS_FIFO_FULL" from="3" to="3" access="R" resetVal="" desc="FIFO Full Status Mask " hidden="false" />
       <field name="PWM_STS_KILL" from="5" to="5" access="R" resetVal="" desc="Enables the Interrupt on Kill" hidden="false" />
     </register>
-    <register name="PWM_7_STATUS_AUX_CTRL" address="0x4000659A" bitWidth="8" desc="UDB Auxilliary Control Register" hidden="false">
+    <register name="PWM_7_STATUS_AUX_CTRL" address="0x40006490" bitWidth="8" desc="UDB Auxilliary Control Register" hidden="false">
       <field name="FIFO0_CLR" from="0" to="0" access="RW" resetVal="" desc="FIFO0 clear" hidden="false">
         <value name="E_FIFO_CLR_0" value="0" desc="Normal FIFO operation" />
         <value name="E_FIFO_CLR_1" value="1" desc="Clear FIFO state" />
@@ -208,20 +208,20 @@
     <block name="OneTerminal_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="vmCompare" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="PWMUDB" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <register name="PWM_10_COMPARE_Reg_" address="0x4000652B" bitWidth="8" desc="UDB.D0 - Assigned Compare Value" hidden="false" />
-    <register name="PWM_10_Control_Reg" address="0x40006578" bitWidth="8" desc="UDB Control Register - Assigned Control Register Value" hidden="false">
+    <register name="PWM_10_COMPARE_Reg_" address="0x40006529" bitWidth="8" desc="UDB.D0 - Assigned Compare Value" hidden="false" />
+    <register name="PWM_10_Control_Reg" address="0x40006579" bitWidth="8" desc="UDB Control Register - Assigned Control Register Value" hidden="false">
       <field name="CTRL_ENABLE" from="7" to="7" access="RW" resetVal="" desc="Enable the PWM" hidden="false" />
       <field name="CTRL_CMPMODE2" from="5" to="3" access="RW" resetVal="" desc="Compare mode 2" hidden="false" />
       <field name="CTRL_CMPMODE1" from="2" to="0" access="RW" resetVal="" desc="Compare mode 1" hidden="false" />
     </register>
-    <register name="PWM_10_STATUS_MASK" address="0x40006588" bitWidth="8" desc="UDB Status bits Interrupt Mask Enable Register" hidden="false">
+    <register name="PWM_10_STATUS_MASK" address="0x40006589" bitWidth="8" desc="UDB Status bits Interrupt Mask Enable Register" hidden="false">
       <field name="PWM_STS_CMP1" from="0" to="0" access="R" resetVal="" desc="Enables the Interrupt on Compare 1" hidden="false" />
       <field name="PWM_STS_CMP2" from="1" to="1" access="R" resetVal="" desc="Enables the Interrupt on Compare 2" hidden="false" />
       <field name="PWM_STS_TC" from="2" to="2" access="R" resetVal="" desc="Enables the Interrupt on Terminal Count" hidden="false" />
       <field name="PWM_STS_FIFO_FULL" from="3" to="3" access="R" resetVal="" desc="FIFO Full Status Mask " hidden="false" />
       <field name="PWM_STS_KILL" from="5" to="5" access="R" resetVal="" desc="Enables the Interrupt on Kill" hidden="false" />
     </register>
-    <register name="PWM_10_STATUS_AUX_CTRL" address="0x4000659B" bitWidth="8" desc="UDB Auxilliary Control Register" hidden="false">
+    <register name="PWM_10_STATUS_AUX_CTRL" address="0x40006599" bitWidth="8" desc="UDB Auxilliary Control Register" hidden="false">
       <field name="FIFO0_CLR" from="0" to="0" access="RW" resetVal="" desc="FIFO0 clear" hidden="false">
         <value name="E_FIFO_CLR_0" value="0" desc="Normal FIFO operation" />
         <value name="E_FIFO_CLR_1" value="1" desc="Clear FIFO state" />
@@ -256,20 +256,20 @@
     <block name="OneTerminal_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="vmCompare" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="PWMUDB" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <register name="PWM_11_COMPARE_Reg_" address="0x40006526" bitWidth="8" desc="UDB.D0 - Assigned Compare Value" hidden="false" />
-    <register name="PWM_11_Control_Reg" address="0x40006576" bitWidth="8" desc="UDB Control Register - Assigned Control Register Value" hidden="false">
+    <register name="PWM_11_COMPARE_Reg_" address="0x4000652A" bitWidth="8" desc="UDB.D0 - Assigned Compare Value" hidden="false" />
+    <register name="PWM_11_Control_Reg" address="0x4000657A" bitWidth="8" desc="UDB Control Register - Assigned Control Register Value" hidden="false">
       <field name="CTRL_ENABLE" from="7" to="7" access="RW" resetVal="" desc="Enable the PWM" hidden="false" />
       <field name="CTRL_CMPMODE2" from="5" to="3" access="RW" resetVal="" desc="Compare mode 2" hidden="false" />
       <field name="CTRL_CMPMODE1" from="2" to="0" access="RW" resetVal="" desc="Compare mode 1" hidden="false" />
     </register>
-    <register name="PWM_11_STATUS_MASK" address="0x40006586" bitWidth="8" desc="UDB Status bits Interrupt Mask Enable Register" hidden="false">
+    <register name="PWM_11_STATUS_MASK" address="0x4000658A" bitWidth="8" desc="UDB Status bits Interrupt Mask Enable Register" hidden="false">
       <field name="PWM_STS_CMP1" from="0" to="0" access="R" resetVal="" desc="Enables the Interrupt on Compare 1" hidden="false" />
       <field name="PWM_STS_CMP2" from="1" to="1" access="R" resetVal="" desc="Enables the Interrupt on Compare 2" hidden="false" />
       <field name="PWM_STS_TC" from="2" to="2" access="R" resetVal="" desc="Enables the Interrupt on Terminal Count" hidden="false" />
       <field name="PWM_STS_FIFO_FULL" from="3" to="3" access="R" resetVal="" desc="FIFO Full Status Mask " hidden="false" />
       <field name="PWM_STS_KILL" from="5" to="5" access="R" resetVal="" desc="Enables the Interrupt on Kill" hidden="false" />
     </register>
-    <register name="PWM_11_STATUS_AUX_CTRL" address="0x40006596" bitWidth="8" desc="UDB Auxilliary Control Register" hidden="false">
+    <register name="PWM_11_STATUS_AUX_CTRL" address="0x4000659A" bitWidth="8" desc="UDB Auxilliary Control Register" hidden="false">
       <field name="FIFO0_CLR" from="0" to="0" access="RW" resetVal="" desc="FIFO0 clear" hidden="false">
         <value name="E_FIFO_CLR_0" value="0" desc="Normal FIFO operation" />
         <value name="E_FIFO_CLR_1" value="1" desc="Clear FIFO state" />
@@ -298,15 +298,15 @@
   </block>
   <block name="MUXMSB_5" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="ADC_1_OUT_MSB" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
-    <register name="ADC_1_OUT_MSB_CONTROL_REG" address="0x40006476" bitWidth="8" desc="" hidden="false" />
+    <register name="ADC_1_OUT_MSB_CONTROL_REG" address="0x4000657B" bitWidth="8" desc="" hidden="false" />
   </block>
   <block name="DIV_MASK_MSB" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
-    <register name="DIV_MASK_MSB_CONTROL_REG" address="0x4000647B" bitWidth="8" desc="" hidden="false" />
+    <register name="DIV_MASK_MSB_CONTROL_REG" address="0x40006479" bitWidth="8" desc="" hidden="false" />
   </block>
   <block name="MUXMSB_11" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="MUXMSB_12" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="DIV_MASK_LSB" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
-    <register name="DIV_MASK_LSB_CONTROL_REG" address="0x40006478" bitWidth="8" desc="" hidden="false" />
+    <register name="DIV_MASK_LSB_CONTROL_REG" address="0x40006474" bitWidth="8" desc="" hidden="false" />
   </block>
   <block name="cy_boot" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="PWM_DIV_CONTROL" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
@@ -315,12 +315,12 @@
   <block name="Clock_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="MUXMSB_7" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="ADC_1_OUT_LSB" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
-    <register name="ADC_1_OUT_LSB_CONTROL_REG" address="0x40006574" bitWidth="8" desc="" hidden="false" />
+    <register name="ADC_1_OUT_LSB_CONTROL_REG" address="0x40006577" bitWidth="8" desc="" hidden="false" />
   </block>
   <block name="DAC_IN_MSB" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
-    <register name="DAC_IN_MSB_STATUS_REG" address="0x40006465" bitWidth="8" desc="" hidden="false" />
-    <register name="DAC_IN_MSB_MASK_REG" address="0x40006485" bitWidth="8" desc="" hidden="false" />
-    <register name="DAC_IN_MSB_STATUS_AUX_CTL_REG" address="0x40006495" bitWidth="8" desc="" hidden="false">
+    <register name="DAC_IN_MSB_STATUS_REG" address="0x40006469" bitWidth="8" desc="" hidden="false" />
+    <register name="DAC_IN_MSB_MASK_REG" address="0x40006489" bitWidth="8" desc="" hidden="false" />
+    <register name="DAC_IN_MSB_STATUS_AUX_CTL_REG" address="0x40006499" bitWidth="8" desc="" hidden="false">
       <field name="FIFO0" from="5" to="5" access="RW" resetVal="" desc="FIFO0 clear" hidden="false">
         <value name="ENABLED" value="1" desc="Enable counter" />
         <value name="DISABLED" value="0" desc="Disable counter" />
@@ -400,13 +400,13 @@
         <value name="Blk 3" value="1000" desc="Enables analog linear output buffer for Opamp block 3" />
       </field>
     </register>
-    <register name="OPAMP__TR0" address="0x40004622" bitWidth="8" desc="Analog Output Buffer Trim Register 0" hidden="false">
+    <register name="OPAMP__TR0" address="0x40004624" bitWidth="8" desc="Analog Output Buffer Trim Register 0" hidden="false">
       <field name="offset_trim" from="4" to="0" access="RW" resetVal="" desc="Offset Trim: 420uV typical step size; +/- 6.8mV offset trimmable range" hidden="false" />
     </register>
-    <register name="OPAMP__TR1" address="0x40004623" bitWidth="8" desc="Analog Output Buffer Trim Register 1" hidden="false">
+    <register name="OPAMP__TR1" address="0x40004625" bitWidth="8" desc="Analog Output Buffer Trim Register 1" hidden="false">
       <field name="RSVD" from="7" to="0" access="RW" resetVal="" desc="RSVD" hidden="false" />
     </register>
-    <register name="OPAMP__CR" address="0x4000585A" bitWidth="8" desc="Analog Output Buffer Configuration Register" hidden="false">
+    <register name="OPAMP__CR" address="0x4000585C" bitWidth="8" desc="Analog Output Buffer Configuration Register" hidden="false">
       <field name="pwr_mode" from="1" to="0" access="RW" resetVal="" desc="Power Mode" hidden="false">
         <value name="Default Fast" value="00" desc="Default Power mode Fast" />
         <value name="Slow" value="01" desc="Power Mode Slow" />
@@ -414,7 +414,7 @@
         <value name="Fast" value="11" desc="Power Mode Fast" />
       </field>
     </register>
-    <register name="OPAMP__MX" address="0x40005B42" bitWidth="8" desc="Analog Buffer Input Selection Register" hidden="false">
+    <register name="OPAMP__MX" address="0x40005B44" bitWidth="8" desc="Analog Buffer Input Selection Register" hidden="false">
       <field name="MX_VP_ENUM" from="3" to="0" access="RW" resetVal="" desc="MUX select VP (Positive terminal input)" hidden="false">
         <value name="OPAMP0_MX_VP_DEFAULT" value="0000" desc="Default - Not Connected (NC)" />
         <value name="OPAMP0_MX_VP_AG4" value="0001" desc="MUX Selection AGL(4)" />
@@ -440,7 +440,7 @@
         <value name="OPAMP0_MX_VN_0x3" value="11" desc="Reserved (NC)" />
       </field>
     </register>
-    <register name="OPAMP__SW" address="0x40005B43" bitWidth="8" desc="Analog Buffer Routing Switch Register" hidden="false">
+    <register name="OPAMP__SW" address="0x40005B45" bitWidth="8" desc="Analog Buffer Routing Switch Register" hidden="false">
       <field name="swfol" from="0" to="0" access="RW" resetVal="" desc="Switch Enable Follow" hidden="false" />
       <field name="swinn" from="1" to="1" access="RW" resetVal="" desc="Switch Enable Negative Input" hidden="false" />
       <field name="swinp" from="2" to="2" access="RW" resetVal="" desc="Switch Enable Positive Input" hidden="false" />
@@ -770,20 +770,20 @@
     <block name="OneTerminal_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="vmCompare" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="PWMUDB" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <register name="PWM_5_COMPARE_Reg_" address="0x40006524" bitWidth="8" desc="UDB.D0 - Assigned Compare Value" hidden="false" />
-    <register name="PWM_5_Control_Reg" address="0x40006577" bitWidth="8" desc="UDB Control Register - Assigned Control Register Value" hidden="false">
+    <register name="PWM_5_COMPARE_Reg_" address="0x40006425" bitWidth="8" desc="UDB.D0 - Assigned Compare Value" hidden="false" />
+    <register name="PWM_5_Control_Reg" address="0x40006472" bitWidth="8" desc="UDB Control Register - Assigned Control Register Value" hidden="false">
       <field name="CTRL_ENABLE" from="7" to="7" access="RW" resetVal="" desc="Enable the PWM" hidden="false" />
       <field name="CTRL_CMPMODE2" from="5" to="3" access="RW" resetVal="" desc="Compare mode 2" hidden="false" />
       <field name="CTRL_CMPMODE1" from="2" to="0" access="RW" resetVal="" desc="Compare mode 1" hidden="false" />
     </register>
-    <register name="PWM_5_STATUS_MASK" address="0x40006587" bitWidth="8" desc="UDB Status bits Interrupt Mask Enable Register" hidden="false">
+    <register name="PWM_5_STATUS_MASK" address="0x40006482" bitWidth="8" desc="UDB Status bits Interrupt Mask Enable Register" hidden="false">
       <field name="PWM_STS_CMP1" from="0" to="0" access="R" resetVal="" desc="Enables the Interrupt on Compare 1" hidden="false" />
       <field name="PWM_STS_CMP2" from="1" to="1" access="R" resetVal="" desc="Enables the Interrupt on Compare 2" hidden="false" />
       <field name="PWM_STS_TC" from="2" to="2" access="R" resetVal="" desc="Enables the Interrupt on Terminal Count" hidden="false" />
       <field name="PWM_STS_FIFO_FULL" from="3" to="3" access="R" resetVal="" desc="FIFO Full Status Mask " hidden="false" />
       <field name="PWM_STS_KILL" from="5" to="5" access="R" resetVal="" desc="Enables the Interrupt on Kill" hidden="false" />
     </register>
-    <register name="PWM_5_STATUS_AUX_CTRL" address="0x40006594" bitWidth="8" desc="UDB Auxilliary Control Register" hidden="false">
+    <register name="PWM_5_STATUS_AUX_CTRL" address="0x40006495" bitWidth="8" desc="UDB Auxilliary Control Register" hidden="false">
       <field name="FIFO0_CLR" from="0" to="0" access="RW" resetVal="" desc="FIFO0 clear" hidden="false">
         <value name="E_FIFO_CLR_0" value="0" desc="Normal FIFO operation" />
         <value name="E_FIFO_CLR_1" value="1" desc="Clear FIFO state" />
@@ -819,20 +819,20 @@
     <block name="OneTerminal_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="vmCompare" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="PWMUDB" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <register name="PWM_4_COMPARE_Reg_" address="0x40006422" bitWidth="8" desc="UDB.D0 - Assigned Compare Value" hidden="false" />
-    <register name="PWM_4_Control_Reg" address="0x40006472" bitWidth="8" desc="UDB Control Register - Assigned Control Register Value" hidden="false">
+    <register name="PWM_4_COMPARE_Reg_" address="0x40006525" bitWidth="8" desc="UDB.D0 - Assigned Compare Value" hidden="false" />
+    <register name="PWM_4_Control_Reg" address="0x40006575" bitWidth="8" desc="UDB Control Register - Assigned Control Register Value" hidden="false">
       <field name="CTRL_ENABLE" from="7" to="7" access="RW" resetVal="" desc="Enable the PWM" hidden="false" />
       <field name="CTRL_CMPMODE2" from="5" to="3" access="RW" resetVal="" desc="Compare mode 2" hidden="false" />
       <field name="CTRL_CMPMODE1" from="2" to="0" access="RW" resetVal="" desc="Compare mode 1" hidden="false" />
     </register>
-    <register name="PWM_4_STATUS_MASK" address="0x40006482" bitWidth="8" desc="UDB Status bits Interrupt Mask Enable Register" hidden="false">
+    <register name="PWM_4_STATUS_MASK" address="0x40006585" bitWidth="8" desc="UDB Status bits Interrupt Mask Enable Register" hidden="false">
       <field name="PWM_STS_CMP1" from="0" to="0" access="R" resetVal="" desc="Enables the Interrupt on Compare 1" hidden="false" />
       <field name="PWM_STS_CMP2" from="1" to="1" access="R" resetVal="" desc="Enables the Interrupt on Compare 2" hidden="false" />
       <field name="PWM_STS_TC" from="2" to="2" access="R" resetVal="" desc="Enables the Interrupt on Terminal Count" hidden="false" />
       <field name="PWM_STS_FIFO_FULL" from="3" to="3" access="R" resetVal="" desc="FIFO Full Status Mask " hidden="false" />
       <field name="PWM_STS_KILL" from="5" to="5" access="R" resetVal="" desc="Enables the Interrupt on Kill" hidden="false" />
     </register>
-    <register name="PWM_4_STATUS_AUX_CTRL" address="0x40006492" bitWidth="8" desc="UDB Auxilliary Control Register" hidden="false">
+    <register name="PWM_4_STATUS_AUX_CTRL" address="0x40006595" bitWidth="8" desc="UDB Auxilliary Control Register" hidden="false">
       <field name="FIFO0_CLR" from="0" to="0" access="RW" resetVal="" desc="FIFO0 clear" hidden="false">
         <value name="E_FIFO_CLR_0" value="0" desc="Normal FIFO operation" />
         <value name="E_FIFO_CLR_1" value="1" desc="Clear FIFO state" />
@@ -884,13 +884,13 @@
         <value name="Blk 3" value="1000" desc="Enables analog linear output buffer for Opamp block 3" />
       </field>
     </register>
-    <register name="OPAMP__TR0" address="0x40004624" bitWidth="8" desc="Analog Output Buffer Trim Register 0" hidden="false">
+    <register name="OPAMP__TR0" address="0x40004622" bitWidth="8" desc="Analog Output Buffer Trim Register 0" hidden="false">
       <field name="offset_trim" from="4" to="0" access="RW" resetVal="" desc="Offset Trim: 420uV typical step size; +/- 6.8mV offset trimmable range" hidden="false" />
     </register>
-    <register name="OPAMP__TR1" address="0x40004625" bitWidth="8" desc="Analog Output Buffer Trim Register 1" hidden="false">
+    <register name="OPAMP__TR1" address="0x40004623" bitWidth="8" desc="Analog Output Buffer Trim Register 1" hidden="false">
       <field name="RSVD" from="7" to="0" access="RW" resetVal="" desc="RSVD" hidden="false" />
     </register>
-    <register name="OPAMP__CR" address="0x4000585C" bitWidth="8" desc="Analog Output Buffer Configuration Register" hidden="false">
+    <register name="OPAMP__CR" address="0x4000585A" bitWidth="8" desc="Analog Output Buffer Configuration Register" hidden="false">
       <field name="pwr_mode" from="1" to="0" access="RW" resetVal="" desc="Power Mode" hidden="false">
         <value name="Default Fast" value="00" desc="Default Power mode Fast" />
         <value name="Slow" value="01" desc="Power Mode Slow" />
@@ -898,7 +898,7 @@
         <value name="Fast" value="11" desc="Power Mode Fast" />
       </field>
     </register>
-    <register name="OPAMP__MX" address="0x40005B44" bitWidth="8" desc="Analog Buffer Input Selection Register" hidden="false">
+    <register name="OPAMP__MX" address="0x40005B42" bitWidth="8" desc="Analog Buffer Input Selection Register" hidden="false">
       <field name="MX_VP_ENUM" from="3" to="0" access="RW" resetVal="" desc="MUX select VP (Positive terminal input)" hidden="false">
         <value name="OPAMP0_MX_VP_DEFAULT" value="0000" desc="Default - Not Connected (NC)" />
         <value name="OPAMP0_MX_VP_AG4" value="0001" desc="MUX Selection AGL(4)" />
@@ -924,7 +924,7 @@
         <value name="OPAMP0_MX_VN_0x3" value="11" desc="Reserved (NC)" />
       </field>
     </register>
-    <register name="OPAMP__SW" address="0x40005B45" bitWidth="8" desc="Analog Buffer Routing Switch Register" hidden="false">
+    <register name="OPAMP__SW" address="0x40005B43" bitWidth="8" desc="Analog Buffer Routing Switch Register" hidden="false">
       <field name="swfol" from="0" to="0" access="RW" resetVal="" desc="Switch Enable Follow" hidden="false" />
       <field name="swinn" from="1" to="1" access="RW" resetVal="" desc="Switch Enable Negative Input" hidden="false" />
       <field name="swinp" from="2" to="2" access="RW" resetVal="" desc="Switch Enable Positive Input" hidden="false" />

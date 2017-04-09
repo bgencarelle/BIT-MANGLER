@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccWZ39Iq.s 			page 1
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccbRQHl8.s 			page 1
 
 
    1              		.syntax unified
@@ -14,67 +14,67 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccWZ39Iq.s 			page 1
   11              		.eabi_attribute 34, 1
   12              		.eabi_attribute 18, 4
   13              		.thumb
-  14              		.file	"ADC_1_OUT_LSB_PM.c"
+  14              		.file	"DIV_MASK_MID_PM.c"
   15              		.text
   16              	.Ltext0:
   17              		.cfi_sections	.debug_frame
   18              		.bss
   19              		.align	2
-  20              	ADC_1_OUT_LSB_backup:
+  20              	DIV_MASK_MID_backup:
   21 0000 00       		.space	1
-  22 0001 000000   		.section	.text.ADC_1_OUT_LSB_SaveConfig,"ax",%progbits
+  22 0001 000000   		.section	.text.DIV_MASK_MID_SaveConfig,"ax",%progbits
   23              		.align	2
-  24              		.global	ADC_1_OUT_LSB_SaveConfig
+  24              		.global	DIV_MASK_MID_SaveConfig
   25              		.thumb
   26              		.thumb_func
-  27              		.type	ADC_1_OUT_LSB_SaveConfig, %function
-  28              	ADC_1_OUT_LSB_SaveConfig:
+  27              		.type	DIV_MASK_MID_SaveConfig, %function
+  28              	DIV_MASK_MID_SaveConfig:
   29              	.LFB0:
-  30              		.file 1 "Generated_Source\\PSoC5\\ADC_1_OUT_LSB_PM.c"
-   1:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** /*******************************************************************************
-   2:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** * File Name: ADC_1_OUT_LSB_PM.c
-   3:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** * Version 1.80
-   4:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** *
-   5:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** * Description:
-   6:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** *  This file contains the setup, control, and status commands to support 
-   7:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** *  the component operation in the low power mode. 
-   8:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** *
-   9:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** * Note:
-  10:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** *
-  11:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** ********************************************************************************
-  12:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** * Copyright 2015, Cypress Semiconductor Corporation.  All rights reserved.
-  13:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** * You may use this file only in accordance with the license, terms, conditions, 
-  14:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** * disclaimers, and limitations in the end user license agreement accompanying 
-  15:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** * the software package with which this file was provided.
-  16:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** *******************************************************************************/
-  17:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** 
-  18:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** #include "ADC_1_OUT_LSB.h"
-  19:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** 
-  20:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** /* Check for removal by optimization */
-  21:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** #if !defined(ADC_1_OUT_LSB_Sync_ctrl_reg__REMOVED)
-  22:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** 
-  23:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** static ADC_1_OUT_LSB_BACKUP_STRUCT  ADC_1_OUT_LSB_backup = {0u};
-  24:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** 
-  25:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c ****     
-  26:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** /*******************************************************************************
-  27:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** * Function Name: ADC_1_OUT_LSB_SaveConfig
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccWZ39Iq.s 			page 2
+  30              		.file 1 "Generated_Source\\PSoC5\\DIV_MASK_MID_PM.c"
+   1:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** /*******************************************************************************
+   2:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** * File Name: DIV_MASK_MID_PM.c
+   3:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** * Version 1.80
+   4:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** *
+   5:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** * Description:
+   6:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** *  This file contains the setup, control, and status commands to support 
+   7:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** *  the component operation in the low power mode. 
+   8:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** *
+   9:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** * Note:
+  10:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** *
+  11:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** ********************************************************************************
+  12:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** * Copyright 2015, Cypress Semiconductor Corporation.  All rights reserved.
+  13:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** * You may use this file only in accordance with the license, terms, conditions, 
+  14:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** * disclaimers, and limitations in the end user license agreement accompanying 
+  15:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** * the software package with which this file was provided.
+  16:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** *******************************************************************************/
+  17:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** 
+  18:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** #include "DIV_MASK_MID.h"
+  19:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** 
+  20:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** /* Check for removal by optimization */
+  21:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** #if !defined(DIV_MASK_MID_Sync_ctrl_reg__REMOVED)
+  22:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** 
+  23:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** static DIV_MASK_MID_BACKUP_STRUCT  DIV_MASK_MID_backup = {0u};
+  24:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** 
+  25:Generated_Source\PSoC5/DIV_MASK_MID_PM.c ****     
+  26:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** /*******************************************************************************
+  27:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** * Function Name: DIV_MASK_MID_SaveConfig
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccbRQHl8.s 			page 2
 
 
-  28:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** ********************************************************************************
-  29:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** *
-  30:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** * Summary:
-  31:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** *  Saves the control register value.
-  32:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** *
-  33:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** * Parameters:
-  34:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** *  None
-  35:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** *
-  36:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** * Return:
-  37:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** *  None
-  38:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** *
-  39:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** *******************************************************************************/
-  40:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** void ADC_1_OUT_LSB_SaveConfig(void) 
-  41:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** {
+  28:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** ********************************************************************************
+  29:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** *
+  30:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** * Summary:
+  31:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** *  Saves the control register value.
+  32:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** *
+  33:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** * Parameters:
+  34:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** *  None
+  35:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** *
+  36:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** * Return:
+  37:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** *  None
+  38:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** *
+  39:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** *******************************************************************************/
+  40:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** void DIV_MASK_MID_SaveConfig(void) 
+  41:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** {
   31              		.loc 1 41 0
   32              		.cfi_startproc
   33              		@ args = 0, pretend = 0, frame = 0
@@ -85,14 +85,14 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccWZ39Iq.s 			page 1
   38              		.cfi_offset 7, -4
   39 0002 00AF     		add	r7, sp, #0
   40              		.cfi_def_cfa_register 7
-  42:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c ****     ADC_1_OUT_LSB_backup.controlState = ADC_1_OUT_LSB_Control;
+  42:Generated_Source\PSoC5/DIV_MASK_MID_PM.c ****     DIV_MASK_MID_backup.controlState = DIV_MASK_MID_Control;
   41              		.loc 1 42 0
   42 0004 044B     		ldr	r3, .L2
   43 0006 1B78     		ldrb	r3, [r3]
   44 0008 DAB2     		uxtb	r2, r3
   45 000a 044B     		ldr	r3, .L2+4
   46 000c 1A70     		strb	r2, [r3]
-  43:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** }
+  43:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** }
   47              		.loc 1 43 0
   48 000e BD46     		mov	sp, r7
   49              		.cfi_def_cfa_register 13
@@ -104,41 +104,41 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccWZ39Iq.s 			page 1
   55              	.L3:
   56 0016 00BF     		.align	2
   57              	.L2:
-  58 0018 77650040 		.word	1073767799
-  59 001c 00000000 		.word	ADC_1_OUT_LSB_backup
+  58 0018 76640040 		.word	1073767542
+  59 001c 00000000 		.word	DIV_MASK_MID_backup
   60              		.cfi_endproc
   61              	.LFE0:
-  62              		.size	ADC_1_OUT_LSB_SaveConfig, .-ADC_1_OUT_LSB_SaveConfig
-  63              		.section	.text.ADC_1_OUT_LSB_RestoreConfig,"ax",%progbits
+  62              		.size	DIV_MASK_MID_SaveConfig, .-DIV_MASK_MID_SaveConfig
+  63              		.section	.text.DIV_MASK_MID_RestoreConfig,"ax",%progbits
   64              		.align	2
-  65              		.global	ADC_1_OUT_LSB_RestoreConfig
+  65              		.global	DIV_MASK_MID_RestoreConfig
   66              		.thumb
   67              		.thumb_func
-  68              		.type	ADC_1_OUT_LSB_RestoreConfig, %function
-  69              	ADC_1_OUT_LSB_RestoreConfig:
+  68              		.type	DIV_MASK_MID_RestoreConfig, %function
+  69              	DIV_MASK_MID_RestoreConfig:
   70              	.LFB1:
-  44:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** 
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccWZ39Iq.s 			page 3
+  44:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** 
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccbRQHl8.s 			page 3
 
 
-  45:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** 
-  46:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** /*******************************************************************************
-  47:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** * Function Name: ADC_1_OUT_LSB_RestoreConfig
-  48:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** ********************************************************************************
-  49:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** *
-  50:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** * Summary:
-  51:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** *  Restores the control register value.
-  52:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** *
-  53:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** * Parameters:
-  54:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** *  None
-  55:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** *
-  56:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** * Return:
-  57:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** *  None
-  58:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** *
-  59:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** *
-  60:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** *******************************************************************************/
-  61:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** void ADC_1_OUT_LSB_RestoreConfig(void) 
-  62:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** {
+  45:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** 
+  46:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** /*******************************************************************************
+  47:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** * Function Name: DIV_MASK_MID_RestoreConfig
+  48:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** ********************************************************************************
+  49:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** *
+  50:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** * Summary:
+  51:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** *  Restores the control register value.
+  52:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** *
+  53:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** * Parameters:
+  54:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** *  None
+  55:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** *
+  56:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** * Return:
+  57:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** *  None
+  58:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** *
+  59:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** *
+  60:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** *******************************************************************************/
+  61:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** void DIV_MASK_MID_RestoreConfig(void) 
+  62:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** {
   71              		.loc 1 62 0
   72              		.cfi_startproc
   73              		@ args = 0, pretend = 0, frame = 0
@@ -149,13 +149,13 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccWZ39Iq.s 			page 1
   78              		.cfi_offset 7, -4
   79 0002 00AF     		add	r7, sp, #0
   80              		.cfi_def_cfa_register 7
-  63:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c ****      ADC_1_OUT_LSB_Control = ADC_1_OUT_LSB_backup.controlState;
+  63:Generated_Source\PSoC5/DIV_MASK_MID_PM.c ****      DIV_MASK_MID_Control = DIV_MASK_MID_backup.controlState;
   81              		.loc 1 63 0
   82 0004 034B     		ldr	r3, .L5
   83 0006 044A     		ldr	r2, .L5+4
   84 0008 1278     		ldrb	r2, [r2]	@ zero_extendqisi2
   85 000a 1A70     		strb	r2, [r3]
-  64:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** }
+  64:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** }
   86              		.loc 1 64 0
   87 000c BD46     		mov	sp, r7
   88              		.cfi_def_cfa_register 13
@@ -167,40 +167,40 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccWZ39Iq.s 			page 1
   94              	.L6:
   95              		.align	2
   96              	.L5:
-  97 0014 77650040 		.word	1073767799
-  98 0018 00000000 		.word	ADC_1_OUT_LSB_backup
+  97 0014 76640040 		.word	1073767542
+  98 0018 00000000 		.word	DIV_MASK_MID_backup
   99              		.cfi_endproc
  100              	.LFE1:
- 101              		.size	ADC_1_OUT_LSB_RestoreConfig, .-ADC_1_OUT_LSB_RestoreConfig
- 102              		.section	.text.ADC_1_OUT_LSB_Sleep,"ax",%progbits
+ 101              		.size	DIV_MASK_MID_RestoreConfig, .-DIV_MASK_MID_RestoreConfig
+ 102              		.section	.text.DIV_MASK_MID_Sleep,"ax",%progbits
  103              		.align	2
- 104              		.global	ADC_1_OUT_LSB_Sleep
+ 104              		.global	DIV_MASK_MID_Sleep
  105              		.thumb
  106              		.thumb_func
- 107              		.type	ADC_1_OUT_LSB_Sleep, %function
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccWZ39Iq.s 			page 4
+ 107              		.type	DIV_MASK_MID_Sleep, %function
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccbRQHl8.s 			page 4
 
 
- 108              	ADC_1_OUT_LSB_Sleep:
+ 108              	DIV_MASK_MID_Sleep:
  109              	.LFB2:
-  65:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** 
-  66:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** 
-  67:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** /*******************************************************************************
-  68:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** * Function Name: ADC_1_OUT_LSB_Sleep
-  69:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** ********************************************************************************
-  70:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** *
-  71:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** * Summary:
-  72:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** *  Prepares the component for entering the low power mode.
-  73:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** *
-  74:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** * Parameters:
-  75:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** *  None
-  76:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** *
-  77:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** * Return:
-  78:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** *  None
-  79:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** *
-  80:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** *******************************************************************************/
-  81:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** void ADC_1_OUT_LSB_Sleep(void) 
-  82:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** {
+  65:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** 
+  66:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** 
+  67:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** /*******************************************************************************
+  68:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** * Function Name: DIV_MASK_MID_Sleep
+  69:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** ********************************************************************************
+  70:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** *
+  71:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** * Summary:
+  72:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** *  Prepares the component for entering the low power mode.
+  73:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** *
+  74:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** * Parameters:
+  75:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** *  None
+  76:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** *
+  77:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** * Return:
+  78:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** *  None
+  79:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** *
+  80:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** *******************************************************************************/
+  81:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** void DIV_MASK_MID_Sleep(void) 
+  82:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** {
  110              		.loc 1 82 0
  111              		.cfi_startproc
  112              		@ args = 0, pretend = 0, frame = 0
@@ -211,44 +211,44 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccWZ39Iq.s 			page 1
  117              		.cfi_offset 14, -4
  118 0002 00AF     		add	r7, sp, #0
  119              		.cfi_def_cfa_register 7
-  83:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c ****     ADC_1_OUT_LSB_SaveConfig();
+  83:Generated_Source\PSoC5/DIV_MASK_MID_PM.c ****     DIV_MASK_MID_SaveConfig();
  120              		.loc 1 83 0
- 121 0004 FFF7FEFF 		bl	ADC_1_OUT_LSB_SaveConfig
-  84:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** }
+ 121 0004 FFF7FEFF 		bl	DIV_MASK_MID_SaveConfig
+  84:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** }
  122              		.loc 1 84 0
  123 0008 80BD     		pop	{r7, pc}
  124              		.cfi_endproc
  125              	.LFE2:
- 126              		.size	ADC_1_OUT_LSB_Sleep, .-ADC_1_OUT_LSB_Sleep
- 127 000a 00BF     		.section	.text.ADC_1_OUT_LSB_Wakeup,"ax",%progbits
+ 126              		.size	DIV_MASK_MID_Sleep, .-DIV_MASK_MID_Sleep
+ 127 000a 00BF     		.section	.text.DIV_MASK_MID_Wakeup,"ax",%progbits
  128              		.align	2
- 129              		.global	ADC_1_OUT_LSB_Wakeup
+ 129              		.global	DIV_MASK_MID_Wakeup
  130              		.thumb
  131              		.thumb_func
- 132              		.type	ADC_1_OUT_LSB_Wakeup, %function
- 133              	ADC_1_OUT_LSB_Wakeup:
+ 132              		.type	DIV_MASK_MID_Wakeup, %function
+ 133              	DIV_MASK_MID_Wakeup:
  134              	.LFB3:
-  85:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** 
-  86:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** 
-  87:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** /*******************************************************************************
-  88:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** * Function Name: ADC_1_OUT_LSB_Wakeup
-  89:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** ********************************************************************************
-  90:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** *
-  91:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** * Summary:
-  92:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** *  Restores the component after waking up from the low power mode.
-  93:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** *
-  94:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** * Parameters:
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccWZ39Iq.s 			page 5
+  85:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** 
+  86:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** 
+  87:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** /*******************************************************************************
+  88:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** * Function Name: DIV_MASK_MID_Wakeup
+  89:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** ********************************************************************************
+  90:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** *
+  91:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** * Summary:
+  92:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** *  Restores the component after waking up from the low power mode.
+  93:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** *
+  94:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** * Parameters:
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccbRQHl8.s 			page 5
 
 
-  95:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** *  None
-  96:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** *
-  97:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** * Return:
-  98:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** *  None
-  99:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** *
- 100:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** *******************************************************************************/
- 101:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** void ADC_1_OUT_LSB_Wakeup(void)  
- 102:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** {
+  95:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** *  None
+  96:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** *
+  97:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** * Return:
+  98:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** *  None
+  99:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** *
+ 100:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** *******************************************************************************/
+ 101:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** void DIV_MASK_MID_Wakeup(void)  
+ 102:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** {
  135              		.loc 1 102 0
  136              		.cfi_startproc
  137              		@ args = 0, pretend = 0, frame = 0
@@ -259,19 +259,19 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccWZ39Iq.s 			page 1
  142              		.cfi_offset 14, -4
  143 0002 00AF     		add	r7, sp, #0
  144              		.cfi_def_cfa_register 7
- 103:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c ****     ADC_1_OUT_LSB_RestoreConfig();
+ 103:Generated_Source\PSoC5/DIV_MASK_MID_PM.c ****     DIV_MASK_MID_RestoreConfig();
  145              		.loc 1 103 0
- 146 0004 FFF7FEFF 		bl	ADC_1_OUT_LSB_RestoreConfig
- 104:Generated_Source\PSoC5/ADC_1_OUT_LSB_PM.c **** }
+ 146 0004 FFF7FEFF 		bl	DIV_MASK_MID_RestoreConfig
+ 104:Generated_Source\PSoC5/DIV_MASK_MID_PM.c **** }
  147              		.loc 1 104 0
  148 0008 80BD     		pop	{r7, pc}
  149              		.cfi_endproc
  150              	.LFE3:
- 151              		.size	ADC_1_OUT_LSB_Wakeup, .-ADC_1_OUT_LSB_Wakeup
+ 151              		.size	DIV_MASK_MID_Wakeup, .-DIV_MASK_MID_Wakeup
  152 000a 00BF     		.text
  153              	.Letext0:
  154              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
- 155              		.file 3 "Generated_Source\\PSoC5\\ADC_1_OUT_LSB.h"
+ 155              		.file 3 "Generated_Source\\PSoC5\\DIV_MASK_MID.h"
  156              		.section	.debug_info,"",%progbits
  157              	.Ldebug_info0:
  158 0000 0F010000 		.4byte	0x10f
@@ -279,9 +279,9 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccWZ39Iq.s 			page 1
  160 0006 00000000 		.4byte	.Ldebug_abbrev0
  161 000a 04       		.byte	0x4
  162 000b 01       		.uleb128 0x1
- 163 000c 99000000 		.4byte	.LASF19
+ 163 000c 63000000 		.4byte	.LASF19
  164 0010 01       		.byte	0x1
- 165 0011 E9010000 		.4byte	.LASF20
+ 165 0011 04010000 		.4byte	.LASF20
  166 0015 00000000 		.4byte	.LASF21
  167 0019 00000000 		.4byte	.Ldebug_ranges0+0
  168 001d 00000000 		.4byte	0
@@ -289,38 +289,38 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccWZ39Iq.s 			page 1
  170 0025 02       		.uleb128 0x2
  171 0026 01       		.byte	0x1
  172 0027 06       		.byte	0x6
- 173 0028 1C020000 		.4byte	.LASF0
+ 173 0028 1D020000 		.4byte	.LASF0
  174 002c 02       		.uleb128 0x2
  175 002d 01       		.byte	0x1
  176 002e 08       		.byte	0x8
- 177 002f 42010000 		.4byte	.LASF1
+ 177 002f 4E010000 		.4byte	.LASF1
  178 0033 02       		.uleb128 0x2
  179 0034 02       		.byte	0x2
  180 0035 05       		.byte	0x5
- 181 0036 D9010000 		.4byte	.LASF2
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccWZ39Iq.s 			page 6
+ 181 0036 04020000 		.4byte	.LASF2
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccbRQHl8.s 			page 6
 
 
  182 003a 02       		.uleb128 0x2
  183 003b 02       		.byte	0x2
  184 003c 07       		.byte	0x7
- 185 003d 67010000 		.4byte	.LASF3
+ 185 003d 73010000 		.4byte	.LASF3
  186 0041 02       		.uleb128 0x2
  187 0042 04       		.byte	0x4
  188 0043 05       		.byte	0x5
- 189 0044 13020000 		.4byte	.LASF4
+ 189 0044 14020000 		.4byte	.LASF4
  190 0048 02       		.uleb128 0x2
  191 0049 04       		.byte	0x4
  192 004a 07       		.byte	0x7
- 193 004b 55010000 		.4byte	.LASF5
+ 193 004b 61010000 		.4byte	.LASF5
  194 004f 02       		.uleb128 0x2
  195 0050 08       		.byte	0x8
  196 0051 05       		.byte	0x5
- 197 0052 B2010000 		.4byte	.LASF6
+ 197 0052 F1010000 		.4byte	.LASF6
  198 0056 02       		.uleb128 0x2
  199 0057 08       		.byte	0x8
  200 0058 07       		.byte	0x7
- 201 0059 9B010000 		.4byte	.LASF7
+ 201 0059 DA010000 		.4byte	.LASF7
  202 005d 03       		.uleb128 0x3
  203 005e 04       		.byte	0x4
  204 005f 05       		.byte	0x5
@@ -328,26 +328,26 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccWZ39Iq.s 			page 1
  206 0064 02       		.uleb128 0x2
  207 0065 04       		.byte	0x4
  208 0066 07       		.byte	0x7
- 209 0067 8E010000 		.4byte	.LASF8
+ 209 0067 CD010000 		.4byte	.LASF8
  210 006b 04       		.uleb128 0x4
- 211 006c E3010000 		.4byte	.LASF12
+ 211 006c 0E020000 		.4byte	.LASF12
  212 0070 02       		.byte	0x2
  213 0071 9201     		.2byte	0x192
  214 0073 2C000000 		.4byte	0x2c
  215 0077 02       		.uleb128 0x2
  216 0078 04       		.byte	0x4
  217 0079 04       		.byte	0x4
- 218 007a 3C010000 		.4byte	.LASF9
+ 218 007a 48010000 		.4byte	.LASF9
  219 007e 02       		.uleb128 0x2
  220 007f 08       		.byte	0x8
  221 0080 04       		.byte	0x4
- 222 0081 87010000 		.4byte	.LASF10
+ 222 0081 C6010000 		.4byte	.LASF10
  223 0085 02       		.uleb128 0x2
  224 0086 01       		.byte	0x1
  225 0087 08       		.byte	0x8
- 226 0088 C0010000 		.4byte	.LASF11
+ 226 0088 FF010000 		.4byte	.LASF11
  227 008c 04       		.uleb128 0x4
- 228 008d 50010000 		.4byte	.LASF13
+ 228 008d 5C010000 		.4byte	.LASF13
  229 0091 02       		.byte	0x2
  230 0092 3C02     		.2byte	0x23c
  231 0094 98000000 		.4byte	0x98
@@ -358,23 +358,23 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccWZ39Iq.s 			page 1
  236 009f 03       		.byte	0x3
  237 00a0 1C       		.byte	0x1c
  238 00a1 B2000000 		.4byte	0xb2
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccWZ39Iq.s 			page 7
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccbRQHl8.s 			page 7
 
 
  239 00a5 07       		.uleb128 0x7
- 240 00a6 7A010000 		.4byte	.LASF22
+ 240 00a6 B9010000 		.4byte	.LASF22
  241 00aa 03       		.byte	0x3
  242 00ab 1E       		.byte	0x1e
  243 00ac 6B000000 		.4byte	0x6b
  244 00b0 00       		.byte	0
  245 00b1 00       		.byte	0
  246 00b2 08       		.uleb128 0x8
- 247 00b3 28020000 		.4byte	.LASF14
+ 247 00b3 2D010000 		.4byte	.LASF14
  248 00b7 03       		.byte	0x3
  249 00b8 20       		.byte	0x20
  250 00b9 9D000000 		.4byte	0x9d
  251 00bd 09       		.uleb128 0x9
- 252 00be 4F000000 		.4byte	.LASF15
+ 252 00be A1010000 		.4byte	.LASF15
  253 00c2 01       		.byte	0x1
  254 00c3 28       		.byte	0x28
  255 00c4 00000000 		.4byte	.LFB0
@@ -382,7 +382,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccWZ39Iq.s 			page 1
  257 00cc 01       		.uleb128 0x1
  258 00cd 9C       		.byte	0x9c
  259 00ce 09       		.uleb128 0x9
- 260 00cf 7D000000 		.4byte	.LASF16
+ 260 00cf 86010000 		.4byte	.LASF16
  261 00d3 01       		.byte	0x1
  262 00d4 3D       		.byte	0x3d
  263 00d5 00000000 		.4byte	.LFB1
@@ -390,7 +390,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccWZ39Iq.s 			page 1
  265 00dd 01       		.uleb128 0x1
  266 00de 9C       		.byte	0x9c
  267 00df 0A       		.uleb128 0xa
- 268 00e0 C5010000 		.4byte	.LASF17
+ 268 00e0 F1000000 		.4byte	.LASF17
  269 00e4 01       		.byte	0x1
  270 00e5 51       		.byte	0x51
  271 00e6 00000000 		.4byte	.LFB2
@@ -398,7 +398,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccWZ39Iq.s 			page 1
  273 00ee 01       		.uleb128 0x1
  274 00ef 9C       		.byte	0x9c
  275 00f0 0A       		.uleb128 0xa
- 276 00f1 27010000 		.4byte	.LASF18
+ 276 00f1 4F000000 		.4byte	.LASF18
  277 00f5 01       		.byte	0x1
  278 00f6 65       		.byte	0x65
  279 00f7 00000000 		.4byte	.LFB3
@@ -406,19 +406,19 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccWZ39Iq.s 			page 1
  281 00ff 01       		.uleb128 0x1
  282 0100 9C       		.byte	0x9c
  283 0101 0B       		.uleb128 0xb
- 284 0102 68000000 		.4byte	.LASF23
+ 284 0102 29020000 		.4byte	.LASF23
  285 0106 01       		.byte	0x1
  286 0107 17       		.byte	0x17
  287 0108 B2000000 		.4byte	0xb2
  288 010c 05       		.uleb128 0x5
  289 010d 03       		.byte	0x3
- 290 010e 00000000 		.4byte	ADC_1_OUT_LSB_backup
+ 290 010e 00000000 		.4byte	DIV_MASK_MID_backup
  291 0112 00       		.byte	0
  292              		.section	.debug_abbrev,"",%progbits
  293              	.Ldebug_abbrev0:
  294 0000 01       		.uleb128 0x1
  295 0001 11       		.uleb128 0x11
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccWZ39Iq.s 			page 8
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccbRQHl8.s 			page 8
 
 
  296 0002 01       		.byte	0x1
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccWZ39Iq.s 			page 1
  350 0038 00       		.byte	0
  351 0039 49       		.uleb128 0x49
  352 003a 13       		.uleb128 0x13
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccWZ39Iq.s 			page 9
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccbRQHl8.s 			page 9
 
 
  353 003b 00       		.byte	0
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccWZ39Iq.s 			page 1
  407 0071 27       		.uleb128 0x27
  408 0072 19       		.uleb128 0x19
  409 0073 11       		.uleb128 0x11
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccWZ39Iq.s 			page 10
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccbRQHl8.s 			page 10
 
 
  410 0074 01       		.uleb128 0x1
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccWZ39Iq.s 			page 1
  464 000c 0000     		.2byte	0
  465 000e 0000     		.2byte	0
  466 0010 00000000 		.4byte	.LFB0
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccWZ39Iq.s 			page 11
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccbRQHl8.s 			page 11
 
 
  467 0014 20000000 		.4byte	.LFE0-.LFB0
@@ -624,8 +624,8 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccWZ39Iq.s 			page 1
  487 0024 00000000 		.4byte	0
  488              		.section	.debug_line,"",%progbits
  489              	.Ldebug_line0:
- 490 0000 AC000000 		.section	.debug_str,"MS",%progbits,1
- 490      02006000 
+ 490 0000 AA000000 		.section	.debug_str,"MS",%progbits,1
+ 490      02005E00 
  490      00000201 
  490      FB0E0D00 
  490      01010101 
@@ -640,133 +640,133 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccWZ39Iq.s 			page 1
  493      49542D4D 
  493      414E474C 
  493      45525C41 
- 494              	.LASF15:
- 495 004f 4144435F 		.ascii	"ADC_1_OUT_LSB_SaveConfig\000"
- 495      315F4F55 
- 495      545F4C53 
- 495      425F5361 
- 495      7665436F 
- 496              	.LASF23:
- 497 0068 4144435F 		.ascii	"ADC_1_OUT_LSB_backup\000"
- 497      315F4F55 
- 497      545F4C53 
- 497      425F6261 
- 497      636B7570 
- 498              	.LASF16:
- 499 007d 4144435F 		.ascii	"ADC_1_OUT_LSB_RestoreConfig\000"
- 499      315F4F55 
- 499      545F4C53 
- 499      425F5265 
- 499      73746F72 
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccWZ39Iq.s 			page 12
+ 494              	.LASF18:
+ 495 004f 4449565F 		.ascii	"DIV_MASK_MID_Wakeup\000"
+ 495      4D41534B 
+ 495      5F4D4944 
+ 495      5F57616B 
+ 495      65757000 
+ 496              	.LASF19:
+ 497 0063 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 497      4320342E 
+ 497      392E3320 
+ 497      32303135 
+ 497      30333033 
+ 498 0096 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 498      20726576 
+ 498      6973696F 
+ 498      6E203232 
+ 498      31323230 
+ 499 00c9 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccbRQHl8.s 			page 12
 
 
- 500              	.LASF19:
- 501 0099 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 501      4320342E 
- 501      392E3320 
- 501      32303135 
- 501      30333033 
- 502 00cc 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 502      20726576 
- 502      6973696F 
- 502      6E203232 
- 502      31323230 
- 503 00ff 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
- 503      66756E63 
- 503      74696F6E 
- 503      2D736563 
- 503      74696F6E 
- 504              	.LASF18:
- 505 0127 4144435F 		.ascii	"ADC_1_OUT_LSB_Wakeup\000"
- 505      315F4F55 
- 505      545F4C53 
- 505      425F5761 
- 505      6B657570 
+ 499      66756E63 
+ 499      74696F6E 
+ 499      2D736563 
+ 499      74696F6E 
+ 500              	.LASF17:
+ 501 00f1 4449565F 		.ascii	"DIV_MASK_MID_Sleep\000"
+ 501      4D41534B 
+ 501      5F4D4944 
+ 501      5F536C65 
+ 501      657000
+ 502              	.LASF20:
+ 503 0104 47656E65 		.ascii	"Generated_Source\\PSoC5\\DIV_MASK_MID_PM.c\000"
+ 503      72617465 
+ 503      645F536F 
+ 503      75726365 
+ 503      5C50536F 
+ 504              	.LASF14:
+ 505 012d 4449565F 		.ascii	"DIV_MASK_MID_BACKUP_STRUCT\000"
+ 505      4D41534B 
+ 505      5F4D4944 
+ 505      5F424143 
+ 505      4B55505F 
  506              	.LASF9:
- 507 013c 666C6F61 		.ascii	"float\000"
+ 507 0148 666C6F61 		.ascii	"float\000"
  507      7400
  508              	.LASF1:
- 509 0142 756E7369 		.ascii	"unsigned char\000"
+ 509 014e 756E7369 		.ascii	"unsigned char\000"
  509      676E6564 
  509      20636861 
  509      7200
  510              	.LASF13:
- 511 0150 72656738 		.ascii	"reg8\000"
+ 511 015c 72656738 		.ascii	"reg8\000"
  511      00
  512              	.LASF5:
- 513 0155 6C6F6E67 		.ascii	"long unsigned int\000"
+ 513 0161 6C6F6E67 		.ascii	"long unsigned int\000"
  513      20756E73 
  513      69676E65 
  513      6420696E 
  513      7400
  514              	.LASF3:
- 515 0167 73686F72 		.ascii	"short unsigned int\000"
+ 515 0173 73686F72 		.ascii	"short unsigned int\000"
  515      7420756E 
  515      7369676E 
  515      65642069 
  515      6E7400
- 516              	.LASF22:
- 517 017a 636F6E74 		.ascii	"controlState\000"
- 517      726F6C53 
- 517      74617465 
- 517      00
- 518              	.LASF10:
- 519 0187 646F7562 		.ascii	"double\000"
- 519      6C6500
- 520              	.LASF8:
- 521 018e 756E7369 		.ascii	"unsigned int\000"
- 521      676E6564 
- 521      20696E74 
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccWZ39Iq.s 			page 13
+ 516              	.LASF16:
+ 517 0186 4449565F 		.ascii	"DIV_MASK_MID_RestoreConfig\000"
+ 517      4D41534B 
+ 517      5F4D4944 
+ 517      5F526573 
+ 517      746F7265 
+ 518              	.LASF15:
+ 519 01a1 4449565F 		.ascii	"DIV_MASK_MID_SaveConfig\000"
+ 519      4D41534B 
+ 519      5F4D4944 
+ 519      5F536176 
+ 519      65436F6E 
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccbRQHl8.s 			page 13
 
 
+ 520              	.LASF22:
+ 521 01b9 636F6E74 		.ascii	"controlState\000"
+ 521      726F6C53 
+ 521      74617465 
  521      00
- 522              	.LASF7:
- 523 019b 6C6F6E67 		.ascii	"long long unsigned int\000"
- 523      206C6F6E 
- 523      6720756E 
- 523      7369676E 
- 523      65642069 
- 524              	.LASF6:
- 525 01b2 6C6F6E67 		.ascii	"long long int\000"
- 525      206C6F6E 
- 525      6720696E 
- 525      7400
- 526              	.LASF11:
- 527 01c0 63686172 		.ascii	"char\000"
- 527      00
- 528              	.LASF17:
- 529 01c5 4144435F 		.ascii	"ADC_1_OUT_LSB_Sleep\000"
- 529      315F4F55 
- 529      545F4C53 
- 529      425F536C 
- 529      65657000 
- 530              	.LASF2:
- 531 01d9 73686F72 		.ascii	"short int\000"
- 531      7420696E 
- 531      7400
- 532              	.LASF12:
- 533 01e3 75696E74 		.ascii	"uint8\000"
- 533      3800
- 534              	.LASF20:
- 535 01e9 47656E65 		.ascii	"Generated_Source\\PSoC5\\ADC_1_OUT_LSB_PM.c\000"
- 535      72617465 
- 535      645F536F 
- 535      75726365 
- 535      5C50536F 
+ 522              	.LASF10:
+ 523 01c6 646F7562 		.ascii	"double\000"
+ 523      6C6500
+ 524              	.LASF8:
+ 525 01cd 756E7369 		.ascii	"unsigned int\000"
+ 525      676E6564 
+ 525      20696E74 
+ 525      00
+ 526              	.LASF7:
+ 527 01da 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 527      206C6F6E 
+ 527      6720756E 
+ 527      7369676E 
+ 527      65642069 
+ 528              	.LASF6:
+ 529 01f1 6C6F6E67 		.ascii	"long long int\000"
+ 529      206C6F6E 
+ 529      6720696E 
+ 529      7400
+ 530              	.LASF11:
+ 531 01ff 63686172 		.ascii	"char\000"
+ 531      00
+ 532              	.LASF2:
+ 533 0204 73686F72 		.ascii	"short int\000"
+ 533      7420696E 
+ 533      7400
+ 534              	.LASF12:
+ 535 020e 75696E74 		.ascii	"uint8\000"
+ 535      3800
  536              	.LASF4:
- 537 0213 6C6F6E67 		.ascii	"long int\000"
+ 537 0214 6C6F6E67 		.ascii	"long int\000"
  537      20696E74 
  537      00
  538              	.LASF0:
- 539 021c 7369676E 		.ascii	"signed char\000"
+ 539 021d 7369676E 		.ascii	"signed char\000"
  539      65642063 
  539      68617200 
- 540              	.LASF14:
- 541 0228 4144435F 		.ascii	"ADC_1_OUT_LSB_BACKUP_STRUCT\000"
- 541      315F4F55 
- 541      545F4C53 
- 541      425F4241 
- 541      434B5550 
+ 540              	.LASF23:
+ 541 0229 4449565F 		.ascii	"DIV_MASK_MID_backup\000"
+ 541      4D41534B 
+ 541      5F4D4944 
+ 541      5F626163 
+ 541      6B757000 
  542              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

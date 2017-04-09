@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXUQadf.s 			page 1
 
 
    1              		.syntax unified
@@ -18,7 +18,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
   15              		.text
   16              	.Ltext0:
   17              		.cfi_sections	.debug_frame
-  18              		.comm	ADC_SAR_Seq_finalArray,10,4
+  18              		.comm	ADC_SAR_Seq_finalArray,8,4
   19              		.global	ADC_SAR_Seq_initVar
   20              		.bss
   21              		.align	2
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
    8:Generated_Source\PSoC5/ADC_SAR_Seq.c **** * Note:
    9:Generated_Source\PSoC5/ADC_SAR_Seq.c **** *  None
   10:Generated_Source\PSoC5/ADC_SAR_Seq.c **** *
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 2
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXUQadf.s 			page 2
 
 
   11:Generated_Source\PSoC5/ADC_SAR_Seq.c **** ********************************************************************************
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
   59 0004 114A     		ldr	r2, .L2
   60 0006 114B     		ldr	r3, .L2
   61 0008 1B78     		ldrb	r3, [r3]
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 3
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXUQadf.s 			page 3
 
 
   62 000a DBB2     		uxtb	r3, r3
@@ -167,7 +167,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
   96              	.L3:
   97 004a 00BF     		.align	2
   98              	.L2:
-  99 004c 79650040 		.word	1073767801
+  99 004c 75640040 		.word	1073767541
  100 0050 04000000 		.word	ADC_SAR_Seq_tempChan
  101 0054 00000000 		.word	ADC_SAR_Seq_tempTD
  102 0058 05000000 		.word	ADC_SAR_Seq_finalChan
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  107              		.section	.text.ADC_SAR_Seq_Init,"ax",%progbits
  108              		.align	2
  109              		.global	ADC_SAR_Seq_Init
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 4
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXUQadf.s 			page 4
 
 
  110              		.thumb
@@ -235,10 +235,10 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
   89:Generated_Source\PSoC5/ADC_SAR_Seq.c ****     /* Init DMA, (ADC_SAR_Seq_NUMBER_OF_CHANNELS << 1u) bytes bursts, each burst requires a request
   90:Generated_Source\PSoC5/ADC_SAR_Seq.c ****     ADC_SAR_Seq_finalChan = ADC_SAR_Seq_FinalBuf_DmaInitialize((uint8)ADC_SAR_Seq_FINAL_BYTES_PER_B
  135              		.loc 1 90 0
- 136 001c 0A20     		movs	r0, #10
+ 136 001c 0820     		movs	r0, #8
  137 001e 0121     		movs	r1, #1
  138 0020 41F6FF72 		movw	r2, #8191
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 5
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXUQadf.s 			page 5
 
 
  139 0024 41F6FF73 		movw	r3, #8191
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  114:Generated_Source\PSoC5/ADC_SAR_Seq.c **** *  None.
  115:Generated_Source\PSoC5/ADC_SAR_Seq.c **** *
  116:Generated_Source\PSoC5/ADC_SAR_Seq.c **** * Side Effects:
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 6
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXUQadf.s 			page 6
 
 
  117:Generated_Source\PSoC5/ADC_SAR_Seq.c **** *  None.
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  199 0026 0346     		mov	r3, r0
  200 0028 1A46     		mov	r2, r3
  201 002a 3D4B     		ldr	r3, .L10+8
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 7
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXUQadf.s 			page 7
 
 
  202 002c 1A70     		strb	r2, [r3]
@@ -372,7 +372,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  207 0032 3B4B     		ldr	r3, .L10+8
  208 0034 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  209 0036 1046     		mov	r0, r2
- 210 0038 0A21     		movs	r1, #10
+ 210 0038 0821     		movs	r1, #8
  211 003a 1A46     		mov	r2, r3
  212 003c 0623     		movs	r3, #6
  213 003e FFF7FEFF 		bl	CyDmaTdSetConfiguration
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  162:Generated_Source\PSoC5/ADC_SAR_Seq.c ****     {
  163:Generated_Source\PSoC5/ADC_SAR_Seq.c ****         ADC_SAR_Seq_finalTD = CyDmaTdAllocate();
  236              		.loc 1 163 0
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 8
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXUQadf.s 			page 8
 
 
  237 006e FFF7FEFF 		bl	CyDmaTdAllocate
@@ -436,7 +436,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  246 007e 2A4B     		ldr	r3, .L10+16
  247 0080 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  248 0082 1046     		mov	r0, r2
- 249 0084 0A21     		movs	r1, #10
+ 249 0084 0821     		movs	r1, #8
  250 0086 1A46     		mov	r2, r3
  251 0088 0723     		movs	r3, #7
  252 008a FFF7FEFF 		bl	CyDmaTdSetConfiguration
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  277 00bc FFF7FEFF 		bl	CyDmaChEnable
  178:Generated_Source\PSoC5/ADC_SAR_Seq.c ****     (void) CyDmaChEnable(ADC_SAR_Seq_finalChan, 1u);
  278              		.loc 1 178 0
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 9
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXUQadf.s 			page 9
 
 
  279 00c0 164B     		ldr	r3, .L10+4
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  192:Generated_Source\PSoC5/ADC_SAR_Seq.c ****     #endif   /* End ADC_SAR_Seq_IRQ_REMOVE */
  193:Generated_Source\PSoC5/ADC_SAR_Seq.c **** }
  320              		.loc 1 193 0
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 10
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXUQadf.s 			page 10
 
 
  321 0112 0837     		adds	r7, r7, #8
@@ -556,8 +556,8 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  333 0124 08000000 		.word	ADC_SAR_Seq_tempArray.5046
  334 0128 01000000 		.word	ADC_SAR_Seq_finalTD
  335 012c 00000000 		.word	ADC_SAR_Seq_finalArray
- 336 0130 9F640040 		.word	1073767583
- 337 0134 79650040 		.word	1073767801
+ 336 0130 93640040 		.word	1073767571
+ 337 0134 75640040 		.word	1073767541
  338 0138 80E200E0 		.word	-536812928
  339              		.cfi_endproc
  340              	.LFE2:
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  350              		.loc 1 218 0
  351              		.cfi_startproc
  352              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 11
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXUQadf.s 			page 11
 
 
  353              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -644,7 +644,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  382              		.align	2
  383              	.L14:
  384 0024 00000000 		.word	ADC_SAR_Seq_initVar
- 385 0028 6B650040 		.word	1073767787
+ 385 0028 67640040 		.word	1073767527
  386              		.cfi_endproc
  387              	.LFE3:
  388              		.size	ADC_SAR_Seq_Start, .-ADC_SAR_Seq_Start
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  396              	.LFB4:
  230:Generated_Source\PSoC5/ADC_SAR_Seq.c **** 
  231:Generated_Source\PSoC5/ADC_SAR_Seq.c **** 
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 12
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXUQadf.s 			page 12
 
 
  232:Generated_Source\PSoC5/ADC_SAR_Seq.c **** /*******************************************************************************
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  259:Generated_Source\PSoC5/ADC_SAR_Seq.c **** 
  260:Generated_Source\PSoC5/ADC_SAR_Seq.c ****     /*******************************************************************************
  261:Generated_Source\PSoC5/ADC_SAR_Seq.c ****     * Function Name: ADC_SAR_Seq_StartConvert
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 13
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXUQadf.s 			page 13
 
 
  262:Generated_Source\PSoC5/ADC_SAR_Seq.c ****     ********************************************************************************
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  443              		.global	ADC_SAR_Seq_StopConvert
  444              		.thumb
  445              		.thumb_func
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 14
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXUQadf.s 			page 14
 
 
  446              		.type	ADC_SAR_Seq_StopConvert, %function
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  472              	ADC_SAR_Seq_IsEndConversion:
  473              	.LFB7:
  325:Generated_Source\PSoC5/ADC_SAR_Seq.c **** 
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 15
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXUQadf.s 			page 15
 
 
  326:Generated_Source\PSoC5/ADC_SAR_Seq.c **** #endif /* ADC_SAR_Seq_SAMPLE_MODE != ADC_SAR_Seq_SAMPLE_MODE_HW_TRIGGERED */
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  490 000a 084B     		ldr	r3, .L23
  491 000c 1B78     		ldrb	r3, [r3]
  492 000e FB73     		strb	r3, [r7, #15]
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 16
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXUQadf.s 			page 16
 
 
  364:Generated_Source\PSoC5/ADC_SAR_Seq.c ****     } while ((status == 0u) && (retMode == ADC_SAR_Seq_WAIT_FOR_RESULT));
@@ -930,7 +930,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  515              	.L24:
  516 002a 00BF     		.align	2
  517              	.L23:
- 518 002c 6B650040 		.word	1073767787
+ 518 002c 67640040 		.word	1073767527
  519              		.cfi_endproc
  520              	.LFE7:
  521              		.size	ADC_SAR_Seq_IsEndConversion, .-ADC_SAR_Seq_IsEndConversion
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  381:Generated_Source\PSoC5/ADC_SAR_Seq.c **** * Return:
  382:Generated_Source\PSoC5/ADC_SAR_Seq.c **** *  Returns converted data as a signed 16-bit integer
  383:Generated_Source\PSoC5/ADC_SAR_Seq.c **** *
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 17
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXUQadf.s 			page 17
 
 
  384:Generated_Source\PSoC5/ADC_SAR_Seq.c **** * Side Effects:
@@ -987,7 +987,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  393:Generated_Source\PSoC5/ADC_SAR_Seq.c ****     return (ADC_SAR_Seq_finalArray[ADC_SAR_Seq_GET_RESULT_INDEX_OFFSET - chan] - ADC_SAR_Seq_SAR_sh
  544              		.loc 1 393 0
  545 000a FB88     		ldrh	r3, [r7, #6]
- 546 000c C3F10403 		rsb	r3, r3, #4
+ 546 000c C3F10303 		rsb	r3, r3, #3
  547 0010 084A     		ldr	r2, .L27
  548 0012 32F81330 		ldrh	r3, [r2, r3, lsl #1]
  549 0016 9AB2     		uxth	r2, r3
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  573 0038 00000000 		.word	ADC_SAR_Seq_SAR_shift
  574              		.cfi_endproc
  575              	.LFE8:
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 18
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXUQadf.s 			page 18
 
 
  576              		.size	ADC_SAR_Seq_GetResult16, .-ADC_SAR_Seq_GetResult16
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  604 000e 00BF     		.section	.text.ADC_SAR_Seq_SetOffset,"ax",%progbits
  605              		.align	2
  606              		.global	ADC_SAR_Seq_SetOffset
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 19
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXUQadf.s 			page 19
 
 
  607              		.thumb
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  451:Generated_Source\PSoC5/ADC_SAR_Seq.c **** }
  631              		.loc 1 451 0
  632 0014 0837     		adds	r7, r7, #8
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 20
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXUQadf.s 			page 20
 
 
  633              		.cfi_def_cfa_offset 8
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  490:Generated_Source\PSoC5/ADC_SAR_Seq.c **** *******************************************************************************/
  491:Generated_Source\PSoC5/ADC_SAR_Seq.c **** void ADC_SAR_Seq_SetResolution(uint8 resolution)
  492:Generated_Source\PSoC5/ADC_SAR_Seq.c **** {
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 21
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXUQadf.s 			page 21
 
 
  649              		.loc 1 492 0
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  511:Generated_Source\PSoC5/ADC_SAR_Seq.c **** *  None.
  512:Generated_Source\PSoC5/ADC_SAR_Seq.c **** *
  513:Generated_Source\PSoC5/ADC_SAR_Seq.c **** * Reentrant:
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 22
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXUQadf.s 			page 22
 
 
  514:Generated_Source\PSoC5/ADC_SAR_Seq.c **** *  No.
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  531:Generated_Source\PSoC5/ADC_SAR_Seq.c **** *  input or if the ADC is using an external reference.
  532:Generated_Source\PSoC5/ADC_SAR_Seq.c **** *
  533:Generated_Source\PSoC5/ADC_SAR_Seq.c **** * Parameters:
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 23
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXUQadf.s 			page 23
 
 
  534:Generated_Source\PSoC5/ADC_SAR_Seq.c **** *  int32  adcGain  counts per 10 volt
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  554:Generated_Source\PSoC5/ADC_SAR_Seq.c **** /*******************************************************************************
  555:Generated_Source\PSoC5/ADC_SAR_Seq.c **** * Function Name: ADC_SAR_Seq_CountsTo_mVolts
  556:Generated_Source\PSoC5/ADC_SAR_Seq.c **** ********************************************************************************
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 24
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXUQadf.s 			page 24
 
 
  557:Generated_Source\PSoC5/ADC_SAR_Seq.c **** *
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  789              		.thumb
  790              		.thumb_func
  791              		.type	ADC_SAR_Seq_CountsTo_uVolts, %function
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 25
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXUQadf.s 			page 25
 
 
  792              	ADC_SAR_Seq_CountsTo_uVolts:
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  820 001c 80BD     		pop	{r7, pc}
  821              		.cfi_endproc
  822              	.LFE15:
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 26
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXUQadf.s 			page 26
 
 
  823              		.size	ADC_SAR_Seq_CountsTo_uVolts, .-ADC_SAR_Seq_CountsTo_uVolts
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  851              		.loc 1 629 0
  852 0016 1846     		mov	r0, r3
  853 0018 0837     		adds	r7, r7, #8
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 27
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXUQadf.s 			page 27
 
 
  854              		.cfi_def_cfa_offset 8
@@ -1572,10 +1572,9 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  862 001e 00BF     		.bss
  863 0006 0000     		.align	2
  864              	ADC_SAR_Seq_tempArray.5046:
- 865 0008 00000000 		.space	10
+ 865 0008 00000000 		.space	8
  865      00000000 
- 865      0000
- 866 0012 0000     		.text
+ 866              		.text
  867              	.Letext0:
  868              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
  869              		.file 3 "Generated_Source\\PSoC5\\ADC_SAR_Seq_SAR.h"
@@ -1586,48 +1585,48 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  874 0006 00000000 		.4byte	.Ldebug_abbrev0
  875 000a 04       		.byte	0x4
  876 000b 01       		.uleb128 0x1
- 877 000c 88010000 		.4byte	.LASF53
+ 877 000c D7010000 		.4byte	.LASF53
  878 0010 01       		.byte	0x1
- 879 0011 F4030000 		.4byte	.LASF54
- 880 0015 4D030000 		.4byte	.LASF55
+ 879 0011 EF030000 		.4byte	.LASF54
+ 880 0015 06000000 		.4byte	.LASF55
  881 0019 00000000 		.4byte	.Ldebug_ranges0+0
  882 001d 00000000 		.4byte	0
  883 0021 00000000 		.4byte	.Ldebug_line0
  884 0025 02       		.uleb128 0x2
  885 0026 01       		.byte	0x1
  886 0027 06       		.byte	0x6
- 887 0028 19040000 		.4byte	.LASF0
+ 887 0028 14040000 		.4byte	.LASF0
  888 002c 02       		.uleb128 0x2
  889 002d 01       		.byte	0x1
  890 002e 08       		.byte	0x8
- 891 002f 7A010000 		.4byte	.LASF1
+ 891 002f C9010000 		.4byte	.LASF1
  892 0033 02       		.uleb128 0x2
  893 0034 02       		.byte	0x2
  894 0035 05       		.byte	0x5
- 895 0036 43030000 		.4byte	.LASF2
+ 895 0036 92030000 		.4byte	.LASF2
  896 003a 02       		.uleb128 0x2
  897 003b 02       		.byte	0x2
  898 003c 07       		.byte	0x7
- 899 003d 5F000000 		.4byte	.LASF3
+ 899 003d AE000000 		.4byte	.LASF3
  900 0041 02       		.uleb128 0x2
  901 0042 04       		.byte	0x4
  902 0043 05       		.byte	0x5
- 903 0044 3D000000 		.4byte	.LASF4
+ 903 0044 8C000000 		.4byte	.LASF4
  904 0048 02       		.uleb128 0x2
  905 0049 04       		.byte	0x4
  906 004a 07       		.byte	0x7
- 907 004b 2A010000 		.4byte	.LASF5
+ 907 004b 79010000 		.4byte	.LASF5
  908 004f 02       		.uleb128 0x2
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 28
-
-
  909 0050 08       		.byte	0x8
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXUQadf.s 			page 28
+
+
  910 0051 05       		.byte	0x5
- 911 0052 DC020000 		.4byte	.LASF6
+ 911 0052 2B030000 		.4byte	.LASF6
  912 0056 02       		.uleb128 0x2
  913 0057 08       		.byte	0x8
  914 0058 07       		.byte	0x7
- 915 0059 8D020000 		.4byte	.LASF7
+ 915 0059 DC020000 		.4byte	.LASF7
  916 005d 03       		.uleb128 0x3
  917 005e 04       		.byte	0x4
  918 005f 05       		.byte	0x5
@@ -1635,54 +1634,54 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  920 0064 02       		.uleb128 0x2
  921 0065 04       		.byte	0x4
  922 0066 07       		.byte	0x7
- 923 0067 56020000 		.4byte	.LASF8
+ 923 0067 A5020000 		.4byte	.LASF8
  924 006b 04       		.uleb128 0x4
- 925 006c A1030000 		.4byte	.LASF9
+ 925 006c 9C030000 		.4byte	.LASF9
  926 0070 02       		.byte	0x2
  927 0071 9201     		.2byte	0x192
  928 0073 2C000000 		.4byte	0x2c
  929 0077 04       		.uleb128 0x4
- 930 0078 25020000 		.4byte	.LASF10
+ 930 0078 74020000 		.4byte	.LASF10
  931 007c 02       		.byte	0x2
  932 007d 9301     		.2byte	0x193
  933 007f 3A000000 		.4byte	0x3a
  934 0083 04       		.uleb128 0x4
- 935 0084 36020000 		.4byte	.LASF11
+ 935 0084 85020000 		.4byte	.LASF11
  936 0088 02       		.byte	0x2
  937 0089 9401     		.2byte	0x194
  938 008b 48000000 		.4byte	0x48
  939 008f 04       		.uleb128 0x4
- 940 0090 24010000 		.4byte	.LASF12
+ 940 0090 73010000 		.4byte	.LASF12
  941 0094 02       		.byte	0x2
  942 0095 9601     		.2byte	0x196
  943 0097 33000000 		.4byte	0x33
  944 009b 04       		.uleb128 0x4
- 945 009c 50010000 		.4byte	.LASF13
+ 945 009c 9F010000 		.4byte	.LASF13
  946 00a0 02       		.byte	0x2
  947 00a1 9701     		.2byte	0x197
  948 00a3 41000000 		.4byte	0x41
  949 00a7 04       		.uleb128 0x4
- 950 00a8 91000000 		.4byte	.LASF14
+ 950 00a8 E0000000 		.4byte	.LASF14
  951 00ac 02       		.byte	0x2
  952 00ad 9801     		.2byte	0x198
  953 00af B3000000 		.4byte	0xb3
  954 00b3 02       		.uleb128 0x2
  955 00b4 04       		.byte	0x4
  956 00b5 04       		.byte	0x4
- 957 00b6 C2000000 		.4byte	.LASF15
+ 957 00b6 11010000 		.4byte	.LASF15
  958 00ba 02       		.uleb128 0x2
  959 00bb 08       		.byte	0x8
  960 00bc 04       		.byte	0x4
- 961 00bd 16020000 		.4byte	.LASF16
+ 961 00bd 65020000 		.4byte	.LASF16
  962 00c1 02       		.uleb128 0x2
  963 00c2 01       		.byte	0x1
  964 00c3 08       		.byte	0x8
- 965 00c4 00030000 		.4byte	.LASF17
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 29
-
-
+ 965 00c4 4F030000 		.4byte	.LASF17
  966 00c8 04       		.uleb128 0x4
- 967 00c9 CE020000 		.4byte	.LASF18
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXUQadf.s 			page 29
+
+
+ 967 00c9 1D030000 		.4byte	.LASF18
  968 00cd 02       		.byte	0x2
  969 00ce 3C02     		.2byte	0x23c
  970 00d0 D4000000 		.4byte	0xd4
@@ -1698,9 +1697,9 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  980 00ea 02       		.uleb128 0x2
  981 00eb 04       		.byte	0x4
  982 00ec 07       		.byte	0x7
- 983 00ed D3020000 		.4byte	.LASF20
+ 983 00ed 22030000 		.4byte	.LASF20
  984 00f1 06       		.uleb128 0x6
- 985 00f2 29000000 		.4byte	.LASF21
+ 985 00f2 78000000 		.4byte	.LASF21
  986 00f6 01       		.byte	0x1
  987 00f7 33       		.byte	0x33
  988 00f8 00000000 		.4byte	.LFB0
@@ -1708,7 +1707,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  990 0100 01       		.uleb128 0x1
  991 0101 9C       		.byte	0x9c
  992 0102 06       		.uleb128 0x6
- 993 0103 44040000 		.4byte	.LASF22
+ 993 0103 3F040000 		.4byte	.LASF22
  994 0107 01       		.byte	0x1
  995 0108 53       		.byte	0x53
  996 0109 00000000 		.4byte	.LFB1
@@ -1716,7 +1715,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  998 0111 01       		.uleb128 0x1
  999 0112 9C       		.byte	0x9c
  1000 0113 07       		.uleb128 0x7
- 1001 0114 AF000000 		.4byte	.LASF34
+ 1001 0114 FE000000 		.4byte	.LASF34
  1002 0118 01       		.byte	0x1
  1003 0119 7B       		.byte	0x7b
  1004 011a 00000000 		.4byte	.LFB2
@@ -1725,7 +1724,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  1007 0123 9C       		.byte	0x9c
  1008 0124 48010000 		.4byte	0x148
  1009 0128 08       		.uleb128 0x8
- 1010 0129 56010000 		.4byte	.LASF23
+ 1010 0129 A5010000 		.4byte	.LASF23
  1011 012d 01       		.byte	0x1
  1012 012e 7D       		.byte	0x7d
  1013 012f 6B000000 		.4byte	0x6b
@@ -1733,15 +1732,15 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  1015 0134 91       		.byte	0x91
  1016 0135 77       		.sleb128 -9
  1017 0136 08       		.uleb128 0x8
- 1018 0137 99000000 		.4byte	.LASF24
+ 1018 0137 E8000000 		.4byte	.LASF24
  1019 013b 01       		.byte	0x1
  1020 013c 7F       		.byte	0x7f
  1021 013d 48010000 		.4byte	0x148
  1022 0141 05       		.uleb128 0x5
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 30
-
-
  1023 0142 03       		.byte	0x3
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXUQadf.s 			page 30
+
+
  1024 0143 08000000 		.4byte	ADC_SAR_Seq_tempArray.5046
  1025 0147 00       		.byte	0
  1026 0148 09       		.uleb128 0x9
@@ -1749,10 +1748,10 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  1028 014d 58010000 		.4byte	0x158
  1029 0151 0A       		.uleb128 0xa
  1030 0152 EA000000 		.4byte	0xea
- 1031 0156 04       		.byte	0x4
+ 1031 0156 03       		.byte	0x3
  1032 0157 00       		.byte	0
  1033 0158 06       		.uleb128 0x6
- 1034 0159 A4020000 		.4byte	.LASF25
+ 1034 0159 F3020000 		.4byte	.LASF25
  1035 015d 01       		.byte	0x1
  1036 015e D9       		.byte	0xd9
  1037 015f 00000000 		.4byte	.LFB3
@@ -1760,7 +1759,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  1039 0167 01       		.uleb128 0x1
  1040 0168 9C       		.byte	0x9c
  1041 0169 06       		.uleb128 0x6
- 1042 016a E2000000 		.4byte	.LASF26
+ 1042 016a 31010000 		.4byte	.LASF26
  1043 016e 01       		.byte	0x1
  1044 016f FC       		.byte	0xfc
  1045 0170 00000000 		.4byte	.LFB4
@@ -1768,7 +1767,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  1047 0178 01       		.uleb128 0x1
  1048 0179 9C       		.byte	0x9c
  1049 017a 0B       		.uleb128 0xb
- 1050 017b 3D020000 		.4byte	.LASF27
+ 1050 017b 8C020000 		.4byte	.LASF27
  1051 017f 01       		.byte	0x1
  1052 0180 1A01     		.2byte	0x11a
  1053 0182 00000000 		.4byte	.LFB5
@@ -1776,7 +1775,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  1055 018a 01       		.uleb128 0x1
  1056 018b 9C       		.byte	0x9c
  1057 018c 0B       		.uleb128 0xb
- 1058 018d 72000000 		.4byte	.LASF28
+ 1058 018d C1000000 		.4byte	.LASF28
  1059 0191 01       		.byte	0x1
  1060 0192 4101     		.2byte	0x141
  1061 0194 00000000 		.4byte	.LFB6
@@ -1784,7 +1783,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  1063 019c 01       		.uleb128 0x1
  1064 019d 9C       		.byte	0x9c
  1065 019e 0C       		.uleb128 0xc
- 1066 019f F3000000 		.4byte	.LASF30
+ 1066 019f 42010000 		.4byte	.LASF30
  1067 01a3 01       		.byte	0x1
  1068 01a4 6501     		.2byte	0x165
  1069 01a6 83000000 		.4byte	0x83
@@ -1794,18 +1793,18 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  1073 01b3 9C       		.byte	0x9c
  1074 01b4 D7010000 		.4byte	0x1d7
  1075 01b8 0D       		.uleb128 0xd
- 1076 01b9 36030000 		.4byte	.LASF32
+ 1076 01b9 85030000 		.4byte	.LASF32
  1077 01bd 01       		.byte	0x1
  1078 01be 6501     		.2byte	0x165
  1079 01c0 6B000000 		.4byte	0x6b
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 31
-
-
  1080 01c4 02       		.uleb128 0x2
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXUQadf.s 			page 31
+
+
  1081 01c5 91       		.byte	0x91
  1082 01c6 6F       		.sleb128 -17
  1083 01c7 0E       		.uleb128 0xe
- 1084 01c8 8A000000 		.4byte	.LASF29
+ 1084 01c8 D9000000 		.4byte	.LASF29
  1085 01cc 01       		.byte	0x1
  1086 01cd 6701     		.2byte	0x167
  1087 01cf 6B000000 		.4byte	0x6b
@@ -1814,7 +1813,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  1090 01d5 77       		.sleb128 -9
  1091 01d6 00       		.byte	0
  1092 01d7 0C       		.uleb128 0xc
- 1093 01d8 B6020000 		.4byte	.LASF31
+ 1093 01d8 05030000 		.4byte	.LASF31
  1094 01dc 01       		.byte	0x1
  1095 01dd 8701     		.2byte	0x187
  1096 01df 8F000000 		.4byte	0x8f
@@ -1824,7 +1823,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  1100 01ec 9C       		.byte	0x9c
  1101 01ed 01020000 		.4byte	0x201
  1102 01f1 0D       		.uleb128 0xd
- 1103 01f2 3E030000 		.4byte	.LASF33
+ 1103 01f2 8D030000 		.4byte	.LASF33
  1104 01f6 01       		.byte	0x1
  1105 01f7 8701     		.2byte	0x187
  1106 01f9 77000000 		.4byte	0x77
@@ -1833,7 +1832,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  1109 01ff 76       		.sleb128 -10
  1110 0200 00       		.byte	0
  1111 0201 0F       		.uleb128 0xf
- 1112 0202 46000000 		.4byte	.LASF56
+ 1112 0202 95000000 		.4byte	.LASF56
  1113 0206 01       		.byte	0x1
  1114 0207 A101     		.2byte	0x1a1
  1115 0209 8F000000 		.4byte	0x8f
@@ -1842,7 +1841,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  1118 0215 01       		.uleb128 0x1
  1119 0216 9C       		.byte	0x9c
  1120 0217 10       		.uleb128 0x10
- 1121 0218 05030000 		.4byte	.LASF35
+ 1121 0218 54030000 		.4byte	.LASF35
  1122 021c 01       		.byte	0x1
  1123 021d C001     		.2byte	0x1c0
  1124 021f 00000000 		.4byte	.LFB10
@@ -1851,19 +1850,19 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  1127 0228 9C       		.byte	0x9c
  1128 0229 3D020000 		.4byte	0x23d
  1129 022d 0D       		.uleb128 0xd
- 1130 022e 06000000 		.4byte	.LASF36
+ 1130 022e 55000000 		.4byte	.LASF36
  1131 0232 01       		.byte	0x1
  1132 0233 C001     		.2byte	0x1c0
  1133 0235 9B000000 		.4byte	0x9b
  1134 0239 02       		.uleb128 0x2
  1135 023a 91       		.byte	0x91
  1136 023b 74       		.sleb128 -12
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 32
-
-
  1137 023c 00       		.byte	0
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXUQadf.s 			page 32
+
+
  1138 023d 10       		.uleb128 0x10
- 1139 023e DA030000 		.4byte	.LASF37
+ 1139 023e D5030000 		.4byte	.LASF37
  1140 0242 01       		.byte	0x1
  1141 0243 EB01     		.2byte	0x1eb
  1142 0245 00000000 		.4byte	.LFB11
@@ -1872,7 +1871,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  1145 024e 9C       		.byte	0x9c
  1146 024f 63020000 		.4byte	0x263
  1147 0253 0D       		.uleb128 0xd
- 1148 0254 25040000 		.4byte	.LASF38
+ 1148 0254 20040000 		.4byte	.LASF38
  1149 0258 01       		.byte	0x1
  1150 0259 EB01     		.2byte	0x1eb
  1151 025b 6B000000 		.4byte	0x6b
@@ -1881,7 +1880,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  1154 0261 77       		.sleb128 -9
  1155 0262 00       		.byte	0
  1156 0263 10       		.uleb128 0x10
- 1157 0264 30040000 		.4byte	.LASF39
+ 1157 0264 2B040000 		.4byte	.LASF39
  1158 0268 01       		.byte	0x1
  1159 0269 0502     		.2byte	0x205
  1160 026b 00000000 		.4byte	.LFB12
@@ -1890,7 +1889,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  1163 0274 9C       		.byte	0x9c
  1164 0275 89020000 		.4byte	0x289
  1165 0279 0D       		.uleb128 0xd
- 1166 027a 1D020000 		.4byte	.LASF40
+ 1166 027a 6C020000 		.4byte	.LASF40
  1167 027e 01       		.byte	0x1
  1168 027f 0502     		.2byte	0x205
  1169 0281 9B000000 		.4byte	0x9b
@@ -1899,7 +1898,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  1172 0287 74       		.sleb128 -12
  1173 0288 00       		.byte	0
  1174 0289 10       		.uleb128 0x10
- 1175 028a C8000000 		.4byte	.LASF41
+ 1175 028a 17010000 		.4byte	.LASF41
  1176 028e 01       		.byte	0x1
  1177 028f 2402     		.2byte	0x224
  1178 0291 00000000 		.4byte	.LFB13
@@ -1908,7 +1907,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  1181 029a 9C       		.byte	0x9c
  1182 029b AF020000 		.4byte	0x2af
  1183 029f 0D       		.uleb128 0xd
- 1184 02a0 1D020000 		.4byte	.LASF40
+ 1184 02a0 6C020000 		.4byte	.LASF40
  1185 02a4 01       		.byte	0x1
  1186 02a5 2402     		.2byte	0x224
  1187 02a7 9B000000 		.4byte	0x9b
@@ -1917,11 +1916,11 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  1190 02ad 74       		.sleb128 -12
  1191 02ae 00       		.byte	0
  1192 02af 11       		.uleb128 0x11
- 1193 02b0 0D000000 		.4byte	.LASF42
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 33
-
-
+ 1193 02b0 5C000000 		.4byte	.LASF42
  1194 02b4 01       		.byte	0x1
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXUQadf.s 			page 33
+
+
  1195 02b5 3E02     		.2byte	0x23e
  1196 02b7 9B000000 		.4byte	0x9b
  1197 02bb 00000000 		.4byte	.LFB14
@@ -1930,7 +1929,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  1200 02c4 9C       		.byte	0x9c
  1201 02c5 D9020000 		.4byte	0x2d9
  1202 02c9 0D       		.uleb128 0xd
- 1203 02ca 2C020000 		.4byte	.LASF43
+ 1203 02ca 7B020000 		.4byte	.LASF43
  1204 02ce 01       		.byte	0x1
  1205 02cf 3E02     		.2byte	0x23e
  1206 02d1 8F000000 		.4byte	0x8f
@@ -1939,7 +1938,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  1209 02d7 76       		.sleb128 -10
  1210 02d8 00       		.byte	0
  1211 02d9 11       		.uleb128 0x11
- 1212 02da A7030000 		.4byte	.LASF44
+ 1212 02da A2030000 		.4byte	.LASF44
  1213 02de 01       		.byte	0x1
  1214 02df 5802     		.2byte	0x258
  1215 02e1 9B000000 		.4byte	0x9b
@@ -1949,7 +1948,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  1219 02ee 9C       		.byte	0x9c
  1220 02ef 03030000 		.4byte	0x303
  1221 02f3 0D       		.uleb128 0xd
- 1222 02f4 2C020000 		.4byte	.LASF43
+ 1222 02f4 7B020000 		.4byte	.LASF43
  1223 02f8 01       		.byte	0x1
  1224 02f9 5802     		.2byte	0x258
  1225 02fb 8F000000 		.4byte	0x8f
@@ -1958,7 +1957,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  1228 0301 76       		.sleb128 -10
  1229 0302 00       		.byte	0
  1230 0303 11       		.uleb128 0x11
- 1231 0304 1B030000 		.4byte	.LASF45
+ 1231 0304 6A030000 		.4byte	.LASF45
  1232 0308 01       		.byte	0x1
  1233 0309 7202     		.2byte	0x272
  1234 030b A7000000 		.4byte	0xa7
@@ -1968,7 +1967,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  1238 0318 9C       		.byte	0x9c
  1239 0319 2D030000 		.4byte	0x32d
  1240 031d 0D       		.uleb128 0xd
- 1241 031e 2C020000 		.4byte	.LASF43
+ 1241 031e 7B020000 		.4byte	.LASF43
  1242 0322 01       		.byte	0x1
  1243 0323 7202     		.2byte	0x272
  1244 0325 8F000000 		.4byte	0x8f
@@ -1977,18 +1976,18 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  1247 032b 76       		.sleb128 -10
  1248 032c 00       		.byte	0
  1249 032d 08       		.uleb128 0x8
- 1250 032e 0F010000 		.4byte	.LASF46
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 34
-
-
+ 1250 032e 5E010000 		.4byte	.LASF46
  1251 0332 01       		.byte	0x1
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXUQadf.s 			page 34
+
+
  1252 0333 19       		.byte	0x19
  1253 0334 6B000000 		.4byte	0x6b
  1254 0338 05       		.uleb128 0x5
  1255 0339 03       		.byte	0x3
  1256 033a 04000000 		.4byte	ADC_SAR_Seq_tempChan
  1257 033e 08       		.uleb128 0x8
- 1258 033f 63020000 		.4byte	.LASF47
+ 1258 033f B2020000 		.4byte	.LASF47
  1259 0343 01       		.byte	0x1
  1260 0344 1A       		.byte	0x1a
  1261 0345 6B000000 		.4byte	0x6b
@@ -1996,7 +1995,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  1263 034a 03       		.byte	0x3
  1264 034b 05000000 		.4byte	ADC_SAR_Seq_finalChan
  1265 034f 08       		.uleb128 0x8
- 1266 0350 67010000 		.4byte	.LASF48
+ 1266 0350 B6010000 		.4byte	.LASF48
  1267 0354 01       		.byte	0x1
  1268 0355 1B       		.byte	0x1b
  1269 0356 6B000000 		.4byte	0x6b
@@ -2004,7 +2003,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  1271 035b 03       		.byte	0x3
  1272 035c 00000000 		.4byte	ADC_SAR_Seq_tempTD
  1273 0360 08       		.uleb128 0x8
- 1274 0361 3C010000 		.4byte	.LASF49
+ 1274 0361 8B010000 		.4byte	.LASF49
  1275 0365 01       		.byte	0x1
  1276 0366 1C       		.byte	0x1c
  1277 0367 6B000000 		.4byte	0x6b
@@ -2012,14 +2011,14 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  1279 036c 03       		.byte	0x3
  1280 036d 01000000 		.4byte	ADC_SAR_Seq_finalTD
  1281 0371 12       		.uleb128 0x12
- 1282 0372 EA020000 		.4byte	.LASF50
+ 1282 0372 39030000 		.4byte	.LASF50
  1283 0376 03       		.byte	0x3
  1284 0377 5B       		.byte	0x5b
  1285 0378 7C030000 		.4byte	0x37c
  1286 037c 05       		.uleb128 0x5
  1287 037d 8F000000 		.4byte	0x8f
  1288 0381 13       		.uleb128 0x13
- 1289 0382 C3030000 		.4byte	.LASF51
+ 1289 0382 BE030000 		.4byte	.LASF51
  1290 0386 01       		.byte	0x1
  1291 0387 17       		.byte	0x17
  1292 0388 48010000 		.4byte	0x148
@@ -2027,7 +2026,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  1294 038d 03       		.byte	0x3
  1295 038e 00000000 		.4byte	ADC_SAR_Seq_finalArray
  1296 0392 13       		.uleb128 0x13
- 1297 0393 79020000 		.4byte	.LASF52
+ 1297 0393 C8020000 		.4byte	.LASF52
  1298 0397 01       		.byte	0x1
  1299 0398 18       		.byte	0x18
  1300 0399 83000000 		.4byte	0x83
@@ -2038,10 +2037,10 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  1305              		.section	.debug_abbrev,"",%progbits
  1306              	.Ldebug_abbrev0:
  1307 0000 01       		.uleb128 0x1
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 35
-
-
  1308 0001 11       		.uleb128 0x11
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXUQadf.s 			page 35
+
+
  1309 0002 01       		.byte	0x1
  1310 0003 25       		.uleb128 0x25
  1311 0004 0E       		.uleb128 0xe
@@ -2098,10 +2097,10 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  1362 0037 35       		.uleb128 0x35
  1363 0038 00       		.byte	0
  1364 0039 49       		.uleb128 0x49
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 36
-
-
  1365 003a 13       		.uleb128 0x13
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXUQadf.s 			page 36
+
+
  1366 003b 00       		.byte	0
  1367 003c 00       		.byte	0
  1368 003d 06       		.uleb128 0x6
@@ -2158,10 +2157,10 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  1419 0072 03       		.uleb128 0x3
  1420 0073 0E       		.uleb128 0xe
  1421 0074 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 37
-
-
  1422 0075 0B       		.uleb128 0xb
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXUQadf.s 			page 37
+
+
  1423 0076 3B       		.uleb128 0x3b
  1424 0077 0B       		.uleb128 0xb
  1425 0078 49       		.uleb128 0x49
@@ -2218,10 +2217,10 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  1476 00ac 19       		.uleb128 0x19
  1477 00ad 03       		.uleb128 0x3
  1478 00ae 0E       		.uleb128 0xe
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 38
-
-
  1479 00af 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXUQadf.s 			page 38
+
+
  1480 00b0 0B       		.uleb128 0xb
  1481 00b1 3B       		.uleb128 0x3b
  1482 00b2 05       		.uleb128 0x5
@@ -2278,10 +2277,10 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  1533 00e6 19       		.uleb128 0x19
  1534 00e7 03       		.uleb128 0x3
  1535 00e8 0E       		.uleb128 0xe
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 39
-
-
  1536 00e9 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXUQadf.s 			page 39
+
+
  1537 00ea 0B       		.uleb128 0xb
  1538 00eb 3B       		.uleb128 0x3b
  1539 00ec 05       		.uleb128 0x5
@@ -2338,10 +2337,10 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  1590 0121 27       		.uleb128 0x27
  1591 0122 19       		.uleb128 0x19
  1592 0123 49       		.uleb128 0x49
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 40
-
-
  1593 0124 13       		.uleb128 0x13
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXUQadf.s 			page 40
+
+
  1594 0125 11       		.uleb128 0x11
  1595 0126 01       		.uleb128 0x1
  1596 0127 12       		.uleb128 0x12
@@ -2398,10 +2397,10 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  1647 000c 0000     		.2byte	0
  1648 000e 0000     		.2byte	0
  1649 0010 00000000 		.4byte	.LFB0
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 41
-
-
  1650 0014 60000000 		.4byte	.LFE0-.LFB0
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXUQadf.s 			page 41
+
+
  1651 0018 00000000 		.4byte	.LFB1
  1652 001c 50000000 		.4byte	.LFE1-.LFB1
  1653 0020 00000000 		.4byte	.LFB2
@@ -2458,10 +2457,10 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  1704 0044 3C000000 		.4byte	.LFE8
  1705 0048 00000000 		.4byte	.LFB9
  1706 004c 0E000000 		.4byte	.LFE9
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 42
-
-
  1707 0050 00000000 		.4byte	.LFB10
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXUQadf.s 			page 42
+
+
  1708 0054 1A000000 		.4byte	.LFE10
  1709 0058 00000000 		.4byte	.LFB11
  1710 005c 18000000 		.4byte	.LFE11
@@ -2487,308 +2486,308 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 1
  1726              	.LASF19:
  1727 0000 72656733 		.ascii	"reg32\000"
  1727      3200
- 1728              	.LASF36:
- 1729 0006 6F666673 		.ascii	"offset\000"
- 1729      657400
- 1730              	.LASF42:
- 1731 000d 4144435F 		.ascii	"ADC_SAR_Seq_CountsTo_mVolts\000"
- 1731      5341525F 
- 1731      5365715F 
- 1731      436F756E 
- 1731      7473546F 
- 1732              	.LASF21:
- 1733 0029 4144435F 		.ascii	"ADC_SAR_Seq_Disable\000"
- 1733      5341525F 
- 1733      5365715F 
- 1733      44697361 
- 1733      626C6500 
- 1734              	.LASF4:
- 1735 003d 6C6F6E67 		.ascii	"long int\000"
- 1735      20696E74 
- 1735      00
- 1736              	.LASF56:
- 1737 0046 4144435F 		.ascii	"ADC_SAR_Seq_GetAdcResult\000"
- 1737      5341525F 
- 1737      5365715F 
- 1737      47657441 
- 1737      64635265 
- 1738              	.LASF3:
- 1739 005f 73686F72 		.ascii	"short unsigned int\000"
- 1739      7420756E 
- 1739      7369676E 
- 1739      65642069 
- 1739      6E7400
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 43
+ 1728              	.LASF55:
+ 1729 0006 433A5C55 		.ascii	"C:\\Users\\ben\\Documents\\PSoC Creator\\New Pedal "
+ 1729      73657273 
+ 1729      5C62656E 
+ 1729      5C446F63 
+ 1729      756D656E 
+ 1730 0034 5468696E 		.ascii	"Thingz\\BIT-MANGLER\\ADC_DAC.cydsn\000"
+ 1730      677A5C42 
+ 1730      49542D4D 
+ 1730      414E474C 
+ 1730      45525C41 
+ 1731              	.LASF36:
+ 1732 0055 6F666673 		.ascii	"offset\000"
+ 1732      657400
+ 1733              	.LASF42:
+ 1734 005c 4144435F 		.ascii	"ADC_SAR_Seq_CountsTo_mVolts\000"
+ 1734      5341525F 
+ 1734      5365715F 
+ 1734      436F756E 
+ 1734      7473546F 
+ 1735              	.LASF21:
+ 1736 0078 4144435F 		.ascii	"ADC_SAR_Seq_Disable\000"
+ 1736      5341525F 
+ 1736      5365715F 
+ 1736      44697361 
+ 1736      626C6500 
+ 1737              	.LASF4:
+ 1738 008c 6C6F6E67 		.ascii	"long int\000"
+ 1738      20696E74 
+ 1738      00
+ 1739              	.LASF56:
+ 1740 0095 4144435F 		.ascii	"ADC_SAR_Seq_GetAdcResult\000"
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXUQadf.s 			page 43
 
 
- 1740              	.LASF28:
- 1741 0072 4144435F 		.ascii	"ADC_SAR_Seq_StopConvert\000"
- 1741      5341525F 
- 1741      5365715F 
- 1741      53746F70 
- 1741      436F6E76 
- 1742              	.LASF29:
- 1743 008a 73746174 		.ascii	"status\000"
- 1743      757300
- 1744              	.LASF14:
- 1745 0091 666C6F61 		.ascii	"float32\000"
- 1745      74333200 
- 1746              	.LASF24:
- 1747 0099 4144435F 		.ascii	"ADC_SAR_Seq_tempArray\000"
- 1747      5341525F 
- 1747      5365715F 
- 1747      74656D70 
- 1747      41727261 
- 1748              	.LASF34:
- 1749 00af 4144435F 		.ascii	"ADC_SAR_Seq_Enable\000"
- 1749      5341525F 
- 1749      5365715F 
- 1749      456E6162 
- 1749      6C6500
- 1750              	.LASF15:
- 1751 00c2 666C6F61 		.ascii	"float\000"
- 1751      7400
- 1752              	.LASF41:
- 1753 00c8 4144435F 		.ascii	"ADC_SAR_Seq_SetScaledGain\000"
- 1753      5341525F 
- 1753      5365715F 
- 1753      53657453 
- 1753      63616C65 
- 1754              	.LASF26:
- 1755 00e2 4144435F 		.ascii	"ADC_SAR_Seq_Stop\000"
- 1755      5341525F 
- 1755      5365715F 
- 1755      53746F70 
- 1755      00
- 1756              	.LASF30:
- 1757 00f3 4144435F 		.ascii	"ADC_SAR_Seq_IsEndConversion\000"
- 1757      5341525F 
- 1757      5365715F 
- 1757      4973456E 
- 1757      64436F6E 
- 1758              	.LASF46:
- 1759 010f 4144435F 		.ascii	"ADC_SAR_Seq_tempChan\000"
- 1759      5341525F 
- 1759      5365715F 
- 1759      74656D70 
- 1759      4368616E 
- 1760              	.LASF12:
- 1761 0124 696E7431 		.ascii	"int16\000"
- 1761      3600
- 1762              	.LASF5:
- 1763 012a 6C6F6E67 		.ascii	"long unsigned int\000"
- 1763      20756E73 
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 44
+ 1740      5341525F 
+ 1740      5365715F 
+ 1740      47657441 
+ 1740      64635265 
+ 1741              	.LASF3:
+ 1742 00ae 73686F72 		.ascii	"short unsigned int\000"
+ 1742      7420756E 
+ 1742      7369676E 
+ 1742      65642069 
+ 1742      6E7400
+ 1743              	.LASF28:
+ 1744 00c1 4144435F 		.ascii	"ADC_SAR_Seq_StopConvert\000"
+ 1744      5341525F 
+ 1744      5365715F 
+ 1744      53746F70 
+ 1744      436F6E76 
+ 1745              	.LASF29:
+ 1746 00d9 73746174 		.ascii	"status\000"
+ 1746      757300
+ 1747              	.LASF14:
+ 1748 00e0 666C6F61 		.ascii	"float32\000"
+ 1748      74333200 
+ 1749              	.LASF24:
+ 1750 00e8 4144435F 		.ascii	"ADC_SAR_Seq_tempArray\000"
+ 1750      5341525F 
+ 1750      5365715F 
+ 1750      74656D70 
+ 1750      41727261 
+ 1751              	.LASF34:
+ 1752 00fe 4144435F 		.ascii	"ADC_SAR_Seq_Enable\000"
+ 1752      5341525F 
+ 1752      5365715F 
+ 1752      456E6162 
+ 1752      6C6500
+ 1753              	.LASF15:
+ 1754 0111 666C6F61 		.ascii	"float\000"
+ 1754      7400
+ 1755              	.LASF41:
+ 1756 0117 4144435F 		.ascii	"ADC_SAR_Seq_SetScaledGain\000"
+ 1756      5341525F 
+ 1756      5365715F 
+ 1756      53657453 
+ 1756      63616C65 
+ 1757              	.LASF26:
+ 1758 0131 4144435F 		.ascii	"ADC_SAR_Seq_Stop\000"
+ 1758      5341525F 
+ 1758      5365715F 
+ 1758      53746F70 
+ 1758      00
+ 1759              	.LASF30:
+ 1760 0142 4144435F 		.ascii	"ADC_SAR_Seq_IsEndConversion\000"
+ 1760      5341525F 
+ 1760      5365715F 
+ 1760      4973456E 
+ 1760      64436F6E 
+ 1761              	.LASF46:
+ 1762 015e 4144435F 		.ascii	"ADC_SAR_Seq_tempChan\000"
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXUQadf.s 			page 44
 
 
- 1763      69676E65 
- 1763      6420696E 
- 1763      7400
- 1764              	.LASF49:
- 1765 013c 4144435F 		.ascii	"ADC_SAR_Seq_finalTD\000"
- 1765      5341525F 
- 1765      5365715F 
- 1765      66696E61 
- 1765      6C544400 
- 1766              	.LASF13:
- 1767 0150 696E7433 		.ascii	"int32\000"
- 1767      3200
- 1768              	.LASF23:
- 1769 0156 656E6162 		.ascii	"enableInterrupts\000"
- 1769      6C65496E 
- 1769      74657272 
- 1769      75707473 
- 1769      00
- 1770              	.LASF48:
- 1771 0167 4144435F 		.ascii	"ADC_SAR_Seq_tempTD\000"
- 1771      5341525F 
- 1771      5365715F 
- 1771      74656D70 
- 1771      544400
- 1772              	.LASF1:
- 1773 017a 756E7369 		.ascii	"unsigned char\000"
- 1773      676E6564 
- 1773      20636861 
- 1773      7200
- 1774              	.LASF53:
- 1775 0188 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 1775      4320342E 
- 1775      392E3320 
- 1775      32303135 
- 1775      30333033 
- 1776 01bb 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 1776      20726576 
- 1776      6973696F 
- 1776      6E203232 
- 1776      31323230 
- 1777 01ee 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
- 1777      66756E63 
- 1777      74696F6E 
- 1777      2D736563 
- 1777      74696F6E 
- 1778              	.LASF16:
- 1779 0216 646F7562 		.ascii	"double\000"
- 1779      6C6500
- 1780              	.LASF40:
- 1781 021d 61646347 		.ascii	"adcGain\000"
- 1781      61696E00 
- 1782              	.LASF10:
- 1783 0225 75696E74 		.ascii	"uint16\000"
- 1783      313600
- 1784              	.LASF43:
- 1785 022c 61646343 		.ascii	"adcCounts\000"
- 1785      6F756E74 
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 45
+ 1762      5341525F 
+ 1762      5365715F 
+ 1762      74656D70 
+ 1762      4368616E 
+ 1763              	.LASF12:
+ 1764 0173 696E7431 		.ascii	"int16\000"
+ 1764      3600
+ 1765              	.LASF5:
+ 1766 0179 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1766      20756E73 
+ 1766      69676E65 
+ 1766      6420696E 
+ 1766      7400
+ 1767              	.LASF49:
+ 1768 018b 4144435F 		.ascii	"ADC_SAR_Seq_finalTD\000"
+ 1768      5341525F 
+ 1768      5365715F 
+ 1768      66696E61 
+ 1768      6C544400 
+ 1769              	.LASF13:
+ 1770 019f 696E7433 		.ascii	"int32\000"
+ 1770      3200
+ 1771              	.LASF23:
+ 1772 01a5 656E6162 		.ascii	"enableInterrupts\000"
+ 1772      6C65496E 
+ 1772      74657272 
+ 1772      75707473 
+ 1772      00
+ 1773              	.LASF48:
+ 1774 01b6 4144435F 		.ascii	"ADC_SAR_Seq_tempTD\000"
+ 1774      5341525F 
+ 1774      5365715F 
+ 1774      74656D70 
+ 1774      544400
+ 1775              	.LASF1:
+ 1776 01c9 756E7369 		.ascii	"unsigned char\000"
+ 1776      676E6564 
+ 1776      20636861 
+ 1776      7200
+ 1777              	.LASF53:
+ 1778 01d7 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 1778      4320342E 
+ 1778      392E3320 
+ 1778      32303135 
+ 1778      30333033 
+ 1779 020a 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 1779      20726576 
+ 1779      6973696F 
+ 1779      6E203232 
+ 1779      31323230 
+ 1780 023d 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 1780      66756E63 
+ 1780      74696F6E 
+ 1780      2D736563 
+ 1780      74696F6E 
+ 1781              	.LASF16:
+ 1782 0265 646F7562 		.ascii	"double\000"
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXUQadf.s 			page 45
 
 
- 1785      7300
- 1786              	.LASF11:
- 1787 0236 75696E74 		.ascii	"uint32\000"
- 1787      333200
- 1788              	.LASF27:
- 1789 023d 4144435F 		.ascii	"ADC_SAR_Seq_StartConvert\000"
- 1789      5341525F 
- 1789      5365715F 
- 1789      53746172 
- 1789      74436F6E 
- 1790              	.LASF8:
- 1791 0256 756E7369 		.ascii	"unsigned int\000"
- 1791      676E6564 
- 1791      20696E74 
- 1791      00
- 1792              	.LASF47:
- 1793 0263 4144435F 		.ascii	"ADC_SAR_Seq_finalChan\000"
- 1793      5341525F 
- 1793      5365715F 
- 1793      66696E61 
- 1793      6C436861 
- 1794              	.LASF52:
- 1795 0279 4144435F 		.ascii	"ADC_SAR_Seq_initVar\000"
- 1795      5341525F 
- 1795      5365715F 
- 1795      696E6974 
- 1795      56617200 
- 1796              	.LASF7:
- 1797 028d 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1797      206C6F6E 
- 1797      6720756E 
- 1797      7369676E 
- 1797      65642069 
- 1798              	.LASF25:
- 1799 02a4 4144435F 		.ascii	"ADC_SAR_Seq_Start\000"
- 1799      5341525F 
- 1799      5365715F 
- 1799      53746172 
- 1799      7400
- 1800              	.LASF31:
- 1801 02b6 4144435F 		.ascii	"ADC_SAR_Seq_GetResult16\000"
- 1801      5341525F 
- 1801      5365715F 
- 1801      47657452 
- 1801      6573756C 
- 1802              	.LASF18:
- 1803 02ce 72656738 		.ascii	"reg8\000"
- 1803      00
- 1804              	.LASF20:
- 1805 02d3 73697A65 		.ascii	"sizetype\000"
- 1805      74797065 
- 1805      00
- 1806              	.LASF6:
- 1807 02dc 6C6F6E67 		.ascii	"long long int\000"
- 1807      206C6F6E 
- 1807      6720696E 
- 1807      7400
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 46
+ 1782      6C6500
+ 1783              	.LASF40:
+ 1784 026c 61646347 		.ascii	"adcGain\000"
+ 1784      61696E00 
+ 1785              	.LASF10:
+ 1786 0274 75696E74 		.ascii	"uint16\000"
+ 1786      313600
+ 1787              	.LASF43:
+ 1788 027b 61646343 		.ascii	"adcCounts\000"
+ 1788      6F756E74 
+ 1788      7300
+ 1789              	.LASF11:
+ 1790 0285 75696E74 		.ascii	"uint32\000"
+ 1790      333200
+ 1791              	.LASF27:
+ 1792 028c 4144435F 		.ascii	"ADC_SAR_Seq_StartConvert\000"
+ 1792      5341525F 
+ 1792      5365715F 
+ 1792      53746172 
+ 1792      74436F6E 
+ 1793              	.LASF8:
+ 1794 02a5 756E7369 		.ascii	"unsigned int\000"
+ 1794      676E6564 
+ 1794      20696E74 
+ 1794      00
+ 1795              	.LASF47:
+ 1796 02b2 4144435F 		.ascii	"ADC_SAR_Seq_finalChan\000"
+ 1796      5341525F 
+ 1796      5365715F 
+ 1796      66696E61 
+ 1796      6C436861 
+ 1797              	.LASF52:
+ 1798 02c8 4144435F 		.ascii	"ADC_SAR_Seq_initVar\000"
+ 1798      5341525F 
+ 1798      5365715F 
+ 1798      696E6974 
+ 1798      56617200 
+ 1799              	.LASF7:
+ 1800 02dc 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1800      206C6F6E 
+ 1800      6720756E 
+ 1800      7369676E 
+ 1800      65642069 
+ 1801              	.LASF25:
+ 1802 02f3 4144435F 		.ascii	"ADC_SAR_Seq_Start\000"
+ 1802      5341525F 
+ 1802      5365715F 
+ 1802      53746172 
+ 1802      7400
+ 1803              	.LASF31:
+ 1804 0305 4144435F 		.ascii	"ADC_SAR_Seq_GetResult16\000"
+ 1804      5341525F 
+ 1804      5365715F 
+ 1804      47657452 
+ 1804      6573756C 
+ 1805              	.LASF18:
+ 1806 031d 72656738 		.ascii	"reg8\000"
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXUQadf.s 			page 46
 
 
- 1808              	.LASF50:
- 1809 02ea 4144435F 		.ascii	"ADC_SAR_Seq_SAR_shift\000"
- 1809      5341525F 
- 1809      5365715F 
- 1809      5341525F 
- 1809      73686966 
- 1810              	.LASF17:
- 1811 0300 63686172 		.ascii	"char\000"
- 1811      00
- 1812              	.LASF35:
- 1813 0305 4144435F 		.ascii	"ADC_SAR_Seq_SetOffset\000"
- 1813      5341525F 
- 1813      5365715F 
- 1813      5365744F 
- 1813      66667365 
- 1814              	.LASF45:
- 1815 031b 4144435F 		.ascii	"ADC_SAR_Seq_CountsTo_Volts\000"
- 1815      5341525F 
- 1815      5365715F 
- 1815      436F756E 
- 1815      7473546F 
- 1816              	.LASF32:
- 1817 0336 7265744D 		.ascii	"retMode\000"
- 1817      6F646500 
- 1818              	.LASF33:
- 1819 033e 6368616E 		.ascii	"chan\000"
- 1819      00
- 1820              	.LASF2:
- 1821 0343 73686F72 		.ascii	"short int\000"
- 1821      7420696E 
- 1821      7400
- 1822              	.LASF55:
- 1823 034d 433A5C55 		.ascii	"C:\\Users\\ben\\Documents\\PSoC Creator\\New Pedal "
- 1823      73657273 
- 1823      5C62656E 
- 1823      5C446F63 
- 1823      756D656E 
- 1824 037b 5468696E 		.ascii	"Thingz\\PSOC_BIT_MANGLER\\ADC_DAC.cydsn\000"
- 1824      677A5C50 
- 1824      534F435F 
- 1824      4249545F 
- 1824      4D414E47 
+ 1806      00
+ 1807              	.LASF20:
+ 1808 0322 73697A65 		.ascii	"sizetype\000"
+ 1808      74797065 
+ 1808      00
+ 1809              	.LASF6:
+ 1810 032b 6C6F6E67 		.ascii	"long long int\000"
+ 1810      206C6F6E 
+ 1810      6720696E 
+ 1810      7400
+ 1811              	.LASF50:
+ 1812 0339 4144435F 		.ascii	"ADC_SAR_Seq_SAR_shift\000"
+ 1812      5341525F 
+ 1812      5365715F 
+ 1812      5341525F 
+ 1812      73686966 
+ 1813              	.LASF17:
+ 1814 034f 63686172 		.ascii	"char\000"
+ 1814      00
+ 1815              	.LASF35:
+ 1816 0354 4144435F 		.ascii	"ADC_SAR_Seq_SetOffset\000"
+ 1816      5341525F 
+ 1816      5365715F 
+ 1816      5365744F 
+ 1816      66667365 
+ 1817              	.LASF45:
+ 1818 036a 4144435F 		.ascii	"ADC_SAR_Seq_CountsTo_Volts\000"
+ 1818      5341525F 
+ 1818      5365715F 
+ 1818      436F756E 
+ 1818      7473546F 
+ 1819              	.LASF32:
+ 1820 0385 7265744D 		.ascii	"retMode\000"
+ 1820      6F646500 
+ 1821              	.LASF33:
+ 1822 038d 6368616E 		.ascii	"chan\000"
+ 1822      00
+ 1823              	.LASF2:
+ 1824 0392 73686F72 		.ascii	"short int\000"
+ 1824      7420696E 
+ 1824      7400
  1825              	.LASF9:
- 1826 03a1 75696E74 		.ascii	"uint8\000"
+ 1826 039c 75696E74 		.ascii	"uint8\000"
  1826      3800
  1827              	.LASF44:
- 1828 03a7 4144435F 		.ascii	"ADC_SAR_Seq_CountsTo_uVolts\000"
+ 1828 03a2 4144435F 		.ascii	"ADC_SAR_Seq_CountsTo_uVolts\000"
  1828      5341525F 
  1828      5365715F 
  1828      436F756E 
  1828      7473546F 
  1829              	.LASF51:
- 1830 03c3 4144435F 		.ascii	"ADC_SAR_Seq_finalArray\000"
+ 1830 03be 4144435F 		.ascii	"ADC_SAR_Seq_finalArray\000"
  1830      5341525F 
  1830      5365715F 
  1830      66696E61 
  1830      6C417272 
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccMJumho.s 			page 47
-
-
  1831              	.LASF37:
- 1832 03da 4144435F 		.ascii	"ADC_SAR_Seq_SetResolution\000"
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXUQadf.s 			page 47
+
+
+ 1832 03d5 4144435F 		.ascii	"ADC_SAR_Seq_SetResolution\000"
  1832      5341525F 
  1832      5365715F 
  1832      53657452 
  1832      65736F6C 
  1833              	.LASF54:
- 1834 03f4 47656E65 		.ascii	"Generated_Source\\PSoC5\\ADC_SAR_Seq.c\000"
+ 1834 03ef 47656E65 		.ascii	"Generated_Source\\PSoC5\\ADC_SAR_Seq.c\000"
  1834      72617465 
  1834      645F536F 
  1834      75726365 
  1834      5C50536F 
  1835              	.LASF0:
- 1836 0419 7369676E 		.ascii	"signed char\000"
+ 1836 0414 7369676E 		.ascii	"signed char\000"
  1836      65642063 
  1836      68617200 
  1837              	.LASF38:
- 1838 0425 7265736F 		.ascii	"resolution\000"
+ 1838 0420 7265736F 		.ascii	"resolution\000"
  1838      6C757469 
  1838      6F6E00
  1839              	.LASF39:
- 1840 0430 4144435F 		.ascii	"ADC_SAR_Seq_SetGain\000"
+ 1840 042b 4144435F 		.ascii	"ADC_SAR_Seq_SetGain\000"
  1840      5341525F 
  1840      5365715F 
  1840      53657447 
  1840      61696E00 
  1841              	.LASF22:
- 1842 0444 4144435F 		.ascii	"ADC_SAR_Seq_Init\000"
+ 1842 043f 4144435F 		.ascii	"ADC_SAR_Seq_Init\000"
  1842      5341525F 
  1842      5365715F 
  1842      496E6974 

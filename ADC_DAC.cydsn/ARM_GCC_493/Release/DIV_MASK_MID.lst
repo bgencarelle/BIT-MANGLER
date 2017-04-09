@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccUeSPqp.s 			page 1
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXvLD3Z.s 			page 1
 
 
    1              		.syntax unified
@@ -14,60 +14,60 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccUeSPqp.s 			page 1
   11              		.eabi_attribute 34, 1
   12              		.eabi_attribute 18, 4
   13              		.thumb
-  14              		.file	"DIV_MASK_LSB.c"
+  14              		.file	"DIV_MASK_MID.c"
   15              		.text
   16              	.Ltext0:
   17              		.cfi_sections	.debug_frame
-  18              		.section	.text.DIV_MASK_LSB_Write,"ax",%progbits
+  18              		.section	.text.DIV_MASK_MID_Write,"ax",%progbits
   19              		.align	2
-  20              		.global	DIV_MASK_LSB_Write
+  20              		.global	DIV_MASK_MID_Write
   21              		.thumb
   22              		.thumb_func
-  23              		.type	DIV_MASK_LSB_Write, %function
-  24              	DIV_MASK_LSB_Write:
+  23              		.type	DIV_MASK_MID_Write, %function
+  24              	DIV_MASK_MID_Write:
   25              	.LFB0:
-  26              		.file 1 "Generated_Source\\PSoC5\\DIV_MASK_LSB.c"
-   1:Generated_Source\PSoC5/DIV_MASK_LSB.c **** /*******************************************************************************
-   2:Generated_Source\PSoC5/DIV_MASK_LSB.c **** * File Name: DIV_MASK_LSB.c  
-   3:Generated_Source\PSoC5/DIV_MASK_LSB.c **** * Version 1.80
-   4:Generated_Source\PSoC5/DIV_MASK_LSB.c **** *
-   5:Generated_Source\PSoC5/DIV_MASK_LSB.c **** * Description:
-   6:Generated_Source\PSoC5/DIV_MASK_LSB.c **** *  This file contains API to enable firmware control of a Control Register.
-   7:Generated_Source\PSoC5/DIV_MASK_LSB.c **** *
-   8:Generated_Source\PSoC5/DIV_MASK_LSB.c **** * Note:
-   9:Generated_Source\PSoC5/DIV_MASK_LSB.c **** *
-  10:Generated_Source\PSoC5/DIV_MASK_LSB.c **** ********************************************************************************
-  11:Generated_Source\PSoC5/DIV_MASK_LSB.c **** * Copyright 2008-2015, Cypress Semiconductor Corporation.  All rights reserved.
-  12:Generated_Source\PSoC5/DIV_MASK_LSB.c **** * You may use this file only in accordance with the license, terms, conditions, 
-  13:Generated_Source\PSoC5/DIV_MASK_LSB.c **** * disclaimers, and limitations in the end user license agreement accompanying 
-  14:Generated_Source\PSoC5/DIV_MASK_LSB.c **** * the software package with which this file was provided.
-  15:Generated_Source\PSoC5/DIV_MASK_LSB.c **** *******************************************************************************/
-  16:Generated_Source\PSoC5/DIV_MASK_LSB.c **** 
-  17:Generated_Source\PSoC5/DIV_MASK_LSB.c **** #include "DIV_MASK_LSB.h"
-  18:Generated_Source\PSoC5/DIV_MASK_LSB.c **** 
-  19:Generated_Source\PSoC5/DIV_MASK_LSB.c **** /* Check for removal by optimization */
-  20:Generated_Source\PSoC5/DIV_MASK_LSB.c **** #if !defined(DIV_MASK_LSB_Sync_ctrl_reg__REMOVED)
-  21:Generated_Source\PSoC5/DIV_MASK_LSB.c **** 
-  22:Generated_Source\PSoC5/DIV_MASK_LSB.c ****     
-  23:Generated_Source\PSoC5/DIV_MASK_LSB.c **** /*******************************************************************************
-  24:Generated_Source\PSoC5/DIV_MASK_LSB.c **** * Function Name: DIV_MASK_LSB_Write
-  25:Generated_Source\PSoC5/DIV_MASK_LSB.c **** ********************************************************************************
-  26:Generated_Source\PSoC5/DIV_MASK_LSB.c **** *
-  27:Generated_Source\PSoC5/DIV_MASK_LSB.c **** * Summary:
-  28:Generated_Source\PSoC5/DIV_MASK_LSB.c **** *  Write a byte to the Control Register.
-  29:Generated_Source\PSoC5/DIV_MASK_LSB.c **** *
-  30:Generated_Source\PSoC5/DIV_MASK_LSB.c **** * Parameters:
-  31:Generated_Source\PSoC5/DIV_MASK_LSB.c **** *  control:  The value to be assigned to the Control Register.
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccUeSPqp.s 			page 2
+  26              		.file 1 "Generated_Source\\PSoC5\\DIV_MASK_MID.c"
+   1:Generated_Source\PSoC5/DIV_MASK_MID.c **** /*******************************************************************************
+   2:Generated_Source\PSoC5/DIV_MASK_MID.c **** * File Name: DIV_MASK_MID.c  
+   3:Generated_Source\PSoC5/DIV_MASK_MID.c **** * Version 1.80
+   4:Generated_Source\PSoC5/DIV_MASK_MID.c **** *
+   5:Generated_Source\PSoC5/DIV_MASK_MID.c **** * Description:
+   6:Generated_Source\PSoC5/DIV_MASK_MID.c **** *  This file contains API to enable firmware control of a Control Register.
+   7:Generated_Source\PSoC5/DIV_MASK_MID.c **** *
+   8:Generated_Source\PSoC5/DIV_MASK_MID.c **** * Note:
+   9:Generated_Source\PSoC5/DIV_MASK_MID.c **** *
+  10:Generated_Source\PSoC5/DIV_MASK_MID.c **** ********************************************************************************
+  11:Generated_Source\PSoC5/DIV_MASK_MID.c **** * Copyright 2008-2015, Cypress Semiconductor Corporation.  All rights reserved.
+  12:Generated_Source\PSoC5/DIV_MASK_MID.c **** * You may use this file only in accordance with the license, terms, conditions, 
+  13:Generated_Source\PSoC5/DIV_MASK_MID.c **** * disclaimers, and limitations in the end user license agreement accompanying 
+  14:Generated_Source\PSoC5/DIV_MASK_MID.c **** * the software package with which this file was provided.
+  15:Generated_Source\PSoC5/DIV_MASK_MID.c **** *******************************************************************************/
+  16:Generated_Source\PSoC5/DIV_MASK_MID.c **** 
+  17:Generated_Source\PSoC5/DIV_MASK_MID.c **** #include "DIV_MASK_MID.h"
+  18:Generated_Source\PSoC5/DIV_MASK_MID.c **** 
+  19:Generated_Source\PSoC5/DIV_MASK_MID.c **** /* Check for removal by optimization */
+  20:Generated_Source\PSoC5/DIV_MASK_MID.c **** #if !defined(DIV_MASK_MID_Sync_ctrl_reg__REMOVED)
+  21:Generated_Source\PSoC5/DIV_MASK_MID.c **** 
+  22:Generated_Source\PSoC5/DIV_MASK_MID.c ****     
+  23:Generated_Source\PSoC5/DIV_MASK_MID.c **** /*******************************************************************************
+  24:Generated_Source\PSoC5/DIV_MASK_MID.c **** * Function Name: DIV_MASK_MID_Write
+  25:Generated_Source\PSoC5/DIV_MASK_MID.c **** ********************************************************************************
+  26:Generated_Source\PSoC5/DIV_MASK_MID.c **** *
+  27:Generated_Source\PSoC5/DIV_MASK_MID.c **** * Summary:
+  28:Generated_Source\PSoC5/DIV_MASK_MID.c **** *  Write a byte to the Control Register.
+  29:Generated_Source\PSoC5/DIV_MASK_MID.c **** *
+  30:Generated_Source\PSoC5/DIV_MASK_MID.c **** * Parameters:
+  31:Generated_Source\PSoC5/DIV_MASK_MID.c **** *  control:  The value to be assigned to the Control Register.
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXvLD3Z.s 			page 2
 
 
-  32:Generated_Source\PSoC5/DIV_MASK_LSB.c **** *
-  33:Generated_Source\PSoC5/DIV_MASK_LSB.c **** * Return:
-  34:Generated_Source\PSoC5/DIV_MASK_LSB.c **** *  None.
-  35:Generated_Source\PSoC5/DIV_MASK_LSB.c **** *
-  36:Generated_Source\PSoC5/DIV_MASK_LSB.c **** *******************************************************************************/
-  37:Generated_Source\PSoC5/DIV_MASK_LSB.c **** void DIV_MASK_LSB_Write(uint8 control) 
-  38:Generated_Source\PSoC5/DIV_MASK_LSB.c **** {
+  32:Generated_Source\PSoC5/DIV_MASK_MID.c **** *
+  33:Generated_Source\PSoC5/DIV_MASK_MID.c **** * Return:
+  34:Generated_Source\PSoC5/DIV_MASK_MID.c **** *  None.
+  35:Generated_Source\PSoC5/DIV_MASK_MID.c **** *
+  36:Generated_Source\PSoC5/DIV_MASK_MID.c **** *******************************************************************************/
+  37:Generated_Source\PSoC5/DIV_MASK_MID.c **** void DIV_MASK_MID_Write(uint8 control) 
+  38:Generated_Source\PSoC5/DIV_MASK_MID.c **** {
   27              		.loc 1 38 0
   28              		.cfi_startproc
   29              		@ args = 0, pretend = 0, frame = 8
@@ -82,12 +82,12 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccUeSPqp.s 			page 1
   38              		.cfi_def_cfa_register 7
   39 0006 0346     		mov	r3, r0
   40 0008 FB71     		strb	r3, [r7, #7]
-  39:Generated_Source\PSoC5/DIV_MASK_LSB.c ****     DIV_MASK_LSB_Control = control;
+  39:Generated_Source\PSoC5/DIV_MASK_MID.c ****     DIV_MASK_MID_Control = control;
   41              		.loc 1 39 0
   42 000a 044A     		ldr	r2, .L2
   43 000c FB79     		ldrb	r3, [r7, #7]
   44 000e 1370     		strb	r3, [r2]
-  40:Generated_Source\PSoC5/DIV_MASK_LSB.c **** }
+  40:Generated_Source\PSoC5/DIV_MASK_MID.c **** }
   45              		.loc 1 40 0
   46 0010 0C37     		adds	r7, r7, #12
   47              		.cfi_def_cfa_offset 4
@@ -101,39 +101,39 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccUeSPqp.s 			page 1
   55              	.L3:
   56 001a 00BF     		.align	2
   57              	.L2:
-  58 001c 74640040 		.word	1073767540
+  58 001c 76640040 		.word	1073767542
   59              		.cfi_endproc
   60              	.LFE0:
-  61              		.size	DIV_MASK_LSB_Write, .-DIV_MASK_LSB_Write
-  62              		.section	.text.DIV_MASK_LSB_Read,"ax",%progbits
+  61              		.size	DIV_MASK_MID_Write, .-DIV_MASK_MID_Write
+  62              		.section	.text.DIV_MASK_MID_Read,"ax",%progbits
   63              		.align	2
-  64              		.global	DIV_MASK_LSB_Read
+  64              		.global	DIV_MASK_MID_Read
   65              		.thumb
   66              		.thumb_func
-  67              		.type	DIV_MASK_LSB_Read, %function
-  68              	DIV_MASK_LSB_Read:
+  67              		.type	DIV_MASK_MID_Read, %function
+  68              	DIV_MASK_MID_Read:
   69              	.LFB1:
-  41:Generated_Source\PSoC5/DIV_MASK_LSB.c **** 
-  42:Generated_Source\PSoC5/DIV_MASK_LSB.c **** 
-  43:Generated_Source\PSoC5/DIV_MASK_LSB.c **** /*******************************************************************************
-  44:Generated_Source\PSoC5/DIV_MASK_LSB.c **** * Function Name: DIV_MASK_LSB_Read
-  45:Generated_Source\PSoC5/DIV_MASK_LSB.c **** ********************************************************************************
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccUeSPqp.s 			page 3
+  41:Generated_Source\PSoC5/DIV_MASK_MID.c **** 
+  42:Generated_Source\PSoC5/DIV_MASK_MID.c **** 
+  43:Generated_Source\PSoC5/DIV_MASK_MID.c **** /*******************************************************************************
+  44:Generated_Source\PSoC5/DIV_MASK_MID.c **** * Function Name: DIV_MASK_MID_Read
+  45:Generated_Source\PSoC5/DIV_MASK_MID.c **** ********************************************************************************
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXvLD3Z.s 			page 3
 
 
-  46:Generated_Source\PSoC5/DIV_MASK_LSB.c **** *
-  47:Generated_Source\PSoC5/DIV_MASK_LSB.c **** * Summary:
-  48:Generated_Source\PSoC5/DIV_MASK_LSB.c **** *  Reads the current value assigned to the Control Register.
-  49:Generated_Source\PSoC5/DIV_MASK_LSB.c **** *
-  50:Generated_Source\PSoC5/DIV_MASK_LSB.c **** * Parameters:
-  51:Generated_Source\PSoC5/DIV_MASK_LSB.c **** *  None.
-  52:Generated_Source\PSoC5/DIV_MASK_LSB.c **** *
-  53:Generated_Source\PSoC5/DIV_MASK_LSB.c **** * Return:
-  54:Generated_Source\PSoC5/DIV_MASK_LSB.c **** *  Returns the current value in the Control Register.
-  55:Generated_Source\PSoC5/DIV_MASK_LSB.c **** *
-  56:Generated_Source\PSoC5/DIV_MASK_LSB.c **** *******************************************************************************/
-  57:Generated_Source\PSoC5/DIV_MASK_LSB.c **** uint8 DIV_MASK_LSB_Read(void) 
-  58:Generated_Source\PSoC5/DIV_MASK_LSB.c **** {
+  46:Generated_Source\PSoC5/DIV_MASK_MID.c **** *
+  47:Generated_Source\PSoC5/DIV_MASK_MID.c **** * Summary:
+  48:Generated_Source\PSoC5/DIV_MASK_MID.c **** *  Reads the current value assigned to the Control Register.
+  49:Generated_Source\PSoC5/DIV_MASK_MID.c **** *
+  50:Generated_Source\PSoC5/DIV_MASK_MID.c **** * Parameters:
+  51:Generated_Source\PSoC5/DIV_MASK_MID.c **** *  None.
+  52:Generated_Source\PSoC5/DIV_MASK_MID.c **** *
+  53:Generated_Source\PSoC5/DIV_MASK_MID.c **** * Return:
+  54:Generated_Source\PSoC5/DIV_MASK_MID.c **** *  Returns the current value in the Control Register.
+  55:Generated_Source\PSoC5/DIV_MASK_MID.c **** *
+  56:Generated_Source\PSoC5/DIV_MASK_MID.c **** *******************************************************************************/
+  57:Generated_Source\PSoC5/DIV_MASK_MID.c **** uint8 DIV_MASK_MID_Read(void) 
+  58:Generated_Source\PSoC5/DIV_MASK_MID.c **** {
   70              		.loc 1 58 0
   71              		.cfi_startproc
   72              		@ args = 0, pretend = 0, frame = 0
@@ -144,12 +144,12 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccUeSPqp.s 			page 1
   77              		.cfi_offset 7, -4
   78 0002 00AF     		add	r7, sp, #0
   79              		.cfi_def_cfa_register 7
-  59:Generated_Source\PSoC5/DIV_MASK_LSB.c ****     return DIV_MASK_LSB_Control;
+  59:Generated_Source\PSoC5/DIV_MASK_MID.c ****     return DIV_MASK_MID_Control;
   80              		.loc 1 59 0
   81 0004 034B     		ldr	r3, .L6
   82 0006 1B78     		ldrb	r3, [r3]
   83 0008 DBB2     		uxtb	r3, r3
-  60:Generated_Source\PSoC5/DIV_MASK_LSB.c **** }
+  60:Generated_Source\PSoC5/DIV_MASK_MID.c **** }
   84              		.loc 1 60 0
   85 000a 1846     		mov	r0, r3
   86 000c BD46     		mov	sp, r7
@@ -162,10 +162,10 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccUeSPqp.s 			page 1
   93              	.L7:
   94              		.align	2
   95              	.L6:
-  96 0014 74640040 		.word	1073767540
+  96 0014 76640040 		.word	1073767542
   97              		.cfi_endproc
   98              	.LFE1:
-  99              		.size	DIV_MASK_LSB_Read, .-DIV_MASK_LSB_Read
+  99              		.size	DIV_MASK_MID_Read, .-DIV_MASK_MID_Read
  100              		.text
  101              	.Letext0:
  102              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
@@ -176,12 +176,12 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccUeSPqp.s 			page 1
  107 0006 00000000 		.4byte	.Ldebug_abbrev0
  108 000a 04       		.byte	0x4
  109 000b 01       		.uleb128 0x1
- 110 000c 75000000 		.4byte	.LASF14
+ 110 000c 4F000000 		.4byte	.LASF14
  111 0010 01       		.byte	0x1
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccUeSPqp.s 			page 4
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXvLD3Z.s 			page 4
 
 
- 112 0011 4F000000 		.4byte	.LASF15
+ 112 0011 9F010000 		.4byte	.LASF15
  113 0015 00000000 		.4byte	.LASF16
  114 0019 00000000 		.4byte	.Ldebug_ranges0+0
  115 001d 00000000 		.4byte	0
@@ -193,31 +193,31 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccUeSPqp.s 			page 1
  121 002c 02       		.uleb128 0x2
  122 002d 01       		.byte	0x1
  123 002e 08       		.byte	0x8
- 124 002f 1C010000 		.4byte	.LASF1
+ 124 002f E3000000 		.4byte	.LASF1
  125 0033 02       		.uleb128 0x2
  126 0034 02       		.byte	0x2
  127 0035 05       		.byte	0x5
- 128 0036 9A010000 		.4byte	.LASF2
+ 128 0036 86010000 		.4byte	.LASF2
  129 003a 02       		.uleb128 0x2
  130 003b 02       		.byte	0x2
  131 003c 07       		.byte	0x7
- 132 003d 41010000 		.4byte	.LASF3
+ 132 003d 08010000 		.4byte	.LASF3
  133 0041 02       		.uleb128 0x2
  134 0042 04       		.byte	0x4
  135 0043 05       		.byte	0x5
- 136 0044 BC010000 		.4byte	.LASF4
+ 136 0044 96010000 		.4byte	.LASF4
  137 0048 02       		.uleb128 0x2
  138 0049 04       		.byte	0x4
  139 004a 07       		.byte	0x7
- 140 004b 2F010000 		.4byte	.LASF5
+ 140 004b F6000000 		.4byte	.LASF5
  141 004f 02       		.uleb128 0x2
  142 0050 08       		.byte	0x8
  143 0051 05       		.byte	0x5
- 144 0052 87010000 		.4byte	.LASF6
+ 144 0052 73010000 		.4byte	.LASF6
  145 0056 02       		.uleb128 0x2
  146 0057 08       		.byte	0x8
  147 0058 07       		.byte	0x7
- 148 0059 70010000 		.4byte	.LASF7
+ 148 0059 49010000 		.4byte	.LASF7
  149 005d 03       		.uleb128 0x3
  150 005e 04       		.byte	0x4
  151 005f 05       		.byte	0x5
@@ -225,36 +225,36 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccUeSPqp.s 			page 1
  153 0064 02       		.uleb128 0x2
  154 0065 04       		.byte	0x4
  155 0066 07       		.byte	0x7
- 156 0067 63010000 		.4byte	.LASF8
+ 156 0067 3C010000 		.4byte	.LASF8
  157 006b 04       		.uleb128 0x4
- 158 006c B6010000 		.4byte	.LASF12
+ 158 006c 90010000 		.4byte	.LASF12
  159 0070 02       		.byte	0x2
  160 0071 9201     		.2byte	0x192
  161 0073 2C000000 		.4byte	0x2c
  162 0077 02       		.uleb128 0x2
  163 0078 04       		.byte	0x4
  164 0079 04       		.byte	0x4
- 165 007a 16010000 		.4byte	.LASF9
+ 165 007a DD000000 		.4byte	.LASF9
  166 007e 02       		.uleb128 0x2
  167 007f 08       		.byte	0x8
  168 0080 04       		.byte	0x4
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccUeSPqp.s 			page 5
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXvLD3Z.s 			page 5
 
 
- 169 0081 5C010000 		.4byte	.LASF10
+ 169 0081 35010000 		.4byte	.LASF10
  170 0085 02       		.uleb128 0x2
  171 0086 01       		.byte	0x1
  172 0087 08       		.byte	0x8
- 173 0088 95010000 		.4byte	.LASF11
+ 173 0088 81010000 		.4byte	.LASF11
  174 008c 04       		.uleb128 0x4
- 175 008d 2A010000 		.4byte	.LASF13
+ 175 008d F1000000 		.4byte	.LASF13
  176 0091 02       		.byte	0x2
  177 0092 3C02     		.2byte	0x23c
  178 0094 98000000 		.4byte	0x98
  179 0098 05       		.uleb128 0x5
  180 0099 6B000000 		.4byte	0x6b
  181 009d 06       		.uleb128 0x6
- 182 009e 03010000 		.4byte	.LASF17
+ 182 009e 60010000 		.4byte	.LASF17
  183 00a2 01       		.byte	0x1
  184 00a3 25       		.byte	0x25
  185 00a4 00000000 		.4byte	.LFB0
@@ -263,7 +263,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccUeSPqp.s 			page 1
  188 00ad 9C       		.byte	0x9c
  189 00ae C1000000 		.4byte	0xc1
  190 00b2 07       		.uleb128 0x7
- 191 00b3 54010000 		.4byte	.LASF18
+ 191 00b3 1B010000 		.4byte	.LASF18
  192 00b7 01       		.byte	0x1
  193 00b8 25       		.byte	0x25
  194 00b9 6B000000 		.4byte	0x6b
@@ -272,7 +272,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccUeSPqp.s 			page 1
  197 00bf 77       		.sleb128 -9
  198 00c0 00       		.byte	0
  199 00c1 08       		.uleb128 0x8
- 200 00c2 A4010000 		.4byte	.LASF19
+ 200 00c2 23010000 		.4byte	.LASF19
  201 00c6 01       		.byte	0x1
  202 00c7 39       		.byte	0x39
  203 00c8 6B000000 		.4byte	0x6b
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccUeSPqp.s 			page 1
  223 000c 17       		.uleb128 0x17
  224 000d 11       		.uleb128 0x11
  225 000e 01       		.uleb128 0x1
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccUeSPqp.s 			page 6
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXvLD3Z.s 			page 6
 
 
  226 000f 10       		.uleb128 0x10
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccUeSPqp.s 			page 1
  280 0045 0B       		.uleb128 0xb
  281 0046 3B       		.uleb128 0x3b
  282 0047 0B       		.uleb128 0xb
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccUeSPqp.s 			page 7
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXvLD3Z.s 			page 7
 
 
  283 0048 27       		.uleb128 0x27
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccUeSPqp.s 			page 1
  337 0080 00       		.byte	0
  338              		.section	.debug_aranges,"",%progbits
  339 0000 24000000 		.4byte	0x24
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccUeSPqp.s 			page 8
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXvLD3Z.s 			page 8
 
 
  340 0004 0200     		.2byte	0x2
@@ -459,105 +459,105 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccUeSPqp.s 			page 1
  365      49542D4D 
  365      414E474C 
  365      45525C41 
- 366              	.LASF15:
- 367 004f 47656E65 		.ascii	"Generated_Source\\PSoC5\\DIV_MASK_LSB.c\000"
- 367      72617465 
- 367      645F536F 
- 367      75726365 
- 367      5C50536F 
- 368              	.LASF14:
- 369 0075 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 369      4320342E 
- 369      392E3320 
- 369      32303135 
- 369      30333033 
- 370 00a8 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 370      20726576 
- 370      6973696F 
- 370      6E203232 
- 370      31323230 
- 371 00db 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
- 371      66756E63 
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccUeSPqp.s 			page 9
+ 366              	.LASF14:
+ 367 004f 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 367      4320342E 
+ 367      392E3320 
+ 367      32303135 
+ 367      30333033 
+ 368 0082 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 368      20726576 
+ 368      6973696F 
+ 368      6E203232 
+ 368      31323230 
+ 369 00b5 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 369      66756E63 
+ 369      74696F6E 
+ 369      2D736563 
+ 369      74696F6E 
+ 370              	.LASF9:
+ 371 00dd 666C6F61 		.ascii	"float\000"
+ 371      7400
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXvLD3Z.s 			page 9
 
 
- 371      74696F6E 
- 371      2D736563 
- 371      74696F6E 
- 372              	.LASF17:
- 373 0103 4449565F 		.ascii	"DIV_MASK_LSB_Write\000"
- 373      4D41534B 
- 373      5F4C5342 
- 373      5F577269 
- 373      746500
- 374              	.LASF9:
- 375 0116 666C6F61 		.ascii	"float\000"
- 375      7400
- 376              	.LASF1:
- 377 011c 756E7369 		.ascii	"unsigned char\000"
- 377      676E6564 
- 377      20636861 
- 377      7200
- 378              	.LASF13:
- 379 012a 72656738 		.ascii	"reg8\000"
- 379      00
- 380              	.LASF5:
- 381 012f 6C6F6E67 		.ascii	"long unsigned int\000"
- 381      20756E73 
- 381      69676E65 
- 381      6420696E 
- 381      7400
- 382              	.LASF3:
- 383 0141 73686F72 		.ascii	"short unsigned int\000"
- 383      7420756E 
- 383      7369676E 
- 383      65642069 
- 383      6E7400
- 384              	.LASF18:
- 385 0154 636F6E74 		.ascii	"control\000"
- 385      726F6C00 
- 386              	.LASF10:
- 387 015c 646F7562 		.ascii	"double\000"
- 387      6C6500
- 388              	.LASF8:
- 389 0163 756E7369 		.ascii	"unsigned int\000"
- 389      676E6564 
- 389      20696E74 
- 389      00
- 390              	.LASF7:
- 391 0170 6C6F6E67 		.ascii	"long long unsigned int\000"
- 391      206C6F6E 
- 391      6720756E 
- 391      7369676E 
- 391      65642069 
+ 372              	.LASF1:
+ 373 00e3 756E7369 		.ascii	"unsigned char\000"
+ 373      676E6564 
+ 373      20636861 
+ 373      7200
+ 374              	.LASF13:
+ 375 00f1 72656738 		.ascii	"reg8\000"
+ 375      00
+ 376              	.LASF5:
+ 377 00f6 6C6F6E67 		.ascii	"long unsigned int\000"
+ 377      20756E73 
+ 377      69676E65 
+ 377      6420696E 
+ 377      7400
+ 378              	.LASF3:
+ 379 0108 73686F72 		.ascii	"short unsigned int\000"
+ 379      7420756E 
+ 379      7369676E 
+ 379      65642069 
+ 379      6E7400
+ 380              	.LASF18:
+ 381 011b 636F6E74 		.ascii	"control\000"
+ 381      726F6C00 
+ 382              	.LASF19:
+ 383 0123 4449565F 		.ascii	"DIV_MASK_MID_Read\000"
+ 383      4D41534B 
+ 383      5F4D4944 
+ 383      5F526561 
+ 383      6400
+ 384              	.LASF10:
+ 385 0135 646F7562 		.ascii	"double\000"
+ 385      6C6500
+ 386              	.LASF8:
+ 387 013c 756E7369 		.ascii	"unsigned int\000"
+ 387      676E6564 
+ 387      20696E74 
+ 387      00
+ 388              	.LASF7:
+ 389 0149 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 389      206C6F6E 
+ 389      6720756E 
+ 389      7369676E 
+ 389      65642069 
+ 390              	.LASF17:
+ 391 0160 4449565F 		.ascii	"DIV_MASK_MID_Write\000"
+ 391      4D41534B 
+ 391      5F4D4944 
+ 391      5F577269 
+ 391      746500
  392              	.LASF6:
- 393 0187 6C6F6E67 		.ascii	"long long int\000"
+ 393 0173 6C6F6E67 		.ascii	"long long int\000"
  393      206C6F6E 
  393      6720696E 
  393      7400
  394              	.LASF11:
- 395 0195 63686172 		.ascii	"char\000"
+ 395 0181 63686172 		.ascii	"char\000"
  395      00
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccUeSPqp.s 			page 10
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccXvLD3Z.s 			page 10
 
 
  396              	.LASF2:
- 397 019a 73686F72 		.ascii	"short int\000"
+ 397 0186 73686F72 		.ascii	"short int\000"
  397      7420696E 
  397      7400
- 398              	.LASF19:
- 399 01a4 4449565F 		.ascii	"DIV_MASK_LSB_Read\000"
- 399      4D41534B 
- 399      5F4C5342 
- 399      5F526561 
- 399      6400
- 400              	.LASF12:
- 401 01b6 75696E74 		.ascii	"uint8\000"
- 401      3800
- 402              	.LASF4:
- 403 01bc 6C6F6E67 		.ascii	"long int\000"
- 403      20696E74 
- 403      00
+ 398              	.LASF12:
+ 399 0190 75696E74 		.ascii	"uint8\000"
+ 399      3800
+ 400              	.LASF4:
+ 401 0196 6C6F6E67 		.ascii	"long int\000"
+ 401      20696E74 
+ 401      00
+ 402              	.LASF15:
+ 403 019f 47656E65 		.ascii	"Generated_Source\\PSoC5\\DIV_MASK_MID.c\000"
+ 403      72617465 
+ 403      645F536F 
+ 403      75726365 
+ 403      5C50536F 
  404              	.LASF0:
  405 01c5 7369676E 		.ascii	"signed char\000"
  405      65642063 

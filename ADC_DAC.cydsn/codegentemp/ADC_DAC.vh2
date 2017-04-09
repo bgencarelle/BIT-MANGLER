@@ -2,7 +2,7 @@
 --	Conversion of ADC_DAC.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Sun Apr 09 14:55:41 2017
+--	Sun Apr 09 18:22:12 2017
 --
 
 USE cypress.cypress.all;
@@ -479,7 +479,7 @@ TERMINAL Net_12644 : bit;
 TERMINAL Net_12642 : bit;
 TERMINAL Net_12640 : bit;
 TERMINAL Net_12639 : bit;
-TERMINAL Net_12637 : bit;
+TERMINAL Net_21841 : bit;
 TERMINAL Net_21813 : bit;
 TERMINAL \ADC_SAR_Seq:V_single\ : bit;
 TERMINAL \ADC_SAR_Seq:SAR:Net_248\ : bit;
@@ -3650,6 +3650,7 @@ TERMINAL tmpSIOVREF__PWM_1_CONTROL_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__PWM_1_CONTROL_net_0 : bit;
 SIGNAL tmpOE__PWM_DIV_CONTROL_net_0 : bit;
 SIGNAL tmpFB_0__PWM_DIV_CONTROL_net_0 : bit;
+TERMINAL Net_12637 : bit;
 SIGNAL tmpIO_0__PWM_DIV_CONTROL_net_0 : bit;
 TERMINAL tmpSIOVREF__PWM_DIV_CONTROL_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__PWM_DIV_CONTROL_net_0 : bit;
@@ -5416,7 +5417,7 @@ SS_OUT:cy_psoc3_pins_v1_10
 			Net_12662, Net_12660, Net_12659, Net_12657,
 			Net_12655, Net_12654, Net_12652, Net_12650,
 			Net_12649, Net_12647, Net_12645, Net_12644,
-			Net_12642, Net_12640, Net_12639, Net_12637,
+			Net_12642, Net_12640, Net_12639, Net_21841,
 			Net_21813, Net_12634, Net_12632, Net_12631),
 		hw_ctrl_en=>(\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_63\, \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_62\, \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_61\, \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_60\,
 			\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_59\, \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_58\, \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_57\, \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_56\,
@@ -5512,7 +5513,7 @@ SS_OUT:cy_psoc3_pins_v1_10
 		control=>(\ADC_SAR_Seq:bSAR_SEQ:control_7\, \ADC_SAR_Seq:bSAR_SEQ:control_6\, \ADC_SAR_Seq:bSAR_SEQ:control_5\, \ADC_SAR_Seq:bSAR_SEQ:control_4\,
 			\ADC_SAR_Seq:bSAR_SEQ:control_3\, \ADC_SAR_Seq:bSAR_SEQ:control_2\, \ADC_SAR_Seq:bSAR_SEQ:load_period\, \ADC_SAR_Seq:bSAR_SEQ:enable\));
 \ADC_SAR_Seq:bSAR_SEQ:ChannelCounter\:cy_psoc3_count7
-	GENERIC MAP(cy_period=>"0000100",
+	GENERIC MAP(cy_period=>"0000011",
 		cy_init_value=>"0000000",
 		cy_route_ld=>'1',
 		cy_route_en=>'1',
@@ -5588,7 +5589,7 @@ ADC_REG_CLOCK:cy_clock_v1_0
 		id=>"a10ede98-fbac-4b3a-aca2-d1c8401b6921",
 		source_clock_id=>"",
 		divisor=>0,
-		period=>"769230769.230769",
+		period=>"625000000",
 		is_direct=>'0',
 		is_digital=>'1')
 	PORT MAP(clock_out=>ADC_CLK,

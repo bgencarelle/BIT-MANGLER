@@ -45,8 +45,8 @@ extern const uint8 CYCODE Filter_acu[Filter_ACU_RAM_SIZE_CUR];
 *******************************************************************************/
 
 /* Parameters */
-#define Filter_INIT_INTERRUPT_MODE    (0u)
-#define Filter_INIT_DMA_MODE          (5u)
+#define Filter_INIT_INTERRUPT_MODE    (3u)
+#define Filter_INIT_DMA_MODE          (0u)
 #define Filter_INIT_COHER             (0x00u)
 #define Filter_INIT_DALIGN            (0x0Fu)
 

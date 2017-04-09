@@ -26,7 +26,7 @@ uint16 OLD_DIV_MASK_DEPTH = 0;
         
 uint16 MASK_CTRL = 0;
 uint16 OLD_MASK_DEPTH = 0;
-uint8 MASK_EFFECT = 0;
+uint16 MASK_EFFECT = 0;
 uint16 Effect(uint16 depth);
 uint16 AUDIO_IN = 0;
 uint16 FRQ_CTRL = 0;
@@ -70,13 +70,21 @@ int main()
     FRQ_CTRL=(((ADC_SAR_Seq_GetResult16(0)))+1);
     PWM_ADC_CK_WritePeriod(FRQ_CTRL);
     PWM_ADC_CK_WriteCompare(FRQ_CTRL>>2);
-    DIV_MASK_CTRL = ADC_SAR_Seq_GetResult16(2);
+    PWM_Set((ADC_SAR_Seq_GetResult16(3)>>9)+1);
+    DIV_MASK_CTRL = (ADC_SAR_Seq_GetResult16(2));
     DIV_MASK_LSB_Write(DIV_MASK_CTRL & 0xFF);
-    DIV_MASK_LSB_Write(DIV_MASK_CTRL>>4);
-    
+    DIV_MASK_MSB_Write((( DIV_MASK_CTRL)>>8));
     BIT_MASK_CTRL = Effect(ADC_SAR_Seq_GetResult16(1));
 }
-
+ /*   if (CTR = 5)
+    {
+    LCD_Char_1_Position(0u, strlen("ADC1 "));
+    LCD_Char_1_PrintInt16(FRQ_CTRL); 
+    LCD_Char_1_Position(1u, strlen("ADC2 "));
+    LCD_Char_1_PrintInt16(DIV_MASK_CTRL); 
+}
+ */   
+    
     OLD_BIT_MASK_DEPTH = BIT_MASK_CTRL;
         
 
@@ -84,32 +92,19 @@ int main()
     {
         
         AUDIO_IN = ADC_SAR_1_GetResult16();
-        uint8 LSB_8_ADC =  (AUDIO_IN & 0x00FFu);
-        uint8 MSB_4_ADC = (AUDIO_IN >> 8u);
-        ADC_1_OUT_LSB_Write(LSB_8_ADC);
-        ADC_1_OUT_MSB_Write(MSB_4_ADC);
-        uint8 LSB_8_DAC = DAC_IN_LSB_Read();
-        uint16 MSB_4_DAC = DAC_IN_MSB_Read();
-        uint16 DACINPUT = ((MSB_4_DAC<<8 | LSB_8_DAC));
-        uint16 FINAL_OUT = DACINPUT & OLD_MASK_DEPTH;
-        SPI_DAC_WriteTxData(FINAL_OUT| 0b1111000000000000);
+        ADC_1_OUT_LSB_Write(AUDIO_IN & 0x00FFu);
+        ADC_1_OUT_MSB_Write((AUDIO_IN >> 8u));
  }
-    if (CTR == 5)
-    {
-    LCD_Char_1_Position(0u, strlen("ADC1 "));
-    LCD_Char_1_PrintInt16(FRQ_CTRL); 
-    LCD_Char_1_Position(1u, strlen("ADC2 "));
-    LCD_Char_1_PrintInt16(MASK_CTRL); 
-    
-    }
-    CTR++;
+    uint16 DACINPUT = (DAC_IN_MSB_Read()<<8 | DAC_IN_LSB_Read());
+   SPI_DAC_WriteTxData(( DACINPUT & OLD_BIT_MASK_DEPTH)| 0b1111000000000000);
+
     }
 }
 uint16 Effect(uint16 depth)
 {
-    depth = depth>>3;
+    uint8 depthscaled = depth>>7;
             uint16 mask;
-            switch (depth) 
+            switch (depthscaled) 
         {
         case 0:
             mask = 0xFFFFu;//b1111 1111 1111;
@@ -176,7 +171,7 @@ uint16 Effect(uint16 depth)
         default:
             mask= 0xFFFFu;
         }
-    return mask;
+    return mask |0b1111000000000000;
 }
 void PWM_Start(void)
 {
@@ -207,7 +202,7 @@ void PWM_Start(void)
     return;
 }
 void PWM_Set(uint16 PWMin){
-   uint16 PWMdiv = PWMin* .33333;
+   uint16 PWMdiv = PWMin >>1;
 
     PWM_4_WritePeriod(PWMin);
     PWM_5_WritePeriod(PWMin);

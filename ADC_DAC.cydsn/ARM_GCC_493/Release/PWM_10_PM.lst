@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPzy9ty.s 			page 1
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccymuomu.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPzy9ty.s 			page 1
   24:Generated_Source\PSoC5/PWM_10_PM.c **** * Function Name: PWM_10_SaveConfig
   25:Generated_Source\PSoC5/PWM_10_PM.c **** ********************************************************************************
   26:Generated_Source\PSoC5/PWM_10_PM.c **** *
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPzy9ty.s 			page 2
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccymuomu.s 			page 2
 
 
   27:Generated_Source\PSoC5/PWM_10_PM.c **** * Summary:
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPzy9ty.s 			page 1
   53:Generated_Source\PSoC5/PWM_10_PM.c **** 
   54:Generated_Source\PSoC5/PWM_10_PM.c ****         #if(PWM_10_DeadBandMode == PWM_10__B_PWM__DBM_256_CLOCKS || \
   55:Generated_Source\PSoC5/PWM_10_PM.c ****             PWM_10_DeadBandMode == PWM_10__B_PWM__DBM_2_4_CLOCKS)
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPzy9ty.s 			page 3
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccymuomu.s 			page 3
 
 
   56:Generated_Source\PSoC5/PWM_10_PM.c ****             PWM_10_backup.PWMdeadBandValue = PWM_10_ReadDeadTime();
@@ -145,7 +145,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPzy9ty.s 			page 1
   68              		.align	2
   69              	.L2:
   70 0034 00000000 		.word	PWM_10_backup
-  71 0038 88650040 		.word	1073767816
+  71 0038 89650040 		.word	1073767817
   72              		.cfi_endproc
   73              	.LFE0:
   74              		.size	PWM_10_SaveConfig, .-PWM_10_SaveConfig
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPzy9ty.s 			page 1
   86:Generated_Source\PSoC5/PWM_10_PM.c **** *
   87:Generated_Source\PSoC5/PWM_10_PM.c **** *******************************************************************************/
   88:Generated_Source\PSoC5/PWM_10_PM.c **** void PWM_10_RestoreConfig(void) 
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPzy9ty.s 			page 4
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccymuomu.s 			page 4
 
 
   89:Generated_Source\PSoC5/PWM_10_PM.c **** {
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPzy9ty.s 			page 1
  113:Generated_Source\PSoC5/PWM_10_PM.c ****         #endif  /* (!PWM_10_UsingFixedFunction) */
  114:Generated_Source\PSoC5/PWM_10_PM.c ****     }
  113              		.loc 1 114 0
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPzy9ty.s 			page 5
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccymuomu.s 			page 5
 
 
  114 002a 80BD     		pop	{r7, pc}
@@ -246,7 +246,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPzy9ty.s 			page 1
  116              		.align	2
  117              	.L5:
  118 002c 00000000 		.word	PWM_10_backup
- 119 0030 88650040 		.word	1073767816
+ 119 0030 89650040 		.word	1073767817
  120              		.cfi_endproc
  121              	.LFE1:
  122              		.size	PWM_10_RestoreConfig, .-PWM_10_RestoreConfig
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPzy9ty.s 			page 1
  143 0006 1B78     		ldrb	r3, [r3]
  144 0008 DBB2     		uxtb	r3, r3
  145 000a DBB2     		uxtb	r3, r3
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPzy9ty.s 			page 6
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccymuomu.s 			page 6
 
 
  146 000c 5BB2     		sxtb	r3, r3
@@ -341,7 +341,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPzy9ty.s 			page 1
  166              	.L11:
  167 002a 00BF     		.align	2
  168              	.L10:
- 169 002c 78650040 		.word	1073767800
+ 169 002c 79650040 		.word	1073767801
  170 0030 00000000 		.word	PWM_10_backup
  171              		.cfi_endproc
  172              	.LFE2:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPzy9ty.s 			page 1
  158:Generated_Source\PSoC5/PWM_10_PM.c **** 
  159:Generated_Source\PSoC5/PWM_10_PM.c **** /*******************************************************************************
  160:Generated_Source\PSoC5/PWM_10_PM.c **** * Function Name: PWM_10_Wakeup
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPzy9ty.s 			page 7
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccymuomu.s 			page 7
 
 
  161:Generated_Source\PSoC5/PWM_10_PM.c **** ********************************************************************************
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPzy9ty.s 			page 1
  207 0018 00000000 		.word	PWM_10_backup
  208              		.cfi_endproc
  209              	.LFE3:
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPzy9ty.s 			page 8
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccymuomu.s 			page 8
 
 
  210              		.size	PWM_10_Wakeup, .-PWM_10_Wakeup
@@ -433,37 +433,37 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPzy9ty.s 			page 1
  219 0006 00000000 		.4byte	.Ldebug_abbrev0
  220 000a 04       		.byte	0x4
  221 000b 01       		.uleb128 0x1
- 222 000c 21010000 		.4byte	.LASF25
+ 222 000c ED000000 		.4byte	.LASF25
  223 0010 01       		.byte	0x1
- 224 0011 CF000000 		.4byte	.LASF26
- 225 0015 3E000000 		.4byte	.LASF27
+ 224 0011 9B000000 		.4byte	.LASF26
+ 225 0015 89010000 		.4byte	.LASF27
  226 0019 00000000 		.4byte	.Ldebug_ranges0+0
  227 001d 00000000 		.4byte	0
  228 0021 00000000 		.4byte	.Ldebug_line0
  229 0025 02       		.uleb128 0x2
  230 0026 01       		.byte	0x1
  231 0027 06       		.byte	0x6
- 232 0028 DD010000 		.4byte	.LASF0
+ 232 0028 D8010000 		.4byte	.LASF0
  233 002c 02       		.uleb128 0x2
  234 002d 01       		.byte	0x1
  235 002e 08       		.byte	0x8
- 236 002f F2000000 		.4byte	.LASF1
+ 236 002f BE000000 		.4byte	.LASF1
  237 0033 02       		.uleb128 0x2
  238 0034 02       		.byte	0x2
  239 0035 05       		.byte	0x5
- 240 0036 16020000 		.4byte	.LASF2
+ 240 0036 11020000 		.4byte	.LASF2
  241 003a 02       		.uleb128 0x2
  242 003b 02       		.byte	0x2
  243 003c 07       		.byte	0x7
- 244 003d CA010000 		.4byte	.LASF3
+ 244 003d 0E000000 		.4byte	.LASF3
  245 0041 02       		.uleb128 0x2
  246 0042 04       		.byte	0x4
  247 0043 05       		.byte	0x5
- 248 0044 18010000 		.4byte	.LASF4
+ 248 0044 E4000000 		.4byte	.LASF4
  249 0048 02       		.uleb128 0x2
  250 0049 04       		.byte	0x4
  251 004a 07       		.byte	0x7
- 252 004b A6000000 		.4byte	.LASF5
+ 252 004b 72000000 		.4byte	.LASF5
  253 004f 02       		.uleb128 0x2
  254 0050 08       		.byte	0x8
  255 0051 05       		.byte	0x5
@@ -471,37 +471,37 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPzy9ty.s 			page 1
  257 0056 02       		.uleb128 0x2
  258 0057 08       		.byte	0x8
  259 0058 07       		.byte	0x7
- 260 0059 B8000000 		.4byte	.LASF7
+ 260 0059 84000000 		.4byte	.LASF7
  261 005d 03       		.uleb128 0x3
  262 005e 04       		.byte	0x4
  263 005f 05       		.byte	0x5
  264 0060 696E7400 		.ascii	"int\000"
  265 0064 02       		.uleb128 0x2
  266 0065 04       		.byte	0x4
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPzy9ty.s 			page 9
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccymuomu.s 			page 9
 
 
  267 0066 07       		.byte	0x7
- 268 0067 0E000000 		.4byte	.LASF8
+ 268 0067 21000000 		.4byte	.LASF8
  269 006b 04       		.uleb128 0x4
- 270 006c A0000000 		.4byte	.LASF12
+ 270 006c 6C000000 		.4byte	.LASF12
  271 0070 02       		.byte	0x2
  272 0071 9201     		.2byte	0x192
  273 0073 2C000000 		.4byte	0x2c
  274 0077 02       		.uleb128 0x2
  275 0078 04       		.byte	0x4
  276 0079 04       		.byte	0x4
- 277 007a 10020000 		.4byte	.LASF9
+ 277 007a 0B020000 		.4byte	.LASF9
  278 007e 02       		.uleb128 0x2
  279 007f 08       		.byte	0x8
  280 0080 04       		.byte	0x4
- 281 0081 BC010000 		.4byte	.LASF10
+ 281 0081 7B010000 		.4byte	.LASF10
  282 0085 02       		.uleb128 0x2
  283 0086 01       		.byte	0x1
  284 0087 08       		.byte	0x8
- 285 0088 00010000 		.4byte	.LASF11
+ 285 0088 CC000000 		.4byte	.LASF11
  286 008c 04       		.uleb128 0x4
- 287 008d 20020000 		.4byte	.LASF13
+ 287 008d 1B020000 		.4byte	.LASF13
  288 0091 02       		.byte	0x2
  289 0092 3C02     		.2byte	0x23c
  290 0094 98000000 		.4byte	0x98
@@ -510,53 +510,53 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPzy9ty.s 			page 1
  293 009d 02       		.uleb128 0x2
  294 009e 04       		.byte	0x4
  295 009f 07       		.byte	0x7
- 296 00a0 50020000 		.4byte	.LASF14
+ 296 00a0 4B020000 		.4byte	.LASF14
  297 00a4 06       		.uleb128 0x6
  298 00a5 05       		.byte	0x5
  299 00a6 03       		.byte	0x3
  300 00a7 6B       		.byte	0x6b
  301 00a8 E9000000 		.4byte	0xe9
  302 00ac 07       		.uleb128 0x7
- 303 00ad 1B000000 		.4byte	.LASF15
+ 303 00ad 2E000000 		.4byte	.LASF15
  304 00b1 03       		.byte	0x3
  305 00b2 6E       		.byte	0x6e
  306 00b3 6B000000 		.4byte	0x6b
  307 00b7 00       		.byte	0
  308 00b8 07       		.uleb128 0x7
- 309 00b9 C3010000 		.4byte	.LASF16
+ 309 00b9 82010000 		.4byte	.LASF16
  310 00bd 03       		.byte	0x3
  311 00be 71       		.byte	0x71
  312 00bf 6B000000 		.4byte	0x6b
  313 00c3 01       		.byte	0x1
  314 00c4 07       		.uleb128 0x7
- 315 00c5 46020000 		.4byte	.LASF17
+ 315 00c5 41020000 		.4byte	.LASF17
  316 00c9 03       		.byte	0x3
  317 00ca 73       		.byte	0x73
  318 00cb 6B000000 		.4byte	0x6b
  319 00cf 02       		.byte	0x2
  320 00d0 07       		.uleb128 0x7
- 321 00d1 25020000 		.4byte	.LASF18
+ 321 00d1 20020000 		.4byte	.LASF18
  322 00d5 03       		.byte	0x3
  323 00d6 76       		.byte	0x76
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPzy9ty.s 			page 10
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccymuomu.s 			page 10
 
 
  324 00d7 6B000000 		.4byte	0x6b
  325 00db 03       		.byte	0x3
  326 00dc 07       		.uleb128 0x7
- 327 00dd 05010000 		.4byte	.LASF19
+ 327 00dd D1000000 		.4byte	.LASF19
  328 00e1 03       		.byte	0x3
  329 00e2 86       		.byte	0x86
  330 00e3 6B000000 		.4byte	0x6b
  331 00e7 04       		.byte	0x4
  332 00e8 00       		.byte	0
  333 00e9 08       		.uleb128 0x8
- 334 00ea 2A000000 		.4byte	.LASF20
+ 334 00ea 3D000000 		.4byte	.LASF20
  335 00ee 03       		.byte	0x3
  336 00ef 8B       		.byte	0x8b
  337 00f0 A4000000 		.4byte	0xa4
  338 00f4 09       		.uleb128 0x9
- 339 00f5 E9010000 		.4byte	.LASF21
+ 339 00f5 E4010000 		.4byte	.LASF21
  340 00f9 01       		.byte	0x1
  341 00fa 2A       		.byte	0x2a
  342 00fb 00000000 		.4byte	.LFB0
@@ -564,7 +564,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPzy9ty.s 			page 1
  344 0103 01       		.uleb128 0x1
  345 0104 9C       		.byte	0x9c
  346 0105 09       		.uleb128 0x9
- 347 0106 FB010000 		.4byte	.LASF22
+ 347 0106 F6010000 		.4byte	.LASF22
  348 010a 01       		.byte	0x1
  349 010b 58       		.byte	0x58
  350 010c 00000000 		.4byte	.LFB1
@@ -572,7 +572,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPzy9ty.s 			page 1
  352 0114 01       		.uleb128 0x1
  353 0115 9C       		.byte	0x9c
  354 0116 09       		.uleb128 0x9
- 355 0117 AF010000 		.4byte	.LASF23
+ 355 0117 51000000 		.4byte	.LASF23
  356 011b 01       		.byte	0x1
  357 011c 88       		.byte	0x88
  358 011d 00000000 		.4byte	.LFB2
@@ -580,7 +580,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPzy9ty.s 			page 1
  360 0125 01       		.uleb128 0x1
  361 0126 9C       		.byte	0x9c
  362 0127 09       		.uleb128 0x9
- 363 0128 92000000 		.4byte	.LASF24
+ 363 0128 5E000000 		.4byte	.LASF24
  364 012c 01       		.byte	0x1
  365 012d B2       		.byte	0xb2
  366 012e 00000000 		.4byte	.LFB3
@@ -588,7 +588,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPzy9ty.s 			page 1
  368 0136 01       		.uleb128 0x1
  369 0137 9C       		.byte	0x9c
  370 0138 0A       		.uleb128 0xa
- 371 0139 38020000 		.4byte	.LASF28
+ 371 0139 33020000 		.4byte	.LASF28
  372 013d 01       		.byte	0x1
  373 013e 14       		.byte	0x14
  374 013f E9000000 		.4byte	0xe9
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPzy9ty.s 			page 1
  378 0149 00       		.byte	0
  379              		.section	.debug_abbrev,"",%progbits
  380              	.Ldebug_abbrev0:
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPzy9ty.s 			page 11
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccymuomu.s 			page 11
 
 
  381 0000 01       		.uleb128 0x1
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPzy9ty.s 			page 1
  435 0036 05       		.uleb128 0x5
  436 0037 35       		.uleb128 0x35
  437 0038 00       		.byte	0
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPzy9ty.s 			page 12
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccymuomu.s 			page 12
 
 
  438 0039 49       		.uleb128 0x49
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPzy9ty.s 			page 1
  492 006f 3B       		.uleb128 0x3b
  493 0070 0B       		.uleb128 0xb
  494 0071 27       		.uleb128 0x27
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPzy9ty.s 			page 13
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccymuomu.s 			page 13
 
 
  495 0072 19       		.uleb128 0x19
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPzy9ty.s 			page 1
  549 001c 1C000000 		.4byte	.LFE3
  550 0020 00000000 		.4byte	0
  551 0024 00000000 		.4byte	0
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPzy9ty.s 			page 14
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccymuomu.s 			page 14
 
 
  552              		.section	.debug_line,"",%progbits
@@ -793,159 +793,159 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPzy9ty.s 			page 1
  556      206C6F6E 
  556      6720696E 
  556      7400
- 557              	.LASF8:
- 558 000e 756E7369 		.ascii	"unsigned int\000"
- 558      676E6564 
- 558      20696E74 
- 558      00
- 559              	.LASF15:
- 560 001b 50574D45 		.ascii	"PWMEnableState\000"
- 560      6E61626C 
- 560      65537461 
- 560      746500
- 561              	.LASF20:
- 562 002a 50574D5F 		.ascii	"PWM_10_backupStruct\000"
- 562      31305F62 
- 562      61636B75 
- 562      70537472 
- 562      75637400 
- 563              	.LASF27:
- 564 003e 433A5C55 		.ascii	"C:\\Users\\ben\\Documents\\PSoC Creator\\New Pedal "
- 564      73657273 
- 564      5C62656E 
- 564      5C446F63 
- 564      756D656E 
- 565 006c 5468696E 		.ascii	"Thingz\\PSOC_BIT_MANGLER\\ADC_DAC.cydsn\000"
- 565      677A5C50 
- 565      534F435F 
- 565      4249545F 
- 565      4D414E47 
- 566              	.LASF24:
- 567 0092 50574D5F 		.ascii	"PWM_10_Wakeup\000"
- 567      31305F57 
- 567      616B6575 
- 567      7000
- 568              	.LASF12:
- 569 00a0 75696E74 		.ascii	"uint8\000"
- 569      3800
- 570              	.LASF5:
- 571 00a6 6C6F6E67 		.ascii	"long unsigned int\000"
- 571      20756E73 
- 571      69676E65 
- 571      6420696E 
- 571      7400
- 572              	.LASF7:
- 573 00b8 6C6F6E67 		.ascii	"long long unsigned int\000"
- 573      206C6F6E 
- 573      6720756E 
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPzy9ty.s 			page 15
+ 557              	.LASF3:
+ 558 000e 73686F72 		.ascii	"short unsigned int\000"
+ 558      7420756E 
+ 558      7369676E 
+ 558      65642069 
+ 558      6E7400
+ 559              	.LASF8:
+ 560 0021 756E7369 		.ascii	"unsigned int\000"
+ 560      676E6564 
+ 560      20696E74 
+ 560      00
+ 561              	.LASF15:
+ 562 002e 50574D45 		.ascii	"PWMEnableState\000"
+ 562      6E61626C 
+ 562      65537461 
+ 562      746500
+ 563              	.LASF20:
+ 564 003d 50574D5F 		.ascii	"PWM_10_backupStruct\000"
+ 564      31305F62 
+ 564      61636B75 
+ 564      70537472 
+ 564      75637400 
+ 565              	.LASF23:
+ 566 0051 50574D5F 		.ascii	"PWM_10_Sleep\000"
+ 566      31305F53 
+ 566      6C656570 
+ 566      00
+ 567              	.LASF24:
+ 568 005e 50574D5F 		.ascii	"PWM_10_Wakeup\000"
+ 568      31305F57 
+ 568      616B6575 
+ 568      7000
+ 569              	.LASF12:
+ 570 006c 75696E74 		.ascii	"uint8\000"
+ 570      3800
+ 571              	.LASF5:
+ 572 0072 6C6F6E67 		.ascii	"long unsigned int\000"
+ 572      20756E73 
+ 572      69676E65 
+ 572      6420696E 
+ 572      7400
+ 573              	.LASF7:
+ 574 0084 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 574      206C6F6E 
+ 574      6720756E 
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccymuomu.s 			page 15
 
 
- 573      7369676E 
- 573      65642069 
- 574              	.LASF26:
- 575 00cf 47656E65 		.ascii	"Generated_Source\\PSoC5\\PWM_10_PM.c\000"
- 575      72617465 
- 575      645F536F 
- 575      75726365 
- 575      5C50536F 
- 576              	.LASF1:
- 577 00f2 756E7369 		.ascii	"unsigned char\000"
- 577      676E6564 
- 577      20636861 
- 577      7200
- 578              	.LASF11:
- 579 0100 63686172 		.ascii	"char\000"
- 579      00
- 580              	.LASF19:
- 581 0105 50574D43 		.ascii	"PWMControlRegister\000"
- 581      6F6E7472 
- 581      6F6C5265 
- 581      67697374 
- 581      657200
- 582              	.LASF4:
- 583 0118 6C6F6E67 		.ascii	"long int\000"
- 583      20696E74 
- 583      00
- 584              	.LASF25:
- 585 0121 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 585      4320342E 
- 585      392E3320 
- 585      32303135 
- 585      30333033 
- 586 0154 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 586      20726576 
- 586      6973696F 
- 586      6E203232 
- 586      31323230 
- 587 0187 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
- 587      66756E63 
- 587      74696F6E 
- 587      2D736563 
- 587      74696F6E 
- 588              	.LASF23:
- 589 01af 50574D5F 		.ascii	"PWM_10_Sleep\000"
- 589      31305F53 
- 589      6C656570 
- 589      00
- 590              	.LASF10:
- 591 01bc 646F7562 		.ascii	"double\000"
- 591      6C6500
- 592              	.LASF16:
- 593 01c3 50574D55 		.ascii	"PWMUdb\000"
- 593      646200
- 594              	.LASF3:
- 595 01ca 73686F72 		.ascii	"short unsigned int\000"
- 595      7420756E 
- 595      7369676E 
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPzy9ty.s 			page 16
+ 574      7369676E 
+ 574      65642069 
+ 575              	.LASF26:
+ 576 009b 47656E65 		.ascii	"Generated_Source\\PSoC5\\PWM_10_PM.c\000"
+ 576      72617465 
+ 576      645F536F 
+ 576      75726365 
+ 576      5C50536F 
+ 577              	.LASF1:
+ 578 00be 756E7369 		.ascii	"unsigned char\000"
+ 578      676E6564 
+ 578      20636861 
+ 578      7200
+ 579              	.LASF11:
+ 580 00cc 63686172 		.ascii	"char\000"
+ 580      00
+ 581              	.LASF19:
+ 582 00d1 50574D43 		.ascii	"PWMControlRegister\000"
+ 582      6F6E7472 
+ 582      6F6C5265 
+ 582      67697374 
+ 582      657200
+ 583              	.LASF4:
+ 584 00e4 6C6F6E67 		.ascii	"long int\000"
+ 584      20696E74 
+ 584      00
+ 585              	.LASF25:
+ 586 00ed 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 586      4320342E 
+ 586      392E3320 
+ 586      32303135 
+ 586      30333033 
+ 587 0120 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 587      20726576 
+ 587      6973696F 
+ 587      6E203232 
+ 587      31323230 
+ 588 0153 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 588      66756E63 
+ 588      74696F6E 
+ 588      2D736563 
+ 588      74696F6E 
+ 589              	.LASF10:
+ 590 017b 646F7562 		.ascii	"double\000"
+ 590      6C6500
+ 591              	.LASF16:
+ 592 0182 50574D55 		.ascii	"PWMUdb\000"
+ 592      646200
+ 593              	.LASF27:
+ 594 0189 433A5C55 		.ascii	"C:\\Users\\ben\\Documents\\PSoC Creator\\New Pedal "
+ 594      73657273 
+ 594      5C62656E 
+ 594      5C446F63 
+ 594      756D656E 
+ 595 01b7 5468696E 		.ascii	"Thingz\\BIT-MANGLER\\ADC_DAC.cydsn\000"
+ 595      677A5C42 
+ 595      49542D4D 
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccymuomu.s 			page 16
 
 
- 595      65642069 
- 595      6E7400
+ 595      414E474C 
+ 595      45525C41 
  596              	.LASF0:
- 597 01dd 7369676E 		.ascii	"signed char\000"
+ 597 01d8 7369676E 		.ascii	"signed char\000"
  597      65642063 
  597      68617200 
  598              	.LASF21:
- 599 01e9 50574D5F 		.ascii	"PWM_10_SaveConfig\000"
+ 599 01e4 50574D5F 		.ascii	"PWM_10_SaveConfig\000"
  599      31305F53 
  599      61766543 
  599      6F6E6669 
  599      6700
  600              	.LASF22:
- 601 01fb 50574D5F 		.ascii	"PWM_10_RestoreConfig\000"
+ 601 01f6 50574D5F 		.ascii	"PWM_10_RestoreConfig\000"
  601      31305F52 
  601      6573746F 
  601      7265436F 
  601      6E666967 
  602              	.LASF9:
- 603 0210 666C6F61 		.ascii	"float\000"
+ 603 020b 666C6F61 		.ascii	"float\000"
  603      7400
  604              	.LASF2:
- 605 0216 73686F72 		.ascii	"short int\000"
+ 605 0211 73686F72 		.ascii	"short int\000"
  605      7420696E 
  605      7400
  606              	.LASF13:
- 607 0220 72656738 		.ascii	"reg8\000"
+ 607 021b 72656738 		.ascii	"reg8\000"
  607      00
  608              	.LASF18:
- 609 0225 496E7465 		.ascii	"InterruptMaskValue\000"
+ 609 0220 496E7465 		.ascii	"InterruptMaskValue\000"
  609      72727570 
  609      744D6173 
  609      6B56616C 
  609      756500
  610              	.LASF28:
- 611 0238 50574D5F 		.ascii	"PWM_10_backup\000"
+ 611 0233 50574D5F 		.ascii	"PWM_10_backup\000"
  611      31305F62 
  611      61636B75 
  611      7000
  612              	.LASF17:
- 613 0246 50574D50 		.ascii	"PWMPeriod\000"
+ 613 0241 50574D50 		.ascii	"PWMPeriod\000"
  613      6572696F 
  613      6400
  614              	.LASF14:
- 615 0250 73697A65 		.ascii	"sizetype\000"
+ 615 024b 73697A65 		.ascii	"sizetype\000"
  615      74797065 
  615      00
  616              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
