@@ -1,0 +1,988 @@
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccWRtSUk.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"SCCT_Comp_1.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.global	SCCT_Comp_1_initVar
+  19              		.bss
+  20              		.type	SCCT_Comp_1_initVar, %object
+  21              		.size	SCCT_Comp_1_initVar, 1
+  22              	SCCT_Comp_1_initVar:
+  23 0000 00       		.space	1
+  24              		.section	.text.SCCT_Comp_1_Init,"ax",%progbits
+  25              		.align	2
+  26              		.global	SCCT_Comp_1_Init
+  27              		.thumb
+  28              		.thumb_func
+  29              		.type	SCCT_Comp_1_Init, %function
+  30              	SCCT_Comp_1_Init:
+  31              	.LFB0:
+  32              		.file 1 "Generated_Source\\PSoC5\\SCCT_Comp_1.c"
+   1:Generated_Source\PSoC5/SCCT_Comp_1.c **** /*******************************************************************************
+   2:Generated_Source\PSoC5/SCCT_Comp_1.c **** * File Name: SCCT_Comp_1.c
+   3:Generated_Source\PSoC5/SCCT_Comp_1.c **** * Version 1.0
+   4:Generated_Source\PSoC5/SCCT_Comp_1.c **** *
+   5:Generated_Source\PSoC5/SCCT_Comp_1.c **** * Description:
+   6:Generated_Source\PSoC5/SCCT_Comp_1.c **** *  This file provides the source code to the API for the SCCT Comparator
+   7:Generated_Source\PSoC5/SCCT_Comp_1.c **** *  component.
+   8:Generated_Source\PSoC5/SCCT_Comp_1.c **** *
+   9:Generated_Source\PSoC5/SCCT_Comp_1.c **** * Note:
+  10:Generated_Source\PSoC5/SCCT_Comp_1.c **** *  None.
+  11:Generated_Source\PSoC5/SCCT_Comp_1.c **** *
+  12:Generated_Source\PSoC5/SCCT_Comp_1.c **** ********************************************************************************
+  13:Generated_Source\PSoC5/SCCT_Comp_1.c **** * Copyright 2013, Cypress Semiconductor Corporation. All rights reserved.
+  14:Generated_Source\PSoC5/SCCT_Comp_1.c **** * You may use this file only in accordance with the license, terms, conditions,
+  15:Generated_Source\PSoC5/SCCT_Comp_1.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  16:Generated_Source\PSoC5/SCCT_Comp_1.c **** * the software package with which this file was provided.
+  17:Generated_Source\PSoC5/SCCT_Comp_1.c **** *******************************************************************************/
+  18:Generated_Source\PSoC5/SCCT_Comp_1.c **** 
+  19:Generated_Source\PSoC5/SCCT_Comp_1.c **** #include "SCCT_Comp_1.h"
+  20:Generated_Source\PSoC5/SCCT_Comp_1.c **** #include "CyLib.h"
+  21:Generated_Source\PSoC5/SCCT_Comp_1.c **** 
+  22:Generated_Source\PSoC5/SCCT_Comp_1.c **** #if (1u == CYDEV_VARIABLE_VDDA)
+  23:Generated_Source\PSoC5/SCCT_Comp_1.c ****     #include "CyScBoostClk.h"
+  24:Generated_Source\PSoC5/SCCT_Comp_1.c **** #endif /* 1u == CYDEV_VARIABLE_VDDA */
+  25:Generated_Source\PSoC5/SCCT_Comp_1.c **** 
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccWRtSUk.s 			page 2
+
+
+  26:Generated_Source\PSoC5/SCCT_Comp_1.c **** uint8 SCCT_Comp_1_initVar = 0u;
+  27:Generated_Source\PSoC5/SCCT_Comp_1.c **** 
+  28:Generated_Source\PSoC5/SCCT_Comp_1.c **** 
+  29:Generated_Source\PSoC5/SCCT_Comp_1.c **** /*******************************************************************************
+  30:Generated_Source\PSoC5/SCCT_Comp_1.c **** * Function Name: SCCT_Comp_1_Init
+  31:Generated_Source\PSoC5/SCCT_Comp_1.c **** ********************************************************************************
+  32:Generated_Source\PSoC5/SCCT_Comp_1.c **** *
+  33:Generated_Source\PSoC5/SCCT_Comp_1.c **** * Summary:
+  34:Generated_Source\PSoC5/SCCT_Comp_1.c **** *  Initializes or restores the SCCT_Comp_1 according to the customizer
+  35:Generated_Source\PSoC5/SCCT_Comp_1.c **** *  settings. It is not necessary to call SCCT_Comp_1_Init() because the
+  36:Generated_Source\PSoC5/SCCT_Comp_1.c **** *  SCCT_Comp_1_Start() API calls this function and is the preferred method
+  37:Generated_Source\PSoC5/SCCT_Comp_1.c **** *  to begin SCCT_Comp_1 operation.
+  38:Generated_Source\PSoC5/SCCT_Comp_1.c **** *
+  39:Generated_Source\PSoC5/SCCT_Comp_1.c **** * Parameters:
+  40:Generated_Source\PSoC5/SCCT_Comp_1.c **** *  None.
+  41:Generated_Source\PSoC5/SCCT_Comp_1.c **** *
+  42:Generated_Source\PSoC5/SCCT_Comp_1.c **** * Return:
+  43:Generated_Source\PSoC5/SCCT_Comp_1.c **** *  None.
+  44:Generated_Source\PSoC5/SCCT_Comp_1.c **** *
+  45:Generated_Source\PSoC5/SCCT_Comp_1.c **** *******************************************************************************/
+  46:Generated_Source\PSoC5/SCCT_Comp_1.c **** void SCCT_Comp_1_Init(void) 
+  47:Generated_Source\PSoC5/SCCT_Comp_1.c **** {
+  33              		.loc 1 47 0
+  34              		.cfi_startproc
+  35              		@ args = 0, pretend = 0, frame = 0
+  36              		@ frame_needed = 1, uses_anonymous_args = 0
+  37              		@ link register save eliminated.
+  38 0000 80B4     		push	{r7}
+  39              		.cfi_def_cfa_offset 4
+  40              		.cfi_offset 7, -4
+  41 0002 00AF     		add	r7, sp, #0
+  42              		.cfi_def_cfa_register 7
+  48:Generated_Source\PSoC5/SCCT_Comp_1.c ****     /* Set Naked Op-Amp - Comparator mode */
+  49:Generated_Source\PSoC5/SCCT_Comp_1.c ****     SCCT_Comp_1_CR0_REG = SCCT_Comp_1_MODE_COMPARATOR;
+  43              		.loc 1 49 0
+  44 0004 064B     		ldr	r3, .L2
+  45 0006 2022     		movs	r2, #32
+  46 0008 1A70     		strb	r2, [r3]
+  50:Generated_Source\PSoC5/SCCT_Comp_1.c **** 
+  51:Generated_Source\PSoC5/SCCT_Comp_1.c ****     /* Reset SCCT_Comp_1 Control Register 1 to initial value */
+  52:Generated_Source\PSoC5/SCCT_Comp_1.c ****     SCCT_Comp_1_CR1_REG = 0u;
+  47              		.loc 1 52 0
+  48 000a 064B     		ldr	r3, .L2+4
+  49 000c 0022     		movs	r2, #0
+  50 000e 1A70     		strb	r2, [r3]
+  53:Generated_Source\PSoC5/SCCT_Comp_1.c **** 
+  54:Generated_Source\PSoC5/SCCT_Comp_1.c ****     /* Set bias current to normal operation */
+  55:Generated_Source\PSoC5/SCCT_Comp_1.c ****     SCCT_Comp_1_CR2_REG = SCCT_Comp_1_BIAS;
+  51              		.loc 1 55 0
+  52 0010 054B     		ldr	r3, .L2+8
+  53 0012 0122     		movs	r2, #1
+  54 0014 1A70     		strb	r2, [r3]
+  56:Generated_Source\PSoC5/SCCT_Comp_1.c **** }
+  55              		.loc 1 56 0
+  56 0016 BD46     		mov	sp, r7
+  57              		.cfi_def_cfa_register 13
+  58              		@ sp needed
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccWRtSUk.s 			page 3
+
+
+  59 0018 5DF8047B 		ldr	r7, [sp], #4
+  60              		.cfi_restore 7
+  61              		.cfi_def_cfa_offset 0
+  62 001c 7047     		bx	lr
+  63              	.L3:
+  64 001e 00BF     		.align	2
+  65              	.L2:
+  66 0020 04580040 		.word	1073764356
+  67 0024 05580040 		.word	1073764357
+  68 0028 06580040 		.word	1073764358
+  69              		.cfi_endproc
+  70              	.LFE0:
+  71              		.size	SCCT_Comp_1_Init, .-SCCT_Comp_1_Init
+  72              		.section	.text.SCCT_Comp_1_Enable,"ax",%progbits
+  73              		.align	2
+  74              		.global	SCCT_Comp_1_Enable
+  75              		.thumb
+  76              		.thumb_func
+  77              		.type	SCCT_Comp_1_Enable, %function
+  78              	SCCT_Comp_1_Enable:
+  79              	.LFB1:
+  57:Generated_Source\PSoC5/SCCT_Comp_1.c **** 
+  58:Generated_Source\PSoC5/SCCT_Comp_1.c **** 
+  59:Generated_Source\PSoC5/SCCT_Comp_1.c **** /*******************************************************************************
+  60:Generated_Source\PSoC5/SCCT_Comp_1.c **** * Function Name: SCCT_Comp_1_Enable
+  61:Generated_Source\PSoC5/SCCT_Comp_1.c **** ********************************************************************************
+  62:Generated_Source\PSoC5/SCCT_Comp_1.c **** *
+  63:Generated_Source\PSoC5/SCCT_Comp_1.c **** * Summary:
+  64:Generated_Source\PSoC5/SCCT_Comp_1.c **** *  Activates the hardware and begins SCCT_Comp_1 operation. It is not
+  65:Generated_Source\PSoC5/SCCT_Comp_1.c **** *  necessary to call SCCT_Comp_1_Enable() because the
+  66:Generated_Source\PSoC5/SCCT_Comp_1.c **** *  SCCT_Comp_1_Start() API calls this function, which is the preferred
+  67:Generated_Source\PSoC5/SCCT_Comp_1.c **** *  method to begin SCCT_Comp_1 operation.
+  68:Generated_Source\PSoC5/SCCT_Comp_1.c **** *
+  69:Generated_Source\PSoC5/SCCT_Comp_1.c **** * Parameters:
+  70:Generated_Source\PSoC5/SCCT_Comp_1.c **** *  None.
+  71:Generated_Source\PSoC5/SCCT_Comp_1.c **** *
+  72:Generated_Source\PSoC5/SCCT_Comp_1.c **** * Return:
+  73:Generated_Source\PSoC5/SCCT_Comp_1.c **** *  None.
+  74:Generated_Source\PSoC5/SCCT_Comp_1.c **** *
+  75:Generated_Source\PSoC5/SCCT_Comp_1.c **** *******************************************************************************/
+  76:Generated_Source\PSoC5/SCCT_Comp_1.c **** void SCCT_Comp_1_Enable(void) 
+  77:Generated_Source\PSoC5/SCCT_Comp_1.c **** {
+  80              		.loc 1 77 0
+  81              		.cfi_startproc
+  82              		@ args = 0, pretend = 0, frame = 8
+  83              		@ frame_needed = 1, uses_anonymous_args = 0
+  84 0000 80B5     		push	{r7, lr}
+  85              		.cfi_def_cfa_offset 8
+  86              		.cfi_offset 7, -8
+  87              		.cfi_offset 14, -4
+  88 0002 82B0     		sub	sp, sp, #8
+  89              		.cfi_def_cfa_offset 16
+  90 0004 00AF     		add	r7, sp, #0
+  91              		.cfi_def_cfa_register 7
+  78:Generated_Source\PSoC5/SCCT_Comp_1.c ****     uint8 enableInterrupts;
+  79:Generated_Source\PSoC5/SCCT_Comp_1.c **** 
+  80:Generated_Source\PSoC5/SCCT_Comp_1.c ****     enableInterrupts = CyEnterCriticalSection();
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccWRtSUk.s 			page 4
+
+
+  92              		.loc 1 80 0
+  93 0006 FFF7FEFF 		bl	CyEnterCriticalSection
+  94 000a 0346     		mov	r3, r0
+  95 000c FB71     		strb	r3, [r7, #7]
+  81:Generated_Source\PSoC5/SCCT_Comp_1.c **** 
+  82:Generated_Source\PSoC5/SCCT_Comp_1.c ****     /* Enable power to the SCCT_Comp_1 in Active mode */
+  83:Generated_Source\PSoC5/SCCT_Comp_1.c ****     SCCT_Comp_1_PM_ACT_CFG_REG |= SCCT_Comp_1_ACT_PWR_EN;
+  96              		.loc 1 83 0
+  97 000e 114A     		ldr	r2, .L5
+  98 0010 104B     		ldr	r3, .L5
+  99 0012 1B78     		ldrb	r3, [r3]
+ 100 0014 DBB2     		uxtb	r3, r3
+ 101 0016 43F00203 		orr	r3, r3, #2
+ 102 001a DBB2     		uxtb	r3, r3
+ 103 001c 1370     		strb	r3, [r2]
+  84:Generated_Source\PSoC5/SCCT_Comp_1.c **** 
+  85:Generated_Source\PSoC5/SCCT_Comp_1.c ****     /* Enable the power to the SCCT_Comp_1 in Alternative active mode */
+  86:Generated_Source\PSoC5/SCCT_Comp_1.c ****     SCCT_Comp_1_PM_STBY_CFG_REG |= SCCT_Comp_1_STBY_PWR_EN;
+ 104              		.loc 1 86 0
+ 105 001e 0E4A     		ldr	r2, .L5+4
+ 106 0020 0D4B     		ldr	r3, .L5+4
+ 107 0022 1B78     		ldrb	r3, [r3]
+ 108 0024 DBB2     		uxtb	r3, r3
+ 109 0026 43F00203 		orr	r3, r3, #2
+ 110 002a DBB2     		uxtb	r3, r3
+ 111 002c 1370     		strb	r3, [r2]
+  87:Generated_Source\PSoC5/SCCT_Comp_1.c **** 
+  88:Generated_Source\PSoC5/SCCT_Comp_1.c ****     /* SCCT_Comp_1 internal Pump Clock Selection */
+  89:Generated_Source\PSoC5/SCCT_Comp_1.c ****     SCCT_Comp_1_PUMP_CR1_REG |= SCCT_Comp_1_PUMP_CR1_SC_CLKSEL;
+ 112              		.loc 1 89 0
+ 113 002e 0B4A     		ldr	r2, .L5+8
+ 114 0030 0A4B     		ldr	r3, .L5+8
+ 115 0032 1B78     		ldrb	r3, [r3]
+ 116 0034 DBB2     		uxtb	r3, r3
+ 117 0036 63F07F03 		orn	r3, r3, #127
+ 118 003a DBB2     		uxtb	r3, r3
+ 119 003c 1370     		strb	r3, [r2]
+  90:Generated_Source\PSoC5/SCCT_Comp_1.c **** 
+  91:Generated_Source\PSoC5/SCCT_Comp_1.c ****     #if (1u == CYDEV_VARIABLE_VDDA)
+  92:Generated_Source\PSoC5/SCCT_Comp_1.c **** 
+  93:Generated_Source\PSoC5/SCCT_Comp_1.c ****         if (1u == CyScPumpEnabled)
+  94:Generated_Source\PSoC5/SCCT_Comp_1.c ****         {
+  95:Generated_Source\PSoC5/SCCT_Comp_1.c ****             SCCT_Comp_1_BSTCLK_REG &= (uint8)(~SCCT_Comp_1_BST_CLK_INDEX_MASK);
+  96:Generated_Source\PSoC5/SCCT_Comp_1.c ****             SCCT_Comp_1_BSTCLK_REG |= (SCCT_Comp_1_BST_CLK_EN | CyScBoostClk__INDEX);
+  97:Generated_Source\PSoC5/SCCT_Comp_1.c ****             SCCT_Comp_1_SC_MISC_REG |= SCCT_Comp_1_PUMP_FORCE;
+  98:Generated_Source\PSoC5/SCCT_Comp_1.c ****             CyScBoostClk_Start();
+  99:Generated_Source\PSoC5/SCCT_Comp_1.c ****         }
+ 100:Generated_Source\PSoC5/SCCT_Comp_1.c ****         else
+ 101:Generated_Source\PSoC5/SCCT_Comp_1.c ****         {
+ 102:Generated_Source\PSoC5/SCCT_Comp_1.c ****             SCCT_Comp_1_BSTCLK_REG &= (uint8)(~SCCT_Comp_1_BST_CLK_EN);
+ 103:Generated_Source\PSoC5/SCCT_Comp_1.c ****             SCCT_Comp_1_SC_MISC_REG &= (uint8)(~SCCT_Comp_1_PUMP_FORCE);
+ 104:Generated_Source\PSoC5/SCCT_Comp_1.c ****         }
+ 105:Generated_Source\PSoC5/SCCT_Comp_1.c **** 
+ 106:Generated_Source\PSoC5/SCCT_Comp_1.c ****     #endif /* 1u == CYDEV_VARIABLE_VDDA */
+ 107:Generated_Source\PSoC5/SCCT_Comp_1.c **** 
+ 108:Generated_Source\PSoC5/SCCT_Comp_1.c ****     CyExitCriticalSection(enableInterrupts);
+ 120              		.loc 1 108 0
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccWRtSUk.s 			page 5
+
+
+ 121 003e FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 122 0040 1846     		mov	r0, r3
+ 123 0042 FFF7FEFF 		bl	CyExitCriticalSection
+ 109:Generated_Source\PSoC5/SCCT_Comp_1.c **** 
+ 110:Generated_Source\PSoC5/SCCT_Comp_1.c ****     /* Enable clock (aclk) to the SCCT_Comp_1 and disable dynamic control */
+ 111:Generated_Source\PSoC5/SCCT_Comp_1.c ****     SCCT_Comp_1_SC_CLK_REG = SCCT_Comp_1_CLK_EN;
+ 124              		.loc 1 111 0
+ 125 0046 064B     		ldr	r3, .L5+12
+ 126 0048 0822     		movs	r2, #8
+ 127 004a 1A70     		strb	r2, [r3]
+ 112:Generated_Source\PSoC5/SCCT_Comp_1.c **** }
+ 128              		.loc 1 112 0
+ 129 004c 0837     		adds	r7, r7, #8
+ 130              		.cfi_def_cfa_offset 8
+ 131 004e BD46     		mov	sp, r7
+ 132              		.cfi_def_cfa_register 13
+ 133              		@ sp needed
+ 134 0050 80BD     		pop	{r7, pc}
+ 135              	.L6:
+ 136 0052 00BF     		.align	2
+ 137              	.L5:
+ 138 0054 A9430040 		.word	1073759145
+ 139 0058 B9430040 		.word	1073759161
+ 140 005c 77580040 		.word	1073764471
+ 141 0060 1B5A0040 		.word	1073764891
+ 142              		.cfi_endproc
+ 143              	.LFE1:
+ 144              		.size	SCCT_Comp_1_Enable, .-SCCT_Comp_1_Enable
+ 145              		.section	.text.SCCT_Comp_1_Start,"ax",%progbits
+ 146              		.align	2
+ 147              		.global	SCCT_Comp_1_Start
+ 148              		.thumb
+ 149              		.thumb_func
+ 150              		.type	SCCT_Comp_1_Start, %function
+ 151              	SCCT_Comp_1_Start:
+ 152              	.LFB2:
+ 113:Generated_Source\PSoC5/SCCT_Comp_1.c **** 
+ 114:Generated_Source\PSoC5/SCCT_Comp_1.c **** 
+ 115:Generated_Source\PSoC5/SCCT_Comp_1.c **** /*******************************************************************************
+ 116:Generated_Source\PSoC5/SCCT_Comp_1.c **** * Function Name: SCCT_Comp_1_Start
+ 117:Generated_Source\PSoC5/SCCT_Comp_1.c **** ********************************************************************************
+ 118:Generated_Source\PSoC5/SCCT_Comp_1.c **** *
+ 119:Generated_Source\PSoC5/SCCT_Comp_1.c **** * Summary:
+ 120:Generated_Source\PSoC5/SCCT_Comp_1.c **** *  Performs all of the required initialization for the SCCT_Comp_1 and
+ 121:Generated_Source\PSoC5/SCCT_Comp_1.c **** *  enables power to the SCCT_Comp_1. The first time the routine is
+ 122:Generated_Source\PSoC5/SCCT_Comp_1.c **** *  executed, the SCCT_Comp_1 is initialized to the configuration from the
+ 123:Generated_Source\PSoC5/SCCT_Comp_1.c **** *  customizer. When called to restart the SCCT_Comp_1 following a
+ 124:Generated_Source\PSoC5/SCCT_Comp_1.c **** *  SCCT_Comp_1_Stop() call, the current SCCT_Comp_1 parameter
+ 125:Generated_Source\PSoC5/SCCT_Comp_1.c **** *  settings are retained.
+ 126:Generated_Source\PSoC5/SCCT_Comp_1.c **** *
+ 127:Generated_Source\PSoC5/SCCT_Comp_1.c **** * Parameters:
+ 128:Generated_Source\PSoC5/SCCT_Comp_1.c **** *  None.
+ 129:Generated_Source\PSoC5/SCCT_Comp_1.c **** *
+ 130:Generated_Source\PSoC5/SCCT_Comp_1.c **** * Return:
+ 131:Generated_Source\PSoC5/SCCT_Comp_1.c **** *  None.
+ 132:Generated_Source\PSoC5/SCCT_Comp_1.c **** *
+ 133:Generated_Source\PSoC5/SCCT_Comp_1.c **** * Global variables:
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccWRtSUk.s 			page 6
+
+
+ 134:Generated_Source\PSoC5/SCCT_Comp_1.c **** *  SCCT_Comp_1_initVar - used to check initial configuration, modified on
+ 135:Generated_Source\PSoC5/SCCT_Comp_1.c **** *  first function call.
+ 136:Generated_Source\PSoC5/SCCT_Comp_1.c **** *
+ 137:Generated_Source\PSoC5/SCCT_Comp_1.c **** * Reentrant:
+ 138:Generated_Source\PSoC5/SCCT_Comp_1.c **** *  No.
+ 139:Generated_Source\PSoC5/SCCT_Comp_1.c **** *
+ 140:Generated_Source\PSoC5/SCCT_Comp_1.c **** * Side Effect:
+ 141:Generated_Source\PSoC5/SCCT_Comp_1.c **** *  If the initVar variable is already set, this function only calls the
+ 142:Generated_Source\PSoC5/SCCT_Comp_1.c **** *  SCCT_Comp_1_Enable() function.
+ 143:Generated_Source\PSoC5/SCCT_Comp_1.c **** *
+ 144:Generated_Source\PSoC5/SCCT_Comp_1.c **** *******************************************************************************/
+ 145:Generated_Source\PSoC5/SCCT_Comp_1.c **** void SCCT_Comp_1_Start(void) 
+ 146:Generated_Source\PSoC5/SCCT_Comp_1.c **** {
+ 153              		.loc 1 146 0
+ 154              		.cfi_startproc
+ 155              		@ args = 0, pretend = 0, frame = 0
+ 156              		@ frame_needed = 1, uses_anonymous_args = 0
+ 157 0000 80B5     		push	{r7, lr}
+ 158              		.cfi_def_cfa_offset 8
+ 159              		.cfi_offset 7, -8
+ 160              		.cfi_offset 14, -4
+ 161 0002 00AF     		add	r7, sp, #0
+ 162              		.cfi_def_cfa_register 7
+ 147:Generated_Source\PSoC5/SCCT_Comp_1.c ****     if (0u == SCCT_Comp_1_initVar)
+ 163              		.loc 1 147 0
+ 164 0004 054B     		ldr	r3, .L9
+ 165 0006 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 166 0008 002B     		cmp	r3, #0
+ 167 000a 04D1     		bne	.L8
+ 148:Generated_Source\PSoC5/SCCT_Comp_1.c ****     {
+ 149:Generated_Source\PSoC5/SCCT_Comp_1.c ****         SCCT_Comp_1_Init();
+ 168              		.loc 1 149 0
+ 169 000c FFF7FEFF 		bl	SCCT_Comp_1_Init
+ 150:Generated_Source\PSoC5/SCCT_Comp_1.c ****         SCCT_Comp_1_initVar = 1u;
+ 170              		.loc 1 150 0
+ 171 0010 024B     		ldr	r3, .L9
+ 172 0012 0122     		movs	r2, #1
+ 173 0014 1A70     		strb	r2, [r3]
+ 174              	.L8:
+ 151:Generated_Source\PSoC5/SCCT_Comp_1.c ****     }
+ 152:Generated_Source\PSoC5/SCCT_Comp_1.c **** 
+ 153:Generated_Source\PSoC5/SCCT_Comp_1.c ****     SCCT_Comp_1_Enable();
+ 175              		.loc 1 153 0
+ 176 0016 FFF7FEFF 		bl	SCCT_Comp_1_Enable
+ 154:Generated_Source\PSoC5/SCCT_Comp_1.c **** }
+ 177              		.loc 1 154 0
+ 178 001a 80BD     		pop	{r7, pc}
+ 179              	.L10:
+ 180              		.align	2
+ 181              	.L9:
+ 182 001c 00000000 		.word	SCCT_Comp_1_initVar
+ 183              		.cfi_endproc
+ 184              	.LFE2:
+ 185              		.size	SCCT_Comp_1_Start, .-SCCT_Comp_1_Start
+ 186              		.section	.text.SCCT_Comp_1_Stop,"ax",%progbits
+ 187              		.align	2
+ 188              		.global	SCCT_Comp_1_Stop
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccWRtSUk.s 			page 7
+
+
+ 189              		.thumb
+ 190              		.thumb_func
+ 191              		.type	SCCT_Comp_1_Stop, %function
+ 192              	SCCT_Comp_1_Stop:
+ 193              	.LFB3:
+ 155:Generated_Source\PSoC5/SCCT_Comp_1.c **** 
+ 156:Generated_Source\PSoC5/SCCT_Comp_1.c **** 
+ 157:Generated_Source\PSoC5/SCCT_Comp_1.c **** /*******************************************************************************
+ 158:Generated_Source\PSoC5/SCCT_Comp_1.c **** * Function Name: SCCT_Comp_1_Stop
+ 159:Generated_Source\PSoC5/SCCT_Comp_1.c **** ********************************************************************************
+ 160:Generated_Source\PSoC5/SCCT_Comp_1.c **** *
+ 161:Generated_Source\PSoC5/SCCT_Comp_1.c **** * Summary:
+ 162:Generated_Source\PSoC5/SCCT_Comp_1.c **** *  Turns off the SCCT_Comp_1. It will disable the related SC/CT block.
+ 163:Generated_Source\PSoC5/SCCT_Comp_1.c **** *
+ 164:Generated_Source\PSoC5/SCCT_Comp_1.c **** * Parameters:
+ 165:Generated_Source\PSoC5/SCCT_Comp_1.c **** *  None.
+ 166:Generated_Source\PSoC5/SCCT_Comp_1.c **** *
+ 167:Generated_Source\PSoC5/SCCT_Comp_1.c **** * Return:
+ 168:Generated_Source\PSoC5/SCCT_Comp_1.c **** *  None.
+ 169:Generated_Source\PSoC5/SCCT_Comp_1.c **** *
+ 170:Generated_Source\PSoC5/SCCT_Comp_1.c **** *******************************************************************************/
+ 171:Generated_Source\PSoC5/SCCT_Comp_1.c **** void SCCT_Comp_1_Stop(void) 
+ 172:Generated_Source\PSoC5/SCCT_Comp_1.c **** {
+ 194              		.loc 1 172 0
+ 195              		.cfi_startproc
+ 196              		@ args = 0, pretend = 0, frame = 8
+ 197              		@ frame_needed = 1, uses_anonymous_args = 0
+ 198 0000 80B5     		push	{r7, lr}
+ 199              		.cfi_def_cfa_offset 8
+ 200              		.cfi_offset 7, -8
+ 201              		.cfi_offset 14, -4
+ 202 0002 82B0     		sub	sp, sp, #8
+ 203              		.cfi_def_cfa_offset 16
+ 204 0004 00AF     		add	r7, sp, #0
+ 205              		.cfi_def_cfa_register 7
+ 173:Generated_Source\PSoC5/SCCT_Comp_1.c ****     uint8 enableInterrupts;    
+ 174:Generated_Source\PSoC5/SCCT_Comp_1.c **** 
+ 175:Generated_Source\PSoC5/SCCT_Comp_1.c ****     enableInterrupts = CyEnterCriticalSection();
+ 206              		.loc 1 175 0
+ 207 0006 FFF7FEFF 		bl	CyEnterCriticalSection
+ 208 000a 0346     		mov	r3, r0
+ 209 000c FB71     		strb	r3, [r7, #7]
+ 176:Generated_Source\PSoC5/SCCT_Comp_1.c **** 
+ 177:Generated_Source\PSoC5/SCCT_Comp_1.c ****     /* Disble power to the SCCT_Comp_1 in Active mode template */
+ 178:Generated_Source\PSoC5/SCCT_Comp_1.c ****     SCCT_Comp_1_PM_ACT_CFG_REG &= (uint8)(~SCCT_Comp_1_ACT_PWR_EN);
+ 210              		.loc 1 178 0
+ 211 000e 0F4A     		ldr	r2, .L12
+ 212 0010 0E4B     		ldr	r3, .L12
+ 213 0012 1B78     		ldrb	r3, [r3]
+ 214 0014 DBB2     		uxtb	r3, r3
+ 215 0016 23F00203 		bic	r3, r3, #2
+ 216 001a DBB2     		uxtb	r3, r3
+ 217 001c 1370     		strb	r3, [r2]
+ 179:Generated_Source\PSoC5/SCCT_Comp_1.c **** 
+ 180:Generated_Source\PSoC5/SCCT_Comp_1.c ****     /* Disble power to the SCCT_Comp_1 in Alternative Active mode template */
+ 181:Generated_Source\PSoC5/SCCT_Comp_1.c ****     SCCT_Comp_1_PM_STBY_CFG_REG &= (uint8)(~SCCT_Comp_1_STBY_PWR_EN);
+ 218              		.loc 1 181 0
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccWRtSUk.s 			page 8
+
+
+ 219 001e 0C4A     		ldr	r2, .L12+4
+ 220 0020 0B4B     		ldr	r3, .L12+4
+ 221 0022 1B78     		ldrb	r3, [r3]
+ 222 0024 DBB2     		uxtb	r3, r3
+ 223 0026 23F00203 		bic	r3, r3, #2
+ 224 002a DBB2     		uxtb	r3, r3
+ 225 002c 1370     		strb	r3, [r2]
+ 182:Generated_Source\PSoC5/SCCT_Comp_1.c **** 
+ 183:Generated_Source\PSoC5/SCCT_Comp_1.c ****     #if (1u == CYDEV_VARIABLE_VDDA)
+ 184:Generated_Source\PSoC5/SCCT_Comp_1.c **** 
+ 185:Generated_Source\PSoC5/SCCT_Comp_1.c ****         SCCT_Comp_1_BSTCLK_REG &= (uint8)(~SCCT_Comp_1_BST_CLK_EN);
+ 186:Generated_Source\PSoC5/SCCT_Comp_1.c **** 
+ 187:Generated_Source\PSoC5/SCCT_Comp_1.c ****         /* Disable pumps only if there aren't any SC/CT block in use */
+ 188:Generated_Source\PSoC5/SCCT_Comp_1.c ****         if (0u == (SCCT_Comp_1_PM_ACT_CFG_REG & SCCT_Comp_1_PM_ACT_CFG_MASK))
+ 189:Generated_Source\PSoC5/SCCT_Comp_1.c ****         {
+ 190:Generated_Source\PSoC5/SCCT_Comp_1.c ****             SCCT_Comp_1_SC_MISC_REG &= (uint8)(~SCCT_Comp_1_PUMP_FORCE);
+ 191:Generated_Source\PSoC5/SCCT_Comp_1.c ****             SCCT_Comp_1_PUMP_CR1_REG &= (uint8)(~SCCT_Comp_1_PUMP_CR1_SC_CLKSEL);
+ 192:Generated_Source\PSoC5/SCCT_Comp_1.c ****             CyScBoostClk_Stop();
+ 193:Generated_Source\PSoC5/SCCT_Comp_1.c ****         }
+ 194:Generated_Source\PSoC5/SCCT_Comp_1.c **** 
+ 195:Generated_Source\PSoC5/SCCT_Comp_1.c ****     #endif /* 1u == CYDEV_VARIABLE_VDDA */
+ 196:Generated_Source\PSoC5/SCCT_Comp_1.c **** 
+ 197:Generated_Source\PSoC5/SCCT_Comp_1.c ****     CyExitCriticalSection(enableInterrupts);
+ 226              		.loc 1 197 0
+ 227 002e FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 228 0030 1846     		mov	r0, r3
+ 229 0032 FFF7FEFF 		bl	CyExitCriticalSection
+ 198:Generated_Source\PSoC5/SCCT_Comp_1.c ****     
+ 199:Generated_Source\PSoC5/SCCT_Comp_1.c ****     /* Disable clock (aclk) to SCCT_Comp_1 */
+ 200:Generated_Source\PSoC5/SCCT_Comp_1.c ****     SCCT_Comp_1_SC_CLK_REG &= (uint8)(~SCCT_Comp_1_CLK_EN);
+ 230              		.loc 1 200 0
+ 231 0036 074A     		ldr	r2, .L12+8
+ 232 0038 064B     		ldr	r3, .L12+8
+ 233 003a 1B78     		ldrb	r3, [r3]
+ 234 003c DBB2     		uxtb	r3, r3
+ 235 003e 23F00803 		bic	r3, r3, #8
+ 236 0042 DBB2     		uxtb	r3, r3
+ 237 0044 1370     		strb	r3, [r2]
+ 201:Generated_Source\PSoC5/SCCT_Comp_1.c **** }
+ 238              		.loc 1 201 0
+ 239 0046 0837     		adds	r7, r7, #8
+ 240              		.cfi_def_cfa_offset 8
+ 241 0048 BD46     		mov	sp, r7
+ 242              		.cfi_def_cfa_register 13
+ 243              		@ sp needed
+ 244 004a 80BD     		pop	{r7, pc}
+ 245              	.L13:
+ 246              		.align	2
+ 247              	.L12:
+ 248 004c A9430040 		.word	1073759145
+ 249 0050 B9430040 		.word	1073759161
+ 250 0054 1B5A0040 		.word	1073764891
+ 251              		.cfi_endproc
+ 252              	.LFE3:
+ 253              		.size	SCCT_Comp_1_Stop, .-SCCT_Comp_1_Stop
+ 254              		.text
+ 255              	.Letext0:
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccWRtSUk.s 			page 9
+
+
+ 256              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
+ 257              		.section	.debug_info,"",%progbits
+ 258              	.Ldebug_info0:
+ 259 0000 1C010000 		.4byte	0x11c
+ 260 0004 0400     		.2byte	0x4
+ 261 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 262 000a 04       		.byte	0x4
+ 263 000b 01       		.uleb128 0x1
+ 264 000c E6000000 		.4byte	.LASF20
+ 265 0010 01       		.byte	0x1
+ 266 0011 6F000000 		.4byte	.LASF21
+ 267 0015 AA010000 		.4byte	.LASF22
+ 268 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 269 001d 00000000 		.4byte	0
+ 270 0021 00000000 		.4byte	.Ldebug_line0
+ 271 0025 02       		.uleb128 0x2
+ 272 0026 01       		.byte	0x1
+ 273 0027 06       		.byte	0x6
+ 274 0028 98010000 		.4byte	.LASF0
+ 275 002c 02       		.uleb128 0x2
+ 276 002d 01       		.byte	0x1
+ 277 002e 08       		.byte	0x8
+ 278 002f BE000000 		.4byte	.LASF1
+ 279 0033 02       		.uleb128 0x2
+ 280 0034 02       		.byte	0x2
+ 281 0035 05       		.byte	0x5
+ 282 0036 74010000 		.4byte	.LASF2
+ 283 003a 02       		.uleb128 0x2
+ 284 003b 02       		.byte	0x2
+ 285 003c 07       		.byte	0x7
+ 286 003d 85010000 		.4byte	.LASF3
+ 287 0041 02       		.uleb128 0x2
+ 288 0042 04       		.byte	0x4
+ 289 0043 05       		.byte	0x5
+ 290 0044 DD000000 		.4byte	.LASF4
+ 291 0048 02       		.uleb128 0x2
+ 292 0049 04       		.byte	0x4
+ 293 004a 07       		.byte	0x7
+ 294 004b 46000000 		.4byte	.LASF5
+ 295 004f 02       		.uleb128 0x2
+ 296 0050 08       		.byte	0x8
+ 297 0051 05       		.byte	0x5
+ 298 0052 00000000 		.4byte	.LASF6
+ 299 0056 02       		.uleb128 0x2
+ 300 0057 08       		.byte	0x8
+ 301 0058 07       		.byte	0x7
+ 302 0059 58000000 		.4byte	.LASF7
+ 303 005d 03       		.uleb128 0x3
+ 304 005e 04       		.byte	0x4
+ 305 005f 05       		.byte	0x5
+ 306 0060 696E7400 		.ascii	"int\000"
+ 307 0064 02       		.uleb128 0x2
+ 308 0065 04       		.byte	0x4
+ 309 0066 07       		.byte	0x7
+ 310 0067 22000000 		.4byte	.LASF8
+ 311 006b 04       		.uleb128 0x4
+ 312 006c 40000000 		.4byte	.LASF12
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccWRtSUk.s 			page 10
+
+
+ 313 0070 02       		.byte	0x2
+ 314 0071 9201     		.2byte	0x192
+ 315 0073 2C000000 		.4byte	0x2c
+ 316 0077 02       		.uleb128 0x2
+ 317 0078 04       		.byte	0x4
+ 318 0079 04       		.byte	0x4
+ 319 007a A4010000 		.4byte	.LASF9
+ 320 007e 02       		.uleb128 0x2
+ 321 007f 08       		.byte	0x8
+ 322 0080 04       		.byte	0x4
+ 323 0081 7E010000 		.4byte	.LASF10
+ 324 0085 02       		.uleb128 0x2
+ 325 0086 01       		.byte	0x1
+ 326 0087 08       		.byte	0x8
+ 327 0088 B9000000 		.4byte	.LASF11
+ 328 008c 04       		.uleb128 0x4
+ 329 008d E4010000 		.4byte	.LASF13
+ 330 0091 02       		.byte	0x2
+ 331 0092 3C02     		.2byte	0x23c
+ 332 0094 98000000 		.4byte	0x98
+ 333 0098 05       		.uleb128 0x5
+ 334 0099 6B000000 		.4byte	0x6b
+ 335 009d 02       		.uleb128 0x2
+ 336 009e 04       		.byte	0x4
+ 337 009f 07       		.byte	0x7
+ 338 00a0 E9010000 		.4byte	.LASF14
+ 339 00a4 06       		.uleb128 0x6
+ 340 00a5 F2010000 		.4byte	.LASF15
+ 341 00a9 01       		.byte	0x1
+ 342 00aa 2E       		.byte	0x2e
+ 343 00ab 00000000 		.4byte	.LFB0
+ 344 00af 2C000000 		.4byte	.LFE0-.LFB0
+ 345 00b3 01       		.uleb128 0x1
+ 346 00b4 9C       		.byte	0x9c
+ 347 00b5 07       		.uleb128 0x7
+ 348 00b6 94000000 		.4byte	.LASF17
+ 349 00ba 01       		.byte	0x1
+ 350 00bb 4C       		.byte	0x4c
+ 351 00bc 00000000 		.4byte	.LFB1
+ 352 00c0 64000000 		.4byte	.LFE1-.LFB1
+ 353 00c4 01       		.uleb128 0x1
+ 354 00c5 9C       		.byte	0x9c
+ 355 00c6 D9000000 		.4byte	0xd9
+ 356 00ca 08       		.uleb128 0x8
+ 357 00cb 2F000000 		.4byte	.LASF19
+ 358 00cf 01       		.byte	0x1
+ 359 00d0 4E       		.byte	0x4e
+ 360 00d1 6B000000 		.4byte	0x6b
+ 361 00d5 02       		.uleb128 0x2
+ 362 00d6 91       		.byte	0x91
+ 363 00d7 77       		.sleb128 -9
+ 364 00d8 00       		.byte	0
+ 365 00d9 09       		.uleb128 0x9
+ 366 00da A7000000 		.4byte	.LASF16
+ 367 00de 01       		.byte	0x1
+ 368 00df 91       		.byte	0x91
+ 369 00e0 00000000 		.4byte	.LFB2
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccWRtSUk.s 			page 11
+
+
+ 370 00e4 20000000 		.4byte	.LFE2-.LFB2
+ 371 00e8 01       		.uleb128 0x1
+ 372 00e9 9C       		.byte	0x9c
+ 373 00ea 07       		.uleb128 0x7
+ 374 00eb CC000000 		.4byte	.LASF18
+ 375 00ef 01       		.byte	0x1
+ 376 00f0 AB       		.byte	0xab
+ 377 00f1 00000000 		.4byte	.LFB3
+ 378 00f5 58000000 		.4byte	.LFE3-.LFB3
+ 379 00f9 01       		.uleb128 0x1
+ 380 00fa 9C       		.byte	0x9c
+ 381 00fb 0E010000 		.4byte	0x10e
+ 382 00ff 08       		.uleb128 0x8
+ 383 0100 2F000000 		.4byte	.LASF19
+ 384 0104 01       		.byte	0x1
+ 385 0105 AD       		.byte	0xad
+ 386 0106 6B000000 		.4byte	0x6b
+ 387 010a 02       		.uleb128 0x2
+ 388 010b 91       		.byte	0x91
+ 389 010c 77       		.sleb128 -9
+ 390 010d 00       		.byte	0
+ 391 010e 0A       		.uleb128 0xa
+ 392 010f 0E000000 		.4byte	.LASF23
+ 393 0113 01       		.byte	0x1
+ 394 0114 1A       		.byte	0x1a
+ 395 0115 6B000000 		.4byte	0x6b
+ 396 0119 05       		.uleb128 0x5
+ 397 011a 03       		.byte	0x3
+ 398 011b 00000000 		.4byte	SCCT_Comp_1_initVar
+ 399 011f 00       		.byte	0
+ 400              		.section	.debug_abbrev,"",%progbits
+ 401              	.Ldebug_abbrev0:
+ 402 0000 01       		.uleb128 0x1
+ 403 0001 11       		.uleb128 0x11
+ 404 0002 01       		.byte	0x1
+ 405 0003 25       		.uleb128 0x25
+ 406 0004 0E       		.uleb128 0xe
+ 407 0005 13       		.uleb128 0x13
+ 408 0006 0B       		.uleb128 0xb
+ 409 0007 03       		.uleb128 0x3
+ 410 0008 0E       		.uleb128 0xe
+ 411 0009 1B       		.uleb128 0x1b
+ 412 000a 0E       		.uleb128 0xe
+ 413 000b 55       		.uleb128 0x55
+ 414 000c 17       		.uleb128 0x17
+ 415 000d 11       		.uleb128 0x11
+ 416 000e 01       		.uleb128 0x1
+ 417 000f 10       		.uleb128 0x10
+ 418 0010 17       		.uleb128 0x17
+ 419 0011 00       		.byte	0
+ 420 0012 00       		.byte	0
+ 421 0013 02       		.uleb128 0x2
+ 422 0014 24       		.uleb128 0x24
+ 423 0015 00       		.byte	0
+ 424 0016 0B       		.uleb128 0xb
+ 425 0017 0B       		.uleb128 0xb
+ 426 0018 3E       		.uleb128 0x3e
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccWRtSUk.s 			page 12
+
+
+ 427 0019 0B       		.uleb128 0xb
+ 428 001a 03       		.uleb128 0x3
+ 429 001b 0E       		.uleb128 0xe
+ 430 001c 00       		.byte	0
+ 431 001d 00       		.byte	0
+ 432 001e 03       		.uleb128 0x3
+ 433 001f 24       		.uleb128 0x24
+ 434 0020 00       		.byte	0
+ 435 0021 0B       		.uleb128 0xb
+ 436 0022 0B       		.uleb128 0xb
+ 437 0023 3E       		.uleb128 0x3e
+ 438 0024 0B       		.uleb128 0xb
+ 439 0025 03       		.uleb128 0x3
+ 440 0026 08       		.uleb128 0x8
+ 441 0027 00       		.byte	0
+ 442 0028 00       		.byte	0
+ 443 0029 04       		.uleb128 0x4
+ 444 002a 16       		.uleb128 0x16
+ 445 002b 00       		.byte	0
+ 446 002c 03       		.uleb128 0x3
+ 447 002d 0E       		.uleb128 0xe
+ 448 002e 3A       		.uleb128 0x3a
+ 449 002f 0B       		.uleb128 0xb
+ 450 0030 3B       		.uleb128 0x3b
+ 451 0031 05       		.uleb128 0x5
+ 452 0032 49       		.uleb128 0x49
+ 453 0033 13       		.uleb128 0x13
+ 454 0034 00       		.byte	0
+ 455 0035 00       		.byte	0
+ 456 0036 05       		.uleb128 0x5
+ 457 0037 35       		.uleb128 0x35
+ 458 0038 00       		.byte	0
+ 459 0039 49       		.uleb128 0x49
+ 460 003a 13       		.uleb128 0x13
+ 461 003b 00       		.byte	0
+ 462 003c 00       		.byte	0
+ 463 003d 06       		.uleb128 0x6
+ 464 003e 2E       		.uleb128 0x2e
+ 465 003f 00       		.byte	0
+ 466 0040 3F       		.uleb128 0x3f
+ 467 0041 19       		.uleb128 0x19
+ 468 0042 03       		.uleb128 0x3
+ 469 0043 0E       		.uleb128 0xe
+ 470 0044 3A       		.uleb128 0x3a
+ 471 0045 0B       		.uleb128 0xb
+ 472 0046 3B       		.uleb128 0x3b
+ 473 0047 0B       		.uleb128 0xb
+ 474 0048 27       		.uleb128 0x27
+ 475 0049 19       		.uleb128 0x19
+ 476 004a 11       		.uleb128 0x11
+ 477 004b 01       		.uleb128 0x1
+ 478 004c 12       		.uleb128 0x12
+ 479 004d 06       		.uleb128 0x6
+ 480 004e 40       		.uleb128 0x40
+ 481 004f 18       		.uleb128 0x18
+ 482 0050 9742     		.uleb128 0x2117
+ 483 0052 19       		.uleb128 0x19
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccWRtSUk.s 			page 13
+
+
+ 484 0053 00       		.byte	0
+ 485 0054 00       		.byte	0
+ 486 0055 07       		.uleb128 0x7
+ 487 0056 2E       		.uleb128 0x2e
+ 488 0057 01       		.byte	0x1
+ 489 0058 3F       		.uleb128 0x3f
+ 490 0059 19       		.uleb128 0x19
+ 491 005a 03       		.uleb128 0x3
+ 492 005b 0E       		.uleb128 0xe
+ 493 005c 3A       		.uleb128 0x3a
+ 494 005d 0B       		.uleb128 0xb
+ 495 005e 3B       		.uleb128 0x3b
+ 496 005f 0B       		.uleb128 0xb
+ 497 0060 27       		.uleb128 0x27
+ 498 0061 19       		.uleb128 0x19
+ 499 0062 11       		.uleb128 0x11
+ 500 0063 01       		.uleb128 0x1
+ 501 0064 12       		.uleb128 0x12
+ 502 0065 06       		.uleb128 0x6
+ 503 0066 40       		.uleb128 0x40
+ 504 0067 18       		.uleb128 0x18
+ 505 0068 9642     		.uleb128 0x2116
+ 506 006a 19       		.uleb128 0x19
+ 507 006b 01       		.uleb128 0x1
+ 508 006c 13       		.uleb128 0x13
+ 509 006d 00       		.byte	0
+ 510 006e 00       		.byte	0
+ 511 006f 08       		.uleb128 0x8
+ 512 0070 34       		.uleb128 0x34
+ 513 0071 00       		.byte	0
+ 514 0072 03       		.uleb128 0x3
+ 515 0073 0E       		.uleb128 0xe
+ 516 0074 3A       		.uleb128 0x3a
+ 517 0075 0B       		.uleb128 0xb
+ 518 0076 3B       		.uleb128 0x3b
+ 519 0077 0B       		.uleb128 0xb
+ 520 0078 49       		.uleb128 0x49
+ 521 0079 13       		.uleb128 0x13
+ 522 007a 02       		.uleb128 0x2
+ 523 007b 18       		.uleb128 0x18
+ 524 007c 00       		.byte	0
+ 525 007d 00       		.byte	0
+ 526 007e 09       		.uleb128 0x9
+ 527 007f 2E       		.uleb128 0x2e
+ 528 0080 00       		.byte	0
+ 529 0081 3F       		.uleb128 0x3f
+ 530 0082 19       		.uleb128 0x19
+ 531 0083 03       		.uleb128 0x3
+ 532 0084 0E       		.uleb128 0xe
+ 533 0085 3A       		.uleb128 0x3a
+ 534 0086 0B       		.uleb128 0xb
+ 535 0087 3B       		.uleb128 0x3b
+ 536 0088 0B       		.uleb128 0xb
+ 537 0089 27       		.uleb128 0x27
+ 538 008a 19       		.uleb128 0x19
+ 539 008b 11       		.uleb128 0x11
+ 540 008c 01       		.uleb128 0x1
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccWRtSUk.s 			page 14
+
+
+ 541 008d 12       		.uleb128 0x12
+ 542 008e 06       		.uleb128 0x6
+ 543 008f 40       		.uleb128 0x40
+ 544 0090 18       		.uleb128 0x18
+ 545 0091 9642     		.uleb128 0x2116
+ 546 0093 19       		.uleb128 0x19
+ 547 0094 00       		.byte	0
+ 548 0095 00       		.byte	0
+ 549 0096 0A       		.uleb128 0xa
+ 550 0097 34       		.uleb128 0x34
+ 551 0098 00       		.byte	0
+ 552 0099 03       		.uleb128 0x3
+ 553 009a 0E       		.uleb128 0xe
+ 554 009b 3A       		.uleb128 0x3a
+ 555 009c 0B       		.uleb128 0xb
+ 556 009d 3B       		.uleb128 0x3b
+ 557 009e 0B       		.uleb128 0xb
+ 558 009f 49       		.uleb128 0x49
+ 559 00a0 13       		.uleb128 0x13
+ 560 00a1 3F       		.uleb128 0x3f
+ 561 00a2 19       		.uleb128 0x19
+ 562 00a3 02       		.uleb128 0x2
+ 563 00a4 18       		.uleb128 0x18
+ 564 00a5 00       		.byte	0
+ 565 00a6 00       		.byte	0
+ 566 00a7 00       		.byte	0
+ 567              		.section	.debug_aranges,"",%progbits
+ 568 0000 34000000 		.4byte	0x34
+ 569 0004 0200     		.2byte	0x2
+ 570 0006 00000000 		.4byte	.Ldebug_info0
+ 571 000a 04       		.byte	0x4
+ 572 000b 00       		.byte	0
+ 573 000c 0000     		.2byte	0
+ 574 000e 0000     		.2byte	0
+ 575 0010 00000000 		.4byte	.LFB0
+ 576 0014 2C000000 		.4byte	.LFE0-.LFB0
+ 577 0018 00000000 		.4byte	.LFB1
+ 578 001c 64000000 		.4byte	.LFE1-.LFB1
+ 579 0020 00000000 		.4byte	.LFB2
+ 580 0024 20000000 		.4byte	.LFE2-.LFB2
+ 581 0028 00000000 		.4byte	.LFB3
+ 582 002c 58000000 		.4byte	.LFE3-.LFB3
+ 583 0030 00000000 		.4byte	0
+ 584 0034 00000000 		.4byte	0
+ 585              		.section	.debug_ranges,"",%progbits
+ 586              	.Ldebug_ranges0:
+ 587 0000 00000000 		.4byte	.LFB0
+ 588 0004 2C000000 		.4byte	.LFE0
+ 589 0008 00000000 		.4byte	.LFB1
+ 590 000c 64000000 		.4byte	.LFE1
+ 591 0010 00000000 		.4byte	.LFB2
+ 592 0014 20000000 		.4byte	.LFE2
+ 593 0018 00000000 		.4byte	.LFB3
+ 594 001c 58000000 		.4byte	.LFE3
+ 595 0020 00000000 		.4byte	0
+ 596 0024 00000000 		.4byte	0
+ 597              		.section	.debug_line,"",%progbits
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccWRtSUk.s 			page 15
+
+
+ 598              	.Ldebug_line0:
+ 599 0000 A7000000 		.section	.debug_str,"MS",%progbits,1
+ 599      02004800 
+ 599      00000201 
+ 599      FB0E0D00 
+ 599      01010101 
+ 600              	.LASF6:
+ 601 0000 6C6F6E67 		.ascii	"long long int\000"
+ 601      206C6F6E 
+ 601      6720696E 
+ 601      7400
+ 602              	.LASF23:
+ 603 000e 53434354 		.ascii	"SCCT_Comp_1_initVar\000"
+ 603      5F436F6D 
+ 603      705F315F 
+ 603      696E6974 
+ 603      56617200 
+ 604              	.LASF8:
+ 605 0022 756E7369 		.ascii	"unsigned int\000"
+ 605      676E6564 
+ 605      20696E74 
+ 605      00
+ 606              	.LASF19:
+ 607 002f 656E6162 		.ascii	"enableInterrupts\000"
+ 607      6C65496E 
+ 607      74657272 
+ 607      75707473 
+ 607      00
+ 608              	.LASF12:
+ 609 0040 75696E74 		.ascii	"uint8\000"
+ 609      3800
+ 610              	.LASF5:
+ 611 0046 6C6F6E67 		.ascii	"long unsigned int\000"
+ 611      20756E73 
+ 611      69676E65 
+ 611      6420696E 
+ 611      7400
+ 612              	.LASF7:
+ 613 0058 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 613      206C6F6E 
+ 613      6720756E 
+ 613      7369676E 
+ 613      65642069 
+ 614              	.LASF21:
+ 615 006f 47656E65 		.ascii	"Generated_Source\\PSoC5\\SCCT_Comp_1.c\000"
+ 615      72617465 
+ 615      645F536F 
+ 615      75726365 
+ 615      5C50536F 
+ 616              	.LASF17:
+ 617 0094 53434354 		.ascii	"SCCT_Comp_1_Enable\000"
+ 617      5F436F6D 
+ 617      705F315F 
+ 617      456E6162 
+ 617      6C6500
+ 618              	.LASF16:
+ 619 00a7 53434354 		.ascii	"SCCT_Comp_1_Start\000"
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccWRtSUk.s 			page 16
+
+
+ 619      5F436F6D 
+ 619      705F315F 
+ 619      53746172 
+ 619      7400
+ 620              	.LASF11:
+ 621 00b9 63686172 		.ascii	"char\000"
+ 621      00
+ 622              	.LASF1:
+ 623 00be 756E7369 		.ascii	"unsigned char\000"
+ 623      676E6564 
+ 623      20636861 
+ 623      7200
+ 624              	.LASF18:
+ 625 00cc 53434354 		.ascii	"SCCT_Comp_1_Stop\000"
+ 625      5F436F6D 
+ 625      705F315F 
+ 625      53746F70 
+ 625      00
+ 626              	.LASF4:
+ 627 00dd 6C6F6E67 		.ascii	"long int\000"
+ 627      20696E74 
+ 627      00
+ 628              	.LASF20:
+ 629 00e6 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 629      4320342E 
+ 629      392E3320 
+ 629      32303135 
+ 629      30333033 
+ 630 0119 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 630      20726576 
+ 630      6973696F 
+ 630      6E203232 
+ 630      31323230 
+ 631 014c 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 631      66756E63 
+ 631      74696F6E 
+ 631      2D736563 
+ 631      74696F6E 
+ 632              	.LASF2:
+ 633 0174 73686F72 		.ascii	"short int\000"
+ 633      7420696E 
+ 633      7400
+ 634              	.LASF10:
+ 635 017e 646F7562 		.ascii	"double\000"
+ 635      6C6500
+ 636              	.LASF3:
+ 637 0185 73686F72 		.ascii	"short unsigned int\000"
+ 637      7420756E 
+ 637      7369676E 
+ 637      65642069 
+ 637      6E7400
+ 638              	.LASF0:
+ 639 0198 7369676E 		.ascii	"signed char\000"
+ 639      65642063 
+ 639      68617200 
+ 640              	.LASF9:
+ 641 01a4 666C6F61 		.ascii	"float\000"
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccWRtSUk.s 			page 17
+
+
+ 641      7400
+ 642              	.LASF22:
+ 643 01aa 433A5C55 		.ascii	"C:\\Users\\ben\\Documents\\PSoC Creator\\DACTEST\\A"
+ 643      73657273 
+ 643      5C62656E 
+ 643      5C446F63 
+ 643      756D656E 
+ 644 01d7 44435F44 		.ascii	"DC_DAC.cydsn\000"
+ 644      41432E63 
+ 644      7964736E 
+ 644      00
+ 645              	.LASF13:
+ 646 01e4 72656738 		.ascii	"reg8\000"
+ 646      00
+ 647              	.LASF14:
+ 648 01e9 73697A65 		.ascii	"sizetype\000"
+ 648      74797065 
+ 648      00
+ 649              	.LASF15:
+ 650 01f2 53434354 		.ascii	"SCCT_Comp_1_Init\000"
+ 650      5F436F6D 
+ 650      705F315F 
+ 650      496E6974 
+ 650      00
+ 651              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

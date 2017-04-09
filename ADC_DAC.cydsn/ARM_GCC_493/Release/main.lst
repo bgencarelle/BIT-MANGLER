@@ -1,0 +1,1865 @@
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cc4u8fSj.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"main.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.global	BIT_MASK_CTRL
+  19              		.bss
+  20              		.align	1
+  21              		.type	BIT_MASK_CTRL, %object
+  22              		.size	BIT_MASK_CTRL, 2
+  23              	BIT_MASK_CTRL:
+  24 0000 0000     		.space	2
+  25              		.global	DIV_MASK_CTRL
+  26              		.align	1
+  27              		.type	DIV_MASK_CTRL, %object
+  28              		.size	DIV_MASK_CTRL, 2
+  29              	DIV_MASK_CTRL:
+  30 0002 0000     		.space	2
+  31              		.global	OLD_BIT_MASK_DEPTH
+  32              		.align	1
+  33              		.type	OLD_BIT_MASK_DEPTH, %object
+  34              		.size	OLD_BIT_MASK_DEPTH, 2
+  35              	OLD_BIT_MASK_DEPTH:
+  36 0004 0000     		.space	2
+  37              		.global	OLD_DIV_MASK_DEPTH
+  38              		.align	1
+  39              		.type	OLD_DIV_MASK_DEPTH, %object
+  40              		.size	OLD_DIV_MASK_DEPTH, 2
+  41              	OLD_DIV_MASK_DEPTH:
+  42 0006 0000     		.space	2
+  43              		.global	MASK_CTRL
+  44              		.align	1
+  45              		.type	MASK_CTRL, %object
+  46              		.size	MASK_CTRL, 2
+  47              	MASK_CTRL:
+  48 0008 0000     		.space	2
+  49              		.global	OLD_MASK_DEPTH
+  50              		.align	1
+  51              		.type	OLD_MASK_DEPTH, %object
+  52              		.size	OLD_MASK_DEPTH, 2
+  53              	OLD_MASK_DEPTH:
+  54 000a 0000     		.space	2
+  55              		.global	MASK_EFFECT
+  56              		.type	MASK_EFFECT, %object
+  57              		.size	MASK_EFFECT, 1
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cc4u8fSj.s 			page 2
+
+
+  58              	MASK_EFFECT:
+  59 000c 00       		.space	1
+  60              		.global	AUDIO_IN
+  61 000d 00       		.align	1
+  62              		.type	AUDIO_IN, %object
+  63              		.size	AUDIO_IN, 2
+  64              	AUDIO_IN:
+  65 000e 0000     		.space	2
+  66              		.global	FRQ_CTRL
+  67              		.align	1
+  68              		.type	FRQ_CTRL, %object
+  69              		.size	FRQ_CTRL, 2
+  70              	FRQ_CTRL:
+  71 0010 0000     		.space	2
+  72              		.section	.rodata
+  73              		.align	2
+  74              	.LC0:
+  75 0000 41444331 		.ascii	"ADC1 \000"
+  75      2000
+  76 0006 0000     		.align	2
+  77              	.LC1:
+  78 0008 41444332 		.ascii	"ADC2 \000"
+  78      2000
+  79 000e 0000     		.section	.text.main,"ax",%progbits
+  80              		.align	2
+  81              		.global	main
+  82              		.thumb
+  83              		.thumb_func
+  84              		.type	main, %function
+  85              	main:
+  86              	.LFB63:
+  87              		.file 1 "main.c"
+   1:main.c        ****  /*******************************************************************************
+   2:main.c        **** * File Name: main.c
+   3:main.c        **** 
+   4:main.c        **** * Note that this file contains the DMA_Config function as well.
+   5:main.c        **** *
+   6:main.c        **** ********************************************************************************
+   7:main.c        **** * Copyright 2012, Cypress Semiconductor Corporation. All rights reserved.
+   8:main.c        **** * This software is owned by Cypress Semiconductor Corporation and is protected
+   9:main.c        **** * by and subject to worldwide patent and copyright laws and treaties.
+  10:main.c        **** * Therefore, you may use this software only as provided in the license agreement
+  11:main.c        **** * accompanying the software package from which you obtained this software.
+  12:main.c        **** * CYPRESS AND ITS SUPPLIERS MAKE NO WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+  13:main.c        **** * WITH REGARD TO THIS SOFTWARE, INCLUDING, BUT NOT LIMITED TO, NONINFRINGEMENT,
+  14:main.c        **** * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+  15:main.c        **** *******************************************************************************/
+  16:main.c        **** 
+  17:main.c        **** #include <project.h>
+  18:main.c        **** 
+  19:main.c        **** 
+  20:main.c        **** void PWM_Start(void);
+  21:main.c        **** void PWM_Set(uint16 counterdiv);
+  22:main.c        **** uint16 BIT_MASK_CTRL = 0;
+  23:main.c        **** uint16 DIV_MASK_CTRL = 0;
+  24:main.c        **** uint16 OLD_BIT_MASK_DEPTH = 0;
+  25:main.c        **** uint16 OLD_DIV_MASK_DEPTH = 0;
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cc4u8fSj.s 			page 3
+
+
+  26:main.c        ****         
+  27:main.c        **** uint16 MASK_CTRL = 0;
+  28:main.c        **** uint16 OLD_MASK_DEPTH = 0;
+  29:main.c        **** uint8 MASK_EFFECT = 0;
+  30:main.c        **** uint16 Effect(uint16 depth);
+  31:main.c        **** uint16 AUDIO_IN = 0;
+  32:main.c        **** uint16 FRQ_CTRL = 0;
+  33:main.c        **** int main()
+  34:main.c        **** {
+  88              		.loc 1 34 0
+  89              		.cfi_startproc
+  90              		@ args = 0, pretend = 0, frame = 16
+  91              		@ frame_needed = 1, uses_anonymous_args = 0
+  92 0000 80B5     		push	{r7, lr}
+  93              		.cfi_def_cfa_offset 8
+  94              		.cfi_offset 7, -8
+  95              		.cfi_offset 14, -4
+  96 0002 84B0     		sub	sp, sp, #16
+  97              		.cfi_def_cfa_offset 24
+  98 0004 00AF     		add	r7, sp, #0
+  99              		.cfi_def_cfa_register 7
+  35:main.c        **** 
+  36:main.c        ****     uint16 CTR = 0;
+ 100              		.loc 1 36 0
+ 101 0006 0023     		movs	r3, #0
+ 102 0008 FB81     		strh	r3, [r7, #14]	@ movhi
+  37:main.c        ****     /* Start the components */
+  38:main.c        ****     Opamp_1_Start();
+ 103              		.loc 1 38 0
+ 104 000a FFF7FEFF 		bl	Opamp_1_Start
+  39:main.c        ****     Opamp_2_Start();
+ 105              		.loc 1 39 0
+ 106 000e FFF7FEFF 		bl	Opamp_2_Start
+  40:main.c        ****     PWM_Start();
+ 107              		.loc 1 40 0
+ 108 0012 FFF7FEFF 		bl	PWM_Start
+  41:main.c        **** //  PGA_1_Start();
+  42:main.c        **** //  Opamp_4_Start();
+  43:main.c        ****     LCD_Char_1_Start();
+ 109              		.loc 1 43 0
+ 110 0016 FFF7FEFF 		bl	LCD_Char_1_Start
+  44:main.c        ****  //   ADC_DelSig_1_Start();
+  45:main.c        ****     Filter_Start();
+ 111              		.loc 1 45 0
+ 112 001a FFF7FEFF 		bl	Filter_Start
+  46:main.c        ****     ADC_SAR_1_Start();
+ 113              		.loc 1 46 0
+ 114 001e FFF7FEFF 		bl	ADC_SAR_1_Start
+  47:main.c        ****     ADC_SAR_Seq_Start();
+ 115              		.loc 1 47 0
+ 116 0022 FFF7FEFF 		bl	ADC_SAR_Seq_Start
+  48:main.c        ****     ADC_SAR_Seq_StartConvert();
+ 117              		.loc 1 48 0
+ 118 0026 FFF7FEFF 		bl	ADC_SAR_Seq_StartConvert
+  49:main.c        ****   //  CapSense_1_Start();
+  50:main.c        ****     SPI_DAC_Start();
+ 119              		.loc 1 50 0
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cc4u8fSj.s 			page 4
+
+
+ 120 002a FFF7FEFF 		bl	SPI_DAC_Start
+  51:main.c        ****         /* Start ISRs */
+  52:main.c        ****     /* Enable global interrupts */
+  53:main.c        ****    CyGlobalIntEnable;
+ 121              		.loc 1 53 0
+ 122              	@ 53 "main.c" 1
+ 123 002e 62B6     		CPSIE   i
+ 124              	@ 0 "" 2
+  54:main.c        ****     /* Start ADC conversion */
+  55:main.c        ****  //   ADC_SAR_1_StartConvert();
+  56:main.c        ****     ADC_SAR_Seq_StartConvert();
+ 125              		.loc 1 56 0
+ 126              		.thumb
+ 127 0030 FFF7FEFF 		bl	ADC_SAR_Seq_StartConvert
+  57:main.c        ****     LCD_Char_1_Position(0u, 0u);
+ 128              		.loc 1 57 0
+ 129 0034 0020     		movs	r0, #0
+ 130 0036 0021     		movs	r1, #0
+ 131 0038 FFF7FEFF 		bl	LCD_Char_1_Position
+  58:main.c        ****     LCD_Char_1_PrintString("ADC1 ");
+ 132              		.loc 1 58 0
+ 133 003c 4E48     		ldr	r0, .L6
+ 134 003e FFF7FEFF 		bl	LCD_Char_1_PrintString
+  59:main.c        ****     LCD_Char_1_Position(1u, 0u);
+ 135              		.loc 1 59 0
+ 136 0042 0120     		movs	r0, #1
+ 137 0044 0021     		movs	r1, #0
+ 138 0046 FFF7FEFF 		bl	LCD_Char_1_Position
+  60:main.c        ****     LCD_Char_1_PrintString("ADC2 ");
+ 139              		.loc 1 60 0
+ 140 004a 4C48     		ldr	r0, .L6+4
+ 141 004c FFF7FEFF 		bl	LCD_Char_1_PrintString
+ 142              	.L5:
+  61:main.c        ****     
+  62:main.c        ****     
+  63:main.c        ****     for(;;)
+  64:main.c        ****     {
+  65:main.c        **** 
+  66:main.c        **** 
+  67:main.c        ****         
+  68:main.c        ****   if (ADC_SAR_Seq_IsEndConversion(1)){
+ 143              		.loc 1 68 0
+ 144 0050 0120     		movs	r0, #1
+ 145 0052 FFF7FEFF 		bl	ADC_SAR_Seq_IsEndConversion
+ 146 0056 0346     		mov	r3, r0
+ 147 0058 002B     		cmp	r3, #0
+ 148 005a 35D0     		beq	.L2
+  69:main.c        ****        
+  70:main.c        ****     FRQ_CTRL=(((ADC_SAR_Seq_GetResult16(0)))+1);
+ 149              		.loc 1 70 0
+ 150 005c 0020     		movs	r0, #0
+ 151 005e FFF7FEFF 		bl	ADC_SAR_Seq_GetResult16
+ 152 0062 0346     		mov	r3, r0
+ 153 0064 9BB2     		uxth	r3, r3
+ 154 0066 0133     		adds	r3, r3, #1
+ 155 0068 9AB2     		uxth	r2, r3
+ 156 006a 454B     		ldr	r3, .L6+8
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cc4u8fSj.s 			page 5
+
+
+ 157 006c 1A80     		strh	r2, [r3]	@ movhi
+  71:main.c        ****     PWM_ADC_CK_WritePeriod(FRQ_CTRL);
+ 158              		.loc 1 71 0
+ 159 006e 444B     		ldr	r3, .L6+8
+ 160 0070 1B88     		ldrh	r3, [r3]
+ 161 0072 1846     		mov	r0, r3
+ 162 0074 FFF7FEFF 		bl	PWM_ADC_CK_WritePeriod
+  72:main.c        ****     PWM_ADC_CK_WriteCompare(FRQ_CTRL>>2);
+ 163              		.loc 1 72 0
+ 164 0078 414B     		ldr	r3, .L6+8
+ 165 007a 1B88     		ldrh	r3, [r3]
+ 166 007c 9B08     		lsrs	r3, r3, #2
+ 167 007e 9BB2     		uxth	r3, r3
+ 168 0080 1846     		mov	r0, r3
+ 169 0082 FFF7FEFF 		bl	PWM_ADC_CK_WriteCompare
+  73:main.c        ****     DIV_MASK_CTRL = ADC_SAR_Seq_GetResult16(2);
+ 170              		.loc 1 73 0
+ 171 0086 0220     		movs	r0, #2
+ 172 0088 FFF7FEFF 		bl	ADC_SAR_Seq_GetResult16
+ 173 008c 0346     		mov	r3, r0
+ 174 008e 9AB2     		uxth	r2, r3
+ 175 0090 3C4B     		ldr	r3, .L6+12
+ 176 0092 1A80     		strh	r2, [r3]	@ movhi
+  74:main.c        ****     DIV_MASK_LSB_Write(DIV_MASK_CTRL & 0xFF);
+ 177              		.loc 1 74 0
+ 178 0094 3B4B     		ldr	r3, .L6+12
+ 179 0096 1B88     		ldrh	r3, [r3]
+ 180 0098 DBB2     		uxtb	r3, r3
+ 181 009a 1846     		mov	r0, r3
+ 182 009c FFF7FEFF 		bl	DIV_MASK_LSB_Write
+  75:main.c        ****     DIV_MASK_LSB_Write(DIV_MASK_CTRL>>4);
+ 183              		.loc 1 75 0
+ 184 00a0 384B     		ldr	r3, .L6+12
+ 185 00a2 1B88     		ldrh	r3, [r3]
+ 186 00a4 1B09     		lsrs	r3, r3, #4
+ 187 00a6 9BB2     		uxth	r3, r3
+ 188 00a8 DBB2     		uxtb	r3, r3
+ 189 00aa 1846     		mov	r0, r3
+ 190 00ac FFF7FEFF 		bl	DIV_MASK_LSB_Write
+  76:main.c        ****     
+  77:main.c        ****     BIT_MASK_CTRL = Effect(ADC_SAR_Seq_GetResult16(1));
+ 191              		.loc 1 77 0
+ 192 00b0 0120     		movs	r0, #1
+ 193 00b2 FFF7FEFF 		bl	ADC_SAR_Seq_GetResult16
+ 194 00b6 0346     		mov	r3, r0
+ 195 00b8 9BB2     		uxth	r3, r3
+ 196 00ba 1846     		mov	r0, r3
+ 197 00bc FFF7FEFF 		bl	Effect
+ 198 00c0 0346     		mov	r3, r0
+ 199 00c2 1A46     		mov	r2, r3
+ 200 00c4 304B     		ldr	r3, .L6+16
+ 201 00c6 1A80     		strh	r2, [r3]	@ movhi
+ 202              	.L2:
+  78:main.c        **** }
+  79:main.c        **** 
+  80:main.c        ****     OLD_BIT_MASK_DEPTH = BIT_MASK_CTRL;
+ 203              		.loc 1 80 0
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cc4u8fSj.s 			page 6
+
+
+ 204 00c8 2F4B     		ldr	r3, .L6+16
+ 205 00ca 1A88     		ldrh	r2, [r3]
+ 206 00cc 2F4B     		ldr	r3, .L6+20
+ 207 00ce 1A80     		strh	r2, [r3]	@ movhi
+  81:main.c        ****         
+  82:main.c        **** 
+  83:main.c        ****     if (ADC_SAR_1_IsEndConversion(1))
+ 208              		.loc 1 83 0
+ 209 00d0 0120     		movs	r0, #1
+ 210 00d2 FFF7FEFF 		bl	ADC_SAR_1_IsEndConversion
+ 211 00d6 0346     		mov	r3, r0
+ 212 00d8 002B     		cmp	r3, #0
+ 213 00da 33D0     		beq	.L3
+ 214              	.LBB2:
+  84:main.c        ****     {
+  85:main.c        ****         
+  86:main.c        ****         AUDIO_IN = ADC_SAR_1_GetResult16();
+ 215              		.loc 1 86 0
+ 216 00dc FFF7FEFF 		bl	ADC_SAR_1_GetResult16
+ 217 00e0 0346     		mov	r3, r0
+ 218 00e2 9AB2     		uxth	r2, r3
+ 219 00e4 2A4B     		ldr	r3, .L6+24
+ 220 00e6 1A80     		strh	r2, [r3]	@ movhi
+  87:main.c        ****         uint8 LSB_8_ADC =  (AUDIO_IN & 0x00FFu);
+ 221              		.loc 1 87 0
+ 222 00e8 294B     		ldr	r3, .L6+24
+ 223 00ea 1B88     		ldrh	r3, [r3]
+ 224 00ec 7B73     		strb	r3, [r7, #13]
+  88:main.c        ****         uint8 MSB_4_ADC = (AUDIO_IN >> 8u);
+ 225              		.loc 1 88 0
+ 226 00ee 284B     		ldr	r3, .L6+24
+ 227 00f0 1B88     		ldrh	r3, [r3]
+ 228 00f2 1B0A     		lsrs	r3, r3, #8
+ 229 00f4 9BB2     		uxth	r3, r3
+ 230 00f6 3B73     		strb	r3, [r7, #12]
+  89:main.c        ****         ADC_1_OUT_LSB_Write(LSB_8_ADC);
+ 231              		.loc 1 89 0
+ 232 00f8 7B7B     		ldrb	r3, [r7, #13]	@ zero_extendqisi2
+ 233 00fa 1846     		mov	r0, r3
+ 234 00fc FFF7FEFF 		bl	ADC_1_OUT_LSB_Write
+  90:main.c        ****         ADC_1_OUT_MSB_Write(MSB_4_ADC);
+ 235              		.loc 1 90 0
+ 236 0100 3B7B     		ldrb	r3, [r7, #12]	@ zero_extendqisi2
+ 237 0102 1846     		mov	r0, r3
+ 238 0104 FFF7FEFF 		bl	ADC_1_OUT_MSB_Write
+  91:main.c        ****         uint8 LSB_8_DAC = DAC_IN_LSB_Read();
+ 239              		.loc 1 91 0
+ 240 0108 FFF7FEFF 		bl	DAC_IN_LSB_Read
+ 241 010c 0346     		mov	r3, r0
+ 242 010e FB72     		strb	r3, [r7, #11]
+  92:main.c        ****         uint16 MSB_4_DAC = DAC_IN_MSB_Read();
+ 243              		.loc 1 92 0
+ 244 0110 FFF7FEFF 		bl	DAC_IN_MSB_Read
+ 245 0114 0346     		mov	r3, r0
+ 246 0116 3B81     		strh	r3, [r7, #8]	@ movhi
+  93:main.c        ****         uint16 DACINPUT = ((MSB_4_DAC<<8 | LSB_8_DAC));
+ 247              		.loc 1 93 0
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cc4u8fSj.s 			page 7
+
+
+ 248 0118 3B89     		ldrh	r3, [r7, #8]
+ 249 011a 1B02     		lsls	r3, r3, #8
+ 250 011c 9AB2     		uxth	r2, r3
+ 251 011e FB7A     		ldrb	r3, [r7, #11]	@ zero_extendqisi2
+ 252 0120 9BB2     		uxth	r3, r3
+ 253 0122 1343     		orrs	r3, r3, r2
+ 254 0124 9BB2     		uxth	r3, r3
+ 255 0126 FB80     		strh	r3, [r7, #6]	@ movhi
+  94:main.c        ****         uint16 FINAL_OUT = DACINPUT & OLD_MASK_DEPTH;
+ 256              		.loc 1 94 0
+ 257 0128 1A4B     		ldr	r3, .L6+28
+ 258 012a 1A88     		ldrh	r2, [r3]
+ 259 012c FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 260 012e 1340     		ands	r3, r3, r2
+ 261 0130 BB80     		strh	r3, [r7, #4]	@ movhi
+  95:main.c        ****         SPI_DAC_WriteTxData(FINAL_OUT| 0b1111000000000000);
+ 262              		.loc 1 95 0
+ 263 0132 BB88     		ldrh	r3, [r7, #4]	@ movhi
+ 264 0134 6FEA0353 		mvn	r3, r3, lsl #20
+ 265 0138 6FEA1353 		mvn	r3, r3, lsr #20
+ 266 013c 9BB2     		uxth	r3, r3
+ 267 013e 1846     		mov	r0, r3
+ 268 0140 FFF7FEFF 		bl	SPI_DAC_WriteTxData
+ 269              	.L3:
+ 270              	.LBE2:
+  96:main.c        ****  }
+  97:main.c        ****     if (CTR == 5)
+ 271              		.loc 1 97 0
+ 272 0144 FB89     		ldrh	r3, [r7, #14]
+ 273 0146 052B     		cmp	r3, #5
+ 274 0148 11D1     		bne	.L4
+  98:main.c        ****     {
+  99:main.c        ****     LCD_Char_1_Position(0u, strlen("ADC1 "));
+ 275              		.loc 1 99 0
+ 276 014a 0020     		movs	r0, #0
+ 277 014c 0521     		movs	r1, #5
+ 278 014e FFF7FEFF 		bl	LCD_Char_1_Position
+ 100:main.c        ****     LCD_Char_1_PrintInt16(FRQ_CTRL); 
+ 279              		.loc 1 100 0
+ 280 0152 0B4B     		ldr	r3, .L6+8
+ 281 0154 1B88     		ldrh	r3, [r3]
+ 282 0156 1846     		mov	r0, r3
+ 283 0158 FFF7FEFF 		bl	LCD_Char_1_PrintInt16
+ 101:main.c        ****     LCD_Char_1_Position(1u, strlen("ADC2 "));
+ 284              		.loc 1 101 0
+ 285 015c 0120     		movs	r0, #1
+ 286 015e 0521     		movs	r1, #5
+ 287 0160 FFF7FEFF 		bl	LCD_Char_1_Position
+ 102:main.c        ****     LCD_Char_1_PrintInt16(MASK_CTRL); 
+ 288              		.loc 1 102 0
+ 289 0164 0C4B     		ldr	r3, .L6+32
+ 290 0166 1B88     		ldrh	r3, [r3]
+ 291 0168 1846     		mov	r0, r3
+ 292 016a FFF7FEFF 		bl	LCD_Char_1_PrintInt16
+ 293              	.L4:
+ 103:main.c        ****     
+ 104:main.c        ****     }
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cc4u8fSj.s 			page 8
+
+
+ 105:main.c        ****     CTR++;
+ 294              		.loc 1 105 0
+ 295 016e FB89     		ldrh	r3, [r7, #14]
+ 296 0170 0133     		adds	r3, r3, #1
+ 297 0172 FB81     		strh	r3, [r7, #14]	@ movhi
+ 106:main.c        ****     }
+ 298              		.loc 1 106 0
+ 299 0174 6CE7     		b	.L5
+ 300              	.L7:
+ 301 0176 00BF     		.align	2
+ 302              	.L6:
+ 303 0178 00000000 		.word	.LC0
+ 304 017c 08000000 		.word	.LC1
+ 305 0180 00000000 		.word	FRQ_CTRL
+ 306 0184 00000000 		.word	DIV_MASK_CTRL
+ 307 0188 00000000 		.word	BIT_MASK_CTRL
+ 308 018c 00000000 		.word	OLD_BIT_MASK_DEPTH
+ 309 0190 00000000 		.word	AUDIO_IN
+ 310 0194 00000000 		.word	OLD_MASK_DEPTH
+ 311 0198 00000000 		.word	MASK_CTRL
+ 312              		.cfi_endproc
+ 313              	.LFE63:
+ 314              		.size	main, .-main
+ 315              		.section	.text.Effect,"ax",%progbits
+ 316              		.align	2
+ 317              		.global	Effect
+ 318              		.thumb
+ 319              		.thumb_func
+ 320              		.type	Effect, %function
+ 321              	Effect:
+ 322              	.LFB64:
+ 107:main.c        **** }
+ 108:main.c        **** uint16 Effect(uint16 depth)
+ 109:main.c        **** {
+ 323              		.loc 1 109 0
+ 324              		.cfi_startproc
+ 325              		@ args = 0, pretend = 0, frame = 16
+ 326              		@ frame_needed = 1, uses_anonymous_args = 0
+ 327              		@ link register save eliminated.
+ 328 0000 80B4     		push	{r7}
+ 329              		.cfi_def_cfa_offset 4
+ 330              		.cfi_offset 7, -4
+ 331 0002 85B0     		sub	sp, sp, #20
+ 332              		.cfi_def_cfa_offset 24
+ 333 0004 00AF     		add	r7, sp, #0
+ 334              		.cfi_def_cfa_register 7
+ 335 0006 0346     		mov	r3, r0
+ 336 0008 FB80     		strh	r3, [r7, #6]	@ movhi
+ 110:main.c        ****     depth = depth>>3;
+ 337              		.loc 1 110 0
+ 338 000a FB88     		ldrh	r3, [r7, #6]
+ 339 000c DB08     		lsrs	r3, r3, #3
+ 340 000e FB80     		strh	r3, [r7, #6]	@ movhi
+ 111:main.c        ****             uint16 mask;
+ 112:main.c        ****             switch (depth) 
+ 341              		.loc 1 112 0
+ 342 0010 FB88     		ldrh	r3, [r7, #6]
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cc4u8fSj.s 			page 9
+
+
+ 343 0012 1F2B     		cmp	r3, #31
+ 344 0014 00F29980 		bhi	.L9
+ 345 0018 01A2     		adr	r2, .L11
+ 346 001a 52F823F0 		ldr	pc, [r2, r3, lsl #2]
+ 347 001e 00BF     		.p2align 2
+ 348              	.L11:
+ 349 0020 A1000000 		.word	.L10+1
+ 350 0024 A9000000 		.word	.L12+1
+ 351 0028 B1000000 		.word	.L13+1
+ 352 002c B9000000 		.word	.L14+1
+ 353 0030 C1000000 		.word	.L15+1
+ 354 0034 C9000000 		.word	.L16+1
+ 355 0038 D1000000 		.word	.L17+1
+ 356 003c D9000000 		.word	.L18+1
+ 357 0040 E1000000 		.word	.L19+1
+ 358 0044 E9000000 		.word	.L20+1
+ 359 0048 F1000000 		.word	.L21+1
+ 360 004c F9000000 		.word	.L22+1
+ 361 0050 01010000 		.word	.L23+1
+ 362 0054 09010000 		.word	.L24+1
+ 363 0058 11010000 		.word	.L25+1
+ 364 005c 19010000 		.word	.L26+1
+ 365 0060 1F010000 		.word	.L27+1
+ 366 0064 25010000 		.word	.L28+1
+ 367 0068 4B010000 		.word	.L9+1
+ 368 006c 4B010000 		.word	.L9+1
+ 369 0070 4B010000 		.word	.L9+1
+ 370 0074 4B010000 		.word	.L9+1
+ 371 0078 4B010000 		.word	.L9+1
+ 372 007c 4B010000 		.word	.L9+1
+ 373 0080 4B010000 		.word	.L9+1
+ 374 0084 4B010000 		.word	.L9+1
+ 375 0088 4B010000 		.word	.L9+1
+ 376 008c 2B010000 		.word	.L29+1
+ 377 0090 31010000 		.word	.L30+1
+ 378 0094 37010000 		.word	.L31+1
+ 379 0098 3D010000 		.word	.L32+1
+ 380 009c 43010000 		.word	.L33+1
+ 381              		.p2align 1
+ 382              	.L10:
+ 113:main.c        ****         {
+ 114:main.c        ****         case 0:
+ 115:main.c        ****             mask = 0xFFFFu;//b1111 1111 1111;
+ 383              		.loc 1 115 0
+ 384 00a0 4FF6FF73 		movw	r3, #65535
+ 385 00a4 FB81     		strh	r3, [r7, #14]	@ movhi
+ 116:main.c        ****             break;
+ 386              		.loc 1 116 0
+ 387 00a6 53E0     		b	.L34
+ 388              	.L12:
+ 117:main.c        ****         case 1:
+ 118:main.c        ****             mask = 0xFFFEu;//b1111 1111 1110;
+ 389              		.loc 1 118 0
+ 390 00a8 4FF6FE73 		movw	r3, #65534
+ 391 00ac FB81     		strh	r3, [r7, #14]	@ movhi
+ 119:main.c        ****             break;  
+ 392              		.loc 1 119 0
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cc4u8fSj.s 			page 10
+
+
+ 393 00ae 4FE0     		b	.L34
+ 394              	.L13:
+ 120:main.c        ****         case 2:
+ 121:main.c        ****             mask = 0xFFFCu;//b1111 1111 1100;
+ 395              		.loc 1 121 0
+ 396 00b0 4FF6FC73 		movw	r3, #65532
+ 397 00b4 FB81     		strh	r3, [r7, #14]	@ movhi
+ 122:main.c        ****             break; 
+ 398              		.loc 1 122 0
+ 399 00b6 4BE0     		b	.L34
+ 400              	.L14:
+ 123:main.c        ****         case 3:
+ 124:main.c        ****             mask = 0xFFF8u;//b1111 1111 1000;
+ 401              		.loc 1 124 0
+ 402 00b8 4FF6F873 		movw	r3, #65528
+ 403 00bc FB81     		strh	r3, [r7, #14]	@ movhi
+ 125:main.c        ****             break;
+ 404              		.loc 1 125 0
+ 405 00be 47E0     		b	.L34
+ 406              	.L15:
+ 126:main.c        ****         case 4:
+ 127:main.c        ****             mask = 0xFFF0u;//b1111 1111 0000;
+ 407              		.loc 1 127 0
+ 408 00c0 4FF6F073 		movw	r3, #65520
+ 409 00c4 FB81     		strh	r3, [r7, #14]	@ movhi
+ 128:main.c        ****             break;  
+ 410              		.loc 1 128 0
+ 411 00c6 43E0     		b	.L34
+ 412              	.L16:
+ 129:main.c        ****         case 5:
+ 130:main.c        ****             mask = 0xFFE0u;//b1111 1110 0000;
+ 413              		.loc 1 130 0
+ 414 00c8 4FF6E073 		movw	r3, #65504
+ 415 00cc FB81     		strh	r3, [r7, #14]	@ movhi
+ 131:main.c        ****             break; 
+ 416              		.loc 1 131 0
+ 417 00ce 3FE0     		b	.L34
+ 418              	.L17:
+ 132:main.c        ****          case 6:
+ 133:main.c        ****             mask = 0b111111010000;
+ 419              		.loc 1 133 0
+ 420 00d0 4FF47D63 		mov	r3, #4048
+ 421 00d4 FB81     		strh	r3, [r7, #14]	@ movhi
+ 134:main.c        ****             break; 
+ 422              		.loc 1 134 0
+ 423 00d6 3BE0     		b	.L34
+ 424              	.L18:
+ 135:main.c        ****         case 7:
+ 136:main.c        ****             mask = 0b111111000000;
+ 425              		.loc 1 136 0
+ 426 00d8 4FF47C63 		mov	r3, #4032
+ 427 00dc FB81     		strh	r3, [r7, #14]	@ movhi
+ 137:main.c        ****             break;  
+ 428              		.loc 1 137 0
+ 429 00de 37E0     		b	.L34
+ 430              	.L19:
+ 138:main.c        ****         case 8:
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cc4u8fSj.s 			page 11
+
+
+ 139:main.c        ****             mask = 0b111110110000;
+ 431              		.loc 1 139 0
+ 432 00e0 4FF47B63 		mov	r3, #4016
+ 433 00e4 FB81     		strh	r3, [r7, #14]	@ movhi
+ 140:main.c        ****             break;  
+ 434              		.loc 1 140 0
+ 435 00e6 33E0     		b	.L34
+ 436              	.L20:
+ 141:main.c        ****         case 9:
+ 142:main.c        ****             mask = 0b111110100000;
+ 437              		.loc 1 142 0
+ 438 00e8 4FF47A63 		mov	r3, #4000
+ 439 00ec FB81     		strh	r3, [r7, #14]	@ movhi
+ 143:main.c        ****             break;  
+ 440              		.loc 1 143 0
+ 441 00ee 2FE0     		b	.L34
+ 442              	.L21:
+ 144:main.c        ****         case 10:
+ 145:main.c        ****             mask = 0b111110010000;
+ 443              		.loc 1 145 0
+ 444 00f0 4FF47963 		mov	r3, #3984
+ 445 00f4 FB81     		strh	r3, [r7, #14]	@ movhi
+ 146:main.c        ****             break;  
+ 446              		.loc 1 146 0
+ 447 00f6 2BE0     		b	.L34
+ 448              	.L22:
+ 147:main.c        ****         case 11:
+ 148:main.c        ****             mask = 0b111110000000;
+ 449              		.loc 1 148 0
+ 450 00f8 4FF47863 		mov	r3, #3968
+ 451 00fc FB81     		strh	r3, [r7, #14]	@ movhi
+ 149:main.c        ****             break;  
+ 452              		.loc 1 149 0
+ 453 00fe 27E0     		b	.L34
+ 454              	.L23:
+ 150:main.c        ****         case 12:
+ 151:main.c        ****             mask = 0b111101110000;
+ 455              		.loc 1 151 0
+ 456 0100 4FF47763 		mov	r3, #3952
+ 457 0104 FB81     		strh	r3, [r7, #14]	@ movhi
+ 152:main.c        ****             break;  
+ 458              		.loc 1 152 0
+ 459 0106 23E0     		b	.L34
+ 460              	.L24:
+ 153:main.c        ****         case 13:
+ 154:main.c        ****             mask = 0b111101100000;
+ 461              		.loc 1 154 0
+ 462 0108 4FF47663 		mov	r3, #3936
+ 463 010c FB81     		strh	r3, [r7, #14]	@ movhi
+ 155:main.c        ****             break;  
+ 464              		.loc 1 155 0
+ 465 010e 1FE0     		b	.L34
+ 466              	.L25:
+ 156:main.c        ****         case 14:
+ 157:main.c        ****             mask = 0b111101010000;
+ 467              		.loc 1 157 0
+ 468 0110 4FF47563 		mov	r3, #3920
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cc4u8fSj.s 			page 12
+
+
+ 469 0114 FB81     		strh	r3, [r7, #14]	@ movhi
+ 158:main.c        ****             break;  
+ 470              		.loc 1 158 0
+ 471 0116 1BE0     		b	.L34
+ 472              	.L26:
+ 159:main.c        ****         case 15:
+ 160:main.c        ****             mask = 0b111101000000;
+ 473              		.loc 1 160 0
+ 474 0118 4FF47463 		mov	r3, #3904
+ 475 011c FB81     		strh	r3, [r7, #14]	@ movhi
+ 476              	.L27:
+ 161:main.c        ****         case 16:
+ 162:main.c        ****             mask = 0b111100000000;
+ 477              		.loc 1 162 0
+ 478 011e 4FF47063 		mov	r3, #3840
+ 479 0122 FB81     		strh	r3, [r7, #14]	@ movhi
+ 480              	.L28:
+ 163:main.c        ****         case 17:
+ 164:main.c        ****             mask = 0b111000000000;
+ 481              		.loc 1 164 0
+ 482 0124 4FF46063 		mov	r3, #3584
+ 483 0128 FB81     		strh	r3, [r7, #14]	@ movhi
+ 484              	.L29:
+ 165:main.c        ****         case 27:
+ 166:main.c        ****             mask = 0b110100000000;
+ 485              		.loc 1 166 0
+ 486 012a 4FF45063 		mov	r3, #3328
+ 487 012e FB81     		strh	r3, [r7, #14]	@ movhi
+ 488              	.L30:
+ 167:main.c        ****         case 28:
+ 168:main.c        ****             mask = 0b110000000000;
+ 489              		.loc 1 168 0
+ 490 0130 4FF44063 		mov	r3, #3072
+ 491 0134 FB81     		strh	r3, [r7, #14]	@ movhi
+ 492              	.L31:
+ 169:main.c        ****         case 29:
+ 170:main.c        ****             mask = 0b101100000000;
+ 493              		.loc 1 170 0
+ 494 0136 4FF43063 		mov	r3, #2816
+ 495 013a FB81     		strh	r3, [r7, #14]	@ movhi
+ 496              	.L32:
+ 171:main.c        ****         case 30:
+ 172:main.c        ****             mask = 0b101000000000;
+ 497              		.loc 1 172 0
+ 498 013c 4FF42063 		mov	r3, #2560
+ 499 0140 FB81     		strh	r3, [r7, #14]	@ movhi
+ 500              	.L33:
+ 173:main.c        ****         case 31:
+ 174:main.c        ****             mask = 0b100000000000;
+ 501              		.loc 1 174 0
+ 502 0142 4FF40063 		mov	r3, #2048
+ 503 0146 FB81     		strh	r3, [r7, #14]	@ movhi
+ 175:main.c        ****             break;  
+ 504              		.loc 1 175 0
+ 505 0148 02E0     		b	.L34
+ 506              	.L9:
+ 176:main.c        ****         default:
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cc4u8fSj.s 			page 13
+
+
+ 177:main.c        ****             mask= 0xFFFFu;
+ 507              		.loc 1 177 0
+ 508 014a 4FF6FF73 		movw	r3, #65535
+ 509 014e FB81     		strh	r3, [r7, #14]	@ movhi
+ 510              	.L34:
+ 178:main.c        ****         }
+ 179:main.c        ****     return mask;
+ 511              		.loc 1 179 0
+ 512 0150 FB89     		ldrh	r3, [r7, #14]
+ 180:main.c        **** }
+ 513              		.loc 1 180 0
+ 514 0152 1846     		mov	r0, r3
+ 515 0154 1437     		adds	r7, r7, #20
+ 516              		.cfi_def_cfa_offset 4
+ 517 0156 BD46     		mov	sp, r7
+ 518              		.cfi_def_cfa_register 13
+ 519              		@ sp needed
+ 520 0158 5DF8047B 		ldr	r7, [sp], #4
+ 521              		.cfi_restore 7
+ 522              		.cfi_def_cfa_offset 0
+ 523 015c 7047     		bx	lr
+ 524              		.cfi_endproc
+ 525              	.LFE64:
+ 526              		.size	Effect, .-Effect
+ 527 015e 00BF     		.section	.text.PWM_Start,"ax",%progbits
+ 528              		.align	2
+ 529              		.global	PWM_Start
+ 530              		.thumb
+ 531              		.thumb_func
+ 532              		.type	PWM_Start, %function
+ 533              	PWM_Start:
+ 534              	.LFB65:
+ 181:main.c        **** void PWM_Start(void)
+ 182:main.c        **** {
+ 535              		.loc 1 182 0
+ 536              		.cfi_startproc
+ 537              		@ args = 0, pretend = 0, frame = 0
+ 538              		@ frame_needed = 1, uses_anonymous_args = 0
+ 539 0000 80B5     		push	{r7, lr}
+ 540              		.cfi_def_cfa_offset 8
+ 541              		.cfi_offset 7, -8
+ 542              		.cfi_offset 14, -4
+ 543 0002 00AF     		add	r7, sp, #0
+ 544              		.cfi_def_cfa_register 7
+ 183:main.c        ****     PWM_ADC_CK_Enable();
+ 545              		.loc 1 183 0
+ 546 0004 FFF7FEFF 		bl	PWM_ADC_CK_Enable
+ 184:main.c        **** //    PWM_1_Enable();
+ 185:main.c        **** //    PWM_2_Enable();
+ 186:main.c        **** //    PWM_3_Enable();
+ 187:main.c        ****     PWM_4_Enable();
+ 547              		.loc 1 187 0
+ 548 0008 FFF7FEFF 		bl	PWM_4_Enable
+ 188:main.c        ****     PWM_5_Enable();
+ 549              		.loc 1 188 0
+ 550 000c FFF7FEFF 		bl	PWM_5_Enable
+ 189:main.c        ****     PWM_6_Enable();
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cc4u8fSj.s 			page 14
+
+
+ 551              		.loc 1 189 0
+ 552 0010 FFF7FEFF 		bl	PWM_6_Enable
+ 190:main.c        ****     PWM_7_Enable();
+ 553              		.loc 1 190 0
+ 554 0014 FFF7FEFF 		bl	PWM_7_Enable
+ 191:main.c        ****     PWM_8_Enable();
+ 555              		.loc 1 191 0
+ 556 0018 FFF7FEFF 		bl	PWM_8_Enable
+ 192:main.c        ****     PWM_9_Enable();
+ 557              		.loc 1 192 0
+ 558 001c FFF7FEFF 		bl	PWM_9_Enable
+ 193:main.c        ****     PWM_10_Enable();
+ 559              		.loc 1 193 0
+ 560 0020 FFF7FEFF 		bl	PWM_10_Enable
+ 194:main.c        ****     PWM_11_Enable();
+ 561              		.loc 1 194 0
+ 562 0024 FFF7FEFF 		bl	PWM_11_Enable
+ 195:main.c        ****     PWM_ADC_CK_Start();
+ 563              		.loc 1 195 0
+ 564 0028 FFF7FEFF 		bl	PWM_ADC_CK_Start
+ 196:main.c        **** //    PWM_1_Start();
+ 197:main.c        **** //    PWM_2_Start();
+ 198:main.c        **** //    PWM_3_Start();
+ 199:main.c        ****     PWM_4_Start();
+ 565              		.loc 1 199 0
+ 566 002c FFF7FEFF 		bl	PWM_4_Start
+ 200:main.c        ****     PWM_5_Start();
+ 567              		.loc 1 200 0
+ 568 0030 FFF7FEFF 		bl	PWM_5_Start
+ 201:main.c        ****     PWM_6_Start();
+ 569              		.loc 1 201 0
+ 570 0034 FFF7FEFF 		bl	PWM_6_Start
+ 202:main.c        ****     PWM_7_Start();
+ 571              		.loc 1 202 0
+ 572 0038 FFF7FEFF 		bl	PWM_7_Start
+ 203:main.c        ****     PWM_8_Start();
+ 573              		.loc 1 203 0
+ 574 003c FFF7FEFF 		bl	PWM_8_Start
+ 204:main.c        ****     PWM_9_Start();
+ 575              		.loc 1 204 0
+ 576 0040 FFF7FEFF 		bl	PWM_9_Start
+ 205:main.c        ****     PWM_10_Start();
+ 577              		.loc 1 205 0
+ 578 0044 FFF7FEFF 		bl	PWM_10_Start
+ 206:main.c        ****     PWM_11_Start();
+ 579              		.loc 1 206 0
+ 580 0048 FFF7FEFF 		bl	PWM_11_Start
+ 207:main.c        ****     return;
+ 581              		.loc 1 207 0
+ 582 004c 00BF     		nop
+ 208:main.c        **** }
+ 583              		.loc 1 208 0
+ 584 004e 80BD     		pop	{r7, pc}
+ 585              		.cfi_endproc
+ 586              	.LFE65:
+ 587              		.size	PWM_Start, .-PWM_Start
+ 588              		.global	__aeabi_i2d
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cc4u8fSj.s 			page 15
+
+
+ 589              		.global	__aeabi_dmul
+ 590              		.global	__aeabi_d2uiz
+ 591              		.section	.text.PWM_Set,"ax",%progbits
+ 592              		.align	2
+ 593              		.global	PWM_Set
+ 594              		.thumb
+ 595              		.thumb_func
+ 596              		.type	PWM_Set, %function
+ 597              	PWM_Set:
+ 598              	.LFB66:
+ 209:main.c        **** void PWM_Set(uint16 PWMin){
+ 599              		.loc 1 209 0
+ 600              		.cfi_startproc
+ 601              		@ args = 0, pretend = 0, frame = 16
+ 602              		@ frame_needed = 1, uses_anonymous_args = 0
+ 603 0000 80B5     		push	{r7, lr}
+ 604              		.cfi_def_cfa_offset 8
+ 605              		.cfi_offset 7, -8
+ 606              		.cfi_offset 14, -4
+ 607 0002 84B0     		sub	sp, sp, #16
+ 608              		.cfi_def_cfa_offset 24
+ 609 0004 00AF     		add	r7, sp, #0
+ 610              		.cfi_def_cfa_register 7
+ 611 0006 0346     		mov	r3, r0
+ 612 0008 FB80     		strh	r3, [r7, #6]	@ movhi
+ 210:main.c        ****    uint16 PWMdiv = PWMin* .33333;
+ 613              		.loc 1 210 0
+ 614 000a FB88     		ldrh	r3, [r7, #6]
+ 615 000c 1846     		mov	r0, r3
+ 616 000e FFF7FEFF 		bl	__aeabi_i2d
+ 617 0012 0246     		mov	r2, r0
+ 618 0014 0B46     		mov	r3, r1
+ 619 0016 1046     		mov	r0, r2
+ 620 0018 1946     		mov	r1, r3
+ 621 001a 31A3     		adr	r3, .L40
+ 622 001c D3E90023 		ldrd	r2, [r3]
+ 623 0020 FFF7FEFF 		bl	__aeabi_dmul
+ 624 0024 0246     		mov	r2, r0
+ 625 0026 0B46     		mov	r3, r1
+ 626 0028 1046     		mov	r0, r2
+ 627 002a 1946     		mov	r1, r3
+ 628 002c FFF7FEFF 		bl	__aeabi_d2uiz
+ 629 0030 0346     		mov	r3, r0
+ 630 0032 FB81     		strh	r3, [r7, #14]	@ movhi
+ 211:main.c        **** 
+ 212:main.c        ****     PWM_4_WritePeriod(PWMin);
+ 631              		.loc 1 212 0
+ 632 0034 FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 633 0036 DBB2     		uxtb	r3, r3
+ 634 0038 1846     		mov	r0, r3
+ 635 003a FFF7FEFF 		bl	PWM_4_WritePeriod
+ 213:main.c        ****     PWM_5_WritePeriod(PWMin);
+ 636              		.loc 1 213 0
+ 637 003e FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 638 0040 DBB2     		uxtb	r3, r3
+ 639 0042 1846     		mov	r0, r3
+ 640 0044 FFF7FEFF 		bl	PWM_5_WritePeriod
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cc4u8fSj.s 			page 16
+
+
+ 214:main.c        ****     PWM_6_WritePeriod(PWMin);
+ 641              		.loc 1 214 0
+ 642 0048 FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 643 004a DBB2     		uxtb	r3, r3
+ 644 004c 1846     		mov	r0, r3
+ 645 004e FFF7FEFF 		bl	PWM_6_WritePeriod
+ 215:main.c        ****     PWM_7_WritePeriod(PWMin);
+ 646              		.loc 1 215 0
+ 647 0052 FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 648 0054 DBB2     		uxtb	r3, r3
+ 649 0056 1846     		mov	r0, r3
+ 650 0058 FFF7FEFF 		bl	PWM_7_WritePeriod
+ 216:main.c        ****     PWM_8_WritePeriod(PWMin);
+ 651              		.loc 1 216 0
+ 652 005c FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 653 005e DBB2     		uxtb	r3, r3
+ 654 0060 1846     		mov	r0, r3
+ 655 0062 FFF7FEFF 		bl	PWM_8_WritePeriod
+ 217:main.c        ****     PWM_9_WritePeriod(PWMin);
+ 656              		.loc 1 217 0
+ 657 0066 FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 658 0068 DBB2     		uxtb	r3, r3
+ 659 006a 1846     		mov	r0, r3
+ 660 006c FFF7FEFF 		bl	PWM_9_WritePeriod
+ 218:main.c        ****     PWM_10_WritePeriod(PWMin);
+ 661              		.loc 1 218 0
+ 662 0070 FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 663 0072 DBB2     		uxtb	r3, r3
+ 664 0074 1846     		mov	r0, r3
+ 665 0076 FFF7FEFF 		bl	PWM_10_WritePeriod
+ 219:main.c        ****     PWM_11_WritePeriod(PWMin);
+ 666              		.loc 1 219 0
+ 667 007a FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 668 007c DBB2     		uxtb	r3, r3
+ 669 007e 1846     		mov	r0, r3
+ 670 0080 FFF7FEFF 		bl	PWM_11_WritePeriod
+ 220:main.c        ****     
+ 221:main.c        **** 
+ 222:main.c        ****     PWM_4_WriteCompare(PWMdiv);
+ 671              		.loc 1 222 0
+ 672 0084 FB89     		ldrh	r3, [r7, #14]	@ movhi
+ 673 0086 DBB2     		uxtb	r3, r3
+ 674 0088 1846     		mov	r0, r3
+ 675 008a FFF7FEFF 		bl	PWM_4_WriteCompare
+ 223:main.c        ****     PWM_5_WriteCompare(PWMdiv);
+ 676              		.loc 1 223 0
+ 677 008e FB89     		ldrh	r3, [r7, #14]	@ movhi
+ 678 0090 DBB2     		uxtb	r3, r3
+ 679 0092 1846     		mov	r0, r3
+ 680 0094 FFF7FEFF 		bl	PWM_5_WriteCompare
+ 224:main.c        ****     PWM_6_WriteCompare(PWMdiv);
+ 681              		.loc 1 224 0
+ 682 0098 FB89     		ldrh	r3, [r7, #14]	@ movhi
+ 683 009a DBB2     		uxtb	r3, r3
+ 684 009c 1846     		mov	r0, r3
+ 685 009e FFF7FEFF 		bl	PWM_6_WriteCompare
+ 225:main.c        ****     PWM_7_WriteCompare(PWMdiv);
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cc4u8fSj.s 			page 17
+
+
+ 686              		.loc 1 225 0
+ 687 00a2 FB89     		ldrh	r3, [r7, #14]	@ movhi
+ 688 00a4 DBB2     		uxtb	r3, r3
+ 689 00a6 1846     		mov	r0, r3
+ 690 00a8 FFF7FEFF 		bl	PWM_7_WriteCompare
+ 226:main.c        ****     PWM_8_WriteCompare(PWMdiv);
+ 691              		.loc 1 226 0
+ 692 00ac FB89     		ldrh	r3, [r7, #14]	@ movhi
+ 693 00ae DBB2     		uxtb	r3, r3
+ 694 00b0 1846     		mov	r0, r3
+ 695 00b2 FFF7FEFF 		bl	PWM_8_WriteCompare
+ 227:main.c        ****     PWM_9_WriteCompare(PWMdiv);
+ 696              		.loc 1 227 0
+ 697 00b6 FB89     		ldrh	r3, [r7, #14]	@ movhi
+ 698 00b8 DBB2     		uxtb	r3, r3
+ 699 00ba 1846     		mov	r0, r3
+ 700 00bc FFF7FEFF 		bl	PWM_9_WriteCompare
+ 228:main.c        ****     PWM_10_WriteCompare(PWMdiv);
+ 701              		.loc 1 228 0
+ 702 00c0 FB89     		ldrh	r3, [r7, #14]	@ movhi
+ 703 00c2 DBB2     		uxtb	r3, r3
+ 704 00c4 1846     		mov	r0, r3
+ 705 00c6 FFF7FEFF 		bl	PWM_10_WriteCompare
+ 229:main.c        ****     PWM_11_WriteCompare(PWMdiv);
+ 706              		.loc 1 229 0
+ 707 00ca FB89     		ldrh	r3, [r7, #14]	@ movhi
+ 708 00cc DBB2     		uxtb	r3, r3
+ 709 00ce 1846     		mov	r0, r3
+ 710 00d0 FFF7FEFF 		bl	PWM_11_WriteCompare
+ 230:main.c        ****     return;
+ 711              		.loc 1 230 0
+ 712 00d4 00BF     		nop
+ 231:main.c        **** }
+ 713              		.loc 1 231 0
+ 714 00d6 1037     		adds	r7, r7, #16
+ 715              		.cfi_def_cfa_offset 8
+ 716 00d8 BD46     		mov	sp, r7
+ 717              		.cfi_def_cfa_register 13
+ 718              		@ sp needed
+ 719 00da 80BD     		pop	{r7, pc}
+ 720              	.L41:
+ 721 00dc AFF30080 		.align	3
+ 722              	.L40:
+ 723 00e0 BEA4315A 		.word	1513202878
+ 724 00e4 4755D53F 		.word	1070945607
+ 725              		.cfi_endproc
+ 726              	.LFE66:
+ 727              		.size	PWM_Set, .-PWM_Set
+ 728              		.text
+ 729              	.Letext0:
+ 730              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.0\\psoc creator\\import\\gnu\\arm\\4.9.
+ 731              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.0\\psoc creator\\import\\gnu\\arm\\4.9.
+ 732              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 733              		.file 5 "Generated_Source\\PSoC5/core_cm3.h"
+ 734              		.section	.debug_info,"",%progbits
+ 735              	.Ldebug_info0:
+ 736 0000 5B020000 		.4byte	0x25b
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cc4u8fSj.s 			page 18
+
+
+ 737 0004 0400     		.2byte	0x4
+ 738 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 739 000a 04       		.byte	0x4
+ 740 000b 01       		.uleb128 0x1
+ 741 000c 2F000000 		.4byte	.LASF39
+ 742 0010 01       		.byte	0x1
+ 743 0011 CC010000 		.4byte	.LASF40
+ 744 0015 12020000 		.4byte	.LASF41
+ 745 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 746 001d 00000000 		.4byte	0
+ 747 0021 00000000 		.4byte	.Ldebug_line0
+ 748 0025 02       		.uleb128 0x2
+ 749 0026 01       		.byte	0x1
+ 750 0027 06       		.byte	0x6
+ 751 0028 92020000 		.4byte	.LASF0
+ 752 002c 02       		.uleb128 0x2
+ 753 002d 01       		.byte	0x1
+ 754 002e 08       		.byte	0x8
+ 755 002f EA000000 		.4byte	.LASF1
+ 756 0033 02       		.uleb128 0x2
+ 757 0034 02       		.byte	0x2
+ 758 0035 05       		.byte	0x5
+ 759 0036 08020000 		.4byte	.LASF2
+ 760 003a 02       		.uleb128 0x2
+ 761 003b 02       		.byte	0x2
+ 762 003c 07       		.byte	0x7
+ 763 003d 0A010000 		.4byte	.LASF3
+ 764 0041 03       		.uleb128 0x3
+ 765 0042 16000000 		.4byte	.LASF9
+ 766 0046 02       		.byte	0x2
+ 767 0047 3F       		.byte	0x3f
+ 768 0048 4C000000 		.4byte	0x4c
+ 769 004c 02       		.uleb128 0x2
+ 770 004d 04       		.byte	0x4
+ 771 004e 05       		.byte	0x5
+ 772 004f 70020000 		.4byte	.LASF4
+ 773 0053 02       		.uleb128 0x2
+ 774 0054 04       		.byte	0x4
+ 775 0055 07       		.byte	0x7
+ 776 0056 F8000000 		.4byte	.LASF5
+ 777 005a 02       		.uleb128 0x2
+ 778 005b 08       		.byte	0x8
+ 779 005c 05       		.byte	0x5
+ 780 005d B4010000 		.4byte	.LASF6
+ 781 0061 02       		.uleb128 0x2
+ 782 0062 08       		.byte	0x8
+ 783 0063 07       		.byte	0x7
+ 784 0064 7B010000 		.4byte	.LASF7
+ 785 0068 04       		.uleb128 0x4
+ 786 0069 04       		.byte	0x4
+ 787 006a 05       		.byte	0x5
+ 788 006b 696E7400 		.ascii	"int\000"
+ 789 006f 02       		.uleb128 0x2
+ 790 0070 04       		.byte	0x4
+ 791 0071 07       		.byte	0x7
+ 792 0072 65010000 		.4byte	.LASF8
+ 793 0076 03       		.uleb128 0x3
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cc4u8fSj.s 			page 19
+
+
+ 794 0077 A3010000 		.4byte	.LASF10
+ 795 007b 03       		.byte	0x3
+ 796 007c 2C       		.byte	0x2c
+ 797 007d 41000000 		.4byte	0x41
+ 798 0081 05       		.uleb128 0x5
+ 799 0082 BD000000 		.4byte	.LASF11
+ 800 0086 04       		.byte	0x4
+ 801 0087 9201     		.2byte	0x192
+ 802 0089 2C000000 		.4byte	0x2c
+ 803 008d 05       		.uleb128 0x5
+ 804 008e 3F010000 		.4byte	.LASF12
+ 805 0092 04       		.byte	0x4
+ 806 0093 9301     		.2byte	0x193
+ 807 0095 3A000000 		.4byte	0x3a
+ 808 0099 02       		.uleb128 0x2
+ 809 009a 04       		.byte	0x4
+ 810 009b 04       		.byte	0x4
+ 811 009c CC000000 		.4byte	.LASF13
+ 812 00a0 02       		.uleb128 0x2
+ 813 00a1 08       		.byte	0x8
+ 814 00a2 04       		.byte	0x4
+ 815 00a3 38010000 		.4byte	.LASF14
+ 816 00a7 02       		.uleb128 0x2
+ 817 00a8 01       		.byte	0x1
+ 818 00a9 08       		.byte	0x8
+ 819 00aa D3010000 		.4byte	.LASF15
+ 820 00ae 02       		.uleb128 0x2
+ 821 00af 04       		.byte	0x4
+ 822 00b0 07       		.byte	0x7
+ 823 00b1 AB010000 		.4byte	.LASF16
+ 824 00b5 06       		.uleb128 0x6
+ 825 00b6 46010000 		.4byte	.LASF24
+ 826 00ba 01       		.byte	0x1
+ 827 00bb 21       		.byte	0x21
+ 828 00bc 68000000 		.4byte	0x68
+ 829 00c0 00000000 		.4byte	.LFB63
+ 830 00c4 9C010000 		.4byte	.LFE63-.LFB63
+ 831 00c8 01       		.uleb128 0x1
+ 832 00c9 9C       		.byte	0x9c
+ 833 00ca 3B010000 		.4byte	0x13b
+ 834 00ce 07       		.uleb128 0x7
+ 835 00cf 43545200 		.ascii	"CTR\000"
+ 836 00d3 01       		.byte	0x1
+ 837 00d4 24       		.byte	0x24
+ 838 00d5 8D000000 		.4byte	0x8d
+ 839 00d9 02       		.uleb128 0x2
+ 840 00da 91       		.byte	0x91
+ 841 00db 76       		.sleb128 -10
+ 842 00dc 08       		.uleb128 0x8
+ 843 00dd DC000000 		.4byte	.LBB2
+ 844 00e1 68000000 		.4byte	.LBE2-.LBB2
+ 845 00e5 09       		.uleb128 0x9
+ 846 00e6 88020000 		.4byte	.LASF17
+ 847 00ea 01       		.byte	0x1
+ 848 00eb 57       		.byte	0x57
+ 849 00ec 81000000 		.4byte	0x81
+ 850 00f0 02       		.uleb128 0x2
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cc4u8fSj.s 			page 20
+
+
+ 851 00f1 91       		.byte	0x91
+ 852 00f2 75       		.sleb128 -11
+ 853 00f3 09       		.uleb128 0x9
+ 854 00f4 99010000 		.4byte	.LASF18
+ 855 00f8 01       		.byte	0x1
+ 856 00f9 58       		.byte	0x58
+ 857 00fa 81000000 		.4byte	0x81
+ 858 00fe 02       		.uleb128 0x2
+ 859 00ff 91       		.byte	0x91
+ 860 0100 74       		.sleb128 -12
+ 861 0101 09       		.uleb128 0x9
+ 862 0102 C2010000 		.4byte	.LASF19
+ 863 0106 01       		.byte	0x1
+ 864 0107 5B       		.byte	0x5b
+ 865 0108 81000000 		.4byte	0x81
+ 866 010c 02       		.uleb128 0x2
+ 867 010d 91       		.byte	0x91
+ 868 010e 73       		.sleb128 -13
+ 869 010f 09       		.uleb128 0x9
+ 870 0110 25000000 		.4byte	.LASF20
+ 871 0114 01       		.byte	0x1
+ 872 0115 5C       		.byte	0x5c
+ 873 0116 8D000000 		.4byte	0x8d
+ 874 011a 02       		.uleb128 0x2
+ 875 011b 91       		.byte	0x91
+ 876 011c 70       		.sleb128 -16
+ 877 011d 09       		.uleb128 0x9
+ 878 011e C3000000 		.4byte	.LASF21
+ 879 0122 01       		.byte	0x1
+ 880 0123 5D       		.byte	0x5d
+ 881 0124 8D000000 		.4byte	0x8d
+ 882 0128 02       		.uleb128 0x2
+ 883 0129 91       		.byte	0x91
+ 884 012a 6E       		.sleb128 -18
+ 885 012b 09       		.uleb128 0x9
+ 886 012c D2000000 		.4byte	.LASF22
+ 887 0130 01       		.byte	0x1
+ 888 0131 5E       		.byte	0x5e
+ 889 0132 8D000000 		.4byte	0x8d
+ 890 0136 02       		.uleb128 0x2
+ 891 0137 91       		.byte	0x91
+ 892 0138 6C       		.sleb128 -20
+ 893 0139 00       		.byte	0
+ 894 013a 00       		.byte	0
+ 895 013b 0A       		.uleb128 0xa
+ 896 013c 92010000 		.4byte	.LASF42
+ 897 0140 01       		.byte	0x1
+ 898 0141 6C       		.byte	0x6c
+ 899 0142 8D000000 		.4byte	0x8d
+ 900 0146 00000000 		.4byte	.LFB64
+ 901 014a 5E010000 		.4byte	.LFE64-.LFB64
+ 902 014e 01       		.uleb128 0x1
+ 903 014f 9C       		.byte	0x9c
+ 904 0150 71010000 		.4byte	0x171
+ 905 0154 0B       		.uleb128 0xb
+ 906 0155 82020000 		.4byte	.LASF26
+ 907 0159 01       		.byte	0x1
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cc4u8fSj.s 			page 21
+
+
+ 908 015a 6C       		.byte	0x6c
+ 909 015b 8D000000 		.4byte	0x8d
+ 910 015f 02       		.uleb128 0x2
+ 911 0160 91       		.byte	0x91
+ 912 0161 6E       		.sleb128 -18
+ 913 0162 09       		.uleb128 0x9
+ 914 0163 20000000 		.4byte	.LASF23
+ 915 0167 01       		.byte	0x1
+ 916 0168 6F       		.byte	0x6f
+ 917 0169 8D000000 		.4byte	0x8d
+ 918 016d 02       		.uleb128 0x2
+ 919 016e 91       		.byte	0x91
+ 920 016f 76       		.sleb128 -10
+ 921 0170 00       		.byte	0
+ 922 0171 0C       		.uleb128 0xc
+ 923 0172 66020000 		.4byte	.LASF43
+ 924 0176 01       		.byte	0x1
+ 925 0177 B5       		.byte	0xb5
+ 926 0178 00000000 		.4byte	.LFB65
+ 927 017c 50000000 		.4byte	.LFE65-.LFB65
+ 928 0180 01       		.uleb128 0x1
+ 929 0181 9C       		.byte	0x9c
+ 930 0182 0D       		.uleb128 0xd
+ 931 0183 30010000 		.4byte	.LASF25
+ 932 0187 01       		.byte	0x1
+ 933 0188 D1       		.byte	0xd1
+ 934 0189 00000000 		.4byte	.LFB66
+ 935 018d E8000000 		.4byte	.LFE66-.LFB66
+ 936 0191 01       		.uleb128 0x1
+ 937 0192 9C       		.byte	0x9c
+ 938 0193 B4010000 		.4byte	0x1b4
+ 939 0197 0B       		.uleb128 0xb
+ 940 0198 1D010000 		.4byte	.LASF27
+ 941 019c 01       		.byte	0x1
+ 942 019d D1       		.byte	0xd1
+ 943 019e 8D000000 		.4byte	0x8d
+ 944 01a2 02       		.uleb128 0x2
+ 945 01a3 91       		.byte	0x91
+ 946 01a4 6E       		.sleb128 -18
+ 947 01a5 09       		.uleb128 0x9
+ 948 01a6 00000000 		.4byte	.LASF28
+ 949 01aa 01       		.byte	0x1
+ 950 01ab D2       		.byte	0xd2
+ 951 01ac 8D000000 		.4byte	0x8d
+ 952 01b0 02       		.uleb128 0x2
+ 953 01b1 91       		.byte	0x91
+ 954 01b2 76       		.sleb128 -10
+ 955 01b3 00       		.byte	0
+ 956 01b4 0E       		.uleb128 0xe
+ 957 01b5 23010000 		.4byte	.LASF29
+ 958 01b9 05       		.byte	0x5
+ 959 01ba 9606     		.2byte	0x696
+ 960 01bc C0010000 		.4byte	0x1c0
+ 961 01c0 0F       		.uleb128 0xf
+ 962 01c1 76000000 		.4byte	0x76
+ 963 01c5 10       		.uleb128 0x10
+ 964 01c6 4B010000 		.4byte	.LASF30
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cc4u8fSj.s 			page 22
+
+
+ 965 01ca 01       		.byte	0x1
+ 966 01cb 16       		.byte	0x16
+ 967 01cc 8D000000 		.4byte	0x8d
+ 968 01d0 05       		.uleb128 0x5
+ 969 01d1 03       		.byte	0x3
+ 970 01d2 00000000 		.4byte	BIT_MASK_CTRL
+ 971 01d6 10       		.uleb128 0x10
+ 972 01d7 DC000000 		.4byte	.LASF31
+ 973 01db 01       		.byte	0x1
+ 974 01dc 17       		.byte	0x17
+ 975 01dd 8D000000 		.4byte	0x8d
+ 976 01e1 05       		.uleb128 0x5
+ 977 01e2 03       		.byte	0x3
+ 978 01e3 00000000 		.4byte	DIV_MASK_CTRL
+ 979 01e7 10       		.uleb128 0x10
+ 980 01e8 EB010000 		.4byte	.LASF32
+ 981 01ec 01       		.byte	0x1
+ 982 01ed 18       		.byte	0x18
+ 983 01ee 8D000000 		.4byte	0x8d
+ 984 01f2 05       		.uleb128 0x5
+ 985 01f3 03       		.byte	0x3
+ 986 01f4 00000000 		.4byte	OLD_BIT_MASK_DEPTH
+ 987 01f8 10       		.uleb128 0x10
+ 988 01f9 D8010000 		.4byte	.LASF33
+ 989 01fd 01       		.byte	0x1
+ 990 01fe 19       		.byte	0x19
+ 991 01ff 8D000000 		.4byte	0x8d
+ 992 0203 05       		.uleb128 0x5
+ 993 0204 03       		.byte	0x3
+ 994 0205 00000000 		.4byte	OLD_DIV_MASK_DEPTH
+ 995 0209 10       		.uleb128 0x10
+ 996 020a FE010000 		.4byte	.LASF34
+ 997 020e 01       		.byte	0x1
+ 998 020f 1B       		.byte	0x1b
+ 999 0210 8D000000 		.4byte	0x8d
+ 1000 0214 05       		.uleb128 0x5
+ 1001 0215 03       		.byte	0x3
+ 1002 0216 00000000 		.4byte	MASK_CTRL
+ 1003 021a 10       		.uleb128 0x10
+ 1004 021b 07000000 		.4byte	.LASF35
+ 1005 021f 01       		.byte	0x1
+ 1006 0220 1C       		.byte	0x1c
+ 1007 0221 8D000000 		.4byte	0x8d
+ 1008 0225 05       		.uleb128 0x5
+ 1009 0226 03       		.byte	0x3
+ 1010 0227 00000000 		.4byte	OLD_MASK_DEPTH
+ 1011 022b 10       		.uleb128 0x10
+ 1012 022c 59010000 		.4byte	.LASF36
+ 1013 0230 01       		.byte	0x1
+ 1014 0231 1D       		.byte	0x1d
+ 1015 0232 81000000 		.4byte	0x81
+ 1016 0236 05       		.uleb128 0x5
+ 1017 0237 03       		.byte	0x3
+ 1018 0238 00000000 		.4byte	MASK_EFFECT
+ 1019 023c 10       		.uleb128 0x10
+ 1020 023d 79020000 		.4byte	.LASF37
+ 1021 0241 01       		.byte	0x1
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cc4u8fSj.s 			page 23
+
+
+ 1022 0242 1F       		.byte	0x1f
+ 1023 0243 8D000000 		.4byte	0x8d
+ 1024 0247 05       		.uleb128 0x5
+ 1025 0248 03       		.byte	0x3
+ 1026 0249 00000000 		.4byte	AUDIO_IN
+ 1027 024d 10       		.uleb128 0x10
+ 1028 024e 72010000 		.4byte	.LASF38
+ 1029 0252 01       		.byte	0x1
+ 1030 0253 20       		.byte	0x20
+ 1031 0254 8D000000 		.4byte	0x8d
+ 1032 0258 05       		.uleb128 0x5
+ 1033 0259 03       		.byte	0x3
+ 1034 025a 00000000 		.4byte	FRQ_CTRL
+ 1035 025e 00       		.byte	0
+ 1036              		.section	.debug_abbrev,"",%progbits
+ 1037              	.Ldebug_abbrev0:
+ 1038 0000 01       		.uleb128 0x1
+ 1039 0001 11       		.uleb128 0x11
+ 1040 0002 01       		.byte	0x1
+ 1041 0003 25       		.uleb128 0x25
+ 1042 0004 0E       		.uleb128 0xe
+ 1043 0005 13       		.uleb128 0x13
+ 1044 0006 0B       		.uleb128 0xb
+ 1045 0007 03       		.uleb128 0x3
+ 1046 0008 0E       		.uleb128 0xe
+ 1047 0009 1B       		.uleb128 0x1b
+ 1048 000a 0E       		.uleb128 0xe
+ 1049 000b 55       		.uleb128 0x55
+ 1050 000c 17       		.uleb128 0x17
+ 1051 000d 11       		.uleb128 0x11
+ 1052 000e 01       		.uleb128 0x1
+ 1053 000f 10       		.uleb128 0x10
+ 1054 0010 17       		.uleb128 0x17
+ 1055 0011 00       		.byte	0
+ 1056 0012 00       		.byte	0
+ 1057 0013 02       		.uleb128 0x2
+ 1058 0014 24       		.uleb128 0x24
+ 1059 0015 00       		.byte	0
+ 1060 0016 0B       		.uleb128 0xb
+ 1061 0017 0B       		.uleb128 0xb
+ 1062 0018 3E       		.uleb128 0x3e
+ 1063 0019 0B       		.uleb128 0xb
+ 1064 001a 03       		.uleb128 0x3
+ 1065 001b 0E       		.uleb128 0xe
+ 1066 001c 00       		.byte	0
+ 1067 001d 00       		.byte	0
+ 1068 001e 03       		.uleb128 0x3
+ 1069 001f 16       		.uleb128 0x16
+ 1070 0020 00       		.byte	0
+ 1071 0021 03       		.uleb128 0x3
+ 1072 0022 0E       		.uleb128 0xe
+ 1073 0023 3A       		.uleb128 0x3a
+ 1074 0024 0B       		.uleb128 0xb
+ 1075 0025 3B       		.uleb128 0x3b
+ 1076 0026 0B       		.uleb128 0xb
+ 1077 0027 49       		.uleb128 0x49
+ 1078 0028 13       		.uleb128 0x13
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cc4u8fSj.s 			page 24
+
+
+ 1079 0029 00       		.byte	0
+ 1080 002a 00       		.byte	0
+ 1081 002b 04       		.uleb128 0x4
+ 1082 002c 24       		.uleb128 0x24
+ 1083 002d 00       		.byte	0
+ 1084 002e 0B       		.uleb128 0xb
+ 1085 002f 0B       		.uleb128 0xb
+ 1086 0030 3E       		.uleb128 0x3e
+ 1087 0031 0B       		.uleb128 0xb
+ 1088 0032 03       		.uleb128 0x3
+ 1089 0033 08       		.uleb128 0x8
+ 1090 0034 00       		.byte	0
+ 1091 0035 00       		.byte	0
+ 1092 0036 05       		.uleb128 0x5
+ 1093 0037 16       		.uleb128 0x16
+ 1094 0038 00       		.byte	0
+ 1095 0039 03       		.uleb128 0x3
+ 1096 003a 0E       		.uleb128 0xe
+ 1097 003b 3A       		.uleb128 0x3a
+ 1098 003c 0B       		.uleb128 0xb
+ 1099 003d 3B       		.uleb128 0x3b
+ 1100 003e 05       		.uleb128 0x5
+ 1101 003f 49       		.uleb128 0x49
+ 1102 0040 13       		.uleb128 0x13
+ 1103 0041 00       		.byte	0
+ 1104 0042 00       		.byte	0
+ 1105 0043 06       		.uleb128 0x6
+ 1106 0044 2E       		.uleb128 0x2e
+ 1107 0045 01       		.byte	0x1
+ 1108 0046 3F       		.uleb128 0x3f
+ 1109 0047 19       		.uleb128 0x19
+ 1110 0048 03       		.uleb128 0x3
+ 1111 0049 0E       		.uleb128 0xe
+ 1112 004a 3A       		.uleb128 0x3a
+ 1113 004b 0B       		.uleb128 0xb
+ 1114 004c 3B       		.uleb128 0x3b
+ 1115 004d 0B       		.uleb128 0xb
+ 1116 004e 49       		.uleb128 0x49
+ 1117 004f 13       		.uleb128 0x13
+ 1118 0050 11       		.uleb128 0x11
+ 1119 0051 01       		.uleb128 0x1
+ 1120 0052 12       		.uleb128 0x12
+ 1121 0053 06       		.uleb128 0x6
+ 1122 0054 40       		.uleb128 0x40
+ 1123 0055 18       		.uleb128 0x18
+ 1124 0056 9642     		.uleb128 0x2116
+ 1125 0058 19       		.uleb128 0x19
+ 1126 0059 01       		.uleb128 0x1
+ 1127 005a 13       		.uleb128 0x13
+ 1128 005b 00       		.byte	0
+ 1129 005c 00       		.byte	0
+ 1130 005d 07       		.uleb128 0x7
+ 1131 005e 34       		.uleb128 0x34
+ 1132 005f 00       		.byte	0
+ 1133 0060 03       		.uleb128 0x3
+ 1134 0061 08       		.uleb128 0x8
+ 1135 0062 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cc4u8fSj.s 			page 25
+
+
+ 1136 0063 0B       		.uleb128 0xb
+ 1137 0064 3B       		.uleb128 0x3b
+ 1138 0065 0B       		.uleb128 0xb
+ 1139 0066 49       		.uleb128 0x49
+ 1140 0067 13       		.uleb128 0x13
+ 1141 0068 02       		.uleb128 0x2
+ 1142 0069 18       		.uleb128 0x18
+ 1143 006a 00       		.byte	0
+ 1144 006b 00       		.byte	0
+ 1145 006c 08       		.uleb128 0x8
+ 1146 006d 0B       		.uleb128 0xb
+ 1147 006e 01       		.byte	0x1
+ 1148 006f 11       		.uleb128 0x11
+ 1149 0070 01       		.uleb128 0x1
+ 1150 0071 12       		.uleb128 0x12
+ 1151 0072 06       		.uleb128 0x6
+ 1152 0073 00       		.byte	0
+ 1153 0074 00       		.byte	0
+ 1154 0075 09       		.uleb128 0x9
+ 1155 0076 34       		.uleb128 0x34
+ 1156 0077 00       		.byte	0
+ 1157 0078 03       		.uleb128 0x3
+ 1158 0079 0E       		.uleb128 0xe
+ 1159 007a 3A       		.uleb128 0x3a
+ 1160 007b 0B       		.uleb128 0xb
+ 1161 007c 3B       		.uleb128 0x3b
+ 1162 007d 0B       		.uleb128 0xb
+ 1163 007e 49       		.uleb128 0x49
+ 1164 007f 13       		.uleb128 0x13
+ 1165 0080 02       		.uleb128 0x2
+ 1166 0081 18       		.uleb128 0x18
+ 1167 0082 00       		.byte	0
+ 1168 0083 00       		.byte	0
+ 1169 0084 0A       		.uleb128 0xa
+ 1170 0085 2E       		.uleb128 0x2e
+ 1171 0086 01       		.byte	0x1
+ 1172 0087 3F       		.uleb128 0x3f
+ 1173 0088 19       		.uleb128 0x19
+ 1174 0089 03       		.uleb128 0x3
+ 1175 008a 0E       		.uleb128 0xe
+ 1176 008b 3A       		.uleb128 0x3a
+ 1177 008c 0B       		.uleb128 0xb
+ 1178 008d 3B       		.uleb128 0x3b
+ 1179 008e 0B       		.uleb128 0xb
+ 1180 008f 27       		.uleb128 0x27
+ 1181 0090 19       		.uleb128 0x19
+ 1182 0091 49       		.uleb128 0x49
+ 1183 0092 13       		.uleb128 0x13
+ 1184 0093 11       		.uleb128 0x11
+ 1185 0094 01       		.uleb128 0x1
+ 1186 0095 12       		.uleb128 0x12
+ 1187 0096 06       		.uleb128 0x6
+ 1188 0097 40       		.uleb128 0x40
+ 1189 0098 18       		.uleb128 0x18
+ 1190 0099 9742     		.uleb128 0x2117
+ 1191 009b 19       		.uleb128 0x19
+ 1192 009c 01       		.uleb128 0x1
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cc4u8fSj.s 			page 26
+
+
+ 1193 009d 13       		.uleb128 0x13
+ 1194 009e 00       		.byte	0
+ 1195 009f 00       		.byte	0
+ 1196 00a0 0B       		.uleb128 0xb
+ 1197 00a1 05       		.uleb128 0x5
+ 1198 00a2 00       		.byte	0
+ 1199 00a3 03       		.uleb128 0x3
+ 1200 00a4 0E       		.uleb128 0xe
+ 1201 00a5 3A       		.uleb128 0x3a
+ 1202 00a6 0B       		.uleb128 0xb
+ 1203 00a7 3B       		.uleb128 0x3b
+ 1204 00a8 0B       		.uleb128 0xb
+ 1205 00a9 49       		.uleb128 0x49
+ 1206 00aa 13       		.uleb128 0x13
+ 1207 00ab 02       		.uleb128 0x2
+ 1208 00ac 18       		.uleb128 0x18
+ 1209 00ad 00       		.byte	0
+ 1210 00ae 00       		.byte	0
+ 1211 00af 0C       		.uleb128 0xc
+ 1212 00b0 2E       		.uleb128 0x2e
+ 1213 00b1 00       		.byte	0
+ 1214 00b2 3F       		.uleb128 0x3f
+ 1215 00b3 19       		.uleb128 0x19
+ 1216 00b4 03       		.uleb128 0x3
+ 1217 00b5 0E       		.uleb128 0xe
+ 1218 00b6 3A       		.uleb128 0x3a
+ 1219 00b7 0B       		.uleb128 0xb
+ 1220 00b8 3B       		.uleb128 0x3b
+ 1221 00b9 0B       		.uleb128 0xb
+ 1222 00ba 27       		.uleb128 0x27
+ 1223 00bb 19       		.uleb128 0x19
+ 1224 00bc 11       		.uleb128 0x11
+ 1225 00bd 01       		.uleb128 0x1
+ 1226 00be 12       		.uleb128 0x12
+ 1227 00bf 06       		.uleb128 0x6
+ 1228 00c0 40       		.uleb128 0x40
+ 1229 00c1 18       		.uleb128 0x18
+ 1230 00c2 9642     		.uleb128 0x2116
+ 1231 00c4 19       		.uleb128 0x19
+ 1232 00c5 00       		.byte	0
+ 1233 00c6 00       		.byte	0
+ 1234 00c7 0D       		.uleb128 0xd
+ 1235 00c8 2E       		.uleb128 0x2e
+ 1236 00c9 01       		.byte	0x1
+ 1237 00ca 3F       		.uleb128 0x3f
+ 1238 00cb 19       		.uleb128 0x19
+ 1239 00cc 03       		.uleb128 0x3
+ 1240 00cd 0E       		.uleb128 0xe
+ 1241 00ce 3A       		.uleb128 0x3a
+ 1242 00cf 0B       		.uleb128 0xb
+ 1243 00d0 3B       		.uleb128 0x3b
+ 1244 00d1 0B       		.uleb128 0xb
+ 1245 00d2 27       		.uleb128 0x27
+ 1246 00d3 19       		.uleb128 0x19
+ 1247 00d4 11       		.uleb128 0x11
+ 1248 00d5 01       		.uleb128 0x1
+ 1249 00d6 12       		.uleb128 0x12
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cc4u8fSj.s 			page 27
+
+
+ 1250 00d7 06       		.uleb128 0x6
+ 1251 00d8 40       		.uleb128 0x40
+ 1252 00d9 18       		.uleb128 0x18
+ 1253 00da 9642     		.uleb128 0x2116
+ 1254 00dc 19       		.uleb128 0x19
+ 1255 00dd 01       		.uleb128 0x1
+ 1256 00de 13       		.uleb128 0x13
+ 1257 00df 00       		.byte	0
+ 1258 00e0 00       		.byte	0
+ 1259 00e1 0E       		.uleb128 0xe
+ 1260 00e2 34       		.uleb128 0x34
+ 1261 00e3 00       		.byte	0
+ 1262 00e4 03       		.uleb128 0x3
+ 1263 00e5 0E       		.uleb128 0xe
+ 1264 00e6 3A       		.uleb128 0x3a
+ 1265 00e7 0B       		.uleb128 0xb
+ 1266 00e8 3B       		.uleb128 0x3b
+ 1267 00e9 05       		.uleb128 0x5
+ 1268 00ea 49       		.uleb128 0x49
+ 1269 00eb 13       		.uleb128 0x13
+ 1270 00ec 3F       		.uleb128 0x3f
+ 1271 00ed 19       		.uleb128 0x19
+ 1272 00ee 3C       		.uleb128 0x3c
+ 1273 00ef 19       		.uleb128 0x19
+ 1274 00f0 00       		.byte	0
+ 1275 00f1 00       		.byte	0
+ 1276 00f2 0F       		.uleb128 0xf
+ 1277 00f3 35       		.uleb128 0x35
+ 1278 00f4 00       		.byte	0
+ 1279 00f5 49       		.uleb128 0x49
+ 1280 00f6 13       		.uleb128 0x13
+ 1281 00f7 00       		.byte	0
+ 1282 00f8 00       		.byte	0
+ 1283 00f9 10       		.uleb128 0x10
+ 1284 00fa 34       		.uleb128 0x34
+ 1285 00fb 00       		.byte	0
+ 1286 00fc 03       		.uleb128 0x3
+ 1287 00fd 0E       		.uleb128 0xe
+ 1288 00fe 3A       		.uleb128 0x3a
+ 1289 00ff 0B       		.uleb128 0xb
+ 1290 0100 3B       		.uleb128 0x3b
+ 1291 0101 0B       		.uleb128 0xb
+ 1292 0102 49       		.uleb128 0x49
+ 1293 0103 13       		.uleb128 0x13
+ 1294 0104 3F       		.uleb128 0x3f
+ 1295 0105 19       		.uleb128 0x19
+ 1296 0106 02       		.uleb128 0x2
+ 1297 0107 18       		.uleb128 0x18
+ 1298 0108 00       		.byte	0
+ 1299 0109 00       		.byte	0
+ 1300 010a 00       		.byte	0
+ 1301              		.section	.debug_aranges,"",%progbits
+ 1302 0000 34000000 		.4byte	0x34
+ 1303 0004 0200     		.2byte	0x2
+ 1304 0006 00000000 		.4byte	.Ldebug_info0
+ 1305 000a 04       		.byte	0x4
+ 1306 000b 00       		.byte	0
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cc4u8fSj.s 			page 28
+
+
+ 1307 000c 0000     		.2byte	0
+ 1308 000e 0000     		.2byte	0
+ 1309 0010 00000000 		.4byte	.LFB63
+ 1310 0014 9C010000 		.4byte	.LFE63-.LFB63
+ 1311 0018 00000000 		.4byte	.LFB64
+ 1312 001c 5E010000 		.4byte	.LFE64-.LFB64
+ 1313 0020 00000000 		.4byte	.LFB65
+ 1314 0024 50000000 		.4byte	.LFE65-.LFB65
+ 1315 0028 00000000 		.4byte	.LFB66
+ 1316 002c E8000000 		.4byte	.LFE66-.LFB66
+ 1317 0030 00000000 		.4byte	0
+ 1318 0034 00000000 		.4byte	0
+ 1319              		.section	.debug_ranges,"",%progbits
+ 1320              	.Ldebug_ranges0:
+ 1321 0000 00000000 		.4byte	.LFB63
+ 1322 0004 9C010000 		.4byte	.LFE63
+ 1323 0008 00000000 		.4byte	.LFB64
+ 1324 000c 5E010000 		.4byte	.LFE64
+ 1325 0010 00000000 		.4byte	.LFB65
+ 1326 0014 50000000 		.4byte	.LFE65
+ 1327 0018 00000000 		.4byte	.LFB66
+ 1328 001c E8000000 		.4byte	.LFE66
+ 1329 0020 00000000 		.4byte	0
+ 1330 0024 00000000 		.4byte	0
+ 1331              		.section	.debug_line,"",%progbits
+ 1332              	.Ldebug_line0:
+ 1333 0000 0D020000 		.section	.debug_str,"MS",%progbits,1
+ 1333      02004701 
+ 1333      00000201 
+ 1333      FB0E0D00 
+ 1333      01010101 
+ 1334              	.LASF28:
+ 1335 0000 50574D64 		.ascii	"PWMdiv\000"
+ 1335      697600
+ 1336              	.LASF35:
+ 1337 0007 4F4C445F 		.ascii	"OLD_MASK_DEPTH\000"
+ 1337      4D41534B 
+ 1337      5F444550 
+ 1337      544800
+ 1338              	.LASF9:
+ 1339 0016 5F5F696E 		.ascii	"__int32_t\000"
+ 1339      7433325F 
+ 1339      7400
+ 1340              	.LASF23:
+ 1341 0020 6D61736B 		.ascii	"mask\000"
+ 1341      00
+ 1342              	.LASF20:
+ 1343 0025 4D53425F 		.ascii	"MSB_4_DAC\000"
+ 1343      345F4441 
+ 1343      4300
+ 1344              	.LASF39:
+ 1345 002f 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 1345      4320342E 
+ 1345      392E3320 
+ 1345      32303135 
+ 1345      30333033 
+ 1346 0062 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cc4u8fSj.s 			page 29
+
+
+ 1346      20726576 
+ 1346      6973696F 
+ 1346      6E203232 
+ 1346      31323230 
+ 1347 0095 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 1347      66756E63 
+ 1347      74696F6E 
+ 1347      2D736563 
+ 1347      74696F6E 
+ 1348              	.LASF11:
+ 1349 00bd 75696E74 		.ascii	"uint8\000"
+ 1349      3800
+ 1350              	.LASF21:
+ 1351 00c3 44414349 		.ascii	"DACINPUT\000"
+ 1351      4E505554 
+ 1351      00
+ 1352              	.LASF13:
+ 1353 00cc 666C6F61 		.ascii	"float\000"
+ 1353      7400
+ 1354              	.LASF22:
+ 1355 00d2 46494E41 		.ascii	"FINAL_OUT\000"
+ 1355      4C5F4F55 
+ 1355      5400
+ 1356              	.LASF31:
+ 1357 00dc 4449565F 		.ascii	"DIV_MASK_CTRL\000"
+ 1357      4D41534B 
+ 1357      5F435452 
+ 1357      4C00
+ 1358              	.LASF1:
+ 1359 00ea 756E7369 		.ascii	"unsigned char\000"
+ 1359      676E6564 
+ 1359      20636861 
+ 1359      7200
+ 1360              	.LASF5:
+ 1361 00f8 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1361      20756E73 
+ 1361      69676E65 
+ 1361      6420696E 
+ 1361      7400
+ 1362              	.LASF3:
+ 1363 010a 73686F72 		.ascii	"short unsigned int\000"
+ 1363      7420756E 
+ 1363      7369676E 
+ 1363      65642069 
+ 1363      6E7400
+ 1364              	.LASF27:
+ 1365 011d 50574D69 		.ascii	"PWMin\000"
+ 1365      6E00
+ 1366              	.LASF29:
+ 1367 0123 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1367      52784275 
+ 1367      66666572 
+ 1367      00
+ 1368              	.LASF25:
+ 1369 0130 50574D5F 		.ascii	"PWM_Set\000"
+ 1369      53657400 
+ 1370              	.LASF14:
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cc4u8fSj.s 			page 30
+
+
+ 1371 0138 646F7562 		.ascii	"double\000"
+ 1371      6C6500
+ 1372              	.LASF12:
+ 1373 013f 75696E74 		.ascii	"uint16\000"
+ 1373      313600
+ 1374              	.LASF24:
+ 1375 0146 6D61696E 		.ascii	"main\000"
+ 1375      00
+ 1376              	.LASF30:
+ 1377 014b 4249545F 		.ascii	"BIT_MASK_CTRL\000"
+ 1377      4D41534B 
+ 1377      5F435452 
+ 1377      4C00
+ 1378              	.LASF36:
+ 1379 0159 4D41534B 		.ascii	"MASK_EFFECT\000"
+ 1379      5F454646 
+ 1379      45435400 
+ 1380              	.LASF8:
+ 1381 0165 756E7369 		.ascii	"unsigned int\000"
+ 1381      676E6564 
+ 1381      20696E74 
+ 1381      00
+ 1382              	.LASF38:
+ 1383 0172 4652515F 		.ascii	"FRQ_CTRL\000"
+ 1383      4354524C 
+ 1383      00
+ 1384              	.LASF7:
+ 1385 017b 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1385      206C6F6E 
+ 1385      6720756E 
+ 1385      7369676E 
+ 1385      65642069 
+ 1386              	.LASF42:
+ 1387 0192 45666665 		.ascii	"Effect\000"
+ 1387      637400
+ 1388              	.LASF18:
+ 1389 0199 4D53425F 		.ascii	"MSB_4_ADC\000"
+ 1389      345F4144 
+ 1389      4300
+ 1390              	.LASF10:
+ 1391 01a3 696E7433 		.ascii	"int32_t\000"
+ 1391      325F7400 
+ 1392              	.LASF16:
+ 1393 01ab 73697A65 		.ascii	"sizetype\000"
+ 1393      74797065 
+ 1393      00
+ 1394              	.LASF6:
+ 1395 01b4 6C6F6E67 		.ascii	"long long int\000"
+ 1395      206C6F6E 
+ 1395      6720696E 
+ 1395      7400
+ 1396              	.LASF19:
+ 1397 01c2 4C53425F 		.ascii	"LSB_8_DAC\000"
+ 1397      385F4441 
+ 1397      4300
+ 1398              	.LASF40:
+ 1399 01cc 6D61696E 		.ascii	"main.c\000"
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cc4u8fSj.s 			page 31
+
+
+ 1399      2E6300
+ 1400              	.LASF15:
+ 1401 01d3 63686172 		.ascii	"char\000"
+ 1401      00
+ 1402              	.LASF33:
+ 1403 01d8 4F4C445F 		.ascii	"OLD_DIV_MASK_DEPTH\000"
+ 1403      4449565F 
+ 1403      4D41534B 
+ 1403      5F444550 
+ 1403      544800
+ 1404              	.LASF32:
+ 1405 01eb 4F4C445F 		.ascii	"OLD_BIT_MASK_DEPTH\000"
+ 1405      4249545F 
+ 1405      4D41534B 
+ 1405      5F444550 
+ 1405      544800
+ 1406              	.LASF34:
+ 1407 01fe 4D41534B 		.ascii	"MASK_CTRL\000"
+ 1407      5F435452 
+ 1407      4C00
+ 1408              	.LASF2:
+ 1409 0208 73686F72 		.ascii	"short int\000"
+ 1409      7420696E 
+ 1409      7400
+ 1410              	.LASF41:
+ 1411 0212 433A5C55 		.ascii	"C:\\Users\\ben\\Documents\\PSoC Creator\\New Pedal "
+ 1411      73657273 
+ 1411      5C62656E 
+ 1411      5C446F63 
+ 1411      756D656E 
+ 1412 0240 5468696E 		.ascii	"Thingz\\PSOC_BIT_MANGLER\\ADC_DAC.cydsn\000"
+ 1412      677A5C50 
+ 1412      534F435F 
+ 1412      4249545F 
+ 1412      4D414E47 
+ 1413              	.LASF43:
+ 1414 0266 50574D5F 		.ascii	"PWM_Start\000"
+ 1414      53746172 
+ 1414      7400
+ 1415              	.LASF4:
+ 1416 0270 6C6F6E67 		.ascii	"long int\000"
+ 1416      20696E74 
+ 1416      00
+ 1417              	.LASF37:
+ 1418 0279 41554449 		.ascii	"AUDIO_IN\000"
+ 1418      4F5F494E 
+ 1418      00
+ 1419              	.LASF26:
+ 1420 0282 64657074 		.ascii	"depth\000"
+ 1420      6800
+ 1421              	.LASF17:
+ 1422 0288 4C53425F 		.ascii	"LSB_8_ADC\000"
+ 1422      385F4144 
+ 1422      4300
+ 1423              	.LASF0:
+ 1424 0292 7369676E 		.ascii	"signed char\000"
+ 1424      65642063 
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cc4u8fSj.s 			page 32
+
+
+ 1424      68617200 
+ 1425              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

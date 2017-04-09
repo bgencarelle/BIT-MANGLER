@@ -1,0 +1,1173 @@
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccz2eT1G.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"main.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.comm	EFFECT_ADC,2,2
+  19              		.comm	POT_READ_SCALED,2,2
+  20              		.global	val
+  21              		.bss
+  22              		.type	val, %object
+  23              		.size	val, 1
+  24              	val:
+  25 0000 00       		.space	1
+  26              		.global	dataready
+  27              		.type	dataready, %object
+  28              		.size	dataready, 1
+  29              	dataready:
+  30 0001 00       		.space	1
+  31              		.section	.rodata
+  32              		.align	2
+  33              	.LC0:
+  34 0000 41444331 		.ascii	"ADC1 \000"
+  34      2000
+  35 0006 0000     		.align	2
+  36              	.LC1:
+  37 0008 41444332 		.ascii	"ADC2 \000"
+  37      2000
+  38 000e 0000     		.section	.text.main,"ax",%progbits
+  39              		.align	2
+  40              		.global	main
+  41              		.thumb
+  42              		.thumb_func
+  43              		.type	main, %function
+  44              	main:
+  45              	.LFB63:
+  46              		.file 1 "main.c"
+   1:main.c        ****  /*******************************************************************************
+   2:main.c        **** * File Name: main.c
+   3:main.c        **** *
+   4:main.c        **** * Version: 1.00
+   5:main.c        **** *
+   6:main.c        **** * Description:
+   7:main.c        **** *   This example project uses ADC, DMA and VDAC components along with the LCD
+   8:main.c        **** *     status register. ADC output is transferred to VDAC input register using
+   9:main.c        **** *   the DMA.
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccz2eT1G.s 			page 2
+
+
+  10:main.c        **** *
+  11:main.c        **** * Note that this file contains the DMA_Config function as well.
+  12:main.c        **** *
+  13:main.c        **** ********************************************************************************
+  14:main.c        **** * Copyright 2012, Cypress Semiconductor Corporation. All rights reserved.
+  15:main.c        **** * This software is owned by Cypress Semiconductor Corporation and is protected
+  16:main.c        **** * by and subject to worldwide patent and copyright laws and treaties.
+  17:main.c        **** * Therefore, you may use this software only as provided in the license agreement
+  18:main.c        **** * accompanying the software package from which you obtained this software.
+  19:main.c        **** * CYPRESS AND ITS SUPPLIERS MAKE NO WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+  20:main.c        **** * WITH REGARD TO THIS SOFTWARE, INCLUDING, BUT NOT LIMITED TO, NONINFRINGEMENT,
+  21:main.c        **** * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+  22:main.c        **** *******************************************************************************/
+  23:main.c        **** 
+  24:main.c        **** #include <project.h>
+  25:main.c        **** 
+  26:main.c        **** 
+  27:main.c        **** uint16 EFFECT_ADC;
+  28:main.c        **** uint16 POT_READ_SCALED;
+  29:main.c        **** uint8 Effect(uint16 Filterout, uint16 depth);
+  30:main.c        **** uint8 val = 0;
+  31:main.c        **** 
+  32:main.c        **** volatile uint8 dataready=0u;
+  33:main.c        **** 
+  34:main.c        **** /*******************************************************************************
+  35:main.c        **** * Function Name: main
+  36:main.c        **** ********************************************************************************
+  37:main.c        **** *
+  38:main.c        **** * Summary:
+  39:main.c        **** *  main() performs following functions:
+  40:main.c        **** *  1: Starts the components
+  41:main.c        **** *  2: Calls function DMA_Config to setup the DMA.
+  42:main.c        **** *  3: Starts ADC continuous conversion.
+  43:main.c        **** *  4: Gets the converted result and displays it in LCD. Also displays VDAC data
+  44:main.c        **** *     register value on LCD.
+  45:main.c        **** *
+  46:main.c        **** * Parameters:
+  47:main.c        **** *  None.
+  48:main.c        **** *
+  49:main.c        **** * Return:
+  50:main.c        **** *  None.
+  51:main.c        **** *
+  52:main.c        **** *******************************************************************************/
+  53:main.c        **** int main()
+  54:main.c        **** {
+  47              		.loc 1 54 0
+  48              		.cfi_startproc
+  49              		@ args = 0, pretend = 0, frame = 8
+  50              		@ frame_needed = 1, uses_anonymous_args = 0
+  51 0000 80B5     		push	{r7, lr}
+  52              		.cfi_def_cfa_offset 8
+  53              		.cfi_offset 7, -8
+  54              		.cfi_offset 14, -4
+  55 0002 82B0     		sub	sp, sp, #8
+  56              		.cfi_def_cfa_offset 16
+  57 0004 00AF     		add	r7, sp, #0
+  58              		.cfi_def_cfa_register 7
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccz2eT1G.s 			page 3
+
+
+  55:main.c        ****     /* Start the components */
+  56:main.c        ****     Opamp_1_Start();
+  59              		.loc 1 56 0
+  60 0006 FFF7FEFF 		bl	Opamp_1_Start
+  57:main.c        ****     Opamp_2_Start();
+  61              		.loc 1 57 0
+  62 000a FFF7FEFF 		bl	Opamp_2_Start
+  58:main.c        ****     Opamp_3_Start();
+  63              		.loc 1 58 0
+  64 000e FFF7FEFF 		bl	Opamp_3_Start
+  59:main.c        ****   //  Opamp_4_Start();
+  60:main.c        ****     LCD_Char_1_Start();
+  65              		.loc 1 60 0
+  66 0012 FFF7FEFF 		bl	LCD_Char_1_Start
+  61:main.c        ****  //   ADC_DelSig_1_Start();
+  62:main.c        ****     Filter_Start();
+  67              		.loc 1 62 0
+  68 0016 FFF7FEFF 		bl	Filter_Start
+  63:main.c        ****     ADC_SAR_1_Start();
+  69              		.loc 1 63 0
+  70 001a FFF7FEFF 		bl	ADC_SAR_1_Start
+  64:main.c        ****     ADC_SAR_2_Start();
+  71              		.loc 1 64 0
+  72 001e FFF7FEFF 		bl	ADC_SAR_2_Start
+  65:main.c        ****   //  CapSense_1_Start();
+  66:main.c        ****     SPI_DAC_Start();
+  73              		.loc 1 66 0
+  74 0022 FFF7FEFF 		bl	SPI_DAC_Start
+  67:main.c        ****     uint16 CK_DIV = 0;
+  75              		.loc 1 67 0
+  76 0026 0023     		movs	r3, #0
+  77 0028 FB80     		strh	r3, [r7, #6]	@ movhi
+  68:main.c        ****     uint16 AUDIO_IN = 0;
+  78              		.loc 1 68 0
+  79 002a 0023     		movs	r3, #0
+  80 002c BB80     		strh	r3, [r7, #4]	@ movhi
+  69:main.c        ****     uint16 ADC_SAR2_READ =0;
+  81              		.loc 1 69 0
+  82 002e 0023     		movs	r3, #0
+  83 0030 7B80     		strh	r3, [r7, #2]	@ movhi
+  70:main.c        ****     val = 0;
+  84              		.loc 1 70 0
+  85 0032 174B     		ldr	r3, .L4
+  86 0034 0022     		movs	r2, #0
+  87 0036 1A70     		strb	r2, [r3]
+  71:main.c        ****         /* Start ISRs */
+  72:main.c        ****     /* Enable global interrupts */
+  73:main.c        ****    CyGlobalIntEnable;
+  88              		.loc 1 73 0
+  89              	@ 73 "main.c" 1
+  90 0038 62B6     		CPSIE   i
+  91              	@ 0 "" 2
+  74:main.c        ****     /* Start ADC conversion */
+  75:main.c        ****     ADC_SAR_1_StartConvert();
+  92              		.loc 1 75 0
+  93              		.thumb
+  94 003a FFF7FEFF 		bl	ADC_SAR_1_StartConvert
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccz2eT1G.s 			page 4
+
+
+  76:main.c        ****     ADC_SAR_2_StartConvert();
+  95              		.loc 1 76 0
+  96 003e FFF7FEFF 		bl	ADC_SAR_2_StartConvert
+  77:main.c        ****     LCD_Char_1_Position(0u, 0u);
+  97              		.loc 1 77 0
+  98 0042 0020     		movs	r0, #0
+  99 0044 0021     		movs	r1, #0
+ 100 0046 FFF7FEFF 		bl	LCD_Char_1_Position
+  78:main.c        ****     LCD_Char_1_PrintString("ADC1 ");
+ 101              		.loc 1 78 0
+ 102 004a 1248     		ldr	r0, .L4+4
+ 103 004c FFF7FEFF 		bl	LCD_Char_1_PrintString
+  79:main.c        ****     LCD_Char_1_Position(1u, 0u);
+ 104              		.loc 1 79 0
+ 105 0050 0120     		movs	r0, #1
+ 106 0052 0021     		movs	r1, #0
+ 107 0054 FFF7FEFF 		bl	LCD_Char_1_Position
+  80:main.c        ****     LCD_Char_1_PrintString("ADC2 ");
+ 108              		.loc 1 80 0
+ 109 0058 0F48     		ldr	r0, .L4+8
+ 110 005a FFF7FEFF 		bl	LCD_Char_1_PrintString
+ 111              	.L3:
+  81:main.c        ****     
+  82:main.c        ****     for(;;)
+  83:main.c        ****     {
+  84:main.c        ****        
+  85:main.c        ****        
+  86:main.c        ****  /*   if (ADC_SAR_2_IsEndConversion(1)){
+  87:main.c        ****        ADC_SAR2_READ= ADC_SAR_2_GetResult16();
+  88:main.c        ****         CK_DIV= ADC_SAR2_READ <<4u;
+  89:main.c        ****    //   DAC_CLOCK_SetDivider((1));
+  90:main.c        ****         POT_READ_SCALED = ADC_SAR2_READ>>8u;
+  91:main.c        ****         }*/
+  92:main.c        ****  //  if (ADC_SAR_1_IsEndConversion(1))
+  93:main.c        ****    // {  }
+  94:main.c        ****         
+  95:main.c        ****   //  LCD_Char_1_Position(0u, strlen("ADC1 "));
+  96:main.c        ****   //  LCD_Char_1_PrintInt16(AUDIO_IN | 0x7000u);
+  97:main.c        ****    // LCD_Char_1_Position(1u, strlen("ADC2 "));
+  98:main.c        ****  //   LCD_Char_1_PrintInt16(ADC_SAR2_READ | 0xF000u); 
+  99:main.c        ****     //    AUDIO_IN= ADC_SAR_1_GetResult16();
+ 100:main.c        ****         //ADC_1_OUT_LSB_Write(ADC_SAR_1_GetResult8());
+ 101:main.c        ****        // ADC_1_OUT_MSB_Write(ADC_SAR_1_GetResult16()>>4);
+ 102:main.c        ****         if (ADC_SAR_1_IsEndConversion(1))
+ 112              		.loc 1 102 0
+ 113 005e 0120     		movs	r0, #1
+ 114 0060 FFF7FEFF 		bl	ADC_SAR_1_IsEndConversion
+ 115 0064 0346     		mov	r3, r0
+ 116 0066 002B     		cmp	r3, #0
+ 117 0068 11D0     		beq	.L2
+ 103:main.c        ****   {  
+ 104:main.c        ****         Effect(ADC_SAR_1_GetResult16(), 6);
+ 118              		.loc 1 104 0
+ 119 006a FFF7FEFF 		bl	ADC_SAR_1_GetResult16
+ 120 006e 0346     		mov	r3, r0
+ 121 0070 9BB2     		uxth	r3, r3
+ 122 0072 1846     		mov	r0, r3
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccz2eT1G.s 			page 5
+
+
+ 123 0074 0621     		movs	r1, #6
+ 124 0076 FFF7FEFF 		bl	Effect
+ 105:main.c        ****   //     (AUDIO_IN | 0xF000u);
+ 106:main.c        ****    // }
+ 107:main.c        ****       //  if(val){
+ 108:main.c        ****         
+ 109:main.c        ****         SPI_DAC_WriteTxData(EFFECT_ADC| 0b1111000000000000);
+ 125              		.loc 1 109 0
+ 126 007a 084B     		ldr	r3, .L4+12
+ 127 007c 1B88     		ldrh	r3, [r3]
+ 128 007e 6FEA0353 		mvn	r3, r3, lsl #20
+ 129 0082 6FEA1353 		mvn	r3, r3, lsr #20
+ 130 0086 9BB2     		uxth	r3, r3
+ 131 0088 1846     		mov	r0, r3
+ 132 008a FFF7FEFF 		bl	SPI_DAC_WriteTxData
+ 133              	.L2:
+ 110:main.c        ****  }
+ 111:main.c        ****         // val = !val;
+ 112:main.c        ****        // }
+ 113:main.c        ****         
+ 114:main.c        ****         //else{
+ 115:main.c        ****         //SPI_DAC_WriteTxData(AUDIO_IN | 0b1111000000000000);
+ 116:main.c        ****        // }
+ 117:main.c        ****    
+ 118:main.c        ****    
+ 119:main.c        ****  
+ 120:main.c        ****  //   Filter_Write16(0, ADC_SAR_1_GetResult16());
+ 121:main.c        ****    // uint16 FILT_ADC = Filter_Read16(0);
+ 122:main.c        ****     
+ 123:main.c        ****     
+ 124:main.c        ****  //   Filter_Write16(1,EFFECT_ADC); 
+ 125:main.c        ****  //   uint16 FILT_DAC = Filter_Read16(1);
+ 126:main.c        ****     
+ 127:main.c        ****    // DVDAC_SetValue(ADC_SAR_1_GetResult16());
+ 128:main.c        ****         /* Print the ADC output value on LCD */
+ 129:main.c        ****   
+ 130:main.c        ****      //  }
+ 131:main.c        ****     }
+ 134              		.loc 1 131 0
+ 135 008e E6E7     		b	.L3
+ 136              	.L5:
+ 137              		.align	2
+ 138              	.L4:
+ 139 0090 00000000 		.word	val
+ 140 0094 00000000 		.word	.LC0
+ 141 0098 08000000 		.word	.LC1
+ 142 009c 00000000 		.word	EFFECT_ADC
+ 143              		.cfi_endproc
+ 144              	.LFE63:
+ 145              		.size	main, .-main
+ 146              		.section	.text.Effect,"ax",%progbits
+ 147              		.align	2
+ 148              		.global	Effect
+ 149              		.thumb
+ 150              		.thumb_func
+ 151              		.type	Effect, %function
+ 152              	Effect:
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccz2eT1G.s 			page 6
+
+
+ 153              	.LFB64:
+ 132:main.c        **** }
+ 133:main.c        **** uint8 Effect(uint16 Filterout, uint16 depth)
+ 134:main.c        **** {
+ 154              		.loc 1 134 0
+ 155              		.cfi_startproc
+ 156              		@ args = 0, pretend = 0, frame = 16
+ 157              		@ frame_needed = 1, uses_anonymous_args = 0
+ 158              		@ link register save eliminated.
+ 159 0000 80B4     		push	{r7}
+ 160              		.cfi_def_cfa_offset 4
+ 161              		.cfi_offset 7, -4
+ 162 0002 85B0     		sub	sp, sp, #20
+ 163              		.cfi_def_cfa_offset 24
+ 164 0004 00AF     		add	r7, sp, #0
+ 165              		.cfi_def_cfa_register 7
+ 166 0006 0346     		mov	r3, r0
+ 167 0008 0A46     		mov	r2, r1
+ 168 000a FB80     		strh	r3, [r7, #6]	@ movhi
+ 169 000c 1346     		mov	r3, r2	@ movhi
+ 170 000e BB80     		strh	r3, [r7, #4]	@ movhi
+ 135:main.c        ****             uint16 mask;
+ 136:main.c        ****             switch (depth) 
+ 171              		.loc 1 136 0
+ 172 0010 BB88     		ldrh	r3, [r7, #4]
+ 173 0012 0F2B     		cmp	r3, #15
+ 174 0014 62D8     		bhi	.L7
+ 175 0016 01A2     		adr	r2, .L9
+ 176 0018 52F823F0 		ldr	pc, [r2, r3, lsl #2]
+ 177              		.p2align 2
+ 178              	.L9:
+ 179 001c 5D000000 		.word	.L8+1
+ 180 0020 65000000 		.word	.L10+1
+ 181 0024 6D000000 		.word	.L11+1
+ 182 0028 75000000 		.word	.L12+1
+ 183 002c 7D000000 		.word	.L13+1
+ 184 0030 85000000 		.word	.L14+1
+ 185 0034 8D000000 		.word	.L15+1
+ 186 0038 95000000 		.word	.L16+1
+ 187 003c 9D000000 		.word	.L17+1
+ 188 0040 A5000000 		.word	.L18+1
+ 189 0044 AD000000 		.word	.L19+1
+ 190 0048 B5000000 		.word	.L20+1
+ 191 004c BD000000 		.word	.L21+1
+ 192 0050 C5000000 		.word	.L22+1
+ 193 0054 CD000000 		.word	.L23+1
+ 194 0058 D5000000 		.word	.L24+1
+ 195              		.p2align 1
+ 196              	.L8:
+ 137:main.c        ****         {
+ 138:main.c        ****         case 0:
+ 139:main.c        ****             mask = 0xFFFu;//b1111 1111 1111;
+ 197              		.loc 1 139 0
+ 198 005c 40F6FF73 		movw	r3, #4095
+ 199 0060 FB81     		strh	r3, [r7, #14]	@ movhi
+ 140:main.c        ****             break;
+ 200              		.loc 1 140 0
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccz2eT1G.s 			page 7
+
+
+ 201 0062 3EE0     		b	.L25
+ 202              	.L10:
+ 141:main.c        ****         case 1:
+ 142:main.c        ****             mask = 0xFFEu;//b1111 1111 1110;
+ 203              		.loc 1 142 0
+ 204 0064 40F6FE73 		movw	r3, #4094
+ 205 0068 FB81     		strh	r3, [r7, #14]	@ movhi
+ 143:main.c        ****             break;  
+ 206              		.loc 1 143 0
+ 207 006a 3AE0     		b	.L25
+ 208              	.L11:
+ 144:main.c        ****         case 2:
+ 145:main.c        ****             mask = 0xFFCu;//b1111 1111 1100;
+ 209              		.loc 1 145 0
+ 210 006c 40F6FC73 		movw	r3, #4092
+ 211 0070 FB81     		strh	r3, [r7, #14]	@ movhi
+ 146:main.c        ****             break; 
+ 212              		.loc 1 146 0
+ 213 0072 36E0     		b	.L25
+ 214              	.L12:
+ 147:main.c        ****         case 3:
+ 148:main.c        ****             mask = 0xFF8u;//b1111 1111 1000;
+ 215              		.loc 1 148 0
+ 216 0074 40F6F873 		movw	r3, #4088
+ 217 0078 FB81     		strh	r3, [r7, #14]	@ movhi
+ 149:main.c        ****             break;
+ 218              		.loc 1 149 0
+ 219 007a 32E0     		b	.L25
+ 220              	.L13:
+ 150:main.c        ****         case 4:
+ 151:main.c        ****             mask = 0xFF0u;//b1111 1111 0000;
+ 221              		.loc 1 151 0
+ 222 007c 4FF47F63 		mov	r3, #4080
+ 223 0080 FB81     		strh	r3, [r7, #14]	@ movhi
+ 152:main.c        ****             break;  
+ 224              		.loc 1 152 0
+ 225 0082 2EE0     		b	.L25
+ 226              	.L14:
+ 153:main.c        ****         case 5:
+ 154:main.c        ****             mask = 0xFE0u;//b1111 1110 0000;
+ 227              		.loc 1 154 0
+ 228 0084 4FF47E63 		mov	r3, #4064
+ 229 0088 FB81     		strh	r3, [r7, #14]	@ movhi
+ 155:main.c        ****             break; 
+ 230              		.loc 1 155 0
+ 231 008a 2AE0     		b	.L25
+ 232              	.L15:
+ 156:main.c        ****          case 6:
+ 157:main.c        ****             mask = 0xFC0u;//b1111 1100 0000;
+ 233              		.loc 1 157 0
+ 234 008c 4FF47C63 		mov	r3, #4032
+ 235 0090 FB81     		strh	r3, [r7, #14]	@ movhi
+ 158:main.c        ****             break; 
+ 236              		.loc 1 158 0
+ 237 0092 26E0     		b	.L25
+ 238              	.L16:
+ 159:main.c        ****         case 7:
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccz2eT1G.s 			page 8
+
+
+ 160:main.c        ****             mask = 0xF80u;//b1111 1000 0000;
+ 239              		.loc 1 160 0
+ 240 0094 4FF47863 		mov	r3, #3968
+ 241 0098 FB81     		strh	r3, [r7, #14]	@ movhi
+ 161:main.c        ****             break;  
+ 242              		.loc 1 161 0
+ 243 009a 22E0     		b	.L25
+ 244              	.L17:
+ 162:main.c        ****         case 8:
+ 163:main.c        ****             mask = 0xF00u;//b1111 0000 0000;
+ 245              		.loc 1 163 0
+ 246 009c 4FF47063 		mov	r3, #3840
+ 247 00a0 FB81     		strh	r3, [r7, #14]	@ movhi
+ 164:main.c        ****             break;  
+ 248              		.loc 1 164 0
+ 249 00a2 1EE0     		b	.L25
+ 250              	.L18:
+ 165:main.c        ****         case 9:
+ 166:main.c        ****             mask = 0xE00u;//b1110 0000 0000;
+ 251              		.loc 1 166 0
+ 252 00a4 4FF46063 		mov	r3, #3584
+ 253 00a8 FB81     		strh	r3, [r7, #14]	@ movhi
+ 167:main.c        ****             break;  
+ 254              		.loc 1 167 0
+ 255 00aa 1AE0     		b	.L25
+ 256              	.L19:
+ 168:main.c        ****         case  10:
+ 169:main.c        ****             mask = 0xD00u;//b1101 0000 0000;
+ 257              		.loc 1 169 0
+ 258 00ac 4FF45063 		mov	r3, #3328
+ 259 00b0 FB81     		strh	r3, [r7, #14]	@ movhi
+ 170:main.c        ****             break;  
+ 260              		.loc 1 170 0
+ 261 00b2 16E0     		b	.L25
+ 262              	.L20:
+ 171:main.c        ****         case 11:
+ 172:main.c        ****             mask = 0xC00u;//b1100 0000 0000;
+ 263              		.loc 1 172 0
+ 264 00b4 4FF44063 		mov	r3, #3072
+ 265 00b8 FB81     		strh	r3, [r7, #14]	@ movhi
+ 173:main.c        ****             break;  
+ 266              		.loc 1 173 0
+ 267 00ba 12E0     		b	.L25
+ 268              	.L21:
+ 174:main.c        ****         case 12:
+ 175:main.c        ****             mask = 0xB00u;//b1011 0000 0000;
+ 269              		.loc 1 175 0
+ 270 00bc 4FF43063 		mov	r3, #2816
+ 271 00c0 FB81     		strh	r3, [r7, #14]	@ movhi
+ 176:main.c        ****             break;  
+ 272              		.loc 1 176 0
+ 273 00c2 0EE0     		b	.L25
+ 274              	.L22:
+ 177:main.c        ****         case 13:
+ 178:main.c        ****             mask = 0xA00u;//b1010 0000 0000;
+ 275              		.loc 1 178 0
+ 276 00c4 4FF42063 		mov	r3, #2560
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccz2eT1G.s 			page 9
+
+
+ 277 00c8 FB81     		strh	r3, [r7, #14]	@ movhi
+ 179:main.c        ****             break;  
+ 278              		.loc 1 179 0
+ 279 00ca 0AE0     		b	.L25
+ 280              	.L23:
+ 180:main.c        ****         case 14:
+ 181:main.c        ****             mask = 0x900u;//b1001 0000 0000;
+ 281              		.loc 1 181 0
+ 282 00cc 4FF41063 		mov	r3, #2304
+ 283 00d0 FB81     		strh	r3, [r7, #14]	@ movhi
+ 182:main.c        ****             break;  
+ 284              		.loc 1 182 0
+ 285 00d2 06E0     		b	.L25
+ 286              	.L24:
+ 183:main.c        ****         case 15:
+ 184:main.c        ****             mask = 0x800u;//b1000 0000 0000;
+ 287              		.loc 1 184 0
+ 288 00d4 4FF40063 		mov	r3, #2048
+ 289 00d8 FB81     		strh	r3, [r7, #14]	@ movhi
+ 185:main.c        ****             break;  
+ 290              		.loc 1 185 0
+ 291 00da 02E0     		b	.L25
+ 292              	.L7:
+ 186:main.c        ****         default:
+ 187:main.c        ****             mask= 0xFFFu;
+ 293              		.loc 1 187 0
+ 294 00dc 40F6FF73 		movw	r3, #4095
+ 295 00e0 FB81     		strh	r3, [r7, #14]	@ movhi
+ 296              	.L25:
+ 188:main.c        ****             
+ 189:main.c        ****         }
+ 190:main.c        ****          EFFECT_ADC =  Filterout & mask;
+ 297              		.loc 1 190 0
+ 298 00e2 FA88     		ldrh	r2, [r7, #6]	@ movhi
+ 299 00e4 FB89     		ldrh	r3, [r7, #14]	@ movhi
+ 300 00e6 1340     		ands	r3, r3, r2
+ 301 00e8 9AB2     		uxth	r2, r3
+ 302 00ea 054B     		ldr	r3, .L27
+ 303 00ec 1A80     		strh	r2, [r3]	@ movhi
+ 191:main.c        ****     return EFFECT_ADC;
+ 304              		.loc 1 191 0
+ 305 00ee 044B     		ldr	r3, .L27
+ 306 00f0 1B88     		ldrh	r3, [r3]
+ 307 00f2 DBB2     		uxtb	r3, r3
+ 192:main.c        **** }
+ 308              		.loc 1 192 0
+ 309 00f4 1846     		mov	r0, r3
+ 310 00f6 1437     		adds	r7, r7, #20
+ 311              		.cfi_def_cfa_offset 4
+ 312 00f8 BD46     		mov	sp, r7
+ 313              		.cfi_def_cfa_register 13
+ 314              		@ sp needed
+ 315 00fa 5DF8047B 		ldr	r7, [sp], #4
+ 316              		.cfi_restore 7
+ 317              		.cfi_def_cfa_offset 0
+ 318 00fe 7047     		bx	lr
+ 319              	.L28:
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccz2eT1G.s 			page 10
+
+
+ 320              		.align	2
+ 321              	.L27:
+ 322 0100 00000000 		.word	EFFECT_ADC
+ 323              		.cfi_endproc
+ 324              	.LFE64:
+ 325              		.size	Effect, .-Effect
+ 326              		.text
+ 327              	.Letext0:
+ 328              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.0\\psoc creator\\import\\gnu\\arm\\4.9.
+ 329              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.0\\psoc creator\\import\\gnu\\arm\\4.9.
+ 330              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 331              		.file 5 "Generated_Source\\PSoC5/core_cm3.h"
+ 332              		.section	.debug_info,"",%progbits
+ 333              	.Ldebug_info0:
+ 334 0000 94010000 		.4byte	0x194
+ 335 0004 0400     		.2byte	0x4
+ 336 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 337 000a 04       		.byte	0x4
+ 338 000b 01       		.uleb128 0x1
+ 339 000c 0F000000 		.4byte	.LASF27
+ 340 0010 01       		.byte	0x1
+ 341 0011 AD010000 		.4byte	.LASF28
+ 342 0015 65010000 		.4byte	.LASF29
+ 343 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 344 001d 00000000 		.4byte	0
+ 345 0021 00000000 		.4byte	.Ldebug_line0
+ 346 0025 02       		.uleb128 0x2
+ 347 0026 01       		.byte	0x1
+ 348 0027 06       		.byte	0x6
+ 349 0028 F2010000 		.4byte	.LASF0
+ 350 002c 02       		.uleb128 0x2
+ 351 002d 01       		.byte	0x1
+ 352 002e 08       		.byte	0x8
+ 353 002f BB000000 		.4byte	.LASF1
+ 354 0033 02       		.uleb128 0x2
+ 355 0034 02       		.byte	0x2
+ 356 0035 05       		.byte	0x5
+ 357 0036 02010000 		.4byte	.LASF2
+ 358 003a 02       		.uleb128 0x2
+ 359 003b 02       		.byte	0x2
+ 360 003c 07       		.byte	0x7
+ 361 003d DB000000 		.4byte	.LASF3
+ 362 0041 03       		.uleb128 0x3
+ 363 0042 00000000 		.4byte	.LASF9
+ 364 0046 02       		.byte	0x2
+ 365 0047 3F       		.byte	0x3f
+ 366 0048 4C000000 		.4byte	0x4c
+ 367 004c 02       		.uleb128 0x2
+ 368 004d 04       		.byte	0x4
+ 369 004e 05       		.byte	0x5
+ 370 004f D5010000 		.4byte	.LASF4
+ 371 0053 02       		.uleb128 0x2
+ 372 0054 04       		.byte	0x4
+ 373 0055 07       		.byte	0x7
+ 374 0056 C9000000 		.4byte	.LASF5
+ 375 005a 02       		.uleb128 0x2
+ 376 005b 08       		.byte	0x8
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccz2eT1G.s 			page 11
+
+
+ 377 005c 05       		.byte	0x5
+ 378 005d 9F010000 		.4byte	.LASF6
+ 379 0061 02       		.uleb128 0x2
+ 380 0062 08       		.byte	0x8
+ 381 0063 07       		.byte	0x7
+ 382 0064 2C010000 		.4byte	.LASF7
+ 383 0068 04       		.uleb128 0x4
+ 384 0069 04       		.byte	0x4
+ 385 006a 05       		.byte	0x5
+ 386 006b 696E7400 		.ascii	"int\000"
+ 387 006f 02       		.uleb128 0x2
+ 388 0070 04       		.byte	0x4
+ 389 0071 07       		.byte	0x7
+ 390 0072 18010000 		.4byte	.LASF8
+ 391 0076 03       		.uleb128 0x3
+ 392 0077 54010000 		.4byte	.LASF10
+ 393 007b 03       		.byte	0x3
+ 394 007c 2C       		.byte	0x2c
+ 395 007d 41000000 		.4byte	0x41
+ 396 0081 05       		.uleb128 0x5
+ 397 0082 CF010000 		.4byte	.LASF11
+ 398 0086 04       		.byte	0x4
+ 399 0087 9201     		.2byte	0x192
+ 400 0089 2C000000 		.4byte	0x2c
+ 401 008d 05       		.uleb128 0x5
+ 402 008e 0C010000 		.4byte	.LASF12
+ 403 0092 04       		.byte	0x4
+ 404 0093 9301     		.2byte	0x193
+ 405 0095 3A000000 		.4byte	0x3a
+ 406 0099 02       		.uleb128 0x2
+ 407 009a 04       		.byte	0x4
+ 408 009b 04       		.byte	0x4
+ 409 009c B5000000 		.4byte	.LASF13
+ 410 00a0 02       		.uleb128 0x2
+ 411 00a1 08       		.byte	0x8
+ 412 00a2 04       		.byte	0x4
+ 413 00a3 FB000000 		.4byte	.LASF14
+ 414 00a7 02       		.uleb128 0x2
+ 415 00a8 01       		.byte	0x1
+ 416 00a9 08       		.byte	0x8
+ 417 00aa DE010000 		.4byte	.LASF15
+ 418 00ae 06       		.uleb128 0x6
+ 419 00af 81000000 		.4byte	0x81
+ 420 00b3 02       		.uleb128 0x2
+ 421 00b4 04       		.byte	0x4
+ 422 00b5 07       		.byte	0x7
+ 423 00b6 5C010000 		.4byte	.LASF16
+ 424 00ba 07       		.uleb128 0x7
+ 425 00bb 13010000 		.4byte	.LASF30
+ 426 00bf 01       		.byte	0x1
+ 427 00c0 35       		.byte	0x35
+ 428 00c1 68000000 		.4byte	0x68
+ 429 00c5 00000000 		.4byte	.LFB63
+ 430 00c9 A0000000 		.4byte	.LFE63-.LFB63
+ 431 00cd 01       		.uleb128 0x1
+ 432 00ce 9C       		.byte	0x9c
+ 433 00cf FE000000 		.4byte	0xfe
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccz2eT1G.s 			page 12
+
+
+ 434 00d3 08       		.uleb128 0x8
+ 435 00d4 25010000 		.4byte	.LASF17
+ 436 00d8 01       		.byte	0x1
+ 437 00d9 43       		.byte	0x43
+ 438 00da 8D000000 		.4byte	0x8d
+ 439 00de 02       		.uleb128 0x2
+ 440 00df 91       		.byte	0x91
+ 441 00e0 76       		.sleb128 -10
+ 442 00e1 08       		.uleb128 0x8
+ 443 00e2 E3010000 		.4byte	.LASF18
+ 444 00e6 01       		.byte	0x1
+ 445 00e7 44       		.byte	0x44
+ 446 00e8 8D000000 		.4byte	0x8d
+ 447 00ec 02       		.uleb128 0x2
+ 448 00ed 91       		.byte	0x91
+ 449 00ee 74       		.sleb128 -12
+ 450 00ef 08       		.uleb128 0x8
+ 451 00f0 9D000000 		.4byte	.LASF19
+ 452 00f4 01       		.byte	0x1
+ 453 00f5 45       		.byte	0x45
+ 454 00f6 8D000000 		.4byte	0x8d
+ 455 00fa 02       		.uleb128 0x2
+ 456 00fb 91       		.byte	0x91
+ 457 00fc 72       		.sleb128 -14
+ 458 00fd 00       		.byte	0
+ 459 00fe 09       		.uleb128 0x9
+ 460 00ff 4D010000 		.4byte	.LASF31
+ 461 0103 01       		.byte	0x1
+ 462 0104 85       		.byte	0x85
+ 463 0105 81000000 		.4byte	0x81
+ 464 0109 00000000 		.4byte	.LFB64
+ 465 010d 04010000 		.4byte	.LFE64-.LFB64
+ 466 0111 01       		.uleb128 0x1
+ 467 0112 9C       		.byte	0x9c
+ 468 0113 42010000 		.4byte	0x142
+ 469 0117 0A       		.uleb128 0xa
+ 470 0118 AB000000 		.4byte	.LASF20
+ 471 011c 01       		.byte	0x1
+ 472 011d 85       		.byte	0x85
+ 473 011e 8D000000 		.4byte	0x8d
+ 474 0122 02       		.uleb128 0x2
+ 475 0123 91       		.byte	0x91
+ 476 0124 6E       		.sleb128 -18
+ 477 0125 0A       		.uleb128 0xa
+ 478 0126 EC010000 		.4byte	.LASF21
+ 479 012a 01       		.byte	0x1
+ 480 012b 85       		.byte	0x85
+ 481 012c 8D000000 		.4byte	0x8d
+ 482 0130 02       		.uleb128 0x2
+ 483 0131 91       		.byte	0x91
+ 484 0132 6C       		.sleb128 -20
+ 485 0133 08       		.uleb128 0x8
+ 486 0134 0A000000 		.4byte	.LASF22
+ 487 0138 01       		.byte	0x1
+ 488 0139 87       		.byte	0x87
+ 489 013a 8D000000 		.4byte	0x8d
+ 490 013e 02       		.uleb128 0x2
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccz2eT1G.s 			page 13
+
+
+ 491 013f 91       		.byte	0x91
+ 492 0140 76       		.sleb128 -10
+ 493 0141 00       		.byte	0
+ 494 0142 0B       		.uleb128 0xb
+ 495 0143 EE000000 		.4byte	.LASF23
+ 496 0147 05       		.byte	0x5
+ 497 0148 9606     		.2byte	0x696
+ 498 014a 4E010000 		.4byte	0x14e
+ 499 014e 06       		.uleb128 0x6
+ 500 014f 76000000 		.4byte	0x76
+ 501 0153 0C       		.uleb128 0xc
+ 502 0154 B4010000 		.4byte	.LASF24
+ 503 0158 01       		.byte	0x1
+ 504 0159 1B       		.byte	0x1b
+ 505 015a 8D000000 		.4byte	0x8d
+ 506 015e 05       		.uleb128 0x5
+ 507 015f 03       		.byte	0x3
+ 508 0160 00000000 		.4byte	EFFECT_ADC
+ 509 0164 0C       		.uleb128 0xc
+ 510 0165 BF010000 		.4byte	.LASF25
+ 511 0169 01       		.byte	0x1
+ 512 016a 1C       		.byte	0x1c
+ 513 016b 8D000000 		.4byte	0x8d
+ 514 016f 05       		.uleb128 0x5
+ 515 0170 03       		.byte	0x3
+ 516 0171 00000000 		.4byte	POT_READ_SCALED
+ 517 0175 0D       		.uleb128 0xd
+ 518 0176 76616C00 		.ascii	"val\000"
+ 519 017a 01       		.byte	0x1
+ 520 017b 1E       		.byte	0x1e
+ 521 017c 81000000 		.4byte	0x81
+ 522 0180 05       		.uleb128 0x5
+ 523 0181 03       		.byte	0x3
+ 524 0182 00000000 		.4byte	val
+ 525 0186 0C       		.uleb128 0xc
+ 526 0187 43010000 		.4byte	.LASF26
+ 527 018b 01       		.byte	0x1
+ 528 018c 20       		.byte	0x20
+ 529 018d AE000000 		.4byte	0xae
+ 530 0191 05       		.uleb128 0x5
+ 531 0192 03       		.byte	0x3
+ 532 0193 00000000 		.4byte	dataready
+ 533 0197 00       		.byte	0
+ 534              		.section	.debug_abbrev,"",%progbits
+ 535              	.Ldebug_abbrev0:
+ 536 0000 01       		.uleb128 0x1
+ 537 0001 11       		.uleb128 0x11
+ 538 0002 01       		.byte	0x1
+ 539 0003 25       		.uleb128 0x25
+ 540 0004 0E       		.uleb128 0xe
+ 541 0005 13       		.uleb128 0x13
+ 542 0006 0B       		.uleb128 0xb
+ 543 0007 03       		.uleb128 0x3
+ 544 0008 0E       		.uleb128 0xe
+ 545 0009 1B       		.uleb128 0x1b
+ 546 000a 0E       		.uleb128 0xe
+ 547 000b 55       		.uleb128 0x55
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccz2eT1G.s 			page 14
+
+
+ 548 000c 17       		.uleb128 0x17
+ 549 000d 11       		.uleb128 0x11
+ 550 000e 01       		.uleb128 0x1
+ 551 000f 10       		.uleb128 0x10
+ 552 0010 17       		.uleb128 0x17
+ 553 0011 00       		.byte	0
+ 554 0012 00       		.byte	0
+ 555 0013 02       		.uleb128 0x2
+ 556 0014 24       		.uleb128 0x24
+ 557 0015 00       		.byte	0
+ 558 0016 0B       		.uleb128 0xb
+ 559 0017 0B       		.uleb128 0xb
+ 560 0018 3E       		.uleb128 0x3e
+ 561 0019 0B       		.uleb128 0xb
+ 562 001a 03       		.uleb128 0x3
+ 563 001b 0E       		.uleb128 0xe
+ 564 001c 00       		.byte	0
+ 565 001d 00       		.byte	0
+ 566 001e 03       		.uleb128 0x3
+ 567 001f 16       		.uleb128 0x16
+ 568 0020 00       		.byte	0
+ 569 0021 03       		.uleb128 0x3
+ 570 0022 0E       		.uleb128 0xe
+ 571 0023 3A       		.uleb128 0x3a
+ 572 0024 0B       		.uleb128 0xb
+ 573 0025 3B       		.uleb128 0x3b
+ 574 0026 0B       		.uleb128 0xb
+ 575 0027 49       		.uleb128 0x49
+ 576 0028 13       		.uleb128 0x13
+ 577 0029 00       		.byte	0
+ 578 002a 00       		.byte	0
+ 579 002b 04       		.uleb128 0x4
+ 580 002c 24       		.uleb128 0x24
+ 581 002d 00       		.byte	0
+ 582 002e 0B       		.uleb128 0xb
+ 583 002f 0B       		.uleb128 0xb
+ 584 0030 3E       		.uleb128 0x3e
+ 585 0031 0B       		.uleb128 0xb
+ 586 0032 03       		.uleb128 0x3
+ 587 0033 08       		.uleb128 0x8
+ 588 0034 00       		.byte	0
+ 589 0035 00       		.byte	0
+ 590 0036 05       		.uleb128 0x5
+ 591 0037 16       		.uleb128 0x16
+ 592 0038 00       		.byte	0
+ 593 0039 03       		.uleb128 0x3
+ 594 003a 0E       		.uleb128 0xe
+ 595 003b 3A       		.uleb128 0x3a
+ 596 003c 0B       		.uleb128 0xb
+ 597 003d 3B       		.uleb128 0x3b
+ 598 003e 05       		.uleb128 0x5
+ 599 003f 49       		.uleb128 0x49
+ 600 0040 13       		.uleb128 0x13
+ 601 0041 00       		.byte	0
+ 602 0042 00       		.byte	0
+ 603 0043 06       		.uleb128 0x6
+ 604 0044 35       		.uleb128 0x35
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccz2eT1G.s 			page 15
+
+
+ 605 0045 00       		.byte	0
+ 606 0046 49       		.uleb128 0x49
+ 607 0047 13       		.uleb128 0x13
+ 608 0048 00       		.byte	0
+ 609 0049 00       		.byte	0
+ 610 004a 07       		.uleb128 0x7
+ 611 004b 2E       		.uleb128 0x2e
+ 612 004c 01       		.byte	0x1
+ 613 004d 3F       		.uleb128 0x3f
+ 614 004e 19       		.uleb128 0x19
+ 615 004f 03       		.uleb128 0x3
+ 616 0050 0E       		.uleb128 0xe
+ 617 0051 3A       		.uleb128 0x3a
+ 618 0052 0B       		.uleb128 0xb
+ 619 0053 3B       		.uleb128 0x3b
+ 620 0054 0B       		.uleb128 0xb
+ 621 0055 49       		.uleb128 0x49
+ 622 0056 13       		.uleb128 0x13
+ 623 0057 11       		.uleb128 0x11
+ 624 0058 01       		.uleb128 0x1
+ 625 0059 12       		.uleb128 0x12
+ 626 005a 06       		.uleb128 0x6
+ 627 005b 40       		.uleb128 0x40
+ 628 005c 18       		.uleb128 0x18
+ 629 005d 9642     		.uleb128 0x2116
+ 630 005f 19       		.uleb128 0x19
+ 631 0060 01       		.uleb128 0x1
+ 632 0061 13       		.uleb128 0x13
+ 633 0062 00       		.byte	0
+ 634 0063 00       		.byte	0
+ 635 0064 08       		.uleb128 0x8
+ 636 0065 34       		.uleb128 0x34
+ 637 0066 00       		.byte	0
+ 638 0067 03       		.uleb128 0x3
+ 639 0068 0E       		.uleb128 0xe
+ 640 0069 3A       		.uleb128 0x3a
+ 641 006a 0B       		.uleb128 0xb
+ 642 006b 3B       		.uleb128 0x3b
+ 643 006c 0B       		.uleb128 0xb
+ 644 006d 49       		.uleb128 0x49
+ 645 006e 13       		.uleb128 0x13
+ 646 006f 02       		.uleb128 0x2
+ 647 0070 18       		.uleb128 0x18
+ 648 0071 00       		.byte	0
+ 649 0072 00       		.byte	0
+ 650 0073 09       		.uleb128 0x9
+ 651 0074 2E       		.uleb128 0x2e
+ 652 0075 01       		.byte	0x1
+ 653 0076 3F       		.uleb128 0x3f
+ 654 0077 19       		.uleb128 0x19
+ 655 0078 03       		.uleb128 0x3
+ 656 0079 0E       		.uleb128 0xe
+ 657 007a 3A       		.uleb128 0x3a
+ 658 007b 0B       		.uleb128 0xb
+ 659 007c 3B       		.uleb128 0x3b
+ 660 007d 0B       		.uleb128 0xb
+ 661 007e 27       		.uleb128 0x27
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccz2eT1G.s 			page 16
+
+
+ 662 007f 19       		.uleb128 0x19
+ 663 0080 49       		.uleb128 0x49
+ 664 0081 13       		.uleb128 0x13
+ 665 0082 11       		.uleb128 0x11
+ 666 0083 01       		.uleb128 0x1
+ 667 0084 12       		.uleb128 0x12
+ 668 0085 06       		.uleb128 0x6
+ 669 0086 40       		.uleb128 0x40
+ 670 0087 18       		.uleb128 0x18
+ 671 0088 9742     		.uleb128 0x2117
+ 672 008a 19       		.uleb128 0x19
+ 673 008b 01       		.uleb128 0x1
+ 674 008c 13       		.uleb128 0x13
+ 675 008d 00       		.byte	0
+ 676 008e 00       		.byte	0
+ 677 008f 0A       		.uleb128 0xa
+ 678 0090 05       		.uleb128 0x5
+ 679 0091 00       		.byte	0
+ 680 0092 03       		.uleb128 0x3
+ 681 0093 0E       		.uleb128 0xe
+ 682 0094 3A       		.uleb128 0x3a
+ 683 0095 0B       		.uleb128 0xb
+ 684 0096 3B       		.uleb128 0x3b
+ 685 0097 0B       		.uleb128 0xb
+ 686 0098 49       		.uleb128 0x49
+ 687 0099 13       		.uleb128 0x13
+ 688 009a 02       		.uleb128 0x2
+ 689 009b 18       		.uleb128 0x18
+ 690 009c 00       		.byte	0
+ 691 009d 00       		.byte	0
+ 692 009e 0B       		.uleb128 0xb
+ 693 009f 34       		.uleb128 0x34
+ 694 00a0 00       		.byte	0
+ 695 00a1 03       		.uleb128 0x3
+ 696 00a2 0E       		.uleb128 0xe
+ 697 00a3 3A       		.uleb128 0x3a
+ 698 00a4 0B       		.uleb128 0xb
+ 699 00a5 3B       		.uleb128 0x3b
+ 700 00a6 05       		.uleb128 0x5
+ 701 00a7 49       		.uleb128 0x49
+ 702 00a8 13       		.uleb128 0x13
+ 703 00a9 3F       		.uleb128 0x3f
+ 704 00aa 19       		.uleb128 0x19
+ 705 00ab 3C       		.uleb128 0x3c
+ 706 00ac 19       		.uleb128 0x19
+ 707 00ad 00       		.byte	0
+ 708 00ae 00       		.byte	0
+ 709 00af 0C       		.uleb128 0xc
+ 710 00b0 34       		.uleb128 0x34
+ 711 00b1 00       		.byte	0
+ 712 00b2 03       		.uleb128 0x3
+ 713 00b3 0E       		.uleb128 0xe
+ 714 00b4 3A       		.uleb128 0x3a
+ 715 00b5 0B       		.uleb128 0xb
+ 716 00b6 3B       		.uleb128 0x3b
+ 717 00b7 0B       		.uleb128 0xb
+ 718 00b8 49       		.uleb128 0x49
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccz2eT1G.s 			page 17
+
+
+ 719 00b9 13       		.uleb128 0x13
+ 720 00ba 3F       		.uleb128 0x3f
+ 721 00bb 19       		.uleb128 0x19
+ 722 00bc 02       		.uleb128 0x2
+ 723 00bd 18       		.uleb128 0x18
+ 724 00be 00       		.byte	0
+ 725 00bf 00       		.byte	0
+ 726 00c0 0D       		.uleb128 0xd
+ 727 00c1 34       		.uleb128 0x34
+ 728 00c2 00       		.byte	0
+ 729 00c3 03       		.uleb128 0x3
+ 730 00c4 08       		.uleb128 0x8
+ 731 00c5 3A       		.uleb128 0x3a
+ 732 00c6 0B       		.uleb128 0xb
+ 733 00c7 3B       		.uleb128 0x3b
+ 734 00c8 0B       		.uleb128 0xb
+ 735 00c9 49       		.uleb128 0x49
+ 736 00ca 13       		.uleb128 0x13
+ 737 00cb 3F       		.uleb128 0x3f
+ 738 00cc 19       		.uleb128 0x19
+ 739 00cd 02       		.uleb128 0x2
+ 740 00ce 18       		.uleb128 0x18
+ 741 00cf 00       		.byte	0
+ 742 00d0 00       		.byte	0
+ 743 00d1 00       		.byte	0
+ 744              		.section	.debug_aranges,"",%progbits
+ 745 0000 24000000 		.4byte	0x24
+ 746 0004 0200     		.2byte	0x2
+ 747 0006 00000000 		.4byte	.Ldebug_info0
+ 748 000a 04       		.byte	0x4
+ 749 000b 00       		.byte	0
+ 750 000c 0000     		.2byte	0
+ 751 000e 0000     		.2byte	0
+ 752 0010 00000000 		.4byte	.LFB63
+ 753 0014 A0000000 		.4byte	.LFE63-.LFB63
+ 754 0018 00000000 		.4byte	.LFB64
+ 755 001c 04010000 		.4byte	.LFE64-.LFB64
+ 756 0020 00000000 		.4byte	0
+ 757 0024 00000000 		.4byte	0
+ 758              		.section	.debug_ranges,"",%progbits
+ 759              	.Ldebug_ranges0:
+ 760 0000 00000000 		.4byte	.LFB63
+ 761 0004 A0000000 		.4byte	.LFE63
+ 762 0008 00000000 		.4byte	.LFB64
+ 763 000c 04010000 		.4byte	.LFE64
+ 764 0010 00000000 		.4byte	0
+ 765 0014 00000000 		.4byte	0
+ 766              		.section	.debug_line,"",%progbits
+ 767              	.Ldebug_line0:
+ 768 0000 AE010000 		.section	.debug_str,"MS",%progbits,1
+ 768      02004701 
+ 768      00000201 
+ 768      FB0E0D00 
+ 768      01010101 
+ 769              	.LASF9:
+ 770 0000 5F5F696E 		.ascii	"__int32_t\000"
+ 770      7433325F 
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccz2eT1G.s 			page 18
+
+
+ 770      7400
+ 771              	.LASF22:
+ 772 000a 6D61736B 		.ascii	"mask\000"
+ 772      00
+ 773              	.LASF27:
+ 774 000f 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 774      4320342E 
+ 774      392E3320 
+ 774      32303135 
+ 774      30333033 
+ 775 0042 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 775      20726576 
+ 775      6973696F 
+ 775      6E203232 
+ 775      31323230 
+ 776 0075 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 776      66756E63 
+ 776      74696F6E 
+ 776      2D736563 
+ 776      74696F6E 
+ 777              	.LASF19:
+ 778 009d 4144435F 		.ascii	"ADC_SAR2_READ\000"
+ 778      53415232 
+ 778      5F524541 
+ 778      4400
+ 779              	.LASF20:
+ 780 00ab 46696C74 		.ascii	"Filterout\000"
+ 780      65726F75 
+ 780      7400
+ 781              	.LASF13:
+ 782 00b5 666C6F61 		.ascii	"float\000"
+ 782      7400
+ 783              	.LASF1:
+ 784 00bb 756E7369 		.ascii	"unsigned char\000"
+ 784      676E6564 
+ 784      20636861 
+ 784      7200
+ 785              	.LASF5:
+ 786 00c9 6C6F6E67 		.ascii	"long unsigned int\000"
+ 786      20756E73 
+ 786      69676E65 
+ 786      6420696E 
+ 786      7400
+ 787              	.LASF3:
+ 788 00db 73686F72 		.ascii	"short unsigned int\000"
+ 788      7420756E 
+ 788      7369676E 
+ 788      65642069 
+ 788      6E7400
+ 789              	.LASF23:
+ 790 00ee 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 790      52784275 
+ 790      66666572 
+ 790      00
+ 791              	.LASF14:
+ 792 00fb 646F7562 		.ascii	"double\000"
+ 792      6C6500
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccz2eT1G.s 			page 19
+
+
+ 793              	.LASF2:
+ 794 0102 73686F72 		.ascii	"short int\000"
+ 794      7420696E 
+ 794      7400
+ 795              	.LASF12:
+ 796 010c 75696E74 		.ascii	"uint16\000"
+ 796      313600
+ 797              	.LASF30:
+ 798 0113 6D61696E 		.ascii	"main\000"
+ 798      00
+ 799              	.LASF8:
+ 800 0118 756E7369 		.ascii	"unsigned int\000"
+ 800      676E6564 
+ 800      20696E74 
+ 800      00
+ 801              	.LASF17:
+ 802 0125 434B5F44 		.ascii	"CK_DIV\000"
+ 802      495600
+ 803              	.LASF7:
+ 804 012c 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 804      206C6F6E 
+ 804      6720756E 
+ 804      7369676E 
+ 804      65642069 
+ 805              	.LASF26:
+ 806 0143 64617461 		.ascii	"dataready\000"
+ 806      72656164 
+ 806      7900
+ 807              	.LASF31:
+ 808 014d 45666665 		.ascii	"Effect\000"
+ 808      637400
+ 809              	.LASF10:
+ 810 0154 696E7433 		.ascii	"int32_t\000"
+ 810      325F7400 
+ 811              	.LASF16:
+ 812 015c 73697A65 		.ascii	"sizetype\000"
+ 812      74797065 
+ 812      00
+ 813              	.LASF29:
+ 814 0165 433A5C55 		.ascii	"C:\\Users\\ben\\Documents\\PSoC Creator\\DACTEST\\A"
+ 814      73657273 
+ 814      5C62656E 
+ 814      5C446F63 
+ 814      756D656E 
+ 815 0192 44435F44 		.ascii	"DC_DAC.cydsn\000"
+ 815      41432E63 
+ 815      7964736E 
+ 815      00
+ 816              	.LASF6:
+ 817 019f 6C6F6E67 		.ascii	"long long int\000"
+ 817      206C6F6E 
+ 817      6720696E 
+ 817      7400
+ 818              	.LASF28:
+ 819 01ad 6D61696E 		.ascii	"main.c\000"
+ 819      2E6300
+ 820              	.LASF24:
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccz2eT1G.s 			page 20
+
+
+ 821 01b4 45464645 		.ascii	"EFFECT_ADC\000"
+ 821      43545F41 
+ 821      444300
+ 822              	.LASF25:
+ 823 01bf 504F545F 		.ascii	"POT_READ_SCALED\000"
+ 823      52454144 
+ 823      5F534341 
+ 823      4C454400 
+ 824              	.LASF11:
+ 825 01cf 75696E74 		.ascii	"uint8\000"
+ 825      3800
+ 826              	.LASF4:
+ 827 01d5 6C6F6E67 		.ascii	"long int\000"
+ 827      20696E74 
+ 827      00
+ 828              	.LASF15:
+ 829 01de 63686172 		.ascii	"char\000"
+ 829      00
+ 830              	.LASF18:
+ 831 01e3 41554449 		.ascii	"AUDIO_IN\000"
+ 831      4F5F494E 
+ 831      00
+ 832              	.LASF21:
+ 833 01ec 64657074 		.ascii	"depth\000"
+ 833      6800
+ 834              	.LASF0:
+ 835 01f2 7369676E 		.ascii	"signed char\000"
+ 835      65642063 
+ 835      68617200 
+ 836              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

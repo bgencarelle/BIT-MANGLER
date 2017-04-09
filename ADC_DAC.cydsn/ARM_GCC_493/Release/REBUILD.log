@@ -1,0 +1,16 @@
+--------------- Rebuild Started: 03/31/2017 18:18:54 Project: main.c, Configuration: ARM GCC 4.9-2015-q1-update Release ---------------
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/main.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c main.c -o .\ARM_GCC_493\Release\main.o
+main.c: In function 'main':
+main.c:83:12: warning: variable 'oldpotread' set but not used [-Wunused-but-set-variable]
+     uint16 oldpotread;
+            ^
+main.c:70:12: warning: unused variable 'ADC_SAR2_READ' [-Wunused-variable]
+     uint16 ADC_SAR2_READ =0;
+            ^
+main.c:69:12: warning: unused variable 'AUDIO_IN' [-Wunused-variable]
+     uint16 AUDIO_IN = 0;
+            ^
+main.c:68:12: warning: unused variable 'CK_DIV' [-Wunused-variable]
+     uint16 CK_DIV = 0;
+            ^
+--------------- Rebuild Succeeded: 03/31/2017 18:18:55 ---------------

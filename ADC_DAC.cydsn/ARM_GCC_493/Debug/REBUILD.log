@@ -1,0 +1,16 @@
+--------------- Rebuild Started: 03/17/2017 16:00:37 Project: ADC_DAC, Configuration: ARM GCC 4.9-2015-q1-update Debug ---------------
+Deleting file ".\ADC_DAC.rpt"
+cydsfit.exe -.appdatapath "C:\Users\Ben\AppData\Local\Cypress Semiconductor\PSoC Creator\4.0" -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p "C:\Users\Ben\Documents\PSoC Creator\voltageDisplay_SAR_ADC\ADC_DMA_VDAC04\ADC_DAC.cydsn\ADC_DAC.cyprj" -d CY8C5868AXI-LP035 -s "C:\Users\Ben\Documents\PSoC Creator\voltageDisplay_SAR_ADC\ADC_DMA_VDAC04\ADC_DAC.cydsn\Generated_Source\PSoC5" -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
+Elaborating Design...
+ADD: sdb.M0012: error: Terminals "cy_constant_1.val,Opamp_1.Vplus" connected to signal "Net_681" have mismatching types.
+ * C:\Users\Ben\Documents\PSoC Creator\voltageDisplay_SAR_ADC\ADC_DMA_VDAC04\ADC_DAC.cydsn\TopDesign\TopDesign.cysch (Signal: Net_681)
+ * C:\Users\Ben\Documents\PSoC Creator\voltageDisplay_SAR_ADC\ADC_DMA_VDAC04\ADC_DAC.cydsn\TopDesign\TopDesign.cysch (Shape_173.4)
+ * C:\Users\Ben\Documents\PSoC Creator\voltageDisplay_SAR_ADC\ADC_DMA_VDAC04\ADC_DAC.cydsn\TopDesign\TopDesign.cysch (Vplus)
+ * C:\Users\Ben\Documents\PSoC Creator\voltageDisplay_SAR_ADC\ADC_DMA_VDAC04\ADC_DAC.cydsn\TopDesign\TopDesign.cysch (Shape_607.0)
+ * C:\Users\Ben\Documents\PSoC Creator\voltageDisplay_SAR_ADC\ADC_DMA_VDAC04\ADC_DAC.cydsn\TopDesign\TopDesign.cysch (val)
+ADD: sdb.M0018: error: Multiple drivers on signal "Net_681", bit(s) "0".
+ * C:\Users\Ben\Documents\PSoC Creator\voltageDisplay_SAR_ADC\ADC_DMA_VDAC04\ADC_DAC.cydsn\TopDesign\TopDesign.cysch (Signal: Net_681)
+ * C:\Users\Ben\Documents\PSoC Creator\voltageDisplay_SAR_ADC\ADC_DMA_VDAC04\ADC_DAC.cydsn\TopDesign\TopDesign.cysch (Shape_173.4)
+ * C:\Users\Ben\Documents\PSoC Creator\voltageDisplay_SAR_ADC\ADC_DMA_VDAC04\ADC_DAC.cydsn\TopDesign\TopDesign.cysch (Shape_607.0)
+Error: fit.M0050: The fitter aborted due to errors, please address all errors and rebuild. (App=cydsfit)
+--------------- Rebuild Failed: 03/17/2017 16:00:47 ---------------

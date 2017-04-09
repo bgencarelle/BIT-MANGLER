@@ -1,0 +1,1 @@
+'C:\Users\ben\Documents\PSoC Creator\DACTEST\ADC_DAC.cydsn\main.c' -o .o -T SOURCE_C__ARM_GCC_GENERIC -I 'C:\Users\ben\Documents\PSoC Creator\DACTEST\ADC_DAC.cydsn' -I 'C:\Users\ben\Documents\PSoC Creator\DACTEST\ADC_DAC.cydsn\Generated_Source\PSoC5' -f 'C:\Users\ben\Documents\PSoC Creator\DACTEST\ADC_DAC.cydsn\ARM_GCC_493\Debug\.deps\SOURCE_C__ARM_GCC_GENERIC.d'

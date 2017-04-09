@@ -1,0 +1,616 @@
+ARM GAS  C:\Users\Ben\AppData\Local\Temp\ccAj4m4c.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"Filter_1_Coefficients.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.global	Filter_1_ChannelABiquadCoefficients
+  19              		.section	.rodata
+  20              		.align	2
+  21              		.type	Filter_1_ChannelABiquadCoefficients, %object
+  22              		.size	Filter_1_ChannelABiquadCoefficients, 160
+  23              	Filter_1_ChannelABiquadCoefficients:
+  24 0000 B8       		.byte	-72
+  25 0001 67       		.byte	103
+  26 0002 06       		.byte	6
+  27 0003 00       		.byte	0
+  28 0004 70       		.byte	112
+  29 0005 CF       		.byte	-49
+  30 0006 0C       		.byte	12
+  31 0007 00       		.byte	0
+  32 0008 B8       		.byte	-72
+  33 0009 67       		.byte	103
+  34 000a 06       		.byte	6
+  35 000b 00       		.byte	0
+  36 000c 9B       		.byte	-101
+  37 000d 20       		.byte	32
+  38 000e E7       		.byte	-25
+  39 000f 00       		.byte	0
+  40 0010 02       		.byte	2
+  41 0011 57       		.byte	87
+  42 0012 EF       		.byte	-17
+  43 0013 00       		.byte	0
+  44 0014 B8       		.byte	-72
+  45 0015 35       		.byte	53
+  46 0016 18       		.byte	24
+  47 0017 00       		.byte	0
+  48 0018 6F       		.byte	111
+  49 0019 6B       		.byte	107
+  50 001a 30       		.byte	48
+  51 001b 00       		.byte	0
+  52 001c B8       		.byte	-72
+  53 001d 35       		.byte	53
+  54 001e 18       		.byte	24
+  55 001f 00       		.byte	0
+  56 0020 5D       		.byte	93
+  57 0021 26       		.byte	38
+ARM GAS  C:\Users\Ben\AppData\Local\Temp\ccAj4m4c.s 			page 2
+
+
+  58 0022 EC       		.byte	-20
+  59 0023 00       		.byte	0
+  60 0024 A8       		.byte	-88
+  61 0025 7C       		.byte	124
+  62 0026 F5       		.byte	-11
+  63 0027 00       		.byte	0
+  64 0028 54       		.byte	84
+  65 0029 3C       		.byte	60
+  66 002a 1C       		.byte	28
+  67 002b 00       		.byte	0
+  68 002c A7       		.byte	-89
+  69 002d 78       		.byte	120
+  70 002e 38       		.byte	56
+  71 002f 00       		.byte	0
+  72 0030 54       		.byte	84
+  73 0031 3C       		.byte	60
+  74 0032 1C       		.byte	28
+  75 0033 00       		.byte	0
+  76 0034 33       		.byte	51
+  77 0035 7A       		.byte	122
+  78 0036 DF       		.byte	-33
+  79 0037 00       		.byte	0
+  80 0038 84       		.byte	-124
+  81 0039 5A       		.byte	90
+  82 003a E6       		.byte	-26
+  83 003b 00       		.byte	0
+  84 003c B5       		.byte	-75
+  85 003d 78       		.byte	120
+  86 003e 17       		.byte	23
+  87 003f 00       		.byte	0
+  88 0040 6A       		.byte	106
+  89 0041 F1       		.byte	-15
+  90 0042 2E       		.byte	46
+  91 0043 00       		.byte	0
+  92 0044 B5       		.byte	-75
+  93 0045 78       		.byte	120
+  94 0046 17       		.byte	23
+  95 0047 00       		.byte	0
+  96 0048 B9       		.byte	-71
+  97 0049 87       		.byte	-121
+  98 004a EF       		.byte	-17
+  99 004b 00       		.byte	0
+ 100 004c B9       		.byte	-71
+ 101 004d C1       		.byte	-63
+ 102 004e F9       		.byte	-7
+ 103 004f 00       		.byte	0
+ 104 0050 27       		.byte	39
+ 105 0051 72       		.byte	114
+ 106 0052 14       		.byte	20
+ 107 0053 00       		.byte	0
+ 108 0054 4E       		.byte	78
+ 109 0055 E4       		.byte	-28
+ 110 0056 28       		.byte	40
+ 111 0057 00       		.byte	0
+ 112 0058 27       		.byte	39
+ 113 0059 72       		.byte	114
+ 114 005a 14       		.byte	20
+ARM GAS  C:\Users\Ben\AppData\Local\Temp\ccAj4m4c.s 			page 3
+
+
+ 115 005b 00       		.byte	0
+ 116 005c 90       		.byte	-112
+ 117 005d C4       		.byte	-60
+ 118 005e F1       		.byte	-15
+ 119 005f 00       		.byte	0
+ 120 0060 AB       		.byte	-85
+ 121 0061 A6       		.byte	-90
+ 122 0062 FC       		.byte	-4
+ 123 0063 00       		.byte	0
+ 124 0064 34       		.byte	52
+ 125 0065 9A       		.byte	-102
+ 126 0066 13       		.byte	19
+ 127 0067 00       		.byte	0
+ 128 0068 69       		.byte	105
+ 129 0069 34       		.byte	52
+ 130 006a 27       		.byte	39
+ 131 006b 00       		.byte	0
+ 132 006c 34       		.byte	52
+ 133 006d 9A       		.byte	-102
+ 134 006e 13       		.byte	19
+ 135 006f 00       		.byte	0
+ 136 0070 49       		.byte	73
+ 137 0071 23       		.byte	35
+ 138 0072 F3       		.byte	-13
+ 139 0073 00       		.byte	0
+ 140 0074 ED       		.byte	-19
+ 141 0075 73       		.byte	115
+ 142 0076 FE       		.byte	-2
+ 143 0077 00       		.byte	0
+ 144 0078 15       		.byte	21
+ 145 0079 39       		.byte	57
+ 146 007a 13       		.byte	19
+ 147 007b 00       		.byte	0
+ 148 007c 2B       		.byte	43
+ 149 007d 72       		.byte	114
+ 150 007e 26       		.byte	38
+ 151 007f 00       		.byte	0
+ 152 0080 15       		.byte	21
+ 153 0081 39       		.byte	57
+ 154 0082 13       		.byte	19
+ 155 0083 00       		.byte	0
+ 156 0084 25       		.byte	37
+ 157 0085 CA       		.byte	-54
+ 158 0086 F3       		.byte	-13
+ 159 0087 00       		.byte	0
+ 160 0088 8E       		.byte	-114
+ 161 0089 51       		.byte	81
+ 162 008a FF       		.byte	-1
+ 163 008b 00       		.byte	0
+ 164 008c 8B       		.byte	-117
+ 165 008d 7D       		.byte	125
+ 166 008e 01       		.byte	1
+ 167 008f 00       		.byte	0
+ 168 0090 17       		.byte	23
+ 169 0091 FB       		.byte	-5
+ 170 0092 02       		.byte	2
+ 171 0093 00       		.byte	0
+ARM GAS  C:\Users\Ben\AppData\Local\Temp\ccAj4m4c.s 			page 4
+
+
+ 172 0094 8B       		.byte	-117
+ 173 0095 7D       		.byte	125
+ 174 0096 01       		.byte	1
+ 175 0097 00       		.byte	0
+ 176 0098 34       		.byte	52
+ 177 0099 C0       		.byte	-64
+ 178 009a D2       		.byte	-46
+ 179 009b 00       		.byte	0
+ 180 009c 55       		.byte	85
+ 181 009d 35       		.byte	53
+ 182 009e D8       		.byte	-40
+ 183 009f 00       		.byte	0
+ 184              		.global	Filter_1_ChannelBFirCoefficients
+ 185              		.align	2
+ 186              		.type	Filter_1_ChannelBFirCoefficients, %object
+ 187              		.size	Filter_1_ChannelBFirCoefficients, 64
+ 188              	Filter_1_ChannelBFirCoefficients:
+ 189 00a0 2B       		.byte	43
+ 190 00a1 54       		.byte	84
+ 191 00a2 00       		.byte	0
+ 192 00a3 00       		.byte	0
+ 193 00a4 36       		.byte	54
+ 194 00a5 D9       		.byte	-39
+ 195 00a6 FF       		.byte	-1
+ 196 00a7 00       		.byte	0
+ 197 00a8 B0       		.byte	-80
+ 198 00a9 23       		.byte	35
+ 199 00aa FE       		.byte	-2
+ 200 00ab 00       		.byte	0
+ 201 00ac 29       		.byte	41
+ 202 00ad 62       		.byte	98
+ 203 00ae FC       		.byte	-4
+ 204 00af 00       		.byte	0
+ 205 00b0 09       		.byte	9
+ 206 00b1 DB       		.byte	-37
+ 207 00b2 FE       		.byte	-2
+ 208 00b3 00       		.byte	0
+ 209 00b4 E2       		.byte	-30
+ 210 00b5 28       		.byte	40
+ 211 00b6 09       		.byte	9
+ 212 00b7 00       		.byte	0
+ 213 00b8 A5       		.byte	-91
+ 214 00b9 BD       		.byte	-67
+ 215 00ba 18       		.byte	24
+ 216 00bb 00       		.byte	0
+ 217 00bc 94       		.byte	-108
+ 218 00bd AA       		.byte	-86
+ 219 00be 24       		.byte	36
+ 220 00bf 00       		.byte	0
+ 221 00c0 94       		.byte	-108
+ 222 00c1 AA       		.byte	-86
+ 223 00c2 24       		.byte	36
+ 224 00c3 00       		.byte	0
+ 225 00c4 A5       		.byte	-91
+ 226 00c5 BD       		.byte	-67
+ 227 00c6 18       		.byte	24
+ 228 00c7 00       		.byte	0
+ARM GAS  C:\Users\Ben\AppData\Local\Temp\ccAj4m4c.s 			page 5
+
+
+ 229 00c8 E2       		.byte	-30
+ 230 00c9 28       		.byte	40
+ 231 00ca 09       		.byte	9
+ 232 00cb 00       		.byte	0
+ 233 00cc 09       		.byte	9
+ 234 00cd DB       		.byte	-37
+ 235 00ce FE       		.byte	-2
+ 236 00cf 00       		.byte	0
+ 237 00d0 29       		.byte	41
+ 238 00d1 62       		.byte	98
+ 239 00d2 FC       		.byte	-4
+ 240 00d3 00       		.byte	0
+ 241 00d4 B0       		.byte	-80
+ 242 00d5 23       		.byte	35
+ 243 00d6 FE       		.byte	-2
+ 244 00d7 00       		.byte	0
+ 245 00d8 36       		.byte	54
+ 246 00d9 D9       		.byte	-39
+ 247 00da FF       		.byte	-1
+ 248 00db 00       		.byte	0
+ 249 00dc 2B       		.byte	43
+ 250 00dd 54       		.byte	84
+ 251 00de 00       		.byte	0
+ 252 00df 00       		.byte	0
+ 253              		.text
+ 254              	.Letext0:
+ 255              		.file 1 "Generated_Source\\PSoC5\\Filter_1_Coefficients.c"
+ 256              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
+ 257              		.section	.debug_info,"",%progbits
+ 258              	.Ldebug_info0:
+ 259 0000 D4000000 		.4byte	0xd4
+ 260 0004 0400     		.2byte	0x4
+ 261 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 262 000a 04       		.byte	0x4
+ 263 000b 01       		.uleb128 0x1
+ 264 000c B9000000 		.4byte	.LASF15
+ 265 0010 01       		.byte	0x1
+ 266 0011 6E000000 		.4byte	.LASF16
+ 267 0015 7D010000 		.4byte	.LASF17
+ 268 0019 00000000 		.4byte	.Ldebug_line0
+ 269 001d 02       		.uleb128 0x2
+ 270 001e 04       		.byte	0x4
+ 271 001f 05       		.byte	0x5
+ 272 0020 696E7400 		.ascii	"int\000"
+ 273 0024 03       		.uleb128 0x3
+ 274 0025 04       		.byte	0x4
+ 275 0026 07       		.byte	0x7
+ 276 0027 0E000000 		.4byte	.LASF0
+ 277 002b 03       		.uleb128 0x3
+ 278 002c 01       		.byte	0x1
+ 279 002d 06       		.byte	0x6
+ 280 002e 6B010000 		.4byte	.LASF1
+ 281 0032 03       		.uleb128 0x3
+ 282 0033 01       		.byte	0x1
+ 283 0034 08       		.byte	0x8
+ 284 0035 9D000000 		.4byte	.LASF2
+ 285 0039 03       		.uleb128 0x3
+ARM GAS  C:\Users\Ben\AppData\Local\Temp\ccAj4m4c.s 			page 6
+
+
+ 286 003a 02       		.byte	0x2
+ 287 003b 05       		.byte	0x5
+ 288 003c 47010000 		.4byte	.LASF3
+ 289 0040 03       		.uleb128 0x3
+ 290 0041 02       		.byte	0x2
+ 291 0042 07       		.byte	0x7
+ 292 0043 58010000 		.4byte	.LASF4
+ 293 0047 03       		.uleb128 0x3
+ 294 0048 04       		.byte	0x4
+ 295 0049 05       		.byte	0x5
+ 296 004a B0000000 		.4byte	.LASF5
+ 297 004e 03       		.uleb128 0x3
+ 298 004f 04       		.byte	0x4
+ 299 0050 07       		.byte	0x7
+ 300 0051 45000000 		.4byte	.LASF6
+ 301 0055 03       		.uleb128 0x3
+ 302 0056 08       		.byte	0x8
+ 303 0057 05       		.byte	0x5
+ 304 0058 00000000 		.4byte	.LASF7
+ 305 005c 03       		.uleb128 0x3
+ 306 005d 08       		.byte	0x8
+ 307 005e 07       		.byte	0x7
+ 308 005f 57000000 		.4byte	.LASF8
+ 309 0063 03       		.uleb128 0x3
+ 310 0064 04       		.byte	0x4
+ 311 0065 07       		.byte	0x7
+ 312 0066 D5010000 		.4byte	.LASF9
+ 313 006a 03       		.uleb128 0x3
+ 314 006b 01       		.byte	0x1
+ 315 006c 08       		.byte	0x8
+ 316 006d AB000000 		.4byte	.LASF10
+ 317 0071 04       		.uleb128 0x4
+ 318 0072 3F000000 		.4byte	.LASF18
+ 319 0076 02       		.byte	0x2
+ 320 0077 9201     		.2byte	0x192
+ 321 0079 32000000 		.4byte	0x32
+ 322 007d 03       		.uleb128 0x3
+ 323 007e 04       		.byte	0x4
+ 324 007f 04       		.byte	0x4
+ 325 0080 77010000 		.4byte	.LASF11
+ 326 0084 03       		.uleb128 0x3
+ 327 0085 08       		.byte	0x8
+ 328 0086 04       		.byte	0x4
+ 329 0087 51010000 		.4byte	.LASF12
+ 330 008b 05       		.uleb128 0x5
+ 331 008c 71000000 		.4byte	0x71
+ 332 0090 9B000000 		.4byte	0x9b
+ 333 0094 06       		.uleb128 0x6
+ 334 0095 63000000 		.4byte	0x63
+ 335 0099 3F       		.byte	0x3f
+ 336 009a 00       		.byte	0
+ 337 009b 05       		.uleb128 0x5
+ 338 009c 71000000 		.4byte	0x71
+ 339 00a0 AB000000 		.4byte	0xab
+ 340 00a4 06       		.uleb128 0x6
+ 341 00a5 63000000 		.4byte	0x63
+ 342 00a9 9F       		.byte	0x9f
+ARM GAS  C:\Users\Ben\AppData\Local\Temp\ccAj4m4c.s 			page 7
+
+
+ 343 00aa 00       		.byte	0
+ 344 00ab 07       		.uleb128 0x7
+ 345 00ac 1B000000 		.4byte	.LASF13
+ 346 00b0 01       		.byte	0x1
+ 347 00b1 11       		.byte	0x11
+ 348 00b2 BC000000 		.4byte	0xbc
+ 349 00b6 05       		.uleb128 0x5
+ 350 00b7 03       		.byte	0x3
+ 351 00b8 00000000 		.4byte	Filter_1_ChannelABiquadCoefficients
+ 352 00bc 08       		.uleb128 0x8
+ 353 00bd 9B000000 		.4byte	0x9b
+ 354 00c1 07       		.uleb128 0x7
+ 355 00c2 DE010000 		.4byte	.LASF14
+ 356 00c6 01       		.byte	0x1
+ 357 00c7 79       		.byte	0x79
+ 358 00c8 D2000000 		.4byte	0xd2
+ 359 00cc 05       		.uleb128 0x5
+ 360 00cd 03       		.byte	0x3
+ 361 00ce 00000000 		.4byte	Filter_1_ChannelBFirCoefficients
+ 362 00d2 08       		.uleb128 0x8
+ 363 00d3 8B000000 		.4byte	0x8b
+ 364 00d7 00       		.byte	0
+ 365              		.section	.debug_abbrev,"",%progbits
+ 366              	.Ldebug_abbrev0:
+ 367 0000 01       		.uleb128 0x1
+ 368 0001 11       		.uleb128 0x11
+ 369 0002 01       		.byte	0x1
+ 370 0003 25       		.uleb128 0x25
+ 371 0004 0E       		.uleb128 0xe
+ 372 0005 13       		.uleb128 0x13
+ 373 0006 0B       		.uleb128 0xb
+ 374 0007 03       		.uleb128 0x3
+ 375 0008 0E       		.uleb128 0xe
+ 376 0009 1B       		.uleb128 0x1b
+ 377 000a 0E       		.uleb128 0xe
+ 378 000b 10       		.uleb128 0x10
+ 379 000c 17       		.uleb128 0x17
+ 380 000d 00       		.byte	0
+ 381 000e 00       		.byte	0
+ 382 000f 02       		.uleb128 0x2
+ 383 0010 24       		.uleb128 0x24
+ 384 0011 00       		.byte	0
+ 385 0012 0B       		.uleb128 0xb
+ 386 0013 0B       		.uleb128 0xb
+ 387 0014 3E       		.uleb128 0x3e
+ 388 0015 0B       		.uleb128 0xb
+ 389 0016 03       		.uleb128 0x3
+ 390 0017 08       		.uleb128 0x8
+ 391 0018 00       		.byte	0
+ 392 0019 00       		.byte	0
+ 393 001a 03       		.uleb128 0x3
+ 394 001b 24       		.uleb128 0x24
+ 395 001c 00       		.byte	0
+ 396 001d 0B       		.uleb128 0xb
+ 397 001e 0B       		.uleb128 0xb
+ 398 001f 3E       		.uleb128 0x3e
+ 399 0020 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Ben\AppData\Local\Temp\ccAj4m4c.s 			page 8
+
+
+ 400 0021 03       		.uleb128 0x3
+ 401 0022 0E       		.uleb128 0xe
+ 402 0023 00       		.byte	0
+ 403 0024 00       		.byte	0
+ 404 0025 04       		.uleb128 0x4
+ 405 0026 16       		.uleb128 0x16
+ 406 0027 00       		.byte	0
+ 407 0028 03       		.uleb128 0x3
+ 408 0029 0E       		.uleb128 0xe
+ 409 002a 3A       		.uleb128 0x3a
+ 410 002b 0B       		.uleb128 0xb
+ 411 002c 3B       		.uleb128 0x3b
+ 412 002d 05       		.uleb128 0x5
+ 413 002e 49       		.uleb128 0x49
+ 414 002f 13       		.uleb128 0x13
+ 415 0030 00       		.byte	0
+ 416 0031 00       		.byte	0
+ 417 0032 05       		.uleb128 0x5
+ 418 0033 01       		.uleb128 0x1
+ 419 0034 01       		.byte	0x1
+ 420 0035 49       		.uleb128 0x49
+ 421 0036 13       		.uleb128 0x13
+ 422 0037 01       		.uleb128 0x1
+ 423 0038 13       		.uleb128 0x13
+ 424 0039 00       		.byte	0
+ 425 003a 00       		.byte	0
+ 426 003b 06       		.uleb128 0x6
+ 427 003c 21       		.uleb128 0x21
+ 428 003d 00       		.byte	0
+ 429 003e 49       		.uleb128 0x49
+ 430 003f 13       		.uleb128 0x13
+ 431 0040 2F       		.uleb128 0x2f
+ 432 0041 0B       		.uleb128 0xb
+ 433 0042 00       		.byte	0
+ 434 0043 00       		.byte	0
+ 435 0044 07       		.uleb128 0x7
+ 436 0045 34       		.uleb128 0x34
+ 437 0046 00       		.byte	0
+ 438 0047 03       		.uleb128 0x3
+ 439 0048 0E       		.uleb128 0xe
+ 440 0049 3A       		.uleb128 0x3a
+ 441 004a 0B       		.uleb128 0xb
+ 442 004b 3B       		.uleb128 0x3b
+ 443 004c 0B       		.uleb128 0xb
+ 444 004d 49       		.uleb128 0x49
+ 445 004e 13       		.uleb128 0x13
+ 446 004f 3F       		.uleb128 0x3f
+ 447 0050 19       		.uleb128 0x19
+ 448 0051 02       		.uleb128 0x2
+ 449 0052 18       		.uleb128 0x18
+ 450 0053 00       		.byte	0
+ 451 0054 00       		.byte	0
+ 452 0055 08       		.uleb128 0x8
+ 453 0056 26       		.uleb128 0x26
+ 454 0057 00       		.byte	0
+ 455 0058 49       		.uleb128 0x49
+ 456 0059 13       		.uleb128 0x13
+ARM GAS  C:\Users\Ben\AppData\Local\Temp\ccAj4m4c.s 			page 9
+
+
+ 457 005a 00       		.byte	0
+ 458 005b 00       		.byte	0
+ 459 005c 00       		.byte	0
+ 460              		.section	.debug_aranges,"",%progbits
+ 461 0000 14000000 		.4byte	0x14
+ 462 0004 0200     		.2byte	0x2
+ 463 0006 00000000 		.4byte	.Ldebug_info0
+ 464 000a 04       		.byte	0x4
+ 465 000b 00       		.byte	0
+ 466 000c 0000     		.2byte	0
+ 467 000e 0000     		.2byte	0
+ 468 0010 00000000 		.4byte	0
+ 469 0014 00000000 		.4byte	0
+ 470              		.section	.debug_line,"",%progbits
+ 471              	.Ldebug_line0:
+ 472 0000 58000000 		.section	.debug_str,"MS",%progbits,1
+ 472      02005200 
+ 472      00000201 
+ 472      FB0E0D00 
+ 472      01010101 
+ 473              	.LASF7:
+ 474 0000 6C6F6E67 		.ascii	"long long int\000"
+ 474      206C6F6E 
+ 474      6720696E 
+ 474      7400
+ 475              	.LASF0:
+ 476 000e 756E7369 		.ascii	"unsigned int\000"
+ 476      676E6564 
+ 476      20696E74 
+ 476      00
+ 477              	.LASF13:
+ 478 001b 46696C74 		.ascii	"Filter_1_ChannelABiquadCoefficients\000"
+ 478      65725F31 
+ 478      5F436861 
+ 478      6E6E656C 
+ 478      41426971 
+ 479              	.LASF18:
+ 480 003f 75696E74 		.ascii	"uint8\000"
+ 480      3800
+ 481              	.LASF6:
+ 482 0045 6C6F6E67 		.ascii	"long unsigned int\000"
+ 482      20756E73 
+ 482      69676E65 
+ 482      6420696E 
+ 482      7400
+ 483              	.LASF8:
+ 484 0057 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 484      206C6F6E 
+ 484      6720756E 
+ 484      7369676E 
+ 484      65642069 
+ 485              	.LASF16:
+ 486 006e 47656E65 		.ascii	"Generated_Source\\PSoC5\\Filter_1_Coefficients.c\000"
+ 486      72617465 
+ 486      645F536F 
+ 486      75726365 
+ 486      5C50536F 
+ARM GAS  C:\Users\Ben\AppData\Local\Temp\ccAj4m4c.s 			page 10
+
+
+ 487              	.LASF2:
+ 488 009d 756E7369 		.ascii	"unsigned char\000"
+ 488      676E6564 
+ 488      20636861 
+ 488      7200
+ 489              	.LASF10:
+ 490 00ab 63686172 		.ascii	"char\000"
+ 490      00
+ 491              	.LASF5:
+ 492 00b0 6C6F6E67 		.ascii	"long int\000"
+ 492      20696E74 
+ 492      00
+ 493              	.LASF15:
+ 494 00b9 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 494      4320342E 
+ 494      392E3320 
+ 494      32303135 
+ 494      30333033 
+ 495 00ec 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 495      20726576 
+ 495      6973696F 
+ 495      6E203232 
+ 495      31323230 
+ 496 011f 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 496      66756E63 
+ 496      74696F6E 
+ 496      2D736563 
+ 496      74696F6E 
+ 497              	.LASF3:
+ 498 0147 73686F72 		.ascii	"short int\000"
+ 498      7420696E 
+ 498      7400
+ 499              	.LASF12:
+ 500 0151 646F7562 		.ascii	"double\000"
+ 500      6C6500
+ 501              	.LASF4:
+ 502 0158 73686F72 		.ascii	"short unsigned int\000"
+ 502      7420756E 
+ 502      7369676E 
+ 502      65642069 
+ 502      6E7400
+ 503              	.LASF1:
+ 504 016b 7369676E 		.ascii	"signed char\000"
+ 504      65642063 
+ 504      68617200 
+ 505              	.LASF11:
+ 506 0177 666C6F61 		.ascii	"float\000"
+ 506      7400
+ 507              	.LASF17:
+ 508 017d 433A5C55 		.ascii	"C:\\Users\\Ben\\Documents\\PSoC Creator\\voltageDis"
+ 508      73657273 
+ 508      5C42656E 
+ 508      5C446F63 
+ 508      756D656E 
+ 509 01ab 706C6179 		.ascii	"play_SAR_ADC\\ADC_DMA_VDAC04\\ADC_DAC.cydsn\000"
+ 509      5F534152 
+ 509      5F414443 
+ARM GAS  C:\Users\Ben\AppData\Local\Temp\ccAj4m4c.s 			page 11
+
+
+ 509      5C414443 
+ 509      5F444D41 
+ 510              	.LASF9:
+ 511 01d5 73697A65 		.ascii	"sizetype\000"
+ 511      74797065 
+ 511      00
+ 512              	.LASF14:
+ 513 01de 46696C74 		.ascii	"Filter_1_ChannelBFirCoefficients\000"
+ 513      65725F31 
+ 513      5F436861 
+ 513      6E6E656C 
+ 513      42466972 
+ 514              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

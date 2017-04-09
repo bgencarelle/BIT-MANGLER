@@ -1,0 +1,2289 @@
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccU9GXbc.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"ScanComp_1.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.bss
+  19              	storeStatusReg:
+  20 0000 00       		.space	1
+  21              		.global	ScanComp_1_initVar
+  22              		.type	ScanComp_1_initVar, %object
+  23              		.size	ScanComp_1_initVar, 1
+  24              	ScanComp_1_initVar:
+  25 0001 00       		.space	1
+  26              		.section	.rodata
+  27              		.align	2
+  28              		.type	interruptStatusMaskRegs, %object
+  29              		.size	interruptStatusMaskRegs, 4
+  30              	interruptStatusMaskRegs:
+  31 0000 88650040 		.word	1073767816
+  32              		.section	.text.ScanComp_1_Start,"ax",%progbits
+  33              		.align	2
+  34              		.global	ScanComp_1_Start
+  35              		.thumb
+  36              		.thumb_func
+  37              		.type	ScanComp_1_Start, %function
+  38              	ScanComp_1_Start:
+  39              	.LFB0:
+  40              		.file 1 "Generated_Source\\PSoC5\\ScanComp_1.c"
+   1:Generated_Source\PSoC5/ScanComp_1.c **** /*******************************************************************************
+   2:Generated_Source\PSoC5/ScanComp_1.c **** * File Name: ScanComp_1.c
+   3:Generated_Source\PSoC5/ScanComp_1.c **** * Version 1.10
+   4:Generated_Source\PSoC5/ScanComp_1.c **** *
+   5:Generated_Source\PSoC5/ScanComp_1.c **** * Description:
+   6:Generated_Source\PSoC5/ScanComp_1.c **** *  This file provides the source code to the API for the Scanning Comparator
+   7:Generated_Source\PSoC5/ScanComp_1.c **** *  component
+   8:Generated_Source\PSoC5/ScanComp_1.c **** *
+   9:Generated_Source\PSoC5/ScanComp_1.c **** * Note:
+  10:Generated_Source\PSoC5/ScanComp_1.c **** *  None
+  11:Generated_Source\PSoC5/ScanComp_1.c **** *
+  12:Generated_Source\PSoC5/ScanComp_1.c **** ********************************************************************************
+  13:Generated_Source\PSoC5/ScanComp_1.c **** * Copyright 2013, Cypress Semiconductor Corporation.  All rights reserved.
+  14:Generated_Source\PSoC5/ScanComp_1.c **** * You may use this file only in accordance with the license, terms, conditions,
+  15:Generated_Source\PSoC5/ScanComp_1.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  16:Generated_Source\PSoC5/ScanComp_1.c **** * the software package with which this file was provided.
+  17:Generated_Source\PSoC5/ScanComp_1.c **** *******************************************************************************/
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccU9GXbc.s 			page 2
+
+
+  18:Generated_Source\PSoC5/ScanComp_1.c **** 
+  19:Generated_Source\PSoC5/ScanComp_1.c **** #include "ScanComp_1.h"
+  20:Generated_Source\PSoC5/ScanComp_1.c **** 
+  21:Generated_Source\PSoC5/ScanComp_1.c **** #if (ScanComp_1_INTERNAL_REF_IS_USED)
+  22:Generated_Source\PSoC5/ScanComp_1.c **** 
+  23:Generated_Source\PSoC5/ScanComp_1.c ****     static uint8  ScanComp_1_compDACRange;
+  24:Generated_Source\PSoC5/ScanComp_1.c ****     
+  25:Generated_Source\PSoC5/ScanComp_1.c ****     #if (ScanComp_1_VDAC_PER_CHANNEL_MODE_USED)
+  26:Generated_Source\PSoC5/ScanComp_1.c ****         
+  27:Generated_Source\PSoC5/ScanComp_1.c ****         /* Variable declarations for DMA */
+  28:Generated_Source\PSoC5/ScanComp_1.c ****         static uint8 ScanComp_1_DMA_VDACUpdate_Chan;
+  29:Generated_Source\PSoC5/ScanComp_1.c ****         static uint8 ScanComp_1_DMA_VDACUpdate_TD = CY_DMA_INVALID_TD;
+  30:Generated_Source\PSoC5/ScanComp_1.c ****         
+  31:Generated_Source\PSoC5/ScanComp_1.c ****         static void ScanComp_1_InitDma(void)  ;
+  32:Generated_Source\PSoC5/ScanComp_1.c **** 
+  33:Generated_Source\PSoC5/ScanComp_1.c ****         /* Array from customizer */
+  34:Generated_Source\PSoC5/ScanComp_1.c ****         static uint8 ScanComp_1_DacVoltages[ScanComp_1_NUM_OF_CHANNELS] = {
+  35:Generated_Source\PSoC5/ScanComp_1.c ****     0x7Du, 0x7Du, 0x7Du, 0x7Du, 0x7Du, 0x7Du, 0x7Du, 0x7Du, 
+  36:Generated_Source\PSoC5/ScanComp_1.c **** };
+  37:Generated_Source\PSoC5/ScanComp_1.c **** 
+  38:Generated_Source\PSoC5/ScanComp_1.c ****     #else
+  39:Generated_Source\PSoC5/ScanComp_1.c ****         static uint8  ScanComp_1_compDACVoltage;
+  40:Generated_Source\PSoC5/ScanComp_1.c ****     #endif /* ScanComp_1_VDAC_PER_CHANNEL_MODE_USED */
+  41:Generated_Source\PSoC5/ScanComp_1.c **** #endif /* ScanComp_1_INTERNAL_REF_IS_USED */
+  42:Generated_Source\PSoC5/ScanComp_1.c **** 
+  43:Generated_Source\PSoC5/ScanComp_1.c **** #if (ScanComp_1_NUM_OF_CHANNELS >= 8u)
+  44:Generated_Source\PSoC5/ScanComp_1.c ****     static uint8 storeStatusReg;
+  45:Generated_Source\PSoC5/ScanComp_1.c **** #endif /* ScanComp_1_NUM_OF_CHANNELS >= 8u */
+  46:Generated_Source\PSoC5/ScanComp_1.c **** 
+  47:Generated_Source\PSoC5/ScanComp_1.c **** uint8  ScanComp_1_initVar = 0u;
+  48:Generated_Source\PSoC5/ScanComp_1.c **** 
+  49:Generated_Source\PSoC5/ScanComp_1.c **** static reg8 * const CYCODE interruptStatusMaskRegs[ScanComp_1_NUM_OF_INT_REGISTERS] =
+  50:Generated_Source\PSoC5/ScanComp_1.c **** {
+  51:Generated_Source\PSoC5/ScanComp_1.c ****     ScanComp_1_STATUS_INT0_MASK_PTR,
+  52:Generated_Source\PSoC5/ScanComp_1.c **** 
+  53:Generated_Source\PSoC5/ScanComp_1.c ****     #if(ScanComp_1_NUM_OF_CHANNELS > 8u)
+  54:Generated_Source\PSoC5/ScanComp_1.c ****         ScanComp_1_STATUS_INT1_MASK_PTR,
+  55:Generated_Source\PSoC5/ScanComp_1.c ****     #endif /* ScanComp_1_NUM_OF_CHANNELS > 8u */
+  56:Generated_Source\PSoC5/ScanComp_1.c **** 
+  57:Generated_Source\PSoC5/ScanComp_1.c ****     #if(ScanComp_1_NUM_OF_CHANNELS > 16u)
+  58:Generated_Source\PSoC5/ScanComp_1.c ****         ScanComp_1_STATUS_INT2_MASK_PTR,
+  59:Generated_Source\PSoC5/ScanComp_1.c ****     #endif /* ScanComp_1_NUM_OF_CHANNELS > 16u */
+  60:Generated_Source\PSoC5/ScanComp_1.c **** 
+  61:Generated_Source\PSoC5/ScanComp_1.c ****     #if(ScanComp_1_NUM_OF_CHANNELS > 24u)
+  62:Generated_Source\PSoC5/ScanComp_1.c ****         ScanComp_1_STATUS_INT3_MASK_PTR,
+  63:Generated_Source\PSoC5/ScanComp_1.c ****     #endif /* ScanComp_1_NUM_OF_CHANNELS > 24u */
+  64:Generated_Source\PSoC5/ScanComp_1.c **** 
+  65:Generated_Source\PSoC5/ScanComp_1.c ****     #if(ScanComp_1_NUM_OF_CHANNELS > 32u)
+  66:Generated_Source\PSoC5/ScanComp_1.c ****         ScanComp_1_STATUS_INT4_MASK_PTR,
+  67:Generated_Source\PSoC5/ScanComp_1.c ****     #endif /* ScanComp_1_NUM_OF_CHANNELS > 32u */
+  68:Generated_Source\PSoC5/ScanComp_1.c **** 
+  69:Generated_Source\PSoC5/ScanComp_1.c ****     #if(ScanComp_1_NUM_OF_CHANNELS > 40u)
+  70:Generated_Source\PSoC5/ScanComp_1.c ****         ScanComp_1_STATUS_INT5_MASK_PTR,
+  71:Generated_Source\PSoC5/ScanComp_1.c ****     #endif /* ScanComp_1_NUM_OF_CHANNELS > 40u */
+  72:Generated_Source\PSoC5/ScanComp_1.c **** 
+  73:Generated_Source\PSoC5/ScanComp_1.c ****     #if(ScanComp_1_NUM_OF_CHANNELS > 48u)
+  74:Generated_Source\PSoC5/ScanComp_1.c ****         ScanComp_1_STATUS_INT6_MASK_PTR,
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccU9GXbc.s 			page 3
+
+
+  75:Generated_Source\PSoC5/ScanComp_1.c ****     #endif /* ScanComp_1_NUM_OF_CHANNELS > 48u */
+  76:Generated_Source\PSoC5/ScanComp_1.c **** 
+  77:Generated_Source\PSoC5/ScanComp_1.c ****     #if(ScanComp_1_NUM_OF_CHANNELS > 56u)
+  78:Generated_Source\PSoC5/ScanComp_1.c ****         ScanComp_1_STATUS_INT7_MASK_PTR,
+  79:Generated_Source\PSoC5/ScanComp_1.c ****     #endif /* ScanComp_1_NUM_OF_CHANNELS > 56u */
+  80:Generated_Source\PSoC5/ScanComp_1.c **** };
+  81:Generated_Source\PSoC5/ScanComp_1.c **** 
+  82:Generated_Source\PSoC5/ScanComp_1.c **** 
+  83:Generated_Source\PSoC5/ScanComp_1.c **** /*******************************************************************************
+  84:Generated_Source\PSoC5/ScanComp_1.c **** * Function Name: ScanComp_1_Start
+  85:Generated_Source\PSoC5/ScanComp_1.c **** ********************************************************************************
+  86:Generated_Source\PSoC5/ScanComp_1.c **** *
+  87:Generated_Source\PSoC5/ScanComp_1.c **** * Summary:
+  88:Generated_Source\PSoC5/ScanComp_1.c **** *  Performs all of the required initialization for the ScanComp component
+  89:Generated_Source\PSoC5/ScanComp_1.c **** *  and enables power to the block.
+  90:Generated_Source\PSoC5/ScanComp_1.c **** *
+  91:Generated_Source\PSoC5/ScanComp_1.c **** * Parameters:
+  92:Generated_Source\PSoC5/ScanComp_1.c **** *  None
+  93:Generated_Source\PSoC5/ScanComp_1.c **** *
+  94:Generated_Source\PSoC5/ScanComp_1.c **** * Return:
+  95:Generated_Source\PSoC5/ScanComp_1.c **** *  None
+  96:Generated_Source\PSoC5/ScanComp_1.c **** *
+  97:Generated_Source\PSoC5/ScanComp_1.c **** *******************************************************************************/
+  98:Generated_Source\PSoC5/ScanComp_1.c **** void ScanComp_1_Start(void) 
+  99:Generated_Source\PSoC5/ScanComp_1.c **** {
+  41              		.loc 1 99 0
+  42              		.cfi_startproc
+  43              		@ args = 0, pretend = 0, frame = 0
+  44              		@ frame_needed = 1, uses_anonymous_args = 0
+  45 0000 80B5     		push	{r7, lr}
+  46              		.cfi_def_cfa_offset 8
+  47              		.cfi_offset 7, -8
+  48              		.cfi_offset 14, -4
+  49 0002 00AF     		add	r7, sp, #0
+  50              		.cfi_def_cfa_register 7
+ 100:Generated_Source\PSoC5/ScanComp_1.c ****     if(0u == ScanComp_1_initVar)
+  51              		.loc 1 100 0
+  52 0004 054B     		ldr	r3, .L3
+  53 0006 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+  54 0008 002B     		cmp	r3, #0
+  55 000a 04D1     		bne	.L2
+ 101:Generated_Source\PSoC5/ScanComp_1.c ****     {
+ 102:Generated_Source\PSoC5/ScanComp_1.c ****         ScanComp_1_Init();
+  56              		.loc 1 102 0
+  57 000c FFF7FEFF 		bl	ScanComp_1_Init
+ 103:Generated_Source\PSoC5/ScanComp_1.c ****         ScanComp_1_initVar = 1u;
+  58              		.loc 1 103 0
+  59 0010 024B     		ldr	r3, .L3
+  60 0012 0122     		movs	r2, #1
+  61 0014 1A70     		strb	r2, [r3]
+  62              	.L2:
+ 104:Generated_Source\PSoC5/ScanComp_1.c ****     }
+ 105:Generated_Source\PSoC5/ScanComp_1.c ****     ScanComp_1_Enable();
+  63              		.loc 1 105 0
+  64 0016 FFF7FEFF 		bl	ScanComp_1_Enable
+ 106:Generated_Source\PSoC5/ScanComp_1.c **** }
+  65              		.loc 1 106 0
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccU9GXbc.s 			page 4
+
+
+  66 001a 80BD     		pop	{r7, pc}
+  67              	.L4:
+  68              		.align	2
+  69              	.L3:
+  70 001c 00000000 		.word	ScanComp_1_initVar
+  71              		.cfi_endproc
+  72              	.LFE0:
+  73              		.size	ScanComp_1_Start, .-ScanComp_1_Start
+  74              		.section	.text.ScanComp_1_Init,"ax",%progbits
+  75              		.align	2
+  76              		.global	ScanComp_1_Init
+  77              		.thumb
+  78              		.thumb_func
+  79              		.type	ScanComp_1_Init, %function
+  80              	ScanComp_1_Init:
+  81              	.LFB1:
+ 107:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 108:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 109:Generated_Source\PSoC5/ScanComp_1.c **** /*******************************************************************************
+ 110:Generated_Source\PSoC5/ScanComp_1.c **** * Function Name: ScanComp_1_Init
+ 111:Generated_Source\PSoC5/ScanComp_1.c **** ********************************************************************************
+ 112:Generated_Source\PSoC5/ScanComp_1.c **** *
+ 113:Generated_Source\PSoC5/ScanComp_1.c **** * Summary:
+ 114:Generated_Source\PSoC5/ScanComp_1.c **** *  Initializes or restores the ScanComp component according to
+ 115:Generated_Source\PSoC5/ScanComp_1.c **** *  the customizer settings.
+ 116:Generated_Source\PSoC5/ScanComp_1.c **** *
+ 117:Generated_Source\PSoC5/ScanComp_1.c **** * Parameters:
+ 118:Generated_Source\PSoC5/ScanComp_1.c **** *  None
+ 119:Generated_Source\PSoC5/ScanComp_1.c **** *
+ 120:Generated_Source\PSoC5/ScanComp_1.c **** * Return:
+ 121:Generated_Source\PSoC5/ScanComp_1.c **** *  None
+ 122:Generated_Source\PSoC5/ScanComp_1.c **** *
+ 123:Generated_Source\PSoC5/ScanComp_1.c **** *******************************************************************************/
+ 124:Generated_Source\PSoC5/ScanComp_1.c **** void ScanComp_1_Init(void) 
+ 125:Generated_Source\PSoC5/ScanComp_1.c **** {
+  82              		.loc 1 125 0
+  83              		.cfi_startproc
+  84              		@ args = 0, pretend = 0, frame = 0
+  85              		@ frame_needed = 1, uses_anonymous_args = 0
+  86 0000 80B5     		push	{r7, lr}
+  87              		.cfi_def_cfa_offset 8
+  88              		.cfi_offset 7, -8
+  89              		.cfi_offset 14, -4
+  90 0002 00AF     		add	r7, sp, #0
+  91              		.cfi_def_cfa_register 7
+ 126:Generated_Source\PSoC5/ScanComp_1.c ****     #if (ScanComp_1_NUM_OF_CHANNELS >= 8u)
+ 127:Generated_Source\PSoC5/ScanComp_1.c ****         storeStatusReg = 0u;
+  92              		.loc 1 127 0
+  93 0004 024B     		ldr	r3, .L6
+  94 0006 0022     		movs	r2, #0
+  95 0008 1A70     		strb	r2, [r3]
+ 128:Generated_Source\PSoC5/ScanComp_1.c ****     #endif /* ScanComp_1_NUM_OF_CHANNELS >= 8u */
+ 129:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 130:Generated_Source\PSoC5/ScanComp_1.c ****     ScanComp_1_Comp_Init();    
+  96              		.loc 1 130 0
+  97 000a FFF7FEFF 		bl	ScanComp_1_Comp_Init
+ 131:Generated_Source\PSoC5/ScanComp_1.c ****     
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccU9GXbc.s 			page 5
+
+
+ 132:Generated_Source\PSoC5/ScanComp_1.c ****     #if (ScanComp_1_INTERNAL_REF_IS_USED)
+ 133:Generated_Source\PSoC5/ScanComp_1.c ****         ScanComp_1_VDAC_Init();
+ 134:Generated_Source\PSoC5/ScanComp_1.c ****         ScanComp_1_compDACRange = ScanComp_1_DEFAULT_RANGE;
+ 135:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 136:Generated_Source\PSoC5/ScanComp_1.c ****         #if (ScanComp_1_VDAC_PER_CHANNEL_MODE_USED)
+ 137:Generated_Source\PSoC5/ScanComp_1.c ****             ScanComp_1_VDAC_SetValue(0x0u);
+ 138:Generated_Source\PSoC5/ScanComp_1.c ****             
+ 139:Generated_Source\PSoC5/ScanComp_1.c ****             if(CY_DMA_INVALID_TD == ScanComp_1_DMA_VDACUpdate_TD)
+ 140:Generated_Source\PSoC5/ScanComp_1.c ****             {
+ 141:Generated_Source\PSoC5/ScanComp_1.c ****                 ScanComp_1_InitDma();
+ 142:Generated_Source\PSoC5/ScanComp_1.c ****             }            
+ 143:Generated_Source\PSoC5/ScanComp_1.c ****         #else
+ 144:Generated_Source\PSoC5/ScanComp_1.c ****             ScanComp_1_SetDACVoltage(ScanComp_1_DEFAULT_VOLTAGE);
+ 145:Generated_Source\PSoC5/ScanComp_1.c ****         #endif /* ScanComp_1_VDAC_PER_CHANNEL_MODE_USED */
+ 146:Generated_Source\PSoC5/ScanComp_1.c ****     #endif /* ScanComp_1_INTERNAL_REF_IS_USED */
+ 147:Generated_Source\PSoC5/ScanComp_1.c **** }
+  98              		.loc 1 147 0
+  99 000e 80BD     		pop	{r7, pc}
+ 100              	.L7:
+ 101              		.align	2
+ 102              	.L6:
+ 103 0010 00000000 		.word	storeStatusReg
+ 104              		.cfi_endproc
+ 105              	.LFE1:
+ 106              		.size	ScanComp_1_Init, .-ScanComp_1_Init
+ 107              		.section	.text.ScanComp_1_Stop,"ax",%progbits
+ 108              		.align	2
+ 109              		.global	ScanComp_1_Stop
+ 110              		.thumb
+ 111              		.thumb_func
+ 112              		.type	ScanComp_1_Stop, %function
+ 113              	ScanComp_1_Stop:
+ 114              	.LFB2:
+ 148:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 149:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 150:Generated_Source\PSoC5/ScanComp_1.c **** /*******************************************************************************
+ 151:Generated_Source\PSoC5/ScanComp_1.c **** * Function Name: ScanComp_1_Stop
+ 152:Generated_Source\PSoC5/ScanComp_1.c **** ********************************************************************************
+ 153:Generated_Source\PSoC5/ScanComp_1.c **** *
+ 154:Generated_Source\PSoC5/ScanComp_1.c **** * Summary:
+ 155:Generated_Source\PSoC5/ScanComp_1.c **** *  Turns off the Scanning Comparator by turning off the comparator itself and 
+ 156:Generated_Source\PSoC5/ScanComp_1.c **** *  halting the muxing of inputs, and turning off the DAC if it is used.
+ 157:Generated_Source\PSoC5/ScanComp_1.c **** *
+ 158:Generated_Source\PSoC5/ScanComp_1.c **** * Parameters:
+ 159:Generated_Source\PSoC5/ScanComp_1.c **** *  None
+ 160:Generated_Source\PSoC5/ScanComp_1.c **** *
+ 161:Generated_Source\PSoC5/ScanComp_1.c **** * Return:
+ 162:Generated_Source\PSoC5/ScanComp_1.c **** *  None
+ 163:Generated_Source\PSoC5/ScanComp_1.c **** *
+ 164:Generated_Source\PSoC5/ScanComp_1.c **** *******************************************************************************/
+ 165:Generated_Source\PSoC5/ScanComp_1.c **** void ScanComp_1_Stop(void) 
+ 166:Generated_Source\PSoC5/ScanComp_1.c **** {
+ 115              		.loc 1 166 0
+ 116              		.cfi_startproc
+ 117              		@ args = 0, pretend = 0, frame = 0
+ 118              		@ frame_needed = 1, uses_anonymous_args = 0
+ 119 0000 80B5     		push	{r7, lr}
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccU9GXbc.s 			page 6
+
+
+ 120              		.cfi_def_cfa_offset 8
+ 121              		.cfi_offset 7, -8
+ 122              		.cfi_offset 14, -4
+ 123 0002 00AF     		add	r7, sp, #0
+ 124              		.cfi_def_cfa_register 7
+ 167:Generated_Source\PSoC5/ScanComp_1.c ****     ScanComp_1_CONTROL_REG = ScanComp_1_CONTROL_DISABLE;
+ 125              		.loc 1 167 0
+ 126 0004 024B     		ldr	r3, .L9
+ 127 0006 0022     		movs	r2, #0
+ 128 0008 1A70     		strb	r2, [r3]
+ 168:Generated_Source\PSoC5/ScanComp_1.c ****     
+ 169:Generated_Source\PSoC5/ScanComp_1.c ****     ScanComp_1_Comp_Stop();    
+ 129              		.loc 1 169 0
+ 130 000a FFF7FEFF 		bl	ScanComp_1_Comp_Stop
+ 170:Generated_Source\PSoC5/ScanComp_1.c ****     
+ 171:Generated_Source\PSoC5/ScanComp_1.c ****     #if (ScanComp_1_INTERNAL_REF_IS_USED)
+ 172:Generated_Source\PSoC5/ScanComp_1.c ****         ScanComp_1_VDAC_Stop();
+ 173:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 174:Generated_Source\PSoC5/ScanComp_1.c ****         #if (ScanComp_1_VDAC_PER_CHANNEL_MODE_USED)
+ 175:Generated_Source\PSoC5/ScanComp_1.c ****             (void) CyDmaChDisable(ScanComp_1_DMA_VDACUpdate_Chan);
+ 176:Generated_Source\PSoC5/ScanComp_1.c ****         #endif /* ScanComp_1_VDAC_PER_CHANNEL_MODE_USED */
+ 177:Generated_Source\PSoC5/ScanComp_1.c ****     #endif /* ScanComp_1_INTERNAL_REF_IS_USED */
+ 178:Generated_Source\PSoC5/ScanComp_1.c **** }
+ 131              		.loc 1 178 0
+ 132 000e 80BD     		pop	{r7, pc}
+ 133              	.L10:
+ 134              		.align	2
+ 135              	.L9:
+ 136 0010 78640040 		.word	1073767544
+ 137              		.cfi_endproc
+ 138              	.LFE2:
+ 139              		.size	ScanComp_1_Stop, .-ScanComp_1_Stop
+ 140              		.section	.text.ScanComp_1_Enable,"ax",%progbits
+ 141              		.align	2
+ 142              		.global	ScanComp_1_Enable
+ 143              		.thumb
+ 144              		.thumb_func
+ 145              		.type	ScanComp_1_Enable, %function
+ 146              	ScanComp_1_Enable:
+ 147              	.LFB3:
+ 179:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 180:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 181:Generated_Source\PSoC5/ScanComp_1.c **** /*******************************************************************************
+ 182:Generated_Source\PSoC5/ScanComp_1.c **** * Function Name: ScanComp_1_Enable
+ 183:Generated_Source\PSoC5/ScanComp_1.c **** ********************************************************************************
+ 184:Generated_Source\PSoC5/ScanComp_1.c **** *
+ 185:Generated_Source\PSoC5/ScanComp_1.c **** * Summary:
+ 186:Generated_Source\PSoC5/ScanComp_1.c **** *  Activates the hardware and begins component operation.
+ 187:Generated_Source\PSoC5/ScanComp_1.c **** *
+ 188:Generated_Source\PSoC5/ScanComp_1.c **** * Parameters:
+ 189:Generated_Source\PSoC5/ScanComp_1.c **** *  None
+ 190:Generated_Source\PSoC5/ScanComp_1.c **** *
+ 191:Generated_Source\PSoC5/ScanComp_1.c **** * Return:
+ 192:Generated_Source\PSoC5/ScanComp_1.c **** *  None
+ 193:Generated_Source\PSoC5/ScanComp_1.c **** *
+ 194:Generated_Source\PSoC5/ScanComp_1.c **** *******************************************************************************/
+ 195:Generated_Source\PSoC5/ScanComp_1.c **** void ScanComp_1_Enable(void) 
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccU9GXbc.s 			page 7
+
+
+ 196:Generated_Source\PSoC5/ScanComp_1.c **** {
+ 148              		.loc 1 196 0
+ 149              		.cfi_startproc
+ 150              		@ args = 0, pretend = 0, frame = 8
+ 151              		@ frame_needed = 1, uses_anonymous_args = 0
+ 152 0000 80B5     		push	{r7, lr}
+ 153              		.cfi_def_cfa_offset 8
+ 154              		.cfi_offset 7, -8
+ 155              		.cfi_offset 14, -4
+ 156 0002 82B0     		sub	sp, sp, #8
+ 157              		.cfi_def_cfa_offset 16
+ 158 0004 00AF     		add	r7, sp, #0
+ 159              		.cfi_def_cfa_register 7
+ 197:Generated_Source\PSoC5/ScanComp_1.c ****     uint8 interruptState;
+ 198:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 199:Generated_Source\PSoC5/ScanComp_1.c ****     ScanComp_1_Comp_Enable();
+ 160              		.loc 1 199 0
+ 161 0006 FFF7FEFF 		bl	ScanComp_1_Comp_Enable
+ 200:Generated_Source\PSoC5/ScanComp_1.c ****     
+ 201:Generated_Source\PSoC5/ScanComp_1.c ****     ScanComp_1_COUNTER_COUNT_REG  = ScanComp_1_DEFAULT_CHANNELS_VAL;
+ 162              		.loc 1 201 0
+ 163 000a 104B     		ldr	r3, .L12
+ 164 000c 0722     		movs	r2, #7
+ 165 000e 1A70     		strb	r2, [r3]
+ 202:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 203:Generated_Source\PSoC5/ScanComp_1.c ****     #if (ScanComp_1_INTERNAL_REF_IS_USED)
+ 204:Generated_Source\PSoC5/ScanComp_1.c ****         ScanComp_1_VDAC_Enable();
+ 205:Generated_Source\PSoC5/ScanComp_1.c ****         #if (ScanComp_1_VDAC_PER_CHANNEL_MODE_USED)        
+ 206:Generated_Source\PSoC5/ScanComp_1.c ****             (void)CyDmaClearPendingDrq(ScanComp_1_DMA_VDACUpdate_Chan);
+ 207:Generated_Source\PSoC5/ScanComp_1.c ****             (void)CyDmaChEnable(ScanComp_1_DMA_VDACUpdate_Chan, 1u);
+ 208:Generated_Source\PSoC5/ScanComp_1.c ****         #endif /* (ScanComp_1_VDAC_PER_CHANNEL_MODE_USED) */    
+ 209:Generated_Source\PSoC5/ScanComp_1.c ****     #endif /* ScanComp_1_INTERNAL_REF_IS_USED */    
+ 210:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 211:Generated_Source\PSoC5/ScanComp_1.c ****     /* Enable Status Int */
+ 212:Generated_Source\PSoC5/ScanComp_1.c ****     interruptState = CyEnterCriticalSection();
+ 166              		.loc 1 212 0
+ 167 0010 FFF7FEFF 		bl	CyEnterCriticalSection
+ 168 0014 0346     		mov	r3, r0
+ 169 0016 FB71     		strb	r3, [r7, #7]
+ 213:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 214:Generated_Source\PSoC5/ScanComp_1.c ****     #if (ScanComp_1_NUM_OF_CHANNELS < 8u)
+ 215:Generated_Source\PSoC5/ScanComp_1.c ****         ScanComp_1_STATUS_INT0_AUX_CONTROL |= ScanComp_1_STATUS_INTR_ENBL;
+ 216:Generated_Source\PSoC5/ScanComp_1.c ****     #endif /* ScanComp_1_NUM_OF_CHANNELS < 8u */
+ 217:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 218:Generated_Source\PSoC5/ScanComp_1.c ****     #if (ScanComp_1_NUM_OF_CHANNELS >= 8u)
+ 219:Generated_Source\PSoC5/ScanComp_1.c ****         ScanComp_1_STATUS_INT8_AUX_CONTROL |= ScanComp_1_STATUS_INTR_ENBL;
+ 170              		.loc 1 219 0
+ 171 0018 0D4A     		ldr	r2, .L12+4
+ 172 001a 0D4B     		ldr	r3, .L12+4
+ 173 001c 1B78     		ldrb	r3, [r3]
+ 174 001e DBB2     		uxtb	r3, r3
+ 175 0020 43F01003 		orr	r3, r3, #16
+ 176 0024 DBB2     		uxtb	r3, r3
+ 177 0026 1370     		strb	r3, [r2]
+ 220:Generated_Source\PSoC5/ScanComp_1.c ****     #endif /* ScanComp_1_NUM_OF_CHANNELS >= 8u */
+ 221:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 222:Generated_Source\PSoC5/ScanComp_1.c ****     #if (ScanComp_1_NUM_OF_CHANNELS >= 9u)
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccU9GXbc.s 			page 8
+
+
+ 223:Generated_Source\PSoC5/ScanComp_1.c ****         ScanComp_1_STATUS_INT1_AUX_CONTROL |= ScanComp_1_STATUS_INTR_ENBL;
+ 224:Generated_Source\PSoC5/ScanComp_1.c ****     #endif /* ScanComp_1_NUM_OF_CHANNELS >= 9u */
+ 225:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 226:Generated_Source\PSoC5/ScanComp_1.c ****     #if (ScanComp_1_NUM_OF_CHANNELS > 16u)
+ 227:Generated_Source\PSoC5/ScanComp_1.c ****         ScanComp_1_STATUS_INT2_AUX_CONTROL |= ScanComp_1_STATUS_INTR_ENBL;
+ 228:Generated_Source\PSoC5/ScanComp_1.c ****     #endif /* ScanComp_1_NUM_OF_CHANNELS > 16u */
+ 229:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 230:Generated_Source\PSoC5/ScanComp_1.c ****     #if (ScanComp_1_NUM_OF_CHANNELS > 24u)
+ 231:Generated_Source\PSoC5/ScanComp_1.c ****         ScanComp_1_STATUS_INT3_AUX_CONTROL |= ScanComp_1_STATUS_INTR_ENBL;
+ 232:Generated_Source\PSoC5/ScanComp_1.c ****     #endif /* ScanComp_1_NUM_OF_CHANNELS > 24u */
+ 233:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 234:Generated_Source\PSoC5/ScanComp_1.c ****     #if (ScanComp_1_NUM_OF_CHANNELS > 32u)
+ 235:Generated_Source\PSoC5/ScanComp_1.c ****         ScanComp_1_STATUS_INT4_AUX_CONTROL |= ScanComp_1_STATUS_INTR_ENBL;
+ 236:Generated_Source\PSoC5/ScanComp_1.c ****     #endif /* ScanComp_1_NUM_OF_CHANNELS > 32u */
+ 237:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 238:Generated_Source\PSoC5/ScanComp_1.c ****     #if (ScanComp_1_NUM_OF_CHANNELS > 40u)
+ 239:Generated_Source\PSoC5/ScanComp_1.c ****         ScanComp_1_STATUS_INT5_AUX_CONTROL |= ScanComp_1_STATUS_INTR_ENBL;
+ 240:Generated_Source\PSoC5/ScanComp_1.c ****     #endif /* ScanComp_1_NUM_OF_CHANNELS > 40u */
+ 241:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 242:Generated_Source\PSoC5/ScanComp_1.c ****     #if (ScanComp_1_NUM_OF_CHANNELS > 48u)
+ 243:Generated_Source\PSoC5/ScanComp_1.c ****         ScanComp_1_STATUS_INT6_AUX_CONTROL |= ScanComp_1_STATUS_INTR_ENBL;
+ 244:Generated_Source\PSoC5/ScanComp_1.c ****     #endif /* ScanComp_1_NUM_OF_CHANNELS > 48u */
+ 245:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 246:Generated_Source\PSoC5/ScanComp_1.c ****     #if (ScanComp_1_NUM_OF_CHANNELS > 56u)
+ 247:Generated_Source\PSoC5/ScanComp_1.c ****         ScanComp_1_STATUS_INT7_AUX_CONTROL |= ScanComp_1_STATUS_INTR_ENBL;
+ 248:Generated_Source\PSoC5/ScanComp_1.c ****     #endif /* ScanComp_1_NUM_OF_CHANNELS > 56u */
+ 249:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 250:Generated_Source\PSoC5/ScanComp_1.c ****     #if (ScanComp_1_NUM_OF_CHANNELS == 64)
+ 251:Generated_Source\PSoC5/ScanComp_1.c ****         ScanComp_1_STATUS_INT9_AUX_CONTROL |= ScanComp_1_STATUS_INTR_ENBL;
+ 252:Generated_Source\PSoC5/ScanComp_1.c ****     #endif /* ScanComp_1_NUM_OF_CHANNELS == 64u */
+ 253:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 254:Generated_Source\PSoC5/ScanComp_1.c ****     ScanComp_1_COUNTER_AUX_CONTROL_REG |= ScanComp_1_COUNTER_ENABLE;
+ 178              		.loc 1 254 0
+ 179 0028 0A4A     		ldr	r2, .L12+8
+ 180 002a 0A4B     		ldr	r3, .L12+8
+ 181 002c 1B78     		ldrb	r3, [r3]
+ 182 002e DBB2     		uxtb	r3, r3
+ 183 0030 43F02003 		orr	r3, r3, #32
+ 184 0034 DBB2     		uxtb	r3, r3
+ 185 0036 1370     		strb	r3, [r2]
+ 255:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 256:Generated_Source\PSoC5/ScanComp_1.c ****     CyExitCriticalSection(interruptState);
+ 186              		.loc 1 256 0
+ 187 0038 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 188 003a 1846     		mov	r0, r3
+ 189 003c FFF7FEFF 		bl	CyExitCriticalSection
+ 257:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 258:Generated_Source\PSoC5/ScanComp_1.c ****     ScanComp_1_CONTROL_REG = ScanComp_1_CONTROL_ENABLE ;
+ 190              		.loc 1 258 0
+ 191 0040 054B     		ldr	r3, .L12+12
+ 192 0042 0122     		movs	r2, #1
+ 193 0044 1A70     		strb	r2, [r3]
+ 259:Generated_Source\PSoC5/ScanComp_1.c **** }
+ 194              		.loc 1 259 0
+ 195 0046 0837     		adds	r7, r7, #8
+ 196              		.cfi_def_cfa_offset 8
+ 197 0048 BD46     		mov	sp, r7
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccU9GXbc.s 			page 9
+
+
+ 198              		.cfi_def_cfa_register 13
+ 199              		@ sp needed
+ 200 004a 80BD     		pop	{r7, pc}
+ 201              	.L13:
+ 202              		.align	2
+ 203              	.L12:
+ 204 004c 77640040 		.word	1073767543
+ 205 0050 99640040 		.word	1073767577
+ 206 0054 97640040 		.word	1073767575
+ 207 0058 78640040 		.word	1073767544
+ 208              		.cfi_endproc
+ 209              	.LFE3:
+ 210              		.size	ScanComp_1_Enable, .-ScanComp_1_Enable
+ 211              		.section	.text.ScanComp_1_SetSpeed,"ax",%progbits
+ 212              		.align	2
+ 213              		.global	ScanComp_1_SetSpeed
+ 214              		.thumb
+ 215              		.thumb_func
+ 216              		.type	ScanComp_1_SetSpeed, %function
+ 217              	ScanComp_1_SetSpeed:
+ 218              	.LFB4:
+ 260:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 261:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 262:Generated_Source\PSoC5/ScanComp_1.c **** /*******************************************************************************
+ 263:Generated_Source\PSoC5/ScanComp_1.c **** * Function Name: ScanComp_1_SetSpeed
+ 264:Generated_Source\PSoC5/ScanComp_1.c **** ********************************************************************************
+ 265:Generated_Source\PSoC5/ScanComp_1.c **** *
+ 266:Generated_Source\PSoC5/ScanComp_1.c **** * Summary:
+ 267:Generated_Source\PSoC5/ScanComp_1.c **** *  Sets the drive power and speed to one of three settings.
+ 268:Generated_Source\PSoC5/ScanComp_1.c **** *
+ 269:Generated_Source\PSoC5/ScanComp_1.c **** * Parameters:
+ 270:Generated_Source\PSoC5/ScanComp_1.c **** *  speed: enumerated speed mode value.
+ 271:Generated_Source\PSoC5/ScanComp_1.c **** *   ScanComp_1_SLOWSPEED  - Slow speed / Ultra low power
+ 272:Generated_Source\PSoC5/ScanComp_1.c **** *   ScanComp_1_MEDSPEED   - Medium speed / Medium power
+ 273:Generated_Source\PSoC5/ScanComp_1.c **** *   ScanComp_1_HIGHSPEED  - High speed / High power
+ 274:Generated_Source\PSoC5/ScanComp_1.c **** *
+ 275:Generated_Source\PSoC5/ScanComp_1.c **** * Return:
+ 276:Generated_Source\PSoC5/ScanComp_1.c **** *  None
+ 277:Generated_Source\PSoC5/ScanComp_1.c **** *
+ 278:Generated_Source\PSoC5/ScanComp_1.c **** *******************************************************************************/
+ 279:Generated_Source\PSoC5/ScanComp_1.c **** void ScanComp_1_SetSpeed(uint8 speed) 
+ 280:Generated_Source\PSoC5/ScanComp_1.c **** {
+ 219              		.loc 1 280 0
+ 220              		.cfi_startproc
+ 221              		@ args = 0, pretend = 0, frame = 8
+ 222              		@ frame_needed = 1, uses_anonymous_args = 0
+ 223 0000 80B5     		push	{r7, lr}
+ 224              		.cfi_def_cfa_offset 8
+ 225              		.cfi_offset 7, -8
+ 226              		.cfi_offset 14, -4
+ 227 0002 82B0     		sub	sp, sp, #8
+ 228              		.cfi_def_cfa_offset 16
+ 229 0004 00AF     		add	r7, sp, #0
+ 230              		.cfi_def_cfa_register 7
+ 231 0006 0346     		mov	r3, r0
+ 232 0008 FB71     		strb	r3, [r7, #7]
+ 281:Generated_Source\PSoC5/ScanComp_1.c ****     #if (CY_PSOC4)
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccU9GXbc.s 			page 10
+
+
+ 282:Generated_Source\PSoC5/ScanComp_1.c ****         ScanComp_1_Comp_SetSpeed((uint32)speed);
+ 283:Generated_Source\PSoC5/ScanComp_1.c ****     #else
+ 284:Generated_Source\PSoC5/ScanComp_1.c ****         ScanComp_1_Comp_SetSpeed(speed);
+ 233              		.loc 1 284 0
+ 234 000a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 235 000c 1846     		mov	r0, r3
+ 236 000e FFF7FEFF 		bl	ScanComp_1_Comp_SetSpeed
+ 285:Generated_Source\PSoC5/ScanComp_1.c ****     #endif /* CY_PSOC4 */
+ 286:Generated_Source\PSoC5/ScanComp_1.c **** }
+ 237              		.loc 1 286 0
+ 238 0012 0837     		adds	r7, r7, #8
+ 239              		.cfi_def_cfa_offset 8
+ 240 0014 BD46     		mov	sp, r7
+ 241              		.cfi_def_cfa_register 13
+ 242              		@ sp needed
+ 243 0016 80BD     		pop	{r7, pc}
+ 244              		.cfi_endproc
+ 245              	.LFE4:
+ 246              		.size	ScanComp_1_SetSpeed, .-ScanComp_1_SetSpeed
+ 247              		.section	.text.ScanComp_1_GetInterruptSource,"ax",%progbits
+ 248              		.align	2
+ 249              		.global	ScanComp_1_GetInterruptSource
+ 250              		.thumb
+ 251              		.thumb_func
+ 252              		.type	ScanComp_1_GetInterruptSource, %function
+ 253              	ScanComp_1_GetInterruptSource:
+ 254              	.LFB5:
+ 287:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 288:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 289:Generated_Source\PSoC5/ScanComp_1.c **** /*******************************************************************************
+ 290:Generated_Source\PSoC5/ScanComp_1.c **** * Function Name: ScanComp_1_GetInterruptSource
+ 291:Generated_Source\PSoC5/ScanComp_1.c **** ********************************************************************************
+ 292:Generated_Source\PSoC5/ScanComp_1.c **** *
+ 293:Generated_Source\PSoC5/ScanComp_1.c **** * Summary:
+ 294:Generated_Source\PSoC5/ScanComp_1.c **** *  Gets the pending interrupt requests from the selected block.
+ 295:Generated_Source\PSoC5/ScanComp_1.c **** *  Even masked interrupts are returned.
+ 296:Generated_Source\PSoC5/ScanComp_1.c **** *
+ 297:Generated_Source\PSoC5/ScanComp_1.c **** * Parameters:
+ 298:Generated_Source\PSoC5/ScanComp_1.c **** *  InputBlock: Specifies the block of 8 channels whose interrupt requests
+ 299:Generated_Source\PSoC5/ScanComp_1.c **** *  should be returned.
+ 300:Generated_Source\PSoC5/ScanComp_1.c **** *
+ 301:Generated_Source\PSoC5/ScanComp_1.c **** * Return:
+ 302:Generated_Source\PSoC5/ScanComp_1.c **** *  Bit field of interrupt sources from the selected block of 8 inputs.
+ 303:Generated_Source\PSoC5/ScanComp_1.c **** *
+ 304:Generated_Source\PSoC5/ScanComp_1.c **** *******************************************************************************/
+ 305:Generated_Source\PSoC5/ScanComp_1.c **** uint8 ScanComp_1_GetInterruptSource(uint8 inputBlock) 
+ 306:Generated_Source\PSoC5/ScanComp_1.c **** {
+ 255              		.loc 1 306 0
+ 256              		.cfi_startproc
+ 257              		@ args = 0, pretend = 0, frame = 16
+ 258              		@ frame_needed = 1, uses_anonymous_args = 0
+ 259              		@ link register save eliminated.
+ 260 0000 80B4     		push	{r7}
+ 261              		.cfi_def_cfa_offset 4
+ 262              		.cfi_offset 7, -4
+ 263 0002 85B0     		sub	sp, sp, #20
+ 264              		.cfi_def_cfa_offset 24
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccU9GXbc.s 			page 11
+
+
+ 265 0004 00AF     		add	r7, sp, #0
+ 266              		.cfi_def_cfa_register 7
+ 267 0006 0346     		mov	r3, r0
+ 268 0008 FB71     		strb	r3, [r7, #7]
+ 307:Generated_Source\PSoC5/ScanComp_1.c ****     uint8 intSrc = 0u;
+ 269              		.loc 1 307 0
+ 270 000a 0023     		movs	r3, #0
+ 271 000c FB73     		strb	r3, [r7, #15]
+ 308:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 309:Generated_Source\PSoC5/ScanComp_1.c ****     #if (ScanComp_1_NUM_OF_CHANNELS >= 8u)
+ 310:Generated_Source\PSoC5/ScanComp_1.c ****         uint8 intMsb = 0u;
+ 272              		.loc 1 310 0
+ 273 000e 0023     		movs	r3, #0
+ 274 0010 BB73     		strb	r3, [r7, #14]
+ 311:Generated_Source\PSoC5/ScanComp_1.c ****     #endif /* ScanComp_1_NUM_OF_CHANNELS >= 8u */
+ 312:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 313:Generated_Source\PSoC5/ScanComp_1.c ****     static reg8 * const CYCODE interruptStatusRegs[ScanComp_1_NUM_OF_INT_REGISTERS] =
+ 314:Generated_Source\PSoC5/ScanComp_1.c ****     {
+ 315:Generated_Source\PSoC5/ScanComp_1.c ****         ScanComp_1_STATUS_INT0_PTR,
+ 316:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 317:Generated_Source\PSoC5/ScanComp_1.c ****         #if(ScanComp_1_NUM_OF_CHANNELS > 8u)
+ 318:Generated_Source\PSoC5/ScanComp_1.c ****             ScanComp_1_STATUS_INT1_PTR,
+ 319:Generated_Source\PSoC5/ScanComp_1.c ****         #endif /* ScanComp_1_NUM_OF_CHANNELS > 8u */
+ 320:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 321:Generated_Source\PSoC5/ScanComp_1.c ****         #if(ScanComp_1_NUM_OF_CHANNELS > 16u)
+ 322:Generated_Source\PSoC5/ScanComp_1.c ****             ScanComp_1_STATUS_INT2_PTR,
+ 323:Generated_Source\PSoC5/ScanComp_1.c ****         #endif /* ScanComp_1_NUM_OF_CHANNELS > 16u */
+ 324:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 325:Generated_Source\PSoC5/ScanComp_1.c ****         #if(ScanComp_1_NUM_OF_CHANNELS > 24u)
+ 326:Generated_Source\PSoC5/ScanComp_1.c ****             ScanComp_1_STATUS_INT3_PTR,
+ 327:Generated_Source\PSoC5/ScanComp_1.c ****         #endif /* ScanComp_1_NUM_OF_CHANNELS > 24u */
+ 328:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 329:Generated_Source\PSoC5/ScanComp_1.c ****         #if(ScanComp_1_NUM_OF_CHANNELS > 32u)
+ 330:Generated_Source\PSoC5/ScanComp_1.c ****             ScanComp_1_STATUS_INT4_PTR,
+ 331:Generated_Source\PSoC5/ScanComp_1.c ****         #endif /* ScanComp_1_NUM_OF_CHANNELS > 32u */
+ 332:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 333:Generated_Source\PSoC5/ScanComp_1.c ****         #if(ScanComp_1_NUM_OF_CHANNELS > 40u)
+ 334:Generated_Source\PSoC5/ScanComp_1.c ****             ScanComp_1_STATUS_INT5_PTR,
+ 335:Generated_Source\PSoC5/ScanComp_1.c ****         #endif /* ScanComp_1_NUM_OF_CHANNELS > 40u */
+ 336:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 337:Generated_Source\PSoC5/ScanComp_1.c ****         #if(ScanComp_1_NUM_OF_CHANNELS > 48u)
+ 338:Generated_Source\PSoC5/ScanComp_1.c ****             ScanComp_1_STATUS_INT6_PTR,
+ 339:Generated_Source\PSoC5/ScanComp_1.c ****         #endif /* ScanComp_1_NUM_OF_CHANNELS > 48u */
+ 340:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 341:Generated_Source\PSoC5/ScanComp_1.c ****         #if(ScanComp_1_NUM_OF_CHANNELS > 56u)
+ 342:Generated_Source\PSoC5/ScanComp_1.c ****             ScanComp_1_STATUS_INT7_PTR,
+ 343:Generated_Source\PSoC5/ScanComp_1.c ****         #endif /* ScanComp_1_NUM_OF_CHANNELS > 56u */
+ 344:Generated_Source\PSoC5/ScanComp_1.c ****     };    
+ 345:Generated_Source\PSoC5/ScanComp_1.c ****     
+ 346:Generated_Source\PSoC5/ScanComp_1.c ****     if (inputBlock < ScanComp_1_NUM_OF_INT_REGISTERS)
+ 275              		.loc 1 346 0
+ 276 0012 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 277 0014 002B     		cmp	r3, #0
+ 278 0016 05D1     		bne	.L16
+ 347:Generated_Source\PSoC5/ScanComp_1.c ****     {
+ 348:Generated_Source\PSoC5/ScanComp_1.c ****         intSrc = ((uint8) (* interruptStatusRegs[inputBlock])) & ScanComp_1_INT_REG_MASK;
+ 279              		.loc 1 348 0
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccU9GXbc.s 			page 12
+
+
+ 280 0018 194B     		ldr	r3, .L19
+ 281 001a 1B78     		ldrb	r3, [r3]
+ 282 001c DBB2     		uxtb	r3, r3
+ 283 001e 03F07F03 		and	r3, r3, #127
+ 284 0022 FB73     		strb	r3, [r7, #15]
+ 285              	.L16:
+ 349:Generated_Source\PSoC5/ScanComp_1.c ****     }
+ 350:Generated_Source\PSoC5/ScanComp_1.c ****     
+ 351:Generated_Source\PSoC5/ScanComp_1.c ****     #if (ScanComp_1_NUM_OF_CHANNELS > 63u)
+ 352:Generated_Source\PSoC5/ScanComp_1.c ****         if (inputBlock == 7u)
+ 353:Generated_Source\PSoC5/ScanComp_1.c ****         {
+ 354:Generated_Source\PSoC5/ScanComp_1.c ****             intMsb = (uint8)(ScanComp_1_STATUS_INT9_REG  << ScanComp_1_7BIT_SHIFT);
+ 355:Generated_Source\PSoC5/ScanComp_1.c ****         }
+ 356:Generated_Source\PSoC5/ScanComp_1.c ****         else
+ 357:Generated_Source\PSoC5/ScanComp_1.c ****         {
+ 358:Generated_Source\PSoC5/ScanComp_1.c ****             storeStatusReg |= ScanComp_1_STATUS_INT8_REG;
+ 359:Generated_Source\PSoC5/ScanComp_1.c ****             intMsb = (uint8)((storeStatusReg >> inputBlock) << ScanComp_1_7BIT_SHIFT);
+ 360:Generated_Source\PSoC5/ScanComp_1.c ****             storeStatusReg = (storeStatusReg & (uint8)(~(uint8)(1u << inputBlock)));
+ 361:Generated_Source\PSoC5/ScanComp_1.c ****         }
+ 362:Generated_Source\PSoC5/ScanComp_1.c ****         intSrc |= intMsb;
+ 363:Generated_Source\PSoC5/ScanComp_1.c ****     #elif (ScanComp_1_NUM_OF_CHANNELS >= 8u)
+ 364:Generated_Source\PSoC5/ScanComp_1.c ****         if (inputBlock != 7u)
+ 286              		.loc 1 364 0
+ 287 0024 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 288 0026 072B     		cmp	r3, #7
+ 289 0028 1ED0     		beq	.L17
+ 365:Generated_Source\PSoC5/ScanComp_1.c ****         {
+ 366:Generated_Source\PSoC5/ScanComp_1.c ****             storeStatusReg |= ScanComp_1_STATUS_INT8_REG;
+ 290              		.loc 1 366 0
+ 291 002a 164B     		ldr	r3, .L19+4
+ 292 002c 1B78     		ldrb	r3, [r3]
+ 293 002e DAB2     		uxtb	r2, r3
+ 294 0030 154B     		ldr	r3, .L19+8
+ 295 0032 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 296 0034 1343     		orrs	r3, r3, r2
+ 297 0036 DAB2     		uxtb	r2, r3
+ 298 0038 134B     		ldr	r3, .L19+8
+ 299 003a 1A70     		strb	r2, [r3]
+ 367:Generated_Source\PSoC5/ScanComp_1.c ****             intMsb = (uint8)((storeStatusReg >> inputBlock) << ScanComp_1_7BIT_SHIFT);
+ 300              		.loc 1 367 0
+ 301 003c 124B     		ldr	r3, .L19+8
+ 302 003e 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 303 0040 1A46     		mov	r2, r3
+ 304 0042 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 305 0044 42FA03F3 		asr	r3, r2, r3
+ 306 0048 DBB2     		uxtb	r3, r3
+ 307 004a DB01     		lsls	r3, r3, #7
+ 308 004c BB73     		strb	r3, [r7, #14]
+ 368:Generated_Source\PSoC5/ScanComp_1.c ****             storeStatusReg = (storeStatusReg & (uint8)(~(uint8)(1u << inputBlock)));
+ 309              		.loc 1 368 0
+ 310 004e FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 311 0050 0122     		movs	r2, #1
+ 312 0052 02FA03F3 		lsl	r3, r2, r3
+ 313 0056 DBB2     		uxtb	r3, r3
+ 314 0058 DB43     		mvns	r3, r3
+ 315 005a DAB2     		uxtb	r2, r3
+ 316 005c 0A4B     		ldr	r3, .L19+8
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccU9GXbc.s 			page 13
+
+
+ 317 005e 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 318 0060 1340     		ands	r3, r3, r2
+ 319 0062 DAB2     		uxtb	r2, r3
+ 320 0064 084B     		ldr	r3, .L19+8
+ 321 0066 1A70     		strb	r2, [r3]
+ 322              	.L17:
+ 369:Generated_Source\PSoC5/ScanComp_1.c ****         }
+ 370:Generated_Source\PSoC5/ScanComp_1.c ****         intSrc |= intMsb;
+ 323              		.loc 1 370 0
+ 324 0068 FA7B     		ldrb	r2, [r7, #15]
+ 325 006a BB7B     		ldrb	r3, [r7, #14]
+ 326 006c 1343     		orrs	r3, r3, r2
+ 327 006e FB73     		strb	r3, [r7, #15]
+ 371:Generated_Source\PSoC5/ScanComp_1.c ****     #endif /* ScanComp_1_NUM_OF_CHANNELS > 64u */
+ 372:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 373:Generated_Source\PSoC5/ScanComp_1.c ****     return (intSrc);
+ 328              		.loc 1 373 0
+ 329 0070 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 374:Generated_Source\PSoC5/ScanComp_1.c **** }
+ 330              		.loc 1 374 0
+ 331 0072 1846     		mov	r0, r3
+ 332 0074 1437     		adds	r7, r7, #20
+ 333              		.cfi_def_cfa_offset 4
+ 334 0076 BD46     		mov	sp, r7
+ 335              		.cfi_def_cfa_register 13
+ 336              		@ sp needed
+ 337 0078 5DF8047B 		ldr	r7, [sp], #4
+ 338              		.cfi_restore 7
+ 339              		.cfi_def_cfa_offset 0
+ 340 007c 7047     		bx	lr
+ 341              	.L20:
+ 342 007e 00BF     		.align	2
+ 343              	.L19:
+ 344 0080 68650040 		.word	1073767784
+ 345 0084 69640040 		.word	1073767529
+ 346 0088 00000000 		.word	storeStatusReg
+ 347              		.cfi_endproc
+ 348              	.LFE5:
+ 349              		.size	ScanComp_1_GetInterruptSource, .-ScanComp_1_GetInterruptSource
+ 350              		.section	.text.ScanComp_1_GetInterruptSourceMasked,"ax",%progbits
+ 351              		.align	2
+ 352              		.global	ScanComp_1_GetInterruptSourceMasked
+ 353              		.thumb
+ 354              		.thumb_func
+ 355              		.type	ScanComp_1_GetInterruptSourceMasked, %function
+ 356              	ScanComp_1_GetInterruptSourceMasked:
+ 357              	.LFB6:
+ 375:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 376:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 377:Generated_Source\PSoC5/ScanComp_1.c **** /*******************************************************************************
+ 378:Generated_Source\PSoC5/ScanComp_1.c **** * Function Name: ScanComp_1_GetInterruptSourceMasked
+ 379:Generated_Source\PSoC5/ScanComp_1.c **** ********************************************************************************
+ 380:Generated_Source\PSoC5/ScanComp_1.c **** *
+ 381:Generated_Source\PSoC5/ScanComp_1.c **** * Summary:
+ 382:Generated_Source\PSoC5/ScanComp_1.c **** *  Gets the pending interrupt requests from the selected block.
+ 383:Generated_Source\PSoC5/ScanComp_1.c **** *  Masked interrupts are not returned.
+ 384:Generated_Source\PSoC5/ScanComp_1.c **** *
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccU9GXbc.s 			page 14
+
+
+ 385:Generated_Source\PSoC5/ScanComp_1.c **** * Parameters:
+ 386:Generated_Source\PSoC5/ScanComp_1.c **** *  InputBlock: Specifies the block of 8 channels whose interrupt requests
+ 387:Generated_Source\PSoC5/ScanComp_1.c **** *  should be returned.
+ 388:Generated_Source\PSoC5/ScanComp_1.c **** *
+ 389:Generated_Source\PSoC5/ScanComp_1.c **** * Return:
+ 390:Generated_Source\PSoC5/ScanComp_1.c **** *  Bit field of interrupt sources from the selected block of 8 inputs.
+ 391:Generated_Source\PSoC5/ScanComp_1.c **** *
+ 392:Generated_Source\PSoC5/ScanComp_1.c **** *******************************************************************************/
+ 393:Generated_Source\PSoC5/ScanComp_1.c **** uint8 ScanComp_1_GetInterruptSourceMasked(uint8 inputBlock)   \
+ 394:Generated_Source\PSoC5/ScanComp_1.c ****                                                 
+ 395:Generated_Source\PSoC5/ScanComp_1.c **** {
+ 358              		.loc 1 395 0
+ 359              		.cfi_startproc
+ 360              		@ args = 0, pretend = 0, frame = 8
+ 361              		@ frame_needed = 1, uses_anonymous_args = 0
+ 362 0000 90B5     		push	{r4, r7, lr}
+ 363              		.cfi_def_cfa_offset 12
+ 364              		.cfi_offset 4, -12
+ 365              		.cfi_offset 7, -8
+ 366              		.cfi_offset 14, -4
+ 367 0002 83B0     		sub	sp, sp, #12
+ 368              		.cfi_def_cfa_offset 24
+ 369 0004 00AF     		add	r7, sp, #0
+ 370              		.cfi_def_cfa_register 7
+ 371 0006 0346     		mov	r3, r0
+ 372 0008 FB71     		strb	r3, [r7, #7]
+ 396:Generated_Source\PSoC5/ScanComp_1.c ****     return (ScanComp_1_GetInterruptSource(inputBlock) & (uint8)~ScanComp_1_GetInterruptMask (inputB
+ 373              		.loc 1 396 0
+ 374 000a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 375 000c 1846     		mov	r0, r3
+ 376 000e FFF7FEFF 		bl	ScanComp_1_GetInterruptSource
+ 377 0012 0346     		mov	r3, r0
+ 378 0014 1C46     		mov	r4, r3
+ 379 0016 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 380 0018 1846     		mov	r0, r3
+ 381 001a FFF7FEFF 		bl	ScanComp_1_GetInterruptMask
+ 382 001e 0346     		mov	r3, r0
+ 383 0020 DB43     		mvns	r3, r3
+ 384 0022 DBB2     		uxtb	r3, r3
+ 385 0024 2340     		ands	r3, r3, r4
+ 386 0026 DBB2     		uxtb	r3, r3
+ 397:Generated_Source\PSoC5/ScanComp_1.c **** }
+ 387              		.loc 1 397 0
+ 388 0028 1846     		mov	r0, r3
+ 389 002a 0C37     		adds	r7, r7, #12
+ 390              		.cfi_def_cfa_offset 12
+ 391 002c BD46     		mov	sp, r7
+ 392              		.cfi_def_cfa_register 13
+ 393              		@ sp needed
+ 394 002e 90BD     		pop	{r4, r7, pc}
+ 395              		.cfi_endproc
+ 396              	.LFE6:
+ 397              		.size	ScanComp_1_GetInterruptSourceMasked, .-ScanComp_1_GetInterruptSourceMasked
+ 398              		.section	.text.ScanComp_1_GetInterruptMask,"ax",%progbits
+ 399              		.align	2
+ 400              		.global	ScanComp_1_GetInterruptMask
+ 401              		.thumb
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccU9GXbc.s 			page 15
+
+
+ 402              		.thumb_func
+ 403              		.type	ScanComp_1_GetInterruptMask, %function
+ 404              	ScanComp_1_GetInterruptMask:
+ 405              	.LFB7:
+ 398:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 399:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 400:Generated_Source\PSoC5/ScanComp_1.c **** /*******************************************************************************
+ 401:Generated_Source\PSoC5/ScanComp_1.c **** * Function Name: ScanComp_1_GetInterruptMask
+ 402:Generated_Source\PSoC5/ScanComp_1.c **** ********************************************************************************
+ 403:Generated_Source\PSoC5/ScanComp_1.c **** *
+ 404:Generated_Source\PSoC5/ScanComp_1.c **** * Summary:
+ 405:Generated_Source\PSoC5/ScanComp_1.c **** *  Gets the current interrupt mask for the selected block.
+ 406:Generated_Source\PSoC5/ScanComp_1.c **** *
+ 407:Generated_Source\PSoC5/ScanComp_1.c **** * Parameters:
+ 408:Generated_Source\PSoC5/ScanComp_1.c **** *  InputBlock: Specifies the block of 8 channels whose interrupt requests
+ 409:Generated_Source\PSoC5/ScanComp_1.c **** *  should be returned.
+ 410:Generated_Source\PSoC5/ScanComp_1.c **** *
+ 411:Generated_Source\PSoC5/ScanComp_1.c **** * Return:
+ 412:Generated_Source\PSoC5/ScanComp_1.c **** *  The interrupt mask for the given block of channels.
+ 413:Generated_Source\PSoC5/ScanComp_1.c **** *  A '1' indicates that the interrupt is enabled, a '0' indicates that it 
+ 414:Generated_Source\PSoC5/ScanComp_1.c **** *  is masked off.
+ 415:Generated_Source\PSoC5/ScanComp_1.c **** *
+ 416:Generated_Source\PSoC5/ScanComp_1.c **** *******************************************************************************/
+ 417:Generated_Source\PSoC5/ScanComp_1.c **** uint8 ScanComp_1_GetInterruptMask(uint8 inputBlock) 
+ 418:Generated_Source\PSoC5/ScanComp_1.c **** {
+ 406              		.loc 1 418 0
+ 407              		.cfi_startproc
+ 408              		@ args = 0, pretend = 0, frame = 16
+ 409              		@ frame_needed = 1, uses_anonymous_args = 0
+ 410              		@ link register save eliminated.
+ 411 0000 80B4     		push	{r7}
+ 412              		.cfi_def_cfa_offset 4
+ 413              		.cfi_offset 7, -4
+ 414 0002 85B0     		sub	sp, sp, #20
+ 415              		.cfi_def_cfa_offset 24
+ 416 0004 00AF     		add	r7, sp, #0
+ 417              		.cfi_def_cfa_register 7
+ 418 0006 0346     		mov	r3, r0
+ 419 0008 FB71     		strb	r3, [r7, #7]
+ 419:Generated_Source\PSoC5/ScanComp_1.c ****     #if (ScanComp_1_NUM_OF_CHANNELS >= 8u)
+ 420:Generated_Source\PSoC5/ScanComp_1.c ****         uint8 maskMsb = 0u;
+ 420              		.loc 1 420 0
+ 421 000a 0023     		movs	r3, #0
+ 422 000c FB73     		strb	r3, [r7, #15]
+ 421:Generated_Source\PSoC5/ScanComp_1.c ****     #endif /* ScanComp_1_NUM_OF_CHANNELS >= 8u */
+ 422:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 423:Generated_Source\PSoC5/ScanComp_1.c ****     uint8 intSrc = 0u;
+ 423              		.loc 1 423 0
+ 424 000e 0023     		movs	r3, #0
+ 425 0010 BB73     		strb	r3, [r7, #14]
+ 424:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 425:Generated_Source\PSoC5/ScanComp_1.c ****     if (inputBlock < ScanComp_1_NUM_OF_INT_REGISTERS)
+ 426              		.loc 1 425 0
+ 427 0012 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 428 0014 002B     		cmp	r3, #0
+ 429 0016 02D1     		bne	.L24
+ 426:Generated_Source\PSoC5/ScanComp_1.c ****     {
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccU9GXbc.s 			page 16
+
+
+ 427:Generated_Source\PSoC5/ScanComp_1.c ****         intSrc = (uint8) (* interruptStatusMaskRegs[inputBlock]);
+ 430              		.loc 1 427 0
+ 431 0018 0D4B     		ldr	r3, .L27
+ 432 001a 1B78     		ldrb	r3, [r3]
+ 433 001c BB73     		strb	r3, [r7, #14]
+ 434              	.L24:
+ 428:Generated_Source\PSoC5/ScanComp_1.c ****     }    
+ 429:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 430:Generated_Source\PSoC5/ScanComp_1.c ****     #if (ScanComp_1_NUM_OF_CHANNELS > 63u)
+ 431:Generated_Source\PSoC5/ScanComp_1.c ****         if (inputBlock == 7u)
+ 432:Generated_Source\PSoC5/ScanComp_1.c ****         {
+ 433:Generated_Source\PSoC5/ScanComp_1.c ****             maskMsb = (uint8)(ScanComp_1_STATUS_INT9_MASK  << ScanComp_1_7BIT_SHIFT);
+ 434:Generated_Source\PSoC5/ScanComp_1.c ****         }
+ 435:Generated_Source\PSoC5/ScanComp_1.c ****         else
+ 436:Generated_Source\PSoC5/ScanComp_1.c ****         {
+ 437:Generated_Source\PSoC5/ScanComp_1.c ****             maskMsb = (uint8)((ScanComp_1_STATUS_INT8_MASK >> inputBlock) << ScanComp_1_7BIT_SHIFT)
+ 438:Generated_Source\PSoC5/ScanComp_1.c ****         }
+ 439:Generated_Source\PSoC5/ScanComp_1.c ****         intSrc |= maskMsb;
+ 440:Generated_Source\PSoC5/ScanComp_1.c ****     #elif (ScanComp_1_NUM_OF_CHANNELS >= 8u)
+ 441:Generated_Source\PSoC5/ScanComp_1.c ****         if (inputBlock != 7u)
+ 435              		.loc 1 441 0
+ 436 001e FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 437 0020 072B     		cmp	r3, #7
+ 438 0022 09D0     		beq	.L25
+ 442:Generated_Source\PSoC5/ScanComp_1.c ****         {
+ 443:Generated_Source\PSoC5/ScanComp_1.c ****             maskMsb = (uint8)((ScanComp_1_STATUS_INT8_MASK >> inputBlock) << ScanComp_1_7BIT_SHIFT)
+ 439              		.loc 1 443 0
+ 440 0024 0B4B     		ldr	r3, .L27+4
+ 441 0026 1B78     		ldrb	r3, [r3]
+ 442 0028 DBB2     		uxtb	r3, r3
+ 443 002a 1A46     		mov	r2, r3
+ 444 002c FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 445 002e 42FA03F3 		asr	r3, r2, r3
+ 446 0032 DBB2     		uxtb	r3, r3
+ 447 0034 DB01     		lsls	r3, r3, #7
+ 448 0036 FB73     		strb	r3, [r7, #15]
+ 449              	.L25:
+ 444:Generated_Source\PSoC5/ScanComp_1.c ****         }
+ 445:Generated_Source\PSoC5/ScanComp_1.c ****         intSrc |= maskMsb;
+ 450              		.loc 1 445 0
+ 451 0038 BA7B     		ldrb	r2, [r7, #14]
+ 452 003a FB7B     		ldrb	r3, [r7, #15]
+ 453 003c 1343     		orrs	r3, r3, r2
+ 454 003e BB73     		strb	r3, [r7, #14]
+ 446:Generated_Source\PSoC5/ScanComp_1.c ****     #endif /* ScanComp_1_NUM_OF_CHANNELS > 63u */
+ 447:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 448:Generated_Source\PSoC5/ScanComp_1.c ****     return ((uint8)intSrc);
+ 455              		.loc 1 448 0
+ 456 0040 BB7B     		ldrb	r3, [r7, #14]	@ zero_extendqisi2
+ 449:Generated_Source\PSoC5/ScanComp_1.c **** }
+ 457              		.loc 1 449 0
+ 458 0042 1846     		mov	r0, r3
+ 459 0044 1437     		adds	r7, r7, #20
+ 460              		.cfi_def_cfa_offset 4
+ 461 0046 BD46     		mov	sp, r7
+ 462              		.cfi_def_cfa_register 13
+ 463              		@ sp needed
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccU9GXbc.s 			page 17
+
+
+ 464 0048 5DF8047B 		ldr	r7, [sp], #4
+ 465              		.cfi_restore 7
+ 466              		.cfi_def_cfa_offset 0
+ 467 004c 7047     		bx	lr
+ 468              	.L28:
+ 469 004e 00BF     		.align	2
+ 470              	.L27:
+ 471 0050 88650040 		.word	1073767816
+ 472 0054 89640040 		.word	1073767561
+ 473              		.cfi_endproc
+ 474              	.LFE7:
+ 475              		.size	ScanComp_1_GetInterruptMask, .-ScanComp_1_GetInterruptMask
+ 476              		.section	.text.ScanComp_1_SetInterruptMask,"ax",%progbits
+ 477              		.align	2
+ 478              		.global	ScanComp_1_SetInterruptMask
+ 479              		.thumb
+ 480              		.thumb_func
+ 481              		.type	ScanComp_1_SetInterruptMask, %function
+ 482              	ScanComp_1_SetInterruptMask:
+ 483              	.LFB8:
+ 450:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 451:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 452:Generated_Source\PSoC5/ScanComp_1.c **** /*******************************************************************************
+ 453:Generated_Source\PSoC5/ScanComp_1.c **** * Function Name: ScanComp_1_SetInterruptMask
+ 454:Generated_Source\PSoC5/ScanComp_1.c **** ********************************************************************************
+ 455:Generated_Source\PSoC5/ScanComp_1.c **** *
+ 456:Generated_Source\PSoC5/ScanComp_1.c **** * Summary:
+ 457:Generated_Source\PSoC5/ScanComp_1.c **** *  Sets the interrupt masks for the set block of 8 channels.
+ 458:Generated_Source\PSoC5/ScanComp_1.c **** *
+ 459:Generated_Source\PSoC5/ScanComp_1.c **** * Parameters:
+ 460:Generated_Source\PSoC5/ScanComp_1.c **** *  InputBlock: specifies the block of 8 channels whose interrupt requests
+ 461:Generated_Source\PSoC5/ScanComp_1.c **** *  should be returned.
+ 462:Generated_Source\PSoC5/ScanComp_1.c **** *  mask: Interrupt mask value for the specified block of 8 or less channels. 
+ 463:Generated_Source\PSoC5/ScanComp_1.c **** *  A '1' indicates that the interrupt is enabled, a '0' indicates that it 
+ 464:Generated_Source\PSoC5/ScanComp_1.c **** *  is masked off.
+ 465:Generated_Source\PSoC5/ScanComp_1.c **** *
+ 466:Generated_Source\PSoC5/ScanComp_1.c **** * Return:
+ 467:Generated_Source\PSoC5/ScanComp_1.c **** *  None
+ 468:Generated_Source\PSoC5/ScanComp_1.c **** *
+ 469:Generated_Source\PSoC5/ScanComp_1.c **** *******************************************************************************/
+ 470:Generated_Source\PSoC5/ScanComp_1.c **** void ScanComp_1_SetInterruptMask(uint8 inputBlock, uint8 mask)    \
+ 471:Generated_Source\PSoC5/ScanComp_1.c ****                                        
+ 472:Generated_Source\PSoC5/ScanComp_1.c **** {
+ 484              		.loc 1 472 0
+ 485              		.cfi_startproc
+ 486              		@ args = 0, pretend = 0, frame = 16
+ 487              		@ frame_needed = 1, uses_anonymous_args = 0
+ 488              		@ link register save eliminated.
+ 489 0000 80B4     		push	{r7}
+ 490              		.cfi_def_cfa_offset 4
+ 491              		.cfi_offset 7, -4
+ 492 0002 85B0     		sub	sp, sp, #20
+ 493              		.cfi_def_cfa_offset 24
+ 494 0004 00AF     		add	r7, sp, #0
+ 495              		.cfi_def_cfa_register 7
+ 496 0006 0346     		mov	r3, r0
+ 497 0008 0A46     		mov	r2, r1
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccU9GXbc.s 			page 18
+
+
+ 498 000a FB71     		strb	r3, [r7, #7]
+ 499 000c 1346     		mov	r3, r2
+ 500 000e BB71     		strb	r3, [r7, #6]
+ 473:Generated_Source\PSoC5/ScanComp_1.c ****     uint8 maskLsb = mask & ScanComp_1_7BIT_MASK;
+ 501              		.loc 1 473 0
+ 502 0010 BB79     		ldrb	r3, [r7, #6]
+ 503 0012 03F07F03 		and	r3, r3, #127
+ 504 0016 FB73     		strb	r3, [r7, #15]
+ 474:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 475:Generated_Source\PSoC5/ScanComp_1.c ****     #if (ScanComp_1_NUM_OF_CHANNELS >= 8u)
+ 476:Generated_Source\PSoC5/ScanComp_1.c ****         uint8 maskMsb = (uint8)((mask >> ScanComp_1_7BIT_SHIFT) << inputBlock);
+ 505              		.loc 1 476 0
+ 506 0018 BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ 507 001a DB09     		lsrs	r3, r3, #7
+ 508 001c DBB2     		uxtb	r3, r3
+ 509 001e 1A46     		mov	r2, r3
+ 510 0020 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 511 0022 02FA03F3 		lsl	r3, r2, r3
+ 512 0026 BB73     		strb	r3, [r7, #14]
+ 477:Generated_Source\PSoC5/ScanComp_1.c ****     #endif /* ScanComp_1_NUM_OF_CHANNELS >= 8u */
+ 478:Generated_Source\PSoC5/ScanComp_1.c ****     
+ 479:Generated_Source\PSoC5/ScanComp_1.c ****     if (inputBlock < ScanComp_1_NUM_OF_INT_REGISTERS)
+ 513              		.loc 1 479 0
+ 514 0028 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 515 002a 002B     		cmp	r3, #0
+ 516 002c 02D1     		bne	.L30
+ 480:Generated_Source\PSoC5/ScanComp_1.c ****     {
+ 481:Generated_Source\PSoC5/ScanComp_1.c ****         (* interruptStatusMaskRegs[inputBlock]) = maskLsb;
+ 517              		.loc 1 481 0
+ 518 002e 074A     		ldr	r2, .L32
+ 519 0030 FB7B     		ldrb	r3, [r7, #15]
+ 520 0032 1370     		strb	r3, [r2]
+ 521              	.L30:
+ 482:Generated_Source\PSoC5/ScanComp_1.c ****     }    
+ 483:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 484:Generated_Source\PSoC5/ScanComp_1.c ****     #if (ScanComp_1_NUM_OF_CHANNELS > 63u)
+ 485:Generated_Source\PSoC5/ScanComp_1.c ****         if (inputBlock == 7u)
+ 486:Generated_Source\PSoC5/ScanComp_1.c ****         {
+ 487:Generated_Source\PSoC5/ScanComp_1.c ****             ScanComp_1_STATUS_INT9_MASK = maskMsb;
+ 488:Generated_Source\PSoC5/ScanComp_1.c ****         }
+ 489:Generated_Source\PSoC5/ScanComp_1.c ****         else
+ 490:Generated_Source\PSoC5/ScanComp_1.c ****         {
+ 491:Generated_Source\PSoC5/ScanComp_1.c ****             ScanComp_1_STATUS_INT8_MASK = maskMsb;
+ 492:Generated_Source\PSoC5/ScanComp_1.c ****         }
+ 493:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 494:Generated_Source\PSoC5/ScanComp_1.c ****     #elif (ScanComp_1_NUM_OF_CHANNELS >= 8u)
+ 495:Generated_Source\PSoC5/ScanComp_1.c ****         if (inputBlock != 7u)
+ 522              		.loc 1 495 0
+ 523 0034 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 524 0036 072B     		cmp	r3, #7
+ 525 0038 02D0     		beq	.L29
+ 496:Generated_Source\PSoC5/ScanComp_1.c ****         {
+ 497:Generated_Source\PSoC5/ScanComp_1.c ****             ScanComp_1_STATUS_INT8_MASK = maskMsb;
+ 526              		.loc 1 497 0
+ 527 003a 054A     		ldr	r2, .L32+4
+ 528 003c BB7B     		ldrb	r3, [r7, #14]
+ 529 003e 1370     		strb	r3, [r2]
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccU9GXbc.s 			page 19
+
+
+ 530              	.L29:
+ 498:Generated_Source\PSoC5/ScanComp_1.c ****         }
+ 499:Generated_Source\PSoC5/ScanComp_1.c ****     #endif /* ScanComp_1_NUM_OF_CHANNELS > 63u */
+ 500:Generated_Source\PSoC5/ScanComp_1.c **** }
+ 531              		.loc 1 500 0
+ 532 0040 1437     		adds	r7, r7, #20
+ 533              		.cfi_def_cfa_offset 4
+ 534 0042 BD46     		mov	sp, r7
+ 535              		.cfi_def_cfa_register 13
+ 536              		@ sp needed
+ 537 0044 5DF8047B 		ldr	r7, [sp], #4
+ 538              		.cfi_restore 7
+ 539              		.cfi_def_cfa_offset 0
+ 540 0048 7047     		bx	lr
+ 541              	.L33:
+ 542 004a 00BF     		.align	2
+ 543              	.L32:
+ 544 004c 88650040 		.word	1073767816
+ 545 0050 89640040 		.word	1073767561
+ 546              		.cfi_endproc
+ 547              	.LFE8:
+ 548              		.size	ScanComp_1_SetInterruptMask, .-ScanComp_1_SetInterruptMask
+ 549              		.section	.text.ScanComp_1_GetCompare,"ax",%progbits
+ 550              		.align	2
+ 551              		.global	ScanComp_1_GetCompare
+ 552              		.thumb
+ 553              		.thumb_func
+ 554              		.type	ScanComp_1_GetCompare, %function
+ 555              	ScanComp_1_GetCompare:
+ 556              	.LFB9:
+ 501:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 502:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 503:Generated_Source\PSoC5/ScanComp_1.c **** /*******************************************************************************
+ 504:Generated_Source\PSoC5/ScanComp_1.c **** * Function Name: ScanComp_1_GetCompare
+ 505:Generated_Source\PSoC5/ScanComp_1.c **** ********************************************************************************
+ 506:Generated_Source\PSoC5/ScanComp_1.c **** *
+ 507:Generated_Source\PSoC5/ScanComp_1.c **** * Summary:
+ 508:Generated_Source\PSoC5/ScanComp_1.c **** *  Returns a nonzero value when the voltage connected to the positive input
+ 509:Generated_Source\PSoC5/ScanComp_1.c **** *  is greater than the negative input voltage.
+ 510:Generated_Source\PSoC5/ScanComp_1.c **** *
+ 511:Generated_Source\PSoC5/ScanComp_1.c **** * Parameters:
+ 512:Generated_Source\PSoC5/ScanComp_1.c **** *  channel: channel whose compare output is to be read.
+ 513:Generated_Source\PSoC5/ScanComp_1.c **** *
+ 514:Generated_Source\PSoC5/ScanComp_1.c **** * Return:
+ 515:Generated_Source\PSoC5/ScanComp_1.c **** *  Comparator output state
+ 516:Generated_Source\PSoC5/ScanComp_1.c **** *
+ 517:Generated_Source\PSoC5/ScanComp_1.c **** *******************************************************************************/
+ 518:Generated_Source\PSoC5/ScanComp_1.c **** uint8 ScanComp_1_GetCompare(uint8 channel) 
+ 519:Generated_Source\PSoC5/ScanComp_1.c **** {
+ 557              		.loc 1 519 0
+ 558              		.cfi_startproc
+ 559              		@ args = 0, pretend = 0, frame = 16
+ 560              		@ frame_needed = 1, uses_anonymous_args = 0
+ 561              		@ link register save eliminated.
+ 562 0000 80B4     		push	{r7}
+ 563              		.cfi_def_cfa_offset 4
+ 564              		.cfi_offset 7, -4
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccU9GXbc.s 			page 20
+
+
+ 565 0002 85B0     		sub	sp, sp, #20
+ 566              		.cfi_def_cfa_offset 24
+ 567 0004 00AF     		add	r7, sp, #0
+ 568              		.cfi_def_cfa_register 7
+ 569 0006 0346     		mov	r3, r0
+ 570 0008 FB71     		strb	r3, [r7, #7]
+ 520:Generated_Source\PSoC5/ScanComp_1.c ****     uint8 compVal;
+ 521:Generated_Source\PSoC5/ScanComp_1.c ****     uint8 chanPos;
+ 522:Generated_Source\PSoC5/ScanComp_1.c ****     uint8 blockNum;
+ 523:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 524:Generated_Source\PSoC5/ScanComp_1.c ****     static reg8 * const CYCODE outputStatusRegs[ScanComp_1_NUM_OF_OUT_REGISTERS] =
+ 525:Generated_Source\PSoC5/ScanComp_1.c ****     {
+ 526:Generated_Source\PSoC5/ScanComp_1.c ****         ScanComp_1_STATUS_OUT0_PTR,
+ 527:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 528:Generated_Source\PSoC5/ScanComp_1.c ****         #if(ScanComp_1_NUM_OF_CHANNELS > 8u)
+ 529:Generated_Source\PSoC5/ScanComp_1.c ****             ScanComp_1_STATUS_OUT1_PTR,
+ 530:Generated_Source\PSoC5/ScanComp_1.c ****         #endif /* ScanComp_1_NUM_OF_CHANNELS > 8u */
+ 531:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 532:Generated_Source\PSoC5/ScanComp_1.c ****         #if(ScanComp_1_NUM_OF_CHANNELS > 16u)
+ 533:Generated_Source\PSoC5/ScanComp_1.c ****             ScanComp_1_STATUS_OUT2_PTR,
+ 534:Generated_Source\PSoC5/ScanComp_1.c ****         #endif /* ScanComp_1_NUM_OF_CHANNELS > 16u */
+ 535:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 536:Generated_Source\PSoC5/ScanComp_1.c ****         #if(ScanComp_1_NUM_OF_CHANNELS > 24u)
+ 537:Generated_Source\PSoC5/ScanComp_1.c ****             ScanComp_1_STATUS_OUT3_PTR,
+ 538:Generated_Source\PSoC5/ScanComp_1.c ****         #endif /* ScanComp_1_NUM_OF_CHANNELS > 24u */
+ 539:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 540:Generated_Source\PSoC5/ScanComp_1.c ****         #if(ScanComp_1_NUM_OF_CHANNELS > 32u)
+ 541:Generated_Source\PSoC5/ScanComp_1.c ****             ScanComp_1_STATUS_OUT4_PTR,
+ 542:Generated_Source\PSoC5/ScanComp_1.c ****         #endif /* ScanComp_1_NUM_OF_CHANNELS > 32u */
+ 543:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 544:Generated_Source\PSoC5/ScanComp_1.c ****         #if(ScanComp_1_NUM_OF_CHANNELS > 40u)
+ 545:Generated_Source\PSoC5/ScanComp_1.c ****             ScanComp_1_STATUS_OUT5_PTR,
+ 546:Generated_Source\PSoC5/ScanComp_1.c ****         #endif /* ScanComp_1_NUM_OF_CHANNELS > 40u */
+ 547:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 548:Generated_Source\PSoC5/ScanComp_1.c ****         #if(ScanComp_1_NUM_OF_CHANNELS > 48u)
+ 549:Generated_Source\PSoC5/ScanComp_1.c ****             ScanComp_1_STATUS_OUT6_PTR,
+ 550:Generated_Source\PSoC5/ScanComp_1.c ****         #endif /* ScanComp_1_NUM_OF_CHANNELS > 48u */
+ 551:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 552:Generated_Source\PSoC5/ScanComp_1.c ****         #if(ScanComp_1_NUM_OF_CHANNELS > 56u)
+ 553:Generated_Source\PSoC5/ScanComp_1.c ****             ScanComp_1_STATUS_OUT7_PTR,
+ 554:Generated_Source\PSoC5/ScanComp_1.c ****         #endif /* ScanComp_1_NUM_OF_CHANNELS > 56u */
+ 555:Generated_Source\PSoC5/ScanComp_1.c ****     };
+ 556:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 557:Generated_Source\PSoC5/ScanComp_1.c ****     /* Identify block number by dividing by 8 */
+ 558:Generated_Source\PSoC5/ScanComp_1.c ****     blockNum = (channel >> 3u);
+ 571              		.loc 1 558 0
+ 572 000a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 573 000c DB08     		lsrs	r3, r3, #3
+ 574 000e FB73     		strb	r3, [r7, #15]
+ 559:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 560:Generated_Source\PSoC5/ScanComp_1.c ****     /* Identify maximum available channels for block */
+ 561:Generated_Source\PSoC5/ScanComp_1.c ****     chanPos = (uint8)((blockNum + 1u) << 3u);
+ 575              		.loc 1 561 0
+ 576 0010 FB7B     		ldrb	r3, [r7, #15]
+ 577 0012 0133     		adds	r3, r3, #1
+ 578 0014 DBB2     		uxtb	r3, r3
+ 579 0016 DB00     		lsls	r3, r3, #3
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccU9GXbc.s 			page 21
+
+
+ 580 0018 BB73     		strb	r3, [r7, #14]
+ 562:Generated_Source\PSoC5/ScanComp_1.c ****     
+ 563:Generated_Source\PSoC5/ScanComp_1.c ****     /* Identify channel position in the register */
+ 564:Generated_Source\PSoC5/ScanComp_1.c ****     chanPos = ScanComp_1_MSB_REG_BIT_HIGH >> ((chanPos - 1u) - channel);
+ 581              		.loc 1 564 0
+ 582 001a BA7B     		ldrb	r2, [r7, #14]	@ zero_extendqisi2
+ 583 001c FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 584 001e D31A     		subs	r3, r2, r3
+ 585 0020 013B     		subs	r3, r3, #1
+ 586 0022 1A46     		mov	r2, r3
+ 587 0024 8023     		movs	r3, #128
+ 588 0026 D340     		lsrs	r3, r3, r2
+ 589 0028 BB73     		strb	r3, [r7, #14]
+ 565:Generated_Source\PSoC5/ScanComp_1.c ****     
+ 566:Generated_Source\PSoC5/ScanComp_1.c ****     /* Input block int register & MSB bit shift */
+ 567:Generated_Source\PSoC5/ScanComp_1.c ****     compVal = ((uint8) * outputStatusRegs[blockNum]) & chanPos;
+ 590              		.loc 1 567 0
+ 591 002a 064B     		ldr	r3, .L36
+ 592 002c 1B78     		ldrb	r3, [r3]
+ 593 002e DAB2     		uxtb	r2, r3
+ 594 0030 BB7B     		ldrb	r3, [r7, #14]
+ 595 0032 1340     		ands	r3, r3, r2
+ 596 0034 7B73     		strb	r3, [r7, #13]
+ 568:Generated_Source\PSoC5/ScanComp_1.c **** 
+ 569:Generated_Source\PSoC5/ScanComp_1.c ****     return (compVal);
+ 597              		.loc 1 569 0
+ 598 0036 7B7B     		ldrb	r3, [r7, #13]	@ zero_extendqisi2
+ 570:Generated_Source\PSoC5/ScanComp_1.c **** }
+ 599              		.loc 1 570 0
+ 600 0038 1846     		mov	r0, r3
+ 601 003a 1437     		adds	r7, r7, #20
+ 602              		.cfi_def_cfa_offset 4
+ 603 003c BD46     		mov	sp, r7
+ 604              		.cfi_def_cfa_register 13
+ 605              		@ sp needed
+ 606 003e 5DF8047B 		ldr	r7, [sp], #4
+ 607              		.cfi_restore 7
+ 608              		.cfi_def_cfa_offset 0
+ 609 0042 7047     		bx	lr
+ 610              	.L37:
+ 611              		.align	2
+ 612              	.L36:
+ 613 0044 68640040 		.word	1073767528
+ 614              		.cfi_endproc
+ 615              	.LFE9:
+ 616              		.size	ScanComp_1_GetCompare, .-ScanComp_1_GetCompare
+ 617              		.section	.rodata
+ 618              		.align	2
+ 619              		.type	interruptStatusRegs.4882, %object
+ 620              		.size	interruptStatusRegs.4882, 4
+ 621              	interruptStatusRegs.4882:
+ 622 0004 68650040 		.word	1073767784
+ 623              		.align	2
+ 624              		.type	outputStatusRegs.4903, %object
+ 625              		.size	outputStatusRegs.4903, 4
+ 626              	outputStatusRegs.4903:
+ 627 0008 68640040 		.word	1073767528
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccU9GXbc.s 			page 22
+
+
+ 628              		.text
+ 629              	.Letext0:
+ 630              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
+ 631              		.section	.debug_info,"",%progbits
+ 632              	.Ldebug_info0:
+ 633 0000 03030000 		.4byte	0x303
+ 634 0004 0400     		.2byte	0x4
+ 635 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 636 000a 04       		.byte	0x4
+ 637 000b 01       		.uleb128 0x1
+ 638 000c 2E010000 		.4byte	.LASF41
+ 639 0010 01       		.byte	0x1
+ 640 0011 DA010000 		.4byte	.LASF42
+ 641 0015 77020000 		.4byte	.LASF43
+ 642 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 643 001d 00000000 		.4byte	0
+ 644 0021 00000000 		.4byte	.Ldebug_line0
+ 645 0025 02       		.uleb128 0x2
+ 646 0026 01       		.byte	0x1
+ 647 0027 06       		.byte	0x6
+ 648 0028 16030000 		.4byte	.LASF0
+ 649 002c 02       		.uleb128 0x2
+ 650 002d 01       		.byte	0x1
+ 651 002e 08       		.byte	0x8
+ 652 002f 9A000000 		.4byte	.LASF1
+ 653 0033 02       		.uleb128 0x2
+ 654 0034 02       		.byte	0x2
+ 655 0035 05       		.byte	0x5
+ 656 0036 C7020000 		.4byte	.LASF2
+ 657 003a 02       		.uleb128 0x2
+ 658 003b 02       		.byte	0x2
+ 659 003c 07       		.byte	0x7
+ 660 003d 3E000000 		.4byte	.LASF3
+ 661 0041 02       		.uleb128 0x2
+ 662 0042 04       		.byte	0x4
+ 663 0043 05       		.byte	0x5
+ 664 0044 08030000 		.4byte	.LASF4
+ 665 0048 02       		.uleb128 0x2
+ 666 0049 04       		.byte	0x4
+ 667 004a 07       		.byte	0x7
+ 668 004b CD000000 		.4byte	.LASF5
+ 669 004f 02       		.uleb128 0x2
+ 670 0050 08       		.byte	0x8
+ 671 0051 05       		.byte	0x5
+ 672 0052 69020000 		.4byte	.LASF6
+ 673 0056 02       		.uleb128 0x2
+ 674 0057 08       		.byte	0x8
+ 675 0058 07       		.byte	0x7
+ 676 0059 1F020000 		.4byte	.LASF7
+ 677 005d 03       		.uleb128 0x3
+ 678 005e 04       		.byte	0x4
+ 679 005f 05       		.byte	0x5
+ 680 0060 696E7400 		.ascii	"int\000"
+ 681 0064 02       		.uleb128 0x2
+ 682 0065 04       		.byte	0x4
+ 683 0066 07       		.byte	0x7
+ 684 0067 FE010000 		.4byte	.LASF8
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccU9GXbc.s 			page 23
+
+
+ 685 006b 04       		.uleb128 0x4
+ 686 006c DF000000 		.4byte	.LASF12
+ 687 0070 02       		.byte	0x2
+ 688 0071 9201     		.2byte	0x192
+ 689 0073 2C000000 		.4byte	0x2c
+ 690 0077 02       		.uleb128 0x2
+ 691 0078 04       		.byte	0x4
+ 692 0079 04       		.byte	0x4
+ 693 007a 7C000000 		.4byte	.LASF9
+ 694 007e 02       		.uleb128 0x2
+ 695 007f 08       		.byte	0x8
+ 696 0080 04       		.byte	0x4
+ 697 0081 BC010000 		.4byte	.LASF10
+ 698 0085 02       		.uleb128 0x2
+ 699 0086 01       		.byte	0x1
+ 700 0087 08       		.byte	0x8
+ 701 0088 11030000 		.4byte	.LASF11
+ 702 008c 04       		.uleb128 0x4
+ 703 008d A8000000 		.4byte	.LASF13
+ 704 0091 02       		.byte	0x2
+ 705 0092 3C02     		.2byte	0x23c
+ 706 0094 98000000 		.4byte	0x98
+ 707 0098 05       		.uleb128 0x5
+ 708 0099 6B000000 		.4byte	0x6b
+ 709 009d 02       		.uleb128 0x2
+ 710 009e 04       		.byte	0x4
+ 711 009f 07       		.byte	0x7
+ 712 00a0 50020000 		.4byte	.LASF14
+ 713 00a4 06       		.uleb128 0x6
+ 714 00a5 AD000000 		.4byte	.LASF15
+ 715 00a9 01       		.byte	0x1
+ 716 00aa 62       		.byte	0x62
+ 717 00ab 00000000 		.4byte	.LFB0
+ 718 00af 20000000 		.4byte	.LFE0-.LFB0
+ 719 00b3 01       		.uleb128 0x1
+ 720 00b4 9C       		.byte	0x9c
+ 721 00b5 06       		.uleb128 0x6
+ 722 00b6 CA010000 		.4byte	.LASF16
+ 723 00ba 01       		.byte	0x1
+ 724 00bb 7C       		.byte	0x7c
+ 725 00bc 00000000 		.4byte	.LFB1
+ 726 00c0 14000000 		.4byte	.LFE1-.LFB1
+ 727 00c4 01       		.uleb128 0x1
+ 728 00c5 9C       		.byte	0x9c
+ 729 00c6 06       		.uleb128 0x6
+ 730 00c7 59020000 		.4byte	.LASF17
+ 731 00cb 01       		.byte	0x1
+ 732 00cc A5       		.byte	0xa5
+ 733 00cd 00000000 		.4byte	.LFB2
+ 734 00d1 14000000 		.4byte	.LFE2-.LFB2
+ 735 00d5 01       		.uleb128 0x1
+ 736 00d6 9C       		.byte	0x9c
+ 737 00d7 07       		.uleb128 0x7
+ 738 00d8 19000000 		.4byte	.LASF18
+ 739 00dc 01       		.byte	0x1
+ 740 00dd C3       		.byte	0xc3
+ 741 00de 00000000 		.4byte	.LFB3
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccU9GXbc.s 			page 24
+
+
+ 742 00e2 5C000000 		.4byte	.LFE3-.LFB3
+ 743 00e6 01       		.uleb128 0x1
+ 744 00e7 9C       		.byte	0x9c
+ 745 00e8 FB000000 		.4byte	0xfb
+ 746 00ec 08       		.uleb128 0x8
+ 747 00ed BE000000 		.4byte	.LASF22
+ 748 00f1 01       		.byte	0x1
+ 749 00f2 C5       		.byte	0xc5
+ 750 00f3 6B000000 		.4byte	0x6b
+ 751 00f7 02       		.uleb128 0x2
+ 752 00f8 91       		.byte	0x91
+ 753 00f9 77       		.sleb128 -9
+ 754 00fa 00       		.byte	0
+ 755 00fb 09       		.uleb128 0x9
+ 756 00fc 0B020000 		.4byte	.LASF19
+ 757 0100 01       		.byte	0x1
+ 758 0101 1701     		.2byte	0x117
+ 759 0103 00000000 		.4byte	.LFB4
+ 760 0107 18000000 		.4byte	.LFE4-.LFB4
+ 761 010b 01       		.uleb128 0x1
+ 762 010c 9C       		.byte	0x9c
+ 763 010d 21010000 		.4byte	0x121
+ 764 0111 0A       		.uleb128 0xa
+ 765 0112 4A020000 		.4byte	.LASF20
+ 766 0116 01       		.byte	0x1
+ 767 0117 1701     		.2byte	0x117
+ 768 0119 6B000000 		.4byte	0x6b
+ 769 011d 02       		.uleb128 0x2
+ 770 011e 91       		.byte	0x91
+ 771 011f 77       		.sleb128 -9
+ 772 0120 00       		.byte	0
+ 773 0121 0B       		.uleb128 0xb
+ 774 0122 E5000000 		.4byte	.LASF26
+ 775 0126 01       		.byte	0x1
+ 776 0127 3101     		.2byte	0x131
+ 777 0129 6B000000 		.4byte	0x6b
+ 778 012d 00000000 		.4byte	.LFB5
+ 779 0131 8C000000 		.4byte	.LFE5-.LFB5
+ 780 0135 01       		.uleb128 0x1
+ 781 0136 9C       		.byte	0x9c
+ 782 0137 7B010000 		.4byte	0x17b
+ 783 013b 0A       		.uleb128 0xa
+ 784 013c FD020000 		.4byte	.LASF21
+ 785 0140 01       		.byte	0x1
+ 786 0141 3101     		.2byte	0x131
+ 787 0143 6B000000 		.4byte	0x6b
+ 788 0147 02       		.uleb128 0x2
+ 789 0148 91       		.byte	0x91
+ 790 0149 6F       		.sleb128 -17
+ 791 014a 0C       		.uleb128 0xc
+ 792 014b C3010000 		.4byte	.LASF23
+ 793 014f 01       		.byte	0x1
+ 794 0150 3301     		.2byte	0x133
+ 795 0152 6B000000 		.4byte	0x6b
+ 796 0156 02       		.uleb128 0x2
+ 797 0157 91       		.byte	0x91
+ 798 0158 77       		.sleb128 -9
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccU9GXbc.s 			page 25
+
+
+ 799 0159 0C       		.uleb128 0xc
+ 800 015a 75000000 		.4byte	.LASF24
+ 801 015e 01       		.byte	0x1
+ 802 015f 3601     		.2byte	0x136
+ 803 0161 6B000000 		.4byte	0x6b
+ 804 0165 02       		.uleb128 0x2
+ 805 0166 91       		.byte	0x91
+ 806 0167 76       		.sleb128 -10
+ 807 0168 0C       		.uleb128 0xc
+ 808 0169 36020000 		.4byte	.LASF25
+ 809 016d 01       		.byte	0x1
+ 810 016e 3901     		.2byte	0x139
+ 811 0170 96010000 		.4byte	0x196
+ 812 0174 05       		.uleb128 0x5
+ 813 0175 03       		.byte	0x3
+ 814 0176 04000000 		.4byte	interruptStatusRegs.4882
+ 815 017a 00       		.byte	0
+ 816 017b 0D       		.uleb128 0xd
+ 817 017c 8B010000 		.4byte	0x18b
+ 818 0180 8B010000 		.4byte	0x18b
+ 819 0184 0E       		.uleb128 0xe
+ 820 0185 9D000000 		.4byte	0x9d
+ 821 0189 00       		.byte	0
+ 822 018a 00       		.byte	0
+ 823 018b 0F       		.uleb128 0xf
+ 824 018c 04       		.byte	0x4
+ 825 018d 91010000 		.4byte	0x191
+ 826 0191 05       		.uleb128 0x5
+ 827 0192 2C000000 		.4byte	0x2c
+ 828 0196 10       		.uleb128 0x10
+ 829 0197 7B010000 		.4byte	0x17b
+ 830 019b 11       		.uleb128 0x11
+ 831 019c D1020000 		.4byte	.LASF27
+ 832 01a0 01       		.byte	0x1
+ 833 01a1 8901     		.2byte	0x189
+ 834 01a3 6B000000 		.4byte	0x6b
+ 835 01a7 00000000 		.4byte	.LFB6
+ 836 01ab 30000000 		.4byte	.LFE6-.LFB6
+ 837 01af 01       		.uleb128 0x1
+ 838 01b0 9C       		.byte	0x9c
+ 839 01b1 C5010000 		.4byte	0x1c5
+ 840 01b5 0A       		.uleb128 0xa
+ 841 01b6 FD020000 		.4byte	.LASF21
+ 842 01ba 01       		.byte	0x1
+ 843 01bb 8901     		.2byte	0x189
+ 844 01bd 6B000000 		.4byte	0x6b
+ 845 01c1 02       		.uleb128 0x2
+ 846 01c2 91       		.byte	0x91
+ 847 01c3 6F       		.sleb128 -17
+ 848 01c4 00       		.byte	0
+ 849 01c5 0B       		.uleb128 0xb
+ 850 01c6 12010000 		.4byte	.LASF28
+ 851 01ca 01       		.byte	0x1
+ 852 01cb A101     		.2byte	0x1a1
+ 853 01cd 6B000000 		.4byte	0x6b
+ 854 01d1 00000000 		.4byte	.LFB7
+ 855 01d5 58000000 		.4byte	.LFE7-.LFB7
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccU9GXbc.s 			page 26
+
+
+ 856 01d9 01       		.uleb128 0x1
+ 857 01da 9C       		.byte	0x9c
+ 858 01db 0D020000 		.4byte	0x20d
+ 859 01df 0A       		.uleb128 0xa
+ 860 01e0 FD020000 		.4byte	.LASF21
+ 861 01e4 01       		.byte	0x1
+ 862 01e5 A101     		.2byte	0x1a1
+ 863 01e7 6B000000 		.4byte	0x6b
+ 864 01eb 02       		.uleb128 0x2
+ 865 01ec 91       		.byte	0x91
+ 866 01ed 6F       		.sleb128 -17
+ 867 01ee 0C       		.uleb128 0xc
+ 868 01ef F5020000 		.4byte	.LASF29
+ 869 01f3 01       		.byte	0x1
+ 870 01f4 A401     		.2byte	0x1a4
+ 871 01f6 6B000000 		.4byte	0x6b
+ 872 01fa 02       		.uleb128 0x2
+ 873 01fb 91       		.byte	0x91
+ 874 01fc 77       		.sleb128 -9
+ 875 01fd 0C       		.uleb128 0xc
+ 876 01fe C3010000 		.4byte	.LASF23
+ 877 0202 01       		.byte	0x1
+ 878 0203 A701     		.2byte	0x1a7
+ 879 0205 6B000000 		.4byte	0x6b
+ 880 0209 02       		.uleb128 0x2
+ 881 020a 91       		.byte	0x91
+ 882 020b 76       		.sleb128 -10
+ 883 020c 00       		.byte	0
+ 884 020d 12       		.uleb128 0x12
+ 885 020e 51000000 		.4byte	.LASF30
+ 886 0212 01       		.byte	0x1
+ 887 0213 D601     		.2byte	0x1d6
+ 888 0215 00000000 		.4byte	.LFB8
+ 889 0219 54000000 		.4byte	.LFE8-.LFB8
+ 890 021d 01       		.uleb128 0x1
+ 891 021e 9C       		.byte	0x9c
+ 892 021f 60020000 		.4byte	0x260
+ 893 0223 0A       		.uleb128 0xa
+ 894 0224 FD020000 		.4byte	.LASF21
+ 895 0228 01       		.byte	0x1
+ 896 0229 D601     		.2byte	0x1d6
+ 897 022b 6B000000 		.4byte	0x6b
+ 898 022f 02       		.uleb128 0x2
+ 899 0230 91       		.byte	0x91
+ 900 0231 6F       		.sleb128 -17
+ 901 0232 0A       		.uleb128 0xa
+ 902 0233 B1020000 		.4byte	.LASF31
+ 903 0237 01       		.byte	0x1
+ 904 0238 D601     		.2byte	0x1d6
+ 905 023a 6B000000 		.4byte	0x6b
+ 906 023e 02       		.uleb128 0x2
+ 907 023f 91       		.byte	0x91
+ 908 0240 6E       		.sleb128 -18
+ 909 0241 0C       		.uleb128 0xc
+ 910 0242 00000000 		.4byte	.LASF32
+ 911 0246 01       		.byte	0x1
+ 912 0247 D901     		.2byte	0x1d9
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccU9GXbc.s 			page 27
+
+
+ 913 0249 6B000000 		.4byte	0x6b
+ 914 024d 02       		.uleb128 0x2
+ 915 024e 91       		.byte	0x91
+ 916 024f 77       		.sleb128 -9
+ 917 0250 0C       		.uleb128 0xc
+ 918 0251 F5020000 		.4byte	.LASF29
+ 919 0255 01       		.byte	0x1
+ 920 0256 DC01     		.2byte	0x1dc
+ 921 0258 6B000000 		.4byte	0x6b
+ 922 025c 02       		.uleb128 0x2
+ 923 025d 91       		.byte	0x91
+ 924 025e 76       		.sleb128 -10
+ 925 025f 00       		.byte	0
+ 926 0260 0B       		.uleb128 0xb
+ 927 0261 22030000 		.4byte	.LASF33
+ 928 0265 01       		.byte	0x1
+ 929 0266 0602     		.2byte	0x206
+ 930 0268 6B000000 		.4byte	0x6b
+ 931 026c 00000000 		.4byte	.LFB9
+ 932 0270 48000000 		.4byte	.LFE9-.LFB9
+ 933 0274 01       		.uleb128 0x1
+ 934 0275 9C       		.byte	0x9c
+ 935 0276 C9020000 		.4byte	0x2c9
+ 936 027a 0A       		.uleb128 0xa
+ 937 027b 11000000 		.4byte	.LASF34
+ 938 027f 01       		.byte	0x1
+ 939 0280 0602     		.2byte	0x206
+ 940 0282 6B000000 		.4byte	0x6b
+ 941 0286 02       		.uleb128 0x2
+ 942 0287 91       		.byte	0x91
+ 943 0288 6F       		.sleb128 -17
+ 944 0289 0C       		.uleb128 0xc
+ 945 028a 6D000000 		.4byte	.LASF35
+ 946 028e 01       		.byte	0x1
+ 947 028f 0802     		.2byte	0x208
+ 948 0291 6B000000 		.4byte	0x6b
+ 949 0295 02       		.uleb128 0x2
+ 950 0296 91       		.byte	0x91
+ 951 0297 75       		.sleb128 -11
+ 952 0298 0C       		.uleb128 0xc
+ 953 0299 38030000 		.4byte	.LASF36
+ 954 029d 01       		.byte	0x1
+ 955 029e 0902     		.2byte	0x209
+ 956 02a0 6B000000 		.4byte	0x6b
+ 957 02a4 02       		.uleb128 0x2
+ 958 02a5 91       		.byte	0x91
+ 959 02a6 76       		.sleb128 -10
+ 960 02a7 0C       		.uleb128 0xc
+ 961 02a8 08000000 		.4byte	.LASF37
+ 962 02ac 01       		.byte	0x1
+ 963 02ad 0A02     		.2byte	0x20a
+ 964 02af 6B000000 		.4byte	0x6b
+ 965 02b3 02       		.uleb128 0x2
+ 966 02b4 91       		.byte	0x91
+ 967 02b5 77       		.sleb128 -9
+ 968 02b6 0C       		.uleb128 0xc
+ 969 02b7 B6020000 		.4byte	.LASF38
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccU9GXbc.s 			page 28
+
+
+ 970 02bb 01       		.byte	0x1
+ 971 02bc 0C02     		.2byte	0x20c
+ 972 02be C9020000 		.4byte	0x2c9
+ 973 02c2 05       		.uleb128 0x5
+ 974 02c3 03       		.byte	0x3
+ 975 02c4 08000000 		.4byte	outputStatusRegs.4903
+ 976 02c8 00       		.byte	0
+ 977 02c9 10       		.uleb128 0x10
+ 978 02ca 7B010000 		.4byte	0x17b
+ 979 02ce 08       		.uleb128 0x8
+ 980 02cf 03010000 		.4byte	.LASF39
+ 981 02d3 01       		.byte	0x1
+ 982 02d4 2C       		.byte	0x2c
+ 983 02d5 6B000000 		.4byte	0x6b
+ 984 02d9 05       		.uleb128 0x5
+ 985 02da 03       		.byte	0x3
+ 986 02db 00000000 		.4byte	storeStatusReg
+ 987 02df 08       		.uleb128 0x8
+ 988 02e0 82000000 		.4byte	.LASF40
+ 989 02e4 01       		.byte	0x1
+ 990 02e5 31       		.byte	0x31
+ 991 02e6 F0020000 		.4byte	0x2f0
+ 992 02ea 05       		.uleb128 0x5
+ 993 02eb 03       		.byte	0x3
+ 994 02ec 00000000 		.4byte	interruptStatusMaskRegs
+ 995 02f0 10       		.uleb128 0x10
+ 996 02f1 7B010000 		.4byte	0x17b
+ 997 02f5 13       		.uleb128 0x13
+ 998 02f6 2B000000 		.4byte	.LASF44
+ 999 02fa 01       		.byte	0x1
+ 1000 02fb 2F       		.byte	0x2f
+ 1001 02fc 6B000000 		.4byte	0x6b
+ 1002 0300 05       		.uleb128 0x5
+ 1003 0301 03       		.byte	0x3
+ 1004 0302 00000000 		.4byte	ScanComp_1_initVar
+ 1005 0306 00       		.byte	0
+ 1006              		.section	.debug_abbrev,"",%progbits
+ 1007              	.Ldebug_abbrev0:
+ 1008 0000 01       		.uleb128 0x1
+ 1009 0001 11       		.uleb128 0x11
+ 1010 0002 01       		.byte	0x1
+ 1011 0003 25       		.uleb128 0x25
+ 1012 0004 0E       		.uleb128 0xe
+ 1013 0005 13       		.uleb128 0x13
+ 1014 0006 0B       		.uleb128 0xb
+ 1015 0007 03       		.uleb128 0x3
+ 1016 0008 0E       		.uleb128 0xe
+ 1017 0009 1B       		.uleb128 0x1b
+ 1018 000a 0E       		.uleb128 0xe
+ 1019 000b 55       		.uleb128 0x55
+ 1020 000c 17       		.uleb128 0x17
+ 1021 000d 11       		.uleb128 0x11
+ 1022 000e 01       		.uleb128 0x1
+ 1023 000f 10       		.uleb128 0x10
+ 1024 0010 17       		.uleb128 0x17
+ 1025 0011 00       		.byte	0
+ 1026 0012 00       		.byte	0
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccU9GXbc.s 			page 29
+
+
+ 1027 0013 02       		.uleb128 0x2
+ 1028 0014 24       		.uleb128 0x24
+ 1029 0015 00       		.byte	0
+ 1030 0016 0B       		.uleb128 0xb
+ 1031 0017 0B       		.uleb128 0xb
+ 1032 0018 3E       		.uleb128 0x3e
+ 1033 0019 0B       		.uleb128 0xb
+ 1034 001a 03       		.uleb128 0x3
+ 1035 001b 0E       		.uleb128 0xe
+ 1036 001c 00       		.byte	0
+ 1037 001d 00       		.byte	0
+ 1038 001e 03       		.uleb128 0x3
+ 1039 001f 24       		.uleb128 0x24
+ 1040 0020 00       		.byte	0
+ 1041 0021 0B       		.uleb128 0xb
+ 1042 0022 0B       		.uleb128 0xb
+ 1043 0023 3E       		.uleb128 0x3e
+ 1044 0024 0B       		.uleb128 0xb
+ 1045 0025 03       		.uleb128 0x3
+ 1046 0026 08       		.uleb128 0x8
+ 1047 0027 00       		.byte	0
+ 1048 0028 00       		.byte	0
+ 1049 0029 04       		.uleb128 0x4
+ 1050 002a 16       		.uleb128 0x16
+ 1051 002b 00       		.byte	0
+ 1052 002c 03       		.uleb128 0x3
+ 1053 002d 0E       		.uleb128 0xe
+ 1054 002e 3A       		.uleb128 0x3a
+ 1055 002f 0B       		.uleb128 0xb
+ 1056 0030 3B       		.uleb128 0x3b
+ 1057 0031 05       		.uleb128 0x5
+ 1058 0032 49       		.uleb128 0x49
+ 1059 0033 13       		.uleb128 0x13
+ 1060 0034 00       		.byte	0
+ 1061 0035 00       		.byte	0
+ 1062 0036 05       		.uleb128 0x5
+ 1063 0037 35       		.uleb128 0x35
+ 1064 0038 00       		.byte	0
+ 1065 0039 49       		.uleb128 0x49
+ 1066 003a 13       		.uleb128 0x13
+ 1067 003b 00       		.byte	0
+ 1068 003c 00       		.byte	0
+ 1069 003d 06       		.uleb128 0x6
+ 1070 003e 2E       		.uleb128 0x2e
+ 1071 003f 00       		.byte	0
+ 1072 0040 3F       		.uleb128 0x3f
+ 1073 0041 19       		.uleb128 0x19
+ 1074 0042 03       		.uleb128 0x3
+ 1075 0043 0E       		.uleb128 0xe
+ 1076 0044 3A       		.uleb128 0x3a
+ 1077 0045 0B       		.uleb128 0xb
+ 1078 0046 3B       		.uleb128 0x3b
+ 1079 0047 0B       		.uleb128 0xb
+ 1080 0048 27       		.uleb128 0x27
+ 1081 0049 19       		.uleb128 0x19
+ 1082 004a 11       		.uleb128 0x11
+ 1083 004b 01       		.uleb128 0x1
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccU9GXbc.s 			page 30
+
+
+ 1084 004c 12       		.uleb128 0x12
+ 1085 004d 06       		.uleb128 0x6
+ 1086 004e 40       		.uleb128 0x40
+ 1087 004f 18       		.uleb128 0x18
+ 1088 0050 9642     		.uleb128 0x2116
+ 1089 0052 19       		.uleb128 0x19
+ 1090 0053 00       		.byte	0
+ 1091 0054 00       		.byte	0
+ 1092 0055 07       		.uleb128 0x7
+ 1093 0056 2E       		.uleb128 0x2e
+ 1094 0057 01       		.byte	0x1
+ 1095 0058 3F       		.uleb128 0x3f
+ 1096 0059 19       		.uleb128 0x19
+ 1097 005a 03       		.uleb128 0x3
+ 1098 005b 0E       		.uleb128 0xe
+ 1099 005c 3A       		.uleb128 0x3a
+ 1100 005d 0B       		.uleb128 0xb
+ 1101 005e 3B       		.uleb128 0x3b
+ 1102 005f 0B       		.uleb128 0xb
+ 1103 0060 27       		.uleb128 0x27
+ 1104 0061 19       		.uleb128 0x19
+ 1105 0062 11       		.uleb128 0x11
+ 1106 0063 01       		.uleb128 0x1
+ 1107 0064 12       		.uleb128 0x12
+ 1108 0065 06       		.uleb128 0x6
+ 1109 0066 40       		.uleb128 0x40
+ 1110 0067 18       		.uleb128 0x18
+ 1111 0068 9642     		.uleb128 0x2116
+ 1112 006a 19       		.uleb128 0x19
+ 1113 006b 01       		.uleb128 0x1
+ 1114 006c 13       		.uleb128 0x13
+ 1115 006d 00       		.byte	0
+ 1116 006e 00       		.byte	0
+ 1117 006f 08       		.uleb128 0x8
+ 1118 0070 34       		.uleb128 0x34
+ 1119 0071 00       		.byte	0
+ 1120 0072 03       		.uleb128 0x3
+ 1121 0073 0E       		.uleb128 0xe
+ 1122 0074 3A       		.uleb128 0x3a
+ 1123 0075 0B       		.uleb128 0xb
+ 1124 0076 3B       		.uleb128 0x3b
+ 1125 0077 0B       		.uleb128 0xb
+ 1126 0078 49       		.uleb128 0x49
+ 1127 0079 13       		.uleb128 0x13
+ 1128 007a 02       		.uleb128 0x2
+ 1129 007b 18       		.uleb128 0x18
+ 1130 007c 00       		.byte	0
+ 1131 007d 00       		.byte	0
+ 1132 007e 09       		.uleb128 0x9
+ 1133 007f 2E       		.uleb128 0x2e
+ 1134 0080 01       		.byte	0x1
+ 1135 0081 3F       		.uleb128 0x3f
+ 1136 0082 19       		.uleb128 0x19
+ 1137 0083 03       		.uleb128 0x3
+ 1138 0084 0E       		.uleb128 0xe
+ 1139 0085 3A       		.uleb128 0x3a
+ 1140 0086 0B       		.uleb128 0xb
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccU9GXbc.s 			page 31
+
+
+ 1141 0087 3B       		.uleb128 0x3b
+ 1142 0088 05       		.uleb128 0x5
+ 1143 0089 27       		.uleb128 0x27
+ 1144 008a 19       		.uleb128 0x19
+ 1145 008b 11       		.uleb128 0x11
+ 1146 008c 01       		.uleb128 0x1
+ 1147 008d 12       		.uleb128 0x12
+ 1148 008e 06       		.uleb128 0x6
+ 1149 008f 40       		.uleb128 0x40
+ 1150 0090 18       		.uleb128 0x18
+ 1151 0091 9642     		.uleb128 0x2116
+ 1152 0093 19       		.uleb128 0x19
+ 1153 0094 01       		.uleb128 0x1
+ 1154 0095 13       		.uleb128 0x13
+ 1155 0096 00       		.byte	0
+ 1156 0097 00       		.byte	0
+ 1157 0098 0A       		.uleb128 0xa
+ 1158 0099 05       		.uleb128 0x5
+ 1159 009a 00       		.byte	0
+ 1160 009b 03       		.uleb128 0x3
+ 1161 009c 0E       		.uleb128 0xe
+ 1162 009d 3A       		.uleb128 0x3a
+ 1163 009e 0B       		.uleb128 0xb
+ 1164 009f 3B       		.uleb128 0x3b
+ 1165 00a0 05       		.uleb128 0x5
+ 1166 00a1 49       		.uleb128 0x49
+ 1167 00a2 13       		.uleb128 0x13
+ 1168 00a3 02       		.uleb128 0x2
+ 1169 00a4 18       		.uleb128 0x18
+ 1170 00a5 00       		.byte	0
+ 1171 00a6 00       		.byte	0
+ 1172 00a7 0B       		.uleb128 0xb
+ 1173 00a8 2E       		.uleb128 0x2e
+ 1174 00a9 01       		.byte	0x1
+ 1175 00aa 3F       		.uleb128 0x3f
+ 1176 00ab 19       		.uleb128 0x19
+ 1177 00ac 03       		.uleb128 0x3
+ 1178 00ad 0E       		.uleb128 0xe
+ 1179 00ae 3A       		.uleb128 0x3a
+ 1180 00af 0B       		.uleb128 0xb
+ 1181 00b0 3B       		.uleb128 0x3b
+ 1182 00b1 05       		.uleb128 0x5
+ 1183 00b2 27       		.uleb128 0x27
+ 1184 00b3 19       		.uleb128 0x19
+ 1185 00b4 49       		.uleb128 0x49
+ 1186 00b5 13       		.uleb128 0x13
+ 1187 00b6 11       		.uleb128 0x11
+ 1188 00b7 01       		.uleb128 0x1
+ 1189 00b8 12       		.uleb128 0x12
+ 1190 00b9 06       		.uleb128 0x6
+ 1191 00ba 40       		.uleb128 0x40
+ 1192 00bb 18       		.uleb128 0x18
+ 1193 00bc 9742     		.uleb128 0x2117
+ 1194 00be 19       		.uleb128 0x19
+ 1195 00bf 01       		.uleb128 0x1
+ 1196 00c0 13       		.uleb128 0x13
+ 1197 00c1 00       		.byte	0
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccU9GXbc.s 			page 32
+
+
+ 1198 00c2 00       		.byte	0
+ 1199 00c3 0C       		.uleb128 0xc
+ 1200 00c4 34       		.uleb128 0x34
+ 1201 00c5 00       		.byte	0
+ 1202 00c6 03       		.uleb128 0x3
+ 1203 00c7 0E       		.uleb128 0xe
+ 1204 00c8 3A       		.uleb128 0x3a
+ 1205 00c9 0B       		.uleb128 0xb
+ 1206 00ca 3B       		.uleb128 0x3b
+ 1207 00cb 05       		.uleb128 0x5
+ 1208 00cc 49       		.uleb128 0x49
+ 1209 00cd 13       		.uleb128 0x13
+ 1210 00ce 02       		.uleb128 0x2
+ 1211 00cf 18       		.uleb128 0x18
+ 1212 00d0 00       		.byte	0
+ 1213 00d1 00       		.byte	0
+ 1214 00d2 0D       		.uleb128 0xd
+ 1215 00d3 01       		.uleb128 0x1
+ 1216 00d4 01       		.byte	0x1
+ 1217 00d5 49       		.uleb128 0x49
+ 1218 00d6 13       		.uleb128 0x13
+ 1219 00d7 01       		.uleb128 0x1
+ 1220 00d8 13       		.uleb128 0x13
+ 1221 00d9 00       		.byte	0
+ 1222 00da 00       		.byte	0
+ 1223 00db 0E       		.uleb128 0xe
+ 1224 00dc 21       		.uleb128 0x21
+ 1225 00dd 00       		.byte	0
+ 1226 00de 49       		.uleb128 0x49
+ 1227 00df 13       		.uleb128 0x13
+ 1228 00e0 2F       		.uleb128 0x2f
+ 1229 00e1 0B       		.uleb128 0xb
+ 1230 00e2 00       		.byte	0
+ 1231 00e3 00       		.byte	0
+ 1232 00e4 0F       		.uleb128 0xf
+ 1233 00e5 0F       		.uleb128 0xf
+ 1234 00e6 00       		.byte	0
+ 1235 00e7 0B       		.uleb128 0xb
+ 1236 00e8 0B       		.uleb128 0xb
+ 1237 00e9 49       		.uleb128 0x49
+ 1238 00ea 13       		.uleb128 0x13
+ 1239 00eb 00       		.byte	0
+ 1240 00ec 00       		.byte	0
+ 1241 00ed 10       		.uleb128 0x10
+ 1242 00ee 26       		.uleb128 0x26
+ 1243 00ef 00       		.byte	0
+ 1244 00f0 49       		.uleb128 0x49
+ 1245 00f1 13       		.uleb128 0x13
+ 1246 00f2 00       		.byte	0
+ 1247 00f3 00       		.byte	0
+ 1248 00f4 11       		.uleb128 0x11
+ 1249 00f5 2E       		.uleb128 0x2e
+ 1250 00f6 01       		.byte	0x1
+ 1251 00f7 3F       		.uleb128 0x3f
+ 1252 00f8 19       		.uleb128 0x19
+ 1253 00f9 03       		.uleb128 0x3
+ 1254 00fa 0E       		.uleb128 0xe
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccU9GXbc.s 			page 33
+
+
+ 1255 00fb 3A       		.uleb128 0x3a
+ 1256 00fc 0B       		.uleb128 0xb
+ 1257 00fd 3B       		.uleb128 0x3b
+ 1258 00fe 05       		.uleb128 0x5
+ 1259 00ff 27       		.uleb128 0x27
+ 1260 0100 19       		.uleb128 0x19
+ 1261 0101 49       		.uleb128 0x49
+ 1262 0102 13       		.uleb128 0x13
+ 1263 0103 11       		.uleb128 0x11
+ 1264 0104 01       		.uleb128 0x1
+ 1265 0105 12       		.uleb128 0x12
+ 1266 0106 06       		.uleb128 0x6
+ 1267 0107 40       		.uleb128 0x40
+ 1268 0108 18       		.uleb128 0x18
+ 1269 0109 9642     		.uleb128 0x2116
+ 1270 010b 19       		.uleb128 0x19
+ 1271 010c 01       		.uleb128 0x1
+ 1272 010d 13       		.uleb128 0x13
+ 1273 010e 00       		.byte	0
+ 1274 010f 00       		.byte	0
+ 1275 0110 12       		.uleb128 0x12
+ 1276 0111 2E       		.uleb128 0x2e
+ 1277 0112 01       		.byte	0x1
+ 1278 0113 3F       		.uleb128 0x3f
+ 1279 0114 19       		.uleb128 0x19
+ 1280 0115 03       		.uleb128 0x3
+ 1281 0116 0E       		.uleb128 0xe
+ 1282 0117 3A       		.uleb128 0x3a
+ 1283 0118 0B       		.uleb128 0xb
+ 1284 0119 3B       		.uleb128 0x3b
+ 1285 011a 05       		.uleb128 0x5
+ 1286 011b 27       		.uleb128 0x27
+ 1287 011c 19       		.uleb128 0x19
+ 1288 011d 11       		.uleb128 0x11
+ 1289 011e 01       		.uleb128 0x1
+ 1290 011f 12       		.uleb128 0x12
+ 1291 0120 06       		.uleb128 0x6
+ 1292 0121 40       		.uleb128 0x40
+ 1293 0122 18       		.uleb128 0x18
+ 1294 0123 9742     		.uleb128 0x2117
+ 1295 0125 19       		.uleb128 0x19
+ 1296 0126 01       		.uleb128 0x1
+ 1297 0127 13       		.uleb128 0x13
+ 1298 0128 00       		.byte	0
+ 1299 0129 00       		.byte	0
+ 1300 012a 13       		.uleb128 0x13
+ 1301 012b 34       		.uleb128 0x34
+ 1302 012c 00       		.byte	0
+ 1303 012d 03       		.uleb128 0x3
+ 1304 012e 0E       		.uleb128 0xe
+ 1305 012f 3A       		.uleb128 0x3a
+ 1306 0130 0B       		.uleb128 0xb
+ 1307 0131 3B       		.uleb128 0x3b
+ 1308 0132 0B       		.uleb128 0xb
+ 1309 0133 49       		.uleb128 0x49
+ 1310 0134 13       		.uleb128 0x13
+ 1311 0135 3F       		.uleb128 0x3f
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccU9GXbc.s 			page 34
+
+
+ 1312 0136 19       		.uleb128 0x19
+ 1313 0137 02       		.uleb128 0x2
+ 1314 0138 18       		.uleb128 0x18
+ 1315 0139 00       		.byte	0
+ 1316 013a 00       		.byte	0
+ 1317 013b 00       		.byte	0
+ 1318              		.section	.debug_aranges,"",%progbits
+ 1319 0000 64000000 		.4byte	0x64
+ 1320 0004 0200     		.2byte	0x2
+ 1321 0006 00000000 		.4byte	.Ldebug_info0
+ 1322 000a 04       		.byte	0x4
+ 1323 000b 00       		.byte	0
+ 1324 000c 0000     		.2byte	0
+ 1325 000e 0000     		.2byte	0
+ 1326 0010 00000000 		.4byte	.LFB0
+ 1327 0014 20000000 		.4byte	.LFE0-.LFB0
+ 1328 0018 00000000 		.4byte	.LFB1
+ 1329 001c 14000000 		.4byte	.LFE1-.LFB1
+ 1330 0020 00000000 		.4byte	.LFB2
+ 1331 0024 14000000 		.4byte	.LFE2-.LFB2
+ 1332 0028 00000000 		.4byte	.LFB3
+ 1333 002c 5C000000 		.4byte	.LFE3-.LFB3
+ 1334 0030 00000000 		.4byte	.LFB4
+ 1335 0034 18000000 		.4byte	.LFE4-.LFB4
+ 1336 0038 00000000 		.4byte	.LFB5
+ 1337 003c 8C000000 		.4byte	.LFE5-.LFB5
+ 1338 0040 00000000 		.4byte	.LFB6
+ 1339 0044 30000000 		.4byte	.LFE6-.LFB6
+ 1340 0048 00000000 		.4byte	.LFB7
+ 1341 004c 58000000 		.4byte	.LFE7-.LFB7
+ 1342 0050 00000000 		.4byte	.LFB8
+ 1343 0054 54000000 		.4byte	.LFE8-.LFB8
+ 1344 0058 00000000 		.4byte	.LFB9
+ 1345 005c 48000000 		.4byte	.LFE9-.LFB9
+ 1346 0060 00000000 		.4byte	0
+ 1347 0064 00000000 		.4byte	0
+ 1348              		.section	.debug_ranges,"",%progbits
+ 1349              	.Ldebug_ranges0:
+ 1350 0000 00000000 		.4byte	.LFB0
+ 1351 0004 20000000 		.4byte	.LFE0
+ 1352 0008 00000000 		.4byte	.LFB1
+ 1353 000c 14000000 		.4byte	.LFE1
+ 1354 0010 00000000 		.4byte	.LFB2
+ 1355 0014 14000000 		.4byte	.LFE2
+ 1356 0018 00000000 		.4byte	.LFB3
+ 1357 001c 5C000000 		.4byte	.LFE3
+ 1358 0020 00000000 		.4byte	.LFB4
+ 1359 0024 18000000 		.4byte	.LFE4
+ 1360 0028 00000000 		.4byte	.LFB5
+ 1361 002c 8C000000 		.4byte	.LFE5
+ 1362 0030 00000000 		.4byte	.LFB6
+ 1363 0034 30000000 		.4byte	.LFE6
+ 1364 0038 00000000 		.4byte	.LFB7
+ 1365 003c 58000000 		.4byte	.LFE7
+ 1366 0040 00000000 		.4byte	.LFB8
+ 1367 0044 54000000 		.4byte	.LFE8
+ 1368 0048 00000000 		.4byte	.LFB9
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccU9GXbc.s 			page 35
+
+
+ 1369 004c 48000000 		.4byte	.LFE9
+ 1370 0050 00000000 		.4byte	0
+ 1371 0054 00000000 		.4byte	0
+ 1372              		.section	.debug_line,"",%progbits
+ 1373              	.Ldebug_line0:
+ 1374 0000 37010000 		.section	.debug_str,"MS",%progbits,1
+ 1374      02004700 
+ 1374      00000201 
+ 1374      FB0E0D00 
+ 1374      01010101 
+ 1375              	.LASF32:
+ 1376 0000 6D61736B 		.ascii	"maskLsb\000"
+ 1376      4C736200 
+ 1377              	.LASF37:
+ 1378 0008 626C6F63 		.ascii	"blockNum\000"
+ 1378      6B4E756D 
+ 1378      00
+ 1379              	.LASF34:
+ 1380 0011 6368616E 		.ascii	"channel\000"
+ 1380      6E656C00 
+ 1381              	.LASF18:
+ 1382 0019 5363616E 		.ascii	"ScanComp_1_Enable\000"
+ 1382      436F6D70 
+ 1382      5F315F45 
+ 1382      6E61626C 
+ 1382      6500
+ 1383              	.LASF44:
+ 1384 002b 5363616E 		.ascii	"ScanComp_1_initVar\000"
+ 1384      436F6D70 
+ 1384      5F315F69 
+ 1384      6E697456 
+ 1384      617200
+ 1385              	.LASF3:
+ 1386 003e 73686F72 		.ascii	"short unsigned int\000"
+ 1386      7420756E 
+ 1386      7369676E 
+ 1386      65642069 
+ 1386      6E7400
+ 1387              	.LASF30:
+ 1388 0051 5363616E 		.ascii	"ScanComp_1_SetInterruptMask\000"
+ 1388      436F6D70 
+ 1388      5F315F53 
+ 1388      6574496E 
+ 1388      74657272 
+ 1389              	.LASF35:
+ 1390 006d 636F6D70 		.ascii	"compVal\000"
+ 1390      56616C00 
+ 1391              	.LASF24:
+ 1392 0075 696E744D 		.ascii	"intMsb\000"
+ 1392      736200
+ 1393              	.LASF9:
+ 1394 007c 666C6F61 		.ascii	"float\000"
+ 1394      7400
+ 1395              	.LASF40:
+ 1396 0082 696E7465 		.ascii	"interruptStatusMaskRegs\000"
+ 1396      72727570 
+ 1396      74537461 
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccU9GXbc.s 			page 36
+
+
+ 1396      7475734D 
+ 1396      61736B52 
+ 1397              	.LASF1:
+ 1398 009a 756E7369 		.ascii	"unsigned char\000"
+ 1398      676E6564 
+ 1398      20636861 
+ 1398      7200
+ 1399              	.LASF13:
+ 1400 00a8 72656738 		.ascii	"reg8\000"
+ 1400      00
+ 1401              	.LASF15:
+ 1402 00ad 5363616E 		.ascii	"ScanComp_1_Start\000"
+ 1402      436F6D70 
+ 1402      5F315F53 
+ 1402      74617274 
+ 1402      00
+ 1403              	.LASF22:
+ 1404 00be 696E7465 		.ascii	"interruptState\000"
+ 1404      72727570 
+ 1404      74537461 
+ 1404      746500
+ 1405              	.LASF5:
+ 1406 00cd 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1406      20756E73 
+ 1406      69676E65 
+ 1406      6420696E 
+ 1406      7400
+ 1407              	.LASF12:
+ 1408 00df 75696E74 		.ascii	"uint8\000"
+ 1408      3800
+ 1409              	.LASF26:
+ 1410 00e5 5363616E 		.ascii	"ScanComp_1_GetInterruptSource\000"
+ 1410      436F6D70 
+ 1410      5F315F47 
+ 1410      6574496E 
+ 1410      74657272 
+ 1411              	.LASF39:
+ 1412 0103 73746F72 		.ascii	"storeStatusReg\000"
+ 1412      65537461 
+ 1412      74757352 
+ 1412      656700
+ 1413              	.LASF28:
+ 1414 0112 5363616E 		.ascii	"ScanComp_1_GetInterruptMask\000"
+ 1414      436F6D70 
+ 1414      5F315F47 
+ 1414      6574496E 
+ 1414      74657272 
+ 1415              	.LASF41:
+ 1416 012e 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 1416      4320342E 
+ 1416      392E3320 
+ 1416      32303135 
+ 1416      30333033 
+ 1417 0161 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 1417      20726576 
+ 1417      6973696F 
+ 1417      6E203232 
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccU9GXbc.s 			page 37
+
+
+ 1417      31323230 
+ 1418 0194 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 1418      66756E63 
+ 1418      74696F6E 
+ 1418      2D736563 
+ 1418      74696F6E 
+ 1419              	.LASF10:
+ 1420 01bc 646F7562 		.ascii	"double\000"
+ 1420      6C6500
+ 1421              	.LASF23:
+ 1422 01c3 696E7453 		.ascii	"intSrc\000"
+ 1422      726300
+ 1423              	.LASF16:
+ 1424 01ca 5363616E 		.ascii	"ScanComp_1_Init\000"
+ 1424      436F6D70 
+ 1424      5F315F49 
+ 1424      6E697400 
+ 1425              	.LASF42:
+ 1426 01da 47656E65 		.ascii	"Generated_Source\\PSoC5\\ScanComp_1.c\000"
+ 1426      72617465 
+ 1426      645F536F 
+ 1426      75726365 
+ 1426      5C50536F 
+ 1427              	.LASF8:
+ 1428 01fe 756E7369 		.ascii	"unsigned int\000"
+ 1428      676E6564 
+ 1428      20696E74 
+ 1428      00
+ 1429              	.LASF19:
+ 1430 020b 5363616E 		.ascii	"ScanComp_1_SetSpeed\000"
+ 1430      436F6D70 
+ 1430      5F315F53 
+ 1430      65745370 
+ 1430      65656400 
+ 1431              	.LASF7:
+ 1432 021f 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1432      206C6F6E 
+ 1432      6720756E 
+ 1432      7369676E 
+ 1432      65642069 
+ 1433              	.LASF25:
+ 1434 0236 696E7465 		.ascii	"interruptStatusRegs\000"
+ 1434      72727570 
+ 1434      74537461 
+ 1434      74757352 
+ 1434      65677300 
+ 1435              	.LASF20:
+ 1436 024a 73706565 		.ascii	"speed\000"
+ 1436      6400
+ 1437              	.LASF14:
+ 1438 0250 73697A65 		.ascii	"sizetype\000"
+ 1438      74797065 
+ 1438      00
+ 1439              	.LASF17:
+ 1440 0259 5363616E 		.ascii	"ScanComp_1_Stop\000"
+ 1440      436F6D70 
+ 1440      5F315F53 
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccU9GXbc.s 			page 38
+
+
+ 1440      746F7000 
+ 1441              	.LASF6:
+ 1442 0269 6C6F6E67 		.ascii	"long long int\000"
+ 1442      206C6F6E 
+ 1442      6720696E 
+ 1442      7400
+ 1443              	.LASF43:
+ 1444 0277 433A5C55 		.ascii	"C:\\Users\\ben\\Documents\\PSoC Creator\\DACTEST\\A"
+ 1444      73657273 
+ 1444      5C62656E 
+ 1444      5C446F63 
+ 1444      756D656E 
+ 1445 02a4 44435F44 		.ascii	"DC_DAC.cydsn\000"
+ 1445      41432E63 
+ 1445      7964736E 
+ 1445      00
+ 1446              	.LASF31:
+ 1447 02b1 6D61736B 		.ascii	"mask\000"
+ 1447      00
+ 1448              	.LASF38:
+ 1449 02b6 6F757470 		.ascii	"outputStatusRegs\000"
+ 1449      75745374 
+ 1449      61747573 
+ 1449      52656773 
+ 1449      00
+ 1450              	.LASF2:
+ 1451 02c7 73686F72 		.ascii	"short int\000"
+ 1451      7420696E 
+ 1451      7400
+ 1452              	.LASF27:
+ 1453 02d1 5363616E 		.ascii	"ScanComp_1_GetInterruptSourceMasked\000"
+ 1453      436F6D70 
+ 1453      5F315F47 
+ 1453      6574496E 
+ 1453      74657272 
+ 1454              	.LASF29:
+ 1455 02f5 6D61736B 		.ascii	"maskMsb\000"
+ 1455      4D736200 
+ 1456              	.LASF21:
+ 1457 02fd 696E7075 		.ascii	"inputBlock\000"
+ 1457      74426C6F 
+ 1457      636B00
+ 1458              	.LASF4:
+ 1459 0308 6C6F6E67 		.ascii	"long int\000"
+ 1459      20696E74 
+ 1459      00
+ 1460              	.LASF11:
+ 1461 0311 63686172 		.ascii	"char\000"
+ 1461      00
+ 1462              	.LASF0:
+ 1463 0316 7369676E 		.ascii	"signed char\000"
+ 1463      65642063 
+ 1463      68617200 
+ 1464              	.LASF33:
+ 1465 0322 5363616E 		.ascii	"ScanComp_1_GetCompare\000"
+ 1465      436F6D70 
+ 1465      5F315F47 
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccU9GXbc.s 			page 39
+
+
+ 1465      6574436F 
+ 1465      6D706172 
+ 1466              	.LASF36:
+ 1467 0338 6368616E 		.ascii	"chanPos\000"
+ 1467      506F7300 
+ 1468              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

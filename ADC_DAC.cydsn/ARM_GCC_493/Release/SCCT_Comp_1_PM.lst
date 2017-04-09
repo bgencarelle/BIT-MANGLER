@@ -1,0 +1,657 @@
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cc0FCuts.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"SCCT_Comp_1_PM.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.bss
+  19              		.align	2
+  20              	SCCT_Comp_1_backup:
+  21 0000 00       		.space	1
+  22 0001 000000   		.section	.text.SCCT_Comp_1_Sleep,"ax",%progbits
+  23              		.align	2
+  24              		.global	SCCT_Comp_1_Sleep
+  25              		.thumb
+  26              		.thumb_func
+  27              		.type	SCCT_Comp_1_Sleep, %function
+  28              	SCCT_Comp_1_Sleep:
+  29              	.LFB0:
+  30              		.file 1 "Generated_Source\\PSoC5\\SCCT_Comp_1_PM.c"
+   1:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** /*******************************************************************************
+   2:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** * File Name: SCCT_Comp_1_PM.c
+   3:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** * Version 1.0
+   4:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** *
+   5:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** * Description:
+   6:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** *  This file provides the power manager source code to the API for SCCT
+   7:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** *  Comparator Component.
+   8:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** *
+   9:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** * Note:
+  10:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** *  None.
+  11:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** *
+  12:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** ********************************************************************************
+  13:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** * Copyright 2013, Cypress Semiconductor Corporation. All rights reserved.
+  14:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** * You may use this file only in accordance with the license, terms, conditions,
+  15:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  16:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** * the software package with which this file was provided.
+  17:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** *******************************************************************************/
+  18:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** 
+  19:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** #include "SCCT_Comp_1.h"
+  20:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** 
+  21:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** static SCCT_Comp_1_BACKUP_STRUCT  SCCT_Comp_1_backup;
+  22:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** 
+  23:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** 
+  24:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** /*******************************************************************************
+  25:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** * Function Name: SCCT_Comp_1_Sleep
+  26:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** ********************************************************************************
+  27:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** *
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cc0FCuts.s 			page 2
+
+
+  28:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** * Summary:
+  29:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** *  This is the preferred API to prepare the SCCT_Comp_1 for low power mode
+  30:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** *  operation (disable for this case). If the SCCT_Comp_1 is enabled, it
+  31:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** *  configures the SCCT_Comp_1 for low power operation.
+  32:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** *
+  33:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** * Parameters:
+  34:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** *  None
+  35:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** *
+  36:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** * Return:
+  37:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** *  None
+  38:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** *
+  39:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** * Global variables:
+  40:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** *  SCCT_Comp_1_backup: The structure field 'enableState' is modified
+  41:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** *  depending on the enable state of the SCCT_Comp_1 before entering to
+  42:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** *  sleep mode.
+  43:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** *
+  44:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** * Reentrant:
+  45:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** *  No.
+  46:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** *
+  47:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** * Side Effect:
+  48:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** *  In the inverting mode of SCCT_Comp_1, the output is implemented using
+  49:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** *  UDB. Hence, the SCCT_Comp_1 output level is high when this sleep API is
+  50:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** *  called and it does not go to sleep.
+  51:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** *
+  52:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** *******************************************************************************/
+  53:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** void SCCT_Comp_1_Sleep(void) 
+  54:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** {
+  31              		.loc 1 54 0
+  32              		.cfi_startproc
+  33              		@ args = 0, pretend = 0, frame = 0
+  34              		@ frame_needed = 1, uses_anonymous_args = 0
+  35 0000 80B5     		push	{r7, lr}
+  36              		.cfi_def_cfa_offset 8
+  37              		.cfi_offset 7, -8
+  38              		.cfi_offset 14, -4
+  39 0002 00AF     		add	r7, sp, #0
+  40              		.cfi_def_cfa_register 7
+  55:Generated_Source\PSoC5/SCCT_Comp_1_PM.c ****     /* Save SCCT_Comp_1 enable state */
+  56:Generated_Source\PSoC5/SCCT_Comp_1_PM.c ****     if (0u != (SCCT_Comp_1_PM_ACT_CFG_REG & SCCT_Comp_1_ACT_PWR_EN))
+  41              		.loc 1 56 0
+  42 0004 084B     		ldr	r3, .L4
+  43 0006 1B78     		ldrb	r3, [r3]
+  44 0008 DBB2     		uxtb	r3, r3
+  45 000a 03F00203 		and	r3, r3, #2
+  46 000e 002B     		cmp	r3, #0
+  47 0010 05D0     		beq	.L2
+  57:Generated_Source\PSoC5/SCCT_Comp_1_PM.c ****     {
+  58:Generated_Source\PSoC5/SCCT_Comp_1_PM.c ****         /* SCCT_Comp_1 is enabled */
+  59:Generated_Source\PSoC5/SCCT_Comp_1_PM.c ****         SCCT_Comp_1_backup.enableState = 1u;
+  48              		.loc 1 59 0
+  49 0012 064B     		ldr	r3, .L4+4
+  50 0014 0122     		movs	r2, #1
+  51 0016 1A70     		strb	r2, [r3]
+  60:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** 
+  61:Generated_Source\PSoC5/SCCT_Comp_1_PM.c ****         /* Stop the configuration */
+  62:Generated_Source\PSoC5/SCCT_Comp_1_PM.c ****         SCCT_Comp_1_Stop();
+  52              		.loc 1 62 0
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cc0FCuts.s 			page 3
+
+
+  53 0018 FFF7FEFF 		bl	SCCT_Comp_1_Stop
+  54 001c 02E0     		b	.L1
+  55              	.L2:
+  63:Generated_Source\PSoC5/SCCT_Comp_1_PM.c ****     }
+  64:Generated_Source\PSoC5/SCCT_Comp_1_PM.c ****     else
+  65:Generated_Source\PSoC5/SCCT_Comp_1_PM.c ****     {
+  66:Generated_Source\PSoC5/SCCT_Comp_1_PM.c ****         /* SCCT_Comp_1 is disabled */
+  67:Generated_Source\PSoC5/SCCT_Comp_1_PM.c ****         SCCT_Comp_1_backup.enableState = 0u;
+  56              		.loc 1 67 0
+  57 001e 034B     		ldr	r3, .L4+4
+  58 0020 0022     		movs	r2, #0
+  59 0022 1A70     		strb	r2, [r3]
+  60              	.L1:
+  68:Generated_Source\PSoC5/SCCT_Comp_1_PM.c ****     }
+  69:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** }
+  61              		.loc 1 69 0
+  62 0024 80BD     		pop	{r7, pc}
+  63              	.L5:
+  64 0026 00BF     		.align	2
+  65              	.L4:
+  66 0028 A9430040 		.word	1073759145
+  67 002c 00000000 		.word	SCCT_Comp_1_backup
+  68              		.cfi_endproc
+  69              	.LFE0:
+  70              		.size	SCCT_Comp_1_Sleep, .-SCCT_Comp_1_Sleep
+  71              		.section	.text.SCCT_Comp_1_Wakeup,"ax",%progbits
+  72              		.align	2
+  73              		.global	SCCT_Comp_1_Wakeup
+  74              		.thumb
+  75              		.thumb_func
+  76              		.type	SCCT_Comp_1_Wakeup, %function
+  77              	SCCT_Comp_1_Wakeup:
+  78              	.LFB1:
+  70:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** 
+  71:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** 
+  72:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** /*******************************************************************************
+  73:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** * Function Name: SCCT_Comp_1_Wakeup
+  74:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** ********************************************************************************
+  75:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** *
+  76:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** * Summary:
+  77:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** *  This is the preferred API to restore the SCCT_Comp_1 to the state when
+  78:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** *  SCCT_Comp_1_Sleep() was called.
+  79:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** *
+  80:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** * Parameters:
+  81:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** *  None
+  82:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** *
+  83:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** * Return:
+  84:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** *  void
+  85:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** *
+  86:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** * Global variables:
+  87:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** *  SCCT_Comp_1_backup: The structure field 'enableState' is used to
+  88:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** *  restore the enable state of SCCT_Comp_1 after wakeup from sleep mode.
+  89:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** *
+  90:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** * Side Effect:
+  91:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** *  Calling the SCCT_Comp_1_Wakeup() function without first calling the
+  92:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** *  SCCT_Comp_1_Sleep() function may produce unexpected behavior.
+  93:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** *
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cc0FCuts.s 			page 4
+
+
+  94:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** *******************************************************************************/
+  95:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** void SCCT_Comp_1_Wakeup(void) 
+  96:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** {
+  79              		.loc 1 96 0
+  80              		.cfi_startproc
+  81              		@ args = 0, pretend = 0, frame = 0
+  82              		@ frame_needed = 1, uses_anonymous_args = 0
+  83 0000 80B5     		push	{r7, lr}
+  84              		.cfi_def_cfa_offset 8
+  85              		.cfi_offset 7, -8
+  86              		.cfi_offset 14, -4
+  87 0002 00AF     		add	r7, sp, #0
+  88              		.cfi_def_cfa_register 7
+  97:Generated_Source\PSoC5/SCCT_Comp_1_PM.c ****     /* Enables the SCCT_Comp_1 operation */
+  98:Generated_Source\PSoC5/SCCT_Comp_1_PM.c ****     if (1u == SCCT_Comp_1_backup.enableState)
+  89              		.loc 1 98 0
+  90 0004 034B     		ldr	r3, .L8
+  91 0006 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+  92 0008 012B     		cmp	r3, #1
+  93 000a 01D1     		bne	.L6
+  99:Generated_Source\PSoC5/SCCT_Comp_1_PM.c ****     {
+ 100:Generated_Source\PSoC5/SCCT_Comp_1_PM.c ****         SCCT_Comp_1_Enable();
+  94              		.loc 1 100 0
+  95 000c FFF7FEFF 		bl	SCCT_Comp_1_Enable
+  96              	.L6:
+ 101:Generated_Source\PSoC5/SCCT_Comp_1_PM.c ****     } /* Do nothing if SCCT_Comp_1 was disable before */
+ 102:Generated_Source\PSoC5/SCCT_Comp_1_PM.c **** }
+  97              		.loc 1 102 0
+  98 0010 80BD     		pop	{r7, pc}
+  99              	.L9:
+ 100 0012 00BF     		.align	2
+ 101              	.L8:
+ 102 0014 00000000 		.word	SCCT_Comp_1_backup
+ 103              		.cfi_endproc
+ 104              	.LFE1:
+ 105              		.size	SCCT_Comp_1_Wakeup, .-SCCT_Comp_1_Wakeup
+ 106              		.text
+ 107              	.Letext0:
+ 108              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
+ 109              		.file 3 "Generated_Source\\PSoC5\\SCCT_Comp_1.h"
+ 110              		.section	.debug_info,"",%progbits
+ 111              	.Ldebug_info0:
+ 112 0000 ED000000 		.4byte	0xed
+ 113 0004 0400     		.2byte	0x4
+ 114 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 115 000a 04       		.byte	0x4
+ 116 000b 01       		.uleb128 0x1
+ 117 000c 1A000000 		.4byte	.LASF17
+ 118 0010 01       		.byte	0x1
+ 119 0011 A8000000 		.4byte	.LASF18
+ 120 0015 7F010000 		.4byte	.LASF19
+ 121 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 122 001d 00000000 		.4byte	0
+ 123 0021 00000000 		.4byte	.Ldebug_line0
+ 124 0025 02       		.uleb128 0x2
+ 125 0026 01       		.byte	0x1
+ 126 0027 06       		.byte	0x6
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cc0FCuts.s 			page 5
+
+
+ 127 0028 E3010000 		.4byte	.LASF0
+ 128 002c 02       		.uleb128 0x2
+ 129 002d 01       		.byte	0x1
+ 130 002e 08       		.byte	0x8
+ 131 002f D6000000 		.4byte	.LASF1
+ 132 0033 02       		.uleb128 0x2
+ 133 0034 02       		.byte	0x2
+ 134 0035 05       		.byte	0x5
+ 135 0036 BE010000 		.4byte	.LASF2
+ 136 003a 02       		.uleb128 0x2
+ 137 003b 02       		.byte	0x2
+ 138 003c 07       		.byte	0x7
+ 139 003d FB000000 		.4byte	.LASF3
+ 140 0041 02       		.uleb128 0x2
+ 141 0042 04       		.byte	0x4
+ 142 0043 05       		.byte	0x5
+ 143 0044 CE010000 		.4byte	.LASF4
+ 144 0048 02       		.uleb128 0x2
+ 145 0049 04       		.byte	0x4
+ 146 004a 07       		.byte	0x7
+ 147 004b E9000000 		.4byte	.LASF5
+ 148 004f 02       		.uleb128 0x2
+ 149 0050 08       		.byte	0x8
+ 150 0051 05       		.byte	0x5
+ 151 0052 71010000 		.4byte	.LASF6
+ 152 0056 02       		.uleb128 0x2
+ 153 0057 08       		.byte	0x8
+ 154 0058 07       		.byte	0x7
+ 155 0059 47010000 		.4byte	.LASF7
+ 156 005d 03       		.uleb128 0x3
+ 157 005e 04       		.byte	0x4
+ 158 005f 05       		.byte	0x5
+ 159 0060 696E7400 		.ascii	"int\000"
+ 160 0064 02       		.uleb128 0x2
+ 161 0065 04       		.byte	0x4
+ 162 0066 07       		.byte	0x7
+ 163 0067 3A010000 		.4byte	.LASF8
+ 164 006b 04       		.uleb128 0x4
+ 165 006c C8010000 		.4byte	.LASF12
+ 166 0070 02       		.byte	0x2
+ 167 0071 9201     		.2byte	0x192
+ 168 0073 2C000000 		.4byte	0x2c
+ 169 0077 02       		.uleb128 0x2
+ 170 0078 04       		.byte	0x4
+ 171 0079 04       		.byte	0x4
+ 172 007a D0000000 		.4byte	.LASF9
+ 173 007e 02       		.uleb128 0x2
+ 174 007f 08       		.byte	0x8
+ 175 0080 04       		.byte	0x4
+ 176 0081 0E010000 		.4byte	.LASF10
+ 177 0085 02       		.uleb128 0x2
+ 178 0086 01       		.byte	0x1
+ 179 0087 08       		.byte	0x8
+ 180 0088 B9010000 		.4byte	.LASF11
+ 181 008c 04       		.uleb128 0x4
+ 182 008d E4000000 		.4byte	.LASF13
+ 183 0091 02       		.byte	0x2
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cc0FCuts.s 			page 6
+
+
+ 184 0092 3C02     		.2byte	0x23c
+ 185 0094 98000000 		.4byte	0x98
+ 186 0098 05       		.uleb128 0x5
+ 187 0099 6B000000 		.4byte	0x6b
+ 188 009d 06       		.uleb128 0x6
+ 189 009e 01       		.byte	0x1
+ 190 009f 03       		.byte	0x3
+ 191 00a0 1F       		.byte	0x1f
+ 192 00a1 B2000000 		.4byte	0xb2
+ 193 00a5 07       		.uleb128 0x7
+ 194 00a6 D7010000 		.4byte	.LASF20
+ 195 00aa 03       		.byte	0x3
+ 196 00ab 21       		.byte	0x21
+ 197 00ac 6B000000 		.4byte	0x6b
+ 198 00b0 00       		.byte	0
+ 199 00b1 00       		.byte	0
+ 200 00b2 08       		.uleb128 0x8
+ 201 00b3 00000000 		.4byte	.LASF14
+ 202 00b7 03       		.byte	0x3
+ 203 00b8 22       		.byte	0x22
+ 204 00b9 9D000000 		.4byte	0x9d
+ 205 00bd 09       		.uleb128 0x9
+ 206 00be 15010000 		.4byte	.LASF15
+ 207 00c2 01       		.byte	0x1
+ 208 00c3 35       		.byte	0x35
+ 209 00c4 00000000 		.4byte	.LFB0
+ 210 00c8 30000000 		.4byte	.LFE0-.LFB0
+ 211 00cc 01       		.uleb128 0x1
+ 212 00cd 9C       		.byte	0x9c
+ 213 00ce 09       		.uleb128 0x9
+ 214 00cf 5E010000 		.4byte	.LASF16
+ 215 00d3 01       		.byte	0x1
+ 216 00d4 5F       		.byte	0x5f
+ 217 00d5 00000000 		.4byte	.LFB1
+ 218 00d9 18000000 		.4byte	.LFE1-.LFB1
+ 219 00dd 01       		.uleb128 0x1
+ 220 00de 9C       		.byte	0x9c
+ 221 00df 0A       		.uleb128 0xa
+ 222 00e0 27010000 		.4byte	.LASF21
+ 223 00e4 01       		.byte	0x1
+ 224 00e5 15       		.byte	0x15
+ 225 00e6 B2000000 		.4byte	0xb2
+ 226 00ea 05       		.uleb128 0x5
+ 227 00eb 03       		.byte	0x3
+ 228 00ec 00000000 		.4byte	SCCT_Comp_1_backup
+ 229 00f0 00       		.byte	0
+ 230              		.section	.debug_abbrev,"",%progbits
+ 231              	.Ldebug_abbrev0:
+ 232 0000 01       		.uleb128 0x1
+ 233 0001 11       		.uleb128 0x11
+ 234 0002 01       		.byte	0x1
+ 235 0003 25       		.uleb128 0x25
+ 236 0004 0E       		.uleb128 0xe
+ 237 0005 13       		.uleb128 0x13
+ 238 0006 0B       		.uleb128 0xb
+ 239 0007 03       		.uleb128 0x3
+ 240 0008 0E       		.uleb128 0xe
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cc0FCuts.s 			page 7
+
+
+ 241 0009 1B       		.uleb128 0x1b
+ 242 000a 0E       		.uleb128 0xe
+ 243 000b 55       		.uleb128 0x55
+ 244 000c 17       		.uleb128 0x17
+ 245 000d 11       		.uleb128 0x11
+ 246 000e 01       		.uleb128 0x1
+ 247 000f 10       		.uleb128 0x10
+ 248 0010 17       		.uleb128 0x17
+ 249 0011 00       		.byte	0
+ 250 0012 00       		.byte	0
+ 251 0013 02       		.uleb128 0x2
+ 252 0014 24       		.uleb128 0x24
+ 253 0015 00       		.byte	0
+ 254 0016 0B       		.uleb128 0xb
+ 255 0017 0B       		.uleb128 0xb
+ 256 0018 3E       		.uleb128 0x3e
+ 257 0019 0B       		.uleb128 0xb
+ 258 001a 03       		.uleb128 0x3
+ 259 001b 0E       		.uleb128 0xe
+ 260 001c 00       		.byte	0
+ 261 001d 00       		.byte	0
+ 262 001e 03       		.uleb128 0x3
+ 263 001f 24       		.uleb128 0x24
+ 264 0020 00       		.byte	0
+ 265 0021 0B       		.uleb128 0xb
+ 266 0022 0B       		.uleb128 0xb
+ 267 0023 3E       		.uleb128 0x3e
+ 268 0024 0B       		.uleb128 0xb
+ 269 0025 03       		.uleb128 0x3
+ 270 0026 08       		.uleb128 0x8
+ 271 0027 00       		.byte	0
+ 272 0028 00       		.byte	0
+ 273 0029 04       		.uleb128 0x4
+ 274 002a 16       		.uleb128 0x16
+ 275 002b 00       		.byte	0
+ 276 002c 03       		.uleb128 0x3
+ 277 002d 0E       		.uleb128 0xe
+ 278 002e 3A       		.uleb128 0x3a
+ 279 002f 0B       		.uleb128 0xb
+ 280 0030 3B       		.uleb128 0x3b
+ 281 0031 05       		.uleb128 0x5
+ 282 0032 49       		.uleb128 0x49
+ 283 0033 13       		.uleb128 0x13
+ 284 0034 00       		.byte	0
+ 285 0035 00       		.byte	0
+ 286 0036 05       		.uleb128 0x5
+ 287 0037 35       		.uleb128 0x35
+ 288 0038 00       		.byte	0
+ 289 0039 49       		.uleb128 0x49
+ 290 003a 13       		.uleb128 0x13
+ 291 003b 00       		.byte	0
+ 292 003c 00       		.byte	0
+ 293 003d 06       		.uleb128 0x6
+ 294 003e 13       		.uleb128 0x13
+ 295 003f 01       		.byte	0x1
+ 296 0040 0B       		.uleb128 0xb
+ 297 0041 0B       		.uleb128 0xb
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cc0FCuts.s 			page 8
+
+
+ 298 0042 3A       		.uleb128 0x3a
+ 299 0043 0B       		.uleb128 0xb
+ 300 0044 3B       		.uleb128 0x3b
+ 301 0045 0B       		.uleb128 0xb
+ 302 0046 01       		.uleb128 0x1
+ 303 0047 13       		.uleb128 0x13
+ 304 0048 00       		.byte	0
+ 305 0049 00       		.byte	0
+ 306 004a 07       		.uleb128 0x7
+ 307 004b 0D       		.uleb128 0xd
+ 308 004c 00       		.byte	0
+ 309 004d 03       		.uleb128 0x3
+ 310 004e 0E       		.uleb128 0xe
+ 311 004f 3A       		.uleb128 0x3a
+ 312 0050 0B       		.uleb128 0xb
+ 313 0051 3B       		.uleb128 0x3b
+ 314 0052 0B       		.uleb128 0xb
+ 315 0053 49       		.uleb128 0x49
+ 316 0054 13       		.uleb128 0x13
+ 317 0055 38       		.uleb128 0x38
+ 318 0056 0B       		.uleb128 0xb
+ 319 0057 00       		.byte	0
+ 320 0058 00       		.byte	0
+ 321 0059 08       		.uleb128 0x8
+ 322 005a 16       		.uleb128 0x16
+ 323 005b 00       		.byte	0
+ 324 005c 03       		.uleb128 0x3
+ 325 005d 0E       		.uleb128 0xe
+ 326 005e 3A       		.uleb128 0x3a
+ 327 005f 0B       		.uleb128 0xb
+ 328 0060 3B       		.uleb128 0x3b
+ 329 0061 0B       		.uleb128 0xb
+ 330 0062 49       		.uleb128 0x49
+ 331 0063 13       		.uleb128 0x13
+ 332 0064 00       		.byte	0
+ 333 0065 00       		.byte	0
+ 334 0066 09       		.uleb128 0x9
+ 335 0067 2E       		.uleb128 0x2e
+ 336 0068 00       		.byte	0
+ 337 0069 3F       		.uleb128 0x3f
+ 338 006a 19       		.uleb128 0x19
+ 339 006b 03       		.uleb128 0x3
+ 340 006c 0E       		.uleb128 0xe
+ 341 006d 3A       		.uleb128 0x3a
+ 342 006e 0B       		.uleb128 0xb
+ 343 006f 3B       		.uleb128 0x3b
+ 344 0070 0B       		.uleb128 0xb
+ 345 0071 27       		.uleb128 0x27
+ 346 0072 19       		.uleb128 0x19
+ 347 0073 11       		.uleb128 0x11
+ 348 0074 01       		.uleb128 0x1
+ 349 0075 12       		.uleb128 0x12
+ 350 0076 06       		.uleb128 0x6
+ 351 0077 40       		.uleb128 0x40
+ 352 0078 18       		.uleb128 0x18
+ 353 0079 9642     		.uleb128 0x2116
+ 354 007b 19       		.uleb128 0x19
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cc0FCuts.s 			page 9
+
+
+ 355 007c 00       		.byte	0
+ 356 007d 00       		.byte	0
+ 357 007e 0A       		.uleb128 0xa
+ 358 007f 34       		.uleb128 0x34
+ 359 0080 00       		.byte	0
+ 360 0081 03       		.uleb128 0x3
+ 361 0082 0E       		.uleb128 0xe
+ 362 0083 3A       		.uleb128 0x3a
+ 363 0084 0B       		.uleb128 0xb
+ 364 0085 3B       		.uleb128 0x3b
+ 365 0086 0B       		.uleb128 0xb
+ 366 0087 49       		.uleb128 0x49
+ 367 0088 13       		.uleb128 0x13
+ 368 0089 02       		.uleb128 0x2
+ 369 008a 18       		.uleb128 0x18
+ 370 008b 00       		.byte	0
+ 371 008c 00       		.byte	0
+ 372 008d 00       		.byte	0
+ 373              		.section	.debug_aranges,"",%progbits
+ 374 0000 24000000 		.4byte	0x24
+ 375 0004 0200     		.2byte	0x2
+ 376 0006 00000000 		.4byte	.Ldebug_info0
+ 377 000a 04       		.byte	0x4
+ 378 000b 00       		.byte	0
+ 379 000c 0000     		.2byte	0
+ 380 000e 0000     		.2byte	0
+ 381 0010 00000000 		.4byte	.LFB0
+ 382 0014 30000000 		.4byte	.LFE0-.LFB0
+ 383 0018 00000000 		.4byte	.LFB1
+ 384 001c 18000000 		.4byte	.LFE1-.LFB1
+ 385 0020 00000000 		.4byte	0
+ 386 0024 00000000 		.4byte	0
+ 387              		.section	.debug_ranges,"",%progbits
+ 388              	.Ldebug_ranges0:
+ 389 0000 00000000 		.4byte	.LFB0
+ 390 0004 30000000 		.4byte	.LFE0
+ 391 0008 00000000 		.4byte	.LFB1
+ 392 000c 18000000 		.4byte	.LFE1
+ 393 0010 00000000 		.4byte	0
+ 394 0014 00000000 		.4byte	0
+ 395              		.section	.debug_line,"",%progbits
+ 396              	.Ldebug_line0:
+ 397 0000 89000000 		.section	.debug_str,"MS",%progbits,1
+ 397      02005C00 
+ 397      00000201 
+ 397      FB0E0D00 
+ 397      01010101 
+ 398              	.LASF14:
+ 399 0000 53434354 		.ascii	"SCCT_Comp_1_BACKUP_STRUCT\000"
+ 399      5F436F6D 
+ 399      705F315F 
+ 399      4241434B 
+ 399      55505F53 
+ 400              	.LASF17:
+ 401 001a 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 401      4320342E 
+ 401      392E3320 
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cc0FCuts.s 			page 10
+
+
+ 401      32303135 
+ 401      30333033 
+ 402 004d 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 402      20726576 
+ 402      6973696F 
+ 402      6E203232 
+ 402      31323230 
+ 403 0080 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 403      66756E63 
+ 403      74696F6E 
+ 403      2D736563 
+ 403      74696F6E 
+ 404              	.LASF18:
+ 405 00a8 47656E65 		.ascii	"Generated_Source\\PSoC5\\SCCT_Comp_1_PM.c\000"
+ 405      72617465 
+ 405      645F536F 
+ 405      75726365 
+ 405      5C50536F 
+ 406              	.LASF9:
+ 407 00d0 666C6F61 		.ascii	"float\000"
+ 407      7400
+ 408              	.LASF1:
+ 409 00d6 756E7369 		.ascii	"unsigned char\000"
+ 409      676E6564 
+ 409      20636861 
+ 409      7200
+ 410              	.LASF13:
+ 411 00e4 72656738 		.ascii	"reg8\000"
+ 411      00
+ 412              	.LASF5:
+ 413 00e9 6C6F6E67 		.ascii	"long unsigned int\000"
+ 413      20756E73 
+ 413      69676E65 
+ 413      6420696E 
+ 413      7400
+ 414              	.LASF3:
+ 415 00fb 73686F72 		.ascii	"short unsigned int\000"
+ 415      7420756E 
+ 415      7369676E 
+ 415      65642069 
+ 415      6E7400
+ 416              	.LASF10:
+ 417 010e 646F7562 		.ascii	"double\000"
+ 417      6C6500
+ 418              	.LASF15:
+ 419 0115 53434354 		.ascii	"SCCT_Comp_1_Sleep\000"
+ 419      5F436F6D 
+ 419      705F315F 
+ 419      536C6565 
+ 419      7000
+ 420              	.LASF21:
+ 421 0127 53434354 		.ascii	"SCCT_Comp_1_backup\000"
+ 421      5F436F6D 
+ 421      705F315F 
+ 421      6261636B 
+ 421      757000
+ 422              	.LASF8:
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cc0FCuts.s 			page 11
+
+
+ 423 013a 756E7369 		.ascii	"unsigned int\000"
+ 423      676E6564 
+ 423      20696E74 
+ 423      00
+ 424              	.LASF7:
+ 425 0147 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 425      206C6F6E 
+ 425      6720756E 
+ 425      7369676E 
+ 425      65642069 
+ 426              	.LASF16:
+ 427 015e 53434354 		.ascii	"SCCT_Comp_1_Wakeup\000"
+ 427      5F436F6D 
+ 427      705F315F 
+ 427      57616B65 
+ 427      757000
+ 428              	.LASF6:
+ 429 0171 6C6F6E67 		.ascii	"long long int\000"
+ 429      206C6F6E 
+ 429      6720696E 
+ 429      7400
+ 430              	.LASF19:
+ 431 017f 433A5C55 		.ascii	"C:\\Users\\ben\\Documents\\PSoC Creator\\DACTEST\\A"
+ 431      73657273 
+ 431      5C62656E 
+ 431      5C446F63 
+ 431      756D656E 
+ 432 01ac 44435F44 		.ascii	"DC_DAC.cydsn\000"
+ 432      41432E63 
+ 432      7964736E 
+ 432      00
+ 433              	.LASF11:
+ 434 01b9 63686172 		.ascii	"char\000"
+ 434      00
+ 435              	.LASF2:
+ 436 01be 73686F72 		.ascii	"short int\000"
+ 436      7420696E 
+ 436      7400
+ 437              	.LASF12:
+ 438 01c8 75696E74 		.ascii	"uint8\000"
+ 438      3800
+ 439              	.LASF4:
+ 440 01ce 6C6F6E67 		.ascii	"long int\000"
+ 440      20696E74 
+ 440      00
+ 441              	.LASF20:
+ 442 01d7 656E6162 		.ascii	"enableState\000"
+ 442      6C655374 
+ 442      61746500 
+ 443              	.LASF0:
+ 444 01e3 7369676E 		.ascii	"signed char\000"
+ 444      65642063 
+ 444      68617200 
+ 445              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

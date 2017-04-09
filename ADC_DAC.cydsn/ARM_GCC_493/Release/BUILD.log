@@ -1,0 +1,174 @@
+--------------- Build Started: 04/09/2017 14:55:33 Project: ADC_DAC, Configuration: ARM GCC 4.9-2015-q1-update Release ---------------
+cydsfit.exe -.appdatapath "C:\Users\ben\AppData\Local\Cypress Semiconductor\PSoC Creator\4.0" -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p "C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\ADC_DAC.cydsn\ADC_DAC.cyprj" -d CY8C5868AXI-LP035 -s "C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\ADC_DAC.cydsn\Generated_Source\PSoC5" -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
+Elaborating Design...
+ADD: sdb.M0065: information: Analog terminal "vdac_ref" on ADC_SAR_SEQ_v2_0 is unconnected.
+ * C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\ADC_SAR_SEQ_v2_0\PSoC5\ADC_SAR_SEQ_v2_0.cysch (Signal: vdac_ref)
+ * C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\ADC_SAR_SEQ_v2_0\PSoC5\ADC_SAR_SEQ_v2_0.cysch (Shape_798)
+ * C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\ADC_SAR_SEQ_v2_0\PSoC5\ADC_SAR_SEQ_v2_0.cysch (Shape_885)
+HDL Generation...
+Synthesis...
+Tech Mapping...
+ADD: pft.M0040: information: The following 11 pin(s) will be assigned a location by the fitter: \LCD_Char_1:LCDPort(0)\, \LCD_Char_1:LCDPort(1)\, \LCD_Char_1:LCDPort(2)\, \LCD_Char_1:LCDPort(3)\, \LCD_Char_1:LCDPort(4)\, \LCD_Char_1:LCDPort(5)\, \LCD_Char_1:LCDPort(6)\, DIV_MUX_CONTROL(0), MISO_IN(0), PWM_1_CONTROL(0), PWM_DIV_CONTROL(0)
+Analog Placement...
+Info: apr.M0002: Analog signal "Net_12639" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12640" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12642" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12644" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12645" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12647" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12649" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12650" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12652" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12654" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12655" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12657" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12659" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12660" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12662" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12664" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12665" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12667" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12669" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12670" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12672" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12674" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12675" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12677" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12679" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12680" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12682" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12684" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12685" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12687" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12689" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12690" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12692" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12694" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12695" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12697" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12699" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12700" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12702" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12704" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12705" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12707" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12709" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12710" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12711" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12712" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12713" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12714" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12715" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12716" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12717" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12718" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12719" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12720" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12721" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12722" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12723" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12724" is connected to one terminal only. (App=cydsfit)
+Info: apr.M0002: Analog signal "Net_12725" is connected to one terminal only. (App=cydsfit)
+Log: apr.M0058: The analog placement iterative improvement is 30% done. (App=cydsfit)
+Log: apr.M0058: The analog placement iterative improvement is 50% done. (App=cydsfit)
+Log: apr.M0058: The analog placement iterative improvement is 77% done. (App=cydsfit)
+Analog Routing...
+Analog Code Generation...
+Digital Placement...
+Digital Routing...
+Bitstream Generation...
+Bitstream Verification...
+Static timing analysis...
+API Generation...
+Dependency Generation...
+Cleanup...
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/main.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c main.c -o .\ARM_GCC_493\Release\main.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/cyfitter_cfg.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\cyfitter_cfg.c -o .\ARM_GCC_493\Release\cyfitter_cfg.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/cymetadata.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\cymetadata.c -o .\ARM_GCC_493\Release\cymetadata.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/LCD_Char_1.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\LCD_Char_1.c -o .\ARM_GCC_493\Release\LCD_Char_1.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/LCD_Char_1_PM.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\LCD_Char_1_PM.c -o .\ARM_GCC_493\Release\LCD_Char_1_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/LCD_Char_1_CustChars.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\LCD_Char_1_CustChars.c -o .\ARM_GCC_493\Release\LCD_Char_1_CustChars.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/LCD_Char_1_LCDPort.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\LCD_Char_1_LCDPort.c -o .\ARM_GCC_493\Release\LCD_Char_1_LCDPort.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/Cm3Start.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\Cm3Start.c -o .\ARM_GCC_493\Release\Cm3Start.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/CyDmac.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\CyDmac.c -o .\ARM_GCC_493\Release\CyDmac.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/CyFlash.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\CyFlash.c -o .\ARM_GCC_493\Release\CyFlash.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/CyLib.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\CyLib.c -o .\ARM_GCC_493\Release\CyLib.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/cyPm.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\cyPm.c -o .\ARM_GCC_493\Release\cyPm.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/CySpc.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\CySpc.c -o .\ARM_GCC_493\Release\CySpc.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/cyutils.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\cyutils.c -o .\ARM_GCC_493\Release\cyutils.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/Clock_2.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\Clock_2.c -o .\ARM_GCC_493\Release\Clock_2.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/ADC_SAR_1.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\ADC_SAR_1.c -o .\ARM_GCC_493\Release\ADC_SAR_1.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/ADC_SAR_1_INT.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\ADC_SAR_1_INT.c -o .\ARM_GCC_493\Release\ADC_SAR_1_INT.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/ADC_SAR_1_PM.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\ADC_SAR_1_PM.c -o .\ARM_GCC_493\Release\ADC_SAR_1_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/Opamp_1.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\Opamp_1.c -o .\ARM_GCC_493\Release\Opamp_1.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/Opamp_1_PM.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\Opamp_1_PM.c -o .\ARM_GCC_493\Release\Opamp_1_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/Opamp_2.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\Opamp_2.c -o .\ARM_GCC_493\Release\Opamp_2.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/Opamp_2_PM.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\Opamp_2_PM.c -o .\ARM_GCC_493\Release\Opamp_2_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/ADC_SAR_1_IRQ.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\ADC_SAR_1_IRQ.c -o .\ARM_GCC_493\Release\ADC_SAR_1_IRQ.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/AUDIO_IN.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\AUDIO_IN.c -o .\ARM_GCC_493\Release\AUDIO_IN.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/Filter.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\Filter.c -o .\ARM_GCC_493\Release\Filter.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/Filter_PM.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\Filter_PM.c -o .\ARM_GCC_493\Release\Filter_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/Filter_PVT.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\Filter_PVT.c -o .\ARM_GCC_493\Release\Filter_PVT.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/Filter_RAM_Data.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\Filter_RAM_Data.c -o .\ARM_GCC_493\Release\Filter_RAM_Data.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/Filter_Coefficients.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\Filter_Coefficients.c -o .\ARM_GCC_493\Release\Filter_Coefficients.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/MISO_IN.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\MISO_IN.c -o .\ARM_GCC_493\Release\MISO_IN.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/MOSI_OUT.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\MOSI_OUT.c -o .\ARM_GCC_493\Release\MOSI_OUT.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/SCLK_OUT.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\SCLK_OUT.c -o .\ARM_GCC_493\Release\SCLK_OUT.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/SS_OUT.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\SS_OUT.c -o .\ARM_GCC_493\Release\SS_OUT.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/VREF_BUFF.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\VREF_BUFF.c -o .\ARM_GCC_493\Release\VREF_BUFF.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/SPI_DAC.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\SPI_DAC.c -o .\ARM_GCC_493\Release\SPI_DAC.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/SPI_DAC_PM.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\SPI_DAC_PM.c -o .\ARM_GCC_493\Release\SPI_DAC_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/SPI_DAC_INT.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\SPI_DAC_INT.c -o .\ARM_GCC_493\Release\SPI_DAC_INT.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/SPI_DAC_IntClock.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\SPI_DAC_IntClock.c -o .\ARM_GCC_493\Release\SPI_DAC_IntClock.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/ADC_1_OUT_LSB.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\ADC_1_OUT_LSB.c -o .\ARM_GCC_493\Release\ADC_1_OUT_LSB.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/ADC_1_OUT_LSB_PM.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\ADC_1_OUT_LSB_PM.c -o .\ARM_GCC_493\Release\ADC_1_OUT_LSB_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/ADC_1_OUT_MSB.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\ADC_1_OUT_MSB.c -o .\ARM_GCC_493\Release\ADC_1_OUT_MSB.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/ADC_1_OUT_MSB_PM.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\ADC_1_OUT_MSB_PM.c -o .\ARM_GCC_493\Release\ADC_1_OUT_MSB_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/DAC_IN_MSB.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\DAC_IN_MSB.c -o .\ARM_GCC_493\Release\DAC_IN_MSB.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/DAC_IN_LSB.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\DAC_IN_LSB.c -o .\ARM_GCC_493\Release\DAC_IN_LSB.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/ADC_REG_CLOCK.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\ADC_REG_CLOCK.c -o .\ARM_GCC_493\Release\ADC_REG_CLOCK.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/PWM_ADC_CK.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\PWM_ADC_CK.c -o .\ARM_GCC_493\Release\PWM_ADC_CK.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/PWM_ADC_CK_PM.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\PWM_ADC_CK_PM.c -o .\ARM_GCC_493\Release\PWM_ADC_CK_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/PWM_11.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\PWM_11.c -o .\ARM_GCC_493\Release\PWM_11.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/PWM_11_PM.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\PWM_11_PM.c -o .\ARM_GCC_493\Release\PWM_11_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/PWM_7.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\PWM_7.c -o .\ARM_GCC_493\Release\PWM_7.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/PWM_7_PM.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\PWM_7_PM.c -o .\ARM_GCC_493\Release\PWM_7_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/PWM_9.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\PWM_9.c -o .\ARM_GCC_493\Release\PWM_9.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/PWM_9_PM.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\PWM_9_PM.c -o .\ARM_GCC_493\Release\PWM_9_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/PWM_8.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\PWM_8.c -o .\ARM_GCC_493\Release\PWM_8.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/PWM_8_PM.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\PWM_8_PM.c -o .\ARM_GCC_493\Release\PWM_8_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/PWM_6.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\PWM_6.c -o .\ARM_GCC_493\Release\PWM_6.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/PWM_6_PM.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\PWM_6_PM.c -o .\ARM_GCC_493\Release\PWM_6_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/PWM_10.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\PWM_10.c -o .\ARM_GCC_493\Release\PWM_10.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/PWM_10_PM.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\PWM_10_PM.c -o .\ARM_GCC_493\Release\PWM_10_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/PWM_4.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\PWM_4.c -o .\ARM_GCC_493\Release\PWM_4.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/PWM_4_PM.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\PWM_4_PM.c -o .\ARM_GCC_493\Release\PWM_4_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/PWM_5.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\PWM_5.c -o .\ARM_GCC_493\Release\PWM_5.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/PWM_5_PM.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\PWM_5_PM.c -o .\ARM_GCC_493\Release\PWM_5_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/DIV_MUX_CONTROL.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\DIV_MUX_CONTROL.c -o .\ARM_GCC_493\Release\DIV_MUX_CONTROL.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/MASK_OFF_CONTROL.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\MASK_OFF_CONTROL.c -o .\ARM_GCC_493\Release\MASK_OFF_CONTROL.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/SAMPLE_RATE_CONTROL.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\SAMPLE_RATE_CONTROL.c -o .\ARM_GCC_493\Release\SAMPLE_RATE_CONTROL.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/ADC_SAR_Seq.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\ADC_SAR_Seq.c -o .\ARM_GCC_493\Release\ADC_SAR_Seq.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/ADC_SAR_Seq_PM.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\ADC_SAR_Seq_PM.c -o .\ARM_GCC_493\Release\ADC_SAR_Seq_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/ADC_SAR_Seq_INT.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\ADC_SAR_Seq_INT.c -o .\ARM_GCC_493\Release\ADC_SAR_Seq_INT.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/ADC_SAR_Seq_SAR.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\ADC_SAR_Seq_SAR.c -o .\ARM_GCC_493\Release\ADC_SAR_Seq_SAR.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/ADC_SAR_Seq_SAR_INT.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\ADC_SAR_Seq_SAR_INT.c -o .\ARM_GCC_493\Release\ADC_SAR_Seq_SAR_INT.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/ADC_SAR_Seq_SAR_PM.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\ADC_SAR_Seq_SAR_PM.c -o .\ARM_GCC_493\Release\ADC_SAR_Seq_SAR_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/ADC_SAR_Seq_TempBuf_dma.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\ADC_SAR_Seq_TempBuf_dma.c -o .\ARM_GCC_493\Release\ADC_SAR_Seq_TempBuf_dma.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/ADC_SAR_Seq_FinalBuf_dma.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\ADC_SAR_Seq_FinalBuf_dma.c -o .\ARM_GCC_493\Release\ADC_SAR_Seq_FinalBuf_dma.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/ADC_SAR_Seq_IRQ.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\ADC_SAR_Seq_IRQ.c -o .\ARM_GCC_493\Release\ADC_SAR_Seq_IRQ.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/DIV_MASK_MSB.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\DIV_MASK_MSB.c -o .\ARM_GCC_493\Release\DIV_MASK_MSB.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/DIV_MASK_MSB_PM.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\DIV_MASK_MSB_PM.c -o .\ARM_GCC_493\Release\DIV_MASK_MSB_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/DIV_MASK_LSB.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\DIV_MASK_LSB.c -o .\ARM_GCC_493\Release\DIV_MASK_LSB.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/DIV_MASK_LSB_PM.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\DIV_MASK_LSB_PM.c -o .\ARM_GCC_493\Release\DIV_MASK_LSB_PM.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/PWM_1_CONTROL.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\PWM_1_CONTROL.c -o .\ARM_GCC_493\Release\PWM_1_CONTROL.o
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/PWM_DIV_CONTROL.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c Generated_Source\PSoC5\PWM_DIV_CONTROL.c -o .\ARM_GCC_493\Release\PWM_DIV_CONTROL.o
+arm-none-eabi-as.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -alh=.\ARM_GCC_493\Release/CyBootAsmGnu.lst -g -o .\ARM_GCC_493\Release\CyBootAsmGnu.o Generated_Source\PSoC5\CyBootAsmGnu.s
+arm-none-eabi-ar.exe -rs .\ARM_GCC_493\Release\ADC_DAC.a .\ARM_GCC_493\Release\cyfitter_cfg.o .\ARM_GCC_493\Release\LCD_Char_1.o .\ARM_GCC_493\Release\LCD_Char_1_PM.o .\ARM_GCC_493\Release\LCD_Char_1_CustChars.o .\ARM_GCC_493\Release\LCD_Char_1_LCDPort.o .\ARM_GCC_493\Release\CyDmac.o .\ARM_GCC_493\Release\CyFlash.o .\ARM_GCC_493\Release\CyLib.o .\ARM_GCC_493\Release\cyPm.o .\ARM_GCC_493\Release\CySpc.o .\ARM_GCC_493\Release\cyutils.o .\ARM_GCC_493\Release\Clock_2.o .\ARM_GCC_493\Release\ADC_SAR_1.o .\ARM_GCC_493\Release\ADC_SAR_1_INT.o .\ARM_GCC_493\Release\ADC_SAR_1_PM.o .\ARM_GCC_493\Release\Opamp_1.o .\ARM_GCC_493\Release\Opamp_1_PM.o .\ARM_GCC_493\Release\Opamp_2.o .\ARM_GCC_493\Release\Opamp_2_PM.o .\ARM_GCC_493\Release\ADC_SAR_1_IRQ.o .\ARM_GCC_493\Release\AUDIO_IN.o .\ARM_GCC_493\Release\Filter.o .\ARM_GCC_493\Release\Filter_PM.o .\ARM_GCC_493\Release\Filter_PVT.o .\ARM_GCC_493\Release\Filter_RAM_Data.o .\ARM_GCC_493\Release\Filter_Coefficients.o .\ARM_GCC_493\Release\MISO_IN.o .\ARM_GCC_493\Release\MOSI_OUT.o .\ARM_GCC_493\Release\SCLK_OUT.o .\ARM_GCC_493\Release\SS_OUT.o .\ARM_GCC_493\Release\VREF_BUFF.o .\ARM_GCC_493\Release\SPI_DAC.o .\ARM_GCC_493\Release\SPI_DAC_PM.o .\ARM_GCC_493\Release\SPI_DAC_INT.o .\ARM_GCC_493\Release\SPI_DAC_IntClock.o .\ARM_GCC_493\Release\ADC_1_OUT_LSB.o .\ARM_GCC_493\Release\ADC_1_OUT_LSB_PM.o .\ARM_GCC_493\Release\ADC_1_OUT_MSB.o .\ARM_GCC_493\Release\ADC_1_OUT_MSB_PM.o .\ARM_GCC_493\Release\DAC_IN_MSB.o .\ARM_GCC_493\Release\DAC_IN_LSB.o .\ARM_GCC_493\Release\ADC_REG_CLOCK.o .\ARM_GCC_493\Release\PWM_ADC_CK.o .\ARM_GCC_493\Release\PWM_ADC_CK_PM.o .\ARM_GCC_493\Release\PWM_11.o .\ARM_GCC_493\Release\PWM_11_PM.o .\ARM_GCC_493\Release\PWM_7.o .\ARM_GCC_493\Release\PWM_7_PM.o .\ARM_GCC_493\Release\PWM_9.o .\ARM_GCC_493\Release\PWM_9_PM.o .\ARM_GCC_493\Release\PWM_8.o .\ARM_GCC_493\Release\PWM_8_PM.o .\ARM_GCC_493\Release\PWM_6.o .\ARM_GCC_493\Release\PWM_6_PM.o .\ARM_GCC_493\Release\PWM_10.o .\ARM_GCC_493\Release\PWM_10_PM.o .\ARM_GCC_493\Release\PWM_4.o .\ARM_GCC_493\Release\PWM_4_PM.o .\ARM_GCC_493\Release\PWM_5.o .\ARM_GCC_493\Release\PWM_5_PM.o .\ARM_GCC_493\Release\DIV_MUX_CONTROL.o .\ARM_GCC_493\Release\MASK_OFF_CONTROL.o .\ARM_GCC_493\Release\SAMPLE_RATE_CONTROL.o .\ARM_GCC_493\Release\ADC_SAR_Seq.o .\ARM_GCC_493\Release\ADC_SAR_Seq_PM.o .\ARM_GCC_493\Release\ADC_SAR_Seq_INT.o .\ARM_GCC_493\Release\ADC_SAR_Seq_SAR.o .\ARM_GCC_493\Release\ADC_SAR_Seq_SAR_INT.o .\ARM_GCC_493\Release\ADC_SAR_Seq_SAR_PM.o .\ARM_GCC_493\Release\ADC_SAR_Seq_TempBuf_dma.o .\ARM_GCC_493\Release\ADC_SAR_Seq_FinalBuf_dma.o .\ARM_GCC_493\Release\ADC_SAR_Seq_IRQ.o .\ARM_GCC_493\Release\DIV_MASK_MSB.o .\ARM_GCC_493\Release\DIV_MASK_MSB_PM.o .\ARM_GCC_493\Release\DIV_MASK_LSB.o .\ARM_GCC_493\Release\DIV_MASK_LSB_PM.o .\ARM_GCC_493\Release\PWM_1_CONTROL.o .\ARM_GCC_493\Release\PWM_DIV_CONTROL.o .\ARM_GCC_493\Release\CyBootAsmGnu.o
+arm-none-eabi-ar.exe: creating .\ARM_GCC_493\Release\ADC_DAC.a
+arm-none-eabi-gcc.exe -Wl,--start-group -o .\ARM_GCC_493\Release\ADC_DAC.elf .\ARM_GCC_493\Release\main.o .\ARM_GCC_493\Release\cymetadata.o .\ARM_GCC_493\Release\Cm3Start.o .\ARM_GCC_493\Release\ADC_DAC.a "C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM3\ARM_GCC_493\Release\CyComponentLibrary.a" -mcpu=cortex-m3 -mthumb -g -ffunction-sections -O0 -ffat-lto-objects -L Generated_Source\PSoC5 -Wl,-Map,.\ARM_GCC_493\Release/ADC_DAC.map -T "C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\ADC_DAC.cydsn\Generated_Source\PSoC5\cm3gcc.ld" -specs=nano.specs -Wl,--gc-sections -Wl,--end-group
+cyelftool.exe -C "C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\ADC_DAC.cydsn\ARM_GCC_493\Release\ADC_DAC.elf" --flash_row_size 256 --flash_size 262144
+cyelftool.exe -S "C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\ADC_DAC.cydsn\ARM_GCC_493\Release\ADC_DAC.elf"
+Flash used: 14078 of 262144 bytes (5,4 %).
+SRAM used: 2701 of 65536 bytes (4,1 %). Stack: 2048 bytes. Heap: 128 bytes.
+--------------- Build Succeeded: 04/09/2017 14:56:23 ---------------

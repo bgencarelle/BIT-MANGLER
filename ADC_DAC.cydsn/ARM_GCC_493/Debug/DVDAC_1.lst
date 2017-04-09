@@ -1,0 +1,1387 @@
+ARM GAS  C:\Users\Ben\AppData\Local\Temp\ccEfd8RI.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"DVDAC_1.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.data
+  19              		.align	2
+  20              		.type	DVDAC_1_ditheredValues, %object
+  21              		.size	DVDAC_1_ditheredValues, 16
+  22              	DVDAC_1_ditheredValues:
+  23 0000 3F       		.byte	63
+  24 0001 3F       		.byte	63
+  25 0002 3F       		.byte	63
+  26 0003 3F       		.byte	63
+  27 0004 40       		.byte	64
+  28 0005 40       		.byte	64
+  29 0006 40       		.byte	64
+  30 0007 40       		.byte	64
+  31 0008 40       		.byte	64
+  32 0009 40       		.byte	64
+  33 000a 40       		.byte	64
+  34 000b 40       		.byte	64
+  35 000c 40       		.byte	64
+  36 000d 40       		.byte	64
+  37 000e 40       		.byte	64
+  38 000f 40       		.byte	64
+  39              		.global	DVDAC_1_initVar
+  40              		.bss
+  41              		.type	DVDAC_1_initVar, %object
+  42              		.size	DVDAC_1_initVar, 1
+  43              	DVDAC_1_initVar:
+  44 0000 00       		.space	1
+  45              	DVDAC_1_dmaChan:
+  46 0001 00       		.space	1
+  47              		.data
+  48              		.type	DVDAC_1_dmaTd, %object
+  49              		.size	DVDAC_1_dmaTd, 1
+  50              	DVDAC_1_dmaTd:
+  51 0010 FF       		.byte	-1
+  52 0011 000000   		.section	.text.DVDAC_1_Init,"ax",%progbits
+  53              		.align	2
+  54              		.global	DVDAC_1_Init
+  55              		.thumb
+  56              		.thumb_func
+  57              		.type	DVDAC_1_Init, %function
+ARM GAS  C:\Users\Ben\AppData\Local\Temp\ccEfd8RI.s 			page 2
+
+
+  58              	DVDAC_1_Init:
+  59              	.LFB0:
+  60              		.file 1 "Generated_Source\\PSoC5\\DVDAC_1.c"
+   1:Generated_Source\PSoC5/DVDAC_1.c **** /*******************************************************************************
+   2:Generated_Source\PSoC5/DVDAC_1.c **** * File Name: DVDAC_1.c
+   3:Generated_Source\PSoC5/DVDAC_1.c **** * Version 2.10
+   4:Generated_Source\PSoC5/DVDAC_1.c **** *
+   5:Generated_Source\PSoC5/DVDAC_1.c **** * Description:
+   6:Generated_Source\PSoC5/DVDAC_1.c **** *  This file provides the source code of APIs for the DVDAC component.
+   7:Generated_Source\PSoC5/DVDAC_1.c **** *
+   8:Generated_Source\PSoC5/DVDAC_1.c **** ********************************************************************************
+   9:Generated_Source\PSoC5/DVDAC_1.c **** * Copyright 2013, Cypress Semiconductor Corporation.  All rights reserved.
+  10:Generated_Source\PSoC5/DVDAC_1.c **** * You may use this file only in accordance with the license, terms, conditions,
+  11:Generated_Source\PSoC5/DVDAC_1.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  12:Generated_Source\PSoC5/DVDAC_1.c **** * the software package with which this file was provided.
+  13:Generated_Source\PSoC5/DVDAC_1.c **** *******************************************************************************/
+  14:Generated_Source\PSoC5/DVDAC_1.c **** 
+  15:Generated_Source\PSoC5/DVDAC_1.c **** #include "DVDAC_1.h"
+  16:Generated_Source\PSoC5/DVDAC_1.c **** #include "DVDAC_1_VDAC8.h"
+  17:Generated_Source\PSoC5/DVDAC_1.c **** #include "CyDmac.h"
+  18:Generated_Source\PSoC5/DVDAC_1.c **** #include "DVDAC_1_DMA_dma.H"
+  19:Generated_Source\PSoC5/DVDAC_1.c **** 
+  20:Generated_Source\PSoC5/DVDAC_1.c **** #if(DVDAC_1_INTERNAL_CLOCK_USED)
+  21:Generated_Source\PSoC5/DVDAC_1.c ****     #include "DVDAC_1_IntClock.h"
+  22:Generated_Source\PSoC5/DVDAC_1.c **** #endif /* DVDAC_1_INTERNAL_CLOCK_USED */
+  23:Generated_Source\PSoC5/DVDAC_1.c **** 
+  24:Generated_Source\PSoC5/DVDAC_1.c **** 
+  25:Generated_Source\PSoC5/DVDAC_1.c **** static uint8 DVDAC_1_ditheredValues[16u] = {0x3Fu, 0x3Fu, 0x3Fu, 0x3Fu, 0x40u, 0x40u, 0x40u, 0x40u,
+  26:Generated_Source\PSoC5/DVDAC_1.c ****                                             0x40u, 0x40u, 0x40u, 0x40u, 0x40u, 0x40u};
+  27:Generated_Source\PSoC5/DVDAC_1.c **** 
+  28:Generated_Source\PSoC5/DVDAC_1.c **** 
+  29:Generated_Source\PSoC5/DVDAC_1.c **** uint8 DVDAC_1_initVar = 0u;
+  30:Generated_Source\PSoC5/DVDAC_1.c **** 
+  31:Generated_Source\PSoC5/DVDAC_1.c **** static uint8 DVDAC_1_dmaChan;
+  32:Generated_Source\PSoC5/DVDAC_1.c **** static uint8 DVDAC_1_dmaTd = CY_DMA_INVALID_TD;
+  33:Generated_Source\PSoC5/DVDAC_1.c **** 
+  34:Generated_Source\PSoC5/DVDAC_1.c **** static void DVDAC_1_InitDma(void)  ;
+  35:Generated_Source\PSoC5/DVDAC_1.c **** 
+  36:Generated_Source\PSoC5/DVDAC_1.c **** 
+  37:Generated_Source\PSoC5/DVDAC_1.c **** /*******************************************************************************
+  38:Generated_Source\PSoC5/DVDAC_1.c **** * Function Name: DVDAC_1_Init
+  39:Generated_Source\PSoC5/DVDAC_1.c **** ********************************************************************************
+  40:Generated_Source\PSoC5/DVDAC_1.c **** *
+  41:Generated_Source\PSoC5/DVDAC_1.c **** * Summary:
+  42:Generated_Source\PSoC5/DVDAC_1.c **** *  Initializes or restores the component according to the customizer Configure
+  43:Generated_Source\PSoC5/DVDAC_1.c **** *  dialog settings. It is not necessary to call DVDAC_1_Init() because
+  44:Generated_Source\PSoC5/DVDAC_1.c **** *  the DVDAC_1_Start() API calls this function and is the preferred
+  45:Generated_Source\PSoC5/DVDAC_1.c **** *  method to begin component operation.
+  46:Generated_Source\PSoC5/DVDAC_1.c **** *
+  47:Generated_Source\PSoC5/DVDAC_1.c **** * Parameters:
+  48:Generated_Source\PSoC5/DVDAC_1.c **** *  None
+  49:Generated_Source\PSoC5/DVDAC_1.c **** *
+  50:Generated_Source\PSoC5/DVDAC_1.c **** * Return:
+  51:Generated_Source\PSoC5/DVDAC_1.c **** *  None
+  52:Generated_Source\PSoC5/DVDAC_1.c **** *
+  53:Generated_Source\PSoC5/DVDAC_1.c **** * Side Effects:
+  54:Generated_Source\PSoC5/DVDAC_1.c **** *  All registers will be set to values according to the customizer Configure
+ARM GAS  C:\Users\Ben\AppData\Local\Temp\ccEfd8RI.s 			page 3
+
+
+  55:Generated_Source\PSoC5/DVDAC_1.c **** *  dialog.
+  56:Generated_Source\PSoC5/DVDAC_1.c **** *
+  57:Generated_Source\PSoC5/DVDAC_1.c **** * Global variables:
+  58:Generated_Source\PSoC5/DVDAC_1.c **** *  None
+  59:Generated_Source\PSoC5/DVDAC_1.c **** *
+  60:Generated_Source\PSoC5/DVDAC_1.c **** *******************************************************************************/
+  61:Generated_Source\PSoC5/DVDAC_1.c **** void DVDAC_1_Init(void) 
+  62:Generated_Source\PSoC5/DVDAC_1.c **** {
+  61              		.loc 1 62 0
+  62              		.cfi_startproc
+  63              		@ args = 0, pretend = 0, frame = 0
+  64              		@ frame_needed = 1, uses_anonymous_args = 0
+  65 0000 80B5     		push	{r7, lr}
+  66              		.cfi_def_cfa_offset 8
+  67              		.cfi_offset 7, -8
+  68              		.cfi_offset 14, -4
+  69 0002 00AF     		add	r7, sp, #0
+  70              		.cfi_def_cfa_register 7
+  63:Generated_Source\PSoC5/DVDAC_1.c ****     DVDAC_1_VDAC8_Init();
+  71              		.loc 1 63 0
+  72 0004 FFF7FEFF 		bl	DVDAC_1_VDAC8_Init
+  64:Generated_Source\PSoC5/DVDAC_1.c **** 
+  65:Generated_Source\PSoC5/DVDAC_1.c ****     if(CY_DMA_INVALID_TD == DVDAC_1_dmaTd)
+  73              		.loc 1 65 0
+  74 0008 034B     		ldr	r3, .L3
+  75 000a 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+  76 000c FF2B     		cmp	r3, #255
+  77 000e 01D1     		bne	.L1
+  66:Generated_Source\PSoC5/DVDAC_1.c ****     {
+  67:Generated_Source\PSoC5/DVDAC_1.c ****         DVDAC_1_InitDma();
+  78              		.loc 1 67 0
+  79 0010 FFF7FEFF 		bl	DVDAC_1_InitDma
+  80              	.L1:
+  68:Generated_Source\PSoC5/DVDAC_1.c ****     }
+  69:Generated_Source\PSoC5/DVDAC_1.c **** }
+  81              		.loc 1 69 0
+  82 0014 80BD     		pop	{r7, pc}
+  83              	.L4:
+  84 0016 00BF     		.align	2
+  85              	.L3:
+  86 0018 10000000 		.word	DVDAC_1_dmaTd
+  87              		.cfi_endproc
+  88              	.LFE0:
+  89              		.size	DVDAC_1_Init, .-DVDAC_1_Init
+  90              		.section	.text.DVDAC_1_Enable,"ax",%progbits
+  91              		.align	2
+  92              		.global	DVDAC_1_Enable
+  93              		.thumb
+  94              		.thumb_func
+  95              		.type	DVDAC_1_Enable, %function
+  96              	DVDAC_1_Enable:
+  97              	.LFB1:
+  70:Generated_Source\PSoC5/DVDAC_1.c **** 
+  71:Generated_Source\PSoC5/DVDAC_1.c **** 
+  72:Generated_Source\PSoC5/DVDAC_1.c **** /*******************************************************************************
+  73:Generated_Source\PSoC5/DVDAC_1.c **** * Function Name: DVDAC_1_Enable
+  74:Generated_Source\PSoC5/DVDAC_1.c **** ********************************************************************************
+ARM GAS  C:\Users\Ben\AppData\Local\Temp\ccEfd8RI.s 			page 4
+
+
+  75:Generated_Source\PSoC5/DVDAC_1.c **** *
+  76:Generated_Source\PSoC5/DVDAC_1.c **** * Summary:
+  77:Generated_Source\PSoC5/DVDAC_1.c **** *  Activates the hardware and begins component operation. It is not necessary to
+  78:Generated_Source\PSoC5/DVDAC_1.c **** *  call DVDAC_1_Enable() because the DVDAC_1_Start() API calls
+  79:Generated_Source\PSoC5/DVDAC_1.c **** *  this function, which is the preferred method to begin component operation.
+  80:Generated_Source\PSoC5/DVDAC_1.c **** *
+  81:Generated_Source\PSoC5/DVDAC_1.c **** * Parameters:
+  82:Generated_Source\PSoC5/DVDAC_1.c **** *  None
+  83:Generated_Source\PSoC5/DVDAC_1.c **** *
+  84:Generated_Source\PSoC5/DVDAC_1.c **** * Return:
+  85:Generated_Source\PSoC5/DVDAC_1.c **** *  None
+  86:Generated_Source\PSoC5/DVDAC_1.c **** *
+  87:Generated_Source\PSoC5/DVDAC_1.c **** * Global variables:
+  88:Generated_Source\PSoC5/DVDAC_1.c **** *  None
+  89:Generated_Source\PSoC5/DVDAC_1.c **** *
+  90:Generated_Source\PSoC5/DVDAC_1.c **** *******************************************************************************/
+  91:Generated_Source\PSoC5/DVDAC_1.c **** void DVDAC_1_Enable(void) 
+  92:Generated_Source\PSoC5/DVDAC_1.c **** {
+  98              		.loc 1 92 0
+  99              		.cfi_startproc
+ 100              		@ args = 0, pretend = 0, frame = 0
+ 101              		@ frame_needed = 1, uses_anonymous_args = 0
+ 102 0000 80B5     		push	{r7, lr}
+ 103              		.cfi_def_cfa_offset 8
+ 104              		.cfi_offset 7, -8
+ 105              		.cfi_offset 14, -4
+ 106 0002 00AF     		add	r7, sp, #0
+ 107              		.cfi_def_cfa_register 7
+  93:Generated_Source\PSoC5/DVDAC_1.c ****     (void) CyDmaChEnable(DVDAC_1_dmaChan, 1u);
+ 108              		.loc 1 93 0
+ 109 0004 044B     		ldr	r3, .L6
+ 110 0006 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 111 0008 1846     		mov	r0, r3
+ 112 000a 0121     		movs	r1, #1
+ 113 000c FFF7FEFF 		bl	CyDmaChEnable
+  94:Generated_Source\PSoC5/DVDAC_1.c **** 
+  95:Generated_Source\PSoC5/DVDAC_1.c ****     #if(DVDAC_1_INTERNAL_CLOCK_USED)
+  96:Generated_Source\PSoC5/DVDAC_1.c ****         DVDAC_1_IntClock_Start();
+  97:Generated_Source\PSoC5/DVDAC_1.c ****     #endif /* DVDAC_1_INTERNAL_CLOCK_USED */
+  98:Generated_Source\PSoC5/DVDAC_1.c **** 
+  99:Generated_Source\PSoC5/DVDAC_1.c ****     DVDAC_1_VDAC8_Enable();
+ 114              		.loc 1 99 0
+ 115 0010 FFF7FEFF 		bl	DVDAC_1_VDAC8_Enable
+ 100:Generated_Source\PSoC5/DVDAC_1.c **** }
+ 116              		.loc 1 100 0
+ 117 0014 80BD     		pop	{r7, pc}
+ 118              	.L7:
+ 119 0016 00BF     		.align	2
+ 120              	.L6:
+ 121 0018 01000000 		.word	DVDAC_1_dmaChan
+ 122              		.cfi_endproc
+ 123              	.LFE1:
+ 124              		.size	DVDAC_1_Enable, .-DVDAC_1_Enable
+ 125              		.section	.text.DVDAC_1_Start,"ax",%progbits
+ 126              		.align	2
+ 127              		.global	DVDAC_1_Start
+ 128              		.thumb
+ARM GAS  C:\Users\Ben\AppData\Local\Temp\ccEfd8RI.s 			page 5
+
+
+ 129              		.thumb_func
+ 130              		.type	DVDAC_1_Start, %function
+ 131              	DVDAC_1_Start:
+ 132              	.LFB2:
+ 101:Generated_Source\PSoC5/DVDAC_1.c **** 
+ 102:Generated_Source\PSoC5/DVDAC_1.c **** 
+ 103:Generated_Source\PSoC5/DVDAC_1.c **** /*******************************************************************************
+ 104:Generated_Source\PSoC5/DVDAC_1.c **** * Function Name: DVDAC_1_Start
+ 105:Generated_Source\PSoC5/DVDAC_1.c **** ********************************************************************************
+ 106:Generated_Source\PSoC5/DVDAC_1.c **** *
+ 107:Generated_Source\PSoC5/DVDAC_1.c **** * Summary:
+ 108:Generated_Source\PSoC5/DVDAC_1.c **** *  Performs all of the required initialization for the component and enables
+ 109:Generated_Source\PSoC5/DVDAC_1.c **** *  power to the block. The first time the routine is executed, the component is
+ 110:Generated_Source\PSoC5/DVDAC_1.c **** *  initialized to the configured settings. When called to restart the DVDAC
+ 111:Generated_Source\PSoC5/DVDAC_1.c **** *  following a DVDAC_1_Stop() call, the current component parameter
+ 112:Generated_Source\PSoC5/DVDAC_1.c **** *  settings are retained.
+ 113:Generated_Source\PSoC5/DVDAC_1.c **** *
+ 114:Generated_Source\PSoC5/DVDAC_1.c **** * Parameters:
+ 115:Generated_Source\PSoC5/DVDAC_1.c **** *  None
+ 116:Generated_Source\PSoC5/DVDAC_1.c **** *
+ 117:Generated_Source\PSoC5/DVDAC_1.c **** * Return:
+ 118:Generated_Source\PSoC5/DVDAC_1.c **** *  None
+ 119:Generated_Source\PSoC5/DVDAC_1.c **** *
+ 120:Generated_Source\PSoC5/DVDAC_1.c **** * Side Effects:
+ 121:Generated_Source\PSoC5/DVDAC_1.c **** *  If the DVDAC_1_initVar variable is already set, this function only
+ 122:Generated_Source\PSoC5/DVDAC_1.c **** *  calls the DVDAC_1_Enable() function.
+ 123:Generated_Source\PSoC5/DVDAC_1.c **** *
+ 124:Generated_Source\PSoC5/DVDAC_1.c **** * Global variables:
+ 125:Generated_Source\PSoC5/DVDAC_1.c **** *  DVDAC_1_initVar - indicates whether the DVDAC has been initialized.
+ 126:Generated_Source\PSoC5/DVDAC_1.c **** *  The variable is initialized to 0 and set to 1 the first time DVDAC_Start()
+ 127:Generated_Source\PSoC5/DVDAC_1.c **** *  is called. This allows the component to restart without reinitialization
+ 128:Generated_Source\PSoC5/DVDAC_1.c **** *  after the first call to the DVDAC_1_Start() routine. If
+ 129:Generated_Source\PSoC5/DVDAC_1.c **** *  reinitialization of the component is required, then the
+ 130:Generated_Source\PSoC5/DVDAC_1.c **** *  DVDAC_1_Init() function can be called before the
+ 131:Generated_Source\PSoC5/DVDAC_1.c **** *  DVDAC_1_Start() or DVDAC_1_Enable() function.
+ 132:Generated_Source\PSoC5/DVDAC_1.c **** *
+ 133:Generated_Source\PSoC5/DVDAC_1.c **** *******************************************************************************/
+ 134:Generated_Source\PSoC5/DVDAC_1.c **** void DVDAC_1_Start(void) 
+ 135:Generated_Source\PSoC5/DVDAC_1.c **** {
+ 133              		.loc 1 135 0
+ 134              		.cfi_startproc
+ 135              		@ args = 0, pretend = 0, frame = 0
+ 136              		@ frame_needed = 1, uses_anonymous_args = 0
+ 137 0000 80B5     		push	{r7, lr}
+ 138              		.cfi_def_cfa_offset 8
+ 139              		.cfi_offset 7, -8
+ 140              		.cfi_offset 14, -4
+ 141 0002 00AF     		add	r7, sp, #0
+ 142              		.cfi_def_cfa_register 7
+ 136:Generated_Source\PSoC5/DVDAC_1.c ****     /* Hardware initiazation only needs to occure the first time */
+ 137:Generated_Source\PSoC5/DVDAC_1.c ****     if(0u == DVDAC_1_initVar)
+ 143              		.loc 1 137 0
+ 144 0004 054B     		ldr	r3, .L10
+ 145 0006 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 146 0008 002B     		cmp	r3, #0
+ 147 000a 04D1     		bne	.L9
+ 138:Generated_Source\PSoC5/DVDAC_1.c ****     {
+ARM GAS  C:\Users\Ben\AppData\Local\Temp\ccEfd8RI.s 			page 6
+
+
+ 139:Generated_Source\PSoC5/DVDAC_1.c ****         DVDAC_1_Init();
+ 148              		.loc 1 139 0
+ 149 000c FFF7FEFF 		bl	DVDAC_1_Init
+ 140:Generated_Source\PSoC5/DVDAC_1.c ****         DVDAC_1_initVar = 1u;
+ 150              		.loc 1 140 0
+ 151 0010 024B     		ldr	r3, .L10
+ 152 0012 0122     		movs	r2, #1
+ 153 0014 1A70     		strb	r2, [r3]
+ 154              	.L9:
+ 141:Generated_Source\PSoC5/DVDAC_1.c ****     }
+ 142:Generated_Source\PSoC5/DVDAC_1.c **** 
+ 143:Generated_Source\PSoC5/DVDAC_1.c ****     DVDAC_1_Enable();
+ 155              		.loc 1 143 0
+ 156 0016 FFF7FEFF 		bl	DVDAC_1_Enable
+ 144:Generated_Source\PSoC5/DVDAC_1.c **** }
+ 157              		.loc 1 144 0
+ 158 001a 80BD     		pop	{r7, pc}
+ 159              	.L11:
+ 160              		.align	2
+ 161              	.L10:
+ 162 001c 00000000 		.word	DVDAC_1_initVar
+ 163              		.cfi_endproc
+ 164              	.LFE2:
+ 165              		.size	DVDAC_1_Start, .-DVDAC_1_Start
+ 166              		.section	.text.DVDAC_1_Stop,"ax",%progbits
+ 167              		.align	2
+ 168              		.global	DVDAC_1_Stop
+ 169              		.thumb
+ 170              		.thumb_func
+ 171              		.type	DVDAC_1_Stop, %function
+ 172              	DVDAC_1_Stop:
+ 173              	.LFB3:
+ 145:Generated_Source\PSoC5/DVDAC_1.c **** 
+ 146:Generated_Source\PSoC5/DVDAC_1.c **** 
+ 147:Generated_Source\PSoC5/DVDAC_1.c **** /*******************************************************************************
+ 148:Generated_Source\PSoC5/DVDAC_1.c **** * Function Name: DVDAC_1_Stop
+ 149:Generated_Source\PSoC5/DVDAC_1.c **** ********************************************************************************
+ 150:Generated_Source\PSoC5/DVDAC_1.c **** *
+ 151:Generated_Source\PSoC5/DVDAC_1.c **** * Summary:
+ 152:Generated_Source\PSoC5/DVDAC_1.c **** *  Stops the component and turns off the analog blocks in the DVDAC.
+ 153:Generated_Source\PSoC5/DVDAC_1.c **** *
+ 154:Generated_Source\PSoC5/DVDAC_1.c **** * Parameters:
+ 155:Generated_Source\PSoC5/DVDAC_1.c **** *  None
+ 156:Generated_Source\PSoC5/DVDAC_1.c **** *
+ 157:Generated_Source\PSoC5/DVDAC_1.c **** * Return:
+ 158:Generated_Source\PSoC5/DVDAC_1.c **** *  None
+ 159:Generated_Source\PSoC5/DVDAC_1.c **** *
+ 160:Generated_Source\PSoC5/DVDAC_1.c **** * Global variables:
+ 161:Generated_Source\PSoC5/DVDAC_1.c **** *  None
+ 162:Generated_Source\PSoC5/DVDAC_1.c **** *
+ 163:Generated_Source\PSoC5/DVDAC_1.c **** *******************************************************************************/
+ 164:Generated_Source\PSoC5/DVDAC_1.c **** void DVDAC_1_Stop(void) 
+ 165:Generated_Source\PSoC5/DVDAC_1.c **** {
+ 174              		.loc 1 165 0
+ 175              		.cfi_startproc
+ 176              		@ args = 0, pretend = 0, frame = 0
+ 177              		@ frame_needed = 1, uses_anonymous_args = 0
+ARM GAS  C:\Users\Ben\AppData\Local\Temp\ccEfd8RI.s 			page 7
+
+
+ 178 0000 80B5     		push	{r7, lr}
+ 179              		.cfi_def_cfa_offset 8
+ 180              		.cfi_offset 7, -8
+ 181              		.cfi_offset 14, -4
+ 182 0002 00AF     		add	r7, sp, #0
+ 183              		.cfi_def_cfa_register 7
+ 166:Generated_Source\PSoC5/DVDAC_1.c ****     #if(DVDAC_1_INTERNAL_CLOCK_USED)
+ 167:Generated_Source\PSoC5/DVDAC_1.c ****         DVDAC_1_IntClock_Stop();
+ 168:Generated_Source\PSoC5/DVDAC_1.c ****     #endif /* DVDAC_1_INTERNAL_CLOCK_USED */
+ 169:Generated_Source\PSoC5/DVDAC_1.c **** 
+ 170:Generated_Source\PSoC5/DVDAC_1.c ****     (void) CyDmaChDisable(DVDAC_1_dmaChan);
+ 184              		.loc 1 170 0
+ 185 0004 034B     		ldr	r3, .L13
+ 186 0006 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 187 0008 1846     		mov	r0, r3
+ 188 000a FFF7FEFF 		bl	CyDmaChDisable
+ 171:Generated_Source\PSoC5/DVDAC_1.c ****     DVDAC_1_VDAC8_Stop();
+ 189              		.loc 1 171 0
+ 190 000e FFF7FEFF 		bl	DVDAC_1_VDAC8_Stop
+ 172:Generated_Source\PSoC5/DVDAC_1.c **** }
+ 191              		.loc 1 172 0
+ 192 0012 80BD     		pop	{r7, pc}
+ 193              	.L14:
+ 194              		.align	2
+ 195              	.L13:
+ 196 0014 01000000 		.word	DVDAC_1_dmaChan
+ 197              		.cfi_endproc
+ 198              	.LFE3:
+ 199              		.size	DVDAC_1_Stop, .-DVDAC_1_Stop
+ 200              		.section	.text.DVDAC_1_SetValue,"ax",%progbits
+ 201              		.align	2
+ 202              		.global	DVDAC_1_SetValue
+ 203              		.thumb
+ 204              		.thumb_func
+ 205              		.type	DVDAC_1_SetValue, %function
+ 206              	DVDAC_1_SetValue:
+ 207              	.LFB4:
+ 173:Generated_Source\PSoC5/DVDAC_1.c **** 
+ 174:Generated_Source\PSoC5/DVDAC_1.c **** 
+ 175:Generated_Source\PSoC5/DVDAC_1.c **** /*******************************************************************************
+ 176:Generated_Source\PSoC5/DVDAC_1.c **** * Function Name: DVDAC_1_SetValue
+ 177:Generated_Source\PSoC5/DVDAC_1.c **** ********************************************************************************
+ 178:Generated_Source\PSoC5/DVDAC_1.c **** *
+ 179:Generated_Source\PSoC5/DVDAC_1.c **** * Summary:
+ 180:Generated_Source\PSoC5/DVDAC_1.c **** *  Sets the DVDACs output. The function populates the SRAM array based on the
+ 181:Generated_Source\PSoC5/DVDAC_1.c **** *  value and the resolution setting. That array is then transferred to the
+ 182:Generated_Source\PSoC5/DVDAC_1.c **** *  internal VDAC by DMA.
+ 183:Generated_Source\PSoC5/DVDAC_1.c **** *
+ 184:Generated_Source\PSoC5/DVDAC_1.c **** * Parameters:
+ 185:Generated_Source\PSoC5/DVDAC_1.c **** *  (uint16) value:  The maximum value will be dependent on the resolution
+ 186:Generated_Source\PSoC5/DVDAC_1.c **** *  selected:
+ 187:Generated_Source\PSoC5/DVDAC_1.c **** *   Resolution       Valid range
+ 188:Generated_Source\PSoC5/DVDAC_1.c **** *        9 bits       0x0 - 0x1FE
+ 189:Generated_Source\PSoC5/DVDAC_1.c **** *       10 bits       0x0 - 0x3FC
+ 190:Generated_Source\PSoC5/DVDAC_1.c **** *       11 bits       0x0 - 0x7F8
+ 191:Generated_Source\PSoC5/DVDAC_1.c **** *       12 bits       0x0 - 0xFF0
+ 192:Generated_Source\PSoC5/DVDAC_1.c **** *
+ARM GAS  C:\Users\Ben\AppData\Local\Temp\ccEfd8RI.s 			page 8
+
+
+ 193:Generated_Source\PSoC5/DVDAC_1.c **** *  This value includes an integer portion and a fractional portion that varies
+ 194:Generated_Source\PSoC5/DVDAC_1.c **** *  depending on number of bits of resolution:
+ 195:Generated_Source\PSoC5/DVDAC_1.c **** *   - 9-bits:  1 fractional bit
+ 196:Generated_Source\PSoC5/DVDAC_1.c **** *   - 10-bits: 2 fractional bits
+ 197:Generated_Source\PSoC5/DVDAC_1.c **** *   - 11-bits: 3 fractional bits
+ 198:Generated_Source\PSoC5/DVDAC_1.c **** *   - 12-bits: 4 fractional bits
+ 199:Generated_Source\PSoC5/DVDAC_1.c **** *
+ 200:Generated_Source\PSoC5/DVDAC_1.c **** * Return:
+ 201:Generated_Source\PSoC5/DVDAC_1.c **** *  None
+ 202:Generated_Source\PSoC5/DVDAC_1.c **** *
+ 203:Generated_Source\PSoC5/DVDAC_1.c **** * Global variables:
+ 204:Generated_Source\PSoC5/DVDAC_1.c **** *  None
+ 205:Generated_Source\PSoC5/DVDAC_1.c **** *
+ 206:Generated_Source\PSoC5/DVDAC_1.c **** *******************************************************************************/
+ 207:Generated_Source\PSoC5/DVDAC_1.c **** void DVDAC_1_SetValue(uint16 value) 
+ 208:Generated_Source\PSoC5/DVDAC_1.c **** {
+ 208              		.loc 1 208 0
+ 209              		.cfi_startproc
+ 210              		@ args = 0, pretend = 0, frame = 16
+ 211              		@ frame_needed = 1, uses_anonymous_args = 0
+ 212 0000 80B5     		push	{r7, lr}
+ 213              		.cfi_def_cfa_offset 8
+ 214              		.cfi_offset 7, -8
+ 215              		.cfi_offset 14, -4
+ 216 0002 84B0     		sub	sp, sp, #16
+ 217              		.cfi_def_cfa_offset 24
+ 218 0004 00AF     		add	r7, sp, #0
+ 219              		.cfi_def_cfa_register 7
+ 220 0006 0346     		mov	r3, r0
+ 221 0008 FB80     		strh	r3, [r7, #6]	@ movhi
+ 209:Generated_Source\PSoC5/DVDAC_1.c ****     uint8  lowCount  = (uint8)(value & DVDAC_1_FRACTIONAL_PORTION_MASK);
+ 222              		.loc 1 209 0
+ 223 000a FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 224 000c DBB2     		uxtb	r3, r3
+ 225 000e 03F00F03 		and	r3, r3, #15
+ 226 0012 BB73     		strb	r3, [r7, #14]
+ 210:Generated_Source\PSoC5/DVDAC_1.c ****     uint8 highCount  = (uint8)(value >> DVDAC_1_INTEGER_PORTION_SHIFT);
+ 227              		.loc 1 210 0
+ 228 0014 FB88     		ldrh	r3, [r7, #6]
+ 229 0016 1B09     		lsrs	r3, r3, #4
+ 230 0018 9BB2     		uxth	r3, r3
+ 231 001a 7B73     		strb	r3, [r7, #13]
+ 211:Generated_Source\PSoC5/DVDAC_1.c ****     uint8 i;
+ 212:Generated_Source\PSoC5/DVDAC_1.c **** 
+ 213:Generated_Source\PSoC5/DVDAC_1.c **** 
+ 214:Generated_Source\PSoC5/DVDAC_1.c ****     CYASSERT(value <= DVDAC_1_DVDAC_MAX_VALUE);
+ 232              		.loc 1 214 0
+ 233 001c FB88     		ldrh	r3, [r7, #6]
+ 234 001e B3F57F6F 		cmp	r3, #4080
+ 235 0022 02D9     		bls	.L16
+ 236              		.loc 1 214 0 is_stmt 0 discriminator 1
+ 237 0024 0020     		movs	r0, #0
+ 238 0026 FFF7FEFF 		bl	CyHalt
+ 239              	.L16:
+ 215:Generated_Source\PSoC5/DVDAC_1.c **** 
+ 216:Generated_Source\PSoC5/DVDAC_1.c ****     if (DVDAC_1_INTEGER_PORTION_MAX_VALUE == highCount)
+ 240              		.loc 1 216 0 is_stmt 1
+ARM GAS  C:\Users\Ben\AppData\Local\Temp\ccEfd8RI.s 			page 9
+
+
+ 241 002a 7B7B     		ldrb	r3, [r7, #13]	@ zero_extendqisi2
+ 242 002c FF2B     		cmp	r3, #255
+ 243 002e 0DD1     		bne	.L17
+ 217:Generated_Source\PSoC5/DVDAC_1.c ****     {
+ 218:Generated_Source\PSoC5/DVDAC_1.c ****         for (i = 0u; i < DVDAC_1_DITHERED_ARRAY_SIZE; i++)
+ 244              		.loc 1 218 0
+ 245 0030 0023     		movs	r3, #0
+ 246 0032 FB73     		strb	r3, [r7, #15]
+ 247 0034 06E0     		b	.L18
+ 248              	.L19:
+ 219:Generated_Source\PSoC5/DVDAC_1.c ****         {
+ 220:Generated_Source\PSoC5/DVDAC_1.c ****             DVDAC_1_ditheredValues[i] = DVDAC_1_INTEGER_PORTION_MAX_VALUE;
+ 249              		.loc 1 220 0 discriminator 3
+ 250 0036 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 251 0038 134A     		ldr	r2, .L25
+ 252 003a FF21     		movs	r1, #255
+ 253 003c D154     		strb	r1, [r2, r3]
+ 218:Generated_Source\PSoC5/DVDAC_1.c ****         {
+ 254              		.loc 1 218 0 discriminator 3
+ 255 003e FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 256 0040 0133     		adds	r3, r3, #1
+ 257 0042 FB73     		strb	r3, [r7, #15]
+ 258              	.L18:
+ 218:Generated_Source\PSoC5/DVDAC_1.c ****         {
+ 259              		.loc 1 218 0 is_stmt 0 discriminator 1
+ 260 0044 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 261 0046 0F2B     		cmp	r3, #15
+ 262 0048 F5D9     		bls	.L19
+ 263 004a 19E0     		b	.L15
+ 264              	.L17:
+ 221:Generated_Source\PSoC5/DVDAC_1.c ****         }
+ 222:Generated_Source\PSoC5/DVDAC_1.c ****     }
+ 223:Generated_Source\PSoC5/DVDAC_1.c ****     else
+ 224:Generated_Source\PSoC5/DVDAC_1.c ****     {
+ 225:Generated_Source\PSoC5/DVDAC_1.c ****         for(i = 0u; i < DVDAC_1_DITHERED_ARRAY_SIZE; i++)
+ 265              		.loc 1 225 0 is_stmt 1
+ 266 004c 0023     		movs	r3, #0
+ 267 004e FB73     		strb	r3, [r7, #15]
+ 268 0050 13E0     		b	.L21
+ 269              	.L24:
+ 226:Generated_Source\PSoC5/DVDAC_1.c ****         {
+ 227:Generated_Source\PSoC5/DVDAC_1.c ****             if(i < (DVDAC_1_DITHERED_ARRAY_SIZE - lowCount))
+ 270              		.loc 1 227 0
+ 271 0052 FA7B     		ldrb	r2, [r7, #15]	@ zero_extendqisi2
+ 272 0054 BB7B     		ldrb	r3, [r7, #14]	@ zero_extendqisi2
+ 273 0056 C3F11003 		rsb	r3, r3, #16
+ 274 005a 9A42     		cmp	r2, r3
+ 275 005c 04DA     		bge	.L22
+ 228:Generated_Source\PSoC5/DVDAC_1.c ****             {
+ 229:Generated_Source\PSoC5/DVDAC_1.c ****                 DVDAC_1_ditheredValues[i] = highCount;
+ 276              		.loc 1 229 0
+ 277 005e FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 278 0060 0949     		ldr	r1, .L25
+ 279 0062 7A7B     		ldrb	r2, [r7, #13]
+ 280 0064 CA54     		strb	r2, [r1, r3]
+ 281 0066 05E0     		b	.L23
+ 282              	.L22:
+ARM GAS  C:\Users\Ben\AppData\Local\Temp\ccEfd8RI.s 			page 10
+
+
+ 230:Generated_Source\PSoC5/DVDAC_1.c ****             }
+ 231:Generated_Source\PSoC5/DVDAC_1.c ****             else
+ 232:Generated_Source\PSoC5/DVDAC_1.c ****             {
+ 233:Generated_Source\PSoC5/DVDAC_1.c ****                 DVDAC_1_ditheredValues[i] = highCount + 1u;
+ 283              		.loc 1 233 0
+ 284 0068 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 285 006a 7A7B     		ldrb	r2, [r7, #13]
+ 286 006c 0132     		adds	r2, r2, #1
+ 287 006e D1B2     		uxtb	r1, r2
+ 288 0070 054A     		ldr	r2, .L25
+ 289 0072 D154     		strb	r1, [r2, r3]
+ 290              	.L23:
+ 225:Generated_Source\PSoC5/DVDAC_1.c ****         {
+ 291              		.loc 1 225 0 discriminator 2
+ 292 0074 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 293 0076 0133     		adds	r3, r3, #1
+ 294 0078 FB73     		strb	r3, [r7, #15]
+ 295              	.L21:
+ 225:Generated_Source\PSoC5/DVDAC_1.c ****         {
+ 296              		.loc 1 225 0 is_stmt 0 discriminator 1
+ 297 007a FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 298 007c 0F2B     		cmp	r3, #15
+ 299 007e E8D9     		bls	.L24
+ 300              	.L15:
+ 234:Generated_Source\PSoC5/DVDAC_1.c ****             }
+ 235:Generated_Source\PSoC5/DVDAC_1.c ****         }
+ 236:Generated_Source\PSoC5/DVDAC_1.c ****     }
+ 237:Generated_Source\PSoC5/DVDAC_1.c **** }
+ 301              		.loc 1 237 0 is_stmt 1
+ 302 0080 1037     		adds	r7, r7, #16
+ 303              		.cfi_def_cfa_offset 8
+ 304 0082 BD46     		mov	sp, r7
+ 305              		.cfi_def_cfa_register 13
+ 306              		@ sp needed
+ 307 0084 80BD     		pop	{r7, pc}
+ 308              	.L26:
+ 309 0086 00BF     		.align	2
+ 310              	.L25:
+ 311 0088 00000000 		.word	DVDAC_1_ditheredValues
+ 312              		.cfi_endproc
+ 313              	.LFE4:
+ 314              		.size	DVDAC_1_SetValue, .-DVDAC_1_SetValue
+ 315              		.section	.text.DVDAC_1_InitDma,"ax",%progbits
+ 316              		.align	2
+ 317              		.thumb
+ 318              		.thumb_func
+ 319              		.type	DVDAC_1_InitDma, %function
+ 320              	DVDAC_1_InitDma:
+ 321              	.LFB5:
+ 238:Generated_Source\PSoC5/DVDAC_1.c **** 
+ 239:Generated_Source\PSoC5/DVDAC_1.c **** 
+ 240:Generated_Source\PSoC5/DVDAC_1.c **** /*******************************************************************************
+ 241:Generated_Source\PSoC5/DVDAC_1.c **** * Function Name: DVDAC_1_InitDma
+ 242:Generated_Source\PSoC5/DVDAC_1.c **** ********************************************************************************
+ 243:Generated_Source\PSoC5/DVDAC_1.c **** *
+ 244:Generated_Source\PSoC5/DVDAC_1.c **** * Summary:
+ 245:Generated_Source\PSoC5/DVDAC_1.c **** *  Configures a DMA transfer of channel values from memory to VDAC.
+ARM GAS  C:\Users\Ben\AppData\Local\Temp\ccEfd8RI.s 			page 11
+
+
+ 246:Generated_Source\PSoC5/DVDAC_1.c **** *
+ 247:Generated_Source\PSoC5/DVDAC_1.c **** * Parameters:
+ 248:Generated_Source\PSoC5/DVDAC_1.c **** *  None
+ 249:Generated_Source\PSoC5/DVDAC_1.c **** *
+ 250:Generated_Source\PSoC5/DVDAC_1.c **** * Return:
+ 251:Generated_Source\PSoC5/DVDAC_1.c **** *  None
+ 252:Generated_Source\PSoC5/DVDAC_1.c **** *
+ 253:Generated_Source\PSoC5/DVDAC_1.c **** *******************************************************************************/
+ 254:Generated_Source\PSoC5/DVDAC_1.c **** static void DVDAC_1_InitDma(void)  
+ 255:Generated_Source\PSoC5/DVDAC_1.c **** {
+ 322              		.loc 1 255 0
+ 323              		.cfi_startproc
+ 324              		@ args = 0, pretend = 0, frame = 0
+ 325              		@ frame_needed = 1, uses_anonymous_args = 0
+ 326 0000 80B5     		push	{r7, lr}
+ 327              		.cfi_def_cfa_offset 8
+ 328              		.cfi_offset 7, -8
+ 329              		.cfi_offset 14, -4
+ 330 0002 00AF     		add	r7, sp, #0
+ 331              		.cfi_def_cfa_register 7
+ 256:Generated_Source\PSoC5/DVDAC_1.c ****     /***************************************************************************
+ 257:Generated_Source\PSoC5/DVDAC_1.c ****     * Transfers channel values from SRAM to VDAC register. One byte transfer,
+ 258:Generated_Source\PSoC5/DVDAC_1.c ****     * each burst requires a request.
+ 259:Generated_Source\PSoC5/DVDAC_1.c ****     ***************************************************************************/
+ 260:Generated_Source\PSoC5/DVDAC_1.c ****     DVDAC_1_dmaChan = DVDAC_1_DMA_DmaInitialize(
+ 332              		.loc 1 260 0
+ 333 0004 0120     		movs	r0, #1
+ 334 0006 0121     		movs	r1, #1
+ 335 0008 41F6FF72 		movw	r2, #8191
+ 336 000c 4FF48043 		mov	r3, #16384
+ 337 0010 FFF7FEFF 		bl	DVDAC_1_DMA_DmaInitialize
+ 338 0014 0346     		mov	r3, r0
+ 339 0016 1A46     		mov	r2, r3
+ 340 0018 124B     		ldr	r3, .L28
+ 341 001a 1A70     		strb	r2, [r3]
+ 261:Generated_Source\PSoC5/DVDAC_1.c ****                                     DVDAC_1_DMA_BYTES_PER_BURST,
+ 262:Generated_Source\PSoC5/DVDAC_1.c ****                                     DVDAC_1_DMA_REQUEST_PER_BURST,
+ 263:Generated_Source\PSoC5/DVDAC_1.c ****                                     HI16(DVDAC_1_DMA_SRC_BASE),
+ 264:Generated_Source\PSoC5/DVDAC_1.c ****                                     HI16(DVDAC_1_DMA_DST_BASE));
+ 265:Generated_Source\PSoC5/DVDAC_1.c **** 
+ 266:Generated_Source\PSoC5/DVDAC_1.c ****     DVDAC_1_dmaTd = CyDmaTdAllocate();
+ 342              		.loc 1 266 0
+ 343 001c FFF7FEFF 		bl	CyDmaTdAllocate
+ 344 0020 0346     		mov	r3, r0
+ 345 0022 1A46     		mov	r2, r3
+ 346 0024 104B     		ldr	r3, .L28+4
+ 347 0026 1A70     		strb	r2, [r3]
+ 267:Generated_Source\PSoC5/DVDAC_1.c **** 
+ 268:Generated_Source\PSoC5/DVDAC_1.c **** 
+ 269:Generated_Source\PSoC5/DVDAC_1.c ****     /***************************************************************************
+ 270:Generated_Source\PSoC5/DVDAC_1.c ****     * One TD looping on itself, increment the source address, but not the
+ 271:Generated_Source\PSoC5/DVDAC_1.c ****     * destination address.
+ 272:Generated_Source\PSoC5/DVDAC_1.c ****     ***************************************************************************/
+ 273:Generated_Source\PSoC5/DVDAC_1.c ****     (void) CyDmaTdSetConfiguration( DVDAC_1_dmaTd,
+ 348              		.loc 1 273 0
+ 349 0028 0F4B     		ldr	r3, .L28+4
+ 350 002a 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ARM GAS  C:\Users\Ben\AppData\Local\Temp\ccEfd8RI.s 			page 12
+
+
+ 351 002c 0E4B     		ldr	r3, .L28+4
+ 352 002e 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 353 0030 1046     		mov	r0, r2
+ 354 0032 1021     		movs	r1, #16
+ 355 0034 1A46     		mov	r2, r3
+ 356 0036 0123     		movs	r3, #1
+ 357 0038 FFF7FEFF 		bl	CyDmaTdSetConfiguration
+ 274:Generated_Source\PSoC5/DVDAC_1.c ****                                     DVDAC_1_DITHERED_ARRAY_SIZE,
+ 275:Generated_Source\PSoC5/DVDAC_1.c ****                                     DVDAC_1_dmaTd,
+ 276:Generated_Source\PSoC5/DVDAC_1.c ****                                     (uint8) CY_DMA_TD_INC_SRC_ADR);
+ 277:Generated_Source\PSoC5/DVDAC_1.c **** 
+ 278:Generated_Source\PSoC5/DVDAC_1.c ****     /* Transfers the value for each channel from memory to VDAC */
+ 279:Generated_Source\PSoC5/DVDAC_1.c ****     (void) CyDmaTdSetAddress(   DVDAC_1_dmaTd,
+ 358              		.loc 1 279 0
+ 359 003c 0A4B     		ldr	r3, .L28+4
+ 360 003e 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 361 0040 0A4B     		ldr	r3, .L28+8
+ 362 0042 9BB2     		uxth	r3, r3
+ 363 0044 1046     		mov	r0, r2
+ 364 0046 1946     		mov	r1, r3
+ 365 0048 4FF4B742 		mov	r2, #23424
+ 366 004c FFF7FEFF 		bl	CyDmaTdSetAddress
+ 280:Generated_Source\PSoC5/DVDAC_1.c ****                                 LO16((uint32)DVDAC_1_ditheredValues),
+ 281:Generated_Source\PSoC5/DVDAC_1.c ****                                 LO16((uint32)DVDAC_1_VDAC8_Data_PTR));
+ 282:Generated_Source\PSoC5/DVDAC_1.c **** 
+ 283:Generated_Source\PSoC5/DVDAC_1.c ****     (void) CyDmaChSetInitialTd(DVDAC_1_dmaChan, DVDAC_1_dmaTd);
+ 367              		.loc 1 283 0
+ 368 0050 044B     		ldr	r3, .L28
+ 369 0052 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 370 0054 044B     		ldr	r3, .L28+4
+ 371 0056 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 372 0058 1046     		mov	r0, r2
+ 373 005a 1946     		mov	r1, r3
+ 374 005c FFF7FEFF 		bl	CyDmaChSetInitialTd
+ 284:Generated_Source\PSoC5/DVDAC_1.c **** }
+ 375              		.loc 1 284 0
+ 376 0060 80BD     		pop	{r7, pc}
+ 377              	.L29:
+ 378 0062 00BF     		.align	2
+ 379              	.L28:
+ 380 0064 01000000 		.word	DVDAC_1_dmaChan
+ 381 0068 10000000 		.word	DVDAC_1_dmaTd
+ 382 006c 00000000 		.word	DVDAC_1_ditheredValues
+ 383              		.cfi_endproc
+ 384              	.LFE5:
+ 385              		.size	DVDAC_1_InitDma, .-DVDAC_1_InitDma
+ 386              		.text
+ 387              	.Letext0:
+ 388              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
+ 389              		.section	.debug_info,"",%progbits
+ 390              	.Ldebug_info0:
+ 391 0000 AE010000 		.4byte	0x1ae
+ 392 0004 0400     		.2byte	0x4
+ 393 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 394 000a 04       		.byte	0x4
+ 395 000b 01       		.uleb128 0x1
+ 396 000c 91000000 		.4byte	.LASF26
+ARM GAS  C:\Users\Ben\AppData\Local\Temp\ccEfd8RI.s 			page 13
+
+
+ 397 0010 01       		.byte	0x1
+ 398 0011 36020000 		.4byte	.LASF27
+ 399 0015 DE010000 		.4byte	.LASF28
+ 400 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 401 001d 00000000 		.4byte	0
+ 402 0021 00000000 		.4byte	.Ldebug_line0
+ 403 0025 02       		.uleb128 0x2
+ 404 0026 01       		.byte	0x1
+ 405 0027 06       		.byte	0x6
+ 406 0028 60020000 		.4byte	.LASF0
+ 407 002c 02       		.uleb128 0x2
+ 408 002d 01       		.byte	0x1
+ 409 002e 08       		.byte	0x8
+ 410 002f 83000000 		.4byte	.LASF1
+ 411 0033 02       		.uleb128 0x2
+ 412 0034 02       		.byte	0x2
+ 413 0035 05       		.byte	0x5
+ 414 0036 D4010000 		.4byte	.LASF2
+ 415 003a 02       		.uleb128 0x2
+ 416 003b 02       		.byte	0x2
+ 417 003c 07       		.byte	0x7
+ 418 003d 23000000 		.4byte	.LASF3
+ 419 0041 02       		.uleb128 0x2
+ 420 0042 04       		.byte	0x4
+ 421 0043 05       		.byte	0x5
+ 422 0044 57020000 		.4byte	.LASF4
+ 423 0048 02       		.uleb128 0x2
+ 424 0049 04       		.byte	0x4
+ 425 004a 07       		.byte	0x7
+ 426 004b 53010000 		.4byte	.LASF5
+ 427 004f 02       		.uleb128 0x2
+ 428 0050 08       		.byte	0x8
+ 429 0051 05       		.byte	0x5
+ 430 0052 9C010000 		.4byte	.LASF6
+ 431 0056 02       		.uleb128 0x2
+ 432 0057 08       		.byte	0x8
+ 433 0058 07       		.byte	0x7
+ 434 0059 7C010000 		.4byte	.LASF7
+ 435 005d 03       		.uleb128 0x3
+ 436 005e 04       		.byte	0x4
+ 437 005f 05       		.byte	0x5
+ 438 0060 696E7400 		.ascii	"int\000"
+ 439 0064 02       		.uleb128 0x2
+ 440 0065 04       		.byte	0x4
+ 441 0066 07       		.byte	0x7
+ 442 0067 65010000 		.4byte	.LASF8
+ 443 006b 04       		.uleb128 0x4
+ 444 006c 7D000000 		.4byte	.LASF9
+ 445 0070 02       		.byte	0x2
+ 446 0071 9201     		.2byte	0x192
+ 447 0073 2C000000 		.4byte	0x2c
+ 448 0077 04       		.uleb128 0x4
+ 449 0078 34010000 		.4byte	.LASF10
+ 450 007c 02       		.byte	0x2
+ 451 007d 9301     		.2byte	0x193
+ 452 007f 3A000000 		.4byte	0x3a
+ 453 0083 04       		.uleb128 0x4
+ARM GAS  C:\Users\Ben\AppData\Local\Temp\ccEfd8RI.s 			page 14
+
+
+ 454 0084 3B010000 		.4byte	.LASF11
+ 455 0088 02       		.byte	0x2
+ 456 0089 9401     		.2byte	0x194
+ 457 008b 48000000 		.4byte	0x48
+ 458 008f 02       		.uleb128 0x2
+ 459 0090 04       		.byte	0x4
+ 460 0091 04       		.byte	0x4
+ 461 0092 46000000 		.4byte	.LASF12
+ 462 0096 02       		.uleb128 0x2
+ 463 0097 08       		.byte	0x8
+ 464 0098 04       		.byte	0x4
+ 465 0099 1F010000 		.4byte	.LASF13
+ 466 009d 02       		.uleb128 0x2
+ 467 009e 01       		.byte	0x1
+ 468 009f 08       		.byte	0x8
+ 469 00a0 AA010000 		.4byte	.LASF14
+ 470 00a4 04       		.uleb128 0x4
+ 471 00a5 6B000000 		.4byte	.LASF15
+ 472 00a9 02       		.byte	0x2
+ 473 00aa 3C02     		.2byte	0x23c
+ 474 00ac B0000000 		.4byte	0xb0
+ 475 00b0 05       		.uleb128 0x5
+ 476 00b1 6B000000 		.4byte	0x6b
+ 477 00b5 02       		.uleb128 0x2
+ 478 00b6 04       		.byte	0x4
+ 479 00b7 07       		.byte	0x7
+ 480 00b8 93010000 		.4byte	.LASF16
+ 481 00bc 06       		.uleb128 0x6
+ 482 00bd 00000000 		.4byte	.LASF17
+ 483 00c1 01       		.byte	0x1
+ 484 00c2 3D       		.byte	0x3d
+ 485 00c3 00000000 		.4byte	.LFB0
+ 486 00c7 1C000000 		.4byte	.LFE0-.LFB0
+ 487 00cb 01       		.uleb128 0x1
+ 488 00cc 9C       		.byte	0x9c
+ 489 00cd 06       		.uleb128 0x6
+ 490 00ce 4C000000 		.4byte	.LASF18
+ 491 00d2 01       		.byte	0x1
+ 492 00d3 5B       		.byte	0x5b
+ 493 00d4 00000000 		.4byte	.LFB1
+ 494 00d8 1C000000 		.4byte	.LFE1-.LFB1
+ 495 00dc 01       		.uleb128 0x1
+ 496 00dd 9C       		.byte	0x9c
+ 497 00de 06       		.uleb128 0x6
+ 498 00df C6010000 		.4byte	.LASF19
+ 499 00e3 01       		.byte	0x1
+ 500 00e4 86       		.byte	0x86
+ 501 00e5 00000000 		.4byte	.LFB2
+ 502 00e9 20000000 		.4byte	.LFE2-.LFB2
+ 503 00ed 01       		.uleb128 0x1
+ 504 00ee 9C       		.byte	0x9c
+ 505 00ef 06       		.uleb128 0x6
+ 506 00f0 70000000 		.4byte	.LASF20
+ 507 00f4 01       		.byte	0x1
+ 508 00f5 A4       		.byte	0xa4
+ 509 00f6 00000000 		.4byte	.LFB3
+ 510 00fa 18000000 		.4byte	.LFE3-.LFB3
+ARM GAS  C:\Users\Ben\AppData\Local\Temp\ccEfd8RI.s 			page 15
+
+
+ 511 00fe 01       		.uleb128 0x1
+ 512 00ff 9C       		.byte	0x9c
+ 513 0100 07       		.uleb128 0x7
+ 514 0101 42010000 		.4byte	.LASF29
+ 515 0105 01       		.byte	0x1
+ 516 0106 CF       		.byte	0xcf
+ 517 0107 00000000 		.4byte	.LFB4
+ 518 010b 8C000000 		.4byte	.LFE4-.LFB4
+ 519 010f 01       		.uleb128 0x1
+ 520 0110 9C       		.byte	0x9c
+ 521 0111 4C010000 		.4byte	0x14c
+ 522 0115 08       		.uleb128 0x8
+ 523 0116 0D000000 		.4byte	.LASF30
+ 524 011a 01       		.byte	0x1
+ 525 011b CF       		.byte	0xcf
+ 526 011c 77000000 		.4byte	0x77
+ 527 0120 02       		.uleb128 0x2
+ 528 0121 91       		.byte	0x91
+ 529 0122 6E       		.sleb128 -18
+ 530 0123 09       		.uleb128 0x9
+ 531 0124 6C020000 		.4byte	.LASF21
+ 532 0128 01       		.byte	0x1
+ 533 0129 D1       		.byte	0xd1
+ 534 012a 6B000000 		.4byte	0x6b
+ 535 012e 02       		.uleb128 0x2
+ 536 012f 91       		.byte	0x91
+ 537 0130 76       		.sleb128 -10
+ 538 0131 09       		.uleb128 0x9
+ 539 0132 72010000 		.4byte	.LASF22
+ 540 0136 01       		.byte	0x1
+ 541 0137 D2       		.byte	0xd2
+ 542 0138 6B000000 		.4byte	0x6b
+ 543 013c 02       		.uleb128 0x2
+ 544 013d 91       		.byte	0x91
+ 545 013e 75       		.sleb128 -11
+ 546 013f 0A       		.uleb128 0xa
+ 547 0140 6900     		.ascii	"i\000"
+ 548 0142 01       		.byte	0x1
+ 549 0143 D3       		.byte	0xd3
+ 550 0144 6B000000 		.4byte	0x6b
+ 551 0148 02       		.uleb128 0x2
+ 552 0149 91       		.byte	0x91
+ 553 014a 77       		.sleb128 -9
+ 554 014b 00       		.byte	0
+ 555 014c 0B       		.uleb128 0xb
+ 556 014d 5B000000 		.4byte	.LASF31
+ 557 0151 01       		.byte	0x1
+ 558 0152 FE       		.byte	0xfe
+ 559 0153 00000000 		.4byte	.LFB5
+ 560 0157 70000000 		.4byte	.LFE5-.LFB5
+ 561 015b 01       		.uleb128 0x1
+ 562 015c 9C       		.byte	0x9c
+ 563 015d 0C       		.uleb128 0xc
+ 564 015e 6B000000 		.4byte	0x6b
+ 565 0162 6D010000 		.4byte	0x16d
+ 566 0166 0D       		.uleb128 0xd
+ 567 0167 B5000000 		.4byte	0xb5
+ARM GAS  C:\Users\Ben\AppData\Local\Temp\ccEfd8RI.s 			page 16
+
+
+ 568 016b 0F       		.byte	0xf
+ 569 016c 00       		.byte	0
+ 570 016d 09       		.uleb128 0x9
+ 571 016e AF010000 		.4byte	.LASF23
+ 572 0172 01       		.byte	0x1
+ 573 0173 19       		.byte	0x19
+ 574 0174 5D010000 		.4byte	0x15d
+ 575 0178 05       		.uleb128 0x5
+ 576 0179 03       		.byte	0x3
+ 577 017a 00000000 		.4byte	DVDAC_1_ditheredValues
+ 578 017e 09       		.uleb128 0x9
+ 579 017f 36000000 		.4byte	.LASF24
+ 580 0183 01       		.byte	0x1
+ 581 0184 1F       		.byte	0x1f
+ 582 0185 6B000000 		.4byte	0x6b
+ 583 0189 05       		.uleb128 0x5
+ 584 018a 03       		.byte	0x3
+ 585 018b 01000000 		.4byte	DVDAC_1_dmaChan
+ 586 018f 09       		.uleb128 0x9
+ 587 0190 26010000 		.4byte	.LASF25
+ 588 0194 01       		.byte	0x1
+ 589 0195 20       		.byte	0x20
+ 590 0196 6B000000 		.4byte	0x6b
+ 591 019a 05       		.uleb128 0x5
+ 592 019b 03       		.byte	0x3
+ 593 019c 10000000 		.4byte	DVDAC_1_dmaTd
+ 594 01a0 0E       		.uleb128 0xe
+ 595 01a1 13000000 		.4byte	.LASF32
+ 596 01a5 01       		.byte	0x1
+ 597 01a6 1D       		.byte	0x1d
+ 598 01a7 6B000000 		.4byte	0x6b
+ 599 01ab 05       		.uleb128 0x5
+ 600 01ac 03       		.byte	0x3
+ 601 01ad 00000000 		.4byte	DVDAC_1_initVar
+ 602 01b1 00       		.byte	0
+ 603              		.section	.debug_abbrev,"",%progbits
+ 604              	.Ldebug_abbrev0:
+ 605 0000 01       		.uleb128 0x1
+ 606 0001 11       		.uleb128 0x11
+ 607 0002 01       		.byte	0x1
+ 608 0003 25       		.uleb128 0x25
+ 609 0004 0E       		.uleb128 0xe
+ 610 0005 13       		.uleb128 0x13
+ 611 0006 0B       		.uleb128 0xb
+ 612 0007 03       		.uleb128 0x3
+ 613 0008 0E       		.uleb128 0xe
+ 614 0009 1B       		.uleb128 0x1b
+ 615 000a 0E       		.uleb128 0xe
+ 616 000b 55       		.uleb128 0x55
+ 617 000c 17       		.uleb128 0x17
+ 618 000d 11       		.uleb128 0x11
+ 619 000e 01       		.uleb128 0x1
+ 620 000f 10       		.uleb128 0x10
+ 621 0010 17       		.uleb128 0x17
+ 622 0011 00       		.byte	0
+ 623 0012 00       		.byte	0
+ 624 0013 02       		.uleb128 0x2
+ARM GAS  C:\Users\Ben\AppData\Local\Temp\ccEfd8RI.s 			page 17
+
+
+ 625 0014 24       		.uleb128 0x24
+ 626 0015 00       		.byte	0
+ 627 0016 0B       		.uleb128 0xb
+ 628 0017 0B       		.uleb128 0xb
+ 629 0018 3E       		.uleb128 0x3e
+ 630 0019 0B       		.uleb128 0xb
+ 631 001a 03       		.uleb128 0x3
+ 632 001b 0E       		.uleb128 0xe
+ 633 001c 00       		.byte	0
+ 634 001d 00       		.byte	0
+ 635 001e 03       		.uleb128 0x3
+ 636 001f 24       		.uleb128 0x24
+ 637 0020 00       		.byte	0
+ 638 0021 0B       		.uleb128 0xb
+ 639 0022 0B       		.uleb128 0xb
+ 640 0023 3E       		.uleb128 0x3e
+ 641 0024 0B       		.uleb128 0xb
+ 642 0025 03       		.uleb128 0x3
+ 643 0026 08       		.uleb128 0x8
+ 644 0027 00       		.byte	0
+ 645 0028 00       		.byte	0
+ 646 0029 04       		.uleb128 0x4
+ 647 002a 16       		.uleb128 0x16
+ 648 002b 00       		.byte	0
+ 649 002c 03       		.uleb128 0x3
+ 650 002d 0E       		.uleb128 0xe
+ 651 002e 3A       		.uleb128 0x3a
+ 652 002f 0B       		.uleb128 0xb
+ 653 0030 3B       		.uleb128 0x3b
+ 654 0031 05       		.uleb128 0x5
+ 655 0032 49       		.uleb128 0x49
+ 656 0033 13       		.uleb128 0x13
+ 657 0034 00       		.byte	0
+ 658 0035 00       		.byte	0
+ 659 0036 05       		.uleb128 0x5
+ 660 0037 35       		.uleb128 0x35
+ 661 0038 00       		.byte	0
+ 662 0039 49       		.uleb128 0x49
+ 663 003a 13       		.uleb128 0x13
+ 664 003b 00       		.byte	0
+ 665 003c 00       		.byte	0
+ 666 003d 06       		.uleb128 0x6
+ 667 003e 2E       		.uleb128 0x2e
+ 668 003f 00       		.byte	0
+ 669 0040 3F       		.uleb128 0x3f
+ 670 0041 19       		.uleb128 0x19
+ 671 0042 03       		.uleb128 0x3
+ 672 0043 0E       		.uleb128 0xe
+ 673 0044 3A       		.uleb128 0x3a
+ 674 0045 0B       		.uleb128 0xb
+ 675 0046 3B       		.uleb128 0x3b
+ 676 0047 0B       		.uleb128 0xb
+ 677 0048 27       		.uleb128 0x27
+ 678 0049 19       		.uleb128 0x19
+ 679 004a 11       		.uleb128 0x11
+ 680 004b 01       		.uleb128 0x1
+ 681 004c 12       		.uleb128 0x12
+ARM GAS  C:\Users\Ben\AppData\Local\Temp\ccEfd8RI.s 			page 18
+
+
+ 682 004d 06       		.uleb128 0x6
+ 683 004e 40       		.uleb128 0x40
+ 684 004f 18       		.uleb128 0x18
+ 685 0050 9642     		.uleb128 0x2116
+ 686 0052 19       		.uleb128 0x19
+ 687 0053 00       		.byte	0
+ 688 0054 00       		.byte	0
+ 689 0055 07       		.uleb128 0x7
+ 690 0056 2E       		.uleb128 0x2e
+ 691 0057 01       		.byte	0x1
+ 692 0058 3F       		.uleb128 0x3f
+ 693 0059 19       		.uleb128 0x19
+ 694 005a 03       		.uleb128 0x3
+ 695 005b 0E       		.uleb128 0xe
+ 696 005c 3A       		.uleb128 0x3a
+ 697 005d 0B       		.uleb128 0xb
+ 698 005e 3B       		.uleb128 0x3b
+ 699 005f 0B       		.uleb128 0xb
+ 700 0060 27       		.uleb128 0x27
+ 701 0061 19       		.uleb128 0x19
+ 702 0062 11       		.uleb128 0x11
+ 703 0063 01       		.uleb128 0x1
+ 704 0064 12       		.uleb128 0x12
+ 705 0065 06       		.uleb128 0x6
+ 706 0066 40       		.uleb128 0x40
+ 707 0067 18       		.uleb128 0x18
+ 708 0068 9642     		.uleb128 0x2116
+ 709 006a 19       		.uleb128 0x19
+ 710 006b 01       		.uleb128 0x1
+ 711 006c 13       		.uleb128 0x13
+ 712 006d 00       		.byte	0
+ 713 006e 00       		.byte	0
+ 714 006f 08       		.uleb128 0x8
+ 715 0070 05       		.uleb128 0x5
+ 716 0071 00       		.byte	0
+ 717 0072 03       		.uleb128 0x3
+ 718 0073 0E       		.uleb128 0xe
+ 719 0074 3A       		.uleb128 0x3a
+ 720 0075 0B       		.uleb128 0xb
+ 721 0076 3B       		.uleb128 0x3b
+ 722 0077 0B       		.uleb128 0xb
+ 723 0078 49       		.uleb128 0x49
+ 724 0079 13       		.uleb128 0x13
+ 725 007a 02       		.uleb128 0x2
+ 726 007b 18       		.uleb128 0x18
+ 727 007c 00       		.byte	0
+ 728 007d 00       		.byte	0
+ 729 007e 09       		.uleb128 0x9
+ 730 007f 34       		.uleb128 0x34
+ 731 0080 00       		.byte	0
+ 732 0081 03       		.uleb128 0x3
+ 733 0082 0E       		.uleb128 0xe
+ 734 0083 3A       		.uleb128 0x3a
+ 735 0084 0B       		.uleb128 0xb
+ 736 0085 3B       		.uleb128 0x3b
+ 737 0086 0B       		.uleb128 0xb
+ 738 0087 49       		.uleb128 0x49
+ARM GAS  C:\Users\Ben\AppData\Local\Temp\ccEfd8RI.s 			page 19
+
+
+ 739 0088 13       		.uleb128 0x13
+ 740 0089 02       		.uleb128 0x2
+ 741 008a 18       		.uleb128 0x18
+ 742 008b 00       		.byte	0
+ 743 008c 00       		.byte	0
+ 744 008d 0A       		.uleb128 0xa
+ 745 008e 34       		.uleb128 0x34
+ 746 008f 00       		.byte	0
+ 747 0090 03       		.uleb128 0x3
+ 748 0091 08       		.uleb128 0x8
+ 749 0092 3A       		.uleb128 0x3a
+ 750 0093 0B       		.uleb128 0xb
+ 751 0094 3B       		.uleb128 0x3b
+ 752 0095 0B       		.uleb128 0xb
+ 753 0096 49       		.uleb128 0x49
+ 754 0097 13       		.uleb128 0x13
+ 755 0098 02       		.uleb128 0x2
+ 756 0099 18       		.uleb128 0x18
+ 757 009a 00       		.byte	0
+ 758 009b 00       		.byte	0
+ 759 009c 0B       		.uleb128 0xb
+ 760 009d 2E       		.uleb128 0x2e
+ 761 009e 00       		.byte	0
+ 762 009f 03       		.uleb128 0x3
+ 763 00a0 0E       		.uleb128 0xe
+ 764 00a1 3A       		.uleb128 0x3a
+ 765 00a2 0B       		.uleb128 0xb
+ 766 00a3 3B       		.uleb128 0x3b
+ 767 00a4 0B       		.uleb128 0xb
+ 768 00a5 27       		.uleb128 0x27
+ 769 00a6 19       		.uleb128 0x19
+ 770 00a7 11       		.uleb128 0x11
+ 771 00a8 01       		.uleb128 0x1
+ 772 00a9 12       		.uleb128 0x12
+ 773 00aa 06       		.uleb128 0x6
+ 774 00ab 40       		.uleb128 0x40
+ 775 00ac 18       		.uleb128 0x18
+ 776 00ad 9642     		.uleb128 0x2116
+ 777 00af 19       		.uleb128 0x19
+ 778 00b0 00       		.byte	0
+ 779 00b1 00       		.byte	0
+ 780 00b2 0C       		.uleb128 0xc
+ 781 00b3 01       		.uleb128 0x1
+ 782 00b4 01       		.byte	0x1
+ 783 00b5 49       		.uleb128 0x49
+ 784 00b6 13       		.uleb128 0x13
+ 785 00b7 01       		.uleb128 0x1
+ 786 00b8 13       		.uleb128 0x13
+ 787 00b9 00       		.byte	0
+ 788 00ba 00       		.byte	0
+ 789 00bb 0D       		.uleb128 0xd
+ 790 00bc 21       		.uleb128 0x21
+ 791 00bd 00       		.byte	0
+ 792 00be 49       		.uleb128 0x49
+ 793 00bf 13       		.uleb128 0x13
+ 794 00c0 2F       		.uleb128 0x2f
+ 795 00c1 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Ben\AppData\Local\Temp\ccEfd8RI.s 			page 20
+
+
+ 796 00c2 00       		.byte	0
+ 797 00c3 00       		.byte	0
+ 798 00c4 0E       		.uleb128 0xe
+ 799 00c5 34       		.uleb128 0x34
+ 800 00c6 00       		.byte	0
+ 801 00c7 03       		.uleb128 0x3
+ 802 00c8 0E       		.uleb128 0xe
+ 803 00c9 3A       		.uleb128 0x3a
+ 804 00ca 0B       		.uleb128 0xb
+ 805 00cb 3B       		.uleb128 0x3b
+ 806 00cc 0B       		.uleb128 0xb
+ 807 00cd 49       		.uleb128 0x49
+ 808 00ce 13       		.uleb128 0x13
+ 809 00cf 3F       		.uleb128 0x3f
+ 810 00d0 19       		.uleb128 0x19
+ 811 00d1 02       		.uleb128 0x2
+ 812 00d2 18       		.uleb128 0x18
+ 813 00d3 00       		.byte	0
+ 814 00d4 00       		.byte	0
+ 815 00d5 00       		.byte	0
+ 816              		.section	.debug_aranges,"",%progbits
+ 817 0000 44000000 		.4byte	0x44
+ 818 0004 0200     		.2byte	0x2
+ 819 0006 00000000 		.4byte	.Ldebug_info0
+ 820 000a 04       		.byte	0x4
+ 821 000b 00       		.byte	0
+ 822 000c 0000     		.2byte	0
+ 823 000e 0000     		.2byte	0
+ 824 0010 00000000 		.4byte	.LFB0
+ 825 0014 1C000000 		.4byte	.LFE0-.LFB0
+ 826 0018 00000000 		.4byte	.LFB1
+ 827 001c 1C000000 		.4byte	.LFE1-.LFB1
+ 828 0020 00000000 		.4byte	.LFB2
+ 829 0024 20000000 		.4byte	.LFE2-.LFB2
+ 830 0028 00000000 		.4byte	.LFB3
+ 831 002c 18000000 		.4byte	.LFE3-.LFB3
+ 832 0030 00000000 		.4byte	.LFB4
+ 833 0034 8C000000 		.4byte	.LFE4-.LFB4
+ 834 0038 00000000 		.4byte	.LFB5
+ 835 003c 70000000 		.4byte	.LFE5-.LFB5
+ 836 0040 00000000 		.4byte	0
+ 837 0044 00000000 		.4byte	0
+ 838              		.section	.debug_ranges,"",%progbits
+ 839              	.Ldebug_ranges0:
+ 840 0000 00000000 		.4byte	.LFB0
+ 841 0004 1C000000 		.4byte	.LFE0
+ 842 0008 00000000 		.4byte	.LFB1
+ 843 000c 1C000000 		.4byte	.LFE1
+ 844 0010 00000000 		.4byte	.LFB2
+ 845 0014 20000000 		.4byte	.LFE2
+ 846 0018 00000000 		.4byte	.LFB3
+ 847 001c 18000000 		.4byte	.LFE3
+ 848 0020 00000000 		.4byte	.LFB4
+ 849 0024 8C000000 		.4byte	.LFE4
+ 850 0028 00000000 		.4byte	.LFB5
+ 851 002c 70000000 		.4byte	.LFE5
+ 852 0030 00000000 		.4byte	0
+ARM GAS  C:\Users\Ben\AppData\Local\Temp\ccEfd8RI.s 			page 21
+
+
+ 853 0034 00000000 		.4byte	0
+ 854              		.section	.debug_line,"",%progbits
+ 855              	.Ldebug_line0:
+ 856 0000 F0000000 		.section	.debug_str,"MS",%progbits,1
+ 856      02004400 
+ 856      00000201 
+ 856      FB0E0D00 
+ 856      01010101 
+ 857              	.LASF17:
+ 858 0000 44564441 		.ascii	"DVDAC_1_Init\000"
+ 858      435F315F 
+ 858      496E6974 
+ 858      00
+ 859              	.LASF30:
+ 860 000d 76616C75 		.ascii	"value\000"
+ 860      6500
+ 861              	.LASF32:
+ 862 0013 44564441 		.ascii	"DVDAC_1_initVar\000"
+ 862      435F315F 
+ 862      696E6974 
+ 862      56617200 
+ 863              	.LASF3:
+ 864 0023 73686F72 		.ascii	"short unsigned int\000"
+ 864      7420756E 
+ 864      7369676E 
+ 864      65642069 
+ 864      6E7400
+ 865              	.LASF24:
+ 866 0036 44564441 		.ascii	"DVDAC_1_dmaChan\000"
+ 866      435F315F 
+ 866      646D6143 
+ 866      68616E00 
+ 867              	.LASF12:
+ 868 0046 666C6F61 		.ascii	"float\000"
+ 868      7400
+ 869              	.LASF18:
+ 870 004c 44564441 		.ascii	"DVDAC_1_Enable\000"
+ 870      435F315F 
+ 870      456E6162 
+ 870      6C6500
+ 871              	.LASF31:
+ 872 005b 44564441 		.ascii	"DVDAC_1_InitDma\000"
+ 872      435F315F 
+ 872      496E6974 
+ 872      446D6100 
+ 873              	.LASF15:
+ 874 006b 72656738 		.ascii	"reg8\000"
+ 874      00
+ 875              	.LASF20:
+ 876 0070 44564441 		.ascii	"DVDAC_1_Stop\000"
+ 876      435F315F 
+ 876      53746F70 
+ 876      00
+ 877              	.LASF9:
+ 878 007d 75696E74 		.ascii	"uint8\000"
+ 878      3800
+ 879              	.LASF1:
+ARM GAS  C:\Users\Ben\AppData\Local\Temp\ccEfd8RI.s 			page 22
+
+
+ 880 0083 756E7369 		.ascii	"unsigned char\000"
+ 880      676E6564 
+ 880      20636861 
+ 880      7200
+ 881              	.LASF26:
+ 882 0091 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 882      4320342E 
+ 882      392E3320 
+ 882      32303135 
+ 882      30333033 
+ 883 00c4 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 883      20726576 
+ 883      6973696F 
+ 883      6E203232 
+ 883      31323230 
+ 884 00f7 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 884      66756E63 
+ 884      74696F6E 
+ 884      2D736563 
+ 884      74696F6E 
+ 885              	.LASF13:
+ 886 011f 646F7562 		.ascii	"double\000"
+ 886      6C6500
+ 887              	.LASF25:
+ 888 0126 44564441 		.ascii	"DVDAC_1_dmaTd\000"
+ 888      435F315F 
+ 888      646D6154 
+ 888      6400
+ 889              	.LASF10:
+ 890 0134 75696E74 		.ascii	"uint16\000"
+ 890      313600
+ 891              	.LASF11:
+ 892 013b 75696E74 		.ascii	"uint32\000"
+ 892      333200
+ 893              	.LASF29:
+ 894 0142 44564441 		.ascii	"DVDAC_1_SetValue\000"
+ 894      435F315F 
+ 894      53657456 
+ 894      616C7565 
+ 894      00
+ 895              	.LASF5:
+ 896 0153 6C6F6E67 		.ascii	"long unsigned int\000"
+ 896      20756E73 
+ 896      69676E65 
+ 896      6420696E 
+ 896      7400
+ 897              	.LASF8:
+ 898 0165 756E7369 		.ascii	"unsigned int\000"
+ 898      676E6564 
+ 898      20696E74 
+ 898      00
+ 899              	.LASF22:
+ 900 0172 68696768 		.ascii	"highCount\000"
+ 900      436F756E 
+ 900      7400
+ 901              	.LASF7:
+ 902 017c 6C6F6E67 		.ascii	"long long unsigned int\000"
+ARM GAS  C:\Users\Ben\AppData\Local\Temp\ccEfd8RI.s 			page 23
+
+
+ 902      206C6F6E 
+ 902      6720756E 
+ 902      7369676E 
+ 902      65642069 
+ 903              	.LASF16:
+ 904 0193 73697A65 		.ascii	"sizetype\000"
+ 904      74797065 
+ 904      00
+ 905              	.LASF6:
+ 906 019c 6C6F6E67 		.ascii	"long long int\000"
+ 906      206C6F6E 
+ 906      6720696E 
+ 906      7400
+ 907              	.LASF14:
+ 908 01aa 63686172 		.ascii	"char\000"
+ 908      00
+ 909              	.LASF23:
+ 910 01af 44564441 		.ascii	"DVDAC_1_ditheredValues\000"
+ 910      435F315F 
+ 910      64697468 
+ 910      65726564 
+ 910      56616C75 
+ 911              	.LASF19:
+ 912 01c6 44564441 		.ascii	"DVDAC_1_Start\000"
+ 912      435F315F 
+ 912      53746172 
+ 912      7400
+ 913              	.LASF2:
+ 914 01d4 73686F72 		.ascii	"short int\000"
+ 914      7420696E 
+ 914      7400
+ 915              	.LASF28:
+ 916 01de 433A5C55 		.ascii	"C:\\Users\\Ben\\Documents\\PSoC Creator\\voltageDis"
+ 916      73657273 
+ 916      5C42656E 
+ 916      5C446F63 
+ 916      756D656E 
+ 917 020c 706C6179 		.ascii	"play_SAR_ADC\\ADC_DMA_VDAC04\\ADC_DAC.cydsn\000"
+ 917      5F534152 
+ 917      5F414443 
+ 917      5C414443 
+ 917      5F444D41 
+ 918              	.LASF27:
+ 919 0236 47656E65 		.ascii	"Generated_Source\\PSoC5\\DVDAC_1.c\000"
+ 919      72617465 
+ 919      645F536F 
+ 919      75726365 
+ 919      5C50536F 
+ 920              	.LASF4:
+ 921 0257 6C6F6E67 		.ascii	"long int\000"
+ 921      20696E74 
+ 921      00
+ 922              	.LASF0:
+ 923 0260 7369676E 		.ascii	"signed char\000"
+ 923      65642063 
+ 923      68617200 
+ 924              	.LASF21:
+ARM GAS  C:\Users\Ben\AppData\Local\Temp\ccEfd8RI.s 			page 24
+
+
+ 925 026c 6C6F7743 		.ascii	"lowCount\000"
+ 925      6F756E74 
+ 925      00
+ 926              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
