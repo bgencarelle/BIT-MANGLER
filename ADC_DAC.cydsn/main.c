@@ -48,7 +48,7 @@ int main()
     ADC_SAR_Seq_StartConvert();
   //  CapSense_1_Start();
     SPI_DAC_Start();
-        /* Start ISRs */
+    /* Start ISRs */
     /* Enable global interrupts */
    CyGlobalIntEnable;
     /* Start ADC conversion */
