@@ -1,3 +1,8 @@
+#stuff I added
+*.pdf
+*.zip
+
+
 # Compiled Object files
 *.slo
 *.lo
