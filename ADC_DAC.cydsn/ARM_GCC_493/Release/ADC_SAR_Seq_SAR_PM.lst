@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\ben\AppData\Local\Temp\cciSXGz2.s 			page 1
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccrfYmKX.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\cciSXGz2.s 			page 1
   25:Generated_Source\PSoC5/ADC_SAR_Seq_SAR_PM.c **** {
   26:Generated_Source\PSoC5/ADC_SAR_Seq_SAR_PM.c ****     ADC_SAR_Seq_SAR_DISABLED
   27:Generated_Source\PSoC5/ADC_SAR_Seq_SAR_PM.c **** };
-ARM GAS  C:\Users\ben\AppData\Local\Temp\cciSXGz2.s 			page 2
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccrfYmKX.s 			page 2
 
 
   28:Generated_Source\PSoC5/ADC_SAR_Seq_SAR_PM.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\cciSXGz2.s 			page 1
   53:Generated_Source\PSoC5/ADC_SAR_Seq_SAR_PM.c **** *
   54:Generated_Source\PSoC5/ADC_SAR_Seq_SAR_PM.c **** * Summary:
   55:Generated_Source\PSoC5/ADC_SAR_Seq_SAR_PM.c **** *  Restores the current user configuration.
-ARM GAS  C:\Users\ben\AppData\Local\Temp\cciSXGz2.s 			page 3
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccrfYmKX.s 			page 3
 
 
   56:Generated_Source\PSoC5/ADC_SAR_Seq_SAR_PM.c **** *
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\cciSXGz2.s 			page 1
   81:Generated_Source\PSoC5/ADC_SAR_Seq_SAR_PM.c **** *
   82:Generated_Source\PSoC5/ADC_SAR_Seq_SAR_PM.c **** * Return:
   83:Generated_Source\PSoC5/ADC_SAR_Seq_SAR_PM.c **** *  None.
-ARM GAS  C:\Users\ben\AppData\Local\Temp\cciSXGz2.s 			page 4
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccrfYmKX.s 			page 4
 
 
   84:Generated_Source\PSoC5/ADC_SAR_Seq_SAR_PM.c **** *
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\cciSXGz2.s 			page 1
  124              		.loc 1 102 0
  125 002e FFF7FEFF 		bl	ADC_SAR_Seq_SAR_Stop
  126 0032 02E0     		b	.L3
-ARM GAS  C:\Users\ben\AppData\Local\Temp\cciSXGz2.s 			page 5
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccrfYmKX.s 			page 5
 
 
  127              	.L4:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\cciSXGz2.s 			page 1
  132:Generated_Source\PSoC5/ADC_SAR_Seq_SAR_PM.c **** void ADC_SAR_Seq_SAR_Wakeup(void)
  133:Generated_Source\PSoC5/ADC_SAR_Seq_SAR_PM.c **** {
  152              		.loc 1 133 0
-ARM GAS  C:\Users\ben\AppData\Local\Temp\cciSXGz2.s 			page 6
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccrfYmKX.s 			page 6
 
 
  153              		.cfi_startproc
@@ -358,19 +358,19 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\cciSXGz2.s 			page 1
  196 000a 04       		.byte	0x4
  197 000b 01       		.uleb128 0x1
  198 000c 1E000000 		.4byte	.LASF19
-ARM GAS  C:\Users\ben\AppData\Local\Temp\cciSXGz2.s 			page 7
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccrfYmKX.s 			page 7
 
 
  199 0010 01       		.byte	0x1
  200 0011 AC000000 		.4byte	.LASF20
- 201 0015 BD010000 		.4byte	.LASF21
+ 201 0015 A0010000 		.4byte	.LASF21
  202 0019 00000000 		.4byte	.Ldebug_ranges0+0
  203 001d 00000000 		.4byte	0
  204 0021 00000000 		.4byte	.Ldebug_line0
  205 0025 02       		.uleb128 0x2
  206 0026 01       		.byte	0x1
  207 0027 06       		.byte	0x6
- 208 0028 2C020000 		.4byte	.LASF0
+ 208 0028 16020000 		.4byte	.LASF0
  209 002c 02       		.uleb128 0x2
  210 002d 01       		.byte	0x1
  211 002e 08       		.byte	0x8
@@ -378,7 +378,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\cciSXGz2.s 			page 1
  213 0033 02       		.uleb128 0x2
  214 0034 02       		.byte	0x2
  215 0035 05       		.byte	0x5
- 216 0036 B3010000 		.4byte	.LASF2
+ 216 0036 F1010000 		.4byte	.LASF2
  217 003a 02       		.uleb128 0x2
  218 003b 02       		.byte	0x2
  219 003c 07       		.byte	0x7
@@ -386,7 +386,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\cciSXGz2.s 			page 1
  221 0041 02       		.uleb128 0x2
  222 0042 04       		.byte	0x4
  223 0043 05       		.byte	0x5
- 224 0044 17020000 		.4byte	.LASF4
+ 224 0044 01020000 		.4byte	.LASF4
  225 0048 02       		.uleb128 0x2
  226 0049 04       		.byte	0x4
  227 004a 07       		.byte	0x7
@@ -394,7 +394,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\cciSXGz2.s 			page 1
  229 004f 02       		.uleb128 0x2
  230 0050 08       		.byte	0x8
  231 0051 05       		.byte	0x5
- 232 0052 A0010000 		.4byte	.LASF6
+ 232 0052 DE010000 		.4byte	.LASF6
  233 0056 02       		.uleb128 0x2
  234 0057 08       		.byte	0x8
  235 0058 07       		.byte	0x7
@@ -408,7 +408,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\cciSXGz2.s 			page 1
  243 0066 07       		.byte	0x7
  244 0067 61010000 		.4byte	.LASF8
  245 006b 04       		.uleb128 0x4
- 246 006c 11020000 		.4byte	.LASF12
+ 246 006c FB010000 		.4byte	.LASF12
  247 0070 02       		.byte	0x2
  248 0071 9201     		.2byte	0x192
  249 0073 2C000000 		.4byte	0x2c
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\cciSXGz2.s 			page 1
  253 007a D8000000 		.4byte	.LASF9
  254 007e 02       		.uleb128 0x2
  255 007f 08       		.byte	0x8
-ARM GAS  C:\Users\ben\AppData\Local\Temp\cciSXGz2.s 			page 8
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccrfYmKX.s 			page 8
 
 
  256 0080 04       		.byte	0x4
@@ -426,7 +426,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\cciSXGz2.s 			page 1
  258 0085 02       		.uleb128 0x2
  259 0086 01       		.byte	0x1
  260 0087 08       		.byte	0x8
- 261 0088 AE010000 		.4byte	.LASF11
+ 261 0088 EC010000 		.4byte	.LASF11
  262 008c 04       		.uleb128 0x4
  263 008d 03010000 		.4byte	.LASF13
  264 0091 02       		.byte	0x2
@@ -440,14 +440,14 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\cciSXGz2.s 			page 1
  272 00a0 2A       		.byte	0x2a
  273 00a1 B2000000 		.4byte	0xb2
  274 00a5 07       		.uleb128 0x7
- 275 00a6 20020000 		.4byte	.LASF22
+ 275 00a6 0A020000 		.4byte	.LASF22
  276 00aa 03       		.byte	0x3
  277 00ab 2C       		.byte	0x2c
  278 00ac 6B000000 		.4byte	0x6b
  279 00b0 00       		.byte	0
  280 00b1 00       		.byte	0
  281 00b2 08       		.uleb128 0x8
- 282 00b3 38020000 		.4byte	.LASF14
+ 282 00b3 22020000 		.4byte	.LASF14
  283 00b7 03       		.byte	0x3
  284 00b8 2D       		.byte	0x2d
  285 00b9 9D000000 		.4byte	0x9d
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\cciSXGz2.s 			page 1
  310 00f0 0A       		.uleb128 0xa
  311 00f1 08010000 		.4byte	.LASF18
  312 00f5 01       		.byte	0x1
-ARM GAS  C:\Users\ben\AppData\Local\Temp\cciSXGz2.s 			page 9
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccrfYmKX.s 			page 9
 
 
  313 00f6 84       		.byte	0x84
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\cciSXGz2.s 			page 1
  367 0026 08       		.uleb128 0x8
  368 0027 00       		.byte	0
  369 0028 00       		.byte	0
-ARM GAS  C:\Users\ben\AppData\Local\Temp\cciSXGz2.s 			page 10
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccrfYmKX.s 			page 10
 
 
  370 0029 04       		.uleb128 0x4
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\cciSXGz2.s 			page 1
  424 005f 0B       		.uleb128 0xb
  425 0060 3B       		.uleb128 0x3b
  426 0061 0B       		.uleb128 0xb
-ARM GAS  C:\Users\ben\AppData\Local\Temp\cciSXGz2.s 			page 11
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccrfYmKX.s 			page 11
 
 
  427 0062 49       		.uleb128 0x49
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\cciSXGz2.s 			page 1
  481 009a 0E       		.uleb128 0xe
  482 009b 3A       		.uleb128 0x3a
  483 009c 0B       		.uleb128 0xb
-ARM GAS  C:\Users\ben\AppData\Local\Temp\cciSXGz2.s 			page 12
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccrfYmKX.s 			page 12
 
 
  484 009d 3B       		.uleb128 0x3b
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\cciSXGz2.s 			page 1
  529      4320342E 
  529      392E3320 
  529      32303135 
-ARM GAS  C:\Users\ben\AppData\Local\Temp\cciSXGz2.s 			page 13
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccrfYmKX.s 			page 13
 
 
  529      30333033 
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\cciSXGz2.s 			page 1
  549      6C6500
  550              	.LASF17:
  551 014b 4144435F 		.ascii	"ADC_SAR_Seq_SAR_Sleep\000"
-ARM GAS  C:\Users\ben\AppData\Local\Temp\cciSXGz2.s 			page 14
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccrfYmKX.s 			page 14
 
 
  551      5341525F 
@@ -802,49 +802,48 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\cciSXGz2.s 			page 1
  557      6720756E 
  557      7369676E 
  557      65642069 
- 558              	.LASF6:
- 559 01a0 6C6F6E67 		.ascii	"long long int\000"
- 559      206C6F6E 
- 559      6720696E 
- 559      7400
- 560              	.LASF11:
- 561 01ae 63686172 		.ascii	"char\000"
- 561      00
- 562              	.LASF2:
- 563 01b3 73686F72 		.ascii	"short int\000"
- 563      7420696E 
- 563      7400
- 564              	.LASF21:
- 565 01bd 433A5C55 		.ascii	"C:\\Users\\ben\\Documents\\PSoC Creator\\New Pedal "
- 565      73657273 
- 565      5C62656E 
- 565      5C446F63 
- 565      756D656E 
- 566 01eb 5468696E 		.ascii	"Thingz\\PSOC_BIT_MANGLER\\ADC_DAC.cydsn\000"
- 566      677A5C50 
- 566      534F435F 
- 566      4249545F 
- 566      4D414E47 
+ 558              	.LASF21:
+ 559 01a0 433A5C55 		.ascii	"C:\\Users\\ben\\Documents\\PSoC Creator\\BIT-MANGLE"
+ 559      73657273 
+ 559      5C62656E 
+ 559      5C446F63 
+ 559      756D656E 
+ 560 01ce 525C4144 		.ascii	"R\\ADC_DAC.cydsn\000"
+ 560      435F4441 
+ 560      432E6379 
+ 560      64736E00 
+ 561              	.LASF6:
+ 562 01de 6C6F6E67 		.ascii	"long long int\000"
+ 562      206C6F6E 
+ 562      6720696E 
+ 562      7400
+ 563              	.LASF11:
+ 564 01ec 63686172 		.ascii	"char\000"
+ 564      00
+ 565              	.LASF2:
+ 566 01f1 73686F72 		.ascii	"short int\000"
+ 566      7420696E 
+ 566      7400
  567              	.LASF12:
- 568 0211 75696E74 		.ascii	"uint8\000"
+ 568 01fb 75696E74 		.ascii	"uint8\000"
  568      3800
  569              	.LASF4:
- 570 0217 6C6F6E67 		.ascii	"long int\000"
+ 570 0201 6C6F6E67 		.ascii	"long int\000"
  570      20696E74 
  570      00
  571              	.LASF22:
- 572 0220 656E6162 		.ascii	"enableState\000"
+ 572 020a 656E6162 		.ascii	"enableState\000"
  572      6C655374 
  572      61746500 
  573              	.LASF0:
- 574 022c 7369676E 		.ascii	"signed char\000"
-ARM GAS  C:\Users\ben\AppData\Local\Temp\cciSXGz2.s 			page 15
-
-
+ 574 0216 7369676E 		.ascii	"signed char\000"
  574      65642063 
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccrfYmKX.s 			page 15
+
+
  574      68617200 
  575              	.LASF14:
- 576 0238 4144435F 		.ascii	"ADC_SAR_Seq_SAR_BACKUP_STRUCT\000"
+ 576 0222 4144435F 		.ascii	"ADC_SAR_Seq_SAR_BACKUP_STRUCT\000"
  576      5341525F 
  576      5365715F 
  576      5341525F 

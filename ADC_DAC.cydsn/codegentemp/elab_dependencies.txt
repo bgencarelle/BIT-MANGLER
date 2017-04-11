@@ -1,5 +1,5 @@
-C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\ADC_DAC.cydsn\TopDesign\TopDesign.cysch
-C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\ADC_DAC.cydsn\TopDesign\TopDesign.cysym
+C:\Users\ben\Documents\PSoC Creator\BIT-MANGLER\ADC_DAC.cydsn\TopDesign\TopDesign.cysch
+C:\Users\ben\Documents\PSoC Creator\BIT-MANGLER\ADC_DAC.cydsn\TopDesign\TopDesign.cysym
 C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CharLCD_v2_20\CharLCD_v2_20.cysch
 C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CharLCD_v2_20\CharLCD_v2_20.cysym
 C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CharLCD_v2_20\CharLCD_v2_20.pdf
@@ -1523,7 +1523,7 @@ C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprim
 C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_20\PSoC5\API\aliases.h
 C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_20\PSoC5\API\pins.c
 C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_20\PSoC5\API\pins.h
-C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\ADC_DAC.cydsn\ADC_DAC.cydwr
+C:\Users\ben\Documents\PSoC Creator\BIT-MANGLER\ADC_DAC.cydsn\ADC_DAC.cydwr
 C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\cy_boot_v5_50\PSoC5\API\cm3gcc.ld
 C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\cy_boot_v5_50\PSoC5\API\Cm3RealView.scat
 C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\cy_boot_v5_50\PSoC5\API\Cm3Start.c

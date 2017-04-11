@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
   19:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c **** #include "ADC_SAR_Seq_SAR.h"
   20:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c **** 
   21:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c **** #if(ADC_SAR_Seq_SAR_DEFAULT_INTERNAL_CLK)
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 2
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 2
 
 
   22:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c ****     #include "ADC_SAR_Seq_SAR_theACLK.h"
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
   37              		.loc 1 75 0
   38              		.cfi_startproc
   39              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 3
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 3
 
 
   40              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
   92:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c **** *  Initialize component's parameters to the parameters set by user in the
   93:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c **** *  customizer of the component placed onto schematic. Usually called in
   94:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c **** *  ADC_SAR_Seq_SAR_Start().
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 4
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 4
 
 
   95:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c **** *
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  101 001c 0022     		movs	r2, #0
  102 001e 1A80     		strh	r2, [r3]	@ movhi
  126:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c **** }
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 5
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 5
 
 
  103              		.loc 1 126 0
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  136 000c FB71     		strb	r3, [r7, #7]
  148:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c **** 
  149:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c ****     /* Enable the SAR ADC block in Active Power Mode */
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 6
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 6
 
 
  150:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c ****     ADC_SAR_Seq_SAR_PWRMGR_SAR_REG |= ADC_SAR_Seq_SAR_ACT_PWR_SAR_EN;
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  172:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c **** 
  173:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c ****     /* Set reference for ADC */
  174:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c ****     #if(ADC_SAR_Seq_SAR_DEFAULT_RANGE == ADC_SAR_Seq_SAR__VNEG_VDDA_DIFF)
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 7
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 7
 
 
  175:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c ****         #if(ADC_SAR_Seq_SAR_DEFAULT_REFERENCE == ADC_SAR_Seq_SAR__EXT_REF)
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  191 0072 C822     		movs	r2, #200
  192 0074 1A70     		strb	r2, [r3]
  207:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c ****     /* SAR_HIZ_CLEAR:   Should not be used for LP */
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 8
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 8
 
 
  208:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c ****     #if ((CY_PSOC5LP) || (ADC_SAR_Seq_SAR_DEFAULT_REFERENCE != ADC_SAR_Seq_SAR__EXT_REF))
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  223 00a4 BB430040 		.word	1073759163
  224 00a8 03590040 		.word	1073764611
  225 00ac 06590040 		.word	1073764614
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 9
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 9
 
 
  226 00b0 05590040 		.word	1073764613
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  257              		.loc 1 254 0
  258 000e 0F4A     		ldr	r2, .L12
  259 0010 0E4B     		ldr	r3, .L12
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 10
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 10
 
 
  260 0012 1B78     		ldrb	r3, [r3]
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  300              		.size	ADC_SAR_Seq_SAR_Stop, .-ADC_SAR_Seq_SAR_Stop
  301              		.section	.text.ADC_SAR_Seq_SAR_SetPower,"ax",%progbits
  302              		.align	2
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 11
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 11
 
 
  303              		.global	ADC_SAR_Seq_SAR_SetPower
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  327              		.loc 1 298 0
  328 0012 0A4B     		ldr	r3, .L15
  329 0014 1B78     		ldrb	r3, [r3]
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 12
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 12
 
 
  330 0016 DBB2     		uxtb	r3, r3
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  314:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c **** *  10 ->    RES10
  315:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c **** *  8  ->    RES8
  316:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c **** *
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 13
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 13
 
 
  317:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c **** * Return:
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  347:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c ****         case (uint8)ADC_SAR_Seq_SAR__BITS_12:
  348:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c ****             tmpReg = ADC_SAR_Seq_SAR_SAR_RESOLUTION_12BIT | ADC_SAR_Seq_SAR_SAR_SAMPLE_WIDTH;
  393              		.loc 1 348 0
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 14
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 14
 
 
  394 001a C223     		movs	r3, #194
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  430              		@ sp needed
  431 0044 80BD     		pop	{r7, pc}
  432              	.L25:
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 15
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 15
 
 
  433 0046 00BF     		.align	2
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  451              		@ link register save eliminated.
  452 0000 80B4     		push	{r7}
  453              		.cfi_def_cfa_offset 4
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 16
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 16
 
 
  454              		.cfi_offset 7, -4
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  423:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c ****     *
  424:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c ****     * Return:
  425:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c ****     *  None.
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 17
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 17
 
 
  426:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c ****     *
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  522              		.align	2
  523              		.global	ADC_SAR_Seq_SAR_IsEndConversion
  524              		.thumb
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 18
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 18
 
 
  525              		.thumb_func
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  481:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c ****         status = ADC_SAR_Seq_SAR_SAR_CSR1_REG & ADC_SAR_Seq_SAR_SAR_EOF_1;
  544              		.loc 1 481 0 discriminator 2
  545 000a 0C4B     		ldr	r3, .L37
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 19
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 19
 
 
  546 000c 1B78     		ldrb	r3, [r3]
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  588              		.align	2
  589              		.global	ADC_SAR_Seq_SAR_GetResult8
  590              		.thumb
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 20
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 20
 
 
  591              		.thumb_func
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  616 0018 5BB2     		sxtb	r3, r3
  523:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c **** }
  617              		.loc 1 523 0
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 21
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 21
 
 
  618 001a 1846     		mov	r0, r3
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  644              		@ args = 0, pretend = 0, frame = 8
  645              		@ frame_needed = 1, uses_anonymous_args = 0
  646              		@ link register save eliminated.
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 22
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 22
 
 
  647 0000 80B4     		push	{r7}
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  558:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c **** 
  559:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c **** 
  560:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c **** /*******************************************************************************
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 23
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 23
 
 
  561:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c **** * Function Name: ADC_SAR_Seq_SAR_SetOffset
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  721              		.cfi_def_cfa_offset 0
  722 0018 7047     		bx	lr
  723              	.L49:
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 24
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 24
 
 
  724 001a 00BF     		.align	2
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  616:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c ****          (ADC_SAR_Seq_SAR_DEFAULT_RANGE == ADC_SAR_Seq_SAR__VSSA_TO_VDAC)) )
  617:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c ****         uint16 diff_zero;
  618:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c ****     #endif /* End ADC_SAR_Seq_SAR_DEFAULT_RANGE */
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 25
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 25
 
 
  619:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c **** 
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  778              	.L56:
  646:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c ****         default: /* Halt CPU in debug mode if resolution is out of valid range */
  647:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c ****             counts = 0;
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 26
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 26
 
 
  779              		.loc 1 647 0
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  811              		.cfi_def_cfa_register 13
  812              		@ sp needed
  813 0066 5DF8047B 		ldr	r7, [sp], #4
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 27
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 27
 
 
  814              		.cfi_restore 7
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  843 0002 83B0     		sub	sp, sp, #12
  844              		.cfi_def_cfa_offset 16
  845 0004 00AF     		add	r7, sp, #0
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 28
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 28
 
 
  846              		.cfi_def_cfa_register 7
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  711:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c **** * Return:
  712:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c **** *  None.
  713:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c **** *
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 29
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 29
 
 
  714:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c **** * Global Variables:
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  726:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c **** * Function Name: ADC_SAR_Seq_SAR_CountsTo_mVolts
  727:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c **** ********************************************************************************
  728:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c **** *
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 30
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 30
 
 
  729:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c **** * Summary:
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  751:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c ****     }
  752:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c ****     else
  753:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c ****     {
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 31
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 31
 
 
  754:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c ****         countsPer10Volt = ADC_SAR_Seq_SAR_countsPer10Volt;
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  763:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c ****     return( mVolts );
  1000              		.loc 1 763 0
  1001 0070 7B89     		ldrh	r3, [r7, #10]
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 32
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 32
 
 
  1002 0072 1BB2     		sxth	r3, r3
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  1033              		.cfi_startproc
  1034              		@ args = 0, pretend = 0, frame = 24
  1035              		@ frame_needed = 1, uses_anonymous_args = 0
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 33
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 33
 
 
  1036 0000 B0B5     		push	{r4, r5, r7, lr}
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  1075 0034 FA88     		ldrh	r2, [r7, #6]
  1076 0036 9BB2     		uxth	r3, r3
  1077 0038 D31A     		subs	r3, r2, r3
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 34
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 34
 
 
  1078 003a 9BB2     		uxth	r3, r3
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  1125              		.global	__aeabi_fdiv
  1126              		.section	.text.ADC_SAR_Seq_SAR_CountsTo_Volts,"ax",%progbits
  1127              		.align	2
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 35
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 35
 
 
  1128              		.global	ADC_SAR_Seq_SAR_CountsTo_Volts
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  836:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c ****         countsPer10Volt = (int32)ADC_SAR_Seq_SAR_countsPerVolt * 10;
  1155              		.loc 1 836 0
  1156 0014 174B     		ldr	r3, .L83
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 36
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 36
 
 
  1157 0016 1B88     		ldrh	r3, [r3]	@ movhi
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  1199              		.loc 1 848 0
  1200 006a BB68     		ldr	r3, [r7, #8]	@ float
  849:Generated_Source\PSoC5/ADC_SAR_Seq_SAR.c **** }
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 37
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 37
 
 
  1201              		.loc 1 849 0
@@ -2189,10 +2189,10 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  1226 0006 00000000 		.4byte	.Ldebug_abbrev0
  1227 000a 04       		.byte	0x4
  1228 000b 01       		.uleb128 0x1
- 1229 000c 80020000 		.4byte	.LASF57
+ 1229 000c A2020000 		.4byte	.LASF57
  1230 0010 01       		.byte	0x1
- 1231 0011 5F040000 		.4byte	.LASF58
- 1232 0015 0E030000 		.4byte	.LASF59
+ 1231 0011 49040000 		.4byte	.LASF58
+ 1232 0015 57010000 		.4byte	.LASF59
  1233 0019 00000000 		.4byte	.Ldebug_ranges0+0
  1234 001d 00000000 		.4byte	0
  1235 0021 00000000 		.4byte	.Ldebug_line0
@@ -2211,18 +2211,18 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  1248 003a 03       		.uleb128 0x3
  1249 003b 01       		.byte	0x1
  1250 003c 08       		.byte	0x8
- 1251 003d 79030000 		.4byte	.LASF2
+ 1251 003d 63030000 		.4byte	.LASF2
  1252 0041 03       		.uleb128 0x3
  1253 0042 02       		.byte	0x2
  1254 0043 05       		.byte	0x5
- 1255 0044 87030000 		.4byte	.LASF3
+ 1255 0044 71030000 		.4byte	.LASF3
  1256 0048 03       		.uleb128 0x3
  1257 0049 02       		.byte	0x2
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 38
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 38
 
 
  1258 004a 07       		.byte	0x7
- 1259 004b 6F010000 		.4byte	.LASF4
+ 1259 004b AD010000 		.4byte	.LASF4
  1260 004f 03       		.uleb128 0x3
  1261 0050 04       		.byte	0x4
  1262 0051 05       		.byte	0x5
@@ -2230,7 +2230,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  1264 0056 03       		.uleb128 0x3
  1265 0057 04       		.byte	0x4
  1266 0058 07       		.byte	0x7
- 1267 0059 57010000 		.4byte	.LASF6
+ 1267 0059 95010000 		.4byte	.LASF6
  1268 005d 03       		.uleb128 0x3
  1269 005e 08       		.byte	0x8
  1270 005f 05       		.byte	0x5
@@ -2242,11 +2242,11 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  1276 006b 03       		.uleb128 0x3
  1277 006c 04       		.byte	0x4
  1278 006d 07       		.byte	0x7
- 1279 006e 3D020000 		.4byte	.LASF9
+ 1279 006e 7B020000 		.4byte	.LASF9
  1280 0072 03       		.uleb128 0x3
  1281 0073 01       		.byte	0x1
  1282 0074 08       		.byte	0x8
- 1283 0075 ED030000 		.4byte	.LASF10
+ 1283 0075 D7030000 		.4byte	.LASF10
  1284 0079 04       		.uleb128 0x4
  1285 007a 05010000 		.4byte	.LASF11
  1286 007e 02       		.byte	0x2
@@ -2258,12 +2258,12 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  1292 008b 9301     		.2byte	0x193
  1293 008d 48000000 		.4byte	0x48
  1294 0091 04       		.uleb128 0x4
- 1295 0092 82010000 		.4byte	.LASF13
+ 1295 0092 C0010000 		.4byte	.LASF13
  1296 0096 02       		.byte	0x2
  1297 0097 9501     		.2byte	0x195
  1298 0099 33000000 		.4byte	0x33
  1299 009d 04       		.uleb128 0x4
- 1300 009e 88040000 		.4byte	.LASF14
+ 1300 009e 72040000 		.4byte	.LASF14
  1301 00a2 02       		.byte	0x2
  1302 00a3 9601     		.2byte	0x196
  1303 00a5 41000000 		.4byte	0x41
@@ -2273,28 +2273,28 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  1307 00af 9701     		.2byte	0x197
  1308 00b1 4F000000 		.4byte	0x4f
  1309 00b5 04       		.uleb128 0x4
- 1310 00b6 35020000 		.4byte	.LASF16
+ 1310 00b6 73020000 		.4byte	.LASF16
  1311 00ba 02       		.byte	0x2
  1312 00bb 9801     		.2byte	0x198
  1313 00bd C1000000 		.4byte	0xc1
  1314 00c1 03       		.uleb128 0x3
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 39
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 39
 
 
  1315 00c2 04       		.byte	0x4
  1316 00c3 04       		.byte	0x4
- 1317 00c4 68030000 		.4byte	.LASF17
+ 1317 00c4 52030000 		.4byte	.LASF17
  1318 00c8 03       		.uleb128 0x3
  1319 00c9 08       		.byte	0x8
  1320 00ca 04       		.byte	0x4
  1321 00cb 0B010000 		.4byte	.LASF18
  1322 00cf 04       		.uleb128 0x4
- 1323 00d0 62030000 		.4byte	.LASF19
+ 1323 00d0 4C030000 		.4byte	.LASF19
  1324 00d4 02       		.byte	0x2
  1325 00d5 9D01     		.2byte	0x19d
  1326 00d7 5D000000 		.4byte	0x5d
  1327 00db 04       		.uleb128 0x4
- 1328 00dc 74030000 		.4byte	.LASF20
+ 1328 00dc 5E030000 		.4byte	.LASF20
  1329 00e0 02       		.byte	0x2
  1330 00e1 3C02     		.2byte	0x23c
  1331 00e3 E7000000 		.4byte	0xe7
@@ -2316,7 +2316,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  1347 010c 01       		.uleb128 0x1
  1348 010d 9C       		.byte	0x9c
  1349 010e 06       		.uleb128 0x6
- 1350 010f 1A040000 		.4byte	.LASF23
+ 1350 010f 04040000 		.4byte	.LASF23
  1351 0113 01       		.byte	0x1
  1352 0114 6A       		.byte	0x6a
  1353 0115 00000000 		.4byte	.LFB1
@@ -2324,7 +2324,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  1355 011d 01       		.uleb128 0x1
  1356 011e 9C       		.byte	0x9c
  1357 011f 07       		.uleb128 0x7
- 1358 0120 03040000 		.4byte	.LASF26
+ 1358 0120 ED030000 		.4byte	.LASF26
  1359 0124 01       		.byte	0x1
  1360 0125 8F       		.byte	0x8f
  1361 0126 00000000 		.4byte	.LFB2
@@ -2333,18 +2333,18 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  1364 012f 9C       		.byte	0x9c
  1365 0130 51010000 		.4byte	0x151
  1366 0134 08       		.uleb128 0x8
- 1367 0135 A4040000 		.4byte	.LASF24
+ 1367 0135 8E040000 		.4byte	.LASF24
  1368 0139 01       		.byte	0x1
  1369 013a 91       		.byte	0x91
  1370 013b 79000000 		.4byte	0x79
  1371 013f 02       		.uleb128 0x2
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 40
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 40
 
 
  1372 0140 91       		.byte	0x91
  1373 0141 76       		.sleb128 -10
  1374 0142 08       		.uleb128 0x8
- 1375 0143 47040000 		.4byte	.LASF25
+ 1375 0143 31040000 		.4byte	.LASF25
  1376 0147 01       		.byte	0x1
  1377 0148 92       		.byte	0x92
  1378 0149 79000000 		.4byte	0x79
@@ -2353,7 +2353,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  1381 014f 77       		.sleb128 -9
  1382 0150 00       		.byte	0
  1383 0151 07       		.uleb128 0x7
- 1384 0152 87010000 		.4byte	.LASF27
+ 1384 0152 C5010000 		.4byte	.LASF27
  1385 0156 01       		.byte	0x1
  1386 0157 F8       		.byte	0xf8
  1387 0158 00000000 		.4byte	.LFB3
@@ -2362,7 +2362,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  1390 0161 9C       		.byte	0x9c
  1391 0162 75010000 		.4byte	0x175
  1392 0166 08       		.uleb128 0x8
- 1393 0167 47040000 		.4byte	.LASF25
+ 1393 0167 31040000 		.4byte	.LASF25
  1394 016b 01       		.byte	0x1
  1395 016c FA       		.byte	0xfa
  1396 016d 79000000 		.4byte	0x79
@@ -2380,7 +2380,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  1408 0186 9C       		.byte	0x9c
  1409 0187 AA010000 		.4byte	0x1aa
  1410 018b 0A       		.uleb128 0xa
- 1411 018c 6E030000 		.4byte	.LASF30
+ 1411 018c 58030000 		.4byte	.LASF30
  1412 0190 01       		.byte	0x1
  1413 0191 2201     		.2byte	0x122
  1414 0193 79000000 		.4byte	0x79
@@ -2388,7 +2388,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  1416 0198 91       		.byte	0x91
  1417 0199 6F       		.sleb128 -17
  1418 019a 0B       		.uleb128 0xb
- 1419 019b A4040000 		.4byte	.LASF24
+ 1419 019b 8E040000 		.4byte	.LASF24
  1420 019f 01       		.byte	0x1
  1421 01a0 2401     		.2byte	0x124
  1422 01a2 79000000 		.4byte	0x79
@@ -2397,8 +2397,8 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  1425 01a8 77       		.sleb128 -9
  1426 01a9 00       		.byte	0
  1427 01aa 0C       		.uleb128 0xc
- 1428 01ab 46020000 		.4byte	.LASF29
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 41
+ 1428 01ab 84020000 		.4byte	.LASF29
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 41
 
 
  1429 01af 01       		.byte	0x1
@@ -2409,7 +2409,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  1434 01bb 9C       		.byte	0x9c
  1435 01bc DF010000 		.4byte	0x1df
  1436 01c0 0A       		.uleb128 0xa
- 1437 01c1 AF030000 		.4byte	.LASF31
+ 1437 01c1 99030000 		.4byte	.LASF31
  1438 01c5 01       		.byte	0x1
  1439 01c6 5401     		.2byte	0x154
  1440 01c8 79000000 		.4byte	0x79
@@ -2417,7 +2417,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  1442 01cd 91       		.byte	0x91
  1443 01ce 6F       		.sleb128 -17
  1444 01cf 0B       		.uleb128 0xb
- 1445 01d0 A4040000 		.4byte	.LASF24
+ 1445 01d0 8E040000 		.4byte	.LASF24
  1446 01d4 01       		.byte	0x1
  1447 01d5 5601     		.2byte	0x156
  1448 01d7 79000000 		.4byte	0x79
@@ -2434,7 +2434,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  1459 01ef 01       		.uleb128 0x1
  1460 01f0 9C       		.byte	0x9c
  1461 01f1 0D       		.uleb128 0xd
- 1462 01f2 64020000 		.4byte	.LASF33
+ 1462 01f2 30030000 		.4byte	.LASF33
  1463 01f6 01       		.byte	0x1
  1464 01f7 B301     		.2byte	0x1b3
  1465 01f9 00000000 		.4byte	.LFB7
@@ -2442,7 +2442,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  1467 0201 01       		.uleb128 0x1
  1468 0202 9C       		.byte	0x9c
  1469 0203 0E       		.uleb128 0xe
- 1470 0204 9C010000 		.4byte	.LASF36
+ 1470 0204 DA010000 		.4byte	.LASF36
  1471 0208 01       		.byte	0x1
  1472 0209 DB01     		.2byte	0x1db
  1473 020b 79000000 		.4byte	0x79
@@ -2458,12 +2458,12 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  1483 0225 79000000 		.4byte	0x79
  1484 0229 02       		.uleb128 0x2
  1485 022a 91       		.byte	0x91
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 42
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 42
 
 
  1486 022b 6F       		.sleb128 -17
  1487 022c 0B       		.uleb128 0xb
- 1488 022d 58040000 		.4byte	.LASF35
+ 1488 022d 42040000 		.4byte	.LASF35
  1489 0231 01       		.byte	0x1
  1490 0232 DD01     		.2byte	0x1dd
  1491 0234 79000000 		.4byte	0x79
@@ -2472,7 +2472,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  1494 023a 77       		.sleb128 -9
  1495 023b 00       		.byte	0
  1496 023c 0F       		.uleb128 0xf
- 1497 023d AB040000 		.4byte	.LASF60
+ 1497 023d 95040000 		.4byte	.LASF60
  1498 0241 01       		.byte	0x1
  1499 0242 0802     		.2byte	0x208
  1500 0244 91000000 		.4byte	0x91
@@ -2481,7 +2481,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  1503 0250 01       		.uleb128 0x1
  1504 0251 9C       		.byte	0x9c
  1505 0252 10       		.uleb128 0x10
- 1506 0253 BC010000 		.4byte	.LASF37
+ 1506 0253 FA010000 		.4byte	.LASF37
  1507 0257 01       		.byte	0x1
  1508 0258 2602     		.2byte	0x226
  1509 025a 9D000000 		.4byte	0x9d
@@ -2500,7 +2500,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  1522 027a 76       		.sleb128 -10
  1523 027b 00       		.byte	0
  1524 027c 09       		.uleb128 0x9
- 1525 027d D3030000 		.4byte	.LASF38
+ 1525 027d BD030000 		.4byte	.LASF38
  1526 0281 01       		.byte	0x1
  1527 0282 4902     		.2byte	0x249
  1528 0284 00000000 		.4byte	.LFB11
@@ -2509,7 +2509,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  1531 028d 9C       		.byte	0x9c
  1532 028e A2020000 		.4byte	0x2a2
  1533 0292 0A       		.uleb128 0xa
- 1534 0293 F2030000 		.4byte	.LASF39
+ 1534 0293 DC030000 		.4byte	.LASF39
  1535 0297 01       		.byte	0x1
  1536 0298 4902     		.2byte	0x249
  1537 029a 9D000000 		.4byte	0x9d
@@ -2518,10 +2518,10 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  1540 02a0 76       		.sleb128 -10
  1541 02a1 00       		.byte	0
  1542 02a2 12       		.uleb128 0x12
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 43
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 43
 
 
- 1543 02a3 BA030000 		.4byte	.LASF61
+ 1543 02a3 A4030000 		.4byte	.LASF61
  1544 02a7 01       		.byte	0x1
  1545 02a8 6302     		.2byte	0x263
  1546 02aa 00000000 		.4byte	.LFB12
@@ -2530,7 +2530,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  1549 02b3 9C       		.byte	0x9c
  1550 02b4 D7020000 		.4byte	0x2d7
  1551 02b8 0A       		.uleb128 0xa
- 1552 02b9 AF030000 		.4byte	.LASF31
+ 1552 02b9 99030000 		.4byte	.LASF31
  1553 02bd 01       		.byte	0x1
  1554 02be 6302     		.2byte	0x263
  1555 02c0 79000000 		.4byte	0x79
@@ -2547,7 +2547,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  1566 02d5 74       		.sleb128 -12
  1567 02d6 00       		.byte	0
  1568 02d7 09       		.uleb128 0x9
- 1569 02d8 2F040000 		.4byte	.LASF41
+ 1569 02d8 19040000 		.4byte	.LASF41
  1570 02dc 01       		.byte	0x1
  1571 02dd B402     		.2byte	0x2b4
  1572 02df 00000000 		.4byte	.LFB13
@@ -2565,7 +2565,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  1584 02fb 76       		.sleb128 -10
  1585 02fc 00       		.byte	0
  1586 02fd 09       		.uleb128 0x9
- 1587 02fe 91030000 		.4byte	.LASF43
+ 1587 02fe 7B030000 		.4byte	.LASF43
  1588 0302 01       		.byte	0x1
  1589 0303 CF02     		.2byte	0x2cf
  1590 0305 00000000 		.4byte	.LFB14
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  1597 0318 01       		.byte	0x1
  1598 0319 CF02     		.2byte	0x2cf
  1599 031b A9000000 		.4byte	0xa9
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 44
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 44
 
 
  1600 031f 02       		.uleb128 0x2
@@ -2596,7 +2596,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  1612 0338 9C       		.byte	0x9c
  1613 0339 6B030000 		.4byte	0x36b
  1614 033d 0A       		.uleb128 0xa
- 1615 033e F9030000 		.4byte	.LASF45
+ 1615 033e E3030000 		.4byte	.LASF45
  1616 0342 01       		.byte	0x1
  1617 0343 E702     		.2byte	0x2e7
  1618 0345 9D000000 		.4byte	0x9d
@@ -2604,7 +2604,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  1620 034a 91       		.byte	0x91
  1621 034b 6E       		.sleb128 -18
  1622 034c 0B       		.uleb128 0xb
- 1623 034d D8010000 		.4byte	.LASF46
+ 1623 034d 16020000 		.4byte	.LASF46
  1624 0351 01       		.byte	0x1
  1625 0352 E902     		.2byte	0x2e9
  1626 0354 9D000000 		.4byte	0x9d
@@ -2631,14 +2631,14 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  1647 0380 9C       		.byte	0x9c
  1648 0381 B3030000 		.4byte	0x3b3
  1649 0385 0A       		.uleb128 0xa
- 1650 0386 F9030000 		.4byte	.LASF45
+ 1650 0386 E3030000 		.4byte	.LASF45
  1651 038a 01       		.byte	0x1
  1652 038b 1103     		.2byte	0x311
  1653 038d 9D000000 		.4byte	0x9d
  1654 0391 02       		.uleb128 0x2
  1655 0392 91       		.byte	0x91
  1656 0393 5E       		.sleb128 -34
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 45
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 45
 
 
  1657 0394 0B       		.uleb128 0xb
@@ -2669,7 +2669,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  1682 03c8 9C       		.byte	0x9c
  1683 03c9 FB030000 		.4byte	0x3fb
  1684 03cd 0A       		.uleb128 0xa
- 1685 03ce F9030000 		.4byte	.LASF45
+ 1685 03ce E3030000 		.4byte	.LASF45
  1686 03d2 01       		.byte	0x1
  1687 03d3 3D03     		.2byte	0x33d
  1688 03d5 9D000000 		.4byte	0x9d
@@ -2677,7 +2677,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  1690 03da 91       		.byte	0x91
  1691 03db 66       		.sleb128 -26
  1692 03dc 0B       		.uleb128 0xb
- 1693 03dd 69010000 		.4byte	.LASF51
+ 1693 03dd A7010000 		.4byte	.LASF51
  1694 03e1 01       		.byte	0x1
  1695 03e2 3F03     		.2byte	0x33f
  1696 03e4 B5000000 		.4byte	0xb5
@@ -2694,11 +2694,11 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  1707 03f9 6C       		.sleb128 -20
  1708 03fa 00       		.byte	0
  1709 03fb 13       		.uleb128 0x13
- 1710 03fc 1D020000 		.4byte	.LASF52
+ 1710 03fc 5B020000 		.4byte	.LASF52
  1711 0400 01       		.byte	0x1
  1712 0401 23       		.byte	0x23
  1713 0402 79000000 		.4byte	0x79
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 46
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 46
 
 
  1714 0406 05       		.uleb128 0x5
@@ -2715,7 +2715,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  1725 041d 05       		.uleb128 0x5
  1726 041e 9D000000 		.4byte	0x9d
  1727 0422 13       		.uleb128 0x13
- 1728 0423 DF010000 		.4byte	.LASF54
+ 1728 0423 1D020000 		.4byte	.LASF54
  1729 0427 01       		.byte	0x1
  1730 0428 25       		.byte	0x25
  1731 0429 1D040000 		.4byte	0x41d
@@ -2723,7 +2723,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  1733 042e 03       		.byte	0x3
  1734 042f 00000000 		.4byte	ADC_SAR_Seq_SAR_countsPerVolt
  1735 0433 13       		.uleb128 0x13
- 1736 0434 FD010000 		.4byte	.LASF55
+ 1736 0434 3B020000 		.4byte	.LASF55
  1737 0438 01       		.byte	0x1
  1738 0439 26       		.byte	0x26
  1739 043a 44040000 		.4byte	0x444
@@ -2733,7 +2733,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  1743 0444 05       		.uleb128 0x5
  1744 0445 A9000000 		.4byte	0xa9
  1745 0449 13       		.uleb128 0x13
- 1746 044a 8E040000 		.4byte	.LASF56
+ 1746 044a 78040000 		.4byte	.LASF56
  1747 044e 01       		.byte	0x1
  1748 044f 27       		.byte	0x27
  1749 0450 1D040000 		.4byte	0x41d
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  1768 000c 17       		.uleb128 0x17
  1769 000d 11       		.uleb128 0x11
  1770 000e 01       		.uleb128 0x1
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 47
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 47
 
 
  1771 000f 10       		.uleb128 0x10
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  1825 0045 0B       		.uleb128 0xb
  1826 0046 3B       		.uleb128 0x3b
  1827 0047 0B       		.uleb128 0xb
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 48
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 48
 
 
  1828 0048 27       		.uleb128 0x27
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  1882 0080 01       		.byte	0x1
  1883 0081 3F       		.uleb128 0x3f
  1884 0082 19       		.uleb128 0x19
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 49
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 49
 
 
  1885 0083 03       		.uleb128 0x3
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  1939 00ba 19       		.uleb128 0x19
  1940 00bb 03       		.uleb128 0x3
  1941 00bc 0E       		.uleb128 0xe
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 50
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 50
 
 
  1942 00bd 3A       		.uleb128 0x3a
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  1996 00f5 49       		.uleb128 0x49
  1997 00f6 13       		.uleb128 0x13
  1998 00f7 11       		.uleb128 0x11
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 51
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 51
 
 
  1999 00f8 01       		.uleb128 0x1
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  2053 0130 06       		.uleb128 0x6
  2054 0131 40       		.uleb128 0x40
  2055 0132 18       		.uleb128 0x18
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 52
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 52
 
 
  2056 0133 9742     		.uleb128 0x2117
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  2110 016b 13       		.uleb128 0x13
  2111 016c 3F       		.uleb128 0x3f
  2112 016d 19       		.uleb128 0x19
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 53
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 53
 
 
  2113 016e 02       		.uleb128 0x2
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  2167 0004 20000000 		.4byte	.LFE0
  2168 0008 00000000 		.4byte	.LFB1
  2169 000c 2C000000 		.4byte	.LFE1
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 54
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 54
 
 
  2170 0010 00000000 		.4byte	.LFB2
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  2214      7369676E 
  2214      65642069 
  2215              	.LASF48:
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 55
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 55
 
 
  2216 002d 4144435F 		.ascii	"ADC_SAR_Seq_SAR_CountsTo_uVolts\000"
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  2237              	.LASF11:
  2238 0105 75696E74 		.ascii	"uint8\000"
  2238      3800
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 56
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 56
 
 
  2239              	.LASF18:
@@ -3326,222 +3326,221 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 1
  2249              	.LASF49:
  2250 0150 75566F6C 		.ascii	"uVolts\000"
  2250      747300
- 2251              	.LASF6:
- 2252 0157 6C6F6E67 		.ascii	"long unsigned int\000"
- 2252      20756E73 
- 2252      69676E65 
- 2252      6420696E 
- 2252      7400
- 2253              	.LASF51:
- 2254 0169 766F6C74 		.ascii	"volts\000"
- 2254      7300
- 2255              	.LASF4:
- 2256 016f 73686F72 		.ascii	"short unsigned int\000"
- 2256      7420756E 
- 2256      7369676E 
- 2256      65642069 
- 2256      6E7400
- 2257              	.LASF13:
- 2258 0182 696E7438 		.ascii	"int8\000"
- 2258      00
- 2259              	.LASF27:
- 2260 0187 4144435F 		.ascii	"ADC_SAR_Seq_SAR_Stop\000"
- 2260      5341525F 
- 2260      5365715F 
- 2260      5341525F 
- 2260      53746F70 
- 2261              	.LASF36:
- 2262 019c 4144435F 		.ascii	"ADC_SAR_Seq_SAR_IsEndConversion\000"
- 2262      5341525F 
- 2262      5365715F 
- 2262      5341525F 
- 2262      4973456E 
- 2263              	.LASF37:
- 2264 01bc 4144435F 		.ascii	"ADC_SAR_Seq_SAR_GetResult16\000"
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 57
+ 2251              	.LASF59:
+ 2252 0157 433A5C55 		.ascii	"C:\\Users\\ben\\Documents\\PSoC Creator\\BIT-MANGLE"
+ 2252      73657273 
+ 2252      5C62656E 
+ 2252      5C446F63 
+ 2252      756D656E 
+ 2253 0185 525C4144 		.ascii	"R\\ADC_DAC.cydsn\000"
+ 2253      435F4441 
+ 2253      432E6379 
+ 2253      64736E00 
+ 2254              	.LASF6:
+ 2255 0195 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2255      20756E73 
+ 2255      69676E65 
+ 2255      6420696E 
+ 2255      7400
+ 2256              	.LASF51:
+ 2257 01a7 766F6C74 		.ascii	"volts\000"
+ 2257      7300
+ 2258              	.LASF4:
+ 2259 01ad 73686F72 		.ascii	"short unsigned int\000"
+ 2259      7420756E 
+ 2259      7369676E 
+ 2259      65642069 
+ 2259      6E7400
+ 2260              	.LASF13:
+ 2261 01c0 696E7438 		.ascii	"int8\000"
+ 2261      00
+ 2262              	.LASF27:
+ 2263 01c5 4144435F 		.ascii	"ADC_SAR_Seq_SAR_Stop\000"
+ 2263      5341525F 
+ 2263      5365715F 
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 57
 
 
- 2264      5341525F 
- 2264      5365715F 
- 2264      5341525F 
- 2264      47657452 
- 2265              	.LASF46:
- 2266 01d8 6D566F6C 		.ascii	"mVolts\000"
- 2266      747300
- 2267              	.LASF54:
- 2268 01df 4144435F 		.ascii	"ADC_SAR_Seq_SAR_countsPerVolt\000"
- 2268      5341525F 
- 2268      5365715F 
- 2268      5341525F 
- 2268      636F756E 
- 2269              	.LASF55:
- 2270 01fd 4144435F 		.ascii	"ADC_SAR_Seq_SAR_countsPer10Volt\000"
- 2270      5341525F 
- 2270      5365715F 
- 2270      5341525F 
- 2270      636F756E 
- 2271              	.LASF52:
- 2272 021d 4144435F 		.ascii	"ADC_SAR_Seq_SAR_initVar\000"
- 2272      5341525F 
- 2272      5365715F 
- 2272      5341525F 
- 2272      696E6974 
- 2273              	.LASF16:
- 2274 0235 666C6F61 		.ascii	"float32\000"
- 2274      74333200 
- 2275              	.LASF9:
- 2276 023d 73697A65 		.ascii	"sizetype\000"
- 2276      74797065 
- 2276      00
- 2277              	.LASF29:
- 2278 0246 4144435F 		.ascii	"ADC_SAR_Seq_SAR_SetResolution\000"
- 2278      5341525F 
- 2278      5365715F 
- 2278      5341525F 
- 2278      53657452 
- 2279              	.LASF33:
- 2280 0264 4144435F 		.ascii	"ADC_SAR_Seq_SAR_StopConvert\000"
- 2280      5341525F 
- 2280      5365715F 
- 2280      5341525F 
- 2280      53746F70 
- 2281              	.LASF57:
- 2282 0280 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 2282      4320342E 
- 2282      392E3320 
- 2282      32303135 
- 2282      30333033 
- 2283 02b3 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 2283      20726576 
- 2283      6973696F 
- 2283      6E203232 
- 2283      31323230 
- 2284 02e6 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
- 2284      66756E63 
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 58
+ 2263      5341525F 
+ 2263      53746F70 
+ 2264              	.LASF36:
+ 2265 01da 4144435F 		.ascii	"ADC_SAR_Seq_SAR_IsEndConversion\000"
+ 2265      5341525F 
+ 2265      5365715F 
+ 2265      5341525F 
+ 2265      4973456E 
+ 2266              	.LASF37:
+ 2267 01fa 4144435F 		.ascii	"ADC_SAR_Seq_SAR_GetResult16\000"
+ 2267      5341525F 
+ 2267      5365715F 
+ 2267      5341525F 
+ 2267      47657452 
+ 2268              	.LASF46:
+ 2269 0216 6D566F6C 		.ascii	"mVolts\000"
+ 2269      747300
+ 2270              	.LASF54:
+ 2271 021d 4144435F 		.ascii	"ADC_SAR_Seq_SAR_countsPerVolt\000"
+ 2271      5341525F 
+ 2271      5365715F 
+ 2271      5341525F 
+ 2271      636F756E 
+ 2272              	.LASF55:
+ 2273 023b 4144435F 		.ascii	"ADC_SAR_Seq_SAR_countsPer10Volt\000"
+ 2273      5341525F 
+ 2273      5365715F 
+ 2273      5341525F 
+ 2273      636F756E 
+ 2274              	.LASF52:
+ 2275 025b 4144435F 		.ascii	"ADC_SAR_Seq_SAR_initVar\000"
+ 2275      5341525F 
+ 2275      5365715F 
+ 2275      5341525F 
+ 2275      696E6974 
+ 2276              	.LASF16:
+ 2277 0273 666C6F61 		.ascii	"float32\000"
+ 2277      74333200 
+ 2278              	.LASF9:
+ 2279 027b 73697A65 		.ascii	"sizetype\000"
+ 2279      74797065 
+ 2279      00
+ 2280              	.LASF29:
+ 2281 0284 4144435F 		.ascii	"ADC_SAR_Seq_SAR_SetResolution\000"
+ 2281      5341525F 
+ 2281      5365715F 
+ 2281      5341525F 
+ 2281      53657452 
+ 2282              	.LASF57:
+ 2283 02a2 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 2283      4320342E 
+ 2283      392E3320 
+ 2283      32303135 
+ 2283      30333033 
+ 2284 02d5 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 2284      20726576 
+ 2284      6973696F 
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 58
 
 
- 2284      74696F6E 
- 2284      2D736563 
- 2284      74696F6E 
- 2285              	.LASF59:
- 2286 030e 433A5C55 		.ascii	"C:\\Users\\ben\\Documents\\PSoC Creator\\New Pedal "
- 2286      73657273 
- 2286      5C62656E 
- 2286      5C446F63 
- 2286      756D656E 
- 2287 033c 5468696E 		.ascii	"Thingz\\PSOC_BIT_MANGLER\\ADC_DAC.cydsn\000"
- 2287      677A5C50 
- 2287      534F435F 
- 2287      4249545F 
- 2287      4D414E47 
+ 2284      6E203232 
+ 2284      31323230 
+ 2285 0308 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 2285      66756E63 
+ 2285      74696F6E 
+ 2285      2D736563 
+ 2285      74696F6E 
+ 2286              	.LASF33:
+ 2287 0330 4144435F 		.ascii	"ADC_SAR_Seq_SAR_StopConvert\000"
+ 2287      5341525F 
+ 2287      5365715F 
+ 2287      5341525F 
+ 2287      53746F70 
  2288              	.LASF19:
- 2289 0362 696E7436 		.ascii	"int64\000"
+ 2289 034c 696E7436 		.ascii	"int64\000"
  2289      3400
  2290              	.LASF17:
- 2291 0368 666C6F61 		.ascii	"float\000"
+ 2291 0352 666C6F61 		.ascii	"float\000"
  2291      7400
  2292              	.LASF30:
- 2293 036e 706F7765 		.ascii	"power\000"
+ 2293 0358 706F7765 		.ascii	"power\000"
  2293      7200
  2294              	.LASF20:
- 2295 0374 72656738 		.ascii	"reg8\000"
+ 2295 035e 72656738 		.ascii	"reg8\000"
  2295      00
  2296              	.LASF2:
- 2297 0379 756E7369 		.ascii	"unsigned char\000"
+ 2297 0363 756E7369 		.ascii	"unsigned char\000"
  2297      676E6564 
  2297      20636861 
  2297      7200
  2298              	.LASF3:
- 2299 0387 73686F72 		.ascii	"short int\000"
+ 2299 0371 73686F72 		.ascii	"short int\000"
  2299      7420696E 
  2299      7400
  2300              	.LASF43:
- 2301 0391 4144435F 		.ascii	"ADC_SAR_Seq_SAR_SetScaledGain\000"
+ 2301 037b 4144435F 		.ascii	"ADC_SAR_Seq_SAR_SetScaledGain\000"
  2301      5341525F 
  2301      5365715F 
  2301      5341525F 
  2301      53657453 
  2302              	.LASF31:
- 2303 03af 7265736F 		.ascii	"resolution\000"
+ 2303 0399 7265736F 		.ascii	"resolution\000"
  2303      6C757469 
  2303      6F6E00
  2304              	.LASF61:
- 2305 03ba 4144435F 		.ascii	"ADC_SAR_Seq_SAR_CalcGain\000"
+ 2305 03a4 4144435F 		.ascii	"ADC_SAR_Seq_SAR_CalcGain\000"
  2305      5341525F 
  2305      5365715F 
  2305      5341525F 
  2305      43616C63 
  2306              	.LASF38:
- 2307 03d3 4144435F 		.ascii	"ADC_SAR_Seq_SAR_SetOffset\000"
+ 2307 03bd 4144435F 		.ascii	"ADC_SAR_Seq_SAR_SetOffset\000"
  2307      5341525F 
  2307      5365715F 
  2307      5341525F 
  2307      5365744F 
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 59
-
-
  2308              	.LASF10:
- 2309 03ed 63686172 		.ascii	"char\000"
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 59
+
+
+ 2309 03d7 63686172 		.ascii	"char\000"
  2309      00
  2310              	.LASF39:
- 2311 03f2 6F666673 		.ascii	"offset\000"
+ 2311 03dc 6F666673 		.ascii	"offset\000"
  2311      657400
  2312              	.LASF45:
- 2313 03f9 61646343 		.ascii	"adcCounts\000"
+ 2313 03e3 61646343 		.ascii	"adcCounts\000"
  2313      6F756E74 
  2313      7300
  2314              	.LASF26:
- 2315 0403 4144435F 		.ascii	"ADC_SAR_Seq_SAR_Enable\000"
+ 2315 03ed 4144435F 		.ascii	"ADC_SAR_Seq_SAR_Enable\000"
  2315      5341525F 
  2315      5365715F 
  2315      5341525F 
  2315      456E6162 
  2316              	.LASF23:
- 2317 041a 4144435F 		.ascii	"ADC_SAR_Seq_SAR_Init\000"
+ 2317 0404 4144435F 		.ascii	"ADC_SAR_Seq_SAR_Init\000"
  2317      5341525F 
  2317      5365715F 
  2317      5341525F 
  2317      496E6974 
  2318              	.LASF41:
- 2319 042f 4144435F 		.ascii	"ADC_SAR_Seq_SAR_SetGain\000"
+ 2319 0419 4144435F 		.ascii	"ADC_SAR_Seq_SAR_SetGain\000"
  2319      5341525F 
  2319      5365715F 
  2319      5341525F 
  2319      53657447 
  2320              	.LASF25:
- 2321 0447 656E6162 		.ascii	"enableInterrupts\000"
+ 2321 0431 656E6162 		.ascii	"enableInterrupts\000"
  2321      6C65496E 
  2321      74657272 
  2321      75707473 
  2321      00
  2322              	.LASF35:
- 2323 0458 73746174 		.ascii	"status\000"
+ 2323 0442 73746174 		.ascii	"status\000"
  2323      757300
  2324              	.LASF58:
- 2325 045f 47656E65 		.ascii	"Generated_Source\\PSoC5\\ADC_SAR_Seq_SAR.c\000"
+ 2325 0449 47656E65 		.ascii	"Generated_Source\\PSoC5\\ADC_SAR_Seq_SAR.c\000"
  2325      72617465 
  2325      645F536F 
  2325      75726365 
  2325      5C50536F 
  2326              	.LASF14:
- 2327 0488 696E7431 		.ascii	"int16\000"
+ 2327 0472 696E7431 		.ascii	"int16\000"
  2327      3600
  2328              	.LASF56:
- 2329 048e 4144435F 		.ascii	"ADC_SAR_Seq_SAR_shift\000"
+ 2329 0478 4144435F 		.ascii	"ADC_SAR_Seq_SAR_shift\000"
  2329      5341525F 
  2329      5365715F 
  2329      5341525F 
  2329      73686966 
  2330              	.LASF24:
- 2331 04a4 746D7052 		.ascii	"tmpReg\000"
+ 2331 048e 746D7052 		.ascii	"tmpReg\000"
  2331      656700
  2332              	.LASF60:
- 2333 04ab 4144435F 		.ascii	"ADC_SAR_Seq_SAR_GetResult8\000"
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccK0ETKL.s 			page 60
-
-
+ 2333 0495 4144435F 		.ascii	"ADC_SAR_Seq_SAR_GetResult8\000"
  2333      5341525F 
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccZ8NcgL.s 			page 60
+
+
  2333      5365715F 
  2333      5341525F 
  2333      47657452 

@@ -63,9 +63,16 @@ int main()
     for(;;)
     {
 
-
-        
-  if (ADC_SAR_Seq_IsEndConversion(1)){
+    if (ADC_SAR_1_IsEndConversion(ADC_SAR_1_RETURN_STATUS))
+    {
+        OLD_BIT_MASK_DEPTH = BIT_MASK_CTRL;
+        AUDIO_IN = ADC_SAR_1_GetResult16();
+        ADC_1_OUT_LSB_Write(AUDIO_IN & 0xFF);
+        ADC_1_OUT_MSB_Write(0xFF&(AUDIO_IN >> 8u));
+        uint16 FINAL_OUT = (((DAC_IN_MSB_Read()<<8) | DAC_IN_LSB_Read())) & OLD_MASK_DEPTH;
+        SPI_DAC_WriteTxData(FINAL_OUT| 0b1111000000000000);
+    }       
+  if (ADC_SAR_Seq_IsEndConversion(ADC_SAR_Seq_RETURN_STATUS)){
        
     FRQ_CTRL=(((ADC_SAR_Seq_GetResult16(0)))+1);
     PWM_ADC_CK_WritePeriod(FRQ_CTRL);
@@ -73,27 +80,12 @@ int main()
     DIV_MASK_CTRL = ADC_SAR_Seq_GetResult16(2);
     DIV_MASK_LSB_Write(DIV_MASK_CTRL & 0xFF);
     DIV_MASK_LSB_Write(DIV_MASK_CTRL>>4);
-    
     BIT_MASK_CTRL = Effect(ADC_SAR_Seq_GetResult16(1));
 }
-
-    OLD_BIT_MASK_DEPTH = BIT_MASK_CTRL;
         
 
-    if (ADC_SAR_1_IsEndConversion(1))
-    {
-        
-        AUDIO_IN = ADC_SAR_1_GetResult16();
-        uint8 LSB_8_ADC =  (AUDIO_IN & 0x00FFu);
-        uint8 MSB_4_ADC = (AUDIO_IN >> 8u);
-        ADC_1_OUT_LSB_Write(LSB_8_ADC);
-        ADC_1_OUT_MSB_Write(MSB_4_ADC);
-        uint8 LSB_8_DAC = DAC_IN_LSB_Read();
-        uint16 MSB_4_DAC = DAC_IN_MSB_Read();
-        uint16 DACINPUT = ((MSB_4_DAC<<8 | LSB_8_DAC));
-        uint16 FINAL_OUT = DACINPUT & OLD_MASK_DEPTH;
-        SPI_DAC_WriteTxData(FINAL_OUT| 0b1111000000000000);
- }
+
+    /*
     if (CTR == 5)
     {
     LCD_Char_1_Position(0u, strlen("ADC1 "));
@@ -102,7 +94,7 @@ int main()
     LCD_Char_1_PrintInt16(MASK_CTRL); 
     
     }
-    CTR++;
+    CTR++;*/
     }
 }
 uint16 Effect(uint16 depth)
@@ -154,10 +146,10 @@ uint16 Effect(uint16 depth)
             mask = 0b111101100000;
             break;  
         case 14:
-            mask = 0b111101010000;
+            mask = 0b111101000000;
             break;  
         case 15:
-            mask = 0b111101000000;
+            mask = 0b111100000000;
         case 16:
             mask = 0b111100000000;
         case 17:
@@ -207,8 +199,8 @@ void PWM_Start(void)
     return;
 }
 void PWM_Set(uint16 PWMin){
-   uint16 PWMdiv = PWMin* .33333;
-
+   uint16 PWMdiv = PWMin>>1;
+//  division
     PWM_4_WritePeriod(PWMin);
     PWM_5_WritePeriod(PWMin);
     PWM_6_WritePeriod(PWMin);
@@ -217,8 +209,7 @@ void PWM_Set(uint16 PWMin){
     PWM_9_WritePeriod(PWMin);
     PWM_10_WritePeriod(PWMin);
     PWM_11_WritePeriod(PWMin);
-    
-
+//  compare    
     PWM_4_WriteCompare(PWMdiv);
     PWM_5_WriteCompare(PWMdiv);
     PWM_6_WriteCompare(PWMdiv);
