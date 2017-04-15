@@ -1,0 +1,78 @@
+--------------- Build Started: 04/14/2017 16:21:41 Project: ADC_DAC, Configuration: ARM GCC 4.9-2015-q1-update Release ---------------
+Initializing Build...
+cydsfit.exe -.appdatapath "C:\Users\ben\AppData\Local\Cypress Semiconductor\PSoC Creator\4.0" -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p "C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\ADC_DAC.cyprj" -d CY8C4A24PVI-441 -s "C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\Generated_Source\PSoC4" -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
+Elaborating Design...
+ADD: sdb.M0033: error: The instance 'SS_OUT', of component cy_pins_v2_20, contains an error. The parameter PowerOnResetState contains an error. The selected Power-On-Reset is not compatible with the selected device. 
+ * C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\TopDesign\TopDesign.cysch (Instance:SS_OUT)
+ADD: sdb.M0058: error: Unable to find Verilog, schematic or API implementation for block 'Filter_v2_30' in schematic 'TopDesign'.
+ * C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\TopDesign\TopDesign.cysch (Instance:Filter)
+ADD: sdb.M0058: error: Unable to find Verilog, schematic or API implementation for block 'ADC_SAR_v3_0' in schematic 'TopDesign'.
+ * C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\TopDesign\TopDesign.cysch (Instance:ADC_SAR_1)
+ADD: sdb.M0058: error: Unable to find Verilog, schematic or API implementation for block 'OpAmp_v1_90' in schematic 'TopDesign'.
+ * C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\TopDesign\TopDesign.cysch (Instance:Opamp_1)
+ADD: sdb.M0058: error: Unable to find Verilog, schematic or API implementation for block 'OpAmp_v1_90' in schematic 'TopDesign'.
+ * C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\TopDesign\TopDesign.cysch (Instance:Opamp_2)
+ADD: sdb.M0058: error: Unable to find Verilog, schematic or API implementation for block 'ADC_SAR_SEQ_v2_0' in schematic 'TopDesign'.
+ * C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\TopDesign\TopDesign.cysch (Instance:ADC_SAR_Seq)
+ADD: sdb.M0059: error: Error in component: Filter. The Filter_v2_30 component (Filter) is not compatible with the selected device. Please check the component datasheet for details on updating to a compatible component.
+ * C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\TopDesign\TopDesign.cysch (Instance:Filter)
+ADD: sdb.M0059: error: Error in component: ADC_SAR_1. The ADC_SAR_v3_0 component (ADC_SAR_1) is not compatible with the selected device. Please check the component datasheet for details on updating to a compatible component.
+ * C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\TopDesign\TopDesign.cysch (Instance:ADC_SAR_1)
+ADD: sdb.M0059: error: Error in component: Opamp_1. The OpAmp_v1_90 component (Opamp_1) is not compatible with the selected device. Please check the component datasheet for details on updating to a compatible component.
+ * C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\TopDesign\TopDesign.cysch (Instance:Opamp_1)
+ADD: sdb.M0059: error: Error in component: SPI_DAC. The SPI_Master_v2_50 component (SPI_DAC) is not compatible with the selected device. Please check the component datasheet for details on updating to a compatible component.
+ * C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\TopDesign\TopDesign.cysch (Instance:SPI_DAC)
+ADD: sdb.M0059: error: Error in component: Opamp_2. The OpAmp_v1_90 component (Opamp_2) is not compatible with the selected device. Please check the component datasheet for details on updating to a compatible component.
+ * C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\TopDesign\TopDesign.cysch (Instance:Opamp_2)
+ADD: sdb.M0059: error: Error in component: ADC_SAR_Seq. The ADC_SAR_SEQ_v2_0 component (ADC_SAR_Seq) is not compatible with the selected device. Please check the component datasheet for details on updating to a compatible component.
+ * C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\TopDesign\TopDesign.cysch (Instance:ADC_SAR_Seq)
+ADD: sdb.M0059: error: Error in component: PWM_ADC_CK. The PWM_v3_30 component (PWM_ADC_CK) is not compatible with the selected device. Please check the component datasheet for details on updating to a compatible component.
+ * C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\TopDesign\TopDesign.cysch (Instance:PWM_ADC_CK)
+ADD: sdb.M0059: error: Error in component: cy_tff_3. The cy_tff_v1_0 component (cy_tff_3) is not compatible with the selected device. Please check the component datasheet for details on updating to a compatible component.
+ * C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\TopDesign\TopDesign.cysch (Instance:cy_tff_3)
+ADD: sdb.M0059: error: Error in component: MUXMSB_24. The mux_v1_10 component (MUXMSB_24) is not compatible with the selected device. Please check the component datasheet for details on updating to a compatible component.
+ * C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\TopDesign\TopDesign.cysch (Instance:MUXMSB_24)
+ADD: sdb.M0059: error: Error in component: MUXMSB_23. The mux_v1_10 component (MUXMSB_23) is not compatible with the selected device. Please check the component datasheet for details on updating to a compatible component.
+ * C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\TopDesign\TopDesign.cysch (Instance:MUXMSB_23)
+ADD: sdb.M0059: error: Error in component: DIV_MASK_MSB. The CyControlReg_v1_80 component (DIV_MASK_MSB) is not compatible with the selected device. Please check the component datasheet for details on updating to a compatible component.
+ * C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\TopDesign\TopDesign.cysch (Instance:DIV_MASK_MSB)
+ADD: sdb.M0059: error: Error in component: DIV_MASK_LSB. The CyControlReg_v1_80 component (DIV_MASK_LSB) is not compatible with the selected device. Please check the component datasheet for details on updating to a compatible component.
+ * C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\TopDesign\TopDesign.cysch (Instance:DIV_MASK_LSB)
+ADD: sdb.M0059: error: Error in component: MUXMSB_22. The mux_v1_10 component (MUXMSB_22) is not compatible with the selected device. Please check the component datasheet for details on updating to a compatible component.
+ * C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\TopDesign\TopDesign.cysch (Instance:MUXMSB_22)
+ADD: sdb.M0059: error: Error in component: MUXMSB_21. The mux_v1_10 component (MUXMSB_21) is not compatible with the selected device. Please check the component datasheet for details on updating to a compatible component.
+ * C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\TopDesign\TopDesign.cysch (Instance:MUXMSB_21)
+ADD: sdb.M0059: error: Error in component: MUXMSB_20. The mux_v1_10 component (MUXMSB_20) is not compatible with the selected device. Please check the component datasheet for details on updating to a compatible component.
+ * C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\TopDesign\TopDesign.cysch (Instance:MUXMSB_20)
+ADD: sdb.M0059: error: Error in component: MUXMSB_19. The mux_v1_10 component (MUXMSB_19) is not compatible with the selected device. Please check the component datasheet for details on updating to a compatible component.
+ * C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\TopDesign\TopDesign.cysch (Instance:MUXMSB_19)
+ADD: sdb.M0059: error: Error in component: MUXMSB_18. The mux_v1_10 component (MUXMSB_18) is not compatible with the selected device. Please check the component datasheet for details on updating to a compatible component.
+ * C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\TopDesign\TopDesign.cysch (Instance:MUXMSB_18)
+ADD: sdb.M0059: error: Error in component: MUXMSB_17. The mux_v1_10 component (MUXMSB_17) is not compatible with the selected device. Please check the component datasheet for details on updating to a compatible component.
+ * C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\TopDesign\TopDesign.cysch (Instance:MUXMSB_17)
+ADD: sdb.M0059: error: Error in component: MUXMSB_16. The mux_v1_10 component (MUXMSB_16) is not compatible with the selected device. Please check the component datasheet for details on updating to a compatible component.
+ * C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\TopDesign\TopDesign.cysch (Instance:MUXMSB_16)
+ADD: sdb.M0059: error: Error in component: MUXMSB_15. The mux_v1_10 component (MUXMSB_15) is not compatible with the selected device. Please check the component datasheet for details on updating to a compatible component.
+ * C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\TopDesign\TopDesign.cysch (Instance:MUXMSB_15)
+ADD: sdb.M0059: error: Error in component: MUXMSB_14. The mux_v1_10 component (MUXMSB_14) is not compatible with the selected device. Please check the component datasheet for details on updating to a compatible component.
+ * C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\TopDesign\TopDesign.cysch (Instance:MUXMSB_14)
+ADD: sdb.M0059: error: Error in component: cy_tff_4. The cy_tff_v1_0 component (cy_tff_4) is not compatible with the selected device. Please check the component datasheet for details on updating to a compatible component.
+ * C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\TopDesign\TopDesign.cysch (Instance:cy_tff_4)
+ADD: sdb.M0059: error: Error in component: MUXMSB_13. The mux_v1_10 component (MUXMSB_13) is not compatible with the selected device. Please check the component datasheet for details on updating to a compatible component.
+ * C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\TopDesign\TopDesign.cysch (Instance:MUXMSB_13)
+ADD: sdb.M0059: error: Error in component: ADC_1_OUT_MSB. The CyControlReg_v1_80 component (ADC_1_OUT_MSB) is not compatible with the selected device. Please check the component datasheet for details on updating to a compatible component.
+ * C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\TopDesign\TopDesign.cysch (Instance:ADC_1_OUT_MSB)
+ADD: sdb.M0059: error: Error in component: ADC_1_OUT_LSB. The CyControlReg_v1_80 component (ADC_1_OUT_LSB) is not compatible with the selected device. Please check the component datasheet for details on updating to a compatible component.
+ * C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\TopDesign\TopDesign.cysch (Instance:ADC_1_OUT_LSB)
+ADD: sdb.M0059: error: Error in component: DAC_IN_MSB. The CyStatusReg_v1_90 component (DAC_IN_MSB) is not compatible with the selected device. Please check the component datasheet for details on updating to a compatible component.
+ * C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\TopDesign\TopDesign.cysch (Instance:DAC_IN_MSB)
+ADD: sdb.M0059: error: Error in component: DAC_IN_LSB. The CyStatusReg_v1_90 component (DAC_IN_LSB) is not compatible with the selected device. Please check the component datasheet for details on updating to a compatible component.
+ * C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\TopDesign\TopDesign.cysch (Instance:DAC_IN_LSB)
+ADD: sdb.M0059: error: Error in component: cy_tff_2. The cy_tff_v1_0 component (cy_tff_2) is not compatible with the selected device. Please check the component datasheet for details on updating to a compatible component.
+ * C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\TopDesign\TopDesign.cysch (Instance:cy_tff_2)
+ADD: sdb.M0059: error: Error in component: cy_tff_1. The cy_tff_v1_0 component (cy_tff_1) is not compatible with the selected device. Please check the component datasheet for details on updating to a compatible component.
+ * C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\TopDesign\TopDesign.cysch (Instance:cy_tff_1)
+ADD: sdb.M0059: error: Error in component: PWM_ADC_CK. Component does not support Fixed Function implementation for PSoC 4 device. Please open config dialog and change implementation to UDB (by pressing "Apply" button).
+ * C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\TopDesign\TopDesign.cysch (Instance:PWM_ADC_CK)
+Error: fit.M0050: The fitter aborted due to errors, please address all errors and rebuild. (App=cydsfit)
+--------------- Build Failed: 04/14/2017 16:21:44 ---------------

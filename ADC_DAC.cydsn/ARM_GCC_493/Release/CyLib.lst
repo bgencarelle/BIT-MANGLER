@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
   51      00000000 
   52              		.global	CySysTickInitVar
   53              		.align	2
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 2
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 2
 
 
   54              		.type	CySysTickInitVar, %object
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
   42:Generated_Source\PSoC5/CyLib.c **** uint8  cydelay_freq_mhz = (uint8)((BCLK__BUS_CLK__HZ + 999999u) / 1000000u);
   43:Generated_Source\PSoC5/CyLib.c **** uint32 cydelay_32k_ms   = 32768u * ((BCLK__BUS_CLK__HZ + 999u) / 1000u);
   44:Generated_Source\PSoC5/CyLib.c **** 
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 3
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 3
 
 
   45:Generated_Source\PSoC5/CyLib.c **** 
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
   67              		.loc 1 98 0
   68              		.cfi_startproc
   69              		@ args = 0, pretend = 0, frame = 16
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 4
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 4
 
 
   70              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  108 0038 1B78     		ldrb	r3, [r3]
  109 003a 7B72     		strb	r3, [r7, #9]
  115:Generated_Source\PSoC5/CyLib.c **** 
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 5
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 5
 
 
  116:Generated_Source\PSoC5/CyLib.c ****         CyPmFtwSetInterval(CY_CLK_PLL_FTW_INTERVAL);
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  131:Generated_Source\PSoC5/CyLib.c ****         }
  132:Generated_Source\PSoC5/CyLib.c **** 
  133:Generated_Source\PSoC5/CyLib.c ****         /* Restore 100 KHz ILO, FTW interval, enable and interrupt enable */
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 6
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 6
 
 
  134:Generated_Source\PSoC5/CyLib.c ****         if(0u == iloEnableState)
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  191              	CyPLL_OUT_Stop:
  192              	.LFB1:
  145:Generated_Source\PSoC5/CyLib.c **** 
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 7
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 7
 
 
  146:Generated_Source\PSoC5/CyLib.c **** 
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  159:Generated_Source\PSoC5/CyLib.c **** 
  160:Generated_Source\PSoC5/CyLib.c **** /*******************************************************************************
  161:Generated_Source\PSoC5/CyLib.c **** * Function Name: CyPLL_OUT_SetPQ
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 8
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 8
 
 
  162:Generated_Source\PSoC5/CyLib.c **** ****************************************************************************//**
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  257 0018 BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
  258 001a 102B     		cmp	r3, #16
  259 001c 1FD8     		bhi	.L13
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 9
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 9
 
 
  193:Generated_Source\PSoC5/CyLib.c ****        (qDiv    <= CY_CLK_PLL_MAX_Q_VALUE  ) && (qDiv    >= CY_CLK_PLL_MIN_Q_VALUE  ) &&
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  206:Generated_Source\PSoC5/CyLib.c ****         * - P divider is less than required
  207:Generated_Source\PSoC5/CyLib.c ****         * - Q divider is out of range
  208:Generated_Source\PSoC5/CyLib.c ****         * - pump current is out of range
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 10
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 10
 
 
  209:Generated_Source\PSoC5/CyLib.c ****         ***********************************************************************/
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  236:Generated_Source\PSoC5/CyLib.c **** *******************************************************************************/
  237:Generated_Source\PSoC5/CyLib.c **** void CyPLL_OUT_SetSource(uint8 source) 
  238:Generated_Source\PSoC5/CyLib.c **** {
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 11
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 11
 
 
  327              		.loc 1 238 0
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  365              		.cfi_def_cfa_offset 4
  366 0032 BD46     		mov	sp, r7
  367              		.cfi_def_cfa_register 13
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 12
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 12
 
 
  368              		@ sp needed
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  393              		.cfi_def_cfa_offset 24
  394 0004 00AF     		add	r7, sp, #0
  395              		.cfi_def_cfa_register 7
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 13
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 13
 
 
  396 0006 0346     		mov	r3, r0
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  434 004a FFF7FEFF 		bl	CyPmFtwSetInterval
  300:Generated_Source\PSoC5/CyLib.c **** 
  301:Generated_Source\PSoC5/CyLib.c ****         while (0u == (CY_PM_FTW_INT & CyPmReadStatus(CY_PM_FTW_INT)))
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 14
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 14
 
 
  435              		.loc 1 301 0
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  476 0090 82430040 		.word	1073759106
  477              		.cfi_endproc
  478              	.LFE4:
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 15
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 15
 
 
  479              		.size	CyIMO_Start, .-CyIMO_Start
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  519              		.cfi_restore 7
  520              		.cfi_def_cfa_offset 0
  521 002a 7047     		bx	lr
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 16
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 16
 
 
  522              	.L30:
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  558 0016 06D1     		bne	.L32
  347:Generated_Source\PSoC5/CyLib.c ****        (0u != (CY_LIB_PM_ACT_CFG5_REG & CY_ACT_USB_ENABLED     )))  ||
  559              		.loc 1 347 0 discriminator 1
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 17
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 17
 
 
  560 0018 0F4B     		ldr	r3, .L36+4
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  603              		.align	2
  604              	.L36:
  605 0054 93430040 		.word	1073759123
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 18
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 18
 
 
  606 0058 A5430040 		.word	1073759141
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  640              		.loc 1 375 0
  641 0018 2F4A     		ldr	r2, .L53
  642 001a 2F4B     		ldr	r3, .L53
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 19
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 19
 
 
  643 001c 1B78     		ldrb	r3, [r3]
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  387:Generated_Source\PSoC5/CyLib.c ****     case CY_IMO_FREQ_12MHZ:
  388:Generated_Source\PSoC5/CyLib.c ****         CY_LIB_IMO_TR1_REG = CY_GET_XTND_REG8(CY_LIB_TRIM_IMO_12MHZ_PTR);
  686              		.loc 1 388 0
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 20
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 20
 
 
  687 0070 1A4B     		ldr	r3, .L53+4
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  724 00a2 154A     		ldr	r2, .L53+32
  725 00a4 1278     		ldrb	r2, [r2]
  726 00a6 D2B2     		uxtb	r2, r2
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 21
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 21
 
 
  727 00a8 1A70     		strb	r2, [r3]
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  761              		.cfi_def_cfa_register 13
  762              		@ sp needed
  763 00d6 80BD     		pop	{r7, pc}
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 22
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 22
 
 
  764              	.L54:
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  456:Generated_Source\PSoC5/CyLib.c **** *******************************************************************************/
  457:Generated_Source\PSoC5/CyLib.c **** void CyIMO_SetFreq(uint8 freq) 
  458:Generated_Source\PSoC5/CyLib.c **** {
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 23
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 23
 
 
  788              		.loc 1 458 0
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  826 002c 52F823F0 		ldr	pc, [r2, r3, lsl #2]
  827              		.p2align 2
  828              	.L60:
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 24
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 24
 
 
  829 0030 4D000000 		.word	.L59+1
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  864 0066 FB73     		strb	r3, [r7, #15]
  494:Generated_Source\PSoC5/CyLib.c ****         break;
  865              		.loc 1 494 0
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 25
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 25
 
 
  866 0068 06E0     		b	.L67
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  896 008c 71D8     		bhi	.L84
  897 008e 01A2     		adr	r2, .L71
  898 0090 52F823F0 		ldr	pc, [r2, r3, lsl #2]
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 26
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 26
 
 
  899              		.p2align 2
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  940 00ea 2C4B     		ldr	r3, .L85
  941 00ec 1B78     		ldrb	r3, [r3]
  942 00ee DBB2     		uxtb	r3, r3
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 27
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 27
 
 
  943 00f0 23F04703 		bic	r3, r3, #71
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  982 0138 43F00503 		orr	r3, r3, #5
  983 013c DBB2     		uxtb	r3, r3
  984 013e 1370     		strb	r3, [r2]
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 28
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 28
 
 
  547:Generated_Source\PSoC5/CyLib.c ****             CY_LIB_IMO_62MHZ_VALUE) & ((uint8)(~CY_LIB_IMO_USBCLK_ON_SET));
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  1017              		.loc 1 568 0
  1018 0174 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
  1019 0176 082B     		cmp	r3, #8
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 29
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 29
 
 
  1020 0178 02D1     		bne	.L80
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  583:Generated_Source\PSoC5/CyLib.c **** 
  584:Generated_Source\PSoC5/CyLib.c **** 
  585:Generated_Source\PSoC5/CyLib.c **** /*******************************************************************************
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 30
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 30
 
 
  586:Generated_Source\PSoC5/CyLib.c **** * Function Name: CyIMO_SetSource
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  618:Generated_Source\PSoC5/CyLib.c ****         CY_LIB_FASTCLK_IMO_CR_REG |= CY_LIB_FASTCLK_IMO_IMO;
  619:Generated_Source\PSoC5/CyLib.c ****         break;
  620:Generated_Source\PSoC5/CyLib.c **** 
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 31
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 31
 
 
  621:Generated_Source\PSoC5/CyLib.c ****     case CY_IMO_SOURCE_IMO:
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  1122              	.L91:
  622:Generated_Source\PSoC5/CyLib.c ****         break;
  1123              		.loc 1 622 0
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 32
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 32
 
 
  1124 0066 074A     		ldr	r2, .L93
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  1163              		@ link register save eliminated.
  1164 0000 80B4     		push	{r7}
  1165              		.cfi_def_cfa_offset 4
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 33
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 33
 
 
  1166              		.cfi_offset 7, -4
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  1206              		.cfi_def_cfa_offset 4
  1207              		.cfi_offset 7, -4
  1208 0002 00AF     		add	r7, sp, #0
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 34
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 34
 
 
  1209              		.cfi_def_cfa_register 7
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  679:Generated_Source\PSoC5/CyLib.c **** *  coming back from the Flash must be adjusted by calling
  680:Generated_Source\PSoC5/CyLib.c **** *  CyFlash_SetWaitCycles() with an appropriate parameter. It can be optionally
  681:Generated_Source\PSoC5/CyLib.c **** *  called if the CPU clock frequency is lowered in order to improve the CPU
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 35
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 35
 
 
  682:Generated_Source\PSoC5/CyLib.c **** *  performance. See CyFlash_SetWaitCycles() description for more information.
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  1287              		.global	CyMasterClk_SetDivider
  1288              		.thumb
  1289              		.thumb_func
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 36
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 36
 
 
  1290              		.type	CyMasterClk_SetDivider, %function
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  1315              		.cfi_def_cfa_register 13
  1316              		@ sp needed
  1317 0014 5DF8047B 		ldr	r7, [sp], #4
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 37
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 37
 
 
  1318              		.cfi_restore 7
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  1355 0016 DBB2     		uxtb	r3, r3
  1356 0018 1370     		strb	r3, [r2]
  736:Generated_Source\PSoC5/CyLib.c ****     CY_LIB_CLKDIST_DMASK_REG  = CY_LIB_CLKDIST_DMASK_MASK;
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 38
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 38
 
 
  1357              		.loc 1 736 0
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  1394              		@ sp needed
  1395 0058 5DF8047B 		ldr	r7, [sp], #4
  1396              		.cfi_restore 7
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 39
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 39
 
 
  1397              		.cfi_def_cfa_offset 0
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  1429 0004 00AF     		add	r7, sp, #0
  1430              		.cfi_def_cfa_register 7
  1431 0006 0346     		mov	r3, r0
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 40
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 40
 
 
  1432 0008 FB80     		strh	r3, [r7, #6]	@ movhi
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  793:Generated_Source\PSoC5/CyLib.c ****             /* Set master clock divider to 7 */
  794:Generated_Source\PSoC5/CyLib.c ****             CyMasterClk_SetDivider(CY_LIB_CLKDIST_MASTERCLK_DIV);
  1469              		.loc 1 794 0
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 41
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 41
 
 
  1470 0044 0720     		movs	r0, #7
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  1508 008a 03E0     		b	.L116
  1509              	.L112:
  811:Generated_Source\PSoC5/CyLib.c ****     }
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 42
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 42
 
 
  812:Generated_Source\PSoC5/CyLib.c ****     else
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  832:Generated_Source\PSoC5/CyLib.c ****     *
  833:Generated_Source\PSoC5/CyLib.c ****     * \sideeffect
  834:Generated_Source\PSoC5/CyLib.c ****     *  If this function execution resulted in the CPU clock frequency increasing,
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 43
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 43
 
 
  835:Generated_Source\PSoC5/CyLib.c ****     *  then the number of clock cycles the cache will wait before it samples data
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  1566 001a 03F00303 		and	r3, r3, #3
  1567 001e DBB2     		uxtb	r3, r3
  1568 0020 1343     		orrs	r3, r3, r2
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 44
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 44
 
 
  1569 0022 DBB2     		uxtb	r3, r3
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  884:Generated_Source\PSoC5/CyLib.c ****     /* Set bit 1 of ILO RS */
  885:Generated_Source\PSoC5/CyLib.c ****     CY_LIB_SLOWCLK_ILO_CR0_REG |= CY_LIB_SLOWCLK_ILO_CR0_EN_1KHZ;
  1606              		.loc 1 885 0
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 45
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 45
 
 
  1607 0004 054A     		ldr	r2, .L123
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  1642 0000 80B4     		push	{r7}
  1643              		.cfi_def_cfa_offset 4
  1644              		.cfi_offset 7, -4
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 46
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 46
 
 
  1645 0002 00AF     		add	r7, sp, #0
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  1685              		.cfi_offset 7, -4
  1686 0002 00AF     		add	r7, sp, #0
  1687              		.cfi_def_cfa_register 7
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 47
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 47
 
 
  919:Generated_Source\PSoC5/CyLib.c ****     CY_LIB_SLOWCLK_ILO_CR0_REG |= CY_LIB_SLOWCLK_ILO_CR0_EN_100KHZ;
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  932:Generated_Source\PSoC5/CyLib.c ****     CY_LIB_SLOWCLK_ILO_CR0_REG &= ((uint8)(~CY_LIB_SLOWCLK_ILO_CR0_EN_100KHZ));
  1729              		.loc 1 932 0
  1730 0004 054A     		ldr	r2, .L132
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 48
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 48
 
 
  1731 0006 054B     		ldr	r3, .L132
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  948:Generated_Source\PSoC5/CyLib.c ****     /* Set bit 5 of ILO RS */
  949:Generated_Source\PSoC5/CyLib.c ****     CY_LIB_SLOWCLK_ILO_CR0_REG |= CY_LIB_SLOWCLK_ILO_CR0_EN_33KHZ;
  1770              		.loc 1 949 0
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 49
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 49
 
 
  1771 0004 054A     		ldr	r2, .L135
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  1810              		.cfi_def_cfa_register 7
  965:Generated_Source\PSoC5/CyLib.c ****     CY_LIB_SLOWCLK_ILO_CR0_REG &= ((uint8)(~CY_LIB_SLOWCLK_ILO_CR0_EN_33KHZ));
  1811              		.loc 1 965 0
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 50
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 50
 
 
  1812 0004 054A     		ldr	r2, .L138
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  1848              		.cfi_def_cfa_offset 4
  1849              		.cfi_offset 7, -4
  1850 0002 83B0     		sub	sp, sp, #12
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 51
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 51
 
 
  1851              		.cfi_def_cfa_offset 16
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  994:Generated_Source\PSoC5/CyLib.c **** * down power usage resulting in a slower startup time.
  995:Generated_Source\PSoC5/CyLib.c **** *
  996:Generated_Source\PSoC5/CyLib.c **** * \param mode
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 52
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 52
 
 
  997:Generated_Source\PSoC5/CyLib.c **** * CY_ILO_FAST_START - Faster start-up, internal bias left on when powered down
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  1927 0028 23F01003 		bic	r3, r3, #16
  1928 002c DBB2     		uxtb	r3, r3
  1929 002e 1370     		strb	r3, [r2]
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 53
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 53
 
 
  1930              	.L143:
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  1968              		.cfi_offset 7, -8
  1969              		.cfi_offset 14, -4
  1970 0002 82B0     		sub	sp, sp, #8
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 54
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 54
 
 
  1971              		.cfi_def_cfa_offset 16
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  2008 0046 03F02003 		and	r3, r3, #32
  2009 004a 002B     		cmp	r3, #0
  2010 004c 03D0     		beq	.L149
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 55
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 55
 
 
 1051:Generated_Source\PSoC5/CyLib.c ****         {
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  2054              		.thumb_func
  2055              		.type	CyXTAL_32KHZ_Stop, %function
  2056              	CyXTAL_32KHZ_Stop:
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 56
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 56
 
 
  2057              	.LFB26:
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
 1077:Generated_Source\PSoC5/CyLib.c ****     #if(CY_PSOC3)
 1078:Generated_Source\PSoC5/CyLib.c ****         CY_CLK_XTAL32_CR_REG &= ((uint8)(~CY_CLK_XTAL32_CR_PDBEN));
 1079:Generated_Source\PSoC5/CyLib.c ****     #endif  /* (CY_PSOC3) */
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 57
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 57
 
 
 1080:Generated_Source\PSoC5/CyLib.c **** }
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
 1098:Generated_Source\PSoC5/CyLib.c ****     return(CY_CLK_XTAL32_CR_REG & CY_XTAL32K_ANA_STAT);
  2130              		.loc 1 1098 0
  2131 0004 054B     		ldr	r3, .L159
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 58
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 58
 
 
  2132 0006 1B78     		ldrb	r3, [r3]
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  2165              		.cfi_def_cfa_offset 8
  2166              		.cfi_offset 7, -8
  2167              		.cfi_offset 14, -4
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 59
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 59
 
 
  2168 0002 84B0     		sub	sp, sp, #16
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  2212 0046 43F00803 		orr	r3, r3, #8
  2213 004a DBB2     		uxtb	r3, r3
  2214 004c 1370     		strb	r3, [r2]
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 60
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 60
 
 
 1130:Generated_Source\PSoC5/CyLib.c ****                                 CY_CLK_XTAL32_CFG_LP_LOWPOWER;
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  2254              		.loc 1 1144 0
  2255 0098 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
 1145:Generated_Source\PSoC5/CyLib.c **** }
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 61
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 61
 
 
  2256              		.loc 1 1145 0
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
 1174:Generated_Source\PSoC5/CyLib.c **** *  by interrupt routines during the period of this function.
 1175:Generated_Source\PSoC5/CyLib.c **** *
 1176:Generated_Source\PSoC5/CyLib.c **** *  The current operation of the ILO, Central Timewheel and Once Per Second
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 62
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 62
 
 
 1177:Generated_Source\PSoC5/CyLib.c **** *  interrupt are maintained during the operation of this function provided the
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
 1199:Generated_Source\PSoC5/CyLib.c ****         iloEnableState = CY_LIB_SLOWCLK_ILO_CR0_REG;
  2314              		.loc 1 1199 0
  2315 0028 264B     		ldr	r3, .L180+4
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 63
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 63
 
 
  2316 002a 1B78     		ldrb	r3, [r3]
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  2353 0062 F6D0     		beq	.L173
 1214:Generated_Source\PSoC5/CyLib.c ****             {
  2354              		.loc 1 1214 0 is_stmt 1 discriminator 2
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 64
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 64
 
 
  2355 0064 FB7B     		ldrb	r3, [r7, #15]
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  2392              	.L176:
 1231:Generated_Source\PSoC5/CyLib.c ****             }
 1232:Generated_Source\PSoC5/CyLib.c ****         }
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 65
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 65
 
 
 1233:Generated_Source\PSoC5/CyLib.c **** 
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  2434              		.thumb_func
  2435              		.type	CyXTAL_Stop, %function
  2436              	CyXTAL_Stop:
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 66
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 66
 
 
  2437              	.LFB30:
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  2477              	CyXTAL_EnableErrStatus:
  2478              	.LFB31:
 1260:Generated_Source\PSoC5/CyLib.c **** 
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 67
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 67
 
 
 1261:Generated_Source\PSoC5/CyLib.c **** 
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  2519              	.LFB32:
 1275:Generated_Source\PSoC5/CyLib.c **** 
 1276:Generated_Source\PSoC5/CyLib.c **** 
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 68
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 68
 
 
 1277:Generated_Source\PSoC5/CyLib.c **** /*******************************************************************************
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
 1290:Generated_Source\PSoC5/CyLib.c **** 
 1291:Generated_Source\PSoC5/CyLib.c **** 
 1292:Generated_Source\PSoC5/CyLib.c **** /*******************************************************************************
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 69
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 69
 
 
 1293:Generated_Source\PSoC5/CyLib.c **** * Function Name: CyXTAL_ReadStatus
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  2595              	.L196:
  2596 0022 00BF     		.align	2
  2597              	.L195:
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 70
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 70
 
 
  2598 0024 10420040 		.word	1073758736
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  2636              	.L199:
  2637              		.align	2
  2638              	.L198:
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 71
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 71
 
 
  2639 001c 10420040 		.word	1073758736
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  2678              		.align	2
  2679              	.L201:
  2680 001c 10420040 		.word	1073758736
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 72
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 72
 
 
  2681              		.cfi_endproc
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  2715 001e DBB2     		uxtb	r3, r3
  2716 0020 1343     		orrs	r3, r3, r2
  2717 0022 DBB2     		uxtb	r3, r3
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 73
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 73
 
 
  2718 0024 0B70     		strb	r3, [r1]
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  2754 0004 00AF     		add	r7, sp, #0
  2755              		.cfi_def_cfa_register 7
  2756 0006 0346     		mov	r3, r0
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 74
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 74
 
 
  2757 0008 FB71     		strb	r3, [r7, #7]
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
 1397:Generated_Source\PSoC5/CyLib.c **** *******************************************************************************/
 1398:Generated_Source\PSoC5/CyLib.c **** void CyXTAL_SetWdVoltage(uint8 setting) 
 1399:Generated_Source\PSoC5/CyLib.c **** {
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 75
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 75
 
 
  2796              		.loc 1 1399 0
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  2846              		.global	CyHalt
  2847              		.thumb
  2848              		.thumb_func
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 76
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 76
 
 
  2849              		.type	CyHalt, %function
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  2877 0010 5DF8047B 		ldr	r7, [sp], #4
  2878              		.cfi_restore 7
  2879              		.cfi_def_cfa_offset 0
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 77
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 77
 
 
  2880 0014 7047     		bx	lr
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  2921 001c F6460040 		.word	1073759990
  2922              		.cfi_endproc
  2923              	.LFE40:
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 78
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 78
 
 
  2924              		.size	CySoftwareReset, .-CySoftwareReset
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  2952 000e 1846     		mov	r0, r3
  2953 0010 FFF7FEFF 		bl	CyDelayCycles
 1468:Generated_Source\PSoC5/CyLib.c ****         milliseconds = ((uint32)(milliseconds - 32768u));
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 79
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 79
 
 
  2954              		.loc 1 1468 0
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
 1483:Generated_Source\PSoC5/CyLib.c ****     *  Blocks for microseconds.
 1484:Generated_Source\PSoC5/CyLib.c ****     *
 1485:Generated_Source\PSoC5/CyLib.c ****     *  Note:
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 80
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 80
 
 
 1486:Generated_Source\PSoC5/CyLib.c ****     *   CyDelay has been implemented with the instruction cache assumed enabled.
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  3026              	.LFE42:
  3027              		.size	CyDelayUs, .-CyDelayUs
  3028              		.section	.text.CyDelayFreq,"ax",%progbits
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 81
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 81
 
 
  3029              		.align	2
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  3061 0018 124A     		ldr	r2, .L227+4
  3062 001a 1A60     		str	r2, [r3]
  3063              	.L226:
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 82
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 82
 
 
 1529:Generated_Source\PSoC5/CyLib.c ****     }
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  3112              		.size	CyDelayFreq, .-CyDelayFreq
  3113              		.section	.text.CyWdtStart,"ax",%progbits
  3114              		.align	2
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 83
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 83
 
 
  3115              		.global	CyWdtStart
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  3124              		@ frame_needed = 1, uses_anonymous_args = 0
  3125              		@ link register save eliminated.
  3126 0000 80B4     		push	{r7}
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 84
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 84
 
 
  3127              		.cfi_def_cfa_offset 4
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  3172 0054 03F06003 		and	r3, r3, #96
  3173 0058 DAB2     		uxtb	r2, r3
 1589:Generated_Source\PSoC5/CyLib.c ****                        (CY_WDT_CFG_REG & ((uint8)(~CY_WDT_CFG_LPMODE_MASK)));
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 85
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 85
 
 
  3174              		.loc 1 1589 0
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
 1600:Generated_Source\PSoC5/CyLib.c **** *  Clears (feeds) the watchdog timer.
 1601:Generated_Source\PSoC5/CyLib.c **** *
 1602:Generated_Source\PSoC5/CyLib.c **** *******************************************************************************/
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 86
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 86
 
 
 1603:Generated_Source\PSoC5/CyLib.c **** void CyWdtClear(void) 
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
 1620:Generated_Source\PSoC5/CyLib.c **** *  interrupt service routine and to enable/disable associated interrupt.
 1621:Generated_Source\PSoC5/CyLib.c **** *
 1622:Generated_Source\PSoC5/CyLib.c **** *  \param reset: Enables device reset on digital low-voltage event:
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 87
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 87
 
 
 1623:Generated_Source\PSoC5/CyLib.c **** *   Zero - Interrupt on digital low-voltage event
@@ -5218,7 +5218,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  3275              		.loc 1 1655 0
  3276 0018 264B     		ldr	r3, .L238
  3277 001a 1B68     		ldr	r3, [r3]
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 88
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 88
 
 
  3278 001c 03F00103 		and	r3, r3, #1
@@ -5278,7 +5278,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
 1669:Generated_Source\PSoC5/CyLib.c ****     (void) CyVdStickyStatus(CY_VD_LVID);
  3318              		.loc 1 1669 0
  3319 006a 0120     		movs	r0, #1
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 89
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 89
 
 
  3320 006c FFF7FEFF 		bl	CyVdStickyStatus
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  3356              		.loc 1 1687 0
  3357 00ac 1037     		adds	r7, r7, #16
  3358              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 90
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 90
 
 
  3359 00ae BD46     		mov	sp, r7
@@ -5398,7 +5398,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
 1718:Generated_Source\PSoC5/CyLib.c **** *  functionality, the device will reset again. This will continue as long as
 1719:Generated_Source\PSoC5/CyLib.c **** *  the supply is below the trip level or as long as the user enables the reset
 1720:Generated_Source\PSoC5/CyLib.c **** *  functionality of the voltage monitor functionality.
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 91
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 91
 
 
 1721:Generated_Source\PSoC5/CyLib.c **** *
@@ -5458,7 +5458,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  3417 002e DBB2     		uxtb	r3, r3
  3418 0030 03F07F03 		and	r3, r3, #127
  3419 0034 DBB2     		uxtb	r3, r3
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 92
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 92
 
 
  3420 0036 1370     		strb	r3, [r2]
@@ -5518,7 +5518,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
 1753:Generated_Source\PSoC5/CyLib.c ****     }
 1754:Generated_Source\PSoC5/CyLib.c ****     else
 1755:Generated_Source\PSoC5/CyLib.c ****     {
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 93
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 93
 
 
 1756:Generated_Source\PSoC5/CyLib.c ****         CY_VD_PRES_CONTROL_REG &= ((uint8)(~CY_VD_PRESA_EN));
@@ -5578,7 +5578,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  3505              		.thumb
  3506              		.thumb_func
  3507              		.type	CyVdLvDigitDisable, %function
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 94
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 94
 
 
  3508              	CyVdLvDigitDisable:
@@ -5638,7 +5638,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  3541              	.L246:
  3542              		.loc 1 1787 0 is_stmt 0 discriminator 1
  3543 002c 0120     		movs	r0, #1
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 95
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 95
 
 
  3544 002e FFF7FEFF 		bl	CyVdStickyStatus
@@ -5698,7 +5698,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  3577              		.loc 1 1808 0
  3578 0004 0C4A     		ldr	r2, .L251
  3579 0006 0C4B     		ldr	r3, .L251
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 96
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 96
 
 
  3580 0008 1B78     		ldrb	r3, [r3]
@@ -5758,7 +5758,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
 1822:Generated_Source\PSoC5/CyLib.c **** *  threshold detection for Vdda.
 1823:Generated_Source\PSoC5/CyLib.c **** *
 1824:Generated_Source\PSoC5/CyLib.c **** *  Note The associated interrupt enable/disable state is not changed by the
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 97
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 97
 
 
 1825:Generated_Source\PSoC5/CyLib.c **** *  function. The Interrupt component API should be used to register the
@@ -5818,7 +5818,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  3655 002e 104A     		ldr	r2, .L254+12
  3656 0030 0F4B     		ldr	r3, .L254+12
  3657 0032 1B78     		ldrb	r3, [r3]
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 98
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 98
 
 
  3658 0034 DBB2     		uxtb	r3, r3
@@ -5878,7 +5878,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  3698              		.section	.text.CyVdHvAnalogDisable,"ax",%progbits
  3699              		.align	2
  3700              		.global	CyVdHvAnalogDisable
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 99
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 99
 
 
  3701              		.thumb
@@ -5938,7 +5938,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
 1880:Generated_Source\PSoC5/CyLib.c **** }
  3734              		.loc 1 1880 0 is_stmt 1
  3735 0026 80BD     		pop	{r7, pc}
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 100
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 100
 
 
  3736              	.L259:
@@ -5998,7 +5998,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  3760              		.cfi_def_cfa_offset 24
  3761 0004 00AF     		add	r7, sp, #0
  3762              		.cfi_def_cfa_register 7
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 101
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 101
 
 
  3763 0006 0346     		mov	r3, r0
@@ -6058,7 +6058,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  3803              		.cfi_def_cfa_offset 8
  3804 004e BD46     		mov	sp, r7
  3805              		.cfi_def_cfa_register 13
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 102
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 102
 
 
  3806              		@ sp needed
@@ -6118,7 +6118,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  3834 0004 00AF     		add	r7, sp, #0
  3835              		.cfi_def_cfa_register 7
 1951:Generated_Source\PSoC5/CyLib.c ****     uint8 interruptState;
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 103
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 103
 
 
 1952:Generated_Source\PSoC5/CyLib.c ****     uint8 vdFlagsState;
@@ -6178,7 +6178,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
 1967:Generated_Source\PSoC5/CyLib.c **** *
 1968:Generated_Source\PSoC5/CyLib.c **** * \return
 1969:Generated_Source\PSoC5/CyLib.c **** *  32 bit mask of previously enabled interrupts.
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 104
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 104
 
 
 1970:Generated_Source\PSoC5/CyLib.c **** *
@@ -6238,7 +6238,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  3898 001a 1A60     		str	r2, [r3]
 2001:Generated_Source\PSoC5/CyLib.c **** 
 2002:Generated_Source\PSoC5/CyLib.c ****     #endif /* (CY_PSOC3) */
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 105
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 105
 
 
 2003:Generated_Source\PSoC5/CyLib.c **** 
@@ -6298,7 +6298,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  3935              		.cfi_offset 14, -4
  3936 0002 84B0     		sub	sp, sp, #16
  3937              		.cfi_def_cfa_offset 24
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 106
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 106
 
 
  3938 0004 00AF     		add	r7, sp, #0
@@ -6358,7 +6358,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  3970              		.thumb
  3971              		.thumb_func
  3972              		.type	CyFlushCache, %function
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 107
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 107
 
 
  3973              	CyFlushCache:
@@ -6418,7 +6418,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  4000              	@ 0 "" 2
 2070:Generated_Source\PSoC5/CyLib.c ****         CY_NOP;
  4001              		.loc 1 2070 0
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 108
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 108
 
 
  4002              	@ 2070 "Generated_Source\PSoC5\CyLib.c" 1
@@ -6478,7 +6478,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  4047              	@ 2079 "Generated_Source\PSoC5\CyLib.c" 1
  4048 0024 00BF     		NOP
  4049              	
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 109
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 109
 
 
  4050              	@ 0 "" 2
@@ -6538,7 +6538,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  4088              		.loc 1 2095 0
  4089              		.thumb
  4090 0046 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 110
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 110
 
 
  4091 0048 1846     		mov	r0, r3
@@ -6598,7 +6598,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  4116              		.cfi_startproc
  4117              		@ args = 0, pretend = 0, frame = 16
  4118              		@ frame_needed = 1, uses_anonymous_args = 0
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 111
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 111
 
 
  4119              		@ link register save eliminated.
@@ -6658,7 +6658,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  4160              		.cfi_restore 7
  4161              		.cfi_def_cfa_offset 0
  4162 003e 7047     		bx	lr
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 112
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 112
 
 
  4163              	.L281:
@@ -6718,7 +6718,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  4190 0006 0346     		mov	r3, r0
  4191 0008 FB71     		strb	r3, [r7, #7]
 2165:Generated_Source\PSoC5/CyLib.c ****         cyisraddress *ramVectorTable = *CY_INT_VECT_TABLE;
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 113
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 113
 
 
  4192              		.loc 1 2165 0
@@ -6778,7 +6778,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
 2183:Generated_Source\PSoC5/CyLib.c ****     *
 2184:Generated_Source\PSoC5/CyLib.c ****     *******************************************************************************/
 2185:Generated_Source\PSoC5/CyLib.c ****     cyisraddress CyIntSetVector(uint8 number, cyisraddress address)
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 114
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 114
 
 
 2186:Generated_Source\PSoC5/CyLib.c ****     {
@@ -6838,7 +6838,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  4269 0038 1846     		mov	r0, r3
  4270 003a 1437     		adds	r7, r7, #20
  4271              		.cfi_def_cfa_offset 4
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 115
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 115
 
 
  4272 003c BD46     		mov	sp, r7
@@ -6898,7 +6898,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  4309 000a 084B     		ldr	r3, .L292
  4310 000c 1B68     		ldr	r3, [r3]
  4311 000e FB60     		str	r3, [r7, #12]
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 116
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 116
 
 
 2217:Generated_Source\PSoC5/CyLib.c ****         CYASSERT(number <= CY_INT_NUMBER_MAX);
@@ -6958,7 +6958,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  4348              		@ args = 0, pretend = 0, frame = 8
  4349              		@ frame_needed = 1, uses_anonymous_args = 0
  4350              		@ link register save eliminated.
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 117
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 117
 
 
  4351 0000 80B4     		push	{r7}
@@ -7018,7 +7018,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
 2247:Generated_Source\PSoC5/CyLib.c ****     *  \param number: The number of the interrupt, 0 - 31.
 2248:Generated_Source\PSoC5/CyLib.c ****     *
 2249:Generated_Source\PSoC5/CyLib.c ****     * \return
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 118
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 118
 
 
 2250:Generated_Source\PSoC5/CyLib.c ****     *  Priority of the interrupt. 0 - 7, 0 being the highest.
@@ -7078,7 +7078,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  4434              		.global	CyIntGetState
  4435              		.thumb
  4436              		.thumb_func
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 119
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 119
 
 
  4437              		.type	CyIntGetState, %function
@@ -7138,7 +7138,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  4466 0024 0123     		movne	r3, #1
  4467 0026 0023     		moveq	r3, #0
  4468 0028 DBB2     		uxtb	r3, r3
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 120
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 120
 
 
 2288:Generated_Source\PSoC5/CyLib.c ****     }
@@ -7198,7 +7198,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
 2316:Generated_Source\PSoC5/CyLib.c ****         }
 2317:Generated_Source\PSoC5/CyLib.c ****     }
 2318:Generated_Source\PSoC5/CyLib.c **** 
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 121
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 121
 
 
 2319:Generated_Source\PSoC5/CyLib.c **** 
@@ -7258,7 +7258,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
 2373:Generated_Source\PSoC5/CyLib.c ****     *  Gets the interrupt vector of the specified interrupt number.
 2374:Generated_Source\PSoC5/CyLib.c ****     *
 2375:Generated_Source\PSoC5/CyLib.c ****     *  \param number: Valid range [0-31].  Interrupt number
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 122
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 122
 
 
 2376:Generated_Source\PSoC5/CyLib.c ****     *
@@ -7318,7 +7318,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
 2430:Generated_Source\PSoC5/CyLib.c **** 
 2431:Generated_Source\PSoC5/CyLib.c ****         return (priority);
 2432:Generated_Source\PSoC5/CyLib.c ****     }
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 123
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 123
 
 
 2433:Generated_Source\PSoC5/CyLib.c **** 
@@ -7378,7 +7378,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
 2487:Generated_Source\PSoC5/CyLib.c ****     *                 0 - Disable
 2488:Generated_Source\PSoC5/CyLib.c ****     *
 2489:Generated_Source\PSoC5/CyLib.c ****     *******************************************************************************/
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 124
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 124
 
 
 2490:Generated_Source\PSoC5/CyLib.c ****     void CySetScPumps(uint8 enable) 
@@ -7438,7 +7438,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
 2544:Generated_Source\PSoC5/CyLib.c **** 
 2545:Generated_Source\PSoC5/CyLib.c **** 
 2546:Generated_Source\PSoC5/CyLib.c **** #if(CY_PSOC5)
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 125
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 125
 
 
 2547:Generated_Source\PSoC5/CyLib.c ****     /*******************************************************************************
@@ -7498,7 +7498,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  4527              		.size	CySysTickStart, .-CySysTickStart
  4528              		.section	.text.CySysTickInit,"ax",%progbits
  4529              		.align	2
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 126
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 126
 
 
  4530              		.global	CySysTickInit
@@ -7558,7 +7558,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
 2592:Generated_Source\PSoC5/CyLib.c ****         {
  4558              		.loc 1 2592 0 discriminator 3
  4559 0016 7B68     		ldr	r3, [r7, #4]
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 127
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 127
 
 
  4560 0018 0133     		adds	r3, r3, #1
@@ -7618,7 +7618,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  4605              		.size	CySysTickInit, .-CySysTickInit
  4606              		.section	.text.CySysTickEnable,"ax",%progbits
  4607              		.align	2
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 128
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 128
 
 
  4608              		.global	CySysTickEnable
@@ -7678,7 +7678,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  4645              		.thumb_func
  4646              		.type	CySysTickStop, %function
  4647              	CySysTickStop:
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 129
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 129
 
 
  4648              	.LFB67:
@@ -7738,7 +7738,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  4686              	CySysTickEnableInterrupt:
  4687              	.LFB68:
 2636:Generated_Source\PSoC5/CyLib.c **** 
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 130
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 130
 
 
 2637:Generated_Source\PSoC5/CyLib.c **** 
@@ -7798,7 +7798,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
 2652:Generated_Source\PSoC5/CyLib.c **** 
 2653:Generated_Source\PSoC5/CyLib.c **** 
 2654:Generated_Source\PSoC5/CyLib.c ****     /*******************************************************************************
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 131
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 131
 
 
 2655:Generated_Source\PSoC5/CyLib.c ****     * Function Name: CySysTickDisableInterrupt
@@ -7858,7 +7858,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
 2670:Generated_Source\PSoC5/CyLib.c ****     /*******************************************************************************
 2671:Generated_Source\PSoC5/CyLib.c ****     * Function Name: CySysTickSetReload
 2672:Generated_Source\PSoC5/CyLib.c ****     ****************************************************************************//**
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 132
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 132
 
 
 2673:Generated_Source\PSoC5/CyLib.c ****     *
@@ -7918,7 +7918,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  4808              	.LFB71:
 2685:Generated_Source\PSoC5/CyLib.c **** 
 2686:Generated_Source\PSoC5/CyLib.c **** 
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 133
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 133
 
 
 2687:Generated_Source\PSoC5/CyLib.c ****     /*******************************************************************************
@@ -7978,7 +7978,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
 2703:Generated_Source\PSoC5/CyLib.c ****     /*******************************************************************************
 2704:Generated_Source\PSoC5/CyLib.c ****     * Function Name: CySysTickGetValue
 2705:Generated_Source\PSoC5/CyLib.c ****     ****************************************************************************//**
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 134
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 134
 
 
 2706:Generated_Source\PSoC5/CyLib.c ****     *
@@ -8038,7 +8038,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
 2722:Generated_Source\PSoC5/CyLib.c ****     *
 2723:Generated_Source\PSoC5/CyLib.c ****     *  Sets the clock source for the SysTick counter.
 2724:Generated_Source\PSoC5/CyLib.c ****     *
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 135
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 135
 
 
 2725:Generated_Source\PSoC5/CyLib.c ****     *  \param clockSource: Clock source for SysTick counter
@@ -8098,7 +8098,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  4916              	.L333:
 2748:Generated_Source\PSoC5/CyLib.c ****         }
 2749:Generated_Source\PSoC5/CyLib.c ****     }
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 136
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 136
 
 
  4917              		.loc 1 2749 0
@@ -8158,7 +8158,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  4954 0006 1B68     		ldr	r3, [r3]
  4955 0008 9B08     		lsrs	r3, r3, #2
  4956 000a 03F00103 		and	r3, r3, #1
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 137
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 137
 
 
 2767:Generated_Source\PSoC5/CyLib.c ****     }
@@ -8218,7 +8218,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
 2787:Generated_Source\PSoC5/CyLib.c ****         return ((CY_SYS_SYST_CSR_REG >> CY_SYS_SYST_CSR_COUNTFLAG_SHIFT) & 0x01u);
  4991              		.loc 1 2787 0
  4992 0004 044B     		ldr	r3, .L344
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 138
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 138
 
 
  4993 0006 1B68     		ldr	r3, [r3]
@@ -8278,7 +8278,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
 2801:Generated_Source\PSoC5/CyLib.c ****     }
  5034              		.loc 1 2801 0
  5035 000a BD46     		mov	sp, r7
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 139
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 139
 
 
  5036              		.cfi_def_cfa_register 13
@@ -8338,7 +8338,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5057              		.loc 1 2834 0
  5058              		.cfi_startproc
  5059              		@ args = 0, pretend = 0, frame = 16
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 140
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 140
 
 
  5060              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -8398,7 +8398,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5108              	.LFB78:
 2841:Generated_Source\PSoC5/CyLib.c **** 
 2842:Generated_Source\PSoC5/CyLib.c **** 
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 141
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 141
 
 
 2843:Generated_Source\PSoC5/CyLib.c ****     /*******************************************************************************
@@ -8458,7 +8458,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5145              		.align	2
  5146              		.thumb
  5147              		.thumb_func
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 142
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 142
 
 
  5148              		.type	CySysTickServiceCallbacks, %function
@@ -8518,7 +8518,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5181 0024 7B68     		ldr	r3, [r7, #4]
  5182 0026 52F82330 		ldr	r3, [r2, r3, lsl #2]
  5183 002a 9847     		blx	r3
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 143
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 143
 
 
  5184              	.L360:
@@ -8578,7 +8578,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
 2901:Generated_Source\PSoC5/CyLib.c **** *
 2902:Generated_Source\PSoC5/CyLib.c **** *******************************************************************************/
 2903:Generated_Source\PSoC5/CyLib.c **** void CyGetUniqueId(uint32* uniqueId)
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 144
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 144
 
 
 2904:Generated_Source\PSoC5/CyLib.c **** {
@@ -8638,7 +8638,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5256 0036 1A60     		str	r2, [r3]
 2919:Generated_Source\PSoC5/CyLib.c ****     uniqueId[0u] |= ((uint32) CY_GET_XTND_REG8((void CYFAR *) (CYREG_FLSHID_CUST_TABLES_WAFER_NUM )
  5257              		.loc 1 2919 0
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 145
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 145
 
 
  5258 0038 1D4B     		ldr	r3, .L365+12
@@ -8698,7 +8698,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5307 0092 0968     		ldr	r1, [r1]
  5308 0094 0A43     		orrs	r2, r2, r1
  5309 0096 1A60     		str	r2, [r3]
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 146
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 146
 
 
 2925:Generated_Source\PSoC5/CyLib.c **** #endif  /* (CY_PSOC4) */
@@ -8741,10 +8741,10 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5345 0006 00000000 		.4byte	.Ldebug_abbrev0
  5346 000a 04       		.byte	0x4
  5347 000b 01       		.uleb128 0x1
- 5348 000c 31050000 		.4byte	.LASF161
+ 5348 000c 61050000 		.4byte	.LASF161
  5349 0010 01       		.byte	0x1
  5350 0011 78000000 		.4byte	.LASF162
- 5351 0015 0F030000 		.4byte	.LASF163
+ 5351 0015 62040000 		.4byte	.LASF163
  5352 0019 00000000 		.4byte	.Ldebug_ranges0+0
  5353 001d 00000000 		.4byte	0
  5354 0021 00000000 		.4byte	.Ldebug_line0
@@ -8758,35 +8758,35 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5362 002f EF000000 		.4byte	.LASF0
  5363 0033 03       		.uleb128 0x3
  5364 0034 01       		.byte	0x1
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 147
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 147
 
 
  5365 0035 06       		.byte	0x6
- 5366 0036 47090000 		.4byte	.LASF1
+ 5366 0036 69090000 		.4byte	.LASF1
  5367 003a 03       		.uleb128 0x3
  5368 003b 01       		.byte	0x1
  5369 003c 08       		.byte	0x8
- 5370 003d 79080000 		.4byte	.LASF2
+ 5370 003d 9B080000 		.4byte	.LASF2
  5371 0041 03       		.uleb128 0x3
  5372 0042 02       		.byte	0x2
  5373 0043 05       		.byte	0x5
- 5374 0044 1F070000 		.4byte	.LASF3
+ 5374 0044 4F070000 		.4byte	.LASF3
  5375 0048 03       		.uleb128 0x3
  5376 0049 02       		.byte	0x2
  5377 004a 07       		.byte	0x7
- 5378 004b 53090000 		.4byte	.LASF4
+ 5378 004b 75090000 		.4byte	.LASF4
  5379 004f 03       		.uleb128 0x3
  5380 0050 04       		.byte	0x4
  5381 0051 05       		.byte	0x5
- 5382 0052 31070000 		.4byte	.LASF5
+ 5382 0052 61070000 		.4byte	.LASF5
  5383 0056 03       		.uleb128 0x3
  5384 0057 04       		.byte	0x4
  5385 0058 07       		.byte	0x7
- 5386 0059 F2070000 		.4byte	.LASF6
+ 5386 0059 14080000 		.4byte	.LASF6
  5387 005d 03       		.uleb128 0x3
  5388 005e 08       		.byte	0x8
  5389 005f 05       		.byte	0x5
- 5390 0060 B5040000 		.4byte	.LASF7
+ 5390 0060 E5040000 		.4byte	.LASF7
  5391 0064 03       		.uleb128 0x3
  5392 0065 08       		.byte	0x8
  5393 0066 07       		.byte	0x7
@@ -8794,7 +8794,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5395 006b 03       		.uleb128 0x3
  5396 006c 04       		.byte	0x4
  5397 006d 07       		.byte	0x7
- 5398 006e E9070000 		.4byte	.LASF9
+ 5398 006e 0B080000 		.4byte	.LASF9
  5399 0072 04       		.uleb128 0x4
  5400 0073 04       		.byte	0x4
  5401 0074 78000000 		.4byte	0x78
@@ -8802,23 +8802,23 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5403 0079 03       		.uleb128 0x3
  5404 007a 01       		.byte	0x1
  5405 007b 08       		.byte	0x8
- 5406 007c 15040000 		.4byte	.LASF10
+ 5406 007c E5030000 		.4byte	.LASF10
  5407 0080 06       		.uleb128 0x6
- 5408 0081 A4090000 		.4byte	.LASF11
+ 5408 0081 C6090000 		.4byte	.LASF11
  5409 0085 02       		.byte	0x2
  5410 0086 9201     		.2byte	0x192
  5411 0088 3A000000 		.4byte	0x3a
  5412 008c 06       		.uleb128 0x6
- 5413 008d 49040000 		.4byte	.LASF12
+ 5413 008d 19040000 		.4byte	.LASF12
  5414 0091 02       		.byte	0x2
  5415 0092 9301     		.2byte	0x193
  5416 0094 48000000 		.4byte	0x48
  5417 0098 06       		.uleb128 0x6
- 5418 0099 F1050000 		.4byte	.LASF13
+ 5418 0099 21060000 		.4byte	.LASF13
  5419 009d 02       		.byte	0x2
  5420 009e 9401     		.2byte	0x194
  5421 00a0 56000000 		.4byte	0x56
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 148
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 148
 
 
  5422 00a4 03       		.uleb128 0x3
@@ -8828,9 +8828,9 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5426 00ab 03       		.uleb128 0x3
  5427 00ac 08       		.byte	0x8
  5428 00ad 04       		.byte	0x4
- 5429 00ae AA090000 		.4byte	.LASF15
+ 5429 00ae CC090000 		.4byte	.LASF15
  5430 00b2 06       		.uleb128 0x6
- 5431 00b3 5C080000 		.4byte	.LASF16
+ 5431 00b3 7E080000 		.4byte	.LASF16
  5432 00b7 02       		.byte	0x2
  5433 00b8 3402     		.2byte	0x234
  5434 00ba 56000000 		.4byte	0x56
@@ -8842,31 +8842,31 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5440 00ca 07       		.uleb128 0x7
  5441 00cb 80000000 		.4byte	0x80
  5442 00cf 06       		.uleb128 0x6
- 5443 00d0 C3040000 		.4byte	.LASF18
+ 5443 00d0 F3040000 		.4byte	.LASF18
  5444 00d4 02       		.byte	0x2
  5445 00d5 3D02     		.2byte	0x23d
  5446 00d7 DB000000 		.4byte	0xdb
  5447 00db 07       		.uleb128 0x7
  5448 00dc 8C000000 		.4byte	0x8c
  5449 00e0 06       		.uleb128 0x6
- 5450 00e1 DB060000 		.4byte	.LASF19
+ 5450 00e1 0B070000 		.4byte	.LASF19
  5451 00e5 02       		.byte	0x2
  5452 00e6 3E02     		.2byte	0x23e
  5453 00e8 EC000000 		.4byte	0xec
  5454 00ec 07       		.uleb128 0x7
  5455 00ed 98000000 		.4byte	0x98
  5456 00f1 06       		.uleb128 0x6
- 5457 00f2 CD050000 		.4byte	.LASF20
+ 5457 00f2 FD050000 		.4byte	.LASF20
  5458 00f6 02       		.byte	0x2
  5459 00f7 4E02     		.2byte	0x24e
  5460 00f9 72000000 		.4byte	0x72
  5461 00fd 08       		.uleb128 0x8
- 5462 00fe 03040000 		.4byte	.LASF21
+ 5462 00fe D3030000 		.4byte	.LASF21
  5463 0102 03       		.byte	0x3
  5464 0103 AC       		.byte	0xac
  5465 0104 72000000 		.4byte	0x72
  5466 0108 09       		.uleb128 0x9
- 5467 0109 30040000 		.4byte	.LASF65
+ 5467 0109 00040000 		.4byte	.LASF65
  5468 010d 01       		.byte	0x1
  5469 010e 61       		.byte	0x61
  5470 010f B2000000 		.4byte	0xb2
@@ -8876,9 +8876,9 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5474 011c 9C       		.byte	0x9c
  5475 011d 68010000 		.4byte	0x168
  5476 0121 0A       		.uleb128 0xa
- 5477 0122 6E060000 		.4byte	.LASF26
+ 5477 0122 9E060000 		.4byte	.LASF26
  5478 0126 01       		.byte	0x1
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 149
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 149
 
 
  5479 0127 61       		.byte	0x61
@@ -8887,7 +8887,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5482 012d 91       		.byte	0x91
  5483 012e 6F       		.sleb128 -17
  5484 012f 0B       		.uleb128 0xb
- 5485 0130 69040000 		.4byte	.LASF22
+ 5485 0130 39040000 		.4byte	.LASF22
  5486 0134 01       		.byte	0x1
  5487 0135 63       		.byte	0x63
  5488 0136 B2000000 		.4byte	0xb2
@@ -8895,7 +8895,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5490 013b 91       		.byte	0x91
  5491 013c 74       		.sleb128 -12
  5492 013d 0B       		.uleb128 0xb
- 5493 013e B1090000 		.4byte	.LASF23
+ 5493 013e D3090000 		.4byte	.LASF23
  5494 0142 01       		.byte	0x1
  5495 0143 65       		.byte	0x65
  5496 0144 80000000 		.4byte	0x80
@@ -8903,7 +8903,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5498 0149 91       		.byte	0x91
  5499 014a 73       		.sleb128 -13
  5500 014b 0B       		.uleb128 0xb
- 5501 014c BF050000 		.4byte	.LASF24
+ 5501 014c EF050000 		.4byte	.LASF24
  5502 0150 01       		.byte	0x1
  5503 0151 66       		.byte	0x66
  5504 0152 80000000 		.4byte	0x80
@@ -8911,7 +8911,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5506 0157 91       		.byte	0x91
  5507 0158 72       		.sleb128 -14
  5508 0159 0B       		.uleb128 0xb
- 5509 015a 92070000 		.4byte	.LASF25
+ 5509 015a C2070000 		.4byte	.LASF25
  5510 015e 01       		.byte	0x1
  5511 015f 67       		.byte	0x67
  5512 0160 80000000 		.4byte	0x80
@@ -8938,7 +8938,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5533 018a B9010000 		.4byte	0x1b9
  5534 018e 0A       		.uleb128 0xa
  5535 018f 90010000 		.4byte	.LASF27
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 150
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 150
 
 
  5536 0193 01       		.byte	0x1
@@ -8948,7 +8948,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5540 019a 91       		.byte	0x91
  5541 019b 77       		.sleb128 -9
  5542 019c 0A       		.uleb128 0xa
- 5543 019d B4070000 		.4byte	.LASF28
+ 5543 019d E4070000 		.4byte	.LASF28
  5544 01a1 01       		.byte	0x1
  5545 01a2 BB       		.byte	0xbb
  5546 01a3 80000000 		.4byte	0x80
@@ -8956,7 +8956,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5548 01a8 91       		.byte	0x91
  5549 01a9 76       		.sleb128 -10
  5550 01aa 0A       		.uleb128 0xa
- 5551 01ab 8C090000 		.4byte	.LASF29
+ 5551 01ab AE090000 		.4byte	.LASF29
  5552 01af 01       		.byte	0x1
  5553 01b0 BB       		.byte	0xbb
  5554 01b1 80000000 		.4byte	0x80
@@ -8965,7 +8965,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5557 01b7 75       		.sleb128 -11
  5558 01b8 00       		.byte	0
  5559 01b9 0D       		.uleb128 0xd
- 5560 01ba F8060000 		.4byte	.LASF31
+ 5560 01ba 28070000 		.4byte	.LASF31
  5561 01be 01       		.byte	0x1
  5562 01bf ED       		.byte	0xed
  5563 01c0 00000000 		.4byte	.LFB3
@@ -8974,7 +8974,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5566 01c9 9C       		.byte	0x9c
  5567 01ca DD010000 		.4byte	0x1dd
  5568 01ce 0A       		.uleb128 0xa
- 5569 01cf CD070000 		.4byte	.LASF32
+ 5569 01cf EF070000 		.4byte	.LASF32
  5570 01d3 01       		.byte	0x1
  5571 01d4 ED       		.byte	0xed
  5572 01d5 80000000 		.4byte	0x80
@@ -8983,7 +8983,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5575 01db 77       		.sleb128 -9
  5576 01dc 00       		.byte	0
  5577 01dd 0E       		.uleb128 0xe
- 5578 01de ED040000 		.4byte	.LASF33
+ 5578 01de 1D050000 		.4byte	.LASF33
  5579 01e2 01       		.byte	0x1
  5580 01e3 1A01     		.2byte	0x11a
  5581 01e5 00000000 		.4byte	.LFB4
@@ -8992,13 +8992,13 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5584 01ee 9C       		.byte	0x9c
  5585 01ef 30020000 		.4byte	0x230
  5586 01f3 0F       		.uleb128 0xf
- 5587 01f4 6E060000 		.4byte	.LASF26
+ 5587 01f4 9E060000 		.4byte	.LASF26
  5588 01f8 01       		.byte	0x1
  5589 01f9 1A01     		.2byte	0x11a
  5590 01fb 80000000 		.4byte	0x80
  5591 01ff 02       		.uleb128 0x2
  5592 0200 91       		.byte	0x91
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 151
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 151
 
 
  5593 0201 6F       		.sleb128 -17
@@ -9011,7 +9011,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5600 020f 91       		.byte	0x91
  5601 0210 75       		.sleb128 -11
  5602 0211 10       		.uleb128 0x10
- 5603 0212 66090000 		.4byte	.LASF35
+ 5603 0212 88090000 		.4byte	.LASF35
  5604 0216 01       		.byte	0x1
  5605 0217 1D01     		.2byte	0x11d
  5606 0219 80000000 		.4byte	0x80
@@ -9019,7 +9019,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5608 021e 91       		.byte	0x91
  5609 021f 76       		.sleb128 -10
  5610 0220 10       		.uleb128 0x10
- 5611 0221 24080000 		.4byte	.LASF36
+ 5611 0221 46080000 		.4byte	.LASF36
  5612 0225 01       		.byte	0x1
  5613 0226 1E01     		.2byte	0x11e
  5614 0228 80000000 		.4byte	0x80
@@ -9028,7 +9028,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5617 022e 77       		.sleb128 -9
  5618 022f 00       		.byte	0
  5619 0230 11       		.uleb128 0x11
- 5620 0231 5B030000 		.4byte	.LASF38
+ 5620 0231 2B030000 		.4byte	.LASF38
  5621 0235 01       		.byte	0x1
  5622 0236 4401     		.2byte	0x144
  5623 0238 00000000 		.4byte	.LFB5
@@ -9036,7 +9036,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5625 0240 01       		.uleb128 0x1
  5626 0241 9C       		.byte	0x9c
  5627 0242 12       		.uleb128 0x12
- 5628 0243 CB030000 		.4byte	.LASF164
+ 5628 0243 9B030000 		.4byte	.LASF164
  5629 0247 01       		.byte	0x1
  5630 0248 5501     		.2byte	0x155
  5631 024a 80000000 		.4byte	0x80
@@ -9046,7 +9046,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5635 0257 9C       		.byte	0x9c
  5636 0258 6C020000 		.4byte	0x26c
  5637 025c 10       		.uleb128 0x10
- 5638 025d 50040000 		.4byte	.LASF39
+ 5638 025d 20040000 		.4byte	.LASF39
  5639 0261 01       		.byte	0x1
  5640 0262 5701     		.2byte	0x157
  5641 0264 80000000 		.4byte	0x80
@@ -9058,7 +9058,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5647 026d 37000000 		.4byte	.LASF51
  5648 0271 01       		.byte	0x1
  5649 0272 6F01     		.2byte	0x16f
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 152
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 152
 
 
  5650 0274 00000000 		.4byte	.LFB7
@@ -9067,7 +9067,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5653 027d 9C       		.byte	0x9c
  5654 027e A1020000 		.4byte	0x2a1
  5655 0282 0F       		.uleb128 0xf
- 5656 0283 C6030000 		.4byte	.LASF40
+ 5656 0283 96030000 		.4byte	.LASF40
  5657 0287 01       		.byte	0x1
  5658 0288 6F01     		.2byte	0x16f
  5659 028a 80000000 		.4byte	0x80
@@ -9075,7 +9075,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5661 028f 91       		.byte	0x91
  5662 0290 6F       		.sleb128 -17
  5663 0291 10       		.uleb128 0x10
- 5664 0292 ED060000 		.4byte	.LASF41
+ 5664 0292 1D070000 		.4byte	.LASF41
  5665 0296 01       		.byte	0x1
  5666 0297 7101     		.2byte	0x171
  5667 0299 80000000 		.4byte	0x80
@@ -9093,7 +9093,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5679 02b2 9C       		.byte	0x9c
  5680 02b3 E5020000 		.4byte	0x2e5
  5681 02b7 0F       		.uleb128 0xf
- 5682 02b8 C6030000 		.4byte	.LASF40
+ 5682 02b8 96030000 		.4byte	.LASF40
  5683 02bc 01       		.byte	0x1
  5684 02bd C901     		.2byte	0x1c9
  5685 02bf 80000000 		.4byte	0x80
@@ -9101,7 +9101,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5687 02c4 91       		.byte	0x91
  5688 02c5 6F       		.sleb128 -17
  5689 02c6 10       		.uleb128 0x10
- 5690 02c7 9F030000 		.4byte	.LASF43
+ 5690 02c7 6F030000 		.4byte	.LASF43
  5691 02cb 01       		.byte	0x1
  5692 02cc CB01     		.2byte	0x1cb
  5693 02ce 80000000 		.4byte	0x80
@@ -9118,10 +9118,10 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5704 02e3 76       		.sleb128 -10
  5705 02e4 00       		.byte	0
  5706 02e5 14       		.uleb128 0x14
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 153
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 153
 
 
- 5707 02e6 73090000 		.4byte	.LASF45
+ 5707 02e6 95090000 		.4byte	.LASF45
  5708 02ea 01       		.byte	0x1
  5709 02eb 5F02     		.2byte	0x25f
  5710 02ed 00000000 		.4byte	.LFB9
@@ -9130,7 +9130,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5713 02f6 9C       		.byte	0x9c
  5714 02f7 0B030000 		.4byte	0x30b
  5715 02fb 0F       		.uleb128 0xf
- 5716 02fc CD070000 		.4byte	.LASF32
+ 5716 02fc EF070000 		.4byte	.LASF32
  5717 0300 01       		.byte	0x1
  5718 0301 5F02     		.2byte	0x25f
  5719 0303 80000000 		.4byte	0x80
@@ -9147,7 +9147,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5730 031b 01       		.uleb128 0x1
  5731 031c 9C       		.byte	0x9c
  5732 031d 11       		.uleb128 0x11
- 5733 031e AB060000 		.4byte	.LASF47
+ 5733 031e DB060000 		.4byte	.LASF47
  5734 0322 01       		.byte	0x1
  5735 0323 8F02     		.2byte	0x28f
  5736 0325 00000000 		.4byte	.LFB11
@@ -9155,7 +9155,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5738 032d 01       		.uleb128 0x1
  5739 032e 9C       		.byte	0x9c
  5740 032f 14       		.uleb128 0x14
- 5741 0330 85060000 		.4byte	.LASF48
+ 5741 0330 B5060000 		.4byte	.LASF48
  5742 0334 01       		.byte	0x1
  5743 0335 AD02     		.2byte	0x2ad
  5744 0337 00000000 		.4byte	.LFB12
@@ -9164,7 +9164,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5747 0340 9C       		.byte	0x9c
  5748 0341 55030000 		.4byte	0x355
  5749 0345 0F       		.uleb128 0xf
- 5750 0346 CD070000 		.4byte	.LASF32
+ 5750 0346 EF070000 		.4byte	.LASF32
  5751 034a 01       		.byte	0x1
  5752 034b AD02     		.2byte	0x2ad
  5753 034d 80000000 		.4byte	0x80
@@ -9178,14 +9178,14 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5761 035b CB02     		.2byte	0x2cb
  5762 035d 00000000 		.4byte	.LFB13
  5763 0361 20000000 		.4byte	.LFE13-.LFB13
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 154
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 154
 
 
  5764 0365 01       		.uleb128 0x1
  5765 0366 9C       		.byte	0x9c
  5766 0367 7B030000 		.4byte	0x37b
  5767 036b 0F       		.uleb128 0xf
- 5768 036c 29070000 		.4byte	.LASF50
+ 5768 036c 59070000 		.4byte	.LASF50
  5769 0370 01       		.byte	0x1
  5770 0371 CB02     		.2byte	0x2cb
  5771 0373 80000000 		.4byte	0x80
@@ -9203,7 +9203,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5783 038c 9C       		.byte	0x9c
  5784 038d A1030000 		.4byte	0x3a1
  5785 0391 0F       		.uleb128 0xf
- 5786 0392 29070000 		.4byte	.LASF50
+ 5786 0392 59070000 		.4byte	.LASF50
  5787 0396 01       		.byte	0x1
  5788 0397 DC02     		.2byte	0x2dc
  5789 0399 8C000000 		.4byte	0x8c
@@ -9212,7 +9212,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5792 039f 76       		.sleb128 -10
  5793 03a0 00       		.byte	0
  5794 03a1 0E       		.uleb128 0xe
- 5795 03a2 65080000 		.4byte	.LASF53
+ 5795 03a2 87080000 		.4byte	.LASF53
  5796 03a6 01       		.byte	0x1
  5797 03a7 0603     		.2byte	0x306
  5798 03a9 00000000 		.4byte	.LFB15
@@ -9221,7 +9221,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5801 03b2 9C       		.byte	0x9c
  5802 03b3 F4030000 		.4byte	0x3f4
  5803 03b7 0F       		.uleb128 0xf
- 5804 03b8 29070000 		.4byte	.LASF50
+ 5804 03b8 59070000 		.4byte	.LASF50
  5805 03bc 01       		.byte	0x1
  5806 03bd 0603     		.2byte	0x306
  5807 03bf 8C000000 		.4byte	0x8c
@@ -9237,8 +9237,8 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5817 03d3 91       		.byte	0x91
  5818 03d4 73       		.sleb128 -13
  5819 03d5 10       		.uleb128 0x10
- 5820 03d6 95030000 		.4byte	.LASF55
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 155
+ 5820 03d6 65030000 		.4byte	.LASF55
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 155
 
 
  5821 03da 01       		.byte	0x1
@@ -9257,7 +9257,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5834 03f2 77       		.sleb128 -9
  5835 03f3 00       		.byte	0
  5836 03f4 14       		.uleb128 0x14
- 5837 03f5 C9080000 		.4byte	.LASF57
+ 5837 03f5 EB080000 		.4byte	.LASF57
  5838 03f9 01       		.byte	0x1
  5839 03fa 6003     		.2byte	0x360
  5840 03fc 00000000 		.4byte	.LFB16
@@ -9266,7 +9266,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5843 0405 9C       		.byte	0x9c
  5844 0406 1A040000 		.4byte	0x41a
  5845 040a 0F       		.uleb128 0xf
- 5846 040b CD070000 		.4byte	.LASF32
+ 5846 040b EF070000 		.4byte	.LASF32
  5847 040f 01       		.byte	0x1
  5848 0410 6003     		.2byte	0x360
  5849 0412 80000000 		.4byte	0x80
@@ -9275,7 +9275,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5852 0418 77       		.sleb128 -9
  5853 0419 00       		.byte	0
  5854 041a 11       		.uleb128 0x11
- 5855 041b B8030000 		.4byte	.LASF58
+ 5855 041b 88030000 		.4byte	.LASF58
  5856 041f 01       		.byte	0x1
  5857 0420 7203     		.2byte	0x372
  5858 0422 00000000 		.4byte	.LFB17
@@ -9291,18 +9291,18 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5868 043c 01       		.uleb128 0x1
  5869 043d 9C       		.byte	0x9c
  5870 043e 11       		.uleb128 0x11
- 5871 043f 9B060000 		.4byte	.LASF60
+ 5871 043f CB060000 		.4byte	.LASF60
  5872 0443 01       		.byte	0x1
  5873 0444 9503     		.2byte	0x395
  5874 0446 00000000 		.4byte	.LFB19
  5875 044a 20000000 		.4byte	.LFE19-.LFB19
  5876 044e 01       		.uleb128 0x1
  5877 044f 9C       		.byte	0x9c
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 156
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 156
 
 
  5878 0450 11       		.uleb128 0x11
- 5879 0451 FF080000 		.4byte	.LASF61
+ 5879 0451 21090000 		.4byte	.LASF61
  5880 0455 01       		.byte	0x1
  5881 0456 A203     		.2byte	0x3a2
  5882 0458 00000000 		.4byte	.LFB20
@@ -9310,7 +9310,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5884 0460 01       		.uleb128 0x1
  5885 0461 9C       		.byte	0x9c
  5886 0462 11       		.uleb128 0x11
- 5887 0463 94090000 		.4byte	.LASF62
+ 5887 0463 B6090000 		.4byte	.LASF62
  5888 0467 01       		.byte	0x1
  5889 0468 B203     		.2byte	0x3b2
  5890 046a 00000000 		.4byte	.LFB21
@@ -9326,7 +9326,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5900 0484 01       		.uleb128 0x1
  5901 0485 9C       		.byte	0x9c
  5902 0486 14       		.uleb128 0x14
- 5903 0487 A5040000 		.4byte	.LASF64
+ 5903 0487 D5040000 		.4byte	.LASF64
  5904 048b 01       		.byte	0x1
  5905 048c D603     		.2byte	0x3d6
  5906 048e 00000000 		.4byte	.LFB23
@@ -9335,7 +9335,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5909 0497 9C       		.byte	0x9c
  5910 0498 AC040000 		.4byte	0x4ac
  5911 049c 0F       		.uleb128 0xf
- 5912 049d CD070000 		.4byte	.LASF32
+ 5912 049d EF070000 		.4byte	.LASF32
  5913 04a1 01       		.byte	0x1
  5914 04a2 D603     		.2byte	0x3d6
  5915 04a4 80000000 		.4byte	0x80
@@ -9344,7 +9344,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5918 04aa 77       		.sleb128 -9
  5919 04ab 00       		.byte	0
  5920 04ac 16       		.uleb128 0x16
- 5921 04ad F9040000 		.4byte	.LASF66
+ 5921 04ad 29050000 		.4byte	.LASF66
  5922 04b1 01       		.byte	0x1
  5923 04b2 EB03     		.2byte	0x3eb
  5924 04b4 80000000 		.4byte	0x80
@@ -9358,14 +9358,14 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5932 04cb 01       		.byte	0x1
  5933 04cc EB03     		.2byte	0x3eb
  5934 04ce 80000000 		.4byte	0x80
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 157
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 157
 
 
  5935 04d2 02       		.uleb128 0x2
  5936 04d3 91       		.byte	0x91
  5937 04d4 6F       		.sleb128 -17
  5938 04d5 10       		.uleb128 0x10
- 5939 04d6 DC080000 		.4byte	.LASF68
+ 5939 04d6 FE080000 		.4byte	.LASF68
  5940 04da 01       		.byte	0x1
  5941 04db ED03     		.2byte	0x3ed
  5942 04dd 80000000 		.4byte	0x80
@@ -9392,7 +9392,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5963 0507 76       		.sleb128 -10
  5964 0508 00       		.byte	0
  5965 0509 11       		.uleb128 0x11
- 5966 050a 73060000 		.4byte	.LASF70
+ 5966 050a A3060000 		.4byte	.LASF70
  5967 050e 01       		.byte	0x1
  5968 050f 2D04     		.2byte	0x42d
  5969 0511 00000000 		.4byte	.LFB26
@@ -9400,7 +9400,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5971 0519 01       		.uleb128 0x1
  5972 051a 9C       		.byte	0x9c
  5973 051b 18       		.uleb128 0x18
- 5974 051c 33060000 		.4byte	.LASF80
+ 5974 051c 63060000 		.4byte	.LASF80
  5975 0520 01       		.byte	0x1
  5976 0521 4804     		.2byte	0x448
  5977 0523 80000000 		.4byte	0x80
@@ -9418,7 +9418,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5989 0545 01       		.uleb128 0x1
  5990 0546 9C       		.byte	0x9c
  5991 0547 6A050000 		.4byte	0x56a
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 158
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 158
 
 
  5992 054b 0F       		.uleb128 0xf
@@ -9430,7 +9430,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  5998 0558 91       		.byte	0x91
  5999 0559 6F       		.sleb128 -17
  6000 055a 10       		.uleb128 0x10
- 6001 055b DC080000 		.4byte	.LASF68
+ 6001 055b FE080000 		.4byte	.LASF68
  6002 055f 01       		.byte	0x1
  6003 0560 6004     		.2byte	0x460
  6004 0562 80000000 		.4byte	0x80
@@ -9449,7 +9449,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6017 057f 9C       		.byte	0x9c
  6018 0580 EE050000 		.4byte	0x5ee
  6019 0584 0F       		.uleb128 0xf
- 6020 0585 6E060000 		.4byte	.LASF26
+ 6020 0585 9E060000 		.4byte	.LASF26
  6021 0589 01       		.byte	0x1
  6022 058a 9E04     		.2byte	0x49e
  6023 058c 80000000 		.4byte	0x80
@@ -9457,7 +9457,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6025 0591 91       		.byte	0x91
  6026 0592 67       		.sleb128 -25
  6027 0593 10       		.uleb128 0x10
- 6028 0594 69040000 		.4byte	.LASF22
+ 6028 0594 39040000 		.4byte	.LASF22
  6029 0598 01       		.byte	0x1
  6030 0599 A004     		.2byte	0x4a0
  6031 059b B2000000 		.4byte	0xb2
@@ -9465,7 +9465,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6033 05a0 91       		.byte	0x91
  6034 05a1 74       		.sleb128 -12
  6035 05a2 10       		.uleb128 0x10
- 6036 05a3 AD080000 		.4byte	.LASF73
+ 6036 05a3 CF080000 		.4byte	.LASF73
  6037 05a7 01       		.byte	0x1
  6038 05a8 A104     		.2byte	0x4a1
  6039 05aa CA000000 		.4byte	0xca
@@ -9473,18 +9473,18 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6041 05af 91       		.byte	0x91
  6042 05b0 70       		.sleb128 -16
  6043 05b1 10       		.uleb128 0x10
- 6044 05b2 FD030000 		.4byte	.LASF74
+ 6044 05b2 CD030000 		.4byte	.LASF74
  6045 05b6 01       		.byte	0x1
  6046 05b7 A204     		.2byte	0x4a2
  6047 05b9 CA000000 		.4byte	0xca
  6048 05bd 02       		.uleb128 0x2
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 159
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 159
 
 
  6049 05be 91       		.byte	0x91
  6050 05bf 6F       		.sleb128 -17
  6051 05c0 10       		.uleb128 0x10
- 6052 05c1 B1090000 		.4byte	.LASF23
+ 6052 05c1 D3090000 		.4byte	.LASF23
  6053 05c5 01       		.byte	0x1
  6054 05c6 A304     		.2byte	0x4a3
  6055 05c8 80000000 		.4byte	0x80
@@ -9517,7 +9517,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6082 05fe 01       		.uleb128 0x1
  6083 05ff 9C       		.byte	0x9c
  6084 0600 11       		.uleb128 0x11
- 6085 0601 DA050000 		.4byte	.LASF78
+ 6085 0601 0A060000 		.4byte	.LASF78
  6086 0605 01       		.byte	0x1
  6087 0606 F604     		.2byte	0x4f6
  6088 0608 00000000 		.4byte	.LFB31
@@ -9538,14 +9538,14 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6103 062a 1905     		.2byte	0x519
  6104 062c 80000000 		.4byte	0x80
  6105 0630 00000000 		.4byte	.LFB33
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 160
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 160
 
 
  6106 0634 28000000 		.4byte	.LFE33-.LFB33
  6107 0638 01       		.uleb128 0x1
  6108 0639 9C       		.byte	0x9c
  6109 063a 11       		.uleb128 0x11
- 6110 063b 0E090000 		.4byte	.LASF82
+ 6110 063b 30090000 		.4byte	.LASF82
  6111 063f 01       		.byte	0x1
  6112 0640 2D05     		.2byte	0x52d
  6113 0642 00000000 		.4byte	.LFB34
@@ -9579,7 +9579,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6141 0682 77       		.sleb128 -9
  6142 0683 00       		.byte	0
  6143 0684 14       		.uleb128 0x14
- 6144 0685 29090000 		.4byte	.LASF86
+ 6144 0685 4B090000 		.4byte	.LASF86
  6145 0689 01       		.byte	0x1
  6146 068a 6405     		.2byte	0x564
  6147 068c 00000000 		.4byte	.LFB37
@@ -9597,8 +9597,8 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6159 06a8 77       		.sleb128 -9
  6160 06a9 00       		.byte	0
  6161 06aa 14       		.uleb128 0x14
- 6162 06ab D9040000 		.4byte	.LASF87
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 161
+ 6162 06ab 09050000 		.4byte	.LASF87
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 161
 
 
  6163 06af 01       		.byte	0x1
@@ -9618,7 +9618,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6177 06ce 77       		.sleb128 -9
  6178 06cf 00       		.byte	0
  6179 06d0 14       		.uleb128 0x14
- 6180 06d1 C2080000 		.4byte	.LASF88
+ 6180 06d1 E4080000 		.4byte	.LASF88
  6181 06d5 01       		.byte	0x1
  6182 06d6 8605     		.2byte	0x586
  6183 06d8 00000000 		.4byte	.LFB39
@@ -9636,7 +9636,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6195 06f4 77       		.sleb128 -9
  6196 06f5 00       		.byte	0
  6197 06f6 11       		.uleb128 0x11
- 6198 06f7 4C080000 		.4byte	.LASF90
+ 6198 06f7 6E080000 		.4byte	.LASF90
  6199 06fb 01       		.byte	0x1
  6200 06fc 9E05     		.2byte	0x59e
  6201 06fe 00000000 		.4byte	.LFB40
@@ -9658,7 +9658,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6217 0724 B305     		.2byte	0x5b3
  6218 0726 98000000 		.4byte	0x98
  6219 072a 02       		.uleb128 0x2
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 162
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 162
 
 
  6220 072b 91       		.byte	0x91
@@ -9674,7 +9674,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6230 073f 9C       		.byte	0x9c
  6231 0740 54070000 		.4byte	0x754
  6232 0744 0F       		.uleb128 0xf
- 6233 0745 B5080000 		.4byte	.LASF94
+ 6233 0745 D7080000 		.4byte	.LASF94
  6234 0749 01       		.byte	0x1
  6235 074a DF05     		.2byte	0x5df
  6236 074c 8C000000 		.4byte	0x8c
@@ -9683,7 +9683,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6239 0752 76       		.sleb128 -10
  6240 0753 00       		.byte	0
  6241 0754 14       		.uleb128 0x14
- 6242 0755 3A070000 		.4byte	.LASF95
+ 6242 0755 6A070000 		.4byte	.LASF95
  6243 0759 01       		.byte	0x1
  6244 075a F005     		.2byte	0x5f0
  6245 075c 00000000 		.4byte	.LFB43
@@ -9692,7 +9692,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6248 0765 9C       		.byte	0x9c
  6249 0766 7A070000 		.4byte	0x77a
  6250 076a 0F       		.uleb128 0xf
- 6251 076b C6030000 		.4byte	.LASF40
+ 6251 076b 96030000 		.4byte	.LASF40
  6252 076f 01       		.byte	0x1
  6253 0770 F005     		.2byte	0x5f0
  6254 0772 98000000 		.4byte	0x98
@@ -9701,7 +9701,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6257 0778 74       		.sleb128 -12
  6258 0779 00       		.byte	0
  6259 077a 14       		.uleb128 0x14
- 6260 077b 63060000 		.4byte	.LASF96
+ 6260 077b 93060000 		.4byte	.LASF96
  6261 077f 01       		.byte	0x1
  6262 0780 2A06     		.2byte	0x62a
  6263 0782 00000000 		.4byte	.LFB44
@@ -9718,7 +9718,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6274 079d 91       		.byte	0x91
  6275 079e 77       		.sleb128 -9
  6276 079f 0F       		.uleb128 0xf
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 163
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 163
 
 
  6277 07a0 26010000 		.4byte	.LASF98
@@ -9738,7 +9738,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6291 07bf 01       		.uleb128 0x1
  6292 07c0 9C       		.byte	0x9c
  6293 07c1 0E       		.uleb128 0xe
- 6294 07c2 70040000 		.4byte	.LASF100
+ 6294 07c2 40040000 		.4byte	.LASF100
  6295 07c6 01       		.byte	0x1
  6296 07c7 6F06     		.2byte	0x66f
  6297 07c9 00000000 		.4byte	.LFB46
@@ -9747,7 +9747,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6300 07d2 9C       		.byte	0x9c
  6301 07d3 14080000 		.4byte	0x814
  6302 07d7 0F       		.uleb128 0xf
- 6303 07d8 B9070000 		.4byte	.LASF101
+ 6303 07d8 E9070000 		.4byte	.LASF101
  6304 07dc 01       		.byte	0x1
  6305 07dd 6F06     		.2byte	0x66f
  6306 07df 80000000 		.4byte	0x80
@@ -9755,7 +9755,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6308 07e4 91       		.byte	0x91
  6309 07e5 6F       		.sleb128 -17
  6310 07e6 0F       		.uleb128 0xf
- 6311 07e7 3D090000 		.4byte	.LASF102
+ 6311 07e7 5F090000 		.4byte	.LASF102
  6312 07eb 01       		.byte	0x1
  6313 07ec 6F06     		.2byte	0x66f
  6314 07ee 80000000 		.4byte	0x80
@@ -9778,12 +9778,12 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6331 0810 02       		.uleb128 0x2
  6332 0811 91       		.byte	0x91
  6333 0812 77       		.sleb128 -9
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 164
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 164
 
 
  6334 0813 00       		.byte	0
  6335 0814 0E       		.uleb128 0xe
- 6336 0815 7B030000 		.4byte	.LASF104
+ 6336 0815 4B030000 		.4byte	.LASF104
  6337 0819 01       		.byte	0x1
  6338 081a BF06     		.2byte	0x6bf
  6339 081c 00000000 		.4byte	.LFB47
@@ -9792,7 +9792,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6342 0825 9C       		.byte	0x9c
  6343 0826 67080000 		.4byte	0x867
  6344 082a 0F       		.uleb128 0xf
- 6345 082b B9070000 		.4byte	.LASF101
+ 6345 082b E9070000 		.4byte	.LASF101
  6346 082f 01       		.byte	0x1
  6347 0830 BF06     		.2byte	0x6bf
  6348 0832 80000000 		.4byte	0x80
@@ -9800,7 +9800,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6350 0837 91       		.byte	0x91
  6351 0838 6F       		.sleb128 -17
  6352 0839 0F       		.uleb128 0xf
- 6353 083a 3D090000 		.4byte	.LASF102
+ 6353 083a 5F090000 		.4byte	.LASF102
  6354 083e 01       		.byte	0x1
  6355 083f BF06     		.2byte	0x6bf
  6356 0841 80000000 		.4byte	0x80
@@ -9833,18 +9833,18 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6383 0877 01       		.uleb128 0x1
  6384 0878 9C       		.byte	0x9c
  6385 0879 1A       		.uleb128 0x1a
- 6386 087a A0070000 		.4byte	.LASF106
+ 6386 087a D0070000 		.4byte	.LASF106
  6387 087e 01       		.byte	0x1
  6388 087f 0E07     		.2byte	0x70e
  6389 0881 00000000 		.4byte	.LFB49
  6390 0885 40000000 		.4byte	.LFE49-.LFB49
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 165
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 165
 
 
  6391 0889 01       		.uleb128 0x1
  6392 088a 9C       		.byte	0x9c
  6393 088b 0E       		.uleb128 0xe
- 6394 088c 92040000 		.4byte	.LASF107
+ 6394 088c C2040000 		.4byte	.LASF107
  6395 0890 01       		.byte	0x1
  6396 0891 2507     		.2byte	0x725
  6397 0893 00000000 		.4byte	.LFB50
@@ -9870,7 +9870,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6417 08be 77       		.sleb128 -9
  6418 08bf 00       		.byte	0
  6419 08c0 1A       		.uleb128 0x1a
- 6420 08c1 C6090000 		.4byte	.LASF108
+ 6420 08c1 E8090000 		.4byte	.LASF108
  6421 08c5 01       		.byte	0x1
  6422 08c6 5107     		.2byte	0x751
  6423 08c8 00000000 		.4byte	.LFB51
@@ -9878,7 +9878,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6425 08d0 01       		.uleb128 0x1
  6426 08d1 9C       		.byte	0x9c
  6427 08d2 19       		.uleb128 0x19
- 6428 08d3 13080000 		.4byte	.LASF109
+ 6428 08d3 35080000 		.4byte	.LASF109
  6429 08d7 01       		.byte	0x1
  6430 08d8 7507     		.2byte	0x775
  6431 08da 80000000 		.4byte	0x80
@@ -9896,9 +9896,9 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6443 08f9 91       		.byte	0x91
  6444 08fa 6F       		.sleb128 -17
  6445 08fb 10       		.uleb128 0x10
- 6446 08fc DE030000 		.4byte	.LASF111
+ 6446 08fc AE030000 		.4byte	.LASF111
  6447 0900 01       		.byte	0x1
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 166
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 166
 
 
  6448 0901 7707     		.2byte	0x777
@@ -9915,7 +9915,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6459 091a 91       		.byte	0x91
  6460 091b 77       		.sleb128 -9
  6461 091c 10       		.uleb128 0x10
- 6462 091d F5080000 		.4byte	.LASF112
+ 6462 091d 17090000 		.4byte	.LASF112
  6463 0921 01       		.byte	0x1
  6464 0922 7907     		.2byte	0x779
  6465 0924 80000000 		.4byte	0x80
@@ -9924,7 +9924,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6468 092a 76       		.sleb128 -10
  6469 092b 00       		.byte	0
  6470 092c 19       		.uleb128 0x19
- 6471 092d E2080000 		.4byte	.LASF113
+ 6471 092d 04090000 		.4byte	.LASF113
  6472 0931 01       		.byte	0x1
  6473 0932 9D07     		.2byte	0x79d
  6474 0934 80000000 		.4byte	0x80
@@ -9942,7 +9942,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6486 0953 91       		.byte	0x91
  6487 0954 77       		.sleb128 -9
  6488 0955 10       		.uleb128 0x10
- 6489 0956 AB030000 		.4byte	.LASF114
+ 6489 0956 7B030000 		.4byte	.LASF114
  6490 095a 01       		.byte	0x1
  6491 095b A007     		.2byte	0x7a0
  6492 095d 80000000 		.4byte	0x80
@@ -9951,20 +9951,20 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6495 0963 76       		.sleb128 -10
  6496 0964 00       		.byte	0
  6497 0965 19       		.uleb128 0x19
- 6498 0966 CD060000 		.4byte	.LASF115
+ 6498 0966 FD060000 		.4byte	.LASF115
  6499 096a 01       		.byte	0x1
  6500 096b B407     		.2byte	0x7b4
  6501 096d 98000000 		.4byte	0x98
  6502 0971 00000000 		.4byte	.LFB54
  6503 0975 34000000 		.4byte	.LFE54-.LFB54
  6504 0979 01       		.uleb128 0x1
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 167
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 167
 
 
  6505 097a 9C       		.byte	0x9c
  6506 097b 9E090000 		.4byte	0x99e
  6507 097f 10       		.uleb128 0x10
- 6508 0980 40040000 		.4byte	.LASF116
+ 6508 0980 10040000 		.4byte	.LASF116
  6509 0984 01       		.byte	0x1
  6510 0985 B607     		.2byte	0x7b6
  6511 0987 98000000 		.4byte	0x98
@@ -10007,7 +10007,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6548 09d1 77       		.sleb128 -9
  6549 09d2 00       		.byte	0
  6550 09d3 0E       		.uleb128 0xe
- 6551 09d4 C0060000 		.4byte	.LASF118
+ 6551 09d4 F0060000 		.4byte	.LASF118
  6552 09d8 01       		.byte	0x1
  6553 09d9 0C08     		.2byte	0x80c
  6554 09db 00000000 		.4byte	.LFB56
@@ -10018,7 +10018,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6559 09e9 10       		.uleb128 0x10
  6560 09ea 2D010000 		.4byte	.LASF56
  6561 09ee 01       		.byte	0x1
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 168
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 168
 
 
  6562 09ef 0E08     		.2byte	0x80e
@@ -10028,7 +10028,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6566 09f7 77       		.sleb128 -9
  6567 09f8 00       		.byte	0
  6568 09f9 16       		.uleb128 0x16
- 6569 09fa 4F070000 		.4byte	.LASF119
+ 6569 09fa 7F070000 		.4byte	.LASF119
  6570 09fe 01       		.byte	0x1
  6571 09ff 4B08     		.2byte	0x84b
  6572 0a01 F1000000 		.4byte	0xf1
@@ -10038,7 +10038,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6576 0a0e 9C       		.byte	0x9c
  6577 0a0f 500A0000 		.4byte	0xa50
  6578 0a13 0F       		.uleb128 0xf
- 6579 0a14 D4070000 		.4byte	.LASF120
+ 6579 0a14 F6070000 		.4byte	.LASF120
  6580 0a18 01       		.byte	0x1
  6581 0a19 4B08     		.2byte	0x84b
  6582 0a1b 80000000 		.4byte	0x80
@@ -10046,7 +10046,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6584 0a20 91       		.byte	0x91
  6585 0a21 6F       		.sleb128 -17
  6586 0a22 0F       		.uleb128 0xf
- 6587 0a23 0B080000 		.4byte	.LASF121
+ 6587 0a23 2D080000 		.4byte	.LASF121
  6588 0a27 01       		.byte	0x1
  6589 0a28 4B08     		.2byte	0x84b
  6590 0a2a F1000000 		.4byte	0xf1
@@ -10054,7 +10054,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6592 0a2f 91       		.byte	0x91
  6593 0a30 68       		.sleb128 -24
  6594 0a31 10       		.uleb128 0x10
- 6595 0a32 8E030000 		.4byte	.LASF122
+ 6595 0a32 5E030000 		.4byte	.LASF122
  6596 0a36 01       		.byte	0x1
  6597 0a37 4D08     		.2byte	0x84d
  6598 0a39 F1000000 		.4byte	0xf1
@@ -10062,7 +10062,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6600 0a3e 91       		.byte	0x91
  6601 0a3f 70       		.sleb128 -16
  6602 0a40 10       		.uleb128 0x10
- 6603 0a41 87080000 		.4byte	.LASF123
+ 6603 0a41 A9080000 		.4byte	.LASF123
  6604 0a45 01       		.byte	0x1
  6605 0a46 4E08     		.2byte	0x84e
  6606 0a48 500A0000 		.4byte	0xa50
@@ -10074,11 +10074,11 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6612 0a51 04       		.byte	0x4
  6613 0a52 F1000000 		.4byte	0xf1
  6614 0a56 16       		.uleb128 0x16
- 6615 0a57 0C050000 		.4byte	.LASF124
+ 6615 0a57 3C050000 		.4byte	.LASF124
  6616 0a5b 01       		.byte	0x1
  6617 0a5c 7308     		.2byte	0x873
  6618 0a5e F1000000 		.4byte	0xf1
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 169
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 169
 
 
  6619 0a62 00000000 		.4byte	.LFB58
@@ -10087,7 +10087,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6622 0a6b 9C       		.byte	0x9c
  6623 0a6c 8F0A0000 		.4byte	0xa8f
  6624 0a70 0F       		.uleb128 0xf
- 6625 0a71 D4070000 		.4byte	.LASF120
+ 6625 0a71 F6070000 		.4byte	.LASF120
  6626 0a75 01       		.byte	0x1
  6627 0a76 7308     		.2byte	0x873
  6628 0a78 80000000 		.4byte	0x80
@@ -10095,7 +10095,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6630 0a7d 91       		.byte	0x91
  6631 0a7e 6F       		.sleb128 -17
  6632 0a7f 10       		.uleb128 0x10
- 6633 0a80 87080000 		.4byte	.LASF123
+ 6633 0a80 A9080000 		.4byte	.LASF123
  6634 0a84 01       		.byte	0x1
  6635 0a85 7508     		.2byte	0x875
  6636 0a87 500A0000 		.4byte	0xa50
@@ -10104,7 +10104,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6639 0a8d 74       		.sleb128 -12
  6640 0a8e 00       		.byte	0
  6641 0a8f 16       		.uleb128 0x16
- 6642 0a90 5A040000 		.4byte	.LASF125
+ 6642 0a90 2A040000 		.4byte	.LASF125
  6643 0a94 01       		.byte	0x1
  6644 0a95 8908     		.2byte	0x889
  6645 0a97 F1000000 		.4byte	0xf1
@@ -10114,7 +10114,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6649 0aa4 9C       		.byte	0x9c
  6650 0aa5 E60A0000 		.4byte	0xae6
  6651 0aa9 0F       		.uleb128 0xf
- 6652 0aaa D4070000 		.4byte	.LASF120
+ 6652 0aaa F6070000 		.4byte	.LASF120
  6653 0aae 01       		.byte	0x1
  6654 0aaf 8908     		.2byte	0x889
  6655 0ab1 80000000 		.4byte	0x80
@@ -10122,7 +10122,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6657 0ab6 91       		.byte	0x91
  6658 0ab7 6F       		.sleb128 -17
  6659 0ab8 0F       		.uleb128 0xf
- 6660 0ab9 0B080000 		.4byte	.LASF121
+ 6660 0ab9 2D080000 		.4byte	.LASF121
  6661 0abd 01       		.byte	0x1
  6662 0abe 8908     		.2byte	0x889
  6663 0ac0 F1000000 		.4byte	0xf1
@@ -10130,7 +10130,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6665 0ac5 91       		.byte	0x91
  6666 0ac6 68       		.sleb128 -24
  6667 0ac7 10       		.uleb128 0x10
- 6668 0ac8 8E030000 		.4byte	.LASF122
+ 6668 0ac8 5E030000 		.4byte	.LASF122
  6669 0acc 01       		.byte	0x1
  6670 0acd 8B08     		.2byte	0x88b
  6671 0acf F1000000 		.4byte	0xf1
@@ -10138,10 +10138,10 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6673 0ad4 91       		.byte	0x91
  6674 0ad5 70       		.sleb128 -16
  6675 0ad6 10       		.uleb128 0x10
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 170
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 170
 
 
- 6676 0ad7 87080000 		.4byte	.LASF123
+ 6676 0ad7 A9080000 		.4byte	.LASF123
  6677 0adb 01       		.byte	0x1
  6678 0adc 8C08     		.2byte	0x88c
  6679 0ade 500A0000 		.4byte	0xa50
@@ -10160,7 +10160,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6692 0afb 9C       		.byte	0x9c
  6693 0afc 1F0B0000 		.4byte	0xb1f
  6694 0b00 0F       		.uleb128 0xf
- 6695 0b01 D4070000 		.4byte	.LASF120
+ 6695 0b01 F6070000 		.4byte	.LASF120
  6696 0b05 01       		.byte	0x1
  6697 0b06 A608     		.2byte	0x8a6
  6698 0b08 80000000 		.4byte	0x80
@@ -10168,7 +10168,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6700 0b0d 91       		.byte	0x91
  6701 0b0e 6F       		.sleb128 -17
  6702 0b0f 10       		.uleb128 0x10
- 6703 0b10 87080000 		.4byte	.LASF123
+ 6703 0b10 A9080000 		.4byte	.LASF123
  6704 0b14 01       		.byte	0x1
  6705 0b15 A808     		.2byte	0x8a8
  6706 0b17 500A0000 		.4byte	0xa50
@@ -10186,7 +10186,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6718 0b30 9C       		.byte	0x9c
  6719 0b31 540B0000 		.4byte	0xb54
  6720 0b35 0F       		.uleb128 0xf
- 6721 0b36 D4070000 		.4byte	.LASF120
+ 6721 0b36 F6070000 		.4byte	.LASF120
  6722 0b3a 01       		.byte	0x1
  6723 0b3b B908     		.2byte	0x8b9
  6724 0b3d 80000000 		.4byte	0x80
@@ -10194,11 +10194,11 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6726 0b42 91       		.byte	0x91
  6727 0b43 77       		.sleb128 -9
  6728 0b44 0F       		.uleb128 0xf
- 6729 0b45 61070000 		.4byte	.LASF128
+ 6729 0b45 91070000 		.4byte	.LASF128
  6730 0b49 01       		.byte	0x1
  6731 0b4a B908     		.2byte	0x8b9
  6732 0b4c 80000000 		.4byte	0x80
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 171
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 171
 
 
  6733 0b50 02       		.uleb128 0x2
@@ -10216,7 +10216,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6745 0b69 9C       		.byte	0x9c
  6746 0b6a 8D0B0000 		.4byte	0xb8d
  6747 0b6e 0F       		.uleb128 0xf
- 6748 0b6f D4070000 		.4byte	.LASF120
+ 6748 0b6f F6070000 		.4byte	.LASF120
  6749 0b73 01       		.byte	0x1
  6750 0b74 CD08     		.2byte	0x8cd
  6751 0b76 80000000 		.4byte	0x80
@@ -10224,7 +10224,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6753 0b7b 91       		.byte	0x91
  6754 0b7c 6F       		.sleb128 -17
  6755 0b7d 10       		.uleb128 0x10
- 6756 0b7e 61070000 		.4byte	.LASF128
+ 6756 0b7e 91070000 		.4byte	.LASF128
  6757 0b82 01       		.byte	0x1
  6758 0b83 CF08     		.2byte	0x8cf
  6759 0b85 80000000 		.4byte	0x80
@@ -10233,7 +10233,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6762 0b8b 77       		.sleb128 -9
  6763 0b8c 00       		.byte	0
  6764 0b8d 16       		.uleb128 0x16
- 6765 0b8e 4D030000 		.4byte	.LASF130
+ 6765 0b8e 1D030000 		.4byte	.LASF130
  6766 0b92 01       		.byte	0x1
  6767 0b93 E508     		.2byte	0x8e5
  6768 0b95 80000000 		.4byte	0x80
@@ -10243,7 +10243,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6772 0ba2 9C       		.byte	0x9c
  6773 0ba3 C60B0000 		.4byte	0xbc6
  6774 0ba7 0F       		.uleb128 0xf
- 6775 0ba8 D4070000 		.4byte	.LASF120
+ 6775 0ba8 F6070000 		.4byte	.LASF120
  6776 0bac 01       		.byte	0x1
  6777 0bad E508     		.2byte	0x8e5
  6778 0baf 80000000 		.4byte	0x80
@@ -10251,14 +10251,14 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6780 0bb4 91       		.byte	0x91
  6781 0bb5 6F       		.sleb128 -17
  6782 0bb6 10       		.uleb128 0x10
- 6783 0bb7 46070000 		.4byte	.LASF131
+ 6783 0bb7 76070000 		.4byte	.LASF131
  6784 0bbb 01       		.byte	0x1
  6785 0bbc E708     		.2byte	0x8e7
  6786 0bbe C60B0000 		.4byte	0xbc6
  6787 0bc2 02       		.uleb128 0x2
  6788 0bc3 91       		.byte	0x91
  6789 0bc4 74       		.sleb128 -12
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 172
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 172
 
 
  6790 0bc5 00       		.byte	0
@@ -10266,7 +10266,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6792 0bc7 04       		.byte	0x4
  6793 0bc8 E0000000 		.4byte	0xe0
  6794 0bcc 1A       		.uleb128 0x1a
- 6795 0bcd 0A060000 		.4byte	.LASF132
+ 6795 0bcd 3A060000 		.4byte	.LASF132
  6796 0bd1 01       		.byte	0x1
  6797 0bd2 FF09     		.2byte	0x9ff
  6798 0bd4 00000000 		.4byte	.LFB64
@@ -10274,7 +10274,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6800 0bdc 01       		.uleb128 0x1
  6801 0bdd 9C       		.byte	0x9c
  6802 0bde 0E       		.uleb128 0xe
- 6803 0bdf DB070000 		.4byte	.LASF133
+ 6803 0bdf FD070000 		.4byte	.LASF133
  6804 0be3 01       		.byte	0x1
  6805 0be4 1C0A     		.2byte	0xa1c
  6806 0be6 00000000 		.4byte	.LFB65
@@ -10292,7 +10292,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6818 0c00 74       		.sleb128 -12
  6819 0c01 00       		.byte	0
  6820 0c02 1A       		.uleb128 0x1a
- 6821 0c03 C9040000 		.4byte	.LASF134
+ 6821 0c03 F9040000 		.4byte	.LASF134
  6822 0c07 01       		.byte	0x1
  6823 0c08 370A     		.2byte	0xa37
  6824 0c0a 00000000 		.4byte	.LFB66
@@ -10300,7 +10300,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6826 0c12 01       		.uleb128 0x1
  6827 0c13 9C       		.byte	0x9c
  6828 0c14 11       		.uleb128 0x11
- 6829 0c15 BF070000 		.4byte	.LASF135
+ 6829 0c15 0F030000 		.4byte	.LASF135
  6830 0c19 01       		.byte	0x1
  6831 0c1a 480A     		.2byte	0xa48
  6832 0c1c 00000000 		.4byte	.LFB67
@@ -10316,9 +10316,9 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6842 0c36 01       		.uleb128 0x1
  6843 0c37 9C       		.byte	0x9c
  6844 0c38 11       		.uleb128 0x11
- 6845 0c39 78070000 		.4byte	.LASF137
+ 6845 0c39 A8070000 		.4byte	.LASF137
  6846 0c3d 01       		.byte	0x1
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 173
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 173
 
 
  6847 0c3e 680A     		.2byte	0xa68
@@ -10327,7 +10327,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6850 0c48 01       		.uleb128 0x1
  6851 0c49 9C       		.byte	0x9c
  6852 0c4a 14       		.uleb128 0x14
- 6853 0c4b 0C070000 		.4byte	.LASF138
+ 6853 0c4b 3C070000 		.4byte	.LASF138
  6854 0c4f 01       		.byte	0x1
  6855 0c50 790A     		.2byte	0xa79
  6856 0c52 00000000 		.4byte	.LFB70
@@ -10336,7 +10336,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6859 0c5b 9C       		.byte	0x9c
  6860 0c5c 700C0000 		.4byte	0xc70
  6861 0c60 0F       		.uleb128 0xf
- 6862 0c61 C0090000 		.4byte	.LASF139
+ 6862 0c61 E2090000 		.4byte	.LASF139
  6863 0c65 01       		.byte	0x1
  6864 0c66 790A     		.2byte	0xa79
  6865 0c68 98000000 		.4byte	0x98
@@ -10354,7 +10354,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6877 0c84 01       		.uleb128 0x1
  6878 0c85 9C       		.byte	0x9c
  6879 0c86 18       		.uleb128 0x18
- 6880 0c87 F8050000 		.4byte	.LASF141
+ 6880 0c87 28060000 		.4byte	.LASF141
  6881 0c8b 01       		.byte	0x1
  6882 0c8c 990A     		.2byte	0xa99
  6883 0c8e 98000000 		.4byte	0x98
@@ -10363,7 +10363,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6886 0c9a 01       		.uleb128 0x1
  6887 0c9b 9C       		.byte	0x9c
  6888 0c9c 14       		.uleb128 0x14
- 6889 0c9d 4B060000 		.4byte	.LASF142
+ 6889 0c9d 7B060000 		.4byte	.LASF142
  6890 0ca1 01       		.byte	0x1
  6891 0ca2 B30A     		.2byte	0xab3
  6892 0ca4 00000000 		.4byte	.LFB73
@@ -10372,19 +10372,19 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6895 0cad 9C       		.byte	0x9c
  6896 0cae C20C0000 		.4byte	0xcc2
  6897 0cb2 0F       		.uleb128 0xf
- 6898 0cb3 E1060000 		.4byte	.LASF143
+ 6898 0cb3 11070000 		.4byte	.LASF143
  6899 0cb7 01       		.byte	0x1
  6900 0cb8 B30A     		.2byte	0xab3
  6901 0cba 98000000 		.4byte	0x98
  6902 0cbe 02       		.uleb128 0x2
  6903 0cbf 91       		.byte	0x91
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 174
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 174
 
 
  6904 0cc0 74       		.sleb128 -12
  6905 0cc1 00       		.byte	0
  6906 0cc2 18       		.uleb128 0x18
- 6907 0cc3 34080000 		.4byte	.LASF144
+ 6907 0cc3 56080000 		.4byte	.LASF144
  6908 0cc7 01       		.byte	0x1
  6909 0cc8 CC0A     		.2byte	0xacc
  6910 0cca 98000000 		.4byte	0x98
@@ -10393,7 +10393,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6913 0cd6 01       		.uleb128 0x1
  6914 0cd7 9C       		.byte	0x9c
  6915 0cd8 18       		.uleb128 0x18
- 6916 0cd9 1A040000 		.4byte	.LASF145
+ 6916 0cd9 EA030000 		.4byte	.LASF145
  6917 0cdd 01       		.byte	0x1
  6918 0cde E10A     		.2byte	0xae1
  6919 0ce0 98000000 		.4byte	0x98
@@ -10420,7 +10420,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6940 0d15 9C       		.byte	0x9c
  6941 0d16 480D0000 		.4byte	0xd48
  6942 0d1a 0F       		.uleb128 0xf
- 6943 0d1b D4070000 		.4byte	.LASF120
+ 6943 0d1b F6070000 		.4byte	.LASF120
  6944 0d1f 01       		.byte	0x1
  6945 0d20 110B     		.2byte	0xb11
  6946 0d22 98000000 		.4byte	0x98
@@ -10428,7 +10428,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6948 0d27 91       		.byte	0x91
  6949 0d28 6C       		.sleb128 -20
  6950 0d29 0F       		.uleb128 0xf
- 6951 0d2a A4080000 		.4byte	.LASF148
+ 6951 0d2a C6080000 		.4byte	.LASF148
  6952 0d2e 01       		.byte	0x1
  6953 0d2f 110B     		.2byte	0xb11
  6954 0d31 FD000000 		.4byte	0xfd
@@ -10436,9 +10436,9 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6956 0d36 91       		.byte	0x91
  6957 0d37 68       		.sleb128 -24
  6958 0d38 10       		.uleb128 0x10
- 6959 0d39 04080000 		.4byte	.LASF149
+ 6959 0d39 26080000 		.4byte	.LASF149
  6960 0d3d 01       		.byte	0x1
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 175
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 175
 
 
  6961 0d3e 130B     		.2byte	0xb13
@@ -10448,7 +10448,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6965 0d46 74       		.sleb128 -12
  6966 0d47 00       		.byte	0
  6967 0d48 16       		.uleb128 0x16
- 6968 0d49 66030000 		.4byte	.LASF150
+ 6968 0d49 36030000 		.4byte	.LASF150
  6969 0d4d 01       		.byte	0x1
  6970 0d4e 290B     		.2byte	0xb29
  6971 0d50 FD000000 		.4byte	0xfd
@@ -10458,7 +10458,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6975 0d5d 9C       		.byte	0x9c
  6976 0d5e 720D0000 		.4byte	0xd72
  6977 0d62 0F       		.uleb128 0xf
- 6978 0d63 D4070000 		.4byte	.LASF120
+ 6978 0d63 F6070000 		.4byte	.LASF120
  6979 0d67 01       		.byte	0x1
  6980 0d68 290B     		.2byte	0xb29
  6981 0d6a 98000000 		.4byte	0x98
@@ -10467,7 +10467,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  6984 0d70 74       		.sleb128 -12
  6985 0d71 00       		.byte	0
  6986 0d72 13       		.uleb128 0x13
- 6987 0d73 19060000 		.4byte	.LASF151
+ 6987 0d73 49060000 		.4byte	.LASF151
  6988 0d77 01       		.byte	0x1
  6989 0d78 360B     		.2byte	0xb36
  6990 0d7a 00000000 		.4byte	.LFB79
@@ -10485,7 +10485,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  7002 0d94 74       		.sleb128 -12
  7003 0d95 00       		.byte	0
  7004 0d96 14       		.uleb128 0x14
- 7005 0d97 96080000 		.4byte	.LASF152
+ 7005 0d97 B8080000 		.4byte	.LASF152
  7006 0d9b 01       		.byte	0x1
  7007 0d9c 570B     		.2byte	0xb57
  7008 0d9e 00000000 		.4byte	.LFB80
@@ -10494,11 +10494,11 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  7011 0da7 9C       		.byte	0x9c
  7012 0da8 BC0D0000 		.4byte	0xdbc
  7013 0dac 0F       		.uleb128 0xf
- 7014 0dad 83090000 		.4byte	.LASF153
+ 7014 0dad A5090000 		.4byte	.LASF153
  7015 0db1 01       		.byte	0x1
  7016 0db2 570B     		.2byte	0xb57
  7017 0db4 BC0D0000 		.4byte	0xdbc
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 176
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 176
 
 
  7018 0db8 02       		.uleb128 0x2
@@ -10516,7 +10516,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  7030 0dd0 04       		.byte	0x4
  7031 0dd1 00       		.byte	0
  7032 0dd2 0B       		.uleb128 0xb
- 7033 0dd3 1E050000 		.4byte	.LASF154
+ 7033 0dd3 4E050000 		.4byte	.LASF154
  7034 0dd7 01       		.byte	0x1
  7035 0dd8 34       		.byte	0x34
  7036 0dd9 C20D0000 		.4byte	0xdc2
@@ -10524,7 +10524,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  7038 0dde 03       		.byte	0x3
  7039 0ddf 00000000 		.4byte	CySysTickCallbacks
  7040 0de3 1D       		.uleb128 0x1d
- 7041 0de4 6A070000 		.4byte	.LASF155
+ 7041 0de4 9A070000 		.4byte	.LASF155
  7042 0de8 01       		.byte	0x1
  7043 0de9 1C       		.byte	0x1c
  7044 0dea 80000000 		.4byte	0x80
@@ -10532,7 +10532,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  7046 0def 03       		.byte	0x3
  7047 0df0 00000000 		.4byte	CyResetStatus
  7048 0df4 1D       		.uleb128 0x1d
- 7049 0df5 82040000 		.4byte	.LASF156
+ 7049 0df5 52040000 		.4byte	.LASF156
  7050 0df9 01       		.byte	0x1
  7051 0dfa 28       		.byte	0x28
  7052 0dfb 98000000 		.4byte	0x98
@@ -10556,9 +10556,9 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  7070 0e22 03       		.byte	0x3
  7071 0e23 00000000 		.4byte	cydelay_freq_mhz
  7072 0e27 1D       		.uleb128 0x1d
- 7073 0e28 EE030000 		.4byte	.LASF159
+ 7073 0e28 BE030000 		.4byte	.LASF159
  7074 0e2c 01       		.byte	0x1
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 177
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 177
 
 
  7075 0e2d 2B       		.byte	0x2b
@@ -10618,7 +10618,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  7129 0026 0E       		.uleb128 0xe
  7130 0027 00       		.byte	0
  7131 0028 00       		.byte	0
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 178
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 178
 
 
  7132 0029 04       		.uleb128 0x4
@@ -10678,7 +10678,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  7186 005f 03       		.uleb128 0x3
  7187 0060 0E       		.uleb128 0xe
  7188 0061 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 179
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 179
 
 
  7189 0062 0B       		.uleb128 0xb
@@ -10738,7 +10738,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  7243 0099 03       		.uleb128 0x3
  7244 009a 0E       		.uleb128 0xe
  7245 009b 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 180
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 180
 
 
  7246 009c 0B       		.uleb128 0xb
@@ -10798,7 +10798,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  7300 00d4 01       		.uleb128 0x1
  7301 00d5 12       		.uleb128 0x12
  7302 00d6 06       		.uleb128 0x6
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 181
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 181
 
 
  7303 00d7 40       		.uleb128 0x40
@@ -10858,7 +10858,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  7357 010e 06       		.uleb128 0x6
  7358 010f 40       		.uleb128 0x40
  7359 0110 18       		.uleb128 0x18
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 182
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 182
 
 
  7360 0111 9742     		.uleb128 0x2117
@@ -10918,7 +10918,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  7414 014a 01       		.byte	0x1
  7415 014b 3F       		.uleb128 0x3f
  7416 014c 19       		.uleb128 0x19
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 183
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 183
 
 
  7417 014d 03       		.uleb128 0x3
@@ -10978,7 +10978,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  7471 0185 27       		.uleb128 0x27
  7472 0186 19       		.uleb128 0x19
  7473 0187 49       		.uleb128 0x49
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 184
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 184
 
 
  7474 0188 13       		.uleb128 0x13
@@ -11038,7 +11038,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  7528 01c0 2E       		.uleb128 0x2e
  7529 01c1 01       		.byte	0x1
  7530 01c2 3F       		.uleb128 0x3f
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 185
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 185
 
 
  7531 01c3 19       		.uleb128 0x19
@@ -11098,7 +11098,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  7585 01fb 00       		.byte	0
  7586 01fc 1C       		.uleb128 0x1c
  7587 01fd 21       		.uleb128 0x21
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 186
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 186
 
 
  7588 01fe 00       		.byte	0
@@ -11158,7 +11158,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  7642 0064 20000000 		.4byte	.LFE10-.LFB10
  7643 0068 00000000 		.4byte	.LFB11
  7644 006c 20000000 		.4byte	.LFE11-.LFB11
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 187
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 187
 
 
  7645 0070 00000000 		.4byte	.LFB12
@@ -11218,7 +11218,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  7699 0148 00000000 		.4byte	.LFB39
  7700 014c 16000000 		.4byte	.LFE39-.LFB39
  7701 0150 00000000 		.4byte	.LFB40
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 188
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 188
 
 
  7702 0154 20000000 		.4byte	.LFE40-.LFB40
@@ -11278,7 +11278,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  7756 022c 1C000000 		.4byte	.LFE67-.LFB67
  7757 0230 00000000 		.4byte	.LFB68
  7758 0234 1C000000 		.4byte	.LFE68-.LFB68
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 189
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 189
 
 
  7759 0238 00000000 		.4byte	.LFB69
@@ -11338,7 +11338,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  7813 0068 00000000 		.4byte	.LFB13
  7814 006c 20000000 		.4byte	.LFE13
  7815 0070 00000000 		.4byte	.LFB14
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 190
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 190
 
 
  7816 0074 78000000 		.4byte	.LFE14
@@ -11398,7 +11398,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  7870 014c 44000000 		.4byte	.LFE41
  7871 0150 00000000 		.4byte	.LFB42
  7872 0154 24000000 		.4byte	.LFE42
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 191
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 191
 
 
  7873 0158 00000000 		.4byte	.LFB43
@@ -11458,7 +11458,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  7927 0230 00000000 		.4byte	.LFB70
  7928 0234 20000000 		.4byte	.LFE70
  7929 0238 00000000 		.4byte	.LFB71
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 192
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 192
 
 
  7930 023c 1C000000 		.4byte	.LFE71
@@ -11518,7 +11518,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  7965 004a 43795854 		.ascii	"CyXTAL_ReadStatus\000"
  7965      414C5F52 
  7965      65616453 
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 193
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 193
 
 
  7965      74617475 
@@ -11578,7 +11578,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  7986              	.LASF54:
  7987 00fc 6D617374 		.ascii	"masterClkDiv\000"
  7987      6572436C 
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 194
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 194
 
 
  7987      6B446976 
@@ -11638,7 +11638,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  8012              	.LASF147:
  8013 0195 43795379 		.ascii	"CySysTickSetCallback\000"
  8013      73546963 
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 195
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 195
 
 
  8013      6B536574 
@@ -11698,7 +11698,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  8036              	.LASF140:
  8037 024a 43795379 		.ascii	"CySysTickGetReload\000"
  8037      73546963 
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 196
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 196
 
 
  8037      6B476574 
@@ -11756,580 +11756,582 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 1
  8057      5F496E74 
  8057      65726E61 
  8057      6C5F5365 
- 8058              	.LASF163:
- 8059 030f 433A5C55 		.ascii	"C:\\Users\\ben\\Documents\\PSoC Creator\\BIT-MANGLE"
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 197
+ 8058              	.LASF135:
+ 8059 030f 43795379 		.ascii	"CySysTickStop\000"
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 197
 
 
- 8059      73657273 
- 8059      5C62656E 
- 8059      5C446F63 
- 8059      756D656E 
- 8060 033d 525C4144 		.ascii	"R\\ADC_DAC.cydsn\000"
- 8060      435F4441 
- 8060      432E6379 
- 8060      64736E00 
- 8061              	.LASF130:
- 8062 034d 4379496E 		.ascii	"CyIntGetState\000"
- 8062      74476574 
- 8062      53746174 
- 8062      6500
- 8063              	.LASF38:
- 8064 035b 4379494D 		.ascii	"CyIMO_Stop\000"
- 8064      4F5F5374 
- 8064      6F7000
- 8065              	.LASF150:
- 8066 0366 43795379 		.ascii	"CySysTickGetCallback\000"
- 8066      73546963 
- 8066      6B476574 
- 8066      43616C6C 
- 8066      6261636B 
- 8067              	.LASF104:
- 8068 037b 43795664 		.ascii	"CyVdLvAnalogEnable\000"
- 8068      4C76416E 
- 8068      616C6F67 
- 8068      456E6162 
- 8068      6C6500
- 8069              	.LASF122:
- 8070 038e 6F6C6449 		.ascii	"oldIsr\000"
- 8070      737200
- 8071              	.LASF55:
- 8072 0395 62757343 		.ascii	"busClkDiv\000"
- 8072      6C6B4469 
- 8072      7600
- 8073              	.LASF43:
- 8074 039f 63757272 		.ascii	"currentFreq\000"
- 8074      656E7446 
- 8074      72657100 
- 8075              	.LASF114:
- 8076 03ab 7664466C 		.ascii	"vdFlagsState\000"
- 8076      61677353 
- 8076      74617465 
- 8076      00
- 8077              	.LASF58:
- 8078 03b8 4379494C 		.ascii	"CyILO_Start1K\000"
- 8078      4F5F5374 
- 8078      61727431 
- 8078      4B00
- 8079              	.LASF40:
- 8080 03c6 66726571 		.ascii	"freq\000"
- 8080      00
- 8081              	.LASF164:
- 8082 03cb 43795553 		.ascii	"CyUSB_PowerOnCheck\000"
- 8082      425F506F 
- 8082      7765724F 
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 198
+ 8059      73546963 
+ 8059      6B53746F 
+ 8059      7000
+ 8060              	.LASF130:
+ 8061 031d 4379496E 		.ascii	"CyIntGetState\000"
+ 8061      74476574 
+ 8061      53746174 
+ 8061      6500
+ 8062              	.LASF38:
+ 8063 032b 4379494D 		.ascii	"CyIMO_Stop\000"
+ 8063      4F5F5374 
+ 8063      6F7000
+ 8064              	.LASF150:
+ 8065 0336 43795379 		.ascii	"CySysTickGetCallback\000"
+ 8065      73546963 
+ 8065      6B476574 
+ 8065      43616C6C 
+ 8065      6261636B 
+ 8066              	.LASF104:
+ 8067 034b 43795664 		.ascii	"CyVdLvAnalogEnable\000"
+ 8067      4C76416E 
+ 8067      616C6F67 
+ 8067      456E6162 
+ 8067      6C6500
+ 8068              	.LASF122:
+ 8069 035e 6F6C6449 		.ascii	"oldIsr\000"
+ 8069      737200
+ 8070              	.LASF55:
+ 8071 0365 62757343 		.ascii	"busClkDiv\000"
+ 8071      6C6B4469 
+ 8071      7600
+ 8072              	.LASF43:
+ 8073 036f 63757272 		.ascii	"currentFreq\000"
+ 8073      656E7446 
+ 8073      72657100 
+ 8074              	.LASF114:
+ 8075 037b 7664466C 		.ascii	"vdFlagsState\000"
+ 8075      61677353 
+ 8075      74617465 
+ 8075      00
+ 8076              	.LASF58:
+ 8077 0388 4379494C 		.ascii	"CyILO_Start1K\000"
+ 8077      4F5F5374 
+ 8077      61727431 
+ 8077      4B00
+ 8078              	.LASF40:
+ 8079 0396 66726571 		.ascii	"freq\000"
+ 8079      00
+ 8080              	.LASF164:
+ 8081 039b 43795553 		.ascii	"CyUSB_PowerOnCheck\000"
+ 8081      425F506F 
+ 8081      7765724F 
+ 8081      6E436865 
+ 8081      636B00
+ 8082              	.LASF111:
+ 8083 03ae 696E7465 		.ascii	"interruptStatus\000"
+ 8083      72727570 
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 198
 
 
- 8082      6E436865 
- 8082      636B00
- 8083              	.LASF111:
- 8084 03de 696E7465 		.ascii	"interruptStatus\000"
- 8084      72727570 
- 8084      74537461 
- 8084      74757300 
- 8085              	.LASF159:
- 8086 03ee 63796465 		.ascii	"cydelay_32k_ms\000"
- 8086      6C61795F 
- 8086      33326B5F 
- 8086      6D7300
- 8087              	.LASF74:
- 8088 03fd 636F756E 		.ascii	"count\000"
- 8088      7400
- 8089              	.LASF21:
- 8090 0403 63795379 		.ascii	"cySysTickCallback\000"
- 8090      73546963 
- 8090      6B43616C 
- 8090      6C626163 
- 8090      6B00
- 8091              	.LASF10:
- 8092 0415 63686172 		.ascii	"char\000"
- 8092      00
- 8093              	.LASF145:
- 8094 041a 43795379 		.ascii	"CySysTickGetCountFlag\000"
- 8094      73546963 
- 8094      6B476574 
- 8094      436F756E 
- 8094      74466C61 
- 8095              	.LASF65:
- 8096 0430 4379504C 		.ascii	"CyPLL_OUT_Start\000"
- 8096      4C5F4F55 
- 8096      545F5374 
- 8096      61727400 
- 8097              	.LASF116:
- 8098 0440 696E7453 		.ascii	"intState\000"
- 8098      74617465 
- 8098      00
- 8099              	.LASF12:
- 8100 0449 75696E74 		.ascii	"uint16\000"
- 8100      313600
- 8101              	.LASF39:
- 8102 0450 706F7765 		.ascii	"poweredOn\000"
- 8102      7265644F 
- 8102      6E00
- 8103              	.LASF125:
- 8104 045a 4379496E 		.ascii	"CyIntSetVector\000"
- 8104      74536574 
- 8104      56656374 
- 8104      6F7200
- 8105              	.LASF22:
- 8106 0469 73746174 		.ascii	"status\000"
- 8106      757300
- 8107              	.LASF100:
- 8108 0470 43795664 		.ascii	"CyVdLvDigitEnable\000"
- 8108      4C764469 
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 199
+ 8083      74537461 
+ 8083      74757300 
+ 8084              	.LASF159:
+ 8085 03be 63796465 		.ascii	"cydelay_32k_ms\000"
+ 8085      6C61795F 
+ 8085      33326B5F 
+ 8085      6D7300
+ 8086              	.LASF74:
+ 8087 03cd 636F756E 		.ascii	"count\000"
+ 8087      7400
+ 8088              	.LASF21:
+ 8089 03d3 63795379 		.ascii	"cySysTickCallback\000"
+ 8089      73546963 
+ 8089      6B43616C 
+ 8089      6C626163 
+ 8089      6B00
+ 8090              	.LASF10:
+ 8091 03e5 63686172 		.ascii	"char\000"
+ 8091      00
+ 8092              	.LASF145:
+ 8093 03ea 43795379 		.ascii	"CySysTickGetCountFlag\000"
+ 8093      73546963 
+ 8093      6B476574 
+ 8093      436F756E 
+ 8093      74466C61 
+ 8094              	.LASF65:
+ 8095 0400 4379504C 		.ascii	"CyPLL_OUT_Start\000"
+ 8095      4C5F4F55 
+ 8095      545F5374 
+ 8095      61727400 
+ 8096              	.LASF116:
+ 8097 0410 696E7453 		.ascii	"intState\000"
+ 8097      74617465 
+ 8097      00
+ 8098              	.LASF12:
+ 8099 0419 75696E74 		.ascii	"uint16\000"
+ 8099      313600
+ 8100              	.LASF39:
+ 8101 0420 706F7765 		.ascii	"poweredOn\000"
+ 8101      7265644F 
+ 8101      6E00
+ 8102              	.LASF125:
+ 8103 042a 4379496E 		.ascii	"CyIntSetVector\000"
+ 8103      74536574 
+ 8103      56656374 
+ 8103      6F7200
+ 8104              	.LASF22:
+ 8105 0439 73746174 		.ascii	"status\000"
+ 8105      757300
+ 8106              	.LASF100:
+ 8107 0440 43795664 		.ascii	"CyVdLvDigitEnable\000"
+ 8107      4C764469 
+ 8107      67697445 
+ 8107      6E61626C 
+ 8107      6500
+ 8108              	.LASF156:
+ 8109 0452 63796465 		.ascii	"cydelay_freq_hz\000"
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 199
 
 
- 8108      67697445 
- 8108      6E61626C 
- 8108      6500
- 8109              	.LASF156:
- 8110 0482 63796465 		.ascii	"cydelay_freq_hz\000"
- 8110      6C61795F 
- 8110      66726571 
- 8110      5F687A00 
- 8111              	.LASF107:
- 8112 0492 43795664 		.ascii	"CyVdHvAnalogEnable\000"
- 8112      4876416E 
- 8112      616C6F67 
- 8112      456E6162 
- 8112      6C6500
- 8113              	.LASF64:
- 8114 04a5 4379494C 		.ascii	"CyILO_SetSource\000"
- 8114      4F5F5365 
- 8114      74536F75 
- 8114      72636500 
- 8115              	.LASF7:
- 8116 04b5 6C6F6E67 		.ascii	"long long int\000"
- 8116      206C6F6E 
- 8116      6720696E 
- 8116      7400
- 8117              	.LASF18:
- 8118 04c3 72656731 		.ascii	"reg16\000"
- 8118      3600
- 8119              	.LASF134:
- 8120 04c9 43795379 		.ascii	"CySysTickEnable\000"
- 8120      73546963 
- 8120      6B456E61 
- 8120      626C6500 
- 8121              	.LASF87:
- 8122 04d9 43795854 		.ascii	"CyXTAL_SetWdVoltage\000"
- 8122      414C5F53 
- 8122      65745764 
- 8122      566F6C74 
- 8122      61676500 
- 8123              	.LASF33:
- 8124 04ed 4379494D 		.ascii	"CyIMO_Start\000"
- 8124      4F5F5374 
- 8124      61727400 
- 8125              	.LASF66:
- 8126 04f9 4379494C 		.ascii	"CyILO_SetPowerMode\000"
- 8126      4F5F5365 
- 8126      74506F77 
- 8126      65724D6F 
- 8126      646500
- 8127              	.LASF124:
- 8128 050c 4379496E 		.ascii	"CyIntGetSysVector\000"
- 8128      74476574 
- 8128      53797356 
- 8128      6563746F 
- 8128      7200
- 8129              	.LASF154:
- 8130 051e 43795379 		.ascii	"CySysTickCallbacks\000"
- 8130      73546963 
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 200
+ 8109      6C61795F 
+ 8109      66726571 
+ 8109      5F687A00 
+ 8110              	.LASF163:
+ 8111 0462 433A5C55 		.ascii	"C:\\Users\\ben\\Documents\\PSoC Creator\\New Pedal "
+ 8111      73657273 
+ 8111      5C62656E 
+ 8111      5C446F63 
+ 8111      756D656E 
+ 8112 0490 5468696E 		.ascii	"Thingz\\PSOC_BIT_MANGLER\\BIT-MANGLER\\ADC_DAC.cyds"
+ 8112      677A5C50 
+ 8112      534F435F 
+ 8112      4249545F 
+ 8112      4D414E47 
+ 8113 04c0 6E00     		.ascii	"n\000"
+ 8114              	.LASF107:
+ 8115 04c2 43795664 		.ascii	"CyVdHvAnalogEnable\000"
+ 8115      4876416E 
+ 8115      616C6F67 
+ 8115      456E6162 
+ 8115      6C6500
+ 8116              	.LASF64:
+ 8117 04d5 4379494C 		.ascii	"CyILO_SetSource\000"
+ 8117      4F5F5365 
+ 8117      74536F75 
+ 8117      72636500 
+ 8118              	.LASF7:
+ 8119 04e5 6C6F6E67 		.ascii	"long long int\000"
+ 8119      206C6F6E 
+ 8119      6720696E 
+ 8119      7400
+ 8120              	.LASF18:
+ 8121 04f3 72656731 		.ascii	"reg16\000"
+ 8121      3600
+ 8122              	.LASF134:
+ 8123 04f9 43795379 		.ascii	"CySysTickEnable\000"
+ 8123      73546963 
+ 8123      6B456E61 
+ 8123      626C6500 
+ 8124              	.LASF87:
+ 8125 0509 43795854 		.ascii	"CyXTAL_SetWdVoltage\000"
+ 8125      414C5F53 
+ 8125      65745764 
+ 8125      566F6C74 
+ 8125      61676500 
+ 8126              	.LASF33:
+ 8127 051d 4379494D 		.ascii	"CyIMO_Start\000"
+ 8127      4F5F5374 
+ 8127      61727400 
+ 8128              	.LASF66:
+ 8129 0529 4379494C 		.ascii	"CyILO_SetPowerMode\000"
+ 8129      4F5F5365 
+ 8129      74506F77 
+ 8129      65724D6F 
+ 8129      646500
+ 8130              	.LASF124:
+ 8131 053c 4379496E 		.ascii	"CyIntGetSysVector\000"
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 200
 
 
- 8130      6B43616C 
- 8130      6C626163 
- 8130      6B7300
- 8131              	.LASF161:
- 8132 0531 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 8132      4320342E 
- 8132      392E3320 
- 8132      32303135 
- 8132      30333033 
- 8133 0564 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 8133      20726576 
- 8133      6973696F 
- 8133      6E203232 
- 8133      31323230 
- 8134 0597 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
- 8134      66756E63 
- 8134      74696F6E 
- 8134      2D736563 
- 8134      74696F6E 
- 8135              	.LASF24:
- 8136 05bf 706D5477 		.ascii	"pmTwCfg0State\000"
- 8136      43666730 
- 8136      53746174 
- 8136      6500
- 8137              	.LASF20:
- 8138 05cd 63796973 		.ascii	"cyisraddress\000"
- 8138      72616464 
- 8138      72657373 
- 8138      00
- 8139              	.LASF78:
- 8140 05da 43795854 		.ascii	"CyXTAL_EnableErrStatus\000"
- 8140      414C5F45 
- 8140      6E61626C 
- 8140      65457272 
- 8140      53746174 
- 8141              	.LASF13:
- 8142 05f1 75696E74 		.ascii	"uint32\000"
- 8142      333200
- 8143              	.LASF141:
- 8144 05f8 43795379 		.ascii	"CySysTickGetValue\000"
- 8144      73546963 
- 8144      6B476574 
- 8144      56616C75 
- 8144      6500
- 8145              	.LASF132:
- 8146 060a 43795379 		.ascii	"CySysTickStart\000"
- 8146      73546963 
- 8146      6B537461 
- 8146      727400
- 8147              	.LASF151:
- 8148 0619 43795379 		.ascii	"CySysTickServiceCallbacks\000"
- 8148      73546963 
- 8148      6B536572 
- 8148      76696365 
- 8148      43616C6C 
- 8149              	.LASF80:
- 8150 0633 43795854 		.ascii	"CyXTAL_32KHZ_ReadStatus\000"
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 201
+ 8131      74476574 
+ 8131      53797356 
+ 8131      6563746F 
+ 8131      7200
+ 8132              	.LASF154:
+ 8133 054e 43795379 		.ascii	"CySysTickCallbacks\000"
+ 8133      73546963 
+ 8133      6B43616C 
+ 8133      6C626163 
+ 8133      6B7300
+ 8134              	.LASF161:
+ 8135 0561 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 8135      4320342E 
+ 8135      392E3320 
+ 8135      32303135 
+ 8135      30333033 
+ 8136 0594 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 8136      20726576 
+ 8136      6973696F 
+ 8136      6E203232 
+ 8136      31323230 
+ 8137 05c7 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 8137      66756E63 
+ 8137      74696F6E 
+ 8137      2D736563 
+ 8137      74696F6E 
+ 8138              	.LASF24:
+ 8139 05ef 706D5477 		.ascii	"pmTwCfg0State\000"
+ 8139      43666730 
+ 8139      53746174 
+ 8139      6500
+ 8140              	.LASF20:
+ 8141 05fd 63796973 		.ascii	"cyisraddress\000"
+ 8141      72616464 
+ 8141      72657373 
+ 8141      00
+ 8142              	.LASF78:
+ 8143 060a 43795854 		.ascii	"CyXTAL_EnableErrStatus\000"
+ 8143      414C5F45 
+ 8143      6E61626C 
+ 8143      65457272 
+ 8143      53746174 
+ 8144              	.LASF13:
+ 8145 0621 75696E74 		.ascii	"uint32\000"
+ 8145      333200
+ 8146              	.LASF141:
+ 8147 0628 43795379 		.ascii	"CySysTickGetValue\000"
+ 8147      73546963 
+ 8147      6B476574 
+ 8147      56616C75 
+ 8147      6500
+ 8148              	.LASF132:
+ 8149 063a 43795379 		.ascii	"CySysTickStart\000"
+ 8149      73546963 
+ 8149      6B537461 
+ 8149      727400
+ 8150              	.LASF151:
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 201
 
 
- 8150      414C5F33 
- 8150      324B485A 
- 8150      5F526561 
- 8150      64537461 
- 8151              	.LASF142:
- 8152 064b 43795379 		.ascii	"CySysTickSetClockSource\000"
- 8152      73546963 
- 8152      6B536574 
- 8152      436C6F63 
- 8152      6B536F75 
- 8153              	.LASF96:
- 8154 0663 43795764 		.ascii	"CyWdtStart\000"
- 8154      74537461 
- 8154      727400
- 8155              	.LASF26:
- 8156 066e 77616974 		.ascii	"wait\000"
- 8156      00
- 8157              	.LASF70:
- 8158 0673 43795854 		.ascii	"CyXTAL_32KHZ_Stop\000"
- 8158      414C5F33 
- 8158      324B485A 
- 8158      5F53746F 
- 8158      7000
- 8159              	.LASF48:
- 8160 0685 43794D61 		.ascii	"CyMasterClk_SetSource\000"
- 8160      73746572 
- 8160      436C6B5F 
- 8160      53657453 
- 8160      6F757263 
- 8161              	.LASF60:
- 8162 069b 4379494C 		.ascii	"CyILO_Start100K\000"
- 8162      4F5F5374 
- 8162      61727431 
- 8162      30304B00 
- 8163              	.LASF47:
- 8164 06ab 4379494D 		.ascii	"CyIMO_DisableDoubler\000"
- 8164      4F5F4469 
- 8164      7361626C 
- 8164      65446F75 
- 8164      626C6572 
- 8165              	.LASF118:
- 8166 06c0 4379466C 		.ascii	"CyFlushCache\000"
- 8166      75736843 
- 8166      61636865 
- 8166      00
- 8167              	.LASF115:
- 8168 06cd 43794469 		.ascii	"CyDisableInts\000"
- 8168      7361626C 
- 8168      65496E74 
- 8168      7300
- 8169              	.LASF19:
- 8170 06db 72656733 		.ascii	"reg32\000"
- 8170      3200
- 8171              	.LASF143:
- 8172 06e1 636C6F63 		.ascii	"clockSource\000"
- 8172      6B536F75 
- 8172      72636500 
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 202
+ 8151 0649 43795379 		.ascii	"CySysTickServiceCallbacks\000"
+ 8151      73546963 
+ 8151      6B536572 
+ 8151      76696365 
+ 8151      43616C6C 
+ 8152              	.LASF80:
+ 8153 0663 43795854 		.ascii	"CyXTAL_32KHZ_ReadStatus\000"
+ 8153      414C5F33 
+ 8153      324B485A 
+ 8153      5F526561 
+ 8153      64537461 
+ 8154              	.LASF142:
+ 8155 067b 43795379 		.ascii	"CySysTickSetClockSource\000"
+ 8155      73546963 
+ 8155      6B536574 
+ 8155      436C6F63 
+ 8155      6B536F75 
+ 8156              	.LASF96:
+ 8157 0693 43795764 		.ascii	"CyWdtStart\000"
+ 8157      74537461 
+ 8157      727400
+ 8158              	.LASF26:
+ 8159 069e 77616974 		.ascii	"wait\000"
+ 8159      00
+ 8160              	.LASF70:
+ 8161 06a3 43795854 		.ascii	"CyXTAL_32KHZ_Stop\000"
+ 8161      414C5F33 
+ 8161      324B485A 
+ 8161      5F53746F 
+ 8161      7000
+ 8162              	.LASF48:
+ 8163 06b5 43794D61 		.ascii	"CyMasterClk_SetSource\000"
+ 8163      73746572 
+ 8163      436C6B5F 
+ 8163      53657453 
+ 8163      6F757263 
+ 8164              	.LASF60:
+ 8165 06cb 4379494C 		.ascii	"CyILO_Start100K\000"
+ 8165      4F5F5374 
+ 8165      61727431 
+ 8165      30304B00 
+ 8166              	.LASF47:
+ 8167 06db 4379494D 		.ascii	"CyIMO_DisableDoubler\000"
+ 8167      4F5F4469 
+ 8167      7361626C 
+ 8167      65446F75 
+ 8167      626C6572 
+ 8168              	.LASF118:
+ 8169 06f0 4379466C 		.ascii	"CyFlushCache\000"
+ 8169      75736843 
+ 8169      61636865 
+ 8169      00
+ 8170              	.LASF115:
+ 8171 06fd 43794469 		.ascii	"CyDisableInts\000"
+ 8171      7361626C 
+ 8171      65496E74 
+ 8171      7300
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 202
 
 
- 8173              	.LASF41:
- 8174 06ed 75736250 		.ascii	"usbPowerOn\000"
- 8174      6F776572 
- 8174      4F6E00
- 8175              	.LASF31:
- 8176 06f8 4379504C 		.ascii	"CyPLL_OUT_SetSource\000"
- 8176      4C5F4F55 
- 8176      545F5365 
- 8176      74536F75 
- 8176      72636500 
- 8177              	.LASF138:
- 8178 070c 43795379 		.ascii	"CySysTickSetReload\000"
- 8178      73546963 
- 8178      6B536574 
- 8178      52656C6F 
- 8178      616400
- 8179              	.LASF3:
- 8180 071f 73686F72 		.ascii	"short int\000"
- 8180      7420696E 
- 8180      7400
- 8181              	.LASF50:
- 8182 0729 64697669 		.ascii	"divider\000"
- 8182      64657200 
- 8183              	.LASF5:
- 8184 0731 6C6F6E67 		.ascii	"long int\000"
- 8184      20696E74 
- 8184      00
- 8185              	.LASF95:
- 8186 073a 43794465 		.ascii	"CyDelayFreq\000"
- 8186      6C617946 
- 8186      72657100 
- 8187              	.LASF131:
- 8188 0746 73746174 		.ascii	"stateReg\000"
- 8188      65526567 
- 8188      00
- 8189              	.LASF119:
- 8190 074f 4379496E 		.ascii	"CyIntSetSysVector\000"
- 8190      74536574 
- 8190      53797356 
- 8190      6563746F 
- 8190      7200
- 8191              	.LASF128:
- 8192 0761 7072696F 		.ascii	"priority\000"
- 8192      72697479 
- 8192      00
- 8193              	.LASF155:
- 8194 076a 43795265 		.ascii	"CyResetStatus\000"
- 8194      73657453 
- 8194      74617475 
- 8194      7300
- 8195              	.LASF137:
- 8196 0778 43795379 		.ascii	"CySysTickDisableInterrupt\000"
- 8196      73546963 
- 8196      6B446973 
- 8196      61626C65 
- 8196      496E7465 
- 8197              	.LASF25:
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 203
+ 8172              	.LASF19:
+ 8173 070b 72656733 		.ascii	"reg32\000"
+ 8173      3200
+ 8174              	.LASF143:
+ 8175 0711 636C6F63 		.ascii	"clockSource\000"
+ 8175      6B536F75 
+ 8175      72636500 
+ 8176              	.LASF41:
+ 8177 071d 75736250 		.ascii	"usbPowerOn\000"
+ 8177      6F776572 
+ 8177      4F6E00
+ 8178              	.LASF31:
+ 8179 0728 4379504C 		.ascii	"CyPLL_OUT_SetSource\000"
+ 8179      4C5F4F55 
+ 8179      545F5365 
+ 8179      74536F75 
+ 8179      72636500 
+ 8180              	.LASF138:
+ 8181 073c 43795379 		.ascii	"CySysTickSetReload\000"
+ 8181      73546963 
+ 8181      6B536574 
+ 8181      52656C6F 
+ 8181      616400
+ 8182              	.LASF3:
+ 8183 074f 73686F72 		.ascii	"short int\000"
+ 8183      7420696E 
+ 8183      7400
+ 8184              	.LASF50:
+ 8185 0759 64697669 		.ascii	"divider\000"
+ 8185      64657200 
+ 8186              	.LASF5:
+ 8187 0761 6C6F6E67 		.ascii	"long int\000"
+ 8187      20696E74 
+ 8187      00
+ 8188              	.LASF95:
+ 8189 076a 43794465 		.ascii	"CyDelayFreq\000"
+ 8189      6C617946 
+ 8189      72657100 
+ 8190              	.LASF131:
+ 8191 0776 73746174 		.ascii	"stateReg\000"
+ 8191      65526567 
+ 8191      00
+ 8192              	.LASF119:
+ 8193 077f 4379496E 		.ascii	"CyIntSetSysVector\000"
+ 8193      74536574 
+ 8193      53797356 
+ 8193      6563746F 
+ 8193      7200
+ 8194              	.LASF128:
+ 8195 0791 7072696F 		.ascii	"priority\000"
+ 8195      72697479 
+ 8195      00
+ 8196              	.LASF155:
+ 8197 079a 43795265 		.ascii	"CyResetStatus\000"
+ 8197      73657453 
+ 8197      74617475 
+ 8197      7300
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 203
 
 
- 8198 0792 706D5477 		.ascii	"pmTwCfg2State\000"
- 8198      43666732 
- 8198      53746174 
- 8198      6500
- 8199              	.LASF106:
- 8200 07a0 43795664 		.ascii	"CyVdLvAnalogDisable\000"
- 8200      4C76416E 
- 8200      616C6F67 
- 8200      44697361 
- 8200      626C6500 
- 8201              	.LASF28:
- 8202 07b4 71446976 		.ascii	"qDiv\000"
- 8202      00
- 8203              	.LASF101:
- 8204 07b9 72657365 		.ascii	"reset\000"
- 8204      7400
- 8205              	.LASF135:
- 8206 07bf 43795379 		.ascii	"CySysTickStop\000"
- 8206      73546963 
- 8206      6B53746F 
- 8206      7000
- 8207              	.LASF32:
- 8208 07cd 736F7572 		.ascii	"source\000"
- 8208      636500
- 8209              	.LASF120:
- 8210 07d4 6E756D62 		.ascii	"number\000"
- 8210      657200
- 8211              	.LASF133:
- 8212 07db 43795379 		.ascii	"CySysTickInit\000"
- 8212      73546963 
- 8212      6B496E69 
- 8212      7400
- 8213              	.LASF9:
- 8214 07e9 73697A65 		.ascii	"sizetype\000"
- 8214      74797065 
- 8214      00
- 8215              	.LASF6:
- 8216 07f2 6C6F6E67 		.ascii	"long unsigned int\000"
- 8216      20756E73 
- 8216      69676E65 
- 8216      6420696E 
- 8216      7400
- 8217              	.LASF149:
- 8218 0804 72657456 		.ascii	"retVal\000"
- 8218      616C00
- 8219              	.LASF121:
- 8220 080b 61646472 		.ascii	"address\000"
- 8220      65737300 
- 8221              	.LASF109:
- 8222 0813 43795664 		.ascii	"CyVdStickyStatus\000"
- 8222      53746963 
- 8222      6B795374 
- 8222      61747573 
- 8222      00
- 8223              	.LASF36:
- 8224 0824 696C6F31 		.ascii	"ilo100KhzEnable\000"
- 8224      30304B68 
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 204
+ 8198              	.LASF137:
+ 8199 07a8 43795379 		.ascii	"CySysTickDisableInterrupt\000"
+ 8199      73546963 
+ 8199      6B446973 
+ 8199      61626C65 
+ 8199      496E7465 
+ 8200              	.LASF25:
+ 8201 07c2 706D5477 		.ascii	"pmTwCfg2State\000"
+ 8201      43666732 
+ 8201      53746174 
+ 8201      6500
+ 8202              	.LASF106:
+ 8203 07d0 43795664 		.ascii	"CyVdLvAnalogDisable\000"
+ 8203      4C76416E 
+ 8203      616C6F67 
+ 8203      44697361 
+ 8203      626C6500 
+ 8204              	.LASF28:
+ 8205 07e4 71446976 		.ascii	"qDiv\000"
+ 8205      00
+ 8206              	.LASF101:
+ 8207 07e9 72657365 		.ascii	"reset\000"
+ 8207      7400
+ 8208              	.LASF32:
+ 8209 07ef 736F7572 		.ascii	"source\000"
+ 8209      636500
+ 8210              	.LASF120:
+ 8211 07f6 6E756D62 		.ascii	"number\000"
+ 8211      657200
+ 8212              	.LASF133:
+ 8213 07fd 43795379 		.ascii	"CySysTickInit\000"
+ 8213      73546963 
+ 8213      6B496E69 
+ 8213      7400
+ 8214              	.LASF9:
+ 8215 080b 73697A65 		.ascii	"sizetype\000"
+ 8215      74797065 
+ 8215      00
+ 8216              	.LASF6:
+ 8217 0814 6C6F6E67 		.ascii	"long unsigned int\000"
+ 8217      20756E73 
+ 8217      69676E65 
+ 8217      6420696E 
+ 8217      7400
+ 8218              	.LASF149:
+ 8219 0826 72657456 		.ascii	"retVal\000"
+ 8219      616C00
+ 8220              	.LASF121:
+ 8221 082d 61646472 		.ascii	"address\000"
+ 8221      65737300 
+ 8222              	.LASF109:
+ 8223 0835 43795664 		.ascii	"CyVdStickyStatus\000"
+ 8223      53746963 
+ 8223      6B795374 
+ 8223      61747573 
+ 8223      00
+ 8224              	.LASF36:
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 204
 
 
- 8224      7A456E61 
- 8224      626C6500 
- 8225              	.LASF144:
- 8226 0834 43795379 		.ascii	"CySysTickGetClockSource\000"
- 8226      73546963 
- 8226      6B476574 
- 8226      436C6F63 
- 8226      6B536F75 
- 8227              	.LASF90:
- 8228 084c 4379536F 		.ascii	"CySoftwareReset\000"
- 8228      66747761 
- 8228      72655265 
- 8228      73657400 
- 8229              	.LASF16:
- 8230 085c 63797374 		.ascii	"cystatus\000"
- 8230      61747573 
- 8230      00
- 8231              	.LASF53:
- 8232 0865 43794275 		.ascii	"CyBusClk_SetDivider\000"
- 8232      73436C6B 
- 8232      5F536574 
- 8232      44697669 
- 8232      64657200 
- 8233              	.LASF2:
- 8234 0879 756E7369 		.ascii	"unsigned char\000"
- 8234      676E6564 
- 8234      20636861 
- 8234      7200
- 8235              	.LASF123:
- 8236 0887 72616D56 		.ascii	"ramVectorTable\000"
- 8236      6563746F 
- 8236      72546162 
- 8236      6C6500
- 8237              	.LASF152:
- 8238 0896 43794765 		.ascii	"CyGetUniqueId\000"
- 8238      74556E69 
- 8238      71756549 
- 8238      6400
- 8239              	.LASF148:
- 8240 08a4 66756E63 		.ascii	"function\000"
- 8240      74696F6E 
- 8240      00
- 8241              	.LASF73:
- 8242 08ad 74696D65 		.ascii	"timeout\000"
- 8242      6F757400 
- 8243              	.LASF94:
- 8244 08b5 6D696372 		.ascii	"microseconds\000"
- 8244      6F736563 
- 8244      6F6E6473 
- 8244      00
- 8245              	.LASF88:
- 8246 08c2 43794861 		.ascii	"CyHalt\000"
- 8246      6C7400
- 8247              	.LASF57:
- 8248 08c9 43795573 		.ascii	"CyUsbClk_SetSource\000"
- 8248      62436C6B 
- 8248      5F536574 
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 205
+ 8225 0846 696C6F31 		.ascii	"ilo100KhzEnable\000"
+ 8225      30304B68 
+ 8225      7A456E61 
+ 8225      626C6500 
+ 8226              	.LASF144:
+ 8227 0856 43795379 		.ascii	"CySysTickGetClockSource\000"
+ 8227      73546963 
+ 8227      6B476574 
+ 8227      436C6F63 
+ 8227      6B536F75 
+ 8228              	.LASF90:
+ 8229 086e 4379536F 		.ascii	"CySoftwareReset\000"
+ 8229      66747761 
+ 8229      72655265 
+ 8229      73657400 
+ 8230              	.LASF16:
+ 8231 087e 63797374 		.ascii	"cystatus\000"
+ 8231      61747573 
+ 8231      00
+ 8232              	.LASF53:
+ 8233 0887 43794275 		.ascii	"CyBusClk_SetDivider\000"
+ 8233      73436C6B 
+ 8233      5F536574 
+ 8233      44697669 
+ 8233      64657200 
+ 8234              	.LASF2:
+ 8235 089b 756E7369 		.ascii	"unsigned char\000"
+ 8235      676E6564 
+ 8235      20636861 
+ 8235      7200
+ 8236              	.LASF123:
+ 8237 08a9 72616D56 		.ascii	"ramVectorTable\000"
+ 8237      6563746F 
+ 8237      72546162 
+ 8237      6C6500
+ 8238              	.LASF152:
+ 8239 08b8 43794765 		.ascii	"CyGetUniqueId\000"
+ 8239      74556E69 
+ 8239      71756549 
+ 8239      6400
+ 8240              	.LASF148:
+ 8241 08c6 66756E63 		.ascii	"function\000"
+ 8241      74696F6E 
+ 8241      00
+ 8242              	.LASF73:
+ 8243 08cf 74696D65 		.ascii	"timeout\000"
+ 8243      6F757400 
+ 8244              	.LASF94:
+ 8245 08d7 6D696372 		.ascii	"microseconds\000"
+ 8245      6F736563 
+ 8245      6F6E6473 
+ 8245      00
+ 8246              	.LASF88:
+ 8247 08e4 43794861 		.ascii	"CyHalt\000"
+ 8247      6C7400
+ 8248              	.LASF57:
+ 8249 08eb 43795573 		.ascii	"CyUsbClk_SetSource\000"
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 205
 
 
- 8248      536F7572 
- 8248      636500
- 8249              	.LASF68:
- 8250 08dc 73746174 		.ascii	"state\000"
- 8250      6500
- 8251              	.LASF113:
- 8252 08e2 43795664 		.ascii	"CyVdRealTimeStatus\000"
- 8252      5265616C 
- 8252      54696D65 
- 8252      53746174 
- 8252      757300
- 8253              	.LASF112:
- 8254 08f5 746D7053 		.ascii	"tmpStatus\000"
- 8254      74617475 
- 8254      7300
- 8255              	.LASF61:
- 8256 08ff 4379494C 		.ascii	"CyILO_Stop100K\000"
- 8256      4F5F5374 
- 8256      6F703130 
- 8256      304B00
- 8257              	.LASF82:
- 8258 090e 43795854 		.ascii	"CyXTAL_EnableFaultRecovery\000"
- 8258      414C5F45 
- 8258      6E61626C 
- 8258      65466175 
- 8258      6C745265 
- 8259              	.LASF86:
- 8260 0929 43795854 		.ascii	"CyXTAL_SetFbVoltage\000"
- 8260      414C5F53 
- 8260      65744662 
- 8260      566F6C74 
- 8260      61676500 
- 8261              	.LASF102:
- 8262 093d 74687265 		.ascii	"threshold\000"
- 8262      73686F6C 
- 8262      6400
- 8263              	.LASF1:
- 8264 0947 7369676E 		.ascii	"signed char\000"
- 8264      65642063 
- 8264      68617200 
- 8265              	.LASF4:
- 8266 0953 73686F72 		.ascii	"short unsigned int\000"
- 8266      7420756E 
- 8266      7369676E 
- 8266      65642069 
- 8266      6E7400
- 8267              	.LASF35:
- 8268 0966 706D4674 		.ascii	"pmFtwCfg0Reg\000"
- 8268      77436667 
- 8268      30526567 
- 8268      00
- 8269              	.LASF45:
- 8270 0973 4379494D 		.ascii	"CyIMO_SetSource\000"
- 8270      4F5F5365 
- 8270      74536F75 
- 8270      72636500 
- 8271              	.LASF153:
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccr8ayXn.s 			page 206
+ 8249      62436C6B 
+ 8249      5F536574 
+ 8249      536F7572 
+ 8249      636500
+ 8250              	.LASF68:
+ 8251 08fe 73746174 		.ascii	"state\000"
+ 8251      6500
+ 8252              	.LASF113:
+ 8253 0904 43795664 		.ascii	"CyVdRealTimeStatus\000"
+ 8253      5265616C 
+ 8253      54696D65 
+ 8253      53746174 
+ 8253      757300
+ 8254              	.LASF112:
+ 8255 0917 746D7053 		.ascii	"tmpStatus\000"
+ 8255      74617475 
+ 8255      7300
+ 8256              	.LASF61:
+ 8257 0921 4379494C 		.ascii	"CyILO_Stop100K\000"
+ 8257      4F5F5374 
+ 8257      6F703130 
+ 8257      304B00
+ 8258              	.LASF82:
+ 8259 0930 43795854 		.ascii	"CyXTAL_EnableFaultRecovery\000"
+ 8259      414C5F45 
+ 8259      6E61626C 
+ 8259      65466175 
+ 8259      6C745265 
+ 8260              	.LASF86:
+ 8261 094b 43795854 		.ascii	"CyXTAL_SetFbVoltage\000"
+ 8261      414C5F53 
+ 8261      65744662 
+ 8261      566F6C74 
+ 8261      61676500 
+ 8262              	.LASF102:
+ 8263 095f 74687265 		.ascii	"threshold\000"
+ 8263      73686F6C 
+ 8263      6400
+ 8264              	.LASF1:
+ 8265 0969 7369676E 		.ascii	"signed char\000"
+ 8265      65642063 
+ 8265      68617200 
+ 8266              	.LASF4:
+ 8267 0975 73686F72 		.ascii	"short unsigned int\000"
+ 8267      7420756E 
+ 8267      7369676E 
+ 8267      65642069 
+ 8267      6E7400
+ 8268              	.LASF35:
+ 8269 0988 706D4674 		.ascii	"pmFtwCfg0Reg\000"
+ 8269      77436667 
+ 8269      30526567 
+ 8269      00
+ 8270              	.LASF45:
+ 8271 0995 4379494D 		.ascii	"CyIMO_SetSource\000"
+ 8271      4F5F5365 
+ 8271      74536F75 
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccnBLHGm.s 			page 206
 
 
- 8272 0983 756E6971 		.ascii	"uniqueId\000"
- 8272      75654964 
- 8272      00
- 8273              	.LASF29:
- 8274 098c 63757272 		.ascii	"current\000"
- 8274      656E7400 
- 8275              	.LASF62:
- 8276 0994 4379494C 		.ascii	"CyILO_Enable33K\000"
- 8276      4F5F456E 
- 8276      61626C65 
- 8276      33334B00 
- 8277              	.LASF11:
- 8278 09a4 75696E74 		.ascii	"uint8\000"
- 8278      3800
- 8279              	.LASF15:
- 8280 09aa 646F7562 		.ascii	"double\000"
- 8280      6C6500
- 8281              	.LASF23:
- 8282 09b1 696C6F45 		.ascii	"iloEnableState\000"
- 8282      6E61626C 
- 8282      65537461 
- 8282      746500
- 8283              	.LASF139:
- 8284 09c0 76616C75 		.ascii	"value\000"
- 8284      6500
- 8285              	.LASF108:
- 8286 09c6 43795664 		.ascii	"CyVdHvAnalogDisable\000"
- 8286      4876416E 
- 8286      616C6F67 
- 8286      44697361 
- 8286      626C6500 
- 8287              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ 8271      72636500 
+ 8272              	.LASF153:
+ 8273 09a5 756E6971 		.ascii	"uniqueId\000"
+ 8273      75654964 
+ 8273      00
+ 8274              	.LASF29:
+ 8275 09ae 63757272 		.ascii	"current\000"
+ 8275      656E7400 
+ 8276              	.LASF62:
+ 8277 09b6 4379494C 		.ascii	"CyILO_Enable33K\000"
+ 8277      4F5F456E 
+ 8277      61626C65 
+ 8277      33334B00 
+ 8278              	.LASF11:
+ 8279 09c6 75696E74 		.ascii	"uint8\000"
+ 8279      3800
+ 8280              	.LASF15:
+ 8281 09cc 646F7562 		.ascii	"double\000"
+ 8281      6C6500
+ 8282              	.LASF23:
+ 8283 09d3 696C6F45 		.ascii	"iloEnableState\000"
+ 8283      6E61626C 
+ 8283      65537461 
+ 8283      746500
+ 8284              	.LASF139:
+ 8285 09e2 76616C75 		.ascii	"value\000"
+ 8285      6500
+ 8286              	.LASF108:
+ 8287 09e8 43795664 		.ascii	"CyVdHvAnalogDisable\000"
+ 8287      4876416E 
+ 8287      616C6F67 
+ 8287      44697361 
+ 8287      626C6500 
+ 8288              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

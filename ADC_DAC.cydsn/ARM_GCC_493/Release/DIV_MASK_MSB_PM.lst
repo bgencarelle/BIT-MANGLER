@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccSMjkQj.s 			page 1
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cccCbCuJ.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccSMjkQj.s 			page 1
   25:Generated_Source\PSoC5/DIV_MASK_MSB_PM.c ****     
   26:Generated_Source\PSoC5/DIV_MASK_MSB_PM.c **** /*******************************************************************************
   27:Generated_Source\PSoC5/DIV_MASK_MSB_PM.c **** * Function Name: DIV_MASK_MSB_SaveConfig
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccSMjkQj.s 			page 2
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cccCbCuJ.s 			page 2
 
 
   28:Generated_Source\PSoC5/DIV_MASK_MSB_PM.c **** ********************************************************************************
@@ -104,7 +104,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccSMjkQj.s 			page 1
   55              	.L3:
   56 0016 00BF     		.align	2
   57              	.L2:
-  58 0018 7B640040 		.word	1073767547
+  58 0018 73640040 		.word	1073767539
   59 001c 00000000 		.word	DIV_MASK_MSB_backup
   60              		.cfi_endproc
   61              	.LFE0:
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccSMjkQj.s 			page 1
   69              	DIV_MASK_MSB_RestoreConfig:
   70              	.LFB1:
   44:Generated_Source\PSoC5/DIV_MASK_MSB_PM.c **** 
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccSMjkQj.s 			page 3
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cccCbCuJ.s 			page 3
 
 
   45:Generated_Source\PSoC5/DIV_MASK_MSB_PM.c **** 
@@ -167,7 +167,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccSMjkQj.s 			page 1
   94              	.L6:
   95              		.align	2
   96              	.L5:
-  97 0014 7B640040 		.word	1073767547
+  97 0014 73640040 		.word	1073767539
   98 0018 00000000 		.word	DIV_MASK_MSB_backup
   99              		.cfi_endproc
  100              	.LFE1:
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccSMjkQj.s 			page 1
  105              		.thumb
  106              		.thumb_func
  107              		.type	DIV_MASK_MSB_Sleep, %function
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccSMjkQj.s 			page 4
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cccCbCuJ.s 			page 4
 
 
  108              	DIV_MASK_MSB_Sleep:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccSMjkQj.s 			page 1
   92:Generated_Source\PSoC5/DIV_MASK_MSB_PM.c **** *  Restores the component after waking up from the low power mode.
   93:Generated_Source\PSoC5/DIV_MASK_MSB_PM.c **** *
   94:Generated_Source\PSoC5/DIV_MASK_MSB_PM.c **** * Parameters:
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccSMjkQj.s 			page 5
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cccCbCuJ.s 			page 5
 
 
   95:Generated_Source\PSoC5/DIV_MASK_MSB_PM.c **** *  None
@@ -281,46 +281,46 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccSMjkQj.s 			page 1
  162 000b 01       		.uleb128 0x1
  163 000c 27000000 		.4byte	.LASF19
  164 0010 01       		.byte	0x1
- 165 0011 2C010000 		.4byte	.LASF20
- 166 0015 80010000 		.4byte	.LASF21
+ 165 0011 8C010000 		.4byte	.LASF20
+ 166 0015 CF000000 		.4byte	.LASF21
  167 0019 00000000 		.4byte	.Ldebug_ranges0+0
  168 001d 00000000 		.4byte	0
  169 0021 00000000 		.4byte	.Ldebug_line0
  170 0025 02       		.uleb128 0x2
  171 0026 01       		.byte	0x1
  172 0027 06       		.byte	0x6
- 173 0028 20020000 		.4byte	.LASF0
+ 173 0028 42020000 		.4byte	.LASF0
  174 002c 02       		.uleb128 0x2
  175 002d 01       		.byte	0x1
  176 002e 08       		.byte	0x8
- 177 002f CF000000 		.4byte	.LASF1
+ 177 002f 7E010000 		.4byte	.LASF1
  178 0033 02       		.uleb128 0x2
  179 0034 02       		.byte	0x2
  180 0035 05       		.byte	0x5
- 181 0036 07020000 		.4byte	.LASF2
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccSMjkQj.s 			page 6
+ 181 0036 29020000 		.4byte	.LASF2
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cccCbCuJ.s 			page 6
 
 
  182 003a 02       		.uleb128 0x2
  183 003b 02       		.byte	0x2
  184 003c 07       		.byte	0x7
- 185 003d 0C010000 		.4byte	.LASF3
+ 185 003d 5E010000 		.4byte	.LASF3
  186 0041 02       		.uleb128 0x2
  187 0042 04       		.byte	0x4
  188 0043 05       		.byte	0x5
- 189 0044 17020000 		.4byte	.LASF4
+ 189 0044 39020000 		.4byte	.LASF4
  190 0048 02       		.uleb128 0x2
  191 0049 04       		.byte	0x4
  192 004a 07       		.byte	0x7
- 193 004b FA000000 		.4byte	.LASF5
+ 193 004b 4C010000 		.4byte	.LASF5
  194 004f 02       		.uleb128 0x2
  195 0050 08       		.byte	0x8
  196 0051 05       		.byte	0x5
- 197 0052 F4010000 		.4byte	.LASF6
+ 197 0052 16020000 		.4byte	.LASF6
  198 0056 02       		.uleb128 0x2
  199 0057 08       		.byte	0x8
  200 0058 07       		.byte	0x7
- 201 0059 69010000 		.4byte	.LASF7
+ 201 0059 C9010000 		.4byte	.LASF7
  202 005d 03       		.uleb128 0x3
  203 005e 04       		.byte	0x4
  204 005f 05       		.byte	0x5
@@ -328,9 +328,9 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccSMjkQj.s 			page 1
  206 0064 02       		.uleb128 0x2
  207 0065 04       		.byte	0x4
  208 0066 07       		.byte	0x7
- 209 0067 5C010000 		.4byte	.LASF8
+ 209 0067 BC010000 		.4byte	.LASF8
  210 006b 04       		.uleb128 0x4
- 211 006c 11020000 		.4byte	.LASF12
+ 211 006c 33020000 		.4byte	.LASF12
  212 0070 02       		.byte	0x2
  213 0071 9201     		.2byte	0x192
  214 0073 2C000000 		.4byte	0x2c
@@ -341,13 +341,13 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccSMjkQj.s 			page 1
  219 007e 02       		.uleb128 0x2
  220 007f 08       		.byte	0x8
  221 0080 04       		.byte	0x4
- 222 0081 55010000 		.4byte	.LASF10
+ 222 0081 B5010000 		.4byte	.LASF10
  223 0085 02       		.uleb128 0x2
  224 0086 01       		.byte	0x1
  225 0087 08       		.byte	0x8
- 226 0088 02020000 		.4byte	.LASF11
+ 226 0088 24020000 		.4byte	.LASF11
  227 008c 04       		.uleb128 0x4
- 228 008d F5000000 		.4byte	.LASF13
+ 228 008d 47010000 		.4byte	.LASF13
  229 0091 02       		.byte	0x2
  230 0092 3C02     		.2byte	0x23c
  231 0094 98000000 		.4byte	0x98
@@ -358,23 +358,23 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccSMjkQj.s 			page 1
  236 009f 03       		.byte	0x3
  237 00a0 1C       		.byte	0x1c
  238 00a1 B2000000 		.4byte	0xb2
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccSMjkQj.s 			page 7
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cccCbCuJ.s 			page 7
 
 
  239 00a5 07       		.uleb128 0x7
- 240 00a6 1F010000 		.4byte	.LASF22
+ 240 00a6 71010000 		.4byte	.LASF22
  241 00aa 03       		.byte	0x3
  242 00ab 1E       		.byte	0x1e
  243 00ac 6B000000 		.4byte	0x6b
  244 00b0 00       		.byte	0
  245 00b1 00       		.byte	0
  246 00b2 08       		.uleb128 0x8
- 247 00b3 BE010000 		.4byte	.LASF14
+ 247 00b3 E0010000 		.4byte	.LASF14
  248 00b7 03       		.byte	0x3
  249 00b8 20       		.byte	0x20
  250 00b9 9D000000 		.4byte	0x9d
  251 00bd 09       		.uleb128 0x9
- 252 00be DD000000 		.4byte	.LASF15
+ 252 00be 2F010000 		.4byte	.LASF15
  253 00c2 01       		.byte	0x1
  254 00c3 28       		.byte	0x28
  255 00c4 00000000 		.4byte	.LFB0
@@ -382,7 +382,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccSMjkQj.s 			page 1
  257 00cc 01       		.uleb128 0x1
  258 00cd 9C       		.byte	0x9c
  259 00ce 09       		.uleb128 0x9
- 260 00cf D9010000 		.4byte	.LASF16
+ 260 00cf FB010000 		.4byte	.LASF16
  261 00d3 01       		.byte	0x1
  262 00d4 3D       		.byte	0x3d
  263 00d5 00000000 		.4byte	.LFB1
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccSMjkQj.s 			page 1
  293              	.Ldebug_abbrev0:
  294 0000 01       		.uleb128 0x1
  295 0001 11       		.uleb128 0x11
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccSMjkQj.s 			page 8
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cccCbCuJ.s 			page 8
 
 
  296 0002 01       		.byte	0x1
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccSMjkQj.s 			page 1
  350 0038 00       		.byte	0
  351 0039 49       		.uleb128 0x49
  352 003a 13       		.uleb128 0x13
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccSMjkQj.s 			page 9
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cccCbCuJ.s 			page 9
 
 
  353 003b 00       		.byte	0
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccSMjkQj.s 			page 1
  407 0071 27       		.uleb128 0x27
  408 0072 19       		.uleb128 0x19
  409 0073 11       		.uleb128 0x11
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccSMjkQj.s 			page 10
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cccCbCuJ.s 			page 10
 
 
  410 0074 01       		.uleb128 0x1
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccSMjkQj.s 			page 1
  464 000c 0000     		.2byte	0
  465 000e 0000     		.2byte	0
  466 0010 00000000 		.4byte	.LFB0
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccSMjkQj.s 			page 11
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cccCbCuJ.s 			page 11
 
 
  467 0014 20000000 		.4byte	.LFE0-.LFB0
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccSMjkQj.s 			page 1
  498      2D736563 
  498      74696F6E 
  499              	.LASF23:
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccSMjkQj.s 			page 12
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cccCbCuJ.s 			page 12
 
 
  500 00b5 4449565F 		.ascii	"DIV_MASK_MSB_backup\000"
@@ -669,103 +669,105 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccSMjkQj.s 			page 1
  501              	.LASF9:
  502 00c9 666C6F61 		.ascii	"float\000"
  502      7400
- 503              	.LASF1:
- 504 00cf 756E7369 		.ascii	"unsigned char\000"
- 504      676E6564 
- 504      20636861 
- 504      7200
- 505              	.LASF15:
- 506 00dd 4449565F 		.ascii	"DIV_MASK_MSB_SaveConfig\000"
- 506      4D41534B 
- 506      5F4D5342 
- 506      5F536176 
- 506      65436F6E 
- 507              	.LASF13:
- 508 00f5 72656738 		.ascii	"reg8\000"
- 508      00
- 509              	.LASF5:
- 510 00fa 6C6F6E67 		.ascii	"long unsigned int\000"
- 510      20756E73 
- 510      69676E65 
- 510      6420696E 
- 510      7400
- 511              	.LASF3:
- 512 010c 73686F72 		.ascii	"short unsigned int\000"
- 512      7420756E 
- 512      7369676E 
- 512      65642069 
- 512      6E7400
- 513              	.LASF22:
- 514 011f 636F6E74 		.ascii	"controlState\000"
- 514      726F6C53 
- 514      74617465 
- 514      00
- 515              	.LASF20:
- 516 012c 47656E65 		.ascii	"Generated_Source\\PSoC5\\DIV_MASK_MSB_PM.c\000"
- 516      72617465 
- 516      645F536F 
- 516      75726365 
- 516      5C50536F 
- 517              	.LASF10:
- 518 0155 646F7562 		.ascii	"double\000"
- 518      6C6500
- 519              	.LASF8:
- 520 015c 756E7369 		.ascii	"unsigned int\000"
- 520      676E6564 
- 520      20696E74 
- 520      00
- 521              	.LASF7:
- 522 0169 6C6F6E67 		.ascii	"long long unsigned int\000"
- 522      206C6F6E 
- 522      6720756E 
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccSMjkQj.s 			page 13
+ 503              	.LASF21:
+ 504 00cf 433A5C55 		.ascii	"C:\\Users\\ben\\Documents\\PSoC Creator\\New Pedal "
+ 504      73657273 
+ 504      5C62656E 
+ 504      5C446F63 
+ 504      756D656E 
+ 505 00fd 5468696E 		.ascii	"Thingz\\PSOC_BIT_MANGLER\\BIT-MANGLER\\ADC_DAC.cyds"
+ 505      677A5C50 
+ 505      534F435F 
+ 505      4249545F 
+ 505      4D414E47 
+ 506 012d 6E00     		.ascii	"n\000"
+ 507              	.LASF15:
+ 508 012f 4449565F 		.ascii	"DIV_MASK_MSB_SaveConfig\000"
+ 508      4D41534B 
+ 508      5F4D5342 
+ 508      5F536176 
+ 508      65436F6E 
+ 509              	.LASF13:
+ 510 0147 72656738 		.ascii	"reg8\000"
+ 510      00
+ 511              	.LASF5:
+ 512 014c 6C6F6E67 		.ascii	"long unsigned int\000"
+ 512      20756E73 
+ 512      69676E65 
+ 512      6420696E 
+ 512      7400
+ 513              	.LASF3:
+ 514 015e 73686F72 		.ascii	"short unsigned int\000"
+ 514      7420756E 
+ 514      7369676E 
+ 514      65642069 
+ 514      6E7400
+ 515              	.LASF22:
+ 516 0171 636F6E74 		.ascii	"controlState\000"
+ 516      726F6C53 
+ 516      74617465 
+ 516      00
+ 517              	.LASF1:
+ 518 017e 756E7369 		.ascii	"unsigned char\000"
+ 518      676E6564 
+ 518      20636861 
+ 518      7200
+ 519              	.LASF20:
+ 520 018c 47656E65 		.ascii	"Generated_Source\\PSoC5\\DIV_MASK_MSB_PM.c\000"
+ 520      72617465 
+ 520      645F536F 
+ 520      75726365 
+ 520      5C50536F 
+ARM GAS  C:\Users\ben\AppData\Local\Temp\cccCbCuJ.s 			page 13
 
 
- 522      7369676E 
- 522      65642069 
- 523              	.LASF21:
- 524 0180 433A5C55 		.ascii	"C:\\Users\\ben\\Documents\\PSoC Creator\\BIT-MANGLE"
- 524      73657273 
- 524      5C62656E 
- 524      5C446F63 
- 524      756D656E 
- 525 01ae 525C4144 		.ascii	"R\\ADC_DAC.cydsn\000"
- 525      435F4441 
- 525      432E6379 
- 525      64736E00 
- 526              	.LASF14:
- 527 01be 4449565F 		.ascii	"DIV_MASK_MSB_BACKUP_STRUCT\000"
- 527      4D41534B 
- 527      5F4D5342 
- 527      5F424143 
- 527      4B55505F 
- 528              	.LASF16:
- 529 01d9 4449565F 		.ascii	"DIV_MASK_MSB_RestoreConfig\000"
- 529      4D41534B 
- 529      5F4D5342 
- 529      5F526573 
- 529      746F7265 
- 530              	.LASF6:
- 531 01f4 6C6F6E67 		.ascii	"long long int\000"
- 531      206C6F6E 
- 531      6720696E 
- 531      7400
- 532              	.LASF11:
- 533 0202 63686172 		.ascii	"char\000"
- 533      00
- 534              	.LASF2:
- 535 0207 73686F72 		.ascii	"short int\000"
- 535      7420696E 
- 535      7400
- 536              	.LASF12:
- 537 0211 75696E74 		.ascii	"uint8\000"
- 537      3800
- 538              	.LASF4:
- 539 0217 6C6F6E67 		.ascii	"long int\000"
- 539      20696E74 
- 539      00
- 540              	.LASF0:
- 541 0220 7369676E 		.ascii	"signed char\000"
- 541      65642063 
- 541      68617200 
- 542              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ 521              	.LASF10:
+ 522 01b5 646F7562 		.ascii	"double\000"
+ 522      6C6500
+ 523              	.LASF8:
+ 524 01bc 756E7369 		.ascii	"unsigned int\000"
+ 524      676E6564 
+ 524      20696E74 
+ 524      00
+ 525              	.LASF7:
+ 526 01c9 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 526      206C6F6E 
+ 526      6720756E 
+ 526      7369676E 
+ 526      65642069 
+ 527              	.LASF14:
+ 528 01e0 4449565F 		.ascii	"DIV_MASK_MSB_BACKUP_STRUCT\000"
+ 528      4D41534B 
+ 528      5F4D5342 
+ 528      5F424143 
+ 528      4B55505F 
+ 529              	.LASF16:
+ 530 01fb 4449565F 		.ascii	"DIV_MASK_MSB_RestoreConfig\000"
+ 530      4D41534B 
+ 530      5F4D5342 
+ 530      5F526573 
+ 530      746F7265 
+ 531              	.LASF6:
+ 532 0216 6C6F6E67 		.ascii	"long long int\000"
+ 532      206C6F6E 
+ 532      6720696E 
+ 532      7400
+ 533              	.LASF11:
+ 534 0224 63686172 		.ascii	"char\000"
+ 534      00
+ 535              	.LASF2:
+ 536 0229 73686F72 		.ascii	"short int\000"
+ 536      7420696E 
+ 536      7400
+ 537              	.LASF12:
+ 538 0233 75696E74 		.ascii	"uint8\000"
+ 538      3800
+ 539              	.LASF4:
+ 540 0239 6C6F6E67 		.ascii	"long int\000"
+ 540      20696E74 
+ 540      00
+ 541              	.LASF0:
+ 542 0242 7369676E 		.ascii	"signed char\000"
+ 542      65642063 
+ 542      68617200 
+ 543              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

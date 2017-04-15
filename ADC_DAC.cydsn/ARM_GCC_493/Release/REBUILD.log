@@ -1,16 +1,22 @@
---------------- Rebuild Started: 03/31/2017 18:18:54 Project: main.c, Configuration: ARM GCC 4.9-2015-q1-update Release ---------------
-arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Release/main.lst -g -D NDEBUG -Wall -ffunction-sections -O0 -ffat-lto-objects -c main.c -o .\ARM_GCC_493\Release\main.o
-main.c: In function 'main':
-main.c:83:12: warning: variable 'oldpotread' set but not used [-Wunused-but-set-variable]
-     uint16 oldpotread;
-            ^
-main.c:70:12: warning: unused variable 'ADC_SAR2_READ' [-Wunused-variable]
-     uint16 ADC_SAR2_READ =0;
-            ^
-main.c:69:12: warning: unused variable 'AUDIO_IN' [-Wunused-variable]
-     uint16 AUDIO_IN = 0;
-            ^
-main.c:68:12: warning: unused variable 'CK_DIV' [-Wunused-variable]
-     uint16 CK_DIV = 0;
-            ^
---------------- Rebuild Succeeded: 03/31/2017 18:18:55 ---------------
+--------------- Rebuild Started: 04/11/2017 16:45:54 Project: ADC_DAC, Configuration: ARM GCC 4.9-2015-q1-update Release ---------------
+Deleting file ".\ARM_GCC_493\Release\ADC_DAC.hex"
+Deleting file ".\ARM_GCC_493\Release\ADC_DAC.elf"
+Deleting file ".\ARM_GCC_493\Release\ADC_DAC.map"
+Deleting file ".\ADC_DAC.rpt"
+Deleting file ".\ADC_DAC_timing.html"
+Deleting file ".\ARM_GCC_493\Release\.deps\SOURCE_C__ARM_GCC_GENERIC.P"
+Deleting file ".\ARM_GCC_493\Release\.deps\SOURCE_ASM__ARM_GCC_GENERIC.P"
+cydsfit.exe -.appdatapath "C:\Users\ben\AppData\Local\Cypress Semiconductor\PSoC Creator\4.0" -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p "C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\ADC_DAC.cyprj" -d CY8C5868AXI-LP035 -s "C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\Generated_Source\PSoC5" -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
+Elaborating Design...
+ADD: sdb.M0025: error: No input on Instance "mux_2", terminal "muxsel[1:0]".
+ * C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\TopDesign\TopDesign.cysch (Signal: Net_22033)
+ * C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\TopDesign\TopDesign.cysch (Shape_4384.11)
+ADD: sdb.M0050: error: Terminal "muxsel[1:0]" requires connection when it is visible.
+ * C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\TopDesign\TopDesign.cysch (Signal: Net_22033)
+ * C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\TopDesign\TopDesign.cysch (Shape_4384.11)
+ADD: sdb.M0065: information: Analog terminal "vdac_ref" on ADC_SAR_SEQ_v2_0 is unconnected.
+ * C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\ADC_SAR_SEQ_v2_0\PSoC5\ADC_SAR_SEQ_v2_0.cysch (Signal: vdac_ref)
+ * C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\ADC_SAR_SEQ_v2_0\PSoC5\ADC_SAR_SEQ_v2_0.cysch (Shape_798)
+ * C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\ADC_SAR_SEQ_v2_0\PSoC5\ADC_SAR_SEQ_v2_0.cysch (Shape_885)
+Error: fit.M0050: The fitter aborted due to errors, please address all errors and rebuild. (App=cydsfit)
+--------------- Rebuild Failed: 04/11/2017 16:45:57 ---------------

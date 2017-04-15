@@ -13,7 +13,7 @@ Archive member included because of file (symbol)
 .\ARM_GCC_493\Release\ADC_DAC.a(cyPm.o)
                               .\ARM_GCC_493\Release\ADC_DAC.a(CyLib.o) (CyPmReadStatus)
 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_1.o)
-                              .\ARM_GCC_493\Release\main.o (ADC_SAR_1_Start)
+                              .\ARM_GCC_493\Release\main.o (ADC_SAR_1_shift)
 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_1_INT.o)
                               .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_1.o) (ADC_SAR_1_ISR)
 .\ARM_GCC_493\Release\ADC_DAC.a(Opamp_1.o)
@@ -68,6 +68,8 @@ Archive member included because of file (symbol)
                               .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq.o) (ADC_SAR_Seq_FinalBuf_DmaInitialize)
 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_IRQ.o)
                               .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq.o) (ADC_SAR_Seq_IRQ_SetVector)
+.\ARM_GCC_493\Release\ADC_DAC.a(DIV_MASK_MSB.o)
+                              .\ARM_GCC_493\Release\main.o (DIV_MASK_MSB_Write)
 .\ARM_GCC_493\Release\ADC_DAC.a(DIV_MASK_LSB.o)
                               .\ARM_GCC_493\Release\main.o (DIV_MASK_LSB_Write)
 .\ARM_GCC_493\Release\ADC_DAC.a(CyBootAsmGnu.o)
@@ -120,7 +122,7 @@ ADC_SAR_Seq_SAR_countsPerVolt
 ADC_SAR_Seq_SAR_countsPer10Volt
                     0x4               .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
 ADC_SAR_Seq_finalArray
-                    0xa               .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq.o)
+                    0x8               .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq.o)
 ADC_SAR_Seq_SAR_shift
                     0x2               .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
 dieTemperature      0x2               .\ARM_GCC_493\Release\ADC_DAC.a(CyFlash.o)
@@ -139,7 +141,6 @@ Discarded input sections
  .ARM.exidx     0x00000000        0x8 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/crt0.o
  .text          0x00000000        0x0 .\ARM_GCC_493\Release\main.o
  .data          0x00000000        0x0 .\ARM_GCC_493\Release\main.o
- .text.PWM_Set  0x00000000       0xb8 .\ARM_GCC_493\Release\main.o
  .text          0x00000000        0x0 .\ARM_GCC_493\Release\cymetadata.o
  .data          0x00000000        0x0 .\ARM_GCC_493\Release\cymetadata.o
  .bss           0x00000000        0x0 .\ARM_GCC_493\Release\cymetadata.o
@@ -752,6 +753,11 @@ Discarded input sections
                 0x00000000       0x18 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_IRQ.o)
  .text.ADC_SAR_Seq_IRQ_ClearPending
                 0x00000000       0x18 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_IRQ.o)
+ .text          0x00000000        0x0 .\ARM_GCC_493\Release\ADC_DAC.a(DIV_MASK_MSB.o)
+ .data          0x00000000        0x0 .\ARM_GCC_493\Release\ADC_DAC.a(DIV_MASK_MSB.o)
+ .bss           0x00000000        0x0 .\ARM_GCC_493\Release\ADC_DAC.a(DIV_MASK_MSB.o)
+ .text.DIV_MASK_MSB_Read
+                0x00000000       0x18 .\ARM_GCC_493\Release\ADC_DAC.a(DIV_MASK_MSB.o)
  .text          0x00000000        0x0 .\ARM_GCC_493\Release\ADC_DAC.a(DIV_MASK_LSB.o)
  .data          0x00000000        0x0 .\ARM_GCC_493\Release\ADC_DAC.a(DIV_MASK_LSB.o)
  .bss           0x00000000        0x0 .\ARM_GCC_493\Release\ADC_DAC.a(DIV_MASK_LSB.o)
@@ -915,7 +921,7 @@ END GROUP
                 0x00000040                CY_METADATA_SIZE = 0x40
                 0x00000000                CY_APPL_LOADABLE = 0x0
                 0x00000000                CY_CHECKSUM_EXCLUDE_SIZE = ALIGN (0x0, CY_FLASH_ROW_SIZE)
-                0x1fff8210                PROVIDE (__cy_heap_start, _end)
+                0x1fff8208                PROVIDE (__cy_heap_start, _end)
                 0x00000001                PROVIDE (__cy_region_num, ((__cy_regions_end - __cy_regions) / 0x10))
                 0x20008000                PROVIDE (__cy_stack, (ORIGIN (ram) + 0x10000))
                 0x20007800                PROVIDE (__cy_heap_end, (__cy_stack - 0x800))
@@ -930,7 +936,7 @@ END GROUP
                 0x00000800                ee_size = (CY_APPL_LOADABLE && ! (CY_EE_IN_BTLDR))?(CY_EE_SIZE / CY_APPL_MAX):CY_EE_SIZE
                 0x00000000                PROVIDE (CY_ECC_OFFSET, ecc_offset)
 
-.text           0x00000000     0x2ea6
+.text           0x00000000     0x2f36
  CREATE_OBJECT_SYMBOLS
                 0x00000000                PROVIDE (__cy_interrupt_vector, RomVectors)
  *(.romvectors)
@@ -947,537 +953,542 @@ END GROUP
                 0x00000001                ASSERT ((((appl_start + .) <= 0x10000) || 0x1), DMA Init must be within the first 64k of flash)
  *(.text .text.* .gnu.linkonce.t.*)
  .text          0x00000028       0x5c c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
- .text.main     0x00000084      0x15c .\ARM_GCC_493\Release\main.o
+ .text.main     0x00000084      0x158 .\ARM_GCC_493\Release\main.o
                 0x00000084                main
- .text.Effect   0x000001e0      0x160 .\ARM_GCC_493\Release\main.o
-                0x000001e0                Effect
+ .text.Effect   0x000001dc      0x160 .\ARM_GCC_493\Release\main.o
+                0x000001dc                Effect
  .text.PWM_Start
-                0x00000340       0x50 .\ARM_GCC_493\Release\main.o
-                0x00000340                PWM_Start
+                0x0000033c       0x48 .\ARM_GCC_493\Release\main.o
+                0x0000033c                PWM_Start
+ .text.PWM_Set  0x00000384       0xb8 .\ARM_GCC_493\Release\main.o
+                0x00000384                PWM_Set
  .text.IntDefaultHandler
-                0x00000390       0x14 .\ARM_GCC_493\Release\Cm3Start.o
-                0x00000390                IntDefaultHandler
- .text.Start_c  0x000003a4       0x98 .\ARM_GCC_493\Release\Cm3Start.o
-                0x000003a4                Start_c
+                0x0000043c       0x14 .\ARM_GCC_493\Release\Cm3Start.o
+                0x0000043c                IntDefaultHandler
+ .text.Start_c  0x00000450       0x98 .\ARM_GCC_493\Release\Cm3Start.o
+                0x00000450                Start_c
  .text.initialize_psoc
-                0x0000043c       0x90 .\ARM_GCC_493\Release\Cm3Start.o
-                0x0000043c                initialize_psoc
+                0x000004e8       0x90 .\ARM_GCC_493\Release\Cm3Start.o
+                0x000004e8                initialize_psoc
  .text.CYMEMZERO
-                0x000004cc       0x1c .\ARM_GCC_493\Release\ADC_DAC.a(cyfitter_cfg.o)
+                0x00000578       0x1c .\ARM_GCC_493\Release\ADC_DAC.a(cyfitter_cfg.o)
  .text.CYCONFIGCPY
-                0x000004e8       0x1c .\ARM_GCC_493\Release\ADC_DAC.a(cyfitter_cfg.o)
+                0x00000594       0x1c .\ARM_GCC_493\Release\ADC_DAC.a(cyfitter_cfg.o)
  .text.CyClockStartupError
-                0x00000504        0xc .\ARM_GCC_493\Release\ADC_DAC.a(cyfitter_cfg.o)
+                0x000005b0        0xc .\ARM_GCC_493\Release\ADC_DAC.a(cyfitter_cfg.o)
  .text.cfg_write_bytes32
-                0x00000510       0x74 .\ARM_GCC_493\Release\ADC_DAC.a(cyfitter_cfg.o)
+                0x000005bc       0x74 .\ARM_GCC_493\Release\ADC_DAC.a(cyfitter_cfg.o)
  .text.ClockSetup
-                0x00000584      0x128 .\ARM_GCC_493\Release\ADC_DAC.a(cyfitter_cfg.o)
+                0x00000630      0x114 .\ARM_GCC_493\Release\ADC_DAC.a(cyfitter_cfg.o)
  .text.AnalogSetDefault
-                0x000006ac      0x104 .\ARM_GCC_493\Release\ADC_DAC.a(cyfitter_cfg.o)
+                0x00000744      0x104 .\ARM_GCC_493\Release\ADC_DAC.a(cyfitter_cfg.o)
  .text.cyfitter_cfg
-                0x000007b0      0x1bc .\ARM_GCC_493\Release\ADC_DAC.a(cyfitter_cfg.o)
-                0x000007b0                cyfitter_cfg
+                0x00000848      0x198 .\ARM_GCC_493\Release\ADC_DAC.a(cyfitter_cfg.o)
+                0x00000848                cyfitter_cfg
  .text.LCD_Char_1_Init
-                0x0000096c       0x78 .\ARM_GCC_493\Release\ADC_DAC.a(LCD_Char_1.o)
-                0x0000096c                LCD_Char_1_Init
+                0x000009e0       0x78 .\ARM_GCC_493\Release\ADC_DAC.a(LCD_Char_1.o)
+                0x000009e0                LCD_Char_1_Init
  .text.LCD_Char_1_Enable
-                0x000009e4       0x18 .\ARM_GCC_493\Release\ADC_DAC.a(LCD_Char_1.o)
-                0x000009e4                LCD_Char_1_Enable
+                0x00000a58       0x18 .\ARM_GCC_493\Release\ADC_DAC.a(LCD_Char_1.o)
+                0x00000a58                LCD_Char_1_Enable
  .text.LCD_Char_1_Start
-                0x000009fc       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(LCD_Char_1.o)
-                0x000009fc                LCD_Char_1_Start
+                0x00000a70       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(LCD_Char_1.o)
+                0x00000a70                LCD_Char_1_Start
  .text.LCD_Char_1_Position
-                0x00000a1c       0x6c .\ARM_GCC_493\Release\ADC_DAC.a(LCD_Char_1.o)
-                0x00000a1c                LCD_Char_1_Position
+                0x00000a90       0x6c .\ARM_GCC_493\Release\ADC_DAC.a(LCD_Char_1.o)
+                0x00000a90                LCD_Char_1_Position
  .text.LCD_Char_1_PrintString
-                0x00000a88       0x38 .\ARM_GCC_493\Release\ADC_DAC.a(LCD_Char_1.o)
-                0x00000a88                LCD_Char_1_PrintString
+                0x00000afc       0x38 .\ARM_GCC_493\Release\ADC_DAC.a(LCD_Char_1.o)
+                0x00000afc                LCD_Char_1_PrintString
  .text.LCD_Char_1_WriteData
-                0x00000ac0       0x34 .\ARM_GCC_493\Release\ADC_DAC.a(LCD_Char_1.o)
-                0x00000ac0                LCD_Char_1_WriteData
+                0x00000b34       0x34 .\ARM_GCC_493\Release\ADC_DAC.a(LCD_Char_1.o)
+                0x00000b34                LCD_Char_1_WriteData
  .text.LCD_Char_1_WriteControl
-                0x00000af4       0x34 .\ARM_GCC_493\Release\ADC_DAC.a(LCD_Char_1.o)
-                0x00000af4                LCD_Char_1_WriteControl
+                0x00000b68       0x34 .\ARM_GCC_493\Release\ADC_DAC.a(LCD_Char_1.o)
+                0x00000b68                LCD_Char_1_WriteControl
  .text.LCD_Char_1_IsReady
-                0x00000b28      0x178 .\ARM_GCC_493\Release\ADC_DAC.a(LCD_Char_1.o)
-                0x00000b28                LCD_Char_1_IsReady
+                0x00000b9c      0x178 .\ARM_GCC_493\Release\ADC_DAC.a(LCD_Char_1.o)
+                0x00000b9c                LCD_Char_1_IsReady
  .text.LCD_Char_1_WrDatNib
-                0x00000ca0       0x78 .\ARM_GCC_493\Release\ADC_DAC.a(LCD_Char_1.o)
+                0x00000d14       0x78 .\ARM_GCC_493\Release\ADC_DAC.a(LCD_Char_1.o)
  .text.LCD_Char_1_WrCntrlNib
-                0x00000d18       0x60 .\ARM_GCC_493\Release\ADC_DAC.a(LCD_Char_1.o)
+                0x00000d8c       0x60 .\ARM_GCC_493\Release\ADC_DAC.a(LCD_Char_1.o)
  .text.LCD_Char_1_LoadCustomFonts
-                0x00000d78       0x44 .\ARM_GCC_493\Release\ADC_DAC.a(LCD_Char_1_CustChars.o)
-                0x00000d78                LCD_Char_1_LoadCustomFonts
+                0x00000dec       0x44 .\ARM_GCC_493\Release\ADC_DAC.a(LCD_Char_1_CustChars.o)
+                0x00000dec                LCD_Char_1_LoadCustomFonts
  .text.CyDmacConfigure
-                0x00000dbc       0x5c .\ARM_GCC_493\Release\ADC_DAC.a(CyDmac.o)
-                0x00000dbc                CyDmacConfigure
+                0x00000e30       0x5c .\ARM_GCC_493\Release\ADC_DAC.a(CyDmac.o)
+                0x00000e30                CyDmacConfigure
  .text.CyDmaChEnable
-                0x00000e18       0x8c .\ARM_GCC_493\Release\ADC_DAC.a(CyDmac.o)
-                0x00000e18                CyDmaChEnable
+                0x00000e8c       0x8c .\ARM_GCC_493\Release\ADC_DAC.a(CyDmac.o)
+                0x00000e8c                CyDmaChEnable
  .text.CyDmaClearPendingDrq
-                0x00000ea4       0x64 .\ARM_GCC_493\Release\ADC_DAC.a(CyDmac.o)
-                0x00000ea4                CyDmaClearPendingDrq
+                0x00000f18       0x64 .\ARM_GCC_493\Release\ADC_DAC.a(CyDmac.o)
+                0x00000f18                CyDmaClearPendingDrq
  .text.CyDmaChPriority
-                0x00000f08       0x60 .\ARM_GCC_493\Release\ADC_DAC.a(CyDmac.o)
-                0x00000f08                CyDmaChPriority
+                0x00000f7c       0x60 .\ARM_GCC_493\Release\ADC_DAC.a(CyDmac.o)
+                0x00000f7c                CyDmaChPriority
  .text.CyDmaChSetExtendedAddress
-                0x00000f68       0x7c .\ARM_GCC_493\Release\ADC_DAC.a(CyDmac.o)
-                0x00000f68                CyDmaChSetExtendedAddress
+                0x00000fdc       0x7c .\ARM_GCC_493\Release\ADC_DAC.a(CyDmac.o)
+                0x00000fdc                CyDmaChSetExtendedAddress
  .text.CyDmaChSetInitialTd
-                0x00000fe4       0x3c .\ARM_GCC_493\Release\ADC_DAC.a(CyDmac.o)
-                0x00000fe4                CyDmaChSetInitialTd
+                0x00001058       0x3c .\ARM_GCC_493\Release\ADC_DAC.a(CyDmac.o)
+                0x00001058                CyDmaChSetInitialTd
  .text.CyDmaChSetConfiguration
-                0x00001020       0xa0 .\ARM_GCC_493\Release\ADC_DAC.a(CyDmac.o)
-                0x00001020                CyDmaChSetConfiguration
+                0x00001094       0xa0 .\ARM_GCC_493\Release\ADC_DAC.a(CyDmac.o)
+                0x00001094                CyDmaChSetConfiguration
  .text.CyDmaTdAllocate
-                0x000010c0       0x5c .\ARM_GCC_493\Release\ADC_DAC.a(CyDmac.o)
-                0x000010c0                CyDmaTdAllocate
+                0x00001134       0x5c .\ARM_GCC_493\Release\ADC_DAC.a(CyDmac.o)
+                0x00001134                CyDmaTdAllocate
  .text.CyDmaTdSetConfiguration
-                0x0000111c       0x80 .\ARM_GCC_493\Release\ADC_DAC.a(CyDmac.o)
-                0x0000111c                CyDmaTdSetConfiguration
+                0x00001190       0x80 .\ARM_GCC_493\Release\ADC_DAC.a(CyDmac.o)
+                0x00001190                CyDmaTdSetConfiguration
  .text.CyDmaTdSetAddress
-                0x0000119c       0x5c .\ARM_GCC_493\Release\ADC_DAC.a(CyDmac.o)
-                0x0000119c                CyDmaTdSetAddress
- .text.CyDelay  0x000011f8       0x44 .\ARM_GCC_493\Release\ADC_DAC.a(CyLib.o)
-                0x000011f8                CyDelay
+                0x00001210       0x5c .\ARM_GCC_493\Release\ADC_DAC.a(CyDmac.o)
+                0x00001210                CyDmaTdSetAddress
+ .text.CyDelay  0x0000126c       0x44 .\ARM_GCC_493\Release\ADC_DAC.a(CyLib.o)
+                0x0000126c                CyDelay
  .text.CyDelayUs
-                0x0000123c       0x24 .\ARM_GCC_493\Release\ADC_DAC.a(CyLib.o)
-                0x0000123c                CyDelayUs
+                0x000012b0       0x24 .\ARM_GCC_493\Release\ADC_DAC.a(CyLib.o)
+                0x000012b0                CyDelayUs
  .text.CyIntSetVector
-                0x00001260       0x48 .\ARM_GCC_493\Release\ADC_DAC.a(CyLib.o)
-                0x00001260                CyIntSetVector
+                0x000012d4       0x48 .\ARM_GCC_493\Release\ADC_DAC.a(CyLib.o)
+                0x000012d4                CyIntSetVector
  .text.CyIntSetPriority
-                0x000012a8       0x30 .\ARM_GCC_493\Release\ADC_DAC.a(CyLib.o)
-                0x000012a8                CyIntSetPriority
+                0x0000131c       0x30 .\ARM_GCC_493\Release\ADC_DAC.a(CyLib.o)
+                0x0000131c                CyIntSetPriority
  .text.ADC_SAR_1_Start
-                0x000012d8       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_1.o)
-                0x000012d8                ADC_SAR_1_Start
+                0x0000134c       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_1.o)
+                0x0000134c                ADC_SAR_1_Start
  .text.ADC_SAR_1_Init
-                0x000012f8       0x40 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_1.o)
-                0x000012f8                ADC_SAR_1_Init
+                0x0000136c       0x40 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_1.o)
+                0x0000136c                ADC_SAR_1_Init
  .text.ADC_SAR_1_Enable
-                0x00001338       0xcc .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_1.o)
-                0x00001338                ADC_SAR_1_Enable
+                0x000013ac       0xcc .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_1.o)
+                0x000013ac                ADC_SAR_1_Enable
  .text.ADC_SAR_1_SetResolution
-                0x00001404       0x4c .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_1.o)
-                0x00001404                ADC_SAR_1_SetResolution
+                0x00001478       0x4c .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_1.o)
+                0x00001478                ADC_SAR_1_SetResolution
  .text.ADC_SAR_1_IsEndConversion
-                0x00001450       0x40 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_1.o)
-                0x00001450                ADC_SAR_1_IsEndConversion
+                0x000014c4       0x40 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_1.o)
+                0x000014c4                ADC_SAR_1_IsEndConversion
  .text.ADC_SAR_1_GetResult16
-                0x00001490       0x34 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_1.o)
-                0x00001490                ADC_SAR_1_GetResult16
+                0x00001504       0x34 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_1.o)
+                0x00001504                ADC_SAR_1_GetResult16
  .text.ADC_SAR_1_CalcGain
-                0x000014c4       0x78 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_1.o)
+                0x00001538       0x78 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_1.o)
  .text.ADC_SAR_1_ISR
-                0x0000153c        0xc .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_1_INT.o)
-                0x0000153c                ADC_SAR_1_ISR
+                0x000015b0        0xc .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_1_INT.o)
+                0x000015b0                ADC_SAR_1_ISR
  .text.Opamp_1_Init
-                0x00001548        0xc .\ARM_GCC_493\Release\ADC_DAC.a(Opamp_1.o)
-                0x00001548                Opamp_1_Init
+                0x000015bc        0xc .\ARM_GCC_493\Release\ADC_DAC.a(Opamp_1.o)
+                0x000015bc                Opamp_1_Init
  .text.Opamp_1_Enable
-                0x00001554       0x48 .\ARM_GCC_493\Release\ADC_DAC.a(Opamp_1.o)
-                0x00001554                Opamp_1_Enable
+                0x000015c8       0x48 .\ARM_GCC_493\Release\ADC_DAC.a(Opamp_1.o)
+                0x000015c8                Opamp_1_Enable
  .text.Opamp_1_Start
-                0x0000159c       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(Opamp_1.o)
-                0x0000159c                Opamp_1_Start
+                0x00001610       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(Opamp_1.o)
+                0x00001610                Opamp_1_Start
  .text.Opamp_1_SetPower
-                0x000015bc       0x40 .\ARM_GCC_493\Release\ADC_DAC.a(Opamp_1.o)
-                0x000015bc                Opamp_1_SetPower
+                0x00001630       0x40 .\ARM_GCC_493\Release\ADC_DAC.a(Opamp_1.o)
+                0x00001630                Opamp_1_SetPower
  .text.Opamp_2_Init
-                0x000015fc        0xc .\ARM_GCC_493\Release\ADC_DAC.a(Opamp_2.o)
-                0x000015fc                Opamp_2_Init
+                0x00001670        0xc .\ARM_GCC_493\Release\ADC_DAC.a(Opamp_2.o)
+                0x00001670                Opamp_2_Init
  .text.Opamp_2_Enable
-                0x00001608       0x48 .\ARM_GCC_493\Release\ADC_DAC.a(Opamp_2.o)
-                0x00001608                Opamp_2_Enable
+                0x0000167c       0x48 .\ARM_GCC_493\Release\ADC_DAC.a(Opamp_2.o)
+                0x0000167c                Opamp_2_Enable
  .text.Opamp_2_Start
-                0x00001650       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(Opamp_2.o)
-                0x00001650                Opamp_2_Start
+                0x000016c4       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(Opamp_2.o)
+                0x000016c4                Opamp_2_Start
  .text.Opamp_2_SetPower
-                0x00001670       0x40 .\ARM_GCC_493\Release\ADC_DAC.a(Opamp_2.o)
-                0x00001670                Opamp_2_SetPower
+                0x000016e4       0x40 .\ARM_GCC_493\Release\ADC_DAC.a(Opamp_2.o)
+                0x000016e4                Opamp_2_SetPower
  .text.Filter_Init
-                0x000016b0      0x11c .\ARM_GCC_493\Release\ADC_DAC.a(Filter.o)
-                0x000016b0                Filter_Init
+                0x00001724      0x11c .\ARM_GCC_493\Release\ADC_DAC.a(Filter.o)
+                0x00001724                Filter_Init
  .text.Filter_Enable
-                0x000017cc       0x48 .\ARM_GCC_493\Release\ADC_DAC.a(Filter.o)
-                0x000017cc                Filter_Enable
+                0x00001840       0x48 .\ARM_GCC_493\Release\ADC_DAC.a(Filter.o)
+                0x00001840                Filter_Enable
  .text.Filter_Start
-                0x00001814       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(Filter.o)
-                0x00001814                Filter_Start
+                0x00001888       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(Filter.o)
+                0x00001888                Filter_Start
  .text.Filter_SetInterruptMode
-                0x00001834       0x28 .\ARM_GCC_493\Release\ADC_DAC.a(Filter_PVT.o)
-                0x00001834                Filter_SetInterruptMode
+                0x000018a8       0x28 .\ARM_GCC_493\Release\ADC_DAC.a(Filter_PVT.o)
+                0x000018a8                Filter_SetInterruptMode
  .text.Filter_SetDMAMode
-                0x0000185c       0x28 .\ARM_GCC_493\Release\ADC_DAC.a(Filter_PVT.o)
-                0x0000185c                Filter_SetDMAMode
+                0x000018d0       0x28 .\ARM_GCC_493\Release\ADC_DAC.a(Filter_PVT.o)
+                0x000018d0                Filter_SetDMAMode
  .text.SPI_DAC_Init
-                0x00001884       0x30 .\ARM_GCC_493\Release\ADC_DAC.a(SPI_DAC.o)
-                0x00001884                SPI_DAC_Init
+                0x000018f8       0x30 .\ARM_GCC_493\Release\ADC_DAC.a(SPI_DAC.o)
+                0x000018f8                SPI_DAC_Init
  .text.SPI_DAC_Enable
-                0x000018b4       0x64 .\ARM_GCC_493\Release\ADC_DAC.a(SPI_DAC.o)
-                0x000018b4                SPI_DAC_Enable
+                0x00001928       0x64 .\ARM_GCC_493\Release\ADC_DAC.a(SPI_DAC.o)
+                0x00001928                SPI_DAC_Enable
  .text.SPI_DAC_Start
-                0x00001918       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(SPI_DAC.o)
-                0x00001918                SPI_DAC_Start
+                0x0000198c       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(SPI_DAC.o)
+                0x0000198c                SPI_DAC_Start
  .text.SPI_DAC_EnableTxInt
-                0x00001938        0xc .\ARM_GCC_493\Release\ADC_DAC.a(SPI_DAC.o)
-                0x00001938                SPI_DAC_EnableTxInt
+                0x000019ac        0xc .\ARM_GCC_493\Release\ADC_DAC.a(SPI_DAC.o)
+                0x000019ac                SPI_DAC_EnableTxInt
  .text.SPI_DAC_EnableRxInt
-                0x00001944        0xc .\ARM_GCC_493\Release\ADC_DAC.a(SPI_DAC.o)
-                0x00001944                SPI_DAC_EnableRxInt
+                0x000019b8        0xc .\ARM_GCC_493\Release\ADC_DAC.a(SPI_DAC.o)
+                0x000019b8                SPI_DAC_EnableRxInt
  .text.SPI_DAC_ReadTxStatus
-                0x00001950       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(SPI_DAC.o)
-                0x00001950                SPI_DAC_ReadTxStatus
+                0x000019c4       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(SPI_DAC.o)
+                0x000019c4                SPI_DAC_ReadTxStatus
  .text.SPI_DAC_ReadRxStatus
-                0x00001970       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(SPI_DAC.o)
-                0x00001970                SPI_DAC_ReadRxStatus
+                0x000019e4       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(SPI_DAC.o)
+                0x000019e4                SPI_DAC_ReadRxStatus
  .text.SPI_DAC_WriteTxData
-                0x00001990       0x34 .\ARM_GCC_493\Release\ADC_DAC.a(SPI_DAC.o)
-                0x00001990                SPI_DAC_WriteTxData
+                0x00001a04       0x34 .\ARM_GCC_493\Release\ADC_DAC.a(SPI_DAC.o)
+                0x00001a04                SPI_DAC_WriteTxData
  .text.SPI_DAC_ClearFIFO
-                0x000019c4       0x80 .\ARM_GCC_493\Release\ADC_DAC.a(SPI_DAC.o)
-                0x000019c4                SPI_DAC_ClearFIFO
+                0x00001a38       0x80 .\ARM_GCC_493\Release\ADC_DAC.a(SPI_DAC.o)
+                0x00001a38                SPI_DAC_ClearFIFO
  .text.SPI_DAC_IntClock_Start
-                0x00001a44       0x34 .\ARM_GCC_493\Release\ADC_DAC.a(SPI_DAC_IntClock.o)
-                0x00001a44                SPI_DAC_IntClock_Start
+                0x00001ab8       0x34 .\ARM_GCC_493\Release\ADC_DAC.a(SPI_DAC_IntClock.o)
+                0x00001ab8                SPI_DAC_IntClock_Start
  .text.ADC_1_OUT_LSB_Write
-                0x00001a78       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_1_OUT_LSB.o)
-                0x00001a78                ADC_1_OUT_LSB_Write
+                0x00001aec       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_1_OUT_LSB.o)
+                0x00001aec                ADC_1_OUT_LSB_Write
  .text.ADC_1_OUT_MSB_Write
-                0x00001a98       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_1_OUT_MSB.o)
-                0x00001a98                ADC_1_OUT_MSB_Write
+                0x00001b0c       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_1_OUT_MSB.o)
+                0x00001b0c                ADC_1_OUT_MSB_Write
  .text.DAC_IN_MSB_Read
-                0x00001ab8       0x18 .\ARM_GCC_493\Release\ADC_DAC.a(DAC_IN_MSB.o)
-                0x00001ab8                DAC_IN_MSB_Read
+                0x00001b2c       0x18 .\ARM_GCC_493\Release\ADC_DAC.a(DAC_IN_MSB.o)
+                0x00001b2c                DAC_IN_MSB_Read
  .text.DAC_IN_LSB_Read
-                0x00001ad0       0x18 .\ARM_GCC_493\Release\ADC_DAC.a(DAC_IN_LSB.o)
-                0x00001ad0                DAC_IN_LSB_Read
+                0x00001b44       0x18 .\ARM_GCC_493\Release\ADC_DAC.a(DAC_IN_LSB.o)
+                0x00001b44                DAC_IN_LSB_Read
  .text.PWM_ADC_CK_Start
-                0x00001ae8       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_ADC_CK.o)
-                0x00001ae8                PWM_ADC_CK_Start
+                0x00001b5c       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_ADC_CK.o)
+                0x00001b5c                PWM_ADC_CK_Start
  .text.PWM_ADC_CK_Init
-                0x00001b08       0xbc .\ARM_GCC_493\Release\ADC_DAC.a(PWM_ADC_CK.o)
-                0x00001b08                PWM_ADC_CK_Init
+                0x00001b7c       0xbc .\ARM_GCC_493\Release\ADC_DAC.a(PWM_ADC_CK.o)
+                0x00001b7c                PWM_ADC_CK_Init
  .text.PWM_ADC_CK_Enable
-                0x00001bc4       0x48 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_ADC_CK.o)
-                0x00001bc4                PWM_ADC_CK_Enable
+                0x00001c38       0x48 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_ADC_CK.o)
+                0x00001c38                PWM_ADC_CK_Enable
  .text.PWM_ADC_CK_WritePeriod
-                0x00001c0c       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_ADC_CK.o)
-                0x00001c0c                PWM_ADC_CK_WritePeriod
+                0x00001c80       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_ADC_CK.o)
+                0x00001c80                PWM_ADC_CK_WritePeriod
  .text.PWM_ADC_CK_WriteCompare
-                0x00001c2c       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_ADC_CK.o)
-                0x00001c2c                PWM_ADC_CK_WriteCompare
+                0x00001ca0       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_ADC_CK.o)
+                0x00001ca0                PWM_ADC_CK_WriteCompare
  .text.PWM_ADC_CK_SetInterruptMode
-                0x00001c4c       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_ADC_CK.o)
-                0x00001c4c                PWM_ADC_CK_SetInterruptMode
+                0x00001cc0       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_ADC_CK.o)
+                0x00001cc0                PWM_ADC_CK_SetInterruptMode
  .text.PWM_11_Start
-                0x00001c6c       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_11.o)
-                0x00001c6c                PWM_11_Start
+                0x00001ce0       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_11.o)
+                0x00001ce0                PWM_11_Start
  .text.PWM_11_Init
-                0x00001c8c       0x78 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_11.o)
-                0x00001c8c                PWM_11_Init
+                0x00001d00       0x7c .\ARM_GCC_493\Release\ADC_DAC.a(PWM_11.o)
+                0x00001d00                PWM_11_Init
  .text.PWM_11_Enable
-                0x00001d04       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_11.o)
-                0x00001d04                PWM_11_Enable
+                0x00001d7c       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_11.o)
+                0x00001d7c                PWM_11_Enable
  .text.PWM_11_WriteCounter
-                0x00001d24       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_11.o)
-                0x00001d24                PWM_11_WriteCounter
+                0x00001d9c       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_11.o)
+                0x00001d9c                PWM_11_WriteCounter
  .text.PWM_11_ClearFIFO
-                0x00001d44       0x1c .\ARM_GCC_493\Release\ADC_DAC.a(PWM_11.o)
-                0x00001d44                PWM_11_ClearFIFO
+                0x00001dbc       0x1c .\ARM_GCC_493\Release\ADC_DAC.a(PWM_11.o)
+                0x00001dbc                PWM_11_ClearFIFO
  .text.PWM_11_WritePeriod
-                0x00001d60       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_11.o)
-                0x00001d60                PWM_11_WritePeriod
+                0x00001dd8       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_11.o)
+                0x00001dd8                PWM_11_WritePeriod
  .text.PWM_11_WriteCompare
-                0x00001d80       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_11.o)
-                0x00001d80                PWM_11_WriteCompare
+                0x00001df8       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_11.o)
+                0x00001df8                PWM_11_WriteCompare
  .text.PWM_11_SetInterruptMode
-                0x00001da0       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_11.o)
-                0x00001da0                PWM_11_SetInterruptMode
+                0x00001e18       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_11.o)
+                0x00001e18                PWM_11_SetInterruptMode
  .text.PWM_11_ReadStatusRegister
-                0x00001dc0       0x18 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_11.o)
-                0x00001dc0                PWM_11_ReadStatusRegister
+                0x00001e38       0x18 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_11.o)
+                0x00001e38                PWM_11_ReadStatusRegister
  .text.PWM_11_ReadCapture
-                0x00001dd8       0x18 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_11.o)
-                0x00001dd8                PWM_11_ReadCapture
+                0x00001e50       0x18 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_11.o)
+                0x00001e50                PWM_11_ReadCapture
  .text.PWM_7_Start
-                0x00001df0       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_7.o)
-                0x00001df0                PWM_7_Start
+                0x00001e68       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_7.o)
+                0x00001e68                PWM_7_Start
  .text.PWM_7_Init
-                0x00001e10       0x78 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_7.o)
-                0x00001e10                PWM_7_Init
+                0x00001e88       0x78 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_7.o)
+                0x00001e88                PWM_7_Init
  .text.PWM_7_Enable
-                0x00001e88       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_7.o)
-                0x00001e88                PWM_7_Enable
+                0x00001f00       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_7.o)
+                0x00001f00                PWM_7_Enable
  .text.PWM_7_WriteCounter
-                0x00001ea8       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_7.o)
-                0x00001ea8                PWM_7_WriteCounter
+                0x00001f20       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_7.o)
+                0x00001f20                PWM_7_WriteCounter
  .text.PWM_7_ClearFIFO
-                0x00001ec8       0x1c .\ARM_GCC_493\Release\ADC_DAC.a(PWM_7.o)
-                0x00001ec8                PWM_7_ClearFIFO
+                0x00001f40       0x1c .\ARM_GCC_493\Release\ADC_DAC.a(PWM_7.o)
+                0x00001f40                PWM_7_ClearFIFO
  .text.PWM_7_WritePeriod
-                0x00001ee4       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_7.o)
-                0x00001ee4                PWM_7_WritePeriod
+                0x00001f5c       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_7.o)
+                0x00001f5c                PWM_7_WritePeriod
  .text.PWM_7_WriteCompare
-                0x00001f04       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_7.o)
-                0x00001f04                PWM_7_WriteCompare
+                0x00001f7c       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_7.o)
+                0x00001f7c                PWM_7_WriteCompare
  .text.PWM_7_SetInterruptMode
-                0x00001f24       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_7.o)
-                0x00001f24                PWM_7_SetInterruptMode
+                0x00001f9c       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_7.o)
+                0x00001f9c                PWM_7_SetInterruptMode
  .text.PWM_7_ReadStatusRegister
-                0x00001f44       0x18 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_7.o)
-                0x00001f44                PWM_7_ReadStatusRegister
+                0x00001fbc       0x18 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_7.o)
+                0x00001fbc                PWM_7_ReadStatusRegister
  .text.PWM_7_ReadCapture
-                0x00001f5c       0x18 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_7.o)
-                0x00001f5c                PWM_7_ReadCapture
+                0x00001fd4       0x18 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_7.o)
+                0x00001fd4                PWM_7_ReadCapture
  .text.PWM_9_Start
-                0x00001f74       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_9.o)
-                0x00001f74                PWM_9_Start
+                0x00001fec       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_9.o)
+                0x00001fec                PWM_9_Start
  .text.PWM_9_Init
-                0x00001f94       0x7c .\ARM_GCC_493\Release\ADC_DAC.a(PWM_9.o)
-                0x00001f94                PWM_9_Init
+                0x0000200c       0x78 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_9.o)
+                0x0000200c                PWM_9_Init
  .text.PWM_9_Enable
-                0x00002010       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_9.o)
-                0x00002010                PWM_9_Enable
+                0x00002084       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_9.o)
+                0x00002084                PWM_9_Enable
  .text.PWM_9_WriteCounter
-                0x00002030       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_9.o)
-                0x00002030                PWM_9_WriteCounter
+                0x000020a4       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_9.o)
+                0x000020a4                PWM_9_WriteCounter
  .text.PWM_9_ClearFIFO
-                0x00002050       0x1c .\ARM_GCC_493\Release\ADC_DAC.a(PWM_9.o)
-                0x00002050                PWM_9_ClearFIFO
+                0x000020c4       0x1c .\ARM_GCC_493\Release\ADC_DAC.a(PWM_9.o)
+                0x000020c4                PWM_9_ClearFIFO
  .text.PWM_9_WritePeriod
-                0x0000206c       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_9.o)
-                0x0000206c                PWM_9_WritePeriod
+                0x000020e0       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_9.o)
+                0x000020e0                PWM_9_WritePeriod
  .text.PWM_9_WriteCompare
-                0x0000208c       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_9.o)
-                0x0000208c                PWM_9_WriteCompare
+                0x00002100       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_9.o)
+                0x00002100                PWM_9_WriteCompare
  .text.PWM_9_SetInterruptMode
-                0x000020ac       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_9.o)
-                0x000020ac                PWM_9_SetInterruptMode
+                0x00002120       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_9.o)
+                0x00002120                PWM_9_SetInterruptMode
  .text.PWM_9_ReadStatusRegister
-                0x000020cc       0x18 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_9.o)
-                0x000020cc                PWM_9_ReadStatusRegister
+                0x00002140       0x18 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_9.o)
+                0x00002140                PWM_9_ReadStatusRegister
  .text.PWM_9_ReadCapture
-                0x000020e4       0x18 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_9.o)
-                0x000020e4                PWM_9_ReadCapture
+                0x00002158       0x18 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_9.o)
+                0x00002158                PWM_9_ReadCapture
  .text.PWM_8_Start
-                0x000020fc       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_8.o)
-                0x000020fc                PWM_8_Start
+                0x00002170       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_8.o)
+                0x00002170                PWM_8_Start
  .text.PWM_8_Init
-                0x0000211c       0x7c .\ARM_GCC_493\Release\ADC_DAC.a(PWM_8.o)
-                0x0000211c                PWM_8_Init
+                0x00002190       0x78 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_8.o)
+                0x00002190                PWM_8_Init
  .text.PWM_8_Enable
-                0x00002198       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_8.o)
-                0x00002198                PWM_8_Enable
+                0x00002208       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_8.o)
+                0x00002208                PWM_8_Enable
  .text.PWM_8_WriteCounter
-                0x000021b8       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_8.o)
-                0x000021b8                PWM_8_WriteCounter
+                0x00002228       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_8.o)
+                0x00002228                PWM_8_WriteCounter
  .text.PWM_8_ClearFIFO
-                0x000021d8       0x1c .\ARM_GCC_493\Release\ADC_DAC.a(PWM_8.o)
-                0x000021d8                PWM_8_ClearFIFO
+                0x00002248       0x1c .\ARM_GCC_493\Release\ADC_DAC.a(PWM_8.o)
+                0x00002248                PWM_8_ClearFIFO
  .text.PWM_8_WritePeriod
-                0x000021f4       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_8.o)
-                0x000021f4                PWM_8_WritePeriod
+                0x00002264       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_8.o)
+                0x00002264                PWM_8_WritePeriod
  .text.PWM_8_WriteCompare
-                0x00002214       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_8.o)
-                0x00002214                PWM_8_WriteCompare
+                0x00002284       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_8.o)
+                0x00002284                PWM_8_WriteCompare
  .text.PWM_8_SetInterruptMode
-                0x00002234       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_8.o)
-                0x00002234                PWM_8_SetInterruptMode
+                0x000022a4       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_8.o)
+                0x000022a4                PWM_8_SetInterruptMode
  .text.PWM_8_ReadStatusRegister
-                0x00002254       0x18 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_8.o)
-                0x00002254                PWM_8_ReadStatusRegister
+                0x000022c4       0x18 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_8.o)
+                0x000022c4                PWM_8_ReadStatusRegister
  .text.PWM_8_ReadCapture
-                0x0000226c       0x18 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_8.o)
-                0x0000226c                PWM_8_ReadCapture
+                0x000022dc       0x18 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_8.o)
+                0x000022dc                PWM_8_ReadCapture
  .text.PWM_6_Start
-                0x00002284       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_6.o)
-                0x00002284                PWM_6_Start
+                0x000022f4       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_6.o)
+                0x000022f4                PWM_6_Start
  .text.PWM_6_Init
-                0x000022a4       0x78 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_6.o)
-                0x000022a4                PWM_6_Init
+                0x00002314       0x78 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_6.o)
+                0x00002314                PWM_6_Init
  .text.PWM_6_Enable
-                0x0000231c       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_6.o)
-                0x0000231c                PWM_6_Enable
+                0x0000238c       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_6.o)
+                0x0000238c                PWM_6_Enable
  .text.PWM_6_WriteCounter
-                0x0000233c       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_6.o)
-                0x0000233c                PWM_6_WriteCounter
+                0x000023ac       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_6.o)
+                0x000023ac                PWM_6_WriteCounter
  .text.PWM_6_ClearFIFO
-                0x0000235c       0x1c .\ARM_GCC_493\Release\ADC_DAC.a(PWM_6.o)
-                0x0000235c                PWM_6_ClearFIFO
+                0x000023cc       0x1c .\ARM_GCC_493\Release\ADC_DAC.a(PWM_6.o)
+                0x000023cc                PWM_6_ClearFIFO
  .text.PWM_6_WritePeriod
-                0x00002378       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_6.o)
-                0x00002378                PWM_6_WritePeriod
+                0x000023e8       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_6.o)
+                0x000023e8                PWM_6_WritePeriod
  .text.PWM_6_WriteCompare
-                0x00002398       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_6.o)
-                0x00002398                PWM_6_WriteCompare
+                0x00002408       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_6.o)
+                0x00002408                PWM_6_WriteCompare
  .text.PWM_6_SetInterruptMode
-                0x000023b8       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_6.o)
-                0x000023b8                PWM_6_SetInterruptMode
+                0x00002428       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_6.o)
+                0x00002428                PWM_6_SetInterruptMode
  .text.PWM_6_ReadStatusRegister
-                0x000023d8       0x18 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_6.o)
-                0x000023d8                PWM_6_ReadStatusRegister
+                0x00002448       0x18 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_6.o)
+                0x00002448                PWM_6_ReadStatusRegister
  .text.PWM_6_ReadCapture
-                0x000023f0       0x18 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_6.o)
-                0x000023f0                PWM_6_ReadCapture
+                0x00002460       0x18 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_6.o)
+                0x00002460                PWM_6_ReadCapture
  .text.PWM_10_Start
-                0x00002408       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_10.o)
-                0x00002408                PWM_10_Start
+                0x00002478       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_10.o)
+                0x00002478                PWM_10_Start
  .text.PWM_10_Init
-                0x00002428       0x7c .\ARM_GCC_493\Release\ADC_DAC.a(PWM_10.o)
-                0x00002428                PWM_10_Init
+                0x00002498       0x7c .\ARM_GCC_493\Release\ADC_DAC.a(PWM_10.o)
+                0x00002498                PWM_10_Init
  .text.PWM_10_Enable
-                0x000024a4       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_10.o)
-                0x000024a4                PWM_10_Enable
+                0x00002514       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_10.o)
+                0x00002514                PWM_10_Enable
  .text.PWM_10_WriteCounter
-                0x000024c4       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_10.o)
-                0x000024c4                PWM_10_WriteCounter
+                0x00002534       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_10.o)
+                0x00002534                PWM_10_WriteCounter
  .text.PWM_10_ClearFIFO
-                0x000024e4       0x1c .\ARM_GCC_493\Release\ADC_DAC.a(PWM_10.o)
-                0x000024e4                PWM_10_ClearFIFO
+                0x00002554       0x1c .\ARM_GCC_493\Release\ADC_DAC.a(PWM_10.o)
+                0x00002554                PWM_10_ClearFIFO
  .text.PWM_10_WritePeriod
-                0x00002500       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_10.o)
-                0x00002500                PWM_10_WritePeriod
+                0x00002570       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_10.o)
+                0x00002570                PWM_10_WritePeriod
  .text.PWM_10_WriteCompare
-                0x00002520       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_10.o)
-                0x00002520                PWM_10_WriteCompare
+                0x00002590       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_10.o)
+                0x00002590                PWM_10_WriteCompare
  .text.PWM_10_SetInterruptMode
-                0x00002540       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_10.o)
-                0x00002540                PWM_10_SetInterruptMode
+                0x000025b0       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_10.o)
+                0x000025b0                PWM_10_SetInterruptMode
  .text.PWM_10_ReadStatusRegister
-                0x00002560       0x18 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_10.o)
-                0x00002560                PWM_10_ReadStatusRegister
+                0x000025d0       0x18 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_10.o)
+                0x000025d0                PWM_10_ReadStatusRegister
  .text.PWM_10_ReadCapture
-                0x00002578       0x18 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_10.o)
-                0x00002578                PWM_10_ReadCapture
+                0x000025e8       0x18 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_10.o)
+                0x000025e8                PWM_10_ReadCapture
  .text.PWM_4_Start
-                0x00002590       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_4.o)
-                0x00002590                PWM_4_Start
+                0x00002600       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_4.o)
+                0x00002600                PWM_4_Start
  .text.PWM_4_Init
-                0x000025b0       0x78 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_4.o)
-                0x000025b0                PWM_4_Init
+                0x00002620       0x7c .\ARM_GCC_493\Release\ADC_DAC.a(PWM_4.o)
+                0x00002620                PWM_4_Init
  .text.PWM_4_Enable
-                0x00002628       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_4.o)
-                0x00002628                PWM_4_Enable
+                0x0000269c       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_4.o)
+                0x0000269c                PWM_4_Enable
  .text.PWM_4_WriteCounter
-                0x00002648       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_4.o)
-                0x00002648                PWM_4_WriteCounter
+                0x000026bc       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_4.o)
+                0x000026bc                PWM_4_WriteCounter
  .text.PWM_4_ClearFIFO
-                0x00002668       0x1c .\ARM_GCC_493\Release\ADC_DAC.a(PWM_4.o)
-                0x00002668                PWM_4_ClearFIFO
+                0x000026dc       0x1c .\ARM_GCC_493\Release\ADC_DAC.a(PWM_4.o)
+                0x000026dc                PWM_4_ClearFIFO
  .text.PWM_4_WritePeriod
-                0x00002684       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_4.o)
-                0x00002684                PWM_4_WritePeriod
+                0x000026f8       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_4.o)
+                0x000026f8                PWM_4_WritePeriod
  .text.PWM_4_WriteCompare
-                0x000026a4       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_4.o)
-                0x000026a4                PWM_4_WriteCompare
+                0x00002718       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_4.o)
+                0x00002718                PWM_4_WriteCompare
  .text.PWM_4_SetInterruptMode
-                0x000026c4       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_4.o)
-                0x000026c4                PWM_4_SetInterruptMode
+                0x00002738       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_4.o)
+                0x00002738                PWM_4_SetInterruptMode
  .text.PWM_4_ReadStatusRegister
-                0x000026e4       0x18 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_4.o)
-                0x000026e4                PWM_4_ReadStatusRegister
+                0x00002758       0x18 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_4.o)
+                0x00002758                PWM_4_ReadStatusRegister
  .text.PWM_4_ReadCapture
-                0x000026fc       0x18 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_4.o)
-                0x000026fc                PWM_4_ReadCapture
+                0x00002770       0x18 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_4.o)
+                0x00002770                PWM_4_ReadCapture
  .text.PWM_5_Start
-                0x00002714       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_5.o)
-                0x00002714                PWM_5_Start
+                0x00002788       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_5.o)
+                0x00002788                PWM_5_Start
  .text.PWM_5_Init
-                0x00002734       0x7c .\ARM_GCC_493\Release\ADC_DAC.a(PWM_5.o)
-                0x00002734                PWM_5_Init
+                0x000027a8       0x78 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_5.o)
+                0x000027a8                PWM_5_Init
  .text.PWM_5_Enable
-                0x000027b0       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_5.o)
-                0x000027b0                PWM_5_Enable
+                0x00002820       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_5.o)
+                0x00002820                PWM_5_Enable
  .text.PWM_5_WriteCounter
-                0x000027d0       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_5.o)
-                0x000027d0                PWM_5_WriteCounter
+                0x00002840       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_5.o)
+                0x00002840                PWM_5_WriteCounter
  .text.PWM_5_ClearFIFO
-                0x000027f0       0x1c .\ARM_GCC_493\Release\ADC_DAC.a(PWM_5.o)
-                0x000027f0                PWM_5_ClearFIFO
+                0x00002860       0x1c .\ARM_GCC_493\Release\ADC_DAC.a(PWM_5.o)
+                0x00002860                PWM_5_ClearFIFO
  .text.PWM_5_WritePeriod
-                0x0000280c       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_5.o)
-                0x0000280c                PWM_5_WritePeriod
+                0x0000287c       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_5.o)
+                0x0000287c                PWM_5_WritePeriod
  .text.PWM_5_WriteCompare
-                0x0000282c       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_5.o)
-                0x0000282c                PWM_5_WriteCompare
+                0x0000289c       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_5.o)
+                0x0000289c                PWM_5_WriteCompare
  .text.PWM_5_SetInterruptMode
-                0x0000284c       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_5.o)
-                0x0000284c                PWM_5_SetInterruptMode
+                0x000028bc       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_5.o)
+                0x000028bc                PWM_5_SetInterruptMode
  .text.PWM_5_ReadStatusRegister
-                0x0000286c       0x18 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_5.o)
-                0x0000286c                PWM_5_ReadStatusRegister
+                0x000028dc       0x18 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_5.o)
+                0x000028dc                PWM_5_ReadStatusRegister
  .text.PWM_5_ReadCapture
-                0x00002884       0x18 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_5.o)
-                0x00002884                PWM_5_ReadCapture
+                0x000028f4       0x18 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_5.o)
+                0x000028f4                PWM_5_ReadCapture
  .text.ADC_SAR_Seq_Init
-                0x0000289c       0x50 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq.o)
-                0x0000289c                ADC_SAR_Seq_Init
+                0x0000290c       0x50 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq.o)
+                0x0000290c                ADC_SAR_Seq_Init
  .text.ADC_SAR_Seq_Enable
-                0x000028ec      0x13c .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq.o)
-                0x000028ec                ADC_SAR_Seq_Enable
+                0x0000295c      0x13c .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq.o)
+                0x0000295c                ADC_SAR_Seq_Enable
  .text.ADC_SAR_Seq_Start
-                0x00002a28       0x2c .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq.o)
-                0x00002a28                ADC_SAR_Seq_Start
+                0x00002a98       0x2c .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq.o)
+                0x00002a98                ADC_SAR_Seq_Start
  .text.ADC_SAR_Seq_StartConvert
-                0x00002a54        0xc .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq.o)
-                0x00002a54                ADC_SAR_Seq_StartConvert
+                0x00002ac4        0xc .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq.o)
+                0x00002ac4                ADC_SAR_Seq_StartConvert
  .text.ADC_SAR_Seq_IsEndConversion
-                0x00002a60       0x30 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq.o)
-                0x00002a60                ADC_SAR_Seq_IsEndConversion
+                0x00002ad0       0x30 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq.o)
+                0x00002ad0                ADC_SAR_Seq_IsEndConversion
  .text.ADC_SAR_Seq_GetResult16
-                0x00002a90       0x3c .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq.o)
-                0x00002a90                ADC_SAR_Seq_GetResult16
+                0x00002b00       0x3c .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq.o)
+                0x00002b00                ADC_SAR_Seq_GetResult16
  .text.ADC_SAR_Seq_ISR
-                0x00002acc        0xc .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_INT.o)
-                0x00002acc                ADC_SAR_Seq_ISR
+                0x00002b3c        0xc .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_INT.o)
+                0x00002b3c                ADC_SAR_Seq_ISR
  .text.ADC_SAR_Seq_SAR_Start
-                0x00002ad8       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
-                0x00002ad8                ADC_SAR_Seq_SAR_Start
+                0x00002b48       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
+                0x00002b48                ADC_SAR_Seq_SAR_Start
  .text.ADC_SAR_Seq_SAR_Init
-                0x00002af8       0x2c .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
-                0x00002af8                ADC_SAR_Seq_SAR_Init
+                0x00002b68       0x2c .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
+                0x00002b68                ADC_SAR_Seq_SAR_Init
  .text.ADC_SAR_Seq_SAR_Enable
-                0x00002b24       0xc0 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
-                0x00002b24                ADC_SAR_Seq_SAR_Enable
+                0x00002b94       0xc0 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
+                0x00002b94                ADC_SAR_Seq_SAR_Enable
  .text.ADC_SAR_Seq_SAR_SetResolution
-                0x00002be4       0x4c .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
-                0x00002be4                ADC_SAR_Seq_SAR_SetResolution
+                0x00002c54       0x4c .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
+                0x00002c54                ADC_SAR_Seq_SAR_SetResolution
  .text.ADC_SAR_Seq_SAR_StartConvert
-                0x00002c30       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
-                0x00002c30                ADC_SAR_Seq_SAR_StartConvert
+                0x00002ca0       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
+                0x00002ca0                ADC_SAR_Seq_SAR_StartConvert
  .text.ADC_SAR_Seq_SAR_CalcGain
-                0x00002c50       0x7c .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
+                0x00002cc0       0x7c .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
  .text.ADC_SAR_Seq_TempBuf_DmaInitialize
-                0x00002ccc       0x68 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_TempBuf_dma.o)
-                0x00002ccc                ADC_SAR_Seq_TempBuf_DmaInitialize
+                0x00002d3c       0x68 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_TempBuf_dma.o)
+                0x00002d3c                ADC_SAR_Seq_TempBuf_DmaInitialize
  .text.ADC_SAR_Seq_FinalBuf_DmaInitialize
-                0x00002d34       0x68 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_FinalBuf_dma.o)
-                0x00002d34                ADC_SAR_Seq_FinalBuf_DmaInitialize
+                0x00002da4       0x68 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_FinalBuf_dma.o)
+                0x00002da4                ADC_SAR_Seq_FinalBuf_DmaInitialize
  .text.ADC_SAR_Seq_IRQ_SetVector
-                0x00002d9c       0x24 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_IRQ.o)
-                0x00002d9c                ADC_SAR_Seq_IRQ_SetVector
+                0x00002e0c       0x24 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_IRQ.o)
+                0x00002e0c                ADC_SAR_Seq_IRQ_SetVector
  .text.ADC_SAR_Seq_IRQ_SetPriority
-                0x00002dc0       0x24 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_IRQ.o)
-                0x00002dc0                ADC_SAR_Seq_IRQ_SetPriority
+                0x00002e30       0x24 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_IRQ.o)
+                0x00002e30                ADC_SAR_Seq_IRQ_SetPriority
+ .text.DIV_MASK_MSB_Write
+                0x00002e54       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(DIV_MASK_MSB.o)
+                0x00002e54                DIV_MASK_MSB_Write
  .text.DIV_MASK_LSB_Write
-                0x00002de4       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(DIV_MASK_LSB.o)
-                0x00002de4                DIV_MASK_LSB_Write
- *fill*         0x00002e04        0x4 
- .text          0x00002e08       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(CyBootAsmGnu.o)
-                0x00002e08                CyDelayCycles
-                0x00002e18                CyEnterCriticalSection
-                0x00002e20                CyExitCriticalSection
- .text.__errno  0x00002e28        0xc c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
-                0x00002e28                __errno
+                0x00002e74       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(DIV_MASK_LSB.o)
+                0x00002e74                DIV_MASK_LSB_Write
+ *fill*         0x00002e94        0x4 
+ .text          0x00002e98       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(CyBootAsmGnu.o)
+                0x00002e98                CyDelayCycles
+                0x00002ea8                CyEnterCriticalSection
+                0x00002eb0                CyExitCriticalSection
+ .text.__errno  0x00002eb8        0xc c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
+                0x00002eb8                __errno
  .text.__libc_init_array
-                0x00002e34       0x4c c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
-                0x00002e34                __libc_init_array
- .text.memcpy   0x00002e80       0x16 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy.o)
-                0x00002e80                memcpy
- .text.memset   0x00002e96       0x10 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
-                0x00002e96                memset
+                0x00002ec4       0x4c c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
+                0x00002ec4                __libc_init_array
+ .text.memcpy   0x00002f10       0x16 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy.o)
+                0x00002f10                memcpy
+ .text.memset   0x00002f26       0x10 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
+                0x00002f26                memset
  *(.plt)
  *(.gnu.warning)
  *(.glue_7t)
@@ -1490,90 +1501,89 @@ END GROUP
  *(.ARM.extab* .gnu.linkonce.armextab.*)
  *(.gcc_except_table)
 
-.v4_bx          0x00002ea8        0x0
+.v4_bx          0x00002f38        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x00002ea8        0x0
+.iplt           0x00002f38        0x0
  .iplt          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
 
 .eh_frame_hdr
  *(.eh_frame_hdr)
 
-.eh_frame       0x00002ea8        0x4
+.eh_frame       0x00002f38        0x4
  *(.eh_frame)
- .eh_frame      0x00002ea8        0x0 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
- .eh_frame      0x00002ea8        0x4 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtend.o
-                0x00002eac                PROVIDE (__exidx_start, .)
+ .eh_frame      0x00002f38        0x0 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
+ .eh_frame      0x00002f38        0x4 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtend.o
+                0x00002f3c                PROVIDE (__exidx_start, .)
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x00002eac                __exidx_end = .
+                0x00002f3c                __exidx_end = .
 
-.rodata         0x00002eac      0x704
+.rodata         0x00002f3c      0x70c
  *(.rodata .rodata.* .gnu.linkonce.r.*)
- .rodata        0x00002eac       0x10 .\ARM_GCC_493\Release\main.o
- .rodata        0x00002ebc       0x38 .\ARM_GCC_493\Release\ADC_DAC.a(cyfitter_cfg.o)
- .rodata        0x00002ef4       0x40 .\ARM_GCC_493\Release\ADC_DAC.a(LCD_Char_1_CustChars.o)
-                0x00002ef4                LCD_Char_1_customFonts
- .rodata        0x00002f34      0x640 .\ARM_GCC_493\Release\ADC_DAC.a(Filter_RAM_Data.o)
-                0x00002f34                Filter_control
-                0x00003034                Filter_data_a
-                0x00003234                Filter_data_b
-                0x00003434                Filter_acu
-                0x00003474                Filter_cfsm
+ .rodata        0x00002f3c       0x10 .\ARM_GCC_493\Release\main.o
+ .rodata        0x00002f4c       0x44 .\ARM_GCC_493\Release\ADC_DAC.a(cyfitter_cfg.o)
+ .rodata        0x00002f90       0x40 .\ARM_GCC_493\Release\ADC_DAC.a(LCD_Char_1_CustChars.o)
+                0x00002f90                LCD_Char_1_customFonts
+ .rodata        0x00002fd0      0x640 .\ARM_GCC_493\Release\ADC_DAC.a(Filter_RAM_Data.o)
+                0x00002fd0                Filter_control
+                0x000030d0                Filter_data_a
+                0x000032d0                Filter_data_b
+                0x000034d0                Filter_acu
+                0x00003510                Filter_cfsm
  .rodata.str1.1
-                0x00003574        0x2 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
-                0x00003578                . = ALIGN (0x4)
- *fill*         0x00003576        0x2 
+                0x00003610        0x2 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
+                0x00003614                . = ALIGN (0x4)
+ *fill*         0x00003612        0x2 
  *(.init)
- .init          0x00003578        0x4 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crti.o
-                0x00003578                _init
- .init          0x0000357c        0x8 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtn.o
-                0x00003584                . = ALIGN (0x4)
-                0x00003584                __preinit_array_start = .
+ .init          0x00003614        0x4 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crti.o
+                0x00003614                _init
+ .init          0x00003618        0x8 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtn.o
+                0x00003620                . = ALIGN (0x4)
+                0x00003620                __preinit_array_start = .
  *(.preinit_array)
-                0x00003584                __preinit_array_end = .
-                0x00003584                . = ALIGN (0x4)
-                0x00003584                __init_array_start = .
+                0x00003620                __preinit_array_end = .
+                0x00003620                . = ALIGN (0x4)
+                0x00003620                __init_array_start = .
  *(SORT(.init_array.*))
  *(.init_array)
- .init_array    0x00003584        0x4 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
- .init_array    0x00003588        0x4 .\ARM_GCC_493\Release\Cm3Start.o
-                0x0000358c                __init_array_end = .
-                0x0000358c                . = ALIGN (0x4)
+ .init_array    0x00003620        0x4 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
+ .init_array    0x00003624        0x4 .\ARM_GCC_493\Release\Cm3Start.o
+                0x00003628                __init_array_end = .
+                0x00003628                . = ALIGN (0x4)
  *(.fini)
- .fini          0x0000358c        0x4 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crti.o
-                0x0000358c                _fini
- .fini          0x00003590        0x8 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtn.o
-                0x00003598                . = ALIGN (0x4)
-                0x00003598                __fini_array_start = .
+ .fini          0x00003628        0x4 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crti.o
+                0x00003628                _fini
+ .fini          0x0000362c        0x8 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtn.o
+                0x00003634                . = ALIGN (0x4)
+                0x00003634                __fini_array_start = .
  *(.fini_array)
- .fini_array    0x00003598        0x4 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
+ .fini_array    0x00003634        0x4 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
  *(SORT(.fini_array.*))
-                0x0000359c                __fini_array_end = .
-                0x0000359c                . = ALIGN (0x4)
+                0x00003638                __fini_array_end = .
+                0x00003638                . = ALIGN (0x4)
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT(.ctors.*))
  *crtend.o(.ctors)
-                0x0000359c                . = ALIGN (0x4)
+                0x00003638                . = ALIGN (0x4)
  *crtbegin.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT(.dtors.*))
  *crtend.o(.dtors)
-                0x0000359c                . = ALIGN (0x4)
-                0x0000359c                __cy_regions = .
-                0x0000359c        0x4 LONG 0x35b0 __cy_region_init_ram
-                0x000035a0        0x4 LONG 0x1fff8108 __cy_region_start_data
-                0x000035a4        0x4 LONG 0x88 __cy_region_init_size_ram
-                0x000035a8        0x4 LONG 0x80 __cy_region_zero_size_ram
-                0x000035ac                __cy_regions_end = .
-                0x000035b0                . = ALIGN (0x8)
- *fill*         0x000035ac        0x4 
-                0x000035b0                _etext = .
+                0x00003638                . = ALIGN (0x4)
+                0x00003638                __cy_regions = .
+                0x00003638        0x4 LONG 0x3648 __cy_region_init_ram
+                0x0000363c        0x4 LONG 0x1fff8108 __cy_region_start_data
+                0x00003640        0x4 LONG 0x88 __cy_region_init_size_ram
+                0x00003644        0x4 LONG 0x78 __cy_region_zero_size_ram
+                0x00003648                __cy_regions_end = .
+                0x00003648                . = ALIGN (0x8)
+                0x00003648                _etext = .
 
 .cy_checksum_exclude
-                0x000035b0        0x0
+                0x00003648        0x0
  *(.cy_checksum_exclude)
 
 .ramvectors     0x1fff8000      0x100
@@ -1588,7 +1598,7 @@ END GROUP
  .noinit        0x1fff8104        0x1 .\ARM_GCC_493\Release\ADC_DAC.a(CyLib.o)
                 0x1fff8104                CyResetStatus
 
-.data           0x1fff8108       0x88 load address 0x000035b0
+.data           0x1fff8108       0x88 load address 0x00003648
                 0x1fff8108                __cy_region_start_data = .
  *(.jcr)
  .jcr           0x1fff8108        0x0 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
@@ -1618,15 +1628,15 @@ END GROUP
  *(.ram)
                 0x1fff8190                _edata = .
 
-.igot.plt       0x1fff8190        0x0 load address 0x00003638
+.igot.plt       0x1fff8190        0x0 load address 0x000036d0
  .igot.plt      0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
 
-.bss            0x1fff8190       0x80 load address 0x00003638
+.bss            0x1fff8190       0x78 load address 0x000036d0
                 0x1fff8190                PROVIDE (__bss_start__, .)
  *(.shbss)
  *(.bss .bss.* .gnu.linkonce.b.*)
  .bss           0x1fff8190       0x1c c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
- .bss           0x1fff81ac       0x12 .\ARM_GCC_493\Release\main.o
+ .bss           0x1fff81ac       0x18 .\ARM_GCC_493\Release\main.o
                 0x1fff81ac                BIT_MASK_CTRL
                 0x1fff81ae                DIV_MASK_CTRL
                 0x1fff81b0                OLD_BIT_MASK_DEPTH
@@ -1634,42 +1644,41 @@ END GROUP
                 0x1fff81b4                MASK_CTRL
                 0x1fff81b6                OLD_MASK_DEPTH
                 0x1fff81b8                MASK_EFFECT
-                0x1fff81ba                AUDIO_IN
-                0x1fff81bc                FRQ_CTRL
- .bss           0x1fff81be        0x2 .\ARM_GCC_493\Release\ADC_DAC.a(LCD_Char_1.o)
-                0x1fff81be                LCD_Char_1_enableState
-                0x1fff81bf                LCD_Char_1_initVar
- .bss           0x1fff81c0        0x1 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_1.o)
-                0x1fff81c0                ADC_SAR_1_initVar
- .bss           0x1fff81c1        0x1 .\ARM_GCC_493\Release\ADC_DAC.a(Opamp_1.o)
-                0x1fff81c1                Opamp_1_initVar
- .bss           0x1fff81c2        0x1 .\ARM_GCC_493\Release\ADC_DAC.a(Opamp_2.o)
-                0x1fff81c2                Opamp_2_initVar
- .bss           0x1fff81c3        0x1 .\ARM_GCC_493\Release\ADC_DAC.a(Filter.o)
-                0x1fff81c3                Filter_initVar
- .bss           0x1fff81c4        0x1 .\ARM_GCC_493\Release\ADC_DAC.a(SPI_DAC.o)
-                0x1fff81c4                SPI_DAC_initVar
- .bss           0x1fff81c5        0x1 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_ADC_CK.o)
-                0x1fff81c5                PWM_ADC_CK_initVar
- .bss           0x1fff81c6        0x1 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_11.o)
-                0x1fff81c6                PWM_11_initVar
- .bss           0x1fff81c7        0x1 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_7.o)
-                0x1fff81c7                PWM_7_initVar
- .bss           0x1fff81c8        0x1 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_9.o)
-                0x1fff81c8                PWM_9_initVar
- .bss           0x1fff81c9        0x1 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_8.o)
-                0x1fff81c9                PWM_8_initVar
- .bss           0x1fff81ca        0x1 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_6.o)
-                0x1fff81ca                PWM_6_initVar
- .bss           0x1fff81cb        0x1 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_10.o)
-                0x1fff81cb                PWM_10_initVar
- .bss           0x1fff81cc        0x1 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_4.o)
-                0x1fff81cc                PWM_4_initVar
- .bss           0x1fff81cd        0x1 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_5.o)
-                0x1fff81cd                PWM_5_initVar
- *fill*         0x1fff81ce        0x2 
- .bss           0x1fff81d0       0x14 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq.o)
-                0x1fff81d0                ADC_SAR_Seq_initVar
+                0x1fff81bc                AUDIO_IN
+                0x1fff81c0                FRQ_CTRL
+ .bss           0x1fff81c4        0x2 .\ARM_GCC_493\Release\ADC_DAC.a(LCD_Char_1.o)
+                0x1fff81c4                LCD_Char_1_enableState
+                0x1fff81c5                LCD_Char_1_initVar
+ .bss           0x1fff81c6        0x1 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_1.o)
+                0x1fff81c6                ADC_SAR_1_initVar
+ .bss           0x1fff81c7        0x1 .\ARM_GCC_493\Release\ADC_DAC.a(Opamp_1.o)
+                0x1fff81c7                Opamp_1_initVar
+ .bss           0x1fff81c8        0x1 .\ARM_GCC_493\Release\ADC_DAC.a(Opamp_2.o)
+                0x1fff81c8                Opamp_2_initVar
+ .bss           0x1fff81c9        0x1 .\ARM_GCC_493\Release\ADC_DAC.a(Filter.o)
+                0x1fff81c9                Filter_initVar
+ .bss           0x1fff81ca        0x1 .\ARM_GCC_493\Release\ADC_DAC.a(SPI_DAC.o)
+                0x1fff81ca                SPI_DAC_initVar
+ .bss           0x1fff81cb        0x1 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_ADC_CK.o)
+                0x1fff81cb                PWM_ADC_CK_initVar
+ .bss           0x1fff81cc        0x1 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_11.o)
+                0x1fff81cc                PWM_11_initVar
+ .bss           0x1fff81cd        0x1 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_7.o)
+                0x1fff81cd                PWM_7_initVar
+ .bss           0x1fff81ce        0x1 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_9.o)
+                0x1fff81ce                PWM_9_initVar
+ .bss           0x1fff81cf        0x1 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_8.o)
+                0x1fff81cf                PWM_8_initVar
+ .bss           0x1fff81d0        0x1 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_6.o)
+                0x1fff81d0                PWM_6_initVar
+ .bss           0x1fff81d1        0x1 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_10.o)
+                0x1fff81d1                PWM_10_initVar
+ .bss           0x1fff81d2        0x1 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_4.o)
+                0x1fff81d2                PWM_4_initVar
+ .bss           0x1fff81d3        0x1 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_5.o)
+                0x1fff81d3                PWM_5_initVar
+ .bss           0x1fff81d4       0x10 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq.o)
+                0x1fff81d4                ADC_SAR_Seq_initVar
  .bss           0x1fff81e4        0x1 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
                 0x1fff81e4                ADC_SAR_Seq_SAR_initVar
  *(COMMON)
@@ -1680,30 +1689,29 @@ END GROUP
                 0x1fff81ec                ADC_SAR_1_countsPer10Volt
                 0x1fff81f0                ADC_SAR_1_offset
  *fill*         0x1fff81f2        0x2 
- COMMON         0x1fff81f4        0xa .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq.o)
+ COMMON         0x1fff81f4        0x8 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq.o)
                 0x1fff81f4                ADC_SAR_Seq_finalArray
- *fill*         0x1fff81fe        0x2 
- COMMON         0x1fff8200        0xa .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
-                0x1fff8200                ADC_SAR_Seq_SAR_offset
-                0x1fff8202                ADC_SAR_Seq_SAR_countsPerVolt
-                0x1fff8204                ADC_SAR_Seq_SAR_countsPer10Volt
-                0x1fff8208                ADC_SAR_Seq_SAR_shift
-                0x1fff8210                . = ALIGN (0x8)
- *fill*         0x1fff820a        0x6 
+ COMMON         0x1fff81fc        0xa .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
+                0x1fff81fc                ADC_SAR_Seq_SAR_offset
+                0x1fff81fe                ADC_SAR_Seq_SAR_countsPerVolt
+                0x1fff8200                ADC_SAR_Seq_SAR_countsPer10Volt
+                0x1fff8204                ADC_SAR_Seq_SAR_shift
+                0x1fff8208                . = ALIGN (0x8)
+ *fill*         0x1fff8206        0x2 
  *(.ram.b)
-                0x1fff8210                _end = .
-                0x1fff8210                __end = .
-                0x1fff8210                PROVIDE (end, .)
-                0x1fff8210                PROVIDE (__bss_end__, .)
-                0x000035b0                __cy_region_init_ram = LOADADDR (.data)
+                0x1fff8208                _end = .
+                0x1fff8208                __end = .
+                0x1fff8208                PROVIDE (end, .)
+                0x1fff8208                PROVIDE (__bss_end__, .)
+                0x00003648                __cy_region_init_ram = LOADADDR (.data)
                 0x00000088                __cy_region_init_size_ram = (_edata - ADDR (.data))
-                0x00000080                __cy_region_zero_size_ram = (_end - _edata)
+                0x00000078                __cy_region_zero_size_ram = (_end - _edata)
 
-.heap           0x1fff8210       0x80 load address 0x00003638
-                0x1fff8210                . = _end
-                0x1fff8290                . = (. + 0x80)
- *fill*         0x1fff8210       0x80 
-                0x1fff8290                __cy_heap_limit = .
+.heap           0x1fff8208       0x80 load address 0x000036d0
+                0x1fff8208                . = _end
+                0x1fff8288                . = (. + 0x80)
+ *fill*         0x1fff8208       0x80 
+                0x1fff8288                __cy_heap_limit = .
 
 .stack          0x20007800      0x800
                 0x20007800                __cy_stack_limit = .
@@ -1719,9 +1727,9 @@ END GROUP
 .cyloadablemeta
  *(.cyloadablemeta)
 
-.cyconfigecc    0x80000000      0xe44
+.cyconfigecc    0x80000000      0xe34
  *(.cyconfigecc)
- .cyconfigecc   0x80000000      0xe44 .\ARM_GCC_493\Release\cymetadata.o
+ .cyconfigecc   0x80000000      0xe34 .\ARM_GCC_493\Release\cymetadata.o
                 0x80000000                cy_meta_configecc
 
 .cycustnvl      0x90000000        0x4
@@ -1750,7 +1758,7 @@ END GROUP
  .cymeta        0x90500000        0xc .\ARM_GCC_493\Release\cymetadata.o
                 0x90500000                cy_metadata
 
-.rel.dyn        0x00003638        0x0 load address 0x9050000c
+.rel.dyn        0x000036d0        0x0 load address 0x9050000c
  .rel.iplt      0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
 
 .stab
@@ -1771,7 +1779,7 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000     0x1280
+.debug_aranges  0x00000000     0x12a8
  *(.debug_aranges)
  .debug_aranges
                 0x00000000       0x38 .\ARM_GCC_493\Release\main.o
@@ -1848,150 +1856,155 @@ END GROUP
  .debug_aranges
                 0x000010c0       0x80 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_IRQ.o)
  .debug_aranges
-                0x00001140       0x28 .\ARM_GCC_493\Release\ADC_DAC.a(DIV_MASK_LSB.o)
+                0x00001140       0x28 .\ARM_GCC_493\Release\ADC_DAC.a(DIV_MASK_MSB.o)
  .debug_aranges
-                0x00001168       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(CyBootAsmGnu.o)
+                0x00001168       0x28 .\ARM_GCC_493\Release\ADC_DAC.a(DIV_MASK_LSB.o)
  .debug_aranges
-                0x00001188       0x80 .\ARM_GCC_493\Release\ADC_DAC.a(CyFlash.o)
+                0x00001190       0x20 .\ARM_GCC_493\Release\ADC_DAC.a(CyBootAsmGnu.o)
  .debug_aranges
-                0x00001208       0x78 .\ARM_GCC_493\Release\ADC_DAC.a(CySpc.o)
+                0x000011b0       0x80 .\ARM_GCC_493\Release\ADC_DAC.a(CyFlash.o)
+ .debug_aranges
+                0x00001230       0x78 .\ARM_GCC_493\Release\ADC_DAC.a(CySpc.o)
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x6fe3
+.debug_info     0x00000000     0x7129
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x00000000      0x219 .\ARM_GCC_493\Release\main.o
- .debug_info    0x00000219      0x13f .\ARM_GCC_493\Release\cymetadata.o
- .debug_info    0x00000358      0x319 .\ARM_GCC_493\Release\Cm3Start.o
- .debug_info    0x00000671      0x469 .\ARM_GCC_493\Release\ADC_DAC.a(cyfitter_cfg.o)
- .debug_info    0x00000ada      0x3e8 .\ARM_GCC_493\Release\ADC_DAC.a(LCD_Char_1.o)
- .debug_info    0x00000ec2       0xf7 .\ARM_GCC_493\Release\ADC_DAC.a(LCD_Char_1_CustChars.o)
- .debug_info    0x00000fb9      0x8b4 .\ARM_GCC_493\Release\ADC_DAC.a(CyDmac.o)
- .debug_info    0x0000186d      0xe4a .\ARM_GCC_493\Release\ADC_DAC.a(CyLib.o)
- .debug_info    0x000026b7      0x561 .\ARM_GCC_493\Release\ADC_DAC.a(cyPm.o)
- .debug_info    0x00002c18      0x454 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_1.o)
- .debug_info    0x0000306c       0x92 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_1_INT.o)
- .debug_info    0x000030fe      0x11e .\ARM_GCC_493\Release\ADC_DAC.a(Opamp_1.o)
- .debug_info    0x0000321c      0x11e .\ARM_GCC_493\Release\ADC_DAC.a(Opamp_2.o)
- .debug_info    0x0000333a      0x3aa .\ARM_GCC_493\Release\ADC_DAC.a(Filter.o)
- .debug_info    0x000036e4       0xe9 .\ARM_GCC_493\Release\ADC_DAC.a(Filter_PVT.o)
- .debug_info    0x000037cd      0x12b .\ARM_GCC_493\Release\ADC_DAC.a(Filter_RAM_Data.o)
- .debug_info    0x000038f8      0x40a .\ARM_GCC_493\Release\ADC_DAC.a(SPI_DAC.o)
- .debug_info    0x00003d02      0x25d .\ARM_GCC_493\Release\ADC_DAC.a(SPI_DAC_IntClock.o)
- .debug_info    0x00003f5f       0xd7 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_1_OUT_LSB.o)
- .debug_info    0x00004036       0xd7 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_1_OUT_MSB.o)
- .debug_info    0x0000410d      0x13b .\ARM_GCC_493\Release\ADC_DAC.a(DAC_IN_MSB.o)
- .debug_info    0x00004248      0x13b .\ARM_GCC_493\Release\ADC_DAC.a(DAC_IN_LSB.o)
- .debug_info    0x00004383      0x22e .\ARM_GCC_493\Release\ADC_DAC.a(PWM_ADC_CK.o)
- .debug_info    0x000045b1      0x283 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_11.o)
- .debug_info    0x00004834      0x283 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_7.o)
- .debug_info    0x00004ab7      0x283 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_9.o)
- .debug_info    0x00004d3a      0x283 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_8.o)
- .debug_info    0x00004fbd      0x283 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_6.o)
- .debug_info    0x00005240      0x283 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_10.o)
- .debug_info    0x000054c3      0x283 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_4.o)
- .debug_info    0x00005746      0x283 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_5.o)
- .debug_info    0x000059c9      0x3a4 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq.o)
- .debug_info    0x00005d6d       0x99 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_INT.o)
- .debug_info    0x00005e06      0x45b .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
- .debug_info    0x00006261      0x114 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_TempBuf_dma.o)
- .debug_info    0x00006375      0x114 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_FinalBuf_dma.o)
- .debug_info    0x00006489      0x23a .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_IRQ.o)
- .debug_info    0x000066c3       0xd7 .\ARM_GCC_493\Release\ADC_DAC.a(DIV_MASK_LSB.o)
- .debug_info    0x0000679a       0x8c .\ARM_GCC_493\Release\ADC_DAC.a(CyBootAsmGnu.o)
- .debug_info    0x00006826      0x36a .\ARM_GCC_493\Release\ADC_DAC.a(CyFlash.o)
- .debug_info    0x00006b90      0x453 .\ARM_GCC_493\Release\ADC_DAC.a(CySpc.o)
+ .debug_info    0x00000000      0x266 .\ARM_GCC_493\Release\main.o
+ .debug_info    0x00000266      0x13f .\ARM_GCC_493\Release\cymetadata.o
+ .debug_info    0x000003a5      0x319 .\ARM_GCC_493\Release\Cm3Start.o
+ .debug_info    0x000006be      0x469 .\ARM_GCC_493\Release\ADC_DAC.a(cyfitter_cfg.o)
+ .debug_info    0x00000b27      0x3e8 .\ARM_GCC_493\Release\ADC_DAC.a(LCD_Char_1.o)
+ .debug_info    0x00000f0f       0xf7 .\ARM_GCC_493\Release\ADC_DAC.a(LCD_Char_1_CustChars.o)
+ .debug_info    0x00001006      0x8b4 .\ARM_GCC_493\Release\ADC_DAC.a(CyDmac.o)
+ .debug_info    0x000018ba      0xe4a .\ARM_GCC_493\Release\ADC_DAC.a(CyLib.o)
+ .debug_info    0x00002704      0x561 .\ARM_GCC_493\Release\ADC_DAC.a(cyPm.o)
+ .debug_info    0x00002c65      0x454 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_1.o)
+ .debug_info    0x000030b9       0x92 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_1_INT.o)
+ .debug_info    0x0000314b      0x11e .\ARM_GCC_493\Release\ADC_DAC.a(Opamp_1.o)
+ .debug_info    0x00003269      0x11e .\ARM_GCC_493\Release\ADC_DAC.a(Opamp_2.o)
+ .debug_info    0x00003387      0x3aa .\ARM_GCC_493\Release\ADC_DAC.a(Filter.o)
+ .debug_info    0x00003731       0xe9 .\ARM_GCC_493\Release\ADC_DAC.a(Filter_PVT.o)
+ .debug_info    0x0000381a      0x12b .\ARM_GCC_493\Release\ADC_DAC.a(Filter_RAM_Data.o)
+ .debug_info    0x00003945      0x40a .\ARM_GCC_493\Release\ADC_DAC.a(SPI_DAC.o)
+ .debug_info    0x00003d4f      0x25d .\ARM_GCC_493\Release\ADC_DAC.a(SPI_DAC_IntClock.o)
+ .debug_info    0x00003fac       0xd7 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_1_OUT_LSB.o)
+ .debug_info    0x00004083       0xd7 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_1_OUT_MSB.o)
+ .debug_info    0x0000415a      0x13b .\ARM_GCC_493\Release\ADC_DAC.a(DAC_IN_MSB.o)
+ .debug_info    0x00004295      0x13b .\ARM_GCC_493\Release\ADC_DAC.a(DAC_IN_LSB.o)
+ .debug_info    0x000043d0      0x22e .\ARM_GCC_493\Release\ADC_DAC.a(PWM_ADC_CK.o)
+ .debug_info    0x000045fe      0x283 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_11.o)
+ .debug_info    0x00004881      0x283 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_7.o)
+ .debug_info    0x00004b04      0x283 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_9.o)
+ .debug_info    0x00004d87      0x283 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_8.o)
+ .debug_info    0x0000500a      0x283 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_6.o)
+ .debug_info    0x0000528d      0x283 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_10.o)
+ .debug_info    0x00005510      0x283 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_4.o)
+ .debug_info    0x00005793      0x283 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_5.o)
+ .debug_info    0x00005a16      0x3a4 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq.o)
+ .debug_info    0x00005dba       0x99 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_INT.o)
+ .debug_info    0x00005e53      0x45b .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
+ .debug_info    0x000062ae      0x114 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_TempBuf_dma.o)
+ .debug_info    0x000063c2      0x114 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_FinalBuf_dma.o)
+ .debug_info    0x000064d6      0x23a .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_IRQ.o)
+ .debug_info    0x00006710       0xd7 .\ARM_GCC_493\Release\ADC_DAC.a(DIV_MASK_MSB.o)
+ .debug_info    0x000067e7       0xd7 .\ARM_GCC_493\Release\ADC_DAC.a(DIV_MASK_LSB.o)
+ .debug_info    0x000068be       0xae .\ARM_GCC_493\Release\ADC_DAC.a(CyBootAsmGnu.o)
+ .debug_info    0x0000696c      0x36a .\ARM_GCC_493\Release\ADC_DAC.a(CyFlash.o)
+ .debug_info    0x00006cd6      0x453 .\ARM_GCC_493\Release\ADC_DAC.a(CySpc.o)
 
-.debug_abbrev   0x00000000     0x2936
+.debug_abbrev   0x00000000     0x29d5
  *(.debug_abbrev)
- .debug_abbrev  0x00000000      0x10b .\ARM_GCC_493\Release\main.o
- .debug_abbrev  0x0000010b       0x77 .\ARM_GCC_493\Release\cymetadata.o
- .debug_abbrev  0x00000182      0x1b6 .\ARM_GCC_493\Release\Cm3Start.o
- .debug_abbrev  0x00000338      0x1b7 .\ARM_GCC_493\Release\ADC_DAC.a(cyfitter_cfg.o)
- .debug_abbrev  0x000004ef      0x131 .\ARM_GCC_493\Release\ADC_DAC.a(LCD_Char_1.o)
- .debug_abbrev  0x00000620       0xa2 .\ARM_GCC_493\Release\ADC_DAC.a(LCD_Char_1_CustChars.o)
- .debug_abbrev  0x000006c2      0x194 .\ARM_GCC_493\Release\ADC_DAC.a(CyDmac.o)
- .debug_abbrev  0x00000856      0x217 .\ARM_GCC_493\Release\ADC_DAC.a(CyLib.o)
- .debug_abbrev  0x00000a6d      0x17b .\ARM_GCC_493\Release\ADC_DAC.a(cyPm.o)
- .debug_abbrev  0x00000be8      0x15b .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_1.o)
- .debug_abbrev  0x00000d43       0x42 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_1_INT.o)
- .debug_abbrev  0x00000d85       0xa8 .\ARM_GCC_493\Release\ADC_DAC.a(Opamp_1.o)
- .debug_abbrev  0x00000e2d       0xa8 .\ARM_GCC_493\Release\ADC_DAC.a(Opamp_2.o)
- .debug_abbrev  0x00000ed5      0x15e .\ARM_GCC_493\Release\ADC_DAC.a(Filter.o)
- .debug_abbrev  0x00001033       0x7f .\ARM_GCC_493\Release\ADC_DAC.a(Filter_PVT.o)
- .debug_abbrev  0x000010b2       0x66 .\ARM_GCC_493\Release\ADC_DAC.a(Filter_RAM_Data.o)
- .debug_abbrev  0x00001118      0x156 .\ARM_GCC_493\Release\ADC_DAC.a(SPI_DAC.o)
- .debug_abbrev  0x0000126e      0x11d .\ARM_GCC_493\Release\ADC_DAC.a(SPI_DAC_IntClock.o)
- .debug_abbrev  0x0000138b       0x81 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_1_OUT_LSB.o)
- .debug_abbrev  0x0000140c       0x81 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_1_OUT_MSB.o)
- .debug_abbrev  0x0000148d       0xaa .\ARM_GCC_493\Release\ADC_DAC.a(DAC_IN_MSB.o)
- .debug_abbrev  0x00001537       0xaa .\ARM_GCC_493\Release\ADC_DAC.a(DAC_IN_LSB.o)
- .debug_abbrev  0x000015e1      0x116 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_ADC_CK.o)
- .debug_abbrev  0x000016f7      0x12e .\ARM_GCC_493\Release\ADC_DAC.a(PWM_11.o)
- .debug_abbrev  0x00001825      0x12e .\ARM_GCC_493\Release\ADC_DAC.a(PWM_7.o)
- .debug_abbrev  0x00001953      0x12e .\ARM_GCC_493\Release\ADC_DAC.a(PWM_9.o)
- .debug_abbrev  0x00001a81      0x12e .\ARM_GCC_493\Release\ADC_DAC.a(PWM_8.o)
- .debug_abbrev  0x00001baf      0x12e .\ARM_GCC_493\Release\ADC_DAC.a(PWM_6.o)
- .debug_abbrev  0x00001cdd      0x12e .\ARM_GCC_493\Release\ADC_DAC.a(PWM_10.o)
- .debug_abbrev  0x00001e0b      0x12e .\ARM_GCC_493\Release\ADC_DAC.a(PWM_4.o)
- .debug_abbrev  0x00001f39      0x12e .\ARM_GCC_493\Release\ADC_DAC.a(PWM_5.o)
- .debug_abbrev  0x00002067      0x155 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq.o)
- .debug_abbrev  0x000021bc       0x42 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_INT.o)
- .debug_abbrev  0x000021fe      0x173 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
- .debug_abbrev  0x00002371       0x8b .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_TempBuf_dma.o)
- .debug_abbrev  0x000023fc       0x8b .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_FinalBuf_dma.o)
- .debug_abbrev  0x00002487      0x172 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_IRQ.o)
- .debug_abbrev  0x000025f9       0x81 .\ARM_GCC_493\Release\ADC_DAC.a(DIV_MASK_LSB.o)
- .debug_abbrev  0x0000267a       0x14 .\ARM_GCC_493\Release\ADC_DAC.a(CyBootAsmGnu.o)
- .debug_abbrev  0x0000268e      0x13c .\ARM_GCC_493\Release\ADC_DAC.a(CyFlash.o)
- .debug_abbrev  0x000027ca      0x16c .\ARM_GCC_493\Release\ADC_DAC.a(CySpc.o)
+ .debug_abbrev  0x00000000      0x129 .\ARM_GCC_493\Release\main.o
+ .debug_abbrev  0x00000129       0x77 .\ARM_GCC_493\Release\cymetadata.o
+ .debug_abbrev  0x000001a0      0x1b6 .\ARM_GCC_493\Release\Cm3Start.o
+ .debug_abbrev  0x00000356      0x1b7 .\ARM_GCC_493\Release\ADC_DAC.a(cyfitter_cfg.o)
+ .debug_abbrev  0x0000050d      0x131 .\ARM_GCC_493\Release\ADC_DAC.a(LCD_Char_1.o)
+ .debug_abbrev  0x0000063e       0xa2 .\ARM_GCC_493\Release\ADC_DAC.a(LCD_Char_1_CustChars.o)
+ .debug_abbrev  0x000006e0      0x194 .\ARM_GCC_493\Release\ADC_DAC.a(CyDmac.o)
+ .debug_abbrev  0x00000874      0x217 .\ARM_GCC_493\Release\ADC_DAC.a(CyLib.o)
+ .debug_abbrev  0x00000a8b      0x17b .\ARM_GCC_493\Release\ADC_DAC.a(cyPm.o)
+ .debug_abbrev  0x00000c06      0x15b .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_1.o)
+ .debug_abbrev  0x00000d61       0x42 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_1_INT.o)
+ .debug_abbrev  0x00000da3       0xa8 .\ARM_GCC_493\Release\ADC_DAC.a(Opamp_1.o)
+ .debug_abbrev  0x00000e4b       0xa8 .\ARM_GCC_493\Release\ADC_DAC.a(Opamp_2.o)
+ .debug_abbrev  0x00000ef3      0x15e .\ARM_GCC_493\Release\ADC_DAC.a(Filter.o)
+ .debug_abbrev  0x00001051       0x7f .\ARM_GCC_493\Release\ADC_DAC.a(Filter_PVT.o)
+ .debug_abbrev  0x000010d0       0x66 .\ARM_GCC_493\Release\ADC_DAC.a(Filter_RAM_Data.o)
+ .debug_abbrev  0x00001136      0x156 .\ARM_GCC_493\Release\ADC_DAC.a(SPI_DAC.o)
+ .debug_abbrev  0x0000128c      0x11d .\ARM_GCC_493\Release\ADC_DAC.a(SPI_DAC_IntClock.o)
+ .debug_abbrev  0x000013a9       0x81 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_1_OUT_LSB.o)
+ .debug_abbrev  0x0000142a       0x81 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_1_OUT_MSB.o)
+ .debug_abbrev  0x000014ab       0xaa .\ARM_GCC_493\Release\ADC_DAC.a(DAC_IN_MSB.o)
+ .debug_abbrev  0x00001555       0xaa .\ARM_GCC_493\Release\ADC_DAC.a(DAC_IN_LSB.o)
+ .debug_abbrev  0x000015ff      0x116 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_ADC_CK.o)
+ .debug_abbrev  0x00001715      0x12e .\ARM_GCC_493\Release\ADC_DAC.a(PWM_11.o)
+ .debug_abbrev  0x00001843      0x12e .\ARM_GCC_493\Release\ADC_DAC.a(PWM_7.o)
+ .debug_abbrev  0x00001971      0x12e .\ARM_GCC_493\Release\ADC_DAC.a(PWM_9.o)
+ .debug_abbrev  0x00001a9f      0x12e .\ARM_GCC_493\Release\ADC_DAC.a(PWM_8.o)
+ .debug_abbrev  0x00001bcd      0x12e .\ARM_GCC_493\Release\ADC_DAC.a(PWM_6.o)
+ .debug_abbrev  0x00001cfb      0x12e .\ARM_GCC_493\Release\ADC_DAC.a(PWM_10.o)
+ .debug_abbrev  0x00001e29      0x12e .\ARM_GCC_493\Release\ADC_DAC.a(PWM_4.o)
+ .debug_abbrev  0x00001f57      0x12e .\ARM_GCC_493\Release\ADC_DAC.a(PWM_5.o)
+ .debug_abbrev  0x00002085      0x155 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq.o)
+ .debug_abbrev  0x000021da       0x42 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_INT.o)
+ .debug_abbrev  0x0000221c      0x173 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
+ .debug_abbrev  0x0000238f       0x8b .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_TempBuf_dma.o)
+ .debug_abbrev  0x0000241a       0x8b .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_FinalBuf_dma.o)
+ .debug_abbrev  0x000024a5      0x172 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_IRQ.o)
+ .debug_abbrev  0x00002617       0x81 .\ARM_GCC_493\Release\ADC_DAC.a(DIV_MASK_MSB.o)
+ .debug_abbrev  0x00002698       0x81 .\ARM_GCC_493\Release\ADC_DAC.a(DIV_MASK_LSB.o)
+ .debug_abbrev  0x00002719       0x14 .\ARM_GCC_493\Release\ADC_DAC.a(CyBootAsmGnu.o)
+ .debug_abbrev  0x0000272d      0x13c .\ARM_GCC_493\Release\ADC_DAC.a(CyFlash.o)
+ .debug_abbrev  0x00002869      0x16c .\ARM_GCC_493\Release\ADC_DAC.a(CySpc.o)
 
-.debug_line     0x00000000     0x3c85
+.debug_line     0x00000000     0x3d07
  *(.debug_line)
- .debug_line    0x00000000      0x207 .\ARM_GCC_493\Release\main.o
- .debug_line    0x00000207       0x51 .\ARM_GCC_493\Release\cymetadata.o
- .debug_line    0x00000258      0x1db .\ARM_GCC_493\Release\Cm3Start.o
- .debug_line    0x00000433      0x235 .\ARM_GCC_493\Release\ADC_DAC.a(cyfitter_cfg.o)
- .debug_line    0x00000668      0x1f9 .\ARM_GCC_493\Release\ADC_DAC.a(LCD_Char_1.o)
- .debug_line    0x00000861       0x82 .\ARM_GCC_493\Release\ADC_DAC.a(LCD_Char_1_CustChars.o)
- .debug_line    0x000008e3      0x2b5 .\ARM_GCC_493\Release\ADC_DAC.a(CyDmac.o)
- .debug_line    0x00000b98      0x82c .\ARM_GCC_493\Release\ADC_DAC.a(CyLib.o)
- .debug_line    0x000013c4      0x376 .\ARM_GCC_493\Release\ADC_DAC.a(cyPm.o)
- .debug_line    0x0000173a      0x1e6 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_1.o)
- .debug_line    0x00001920       0x59 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_1_INT.o)
- .debug_line    0x00001979       0xaf .\ARM_GCC_493\Release\ADC_DAC.a(Opamp_1.o)
- .debug_line    0x00001a28       0xaf .\ARM_GCC_493\Release\ADC_DAC.a(Opamp_2.o)
- .debug_line    0x00001ad7      0x180 .\ARM_GCC_493\Release\ADC_DAC.a(Filter.o)
- .debug_line    0x00001c57       0x76 .\ARM_GCC_493\Release\ADC_DAC.a(Filter_PVT.o)
- .debug_line    0x00001ccd       0x56 .\ARM_GCC_493\Release\ADC_DAC.a(Filter_RAM_Data.o)
- .debug_line    0x00001d23      0x269 .\ARM_GCC_493\Release\ADC_DAC.a(SPI_DAC.o)
- .debug_line    0x00001f8c      0x1ab .\ARM_GCC_493\Release\ADC_DAC.a(SPI_DAC_IntClock.o)
- .debug_line    0x00002137       0x76 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_1_OUT_LSB.o)
- .debug_line    0x000021ad       0x76 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_1_OUT_MSB.o)
- .debug_line    0x00002223       0xae .\ARM_GCC_493\Release\ADC_DAC.a(DAC_IN_MSB.o)
- .debug_line    0x000022d1       0xad .\ARM_GCC_493\Release\ADC_DAC.a(DAC_IN_LSB.o)
- .debug_line    0x0000237e      0x145 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_ADC_CK.o)
- .debug_line    0x000024c3      0x187 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_11.o)
- .debug_line    0x0000264a      0x186 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_7.o)
- .debug_line    0x000027d0      0x186 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_9.o)
- .debug_line    0x00002956      0x186 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_8.o)
- .debug_line    0x00002adc      0x186 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_6.o)
- .debug_line    0x00002c62      0x187 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_10.o)
- .debug_line    0x00002de9      0x186 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_4.o)
- .debug_line    0x00002f6f      0x186 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_5.o)
- .debug_line    0x000030f5      0x1cf .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq.o)
- .debug_line    0x000032c4       0x5b .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_INT.o)
- .debug_line    0x0000331f      0x20d .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
- .debug_line    0x0000352c       0x86 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_TempBuf_dma.o)
- .debug_line    0x000035b2       0x87 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_FinalBuf_dma.o)
- .debug_line    0x00003639      0x15a .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_IRQ.o)
- .debug_line    0x00003793       0x75 .\ARM_GCC_493\Release\ADC_DAC.a(DIV_MASK_LSB.o)
- .debug_line    0x00003808       0x66 .\ARM_GCC_493\Release\ADC_DAC.a(CyBootAsmGnu.o)
- .debug_line    0x0000386e      0x202 .\ARM_GCC_493\Release\ADC_DAC.a(CyFlash.o)
- .debug_line    0x00003a70      0x215 .\ARM_GCC_493\Release\ADC_DAC.a(CySpc.o)
+ .debug_line    0x00000000      0x218 .\ARM_GCC_493\Release\main.o
+ .debug_line    0x00000218       0x51 .\ARM_GCC_493\Release\cymetadata.o
+ .debug_line    0x00000269      0x1db .\ARM_GCC_493\Release\Cm3Start.o
+ .debug_line    0x00000444      0x231 .\ARM_GCC_493\Release\ADC_DAC.a(cyfitter_cfg.o)
+ .debug_line    0x00000675      0x1f9 .\ARM_GCC_493\Release\ADC_DAC.a(LCD_Char_1.o)
+ .debug_line    0x0000086e       0x82 .\ARM_GCC_493\Release\ADC_DAC.a(LCD_Char_1_CustChars.o)
+ .debug_line    0x000008f0      0x2b5 .\ARM_GCC_493\Release\ADC_DAC.a(CyDmac.o)
+ .debug_line    0x00000ba5      0x82c .\ARM_GCC_493\Release\ADC_DAC.a(CyLib.o)
+ .debug_line    0x000013d1      0x376 .\ARM_GCC_493\Release\ADC_DAC.a(cyPm.o)
+ .debug_line    0x00001747      0x1e6 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_1.o)
+ .debug_line    0x0000192d       0x59 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_1_INT.o)
+ .debug_line    0x00001986       0xaf .\ARM_GCC_493\Release\ADC_DAC.a(Opamp_1.o)
+ .debug_line    0x00001a35       0xaf .\ARM_GCC_493\Release\ADC_DAC.a(Opamp_2.o)
+ .debug_line    0x00001ae4      0x180 .\ARM_GCC_493\Release\ADC_DAC.a(Filter.o)
+ .debug_line    0x00001c64       0x76 .\ARM_GCC_493\Release\ADC_DAC.a(Filter_PVT.o)
+ .debug_line    0x00001cda       0x56 .\ARM_GCC_493\Release\ADC_DAC.a(Filter_RAM_Data.o)
+ .debug_line    0x00001d30      0x269 .\ARM_GCC_493\Release\ADC_DAC.a(SPI_DAC.o)
+ .debug_line    0x00001f99      0x1ab .\ARM_GCC_493\Release\ADC_DAC.a(SPI_DAC_IntClock.o)
+ .debug_line    0x00002144       0x76 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_1_OUT_LSB.o)
+ .debug_line    0x000021ba       0x76 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_1_OUT_MSB.o)
+ .debug_line    0x00002230       0xae .\ARM_GCC_493\Release\ADC_DAC.a(DAC_IN_MSB.o)
+ .debug_line    0x000022de       0xad .\ARM_GCC_493\Release\ADC_DAC.a(DAC_IN_LSB.o)
+ .debug_line    0x0000238b      0x145 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_ADC_CK.o)
+ .debug_line    0x000024d0      0x187 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_11.o)
+ .debug_line    0x00002657      0x186 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_7.o)
+ .debug_line    0x000027dd      0x186 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_9.o)
+ .debug_line    0x00002963      0x186 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_8.o)
+ .debug_line    0x00002ae9      0x186 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_6.o)
+ .debug_line    0x00002c6f      0x187 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_10.o)
+ .debug_line    0x00002df6      0x186 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_4.o)
+ .debug_line    0x00002f7c      0x186 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_5.o)
+ .debug_line    0x00003102      0x1cf .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq.o)
+ .debug_line    0x000032d1       0x5b .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_INT.o)
+ .debug_line    0x0000332c      0x20d .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
+ .debug_line    0x00003539       0x86 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_TempBuf_dma.o)
+ .debug_line    0x000035bf       0x87 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_FinalBuf_dma.o)
+ .debug_line    0x00003646      0x15a .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_IRQ.o)
+ .debug_line    0x000037a0       0x75 .\ARM_GCC_493\Release\ADC_DAC.a(DIV_MASK_MSB.o)
+ .debug_line    0x00003815       0x75 .\ARM_GCC_493\Release\ADC_DAC.a(DIV_MASK_LSB.o)
+ .debug_line    0x0000388a       0x66 .\ARM_GCC_493\Release\ADC_DAC.a(CyBootAsmGnu.o)
+ .debug_line    0x000038f0      0x202 .\ARM_GCC_493\Release\ADC_DAC.a(CyFlash.o)
+ .debug_line    0x00003af2      0x215 .\ARM_GCC_493\Release\ADC_DAC.a(CySpc.o)
 
-.debug_frame    0x00000000     0x4848
+.debug_frame    0x00000000     0x48a4
  *(.debug_frame)
  .debug_frame   0x00000000       0xa0 .\ARM_GCC_493\Release\main.o
  .debug_frame   0x000000a0       0xd8 .\ARM_GCC_493\Release\Cm3Start.o
@@ -2028,101 +2041,104 @@ END GROUP
  .debug_frame   0x00003fac       0x58 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_TempBuf_dma.o)
  .debug_frame   0x00004004       0x58 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_FinalBuf_dma.o)
  .debug_frame   0x0000405c      0x1e8 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_IRQ.o)
- .debug_frame   0x00004244       0x5c .\ARM_GCC_493\Release\ADC_DAC.a(DIV_MASK_LSB.o)
- .debug_frame   0x000042a0      0x210 .\ARM_GCC_493\Release\ADC_DAC.a(CyFlash.o)
- .debug_frame   0x000044b0      0x1f8 .\ARM_GCC_493\Release\ADC_DAC.a(CySpc.o)
- .debug_frame   0x000046a8       0x28 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_aeabi_ldivmod.o)
- .debug_frame   0x000046d0       0x54 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(bpabi.o)
- .debug_frame   0x00004724       0x34 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_divdi3.o)
- .debug_frame   0x00004758       0x34 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_udivdi3.o)
- .debug_frame   0x0000478c       0x20 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
- .debug_frame   0x000047ac       0x28 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-exit.o)
- .debug_frame   0x000047d4       0x2c c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
- .debug_frame   0x00004800       0x28 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy.o)
- .debug_frame   0x00004828       0x20 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
+ .debug_frame   0x00004244       0x5c .\ARM_GCC_493\Release\ADC_DAC.a(DIV_MASK_MSB.o)
+ .debug_frame   0x000042a0       0x5c .\ARM_GCC_493\Release\ADC_DAC.a(DIV_MASK_LSB.o)
+ .debug_frame   0x000042fc      0x210 .\ARM_GCC_493\Release\ADC_DAC.a(CyFlash.o)
+ .debug_frame   0x0000450c      0x1f8 .\ARM_GCC_493\Release\ADC_DAC.a(CySpc.o)
+ .debug_frame   0x00004704       0x28 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_aeabi_ldivmod.o)
+ .debug_frame   0x0000472c       0x54 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(bpabi.o)
+ .debug_frame   0x00004780       0x34 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_divdi3.o)
+ .debug_frame   0x000047b4       0x34 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_udivdi3.o)
+ .debug_frame   0x000047e8       0x20 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
+ .debug_frame   0x00004808       0x28 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-exit.o)
+ .debug_frame   0x00004830       0x2c c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
+ .debug_frame   0x0000485c       0x28 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy.o)
+ .debug_frame   0x00004884       0x20 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
 
-.debug_str      0x00000000     0x38bd
+.debug_str      0x00000000     0x393d
  *(.debug_str)
- .debug_str     0x00000000      0x20c .\ARM_GCC_493\Release\main.o
-                                0x257 (size before relaxing)
- .debug_str     0x0000020c       0x75 .\ARM_GCC_493\Release\cymetadata.o
-                                0x1e6 (size before relaxing)
- .debug_str     0x00000281      0x13c .\ARM_GCC_493\Release\Cm3Start.o
-                                0x2c7 (size before relaxing)
- .debug_str     0x000003bd      0x183 .\ARM_GCC_493\Release\ADC_DAC.a(cyfitter_cfg.o)
-                                0x328 (size before relaxing)
- .debug_str     0x00000540      0x214 .\ARM_GCC_493\Release\ADC_DAC.a(LCD_Char_1.o)
-                                0x3ac (size before relaxing)
- .debug_str     0x00000754       0x54 .\ARM_GCC_493\Release\ADC_DAC.a(LCD_Char_1_CustChars.o)
-                                0x1e4 (size before relaxing)
- .debug_str     0x000007a8      0x366 .\ARM_GCC_493\Release\ADC_DAC.a(CyDmac.o)
-                                0x50d (size before relaxing)
- .debug_str     0x00000b0e      0x7ca .\ARM_GCC_493\Release\ADC_DAC.a(CyLib.o)
-                                0x9da (size before relaxing)
- .debug_str     0x000012d8      0x365 .\ARM_GCC_493\Release\ADC_DAC.a(cyPm.o)
-                                0x527 (size before relaxing)
- .debug_str     0x0000163d      0x233 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_1.o)
-                                0x400 (size before relaxing)
- .debug_str     0x00001870       0x35 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_1_INT.o)
-                                0x197 (size before relaxing)
- .debug_str     0x000018a5       0x79 .\ARM_GCC_493\Release\ADC_DAC.a(Opamp_1.o)
-                                0x1f5 (size before relaxing)
- .debug_str     0x0000191e       0x79 .\ARM_GCC_493\Release\ADC_DAC.a(Opamp_2.o)
-                                0x1f5 (size before relaxing)
- .debug_str     0x00001997      0x157 .\ARM_GCC_493\Release\ADC_DAC.a(Filter.o)
-                                0x2fb (size before relaxing)
- .debug_str     0x00001aee       0x55 .\ARM_GCC_493\Release\ADC_DAC.a(Filter_PVT.o)
-                                0x1cb (size before relaxing)
- .debug_str     0x00001b43       0x29 .\ARM_GCC_493\Release\ADC_DAC.a(Filter_RAM_Data.o)
-                                0x1dc (size before relaxing)
- .debug_str     0x00001b6c      0x266 .\ARM_GCC_493\Release\ADC_DAC.a(SPI_DAC.o)
-                                0x409 (size before relaxing)
- .debug_str     0x00001dd2      0x1ce .\ARM_GCC_493\Release\ADC_DAC.a(SPI_DAC_IntClock.o)
-                                0x356 (size before relaxing)
- .debug_str     0x00001fa0       0x4e .\ARM_GCC_493\Release\ADC_DAC.a(ADC_1_OUT_LSB.o)
-                                0x1c3 (size before relaxing)
- .debug_str     0x00001fee       0x4e .\ARM_GCC_493\Release\ADC_DAC.a(ADC_1_OUT_MSB.o)
-                                0x1c3 (size before relaxing)
- .debug_str     0x0000203c       0x94 .\ARM_GCC_493\Release\ADC_DAC.a(DAC_IN_MSB.o)
-                                0x21e (size before relaxing)
- .debug_str     0x000020d0       0x94 .\ARM_GCC_493\Release\ADC_DAC.a(DAC_IN_LSB.o)
-                                0x21e (size before relaxing)
- .debug_str     0x00002164      0x178 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_ADC_CK.o)
-                                0x303 (size before relaxing)
- .debug_str     0x000022dc      0x180 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_11.o)
-                                0x327 (size before relaxing)
- .debug_str     0x0000245c      0x165 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_7.o)
-                                0x314 (size before relaxing)
- .debug_str     0x000025c1      0x165 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_9.o)
-                                0x314 (size before relaxing)
- .debug_str     0x00002726      0x165 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_8.o)
-                                0x314 (size before relaxing)
- .debug_str     0x0000288b      0x165 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_6.o)
-                                0x314 (size before relaxing)
- .debug_str     0x000029f0      0x178 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_10.o)
-                                0x327 (size before relaxing)
- .debug_str     0x00002b68      0x165 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_4.o)
-                                0x314 (size before relaxing)
- .debug_str     0x00002ccd      0x165 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_5.o)
-                                0x314 (size before relaxing)
- .debug_str     0x00002e32      0x25d .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq.o)
-                                0x43f (size before relaxing)
- .debug_str     0x0000308f       0x39 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_INT.o)
-                                0x1a4 (size before relaxing)
- .debug_str     0x000030c8      0x27c .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
-                                0x4b0 (size before relaxing)
- .debug_str     0x00003344       0xcb .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_TempBuf_dma.o)
-                                0x243 (size before relaxing)
- .debug_str     0x0000340f       0x94 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_FinalBuf_dma.o)
-                                0x247 (size before relaxing)
- .debug_str     0x000034a3      0x172 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_IRQ.o)
-                                0x322 (size before relaxing)
- .debug_str     0x00003615       0x4b .\ARM_GCC_493\Release\ADC_DAC.a(DIV_MASK_LSB.o)
-                                0x1c0 (size before relaxing)
- .debug_str     0x00003660      0x13e .\ARM_GCC_493\Release\ADC_DAC.a(CyFlash.o)
-                                0x2e6 (size before relaxing)
- .debug_str     0x0000379e      0x11f .\ARM_GCC_493\Release\ADC_DAC.a(CySpc.o)
-                                0x2e3 (size before relaxing)
+ .debug_str     0x00000000      0x258 .\ARM_GCC_493\Release\main.o
+                                0x2af (size before relaxing)
+ .debug_str     0x00000258       0x75 .\ARM_GCC_493\Release\cymetadata.o
+                                0x208 (size before relaxing)
+ .debug_str     0x000002cd      0x135 .\ARM_GCC_493\Release\Cm3Start.o
+                                0x2e9 (size before relaxing)
+ .debug_str     0x00000402      0x183 .\ARM_GCC_493\Release\ADC_DAC.a(cyfitter_cfg.o)
+                                0x34a (size before relaxing)
+ .debug_str     0x00000585      0x214 .\ARM_GCC_493\Release\ADC_DAC.a(LCD_Char_1.o)
+                                0x3ce (size before relaxing)
+ .debug_str     0x00000799       0x54 .\ARM_GCC_493\Release\ADC_DAC.a(LCD_Char_1_CustChars.o)
+                                0x206 (size before relaxing)
+ .debug_str     0x000007ed      0x366 .\ARM_GCC_493\Release\ADC_DAC.a(CyDmac.o)
+                                0x52f (size before relaxing)
+ .debug_str     0x00000b53      0x7ca .\ARM_GCC_493\Release\ADC_DAC.a(CyLib.o)
+                                0x9fc (size before relaxing)
+ .debug_str     0x0000131d      0x365 .\ARM_GCC_493\Release\ADC_DAC.a(cyPm.o)
+                                0x549 (size before relaxing)
+ .debug_str     0x00001682      0x223 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_1.o)
+                                0x422 (size before relaxing)
+ .debug_str     0x000018a5       0x35 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_1_INT.o)
+                                0x1b9 (size before relaxing)
+ .debug_str     0x000018da       0x79 .\ARM_GCC_493\Release\ADC_DAC.a(Opamp_1.o)
+                                0x217 (size before relaxing)
+ .debug_str     0x00001953       0x79 .\ARM_GCC_493\Release\ADC_DAC.a(Opamp_2.o)
+                                0x217 (size before relaxing)
+ .debug_str     0x000019cc      0x157 .\ARM_GCC_493\Release\ADC_DAC.a(Filter.o)
+                                0x31d (size before relaxing)
+ .debug_str     0x00001b23       0x55 .\ARM_GCC_493\Release\ADC_DAC.a(Filter_PVT.o)
+                                0x1ed (size before relaxing)
+ .debug_str     0x00001b78       0x29 .\ARM_GCC_493\Release\ADC_DAC.a(Filter_RAM_Data.o)
+                                0x1fe (size before relaxing)
+ .debug_str     0x00001ba1      0x266 .\ARM_GCC_493\Release\ADC_DAC.a(SPI_DAC.o)
+                                0x42b (size before relaxing)
+ .debug_str     0x00001e07      0x1ce .\ARM_GCC_493\Release\ADC_DAC.a(SPI_DAC_IntClock.o)
+                                0x378 (size before relaxing)
+ .debug_str     0x00001fd5       0x4e .\ARM_GCC_493\Release\ADC_DAC.a(ADC_1_OUT_LSB.o)
+                                0x1e5 (size before relaxing)
+ .debug_str     0x00002023       0x4e .\ARM_GCC_493\Release\ADC_DAC.a(ADC_1_OUT_MSB.o)
+                                0x1e5 (size before relaxing)
+ .debug_str     0x00002071       0x94 .\ARM_GCC_493\Release\ADC_DAC.a(DAC_IN_MSB.o)
+                                0x240 (size before relaxing)
+ .debug_str     0x00002105       0x94 .\ARM_GCC_493\Release\ADC_DAC.a(DAC_IN_LSB.o)
+                                0x240 (size before relaxing)
+ .debug_str     0x00002199      0x178 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_ADC_CK.o)
+                                0x325 (size before relaxing)
+ .debug_str     0x00002311      0x180 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_11.o)
+                                0x349 (size before relaxing)
+ .debug_str     0x00002491      0x165 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_7.o)
+                                0x336 (size before relaxing)
+ .debug_str     0x000025f6      0x165 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_9.o)
+                                0x336 (size before relaxing)
+ .debug_str     0x0000275b      0x165 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_8.o)
+                                0x336 (size before relaxing)
+ .debug_str     0x000028c0      0x165 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_6.o)
+                                0x336 (size before relaxing)
+ .debug_str     0x00002a25      0x178 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_10.o)
+                                0x349 (size before relaxing)
+ .debug_str     0x00002b9d      0x165 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_4.o)
+                                0x336 (size before relaxing)
+ .debug_str     0x00002d02      0x165 .\ARM_GCC_493\Release\ADC_DAC.a(PWM_5.o)
+                                0x336 (size before relaxing)
+ .debug_str     0x00002e67      0x25d .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq.o)
+                                0x461 (size before relaxing)
+ .debug_str     0x000030c4       0x39 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_INT.o)
+                                0x1c6 (size before relaxing)
+ .debug_str     0x000030fd      0x27c .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
+                                0x4d2 (size before relaxing)
+ .debug_str     0x00003379       0xcb .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_TempBuf_dma.o)
+                                0x265 (size before relaxing)
+ .debug_str     0x00003444       0x94 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_FinalBuf_dma.o)
+                                0x269 (size before relaxing)
+ .debug_str     0x000034d8      0x172 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_IRQ.o)
+                                0x344 (size before relaxing)
+ .debug_str     0x0000364a       0x4b .\ARM_GCC_493\Release\ADC_DAC.a(DIV_MASK_MSB.o)
+                                0x1e2 (size before relaxing)
+ .debug_str     0x00003695       0x4b .\ARM_GCC_493\Release\ADC_DAC.a(DIV_MASK_LSB.o)
+                                0x1e2 (size before relaxing)
+ .debug_str     0x000036e0      0x13e .\ARM_GCC_493\Release\ADC_DAC.a(CyFlash.o)
+                                0x308 (size before relaxing)
+ .debug_str     0x0000381e      0x11f .\ARM_GCC_493\Release\ADC_DAC.a(CySpc.o)
+                                0x305 (size before relaxing)
 
 .debug_loc
  *(.debug_loc)
@@ -2130,7 +2146,7 @@ END GROUP
 .debug_macinfo
  *(.debug_macinfo)
 
-.debug_ranges   0x00000000      0xfd0
+.debug_ranges   0x00000000      0xfe8
  *(.debug_ranges)
  .debug_ranges  0x00000000       0x28 .\ARM_GCC_493\Release\main.o
  .debug_ranges  0x00000028       0x38 .\ARM_GCC_493\Release\Cm3Start.o
@@ -2167,9 +2183,10 @@ END GROUP
  .debug_ranges  0x00000e40       0x18 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_TempBuf_dma.o)
  .debug_ranges  0x00000e58       0x18 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_FinalBuf_dma.o)
  .debug_ranges  0x00000e70       0x70 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_IRQ.o)
- .debug_ranges  0x00000ee0       0x18 .\ARM_GCC_493\Release\ADC_DAC.a(DIV_MASK_LSB.o)
- .debug_ranges  0x00000ef8       0x70 .\ARM_GCC_493\Release\ADC_DAC.a(CyFlash.o)
- .debug_ranges  0x00000f68       0x68 .\ARM_GCC_493\Release\ADC_DAC.a(CySpc.o)
+ .debug_ranges  0x00000ee0       0x18 .\ARM_GCC_493\Release\ADC_DAC.a(DIV_MASK_MSB.o)
+ .debug_ranges  0x00000ef8       0x18 .\ARM_GCC_493\Release\ADC_DAC.a(DIV_MASK_LSB.o)
+ .debug_ranges  0x00000f10       0x70 .\ARM_GCC_493\Release\ADC_DAC.a(CyFlash.o)
+ .debug_ranges  0x00000f80       0x68 .\ARM_GCC_493\Release\ADC_DAC.a(CySpc.o)
 
 .comment        0x00000000       0x70
  .comment       0x00000000       0x70 .\ARM_GCC_493\Release\main.o
@@ -2210,6 +2227,7 @@ END GROUP
  .comment       0x00000000       0x71 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_TempBuf_dma.o)
  .comment       0x00000000       0x71 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_FinalBuf_dma.o)
  .comment       0x00000000       0x71 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_IRQ.o)
+ .comment       0x00000000       0x71 .\ARM_GCC_493\Release\ADC_DAC.a(DIV_MASK_MSB.o)
  .comment       0x00000000       0x71 .\ARM_GCC_493\Release\ADC_DAC.a(DIV_MASK_LSB.o)
  .comment       0x00000000       0x71 .\ARM_GCC_493\Release\ADC_DAC.a(CyFlash.o)
  .comment       0x00000000       0x71 .\ARM_GCC_493\Release\ADC_DAC.a(CySpc.o)
@@ -2313,43 +2331,45 @@ END GROUP
  .ARM.attributes
                 0x00000791       0x33 .\ARM_GCC_493\Release\ADC_DAC.a(ADC_SAR_Seq_IRQ.o)
  .ARM.attributes
-                0x000007c4       0x33 .\ARM_GCC_493\Release\ADC_DAC.a(DIV_MASK_LSB.o)
+                0x000007c4       0x33 .\ARM_GCC_493\Release\ADC_DAC.a(DIV_MASK_MSB.o)
  .ARM.attributes
-                0x000007f7       0x21 .\ARM_GCC_493\Release\ADC_DAC.a(CyBootAsmGnu.o)
+                0x000007f7       0x33 .\ARM_GCC_493\Release\ADC_DAC.a(DIV_MASK_LSB.o)
  .ARM.attributes
-                0x00000818       0x33 .\ARM_GCC_493\Release\ADC_DAC.a(CyFlash.o)
+                0x0000082a       0x21 .\ARM_GCC_493\Release\ADC_DAC.a(CyBootAsmGnu.o)
  .ARM.attributes
-                0x0000084b       0x33 .\ARM_GCC_493\Release\ADC_DAC.a(CySpc.o)
+                0x0000084b       0x33 .\ARM_GCC_493\Release\ADC_DAC.a(CyFlash.o)
  .ARM.attributes
-                0x0000087e       0x1d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_addsubsf3.o)
+                0x0000087e       0x33 .\ARM_GCC_493\Release\ADC_DAC.a(CySpc.o)
  .ARM.attributes
-                0x0000089b       0x1d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_muldivsf3.o)
+                0x000008b1       0x1d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_addsubsf3.o)
  .ARM.attributes
-                0x000008b8       0x1d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_aeabi_ldivmod.o)
+                0x000008ce       0x1d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_muldivsf3.o)
  .ARM.attributes
-                0x000008d5       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(bpabi.o)
+                0x000008eb       0x1d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_aeabi_ldivmod.o)
  .ARM.attributes
-                0x00000902       0x1d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_dvmd_tls.o)
+                0x00000908       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(bpabi.o)
  .ARM.attributes
-                0x0000091f       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_divdi3.o)
+                0x00000935       0x1d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_dvmd_tls.o)
  .ARM.attributes
-                0x0000094c       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_udivdi3.o)
+                0x00000952       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_divdi3.o)
  .ARM.attributes
-                0x00000979       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
+                0x0000097f       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_udivdi3.o)
  .ARM.attributes
-                0x000009a6       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-exit.o)
+                0x000009ac       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
  .ARM.attributes
-                0x000009d3       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
+                0x000009d9       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-exit.o)
  .ARM.attributes
-                0x00000a00       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
+                0x00000a06       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
  .ARM.attributes
-                0x00000a2d       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy.o)
+                0x00000a33       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
  .ARM.attributes
-                0x00000a5a       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
+                0x00000a60       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy.o)
  .ARM.attributes
-                0x00000a87       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtend.o
+                0x00000a8d       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
  .ARM.attributes
-                0x00000ab4       0x1d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtn.o
+                0x00000aba       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtend.o
+ .ARM.attributes
+                0x00000ae7       0x1d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtn.o
 
 /DISCARD/
  *(.note.GNU-stack)

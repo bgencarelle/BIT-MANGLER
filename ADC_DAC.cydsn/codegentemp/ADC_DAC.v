@@ -1,6 +1,6 @@
 // ======================================================================
 // ADC_DAC.v generated from TopDesign.cysch
-// 04/10/2017 at 10:20
+// 04/15/2017 at 13:41
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -207,7 +207,7 @@ endmodule
 `include "C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\ZeroTerminal\ZeroTerminal.v"
 `endif
 
-// Filter_v2_30(ChannelEnableA=true, ChannelEnableB=true, ChannelSettingsA=<enabled=true>\r\n<userEntryEnabled=false>\r\n<sampleRate=81>\r\n<filterGain_dB=0.5>\r\n<filterGain_Linear=1.05925372517729>\r\n<gainScale=DB>\r\n<width=WIDTH_16>\r\n<signal=DMA>\r\n<stage_count=3>\r\n<bus_clock=10.044>\r\n<stage0=\r\n    <design_type=FIR>\r\n    <pass_type=LOW_PASS>\r\n    <window_type=HAMMING>\r\n    <tap_count=27>\r\n    <primary_freq=17>\r\n    <bandwidth=15>\r\n    <UserCoefficient=>\r\n    <userTapCount=1>\r\n>\r\n<stage1=\r\n    <design_type=FIR>\r\n    <pass_type=LOW_PASS>\r\n    <window_type=HAMMING>\r\n    <tap_count=19>\r\n    <primary_freq=17>\r\n    <bandwidth=10>\r\n    <UserCoefficient=>\r\n    <userTapCount=1>\r\n>\r\n<stage2=\r\n    <design_type=FIR>\r\n    <pass_type=LOW_PASS>\r\n    <window_type=HAMMING>\r\n    <tap_count=23>\r\n    <primary_freq=15>\r\n    <bandwidth=10>\r\n    <UserCoefficient=>\r\n    <userTapCount=1>\r\n>\r\n<stage3=\r\n    <design_type=FIR>\r\n    <pass_type=LOW_PASS>\r\n    <window_type=HAMMING>\r\n    <tap_count=16>\r\n    <primary_freq=15>\r\n    <bandwidth=10>\r\n    <UserCoefficient=>\r\n    <userTapCount=1>\r\n>\r\n<stage4=\r\n    <design_type=BIQUAD>\r\n    <pass_type=LOW_PASS>\r\n    <shape=BUTTERWORTH>\r\n    <order=8>\r\n    <ripple=0.1>\r\n    <primary_freq=17>\r\n    <bandwidth=10>\r\n    <UserCoefficient=>\r\n    <userOrder=1>\r\n>\r\n<stage5=\r\n    <design_type=BIQUAD>\r\n    <pass_type=LOW_PASS>\r\n    <shape=BESSEL>\r\n    <order=4>\r\n    <ripple=0.1>\r\n    <primary_freq=15>\r\n    <bandwidth=10>\r\n    <UserCoefficient=>\r\n    <userOrder=1>\r\n>\r\n<stage6=\r\n    <design_type=FIR>\r\n    <pass_type=LOW_PASS>\r\n    <window_type=HAMMING>\r\n    <tap_count=16>\r\n    <primary_freq=15>\r\n    <bandwidth=10>\r\n    <UserCoefficient=>\r\n    <userTapCount=1>\r\n>\r\n<stage7=\r\n    <design_type=FIR>\r\n    <pass_type=LOW_PASS>\r\n    <window_type=HAMMING>\r\n    <tap_count=16>\r\n    <primary_freq=15>\r\n    <bandwidth=10>\r\n    <UserCoefficient=>\r\n    <userTapCount=1>\r\n>\r\n, ChannelSettingsB=<enabled=true>\r\n<userEntryEnabled=false>\r\n<sampleRate=63>\r\n<filterGain_dB=1>\r\n<filterGain_Linear=1.12201845430196>\r\n<gainScale=DB>\r\n<width=WIDTH_16>\r\n<signal=DMA>\r\n<stage_count=3>\r\n<bus_clock=7.812>\r\n<stage0=\r\n    <design_type=FIR>\r\n    <pass_type=LOW_PASS>\r\n    <window_type=HAMMING>\r\n    <tap_count=13>\r\n    <primary_freq=17>\r\n    <bandwidth=10>\r\n    <UserCoefficient=0.5/0.5/>\r\n    <userTapCount=2>\r\n>\r\n<stage1=\r\n    <design_type=FIR>\r\n    <pass_type=LOW_PASS>\r\n    <window_type=HAMMING>\r\n    <tap_count=15>\r\n    <primary_freq=17>\r\n    <bandwidth=10>\r\n    <UserCoefficient=>\r\n    <userTapCount=1>\r\n>\r\n<stage2=\r\n    <design_type=FIR>\r\n    <pass_type=LOW_PASS>\r\n    <window_type=HAMMING>\r\n    <tap_count=11>\r\n    <primary_freq=15>\r\n    <bandwidth=10>\r\n    <UserCoefficient=>\r\n    <userTapCount=1>\r\n>\r\n<stage3=\r\n    <design_type=FIR>\r\n    <pass_type=LOW_PASS>\r\n    <window_type=HAMMING>\r\n    <tap_count=16>\r\n    <primary_freq=15>\r\n    <bandwidth=10>\r\n    <UserCoefficient=>\r\n    <userTapCount=1>\r\n>\r\n<stage4=\r\n    <design_type=FIR>\r\n    <pass_type=LOW_PASS>\r\n    <window_type=HAMMING>\r\n    <tap_count=16>\r\n    <primary_freq=15>\r\n    <bandwidth=10>\r\n    <UserCoefficient=>\r\n    <userTapCount=1>\r\n>\r\n<stage5=\r\n    <design_type=FIR>\r\n    <pass_type=LOW_PASS>\r\n    <window_type=HAMMING>\r\n    <tap_count=16>\r\n    <primary_freq=15>\r\n    <bandwidth=10>\r\n    <UserCoefficient=>\r\n    <userTapCount=1>\r\n>\r\n<stage6=\r\n    <design_type=FIR>\r\n    <pass_type=LOW_PASS>\r\n    <window_type=HAMMING>\r\n    <tap_count=16>\r\n    <primary_freq=15>\r\n    <bandwidth=10>\r\n    <UserCoefficient=>\r\n    <userTapCount=1>\r\n>\r\n<stage7=\r\n    <design_type=FIR>\r\n    <pass_type=LOW_PASS>\r\n    <window_type=HAMMING>\r\n    <tap_count=16>\r\n    <primary_freq=15>\r\n    <bandwidth=10>\r\n    <UserCoefficient=>\r\n    <userTapCount=1>\r\n>\r\n, ChannelTypeA=255, ChannelTypeB=255, CoefficientEntryEnableA=false, CoefficientEntryEnableB=false, DisplaySettingsA=50307, DisplaySettingsB=50307, DmaEnableA=true, DmaEnableB=true, IrqEnableA=false, IrqEnableB=false, MinBusClockVal=10.044, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMPONENT_NAME=Filter_v2_30, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=Filter, CY_INSTANCE_SHORT_NAME=Filter, CY_MAJOR_VERSION=2, CY_MINOR_VERSION=30, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.0 Update 1, INSTANCE_NAME=Filter, )
+// Filter_v2_30(ChannelEnableA=true, ChannelEnableB=true, ChannelSettingsA=<enabled=true>\r\n<userEntryEnabled=false>\r\n<sampleRate=64>\r\n<filterGain_dB=0>\r\n<filterGain_Linear=1>\r\n<gainScale=DB>\r\n<width=WIDTH_16>\r\n<signal=INTERRUPT>\r\n<stage_count=2>\r\n<bus_clock=9.28>\r\n<stage0=\r\n    <design_type=FIR>\r\n    <pass_type=LOW_PASS>\r\n    <window_type=BLACKMAN>\r\n    <tap_count=41>\r\n    <primary_freq=15>\r\n    <bandwidth=15>\r\n    <UserCoefficient=>\r\n    <userTapCount=1>\r\n>\r\n<stage1=\r\n    <design_type=BIQUAD>\r\n    <pass_type=LOW_PASS>\r\n    <shape=BUTTERWORTH>\r\n    <order=8>\r\n    <ripple=0.1>\r\n    <primary_freq=15>\r\n    <bandwidth=10>\r\n    <UserCoefficient=>\r\n    <userOrder=1>\r\n>\r\n<stage2=\r\n    <design_type=FIR>\r\n    <pass_type=LOW_PASS>\r\n    <window_type=HAMMING>\r\n    <tap_count=23>\r\n    <primary_freq=15>\r\n    <bandwidth=10>\r\n    <UserCoefficient=>\r\n    <userTapCount=1>\r\n>\r\n<stage3=\r\n    <design_type=FIR>\r\n    <pass_type=LOW_PASS>\r\n    <window_type=HAMMING>\r\n    <tap_count=16>\r\n    <primary_freq=15>\r\n    <bandwidth=10>\r\n    <UserCoefficient=>\r\n    <userTapCount=1>\r\n>\r\n<stage4=\r\n    <design_type=BIQUAD>\r\n    <pass_type=LOW_PASS>\r\n    <shape=BUTTERWORTH>\r\n    <order=8>\r\n    <ripple=0.1>\r\n    <primary_freq=17>\r\n    <bandwidth=10>\r\n    <UserCoefficient=>\r\n    <userOrder=1>\r\n>\r\n<stage5=\r\n    <design_type=FIR>\r\n    <pass_type=LOW_PASS>\r\n    <window_type=HAMMING>\r\n    <tap_count=19>\r\n    <primary_freq=17>\r\n    <bandwidth=10>\r\n    <UserCoefficient=>\r\n    <userTapCount=1>\r\n>\r\n<stage6=\r\n    <design_type=FIR>\r\n    <pass_type=LOW_PASS>\r\n    <window_type=HAMMING>\r\n    <tap_count=16>\r\n    <primary_freq=15>\r\n    <bandwidth=10>\r\n    <UserCoefficient=>\r\n    <userTapCount=1>\r\n>\r\n<stage7=\r\n    <design_type=FIR>\r\n    <pass_type=LOW_PASS>\r\n    <window_type=HAMMING>\r\n    <tap_count=16>\r\n    <primary_freq=15>\r\n    <bandwidth=10>\r\n    <UserCoefficient=>\r\n    <userTapCount=1>\r\n>\r\n, ChannelSettingsB=<enabled=true>\r\n<userEntryEnabled=false>\r\n<sampleRate=63>\r\n<filterGain_dB=1>\r\n<filterGain_Linear=1.12201845430196>\r\n<gainScale=DB>\r\n<width=WIDTH_16>\r\n<signal=INTERRUPT>\r\n<stage_count=3>\r\n<bus_clock=10.044>\r\n<stage0=\r\n    <design_type=FIR>\r\n    <pass_type=LOW_PASS>\r\n    <window_type=HAMMING>\r\n    <tap_count=13>\r\n    <primary_freq=17>\r\n    <bandwidth=10>\r\n    <UserCoefficient=0.5/0.5/>\r\n    <userTapCount=2>\r\n>\r\n<stage1=\r\n    <design_type=FIR>\r\n    <pass_type=LOW_PASS>\r\n    <window_type=HAMMING>\r\n    <tap_count=15>\r\n    <primary_freq=17>\r\n    <bandwidth=10>\r\n    <UserCoefficient=>\r\n    <userTapCount=1>\r\n>\r\n<stage2=\r\n    <design_type=FIR>\r\n    <pass_type=LOW_PASS>\r\n    <window_type=HAMMING>\r\n    <tap_count=11>\r\n    <primary_freq=15>\r\n    <bandwidth=10>\r\n    <UserCoefficient=>\r\n    <userTapCount=1>\r\n>\r\n<stage3=\r\n    <design_type=FIR>\r\n    <pass_type=LOW_PASS>\r\n    <window_type=HAMMING>\r\n    <tap_count=16>\r\n    <primary_freq=15>\r\n    <bandwidth=10>\r\n    <UserCoefficient=>\r\n    <userTapCount=1>\r\n>\r\n<stage4=\r\n    <design_type=FIR>\r\n    <pass_type=LOW_PASS>\r\n    <window_type=HAMMING>\r\n    <tap_count=16>\r\n    <primary_freq=15>\r\n    <bandwidth=10>\r\n    <UserCoefficient=>\r\n    <userTapCount=1>\r\n>\r\n<stage5=\r\n    <design_type=FIR>\r\n    <pass_type=LOW_PASS>\r\n    <window_type=HAMMING>\r\n    <tap_count=16>\r\n    <primary_freq=15>\r\n    <bandwidth=10>\r\n    <UserCoefficient=>\r\n    <userTapCount=1>\r\n>\r\n<stage6=\r\n    <design_type=FIR>\r\n    <pass_type=LOW_PASS>\r\n    <window_type=HAMMING>\r\n    <tap_count=16>\r\n    <primary_freq=15>\r\n    <bandwidth=10>\r\n    <UserCoefficient=>\r\n    <userTapCount=1>\r\n>\r\n<stage7=\r\n    <design_type=FIR>\r\n    <pass_type=LOW_PASS>\r\n    <window_type=HAMMING>\r\n    <tap_count=16>\r\n    <primary_freq=15>\r\n    <bandwidth=10>\r\n    <UserCoefficient=>\r\n    <userTapCount=1>\r\n>\r\n, ChannelTypeA=255, ChannelTypeB=255, CoefficientEntryEnableA=false, CoefficientEntryEnableB=false, DisplaySettingsA=50307, DisplaySettingsB=50307, DmaEnableA=false, DmaEnableB=false, IrqEnableA=true, IrqEnableB=true, MinBusClockVal=9.28, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMPONENT_NAME=Filter_v2_30, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=Filter, CY_INSTANCE_SHORT_NAME=Filter, CY_MAJOR_VERSION=2, CY_MINOR_VERSION=30, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.0 Update 1, INSTANCE_NAME=Filter, )
 module Filter_v2_30_1 (
     DMA_Req_A,
     DMA_Req_B,
@@ -311,7 +311,7 @@ endmodule
 `include "C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_constant_v1_0\cy_constant_v1_0.v"
 `endif
 
-// ADC_SAR_v3_0(ADC_Clock=0, ADC_Clock_Frequency=1297296, ADC_Input_Range=0, ADC_Power=0, ADC_Reference=0, ADC_Resolution=12, ADC_SampleMode=2, Enable_next_out=false, Ref_Voltage=1.024, Ref_Voltage_mV=1024, rm_int=false, Sample_Precharge=4, Sample_Rate=81081, Sample_Rate_def=631579, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMPONENT_NAME=ADC_SAR_v3_0, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=ADC_SAR_1, CY_INSTANCE_SHORT_NAME=ADC_SAR_1, CY_MAJOR_VERSION=3, CY_MINOR_VERSION=0, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.0 Update 1, INSTANCE_NAME=ADC_SAR_1, )
+// ADC_SAR_v3_0(ADC_Clock=0, ADC_Clock_Frequency=1600000, ADC_Input_Range=0, ADC_Power=0, ADC_Reference=0, ADC_Resolution=12, ADC_SampleMode=2, Enable_next_out=false, Ref_Voltage=1.024, Ref_Voltage_mV=1024, rm_int=false, Sample_Precharge=4, Sample_Rate=100000, Sample_Rate_def=631579, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMPONENT_NAME=ADC_SAR_v3_0, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=ADC_SAR_1, CY_INSTANCE_SHORT_NAME=ADC_SAR_1, CY_MAJOR_VERSION=3, CY_MINOR_VERSION=0, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.0 Update 1, INSTANCE_NAME=ADC_SAR_1, )
 module ADC_SAR_v3_0_2 (
     vplus,
     vminus,
@@ -785,7 +785,7 @@ endmodule
 `include "C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_sync_v1_0\cy_sync_v1_0.v"
 `endif
 
-// ADC_SAR_SEQ_v2_0(ADC_Clock_Frequency=1297296, Adjust=0, ClockSource=1, InputRange=1, NumChannels=5, Reference=0, Resolution=12, rm_int=false, SampleMode=0, SamplePrecharge=4, SampleRate=81081, SampleRate_def=631579, VrefValue=2.5, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMPONENT_NAME=ADC_SAR_SEQ_v2_0, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=ADC_SAR_Seq, CY_INSTANCE_SHORT_NAME=ADC_SAR_Seq, CY_MAJOR_VERSION=2, CY_MINOR_VERSION=0, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.0 Update 1, INSTANCE_NAME=ADC_SAR_Seq, )
+// ADC_SAR_SEQ_v2_0(ADC_Clock_Frequency=1500000, Adjust=0, ClockSource=1, InputRange=1, NumChannels=4, Reference=0, Resolution=12, rm_int=false, SampleMode=0, SamplePrecharge=4, SampleRate=93750, SampleRate_def=631579, VrefValue=2.5, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMPONENT_NAME=ADC_SAR_SEQ_v2_0, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=ADC_SAR_Seq, CY_INSTANCE_SHORT_NAME=ADC_SAR_Seq, CY_MAJOR_VERSION=2, CY_MINOR_VERSION=0, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.0 Update 1, INSTANCE_NAME=ADC_SAR_Seq, )
 module ADC_SAR_SEQ_v2_0_7 (
     soc,
     aclk,
@@ -1244,7 +1244,7 @@ module ADC_SAR_SEQ_v2_0_7 (
         .soc(soc),
         .soc_out(soc_out),
         .sar_eoc(Net_3830));
-    defparam bSAR_SEQ.NumChannels = 5;
+    defparam bSAR_SEQ.NumChannels = 4;
     defparam bSAR_SEQ.SampleMode = 0;
 
 	// VirtualMux_4 (cy_virtualmux_v1_0)
@@ -1391,6 +1391,32 @@ module PWM_v3_30_8 (
 
 endmodule
 
+// Component: mux_v1_10
+`ifdef CY_BLK_DIR
+`undef CY_BLK_DIR
+`endif
+
+`ifdef WARP
+`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\mux_v1_10"
+`include "C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\mux_v1_10\mux_v1_10.v"
+`else
+`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\mux_v1_10"
+`include "C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\mux_v1_10\mux_v1_10.v"
+`endif
+
+// Component: CyControlReg_v1_80
+`ifdef CY_BLK_DIR
+`undef CY_BLK_DIR
+`endif
+
+`ifdef WARP
+`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyControlReg_v1_80"
+`include "C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyControlReg_v1_80\CyControlReg_v1_80.v"
+`else
+`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyControlReg_v1_80"
+`include "C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyControlReg_v1_80\CyControlReg_v1_80.v"
+`endif
+
 // Component: B_PWM_v3_30
 `ifdef CY_BLK_DIR
 `undef CY_BLK_DIR
@@ -1497,19 +1523,6 @@ module PWM_v3_30_9 (
 
 
 endmodule
-
-// Component: mux_v1_10
-`ifdef CY_BLK_DIR
-`undef CY_BLK_DIR
-`endif
-
-`ifdef WARP
-`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\mux_v1_10"
-`include "C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\mux_v1_10\mux_v1_10.v"
-`else
-`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\mux_v1_10"
-`include "C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\mux_v1_10\mux_v1_10.v"
-`endif
 
 // PWM_v3_30(CaptureMode=0, Clock_CheckTolerance=true, Clock_desired_freq=12, Clock_desired_freq_unit=6, Clock_divisor=1, Clock_FractDividerDenominator=0, Clock_FractDividerNumerator=0, Clock_FractDividerUsed=false, Clock_is_direct=false, Clock_is_divider=false, Clock_is_freq=true, Clock_minus_tolerance=5, Clock_ph_align_clock_id=, Clock_ph_align_clock_name=, Clock_plus_tolerance=5, Clock_source_clock_id=, Clock_source_clock_name=, Compare1_16=false, Compare1_8=true, Compare2_16=false, Compare2_8=false, CompareStatusEdgeSense=true, CompareType1=2, CompareType1Software=0, CompareType2=1, CompareType2Software=0, CompareValue1=0, CompareValue2=63, CONTROL3=0, ControlReg=true, CtlModeReplacementString=SyncCtl, CyGetRegReplacementString=CY_GET_REG8, CySetRegReplacementString=CY_SET_REG8, DeadBand=0, DeadBand2_4=0, DeadBand256=0, DeadBandUsed=0, DeadTime=1, DitherOffset=0, EnableMode=0, FF16=false, FF8=false, FixedFunction=false, FixedFunctionUsed=0, InterruptOnCMP1=false, InterruptOnCMP2=false, InterruptOnKill=false, InterruptOnTC=false, IntOnCMP1=0, IntOnCMP2=0, IntOnKill=0, IntOnTC=0, KillMode=0, KillModeMinTime=0, MinimumKillTime=1, OneCompare=true, Period=1, PWMMode=0, PWMModeCenterAligned=0, RegDefReplacementString=reg8, RegSizeReplacementString=uint8, Resolution=8, RstStatusReplacementString=sSTSReg_rstSts, RunMode=0, Status=true, TermMode_capture=0, TermMode_clock=0, TermMode_cmp_sel=0, TermMode_enable=0, TermMode_interrupt=0, TermMode_kill=0, TermMode_ph1=0, TermMode_ph2=0, TermMode_pwm=0, TermMode_pwm1=0, TermMode_pwm2=0, TermMode_reset=0, TermMode_tc=0, TermMode_trigger=0, TermVisibility_capture=false, TermVisibility_clock=true, TermVisibility_cmp_sel=false, TermVisibility_enable=false, TermVisibility_interrupt=true, TermVisibility_kill=false, TermVisibility_ph1=false, TermVisibility_ph2=false, TermVisibility_pwm=true, TermVisibility_pwm1=false, TermVisibility_pwm2=false, TermVisibility_reset=true, TermVisibility_tc=true, TermVisibility_trigger=false, TriggerMode=0, UDB16=false, UDB8=true, UseControl=true, UseInterrupt=true, UseStatus=true, VerilogSectionReplacementString=sP8, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMPONENT_NAME=PWM_v3_30, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=PWM_5, CY_INSTANCE_SHORT_NAME=PWM_5, CY_MAJOR_VERSION=3, CY_MINOR_VERSION=30, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.0 Update 1, INSTANCE_NAME=PWM_5, )
 module PWM_v3_30_10 (
@@ -2182,19 +2195,6 @@ module PWM_v3_30_16 (
 
 endmodule
 
-// Component: CyControlReg_v1_80
-`ifdef CY_BLK_DIR
-`undef CY_BLK_DIR
-`endif
-
-`ifdef WARP
-`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyControlReg_v1_80"
-`include "C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyControlReg_v1_80\CyControlReg_v1_80.v"
-`else
-`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyControlReg_v1_80"
-`include "C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyControlReg_v1_80\CyControlReg_v1_80.v"
-`endif
-
 // Component: CyStatusReg_v1_90
 `ifdef CY_BLK_DIR
 `undef CY_BLK_DIR
@@ -2211,157 +2211,158 @@ endmodule
 // top
 module top ;
 
-          wire  Net_20582;
-          wire  Net_20581;
-          wire  Net_20580;
-          wire  Net_20579;
-          wire  Net_20578;
-          wire  Net_20577;
-          wire  Net_20576;
-          wire  Net_20575;
-          wire  Net_20574;
-          wire  Net_20591;
-          wire  Net_20590;
-          wire  Net_20589;
-          wire  Net_20588;
-          wire  Net_20587;
-          wire  Net_20586;
-          wire  Net_20585;
-          wire  DAC_CLOCK_BUS;
-          wire  Net_20584;
-          wire  Net_20583;
-          wire  Net_15777;
-          wire  Net_15776;
-          wire  Net_15775;
-          wire  Net_15774;
-          wire  Net_15773;
-          wire  Net_15772;
-          wire  Net_15771;
-          wire  Net_15770;
-          wire  Net_15769;
+          wire  Net_23486;
           wire [11:0] DIV_MASK_BUS;
-          wire  Net_15768;
-          wire  Net_15767;
-          wire  Net_15766;
           wire [11:0] MUX_BUS;
-          wire  Net_15765;
-          wire  Net_15764;
-          wire  Net_15763;
-          wire  Net_15762;
-          wire  Net_15761;
-          wire  Net_15760;
-          wire  Net_21812;
-          wire  Net_6366;
-          wire  Net_6365;
-          wire  Net_6364;
-          wire  Net_6363;
-          wire  Net_6362;
-          wire  Net_6361;
-          wire  Net_6360;
-          wire  Net_6359;
-          wire  Net_6358;
-          wire  Net_6357;
-          wire  Net_6356;
-          wire  Net_6355;
-          wire  Net_6354;
-          wire  Net_6353;
-          wire  Net_6352;
-          wire  Net_6351;
-          wire  Net_6350;
-          wire  Net_6349;
-          wire  Net_6348;
-          wire  Net_10981;
-          wire  Net_10980;
-          wire  Net_10979;
-          wire  Net_10978;
-          wire  Net_10977;
-          wire  Net_10976;
-          wire  Net_10975;
-          wire  PWM_CK;
-          wire  Net_10974;
-          wire  Net_10973;
-          wire  Net_10972;
-          wire  Net_10971;
-          wire  Net_11047;
-          wire  Net_11046;
-          wire  Net_11045;
-          wire  Net_11044;
-          wire  Net_11043;
-          wire  Net_11042;
-          wire  Net_11041;
-          wire  Net_11040;
-          wire  Net_11039;
-          wire  Net_11038;
-          wire  Net_11037;
-          wire  Net_11212;
-          wire  Net_11211;
-          wire  Net_11210;
-          wire  Net_11209;
-          wire  Net_11208;
-          wire  Net_11207;
-          wire  Net_11206;
-          wire  Net_11205;
-          wire  Net_11204;
-          wire  Net_11203;
-          wire  Net_11202;
-          wire  Net_11685;
-          wire  Net_11684;
-          wire  Net_11683;
-          wire  Net_11682;
-          wire  Net_11681;
-          wire  Net_11680;
-          wire  Net_11679;
-          wire  Net_11678;
-          wire  Net_11677;
-          wire  Net_11676;
-          wire  Net_11675;
-          wire  Net_10827;
-          wire  Net_10826;
-          wire  Net_10825;
-          wire  Net_10824;
-          wire  Net_10823;
-          wire  Net_11900;
-          wire  Net_10821;
-          wire  Net_10820;
-          wire  Net_10819;
-          wire  Net_10818;
-          wire  Net_10817;
-          wire  Net_21811;
-          wire  Net_21810;
-          wire  Net_21809;
-          wire  Net_21808;
-          wire  Net_21807;
-          wire  Net_21806;
-          wire  Net_21805;
-          wire  ADC_CLK;
-          wire  ACK;
-          wire  Net_21804;
-          wire  Net_21803;
-          wire  Net_21802;
-          wire  Net_21801;
-          wire  Net_21800;
-          wire  Net_21799;
-          wire  Net_21798;
-          wire  Net_21797;
-          wire  Net_21796;
-          wire  Net_21795;
           wire [11:0] ADC_DIV_Q;
-          wire  Net_21794;
-          wire  Net_21793;
-          wire  Net_21792;
-          wire  Net_21791;
-          wire  Net_21790;
-          wire  Net_12230;
-          wire  Net_12229;
-          wire  Net_12227;
-          wire  Net_12226;
-          wire  Net_12225;
-          wire  Net_12224;
-          wire  Net_12223;
-          wire  Net_12222;
-          wire  Net_12221;
-          wire  Net_12220;
-          wire  Net_12219;
+          wire  PWM_CK;
+          wire  Net_23485;
+          wire  Net_23484;
+          wire  Net_23483;
+          wire [11:0] ADC_OUT_BUS;
+          wire  Net_23482;
+          wire  Net_23481;
+          wire  ACK;
+          wire  Net_23480;
+          wire  Net_23479;
+          wire  Net_23478;
+          wire  Net_23495;
+          wire  Net_23494;
+          wire  Net_23493;
+          wire  Net_23492;
+          wire  Net_23491;
+          wire  Net_23490;
+          wire  Net_23489;
+          wire  Net_23488;
+          wire  Net_23487;
+          wire  Net_23504;
+          wire  Net_23503;
+          wire  Net_23502;
+          wire  Net_23501;
+          wire  Net_23500;
+          wire  Net_23499;
+          wire  Net_23498;
+          wire  Net_23497;
+          wire  Net_23496;
+          wire  Net_23513;
+          wire  Net_23512;
+          wire  Net_23511;
+          wire  Net_23510;
+          wire  Net_23509;
+          wire  Net_23508;
+          wire  Net_23507;
+          wire  Net_23506;
+          wire  Net_23505;
+          wire  Net_28978;
+          wire  Net_28977;
+          wire  Net_28976;
+          wire  Net_28975;
+          wire  ADC_CLK;
+          wire  Net_28974;
+          wire  Net_28973;
+          wire  Net_28972;
+          wire  Net_28971;
+          wire  Net_28970;
+          wire  Net_28969;
+          wire  Net_28968;
+          wire  Net_28967;
+          wire  Net_28966;
+          wire  Net_28965;
+          wire  Net_28964;
+          wire  Net_28963;
+          wire  Net_28962;
+          wire  Net_28961;
+          wire  Net_28960;
+          wire  Net_28959;
+          wire  Net_28958;
+          wire  Net_28957;
+          wire  Net_28956;
+          wire  Net_28955;
+          wire  Net_28954;
+          wire  Net_28953;
+          wire  Net_28952;
+          wire  Net_28951;
+          wire  Net_28950;
+          wire  Net_28949;
+          wire  Net_28948;
+          wire  Net_28947;
+          wire  Net_28946;
+          wire  Net_28945;
+          wire  Net_28944;
+          wire  Net_28943;
+          wire  Net_28942;
+          wire  Net_28941;
+          wire  Net_28940;
+          wire  Net_28939;
+          wire  Net_28938;
+          wire  Net_28937;
+          wire  Net_28936;
+          wire  Net_28935;
+          wire  Net_28934;
+          wire  Net_28933;
+          wire  Net_28932;
+          wire  Net_28931;
+          wire  Net_28930;
+          wire  Net_28929;
+          wire  Net_28928;
+          wire  Net_28927;
+          wire  Net_28926;
+          wire  Net_28925;
+          wire  Net_28924;
+          wire  Net_28923;
+          wire  Net_28922;
+          wire  Net_28921;
+          wire  Net_28920;
+          wire  Net_28919;
+          wire  Net_28918;
+          wire  Net_28917;
+          wire  Net_28916;
+          wire  Net_28915;
+          wire  Net_28914;
+          wire  Net_28913;
+          wire  Net_28912;
+          wire  Net_28911;
+          wire  Net_28910;
+          wire  Net_28909;
+          wire  Net_28908;
+          wire  Net_28907;
+          wire  Net_28906;
+          wire  Net_28905;
+          wire  Net_28904;
+          wire  Net_28903;
+          wire  Net_28902;
+          wire  Net_28901;
+          wire  Net_28900;
+          wire  Net_28899;
+          wire  Net_28898;
+          wire  Net_28897;
+          wire  Net_28896;
+          wire  Net_28895;
+          wire  Net_28894;
+          wire  Net_28893;
+          wire  Net_28892;
+          wire  Net_28891;
+          wire  Net_23581;
+          wire  Net_23582;
+          wire  Net_23583;
+          wire  Net_23615;
+          wire  Net_23614;
+          wire  Net_23613;
+          wire  Net_23612;
+          wire  Net_23611;
+          wire  Net_23610;
+          wire  Net_23609;
+          wire  Net_23608;
+          wire  Net_23607;
+          wire  Net_23624;
+          wire  Net_23623;
+          wire  Net_23622;
+          wire  Net_23621;
+          wire  Net_23620;
+          wire  Net_23619;
+          wire  Net_23618;
+          wire  Net_23617;
+          wire  Net_23616;
           wire  Net_6235;
           wire  Net_21789;
           wire  Net_21788;
@@ -2374,10 +2375,7 @@ module top ;
           wire  Net_21782;
           wire  Net_21781;
           wire  Net_21780;
-          wire  ADC_REG_CK;
-          wire [11:0] ADC_OUT_BUS;
           wire  Net_17104;
-          wire  Net_12821;
     electrical  Net_12726;
     electrical  Net_12725;
     electrical  Net_12724;
@@ -2467,33 +2465,31 @@ module top ;
     electrical  Net_12640;
     electrical  Net_12639;
     electrical  Net_12638;
+    electrical  Net_22826;
     electrical  Net_12636;
     electrical  Net_12633;
           wire  Net_12630;
           wire  Net_12629;
           wire  Net_12627;
-          wire  Net_14350;
     electrical  Net_12810;
           wire  Net_6050;
           wire  Net_6049;
           wire  Net_6048;
           wire  Net_6047;
-          wire  Net_12822;
     electrical  Net_1627;
           wire  Net_5999;
     electrical  Net_5998;
-    electrical  Net_5995;
+    electrical  Net_28979;
           wire  Net_1328;
           wire  Net_1327;
           wire  Net_1326;
-    electrical  Net_12637;
-    electrical  Net_21813;
+          wire  Net_6023;
           wire  Net_12820;
+    electrical  Net_21813;
     electrical  Net_800;
     electrical  Net_12632;
     electrical  Net_12634;
     electrical  Net_12631;
-          wire  Net_6023;
           wire  Net_6025;
           wire  Net_6026;
           wire  Net_6027;
@@ -2512,7 +2508,7 @@ module top ;
 
     ADC_SAR_v3_0_2 ADC_SAR_1 (
         .vplus(Net_800),
-        .vminus(Net_5995),
+        .vminus(Net_28979),
         .soc(PWM_CK),
         .eoc(Net_576),
         .aclk(ADC_CLK),
@@ -2989,8 +2985,6 @@ module top ;
 		 (.vout(Net_1374));
 
 
-    assign Net_12822 = 1'h1;
-
     SPI_Master_v2_50_4 SPI_DAC (
         .mosi(Net_6027),
         .sclk(Net_6026),
@@ -3238,8 +3232,6 @@ module top ;
         .Vminus(Net_12810));
     defparam Opamp_2.Mode = 1;
 
-    assign Net_14350 = 1'h1;
-
     ADC_SAR_SEQ_v2_0_7 ADC_SAR_Seq (
         .soc(1'b0),
         .aclk(ADC_CLK),
@@ -3251,7 +3243,7 @@ module top ;
         .AIN_21(Net_12634),
         .AIN_30(Net_21813),
         .AIN_31(Net_12636),
-        .AIN3(Net_12637),
+        .AIN3(Net_22826),
         .AIN_40(Net_12638),
         .AIN_41(Net_12639),
         .AIN_50(Net_12640),
@@ -3342,8 +3334,6 @@ module top ;
         .AIN64(Net_12725),
         .vdac_ref(Net_12726));
 
-    assign Net_12821 = 1'h1;
-
     PWM_v3_30_8 PWM_ADC_CK (
         .reset(Net_17104),
         .clock(ADC_CLK),
@@ -3366,7 +3356,7 @@ module top ;
 		#(.id("a10ede98-fbac-4b3a-aca2-d1c8401b6921"),
 		  .source_clock_id(""),
 		  .divisor(0),
-		  .period("769230769.230769"),
+		  .period("625000000"),
 		  .is_direct(0),
 		  .is_digital(1))
 		ADC_REG_CLOCK
@@ -3375,545 +3365,7 @@ module top ;
 
     assign Net_17104 = 1'h0;
 
-    PWM_v3_30_9 PWM_4 (
-        .reset(ACK),
-        .clock(ADC_OUT_BUS[4]),
-        .tc(Net_12219),
-        .pwm1(Net_12220),
-        .pwm2(Net_12221),
-        .interrupt(Net_12222),
-        .capture(1'b0),
-        .kill(1'b1),
-        .enable(1'b1),
-        .trigger(1'b0),
-        .cmp_sel(1'b0),
-        .pwm(ADC_DIV_Q[4]),
-        .ph1(Net_12229),
-        .ph2(Net_12230));
-    defparam PWM_4.Resolution = 8;
-
-    // -- Mux start --
-    if (1)
-    begin : MUXMSB_3
-        reg  tmp__MUXMSB_3_reg;
-        always @(ADC_OUT_BUS or ADC_DIV_Q or DIV_MASK_BUS)
-        begin
-            case (DIV_MASK_BUS[6])
-                1'b0 :  tmp__MUXMSB_3_reg = ADC_OUT_BUS[6];
-                1'b1 :  tmp__MUXMSB_3_reg = ADC_DIV_Q[6];
-            endcase
-        end
-        assign MUX_BUS[6] = tmp__MUXMSB_3_reg;
-    end
-    // -- Mux end --
-
-    PWM_v3_30_10 PWM_5 (
-        .reset(ACK),
-        .clock(ADC_OUT_BUS[5]),
-        .tc(Net_21790),
-        .pwm1(Net_21791),
-        .pwm2(Net_21792),
-        .interrupt(Net_21793),
-        .capture(1'b0),
-        .kill(1'b1),
-        .enable(1'b1),
-        .trigger(1'b0),
-        .cmp_sel(1'b0),
-        .pwm(ADC_DIV_Q[5]),
-        .ph1(Net_21799),
-        .ph2(Net_21800));
-    defparam PWM_5.Resolution = 8;
-
-    // -- TFF Start --
-    reg  cy_tff_4;
-    wire  tmp__cy_tff_4_clk;
-    assign tmp__cy_tff_4_clk = ADC_OUT_BUS[3];
-    always @(posedge tmp__cy_tff_4_clk)
-    begin
-        cy_tff_4 <= Net_12822^ADC_DIV_Q[3];
-    end
-    assign ADC_DIV_Q[3] = cy_tff_4;
-    // -- TFF End --
-
-    // -- TFF Start --
-    reg  cy_tff_3;
-    wire  tmp__cy_tff_3_clk;
-    assign tmp__cy_tff_3_clk = ADC_OUT_BUS[2];
-    always @(posedge tmp__cy_tff_3_clk)
-    begin
-        cy_tff_3 <= Net_12820^ADC_DIV_Q[2];
-    end
-    assign ADC_DIV_Q[2] = cy_tff_3;
-    // -- TFF End --
-
-    // -- TFF Start --
-    reg  cy_tff_2;
-    wire  tmp__cy_tff_2_clk;
-    assign tmp__cy_tff_2_clk = ADC_OUT_BUS[1];
-    always @(posedge tmp__cy_tff_2_clk)
-    begin
-        cy_tff_2 <= Net_12821^ADC_DIV_Q[1];
-    end
-    assign ADC_DIV_Q[1] = cy_tff_2;
-    // -- TFF End --
-
-    // -- TFF Start --
-    reg  cy_tff_1;
-    wire  tmp__cy_tff_1_clk;
-    assign tmp__cy_tff_1_clk = ADC_OUT_BUS[0];
-    always @(posedge tmp__cy_tff_1_clk)
-    begin
-        cy_tff_1 <= Net_14350^ADC_DIV_Q[0];
-    end
-    assign ADC_DIV_Q[0] = cy_tff_1;
-    // -- TFF End --
-
-    // -- Mux start --
-    if (1)
-    begin : MUXMSB_6
-        reg  tmp__MUXMSB_6_reg;
-        always @(ADC_OUT_BUS or ADC_DIV_Q or DIV_MASK_BUS)
-        begin
-            case (DIV_MASK_BUS[7])
-                1'b0 :  tmp__MUXMSB_6_reg = ADC_OUT_BUS[7];
-                1'b1 :  tmp__MUXMSB_6_reg = ADC_DIV_Q[7];
-            endcase
-        end
-        assign MUX_BUS[7] = tmp__MUXMSB_6_reg;
-    end
-    // -- Mux end --
-
-    assign ACK = 1'h0;
-
     assign Net_17103 = 1'h0;
-
-    // -- Mux start --
-    if (1)
-    begin : MUXMSB_8
-        reg  tmp__MUXMSB_8_reg;
-        always @(ADC_OUT_BUS or ADC_DIV_Q or DIV_MASK_BUS)
-        begin
-            case (DIV_MASK_BUS[9])
-                1'b0 :  tmp__MUXMSB_8_reg = ADC_OUT_BUS[9];
-                1'b1 :  tmp__MUXMSB_8_reg = ADC_DIV_Q[9];
-            endcase
-        end
-        assign MUX_BUS[9] = tmp__MUXMSB_8_reg;
-    end
-    // -- Mux end --
-
-    // -- Mux start --
-    if (1)
-    begin : MUXMSB_5
-        reg  tmp__MUXMSB_5_reg;
-        always @(ADC_OUT_BUS or ADC_DIV_Q or DIV_MASK_BUS)
-        begin
-            case (DIV_MASK_BUS[5])
-                1'b0 :  tmp__MUXMSB_5_reg = ADC_OUT_BUS[5];
-                1'b1 :  tmp__MUXMSB_5_reg = ADC_DIV_Q[5];
-            endcase
-        end
-        assign MUX_BUS[5] = tmp__MUXMSB_5_reg;
-    end
-    // -- Mux end --
-
-    PWM_v3_30_11 PWM_11 (
-        .reset(ACK),
-        .clock(ADC_OUT_BUS[11]),
-        .tc(Net_21801),
-        .pwm1(Net_21802),
-        .pwm2(Net_21803),
-        .interrupt(Net_21804),
-        .capture(1'b0),
-        .kill(1'b1),
-        .enable(1'b1),
-        .trigger(1'b0),
-        .cmp_sel(1'b0),
-        .pwm(ADC_DIV_Q[11]),
-        .ph1(Net_21810),
-        .ph2(Net_21811));
-    defparam PWM_11.Resolution = 8;
-
-    PWM_v3_30_12 PWM_10 (
-        .reset(ACK),
-        .clock(ADC_OUT_BUS[10]),
-        .tc(Net_10817),
-        .pwm1(Net_10818),
-        .pwm2(Net_10819),
-        .interrupt(Net_10820),
-        .capture(1'b0),
-        .kill(1'b1),
-        .enable(1'b1),
-        .trigger(1'b0),
-        .cmp_sel(1'b0),
-        .pwm(ADC_DIV_Q[10]),
-        .ph1(Net_10826),
-        .ph2(Net_10827));
-    defparam PWM_10.Resolution = 8;
-
-    PWM_v3_30_13 PWM_7 (
-        .reset(ACK),
-        .clock(ADC_OUT_BUS[7]),
-        .tc(Net_11675),
-        .pwm1(Net_11676),
-        .pwm2(Net_11677),
-        .interrupt(Net_11678),
-        .capture(1'b0),
-        .kill(1'b1),
-        .enable(1'b1),
-        .trigger(1'b0),
-        .cmp_sel(1'b0),
-        .pwm(ADC_DIV_Q[7]),
-        .ph1(Net_11684),
-        .ph2(Net_11685));
-    defparam PWM_7.Resolution = 8;
-
-    PWM_v3_30_14 PWM_9 (
-        .reset(ACK),
-        .clock(ADC_OUT_BUS[9]),
-        .tc(Net_11202),
-        .pwm1(Net_11203),
-        .pwm2(Net_11204),
-        .interrupt(Net_11205),
-        .capture(1'b0),
-        .kill(1'b1),
-        .enable(1'b1),
-        .trigger(1'b0),
-        .cmp_sel(1'b0),
-        .pwm(ADC_DIV_Q[9]),
-        .ph1(Net_11211),
-        .ph2(Net_11212));
-    defparam PWM_9.Resolution = 8;
-
-    PWM_v3_30_15 PWM_8 (
-        .reset(ACK),
-        .clock(ADC_OUT_BUS[8]),
-        .tc(Net_11037),
-        .pwm1(Net_11038),
-        .pwm2(Net_11039),
-        .interrupt(Net_11040),
-        .capture(1'b0),
-        .kill(1'b1),
-        .enable(1'b1),
-        .trigger(1'b0),
-        .cmp_sel(1'b0),
-        .pwm(ADC_DIV_Q[8]),
-        .ph1(Net_11046),
-        .ph2(Net_11047));
-    defparam PWM_8.Resolution = 8;
-
-    PWM_v3_30_16 PWM_6 (
-        .reset(ACK),
-        .clock(ADC_OUT_BUS[6]),
-        .tc(Net_10971),
-        .pwm1(Net_10972),
-        .pwm2(Net_10973),
-        .interrupt(Net_10974),
-        .capture(1'b0),
-        .kill(1'b1),
-        .enable(1'b1),
-        .trigger(1'b0),
-        .cmp_sel(1'b0),
-        .pwm(ADC_DIV_Q[6]),
-        .ph1(Net_10980),
-        .ph2(Net_10981));
-    defparam PWM_6.Resolution = 8;
-
-    // -- Mux start --
-    if (1)
-    begin : MUXMSB_4
-        reg  tmp__MUXMSB_4_reg;
-        always @(ADC_OUT_BUS or ADC_DIV_Q or DIV_MASK_BUS)
-        begin
-            case (DIV_MASK_BUS[3])
-                1'b0 :  tmp__MUXMSB_4_reg = ADC_OUT_BUS[3];
-                1'b1 :  tmp__MUXMSB_4_reg = ADC_DIV_Q[3];
-            endcase
-        end
-        assign MUX_BUS[3] = tmp__MUXMSB_4_reg;
-    end
-    // -- Mux end --
-
-    // -- Mux start --
-    if (1)
-    begin : MUXMSB_10
-        reg  tmp__MUXMSB_10_reg;
-        always @(ADC_OUT_BUS or ADC_DIV_Q or DIV_MASK_BUS)
-        begin
-            case (DIV_MASK_BUS[11])
-                1'b0 :  tmp__MUXMSB_10_reg = ADC_OUT_BUS[11];
-                1'b1 :  tmp__MUXMSB_10_reg = ADC_DIV_Q[11];
-            endcase
-        end
-        assign MUX_BUS[11] = tmp__MUXMSB_10_reg;
-    end
-    // -- Mux end --
-
-
-	cy_clock_v1_0
-		#(.id("0ffe6000-9ce2-4fb4-afc5-07d778d04a32"),
-		  .source_clock_id("75C2148C-3656-4d8a-846D-0CAE99AB6FF7"),
-		  .divisor(0),
-		  .period("0"),
-		  .is_direct(1),
-		  .is_digital(1))
-		Clock_4
-		 (.clock_out(ADC_REG_CK));
-
-
-    // -- Mux start --
-    if (1)
-    begin : MUXMSB_1
-        reg  tmp__MUXMSB_1_reg;
-        always @(ADC_OUT_BUS or ADC_DIV_Q or DIV_MASK_BUS)
-        begin
-            case (DIV_MASK_BUS[2])
-                1'b0 :  tmp__MUXMSB_1_reg = ADC_OUT_BUS[2];
-                1'b1 :  tmp__MUXMSB_1_reg = ADC_DIV_Q[2];
-            endcase
-        end
-        assign MUX_BUS[2] = tmp__MUXMSB_1_reg;
-    end
-    // -- Mux end --
-
-    CyControlReg_v1_80 ADC_1_OUT_MSB (
-        .control_1(Net_6349),
-        .control_2(Net_6350),
-        .control_3(Net_6351),
-        .control_0(Net_6352),
-        .control_4(Net_6353),
-        .control_5(Net_6354),
-        .control_6(Net_6355),
-        .control_7(Net_6356),
-        .clock(ADC_REG_CK),
-        .reset(1'b0),
-        .control_bus(ADC_OUT_BUS[11:8]));
-    defparam ADC_1_OUT_MSB.Bit0Mode = 1;
-    defparam ADC_1_OUT_MSB.Bit1Mode = 1;
-    defparam ADC_1_OUT_MSB.Bit2Mode = 1;
-    defparam ADC_1_OUT_MSB.Bit3Mode = 1;
-    defparam ADC_1_OUT_MSB.Bit4Mode = 1;
-    defparam ADC_1_OUT_MSB.Bit5Mode = 1;
-    defparam ADC_1_OUT_MSB.Bit6Mode = 1;
-    defparam ADC_1_OUT_MSB.Bit7Mode = 1;
-    defparam ADC_1_OUT_MSB.BitValue = 0;
-    defparam ADC_1_OUT_MSB.BusDisplay = 1;
-    defparam ADC_1_OUT_MSB.ExtrReset = 1;
-    defparam ADC_1_OUT_MSB.NumOutputs = 4;
-
-    CyControlReg_v1_80 ADC_1_OUT_LSB (
-        .control_1(Net_6358),
-        .control_2(Net_6359),
-        .control_3(Net_6360),
-        .control_0(Net_6361),
-        .control_4(Net_6362),
-        .control_5(Net_6363),
-        .control_6(Net_6364),
-        .control_7(Net_6365),
-        .clock(ADC_REG_CK),
-        .reset(1'b0),
-        .control_bus(ADC_OUT_BUS[7:0]));
-    defparam ADC_1_OUT_LSB.Bit0Mode = 1;
-    defparam ADC_1_OUT_LSB.Bit1Mode = 1;
-    defparam ADC_1_OUT_LSB.Bit2Mode = 1;
-    defparam ADC_1_OUT_LSB.Bit3Mode = 1;
-    defparam ADC_1_OUT_LSB.Bit4Mode = 1;
-    defparam ADC_1_OUT_LSB.Bit5Mode = 1;
-    defparam ADC_1_OUT_LSB.Bit6Mode = 1;
-    defparam ADC_1_OUT_LSB.Bit7Mode = 1;
-    defparam ADC_1_OUT_LSB.BitValue = 0;
-    defparam ADC_1_OUT_LSB.BusDisplay = 1;
-    defparam ADC_1_OUT_LSB.ExtrReset = 1;
-    defparam ADC_1_OUT_LSB.NumOutputs = 8;
-
-    // -- Mux start --
-    if (1)
-    begin : MUXMSB_7
-        reg  tmp__MUXMSB_7_reg;
-        always @(ADC_OUT_BUS or ADC_DIV_Q or DIV_MASK_BUS)
-        begin
-            case (DIV_MASK_BUS[8])
-                1'b0 :  tmp__MUXMSB_7_reg = ADC_OUT_BUS[8];
-                1'b1 :  tmp__MUXMSB_7_reg = ADC_DIV_Q[8];
-            endcase
-        end
-        assign MUX_BUS[8] = tmp__MUXMSB_7_reg;
-    end
-    // -- Mux end --
-
-
-	cy_clock_v1_0
-		#(.id("43261c58-64c8-4dd7-b4f7-e649d7d91ee6"),
-		  .source_clock_id("61737EF6-3B74-48f9-8B91-F7473A442AE7"),
-		  .divisor(0),
-		  .period("83333333.3333333"),
-		  .is_direct(0),
-		  .is_digital(1))
-		Clock_2
-		 (.clock_out(DAC_CLOCK_BUS));
-
-
-    CyStatusReg_v1_90 DAC_IN_MSB (
-        .status_0(1'b0),
-        .status_1(1'b0),
-        .status_2(1'b0),
-        .status_3(1'b0),
-        .clock(DAC_CLOCK_BUS),
-        .status_4(1'b0),
-        .status_5(1'b0),
-        .status_6(1'b0),
-        .status_7(1'b0),
-        .intr(Net_15768),
-        .status_bus(MUX_BUS[11:8]));
-    defparam DAC_IN_MSB.Bit0Mode = 0;
-    defparam DAC_IN_MSB.Bit1Mode = 0;
-    defparam DAC_IN_MSB.Bit2Mode = 0;
-    defparam DAC_IN_MSB.Bit3Mode = 0;
-    defparam DAC_IN_MSB.Bit4Mode = 0;
-    defparam DAC_IN_MSB.Bit5Mode = 0;
-    defparam DAC_IN_MSB.Bit6Mode = 0;
-    defparam DAC_IN_MSB.Bit7Mode = 0;
-    defparam DAC_IN_MSB.BusDisplay = 1;
-    defparam DAC_IN_MSB.Interrupt = 0;
-    defparam DAC_IN_MSB.MaskValue = 0;
-    defparam DAC_IN_MSB.NumInputs = 4;
-
-    CyStatusReg_v1_90 DAC_IN_LSB (
-        .status_0(1'b0),
-        .status_1(1'b0),
-        .status_2(1'b0),
-        .status_3(1'b0),
-        .clock(DAC_CLOCK_BUS),
-        .status_4(1'b0),
-        .status_5(1'b0),
-        .status_6(1'b0),
-        .status_7(1'b0),
-        .intr(Net_15777),
-        .status_bus(MUX_BUS[7:0]));
-    defparam DAC_IN_LSB.Bit0Mode = 0;
-    defparam DAC_IN_LSB.Bit1Mode = 0;
-    defparam DAC_IN_LSB.Bit2Mode = 0;
-    defparam DAC_IN_LSB.Bit3Mode = 0;
-    defparam DAC_IN_LSB.Bit4Mode = 0;
-    defparam DAC_IN_LSB.Bit5Mode = 0;
-    defparam DAC_IN_LSB.Bit6Mode = 0;
-    defparam DAC_IN_LSB.Bit7Mode = 0;
-    defparam DAC_IN_LSB.BusDisplay = 1;
-    defparam DAC_IN_LSB.Interrupt = 0;
-    defparam DAC_IN_LSB.MaskValue = 0;
-    defparam DAC_IN_LSB.NumInputs = 8;
-
-    // -- Mux start --
-    if (1)
-    begin : MUXMSB_9
-        reg  tmp__MUXMSB_9_reg;
-        always @(ADC_OUT_BUS or ADC_DIV_Q or DIV_MASK_BUS)
-        begin
-            case (DIV_MASK_BUS[10])
-                1'b0 :  tmp__MUXMSB_9_reg = ADC_OUT_BUS[10];
-                1'b1 :  tmp__MUXMSB_9_reg = ADC_DIV_Q[10];
-            endcase
-        end
-        assign MUX_BUS[10] = tmp__MUXMSB_9_reg;
-    end
-    // -- Mux end --
-
-    // -- Mux start --
-    if (1)
-    begin : MUXMSB_2
-        reg  tmp__MUXMSB_2_reg;
-        always @(ADC_OUT_BUS or ADC_DIV_Q or DIV_MASK_BUS)
-        begin
-            case (DIV_MASK_BUS[4])
-                1'b0 :  tmp__MUXMSB_2_reg = ADC_OUT_BUS[4];
-                1'b1 :  tmp__MUXMSB_2_reg = ADC_DIV_Q[4];
-            endcase
-        end
-        assign MUX_BUS[4] = tmp__MUXMSB_2_reg;
-    end
-    // -- Mux end --
-
-    assign Net_12820 = 1'h1;
-
-    // -- Mux start --
-    if (1)
-    begin : MUXMSB_12
-        reg  tmp__MUXMSB_12_reg;
-        always @(ADC_OUT_BUS or ADC_DIV_Q or DIV_MASK_BUS)
-        begin
-            case (DIV_MASK_BUS[1])
-                1'b0 :  tmp__MUXMSB_12_reg = ADC_OUT_BUS[1];
-                1'b1 :  tmp__MUXMSB_12_reg = ADC_DIV_Q[1];
-            endcase
-        end
-        assign MUX_BUS[1] = tmp__MUXMSB_12_reg;
-    end
-    // -- Mux end --
-
-    // -- Mux start --
-    if (1)
-    begin : MUXMSB_11
-        reg  tmp__MUXMSB_11_reg;
-        always @(ADC_OUT_BUS or ADC_DIV_Q or DIV_MASK_BUS)
-        begin
-            case (DIV_MASK_BUS[0])
-                1'b0 :  tmp__MUXMSB_11_reg = ADC_OUT_BUS[0];
-                1'b1 :  tmp__MUXMSB_11_reg = ADC_DIV_Q[0];
-            endcase
-        end
-        assign MUX_BUS[0] = tmp__MUXMSB_11_reg;
-    end
-    // -- Mux end --
-
-    CyControlReg_v1_80 DIV_MASK_MSB (
-        .control_1(Net_20583),
-        .control_2(Net_20584),
-        .control_3(Net_20585),
-        .control_0(Net_20586),
-        .control_4(Net_20587),
-        .control_5(Net_20588),
-        .control_6(Net_20589),
-        .control_7(Net_20590),
-        .clock(ADC_REG_CK),
-        .reset(1'b0),
-        .control_bus(DIV_MASK_BUS[11:8]));
-    defparam DIV_MASK_MSB.Bit0Mode = 1;
-    defparam DIV_MASK_MSB.Bit1Mode = 1;
-    defparam DIV_MASK_MSB.Bit2Mode = 1;
-    defparam DIV_MASK_MSB.Bit3Mode = 1;
-    defparam DIV_MASK_MSB.Bit4Mode = 1;
-    defparam DIV_MASK_MSB.Bit5Mode = 1;
-    defparam DIV_MASK_MSB.Bit6Mode = 1;
-    defparam DIV_MASK_MSB.Bit7Mode = 1;
-    defparam DIV_MASK_MSB.BitValue = 0;
-    defparam DIV_MASK_MSB.BusDisplay = 1;
-    defparam DIV_MASK_MSB.ExtrReset = 1;
-    defparam DIV_MASK_MSB.NumOutputs = 4;
-
-    CyControlReg_v1_80 DIV_MASK_LSB (
-        .control_1(Net_20574),
-        .control_2(Net_20575),
-        .control_3(Net_20576),
-        .control_0(Net_20577),
-        .control_4(Net_20578),
-        .control_5(Net_20579),
-        .control_6(Net_20580),
-        .control_7(Net_20581),
-        .clock(ADC_REG_CK),
-        .reset(1'b0),
-        .control_bus(DIV_MASK_BUS[7:0]));
-    defparam DIV_MASK_LSB.Bit0Mode = 1;
-    defparam DIV_MASK_LSB.Bit1Mode = 1;
-    defparam DIV_MASK_LSB.Bit2Mode = 1;
-    defparam DIV_MASK_LSB.Bit3Mode = 1;
-    defparam DIV_MASK_LSB.Bit4Mode = 1;
-    defparam DIV_MASK_LSB.Bit5Mode = 1;
-    defparam DIV_MASK_LSB.Bit6Mode = 1;
-    defparam DIV_MASK_LSB.Bit7Mode = 1;
-    defparam DIV_MASK_LSB.BitValue = 0;
-    defparam DIV_MASK_LSB.BusDisplay = 1;
-    defparam DIV_MASK_LSB.ExtrReset = 1;
-    defparam DIV_MASK_LSB.NumOutputs = 8;
 
 	wire [0:0] tmpOE__PWM_1_CONTROL_net;
 	wire [0:0] tmpFB_0__PWM_1_CONTROL_net;
@@ -3991,81 +3443,525 @@ module top ;
 
 	assign tmpOE__PWM_1_CONTROL_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
-	wire [0:0] tmpOE__PWM_DIV_CONTROL_net;
-	wire [0:0] tmpFB_0__PWM_DIV_CONTROL_net;
-	wire [0:0] tmpIO_0__PWM_DIV_CONTROL_net;
-	wire [0:0] tmpINTERRUPT_0__PWM_DIV_CONTROL_net;
-	electrical [0:0] tmpSIOVREF__PWM_DIV_CONTROL_net;
+    // -- Mux start --
+    if (1)
+    begin : MUXMSB_11
+        reg  tmp__MUXMSB_11_reg;
+        always @(ADC_OUT_BUS or ADC_DIV_Q or DIV_MASK_BUS)
+        begin
+            case (DIV_MASK_BUS[0])
+                1'b0 :  tmp__MUXMSB_11_reg = ADC_OUT_BUS[0];
+                1'b1 :  tmp__MUXMSB_11_reg = ADC_DIV_Q[0];
+            endcase
+        end
+        assign MUX_BUS[0] = tmp__MUXMSB_11_reg;
+    end
+    // -- Mux end --
 
-	cy_psoc3_pins_v1_10
-		#(.id("d6aa8f4f-87fc-4540-b1d1-aa3bd76cb157"),
-		  .drive_mode(3'b000),
-		  .ibuf_enabled(1'b0),
-		  .init_dr_st(1'b0),
-		  .input_clk_en(0),
-		  .input_sync(1'b1),
-		  .input_sync_mode(1'b0),
-		  .intr_mode(2'b00),
-		  .invert_in_clock(0),
-		  .invert_in_clock_en(0),
-		  .invert_in_reset(0),
-		  .invert_out_clock(0),
-		  .invert_out_clock_en(0),
-		  .invert_out_reset(0),
-		  .io_voltage(""),
-		  .layout_mode("CONTIGUOUS"),
-		  .oe_conn(1'b0),
-		  .oe_reset(0),
-		  .oe_sync(1'b0),
-		  .output_clk_en(0),
-		  .output_clock_mode(1'b0),
-		  .output_conn(1'b0),
-		  .output_mode(1'b0),
-		  .output_reset(0),
-		  .output_sync(1'b0),
-		  .pa_in_clock(-1),
-		  .pa_in_clock_en(-1),
-		  .pa_in_reset(-1),
-		  .pa_out_clock(-1),
-		  .pa_out_clock_en(-1),
-		  .pa_out_reset(-1),
-		  .pin_aliases(""),
-		  .pin_mode("A"),
-		  .por_state(4),
-		  .sio_group_cnt(0),
-		  .sio_hyst(1'b1),
-		  .sio_ibuf(""),
-		  .sio_info(2'b00),
-		  .sio_obuf(""),
-		  .sio_refsel(""),
-		  .sio_vtrip(""),
-		  .sio_hifreq(""),
-		  .sio_vohsel(""),
-		  .slew_rate(1'b0),
-		  .spanning(0),
-		  .use_annotation(1'b0),
-		  .vtrip(2'b10),
-		  .width(1),
-		  .ovt_hyst_trim(1'b0),
-		  .ovt_needed(1'b0),
-		  .ovt_slew_control(2'b00),
-		  .input_buffer_sel(2'b00))
-		PWM_DIV_CONTROL
-		 (.oe(tmpOE__PWM_DIV_CONTROL_net),
-		  .y({1'b0}),
-		  .fb({tmpFB_0__PWM_DIV_CONTROL_net[0:0]}),
-		  .analog({Net_12637}),
-		  .io({tmpIO_0__PWM_DIV_CONTROL_net[0:0]}),
-		  .siovref(tmpSIOVREF__PWM_DIV_CONTROL_net),
-		  .interrupt({tmpINTERRUPT_0__PWM_DIV_CONTROL_net[0:0]}),
-		  .in_clock({1'b0}),
-		  .in_clock_en({1'b1}),
-		  .in_reset({1'b0}),
-		  .out_clock({1'b0}),
-		  .out_clock_en({1'b1}),
-		  .out_reset({1'b0}));
+    CyControlReg_v1_80 DIV_MASK_MSB (
+        .control_1(Net_23616),
+        .control_2(Net_23617),
+        .control_3(Net_23618),
+        .control_0(Net_23619),
+        .control_4(Net_23620),
+        .control_5(Net_23621),
+        .control_6(Net_23622),
+        .control_7(Net_23623),
+        .clock(ADC_CLK),
+        .reset(1'b0),
+        .control_bus(DIV_MASK_BUS[11:8]));
+    defparam DIV_MASK_MSB.Bit0Mode = 1;
+    defparam DIV_MASK_MSB.Bit1Mode = 1;
+    defparam DIV_MASK_MSB.Bit2Mode = 1;
+    defparam DIV_MASK_MSB.Bit3Mode = 1;
+    defparam DIV_MASK_MSB.Bit4Mode = 1;
+    defparam DIV_MASK_MSB.Bit5Mode = 1;
+    defparam DIV_MASK_MSB.Bit6Mode = 1;
+    defparam DIV_MASK_MSB.Bit7Mode = 1;
+    defparam DIV_MASK_MSB.BitValue = 0;
+    defparam DIV_MASK_MSB.BusDisplay = 1;
+    defparam DIV_MASK_MSB.ExtrReset = 1;
+    defparam DIV_MASK_MSB.NumOutputs = 4;
 
-	assign tmpOE__PWM_DIV_CONTROL_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+    CyControlReg_v1_80 DIV_MASK_LSB (
+        .control_1(Net_23607),
+        .control_2(Net_23608),
+        .control_3(Net_23609),
+        .control_0(Net_23610),
+        .control_4(Net_23611),
+        .control_5(Net_23612),
+        .control_6(Net_23613),
+        .control_7(Net_23614),
+        .clock(ADC_CLK),
+        .reset(1'b0),
+        .control_bus(DIV_MASK_BUS[7:0]));
+    defparam DIV_MASK_LSB.Bit0Mode = 1;
+    defparam DIV_MASK_LSB.Bit1Mode = 1;
+    defparam DIV_MASK_LSB.Bit2Mode = 1;
+    defparam DIV_MASK_LSB.Bit3Mode = 1;
+    defparam DIV_MASK_LSB.Bit4Mode = 1;
+    defparam DIV_MASK_LSB.Bit5Mode = 1;
+    defparam DIV_MASK_LSB.Bit6Mode = 1;
+    defparam DIV_MASK_LSB.Bit7Mode = 1;
+    defparam DIV_MASK_LSB.BitValue = 0;
+    defparam DIV_MASK_LSB.BusDisplay = 1;
+    defparam DIV_MASK_LSB.ExtrReset = 1;
+    defparam DIV_MASK_LSB.NumOutputs = 8;
+
+    // -- Mux start --
+    if (1)
+    begin : MUXMSB_10
+        reg  tmp__MUXMSB_10_reg;
+        always @(ADC_OUT_BUS or ADC_DIV_Q or DIV_MASK_BUS)
+        begin
+            case (DIV_MASK_BUS[11])
+                1'b0 :  tmp__MUXMSB_10_reg = ADC_OUT_BUS[11];
+                1'b1 :  tmp__MUXMSB_10_reg = ADC_DIV_Q[11];
+            endcase
+        end
+        assign MUX_BUS[11] = tmp__MUXMSB_10_reg;
+    end
+    // -- Mux end --
+
+    // -- Mux start --
+    if (1)
+    begin : MUXMSB_9
+        reg  tmp__MUXMSB_9_reg;
+        always @(ADC_OUT_BUS or ADC_DIV_Q or DIV_MASK_BUS)
+        begin
+            case (DIV_MASK_BUS[10])
+                1'b0 :  tmp__MUXMSB_9_reg = ADC_OUT_BUS[10];
+                1'b1 :  tmp__MUXMSB_9_reg = ADC_DIV_Q[10];
+            endcase
+        end
+        assign MUX_BUS[10] = tmp__MUXMSB_9_reg;
+    end
+    // -- Mux end --
+
+    // -- Mux start --
+    if (1)
+    begin : MUXMSB_8
+        reg  tmp__MUXMSB_8_reg;
+        always @(ADC_OUT_BUS or ADC_DIV_Q or DIV_MASK_BUS)
+        begin
+            case (DIV_MASK_BUS[9])
+                1'b0 :  tmp__MUXMSB_8_reg = ADC_OUT_BUS[9];
+                1'b1 :  tmp__MUXMSB_8_reg = ADC_DIV_Q[9];
+            endcase
+        end
+        assign MUX_BUS[9] = tmp__MUXMSB_8_reg;
+    end
+    // -- Mux end --
+
+    // -- Mux start --
+    if (1)
+    begin : MUXMSB_7
+        reg  tmp__MUXMSB_7_reg;
+        always @(ADC_OUT_BUS or ADC_DIV_Q or DIV_MASK_BUS)
+        begin
+            case (DIV_MASK_BUS[8])
+                1'b0 :  tmp__MUXMSB_7_reg = ADC_OUT_BUS[8];
+                1'b1 :  tmp__MUXMSB_7_reg = ADC_DIV_Q[8];
+            endcase
+        end
+        assign MUX_BUS[8] = tmp__MUXMSB_7_reg;
+    end
+    // -- Mux end --
+
+    // -- Mux start --
+    if (1)
+    begin : MUXMSB_6
+        reg  tmp__MUXMSB_6_reg;
+        always @(ADC_OUT_BUS or ADC_DIV_Q or DIV_MASK_BUS)
+        begin
+            case (DIV_MASK_BUS[7])
+                1'b0 :  tmp__MUXMSB_6_reg = ADC_OUT_BUS[7];
+                1'b1 :  tmp__MUXMSB_6_reg = ADC_DIV_Q[7];
+            endcase
+        end
+        assign MUX_BUS[7] = tmp__MUXMSB_6_reg;
+    end
+    // -- Mux end --
+
+    // -- Mux start --
+    if (1)
+    begin : MUXMSB_5
+        reg  tmp__MUXMSB_5_reg;
+        always @(ADC_OUT_BUS or ADC_DIV_Q or DIV_MASK_BUS)
+        begin
+            case (DIV_MASK_BUS[5])
+                1'b0 :  tmp__MUXMSB_5_reg = ADC_OUT_BUS[5];
+                1'b1 :  tmp__MUXMSB_5_reg = ADC_DIV_Q[5];
+            endcase
+        end
+        assign MUX_BUS[5] = tmp__MUXMSB_5_reg;
+    end
+    // -- Mux end --
+
+    // -- Mux start --
+    if (1)
+    begin : MUXMSB_4
+        reg  tmp__MUXMSB_4_reg;
+        always @(ADC_OUT_BUS or ADC_DIV_Q or DIV_MASK_BUS)
+        begin
+            case (DIV_MASK_BUS[3])
+                1'b0 :  tmp__MUXMSB_4_reg = ADC_OUT_BUS[3];
+                1'b1 :  tmp__MUXMSB_4_reg = ADC_DIV_Q[3];
+            endcase
+        end
+        assign MUX_BUS[3] = tmp__MUXMSB_4_reg;
+    end
+    // -- Mux end --
+
+    // -- Mux start --
+    if (1)
+    begin : MUXMSB_3
+        reg  tmp__MUXMSB_3_reg;
+        always @(ADC_OUT_BUS or ADC_DIV_Q or DIV_MASK_BUS)
+        begin
+            case (DIV_MASK_BUS[6])
+                1'b0 :  tmp__MUXMSB_3_reg = ADC_OUT_BUS[6];
+                1'b1 :  tmp__MUXMSB_3_reg = ADC_DIV_Q[6];
+            endcase
+        end
+        assign MUX_BUS[6] = tmp__MUXMSB_3_reg;
+    end
+    // -- Mux end --
+
+    // -- Mux start --
+    if (1)
+    begin : MUXMSB_2
+        reg  tmp__MUXMSB_2_reg;
+        always @(ADC_OUT_BUS or ADC_DIV_Q or DIV_MASK_BUS)
+        begin
+            case (DIV_MASK_BUS[4])
+                1'b0 :  tmp__MUXMSB_2_reg = ADC_OUT_BUS[4];
+                1'b1 :  tmp__MUXMSB_2_reg = ADC_DIV_Q[4];
+            endcase
+        end
+        assign MUX_BUS[4] = tmp__MUXMSB_2_reg;
+    end
+    // -- Mux end --
+
+    assign Net_12820 = 1'h1;
+
+    assign Net_23583 = 1'h1;
+
+    assign Net_23582 = 1'h1;
+
+    assign Net_23581 = 1'h1;
+
+    assign ACK = 1'h0;
+
+    PWM_v3_30_9 PWM_4 (
+        .reset(ACK),
+        .clock(ADC_OUT_BUS[4]),
+        .tc(Net_28891),
+        .pwm1(Net_28892),
+        .pwm2(Net_28893),
+        .interrupt(Net_28894),
+        .capture(1'b0),
+        .kill(1'b1),
+        .enable(1'b1),
+        .trigger(1'b0),
+        .cmp_sel(1'b0),
+        .pwm(ADC_DIV_Q[4]),
+        .ph1(Net_28900),
+        .ph2(Net_28901));
+    defparam PWM_4.Resolution = 8;
+
+    PWM_v3_30_10 PWM_5 (
+        .reset(ACK),
+        .clock(ADC_OUT_BUS[5]),
+        .tc(Net_28902),
+        .pwm1(Net_28903),
+        .pwm2(Net_28904),
+        .interrupt(Net_28905),
+        .capture(1'b0),
+        .kill(1'b1),
+        .enable(1'b1),
+        .trigger(1'b0),
+        .cmp_sel(1'b0),
+        .pwm(ADC_DIV_Q[5]),
+        .ph1(Net_28911),
+        .ph2(Net_28912));
+    defparam PWM_5.Resolution = 8;
+
+    // -- TFF Start --
+    reg  cy_tff_4;
+    wire  tmp__cy_tff_4_clk;
+    assign tmp__cy_tff_4_clk = ADC_OUT_BUS[3];
+    always @(posedge tmp__cy_tff_4_clk)
+    begin
+        cy_tff_4 <= Net_23583^ADC_DIV_Q[3];
+    end
+    assign ADC_DIV_Q[3] = cy_tff_4;
+    // -- TFF End --
+
+    // -- TFF Start --
+    reg  cy_tff_3;
+    wire  tmp__cy_tff_3_clk;
+    assign tmp__cy_tff_3_clk = ADC_OUT_BUS[2];
+    always @(posedge tmp__cy_tff_3_clk)
+    begin
+        cy_tff_3 <= Net_12820^ADC_DIV_Q[2];
+    end
+    assign ADC_DIV_Q[2] = cy_tff_3;
+    // -- TFF End --
+
+    // -- TFF Start --
+    reg  cy_tff_2;
+    wire  tmp__cy_tff_2_clk;
+    assign tmp__cy_tff_2_clk = ADC_OUT_BUS[1];
+    always @(posedge tmp__cy_tff_2_clk)
+    begin
+        cy_tff_2 <= Net_23582^ADC_DIV_Q[1];
+    end
+    assign ADC_DIV_Q[1] = cy_tff_2;
+    // -- TFF End --
+
+    // -- TFF Start --
+    reg  cy_tff_1;
+    wire  tmp__cy_tff_1_clk;
+    assign tmp__cy_tff_1_clk = ADC_OUT_BUS[0];
+    always @(posedge tmp__cy_tff_1_clk)
+    begin
+        cy_tff_1 <= Net_23581^ADC_DIV_Q[0];
+    end
+    assign ADC_DIV_Q[0] = cy_tff_1;
+    // -- TFF End --
+
+    PWM_v3_30_11 PWM_11 (
+        .reset(ACK),
+        .clock(ADC_OUT_BUS[11]),
+        .tc(Net_28913),
+        .pwm1(Net_28914),
+        .pwm2(Net_28915),
+        .interrupt(Net_28916),
+        .capture(1'b0),
+        .kill(1'b1),
+        .enable(1'b1),
+        .trigger(1'b0),
+        .cmp_sel(1'b0),
+        .pwm(ADC_DIV_Q[11]),
+        .ph1(Net_28922),
+        .ph2(Net_28923));
+    defparam PWM_11.Resolution = 8;
+
+    PWM_v3_30_12 PWM_10 (
+        .reset(ACK),
+        .clock(ADC_OUT_BUS[10]),
+        .tc(Net_28924),
+        .pwm1(Net_28925),
+        .pwm2(Net_28926),
+        .interrupt(Net_28927),
+        .capture(1'b0),
+        .kill(1'b1),
+        .enable(1'b1),
+        .trigger(1'b0),
+        .cmp_sel(1'b0),
+        .pwm(ADC_DIV_Q[10]),
+        .ph1(Net_28933),
+        .ph2(Net_28934));
+    defparam PWM_10.Resolution = 8;
+
+    PWM_v3_30_13 PWM_7 (
+        .reset(ACK),
+        .clock(ADC_OUT_BUS[7]),
+        .tc(Net_28935),
+        .pwm1(Net_28936),
+        .pwm2(Net_28937),
+        .interrupt(Net_28938),
+        .capture(1'b0),
+        .kill(1'b1),
+        .enable(1'b1),
+        .trigger(1'b0),
+        .cmp_sel(1'b0),
+        .pwm(ADC_DIV_Q[7]),
+        .ph1(Net_28944),
+        .ph2(Net_28945));
+    defparam PWM_7.Resolution = 8;
+
+    PWM_v3_30_14 PWM_9 (
+        .reset(ACK),
+        .clock(ADC_OUT_BUS[9]),
+        .tc(Net_28946),
+        .pwm1(Net_28947),
+        .pwm2(Net_28948),
+        .interrupt(Net_28949),
+        .capture(1'b0),
+        .kill(1'b1),
+        .enable(1'b1),
+        .trigger(1'b0),
+        .cmp_sel(1'b0),
+        .pwm(ADC_DIV_Q[9]),
+        .ph1(Net_28955),
+        .ph2(Net_28956));
+    defparam PWM_9.Resolution = 8;
+
+    PWM_v3_30_15 PWM_8 (
+        .reset(ACK),
+        .clock(ADC_OUT_BUS[8]),
+        .tc(Net_28957),
+        .pwm1(Net_28958),
+        .pwm2(Net_28959),
+        .interrupt(Net_28960),
+        .capture(1'b0),
+        .kill(1'b1),
+        .enable(1'b1),
+        .trigger(1'b0),
+        .cmp_sel(1'b0),
+        .pwm(ADC_DIV_Q[8]),
+        .ph1(Net_28966),
+        .ph2(Net_28967));
+    defparam PWM_8.Resolution = 8;
+
+    PWM_v3_30_16 PWM_6 (
+        .reset(ACK),
+        .clock(ADC_OUT_BUS[6]),
+        .tc(Net_28968),
+        .pwm1(Net_28969),
+        .pwm2(Net_28970),
+        .interrupt(Net_28971),
+        .capture(1'b0),
+        .kill(1'b1),
+        .enable(1'b1),
+        .trigger(1'b0),
+        .cmp_sel(1'b0),
+        .pwm(ADC_DIV_Q[6]),
+        .ph1(Net_28977),
+        .ph2(Net_28978));
+    defparam PWM_6.Resolution = 8;
+
+    // -- Mux start --
+    if (1)
+    begin : MUXMSB_1
+        reg  tmp__MUXMSB_1_reg;
+        always @(ADC_OUT_BUS or ADC_DIV_Q or DIV_MASK_BUS)
+        begin
+            case (DIV_MASK_BUS[2])
+                1'b0 :  tmp__MUXMSB_1_reg = ADC_OUT_BUS[2];
+                1'b1 :  tmp__MUXMSB_1_reg = ADC_DIV_Q[2];
+            endcase
+        end
+        assign MUX_BUS[2] = tmp__MUXMSB_1_reg;
+    end
+    // -- Mux end --
+
+    CyControlReg_v1_80 ADC_1_OUT_MSB (
+        .control_1(Net_23505),
+        .control_2(Net_23506),
+        .control_3(Net_23507),
+        .control_0(Net_23508),
+        .control_4(Net_23509),
+        .control_5(Net_23510),
+        .control_6(Net_23511),
+        .control_7(Net_23512),
+        .clock(ADC_CLK),
+        .reset(1'b0),
+        .control_bus(ADC_OUT_BUS[11:8]));
+    defparam ADC_1_OUT_MSB.Bit0Mode = 1;
+    defparam ADC_1_OUT_MSB.Bit1Mode = 1;
+    defparam ADC_1_OUT_MSB.Bit2Mode = 1;
+    defparam ADC_1_OUT_MSB.Bit3Mode = 1;
+    defparam ADC_1_OUT_MSB.Bit4Mode = 1;
+    defparam ADC_1_OUT_MSB.Bit5Mode = 1;
+    defparam ADC_1_OUT_MSB.Bit6Mode = 1;
+    defparam ADC_1_OUT_MSB.Bit7Mode = 1;
+    defparam ADC_1_OUT_MSB.BitValue = 0;
+    defparam ADC_1_OUT_MSB.BusDisplay = 1;
+    defparam ADC_1_OUT_MSB.ExtrReset = 1;
+    defparam ADC_1_OUT_MSB.NumOutputs = 4;
+
+    CyControlReg_v1_80 ADC_1_OUT_LSB (
+        .control_1(Net_23496),
+        .control_2(Net_23497),
+        .control_3(Net_23498),
+        .control_0(Net_23499),
+        .control_4(Net_23500),
+        .control_5(Net_23501),
+        .control_6(Net_23502),
+        .control_7(Net_23503),
+        .clock(ADC_CLK),
+        .reset(1'b0),
+        .control_bus(ADC_OUT_BUS[7:0]));
+    defparam ADC_1_OUT_LSB.Bit0Mode = 1;
+    defparam ADC_1_OUT_LSB.Bit1Mode = 1;
+    defparam ADC_1_OUT_LSB.Bit2Mode = 1;
+    defparam ADC_1_OUT_LSB.Bit3Mode = 1;
+    defparam ADC_1_OUT_LSB.Bit4Mode = 1;
+    defparam ADC_1_OUT_LSB.Bit5Mode = 1;
+    defparam ADC_1_OUT_LSB.Bit6Mode = 1;
+    defparam ADC_1_OUT_LSB.Bit7Mode = 1;
+    defparam ADC_1_OUT_LSB.BitValue = 0;
+    defparam ADC_1_OUT_LSB.BusDisplay = 1;
+    defparam ADC_1_OUT_LSB.ExtrReset = 1;
+    defparam ADC_1_OUT_LSB.NumOutputs = 8;
+
+    CyStatusReg_v1_90 DAC_IN_MSB (
+        .status_0(1'b0),
+        .status_1(1'b0),
+        .status_2(1'b0),
+        .status_3(1'b0),
+        .clock(ADC_CLK),
+        .status_4(1'b0),
+        .status_5(1'b0),
+        .status_6(1'b0),
+        .status_7(1'b0),
+        .intr(Net_23495),
+        .status_bus(MUX_BUS[11:8]));
+    defparam DAC_IN_MSB.Bit0Mode = 0;
+    defparam DAC_IN_MSB.Bit1Mode = 0;
+    defparam DAC_IN_MSB.Bit2Mode = 0;
+    defparam DAC_IN_MSB.Bit3Mode = 0;
+    defparam DAC_IN_MSB.Bit4Mode = 0;
+    defparam DAC_IN_MSB.Bit5Mode = 0;
+    defparam DAC_IN_MSB.Bit6Mode = 0;
+    defparam DAC_IN_MSB.Bit7Mode = 0;
+    defparam DAC_IN_MSB.BusDisplay = 1;
+    defparam DAC_IN_MSB.Interrupt = 0;
+    defparam DAC_IN_MSB.MaskValue = 0;
+    defparam DAC_IN_MSB.NumInputs = 4;
+
+    CyStatusReg_v1_90 DAC_IN_LSB (
+        .status_0(1'b0),
+        .status_1(1'b0),
+        .status_2(1'b0),
+        .status_3(1'b0),
+        .clock(ADC_CLK),
+        .status_4(1'b0),
+        .status_5(1'b0),
+        .status_6(1'b0),
+        .status_7(1'b0),
+        .intr(Net_23486),
+        .status_bus(MUX_BUS[7:0]));
+    defparam DAC_IN_LSB.Bit0Mode = 0;
+    defparam DAC_IN_LSB.Bit1Mode = 0;
+    defparam DAC_IN_LSB.Bit2Mode = 0;
+    defparam DAC_IN_LSB.Bit3Mode = 0;
+    defparam DAC_IN_LSB.Bit4Mode = 0;
+    defparam DAC_IN_LSB.Bit5Mode = 0;
+    defparam DAC_IN_LSB.Bit6Mode = 0;
+    defparam DAC_IN_LSB.Bit7Mode = 0;
+    defparam DAC_IN_LSB.BusDisplay = 1;
+    defparam DAC_IN_LSB.Interrupt = 0;
+    defparam DAC_IN_LSB.MaskValue = 0;
+    defparam DAC_IN_LSB.NumInputs = 8;
+
+    // -- Mux start --
+    if (1)
+    begin : MUXMSB_12
+        reg  tmp__MUXMSB_12_reg;
+        always @(ADC_OUT_BUS or ADC_DIV_Q or DIV_MASK_BUS)
+        begin
+            case (DIV_MASK_BUS[1])
+                1'b0 :  tmp__MUXMSB_12_reg = ADC_OUT_BUS[1];
+                1'b1 :  tmp__MUXMSB_12_reg = ADC_DIV_Q[1];
+            endcase
+        end
+        assign MUX_BUS[1] = tmp__MUXMSB_12_reg;
+    end
+    // -- Mux end --
 
 
 

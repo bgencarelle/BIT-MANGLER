@@ -28,22 +28,26 @@ uint16 MASK_CTRL = 0;
 uint16 OLD_MASK_DEPTH = 0;
 uint8 MASK_EFFECT = 0;
 uint16 Effect(uint16 depth);
-uint16 AUDIO_IN = 0;
+int32 AUDIO_IN = 0;
 uint16 FRQ_CTRL = 0;
 int main()
 {
-
+    uint16 DIV_DEPTH = 0;
     uint16 CTR = 0;
+    uint32 Filt_ADC;
     /* Start the components */
     Opamp_1_Start();
     Opamp_2_Start();
     PWM_Start();
+    PWM_ADC_CK_Enable();
+    PWM_ADC_CK_Start();
 //  PGA_1_Start();
 //  Opamp_4_Start();
     LCD_Char_1_Start();
  //   ADC_DelSig_1_Start();
     Filter_Start();
     ADC_SAR_1_Start();
+    ADC_SAR_1_shift;
     ADC_SAR_Seq_Start();
     ADC_SAR_Seq_StartConvert();
   //  CapSense_1_Start();
@@ -62,30 +66,38 @@ int main()
     
     for(;;)
     {
-
-    if (ADC_SAR_1_IsEndConversion(ADC_SAR_1_RETURN_STATUS))
+    
+    
+    if (ADC_SAR_1_IsEndConversion(1))
     {
+    
+        SPI_DAC_WriteTxData(AUDIO_IN| 0b1111000000000000); 
+     
+
         OLD_BIT_MASK_DEPTH = BIT_MASK_CTRL;
-        AUDIO_IN = ADC_SAR_1_GetResult16();
-        ADC_1_OUT_LSB_Write(AUDIO_IN & 0xFF);
-        ADC_1_OUT_MSB_Write(0xFF&(AUDIO_IN >> 8u));
-        uint16 FINAL_OUT = (((DAC_IN_MSB_Read()<<8) | DAC_IN_LSB_Read())) & OLD_MASK_DEPTH;
-        SPI_DAC_WriteTxData(FINAL_OUT| 0b1111000000000000);
-    }       
-  if (ADC_SAR_Seq_IsEndConversion(ADC_SAR_Seq_RETURN_STATUS)){
+        
+        ADC_1_OUT_LSB_Write(ADC_SAR_1_SAR_WRK0_REG);
+        ADC_1_OUT_MSB_Write((ADC_SAR_1_SAR_WRK1_REG & 0x0F));
+        uint16 FINAL_OUT = (((DAC_IN_MSB_Read()<<8) | DAC_IN_LSB_Read()));
+   
+    
+  if (ADC_SAR_Seq_IsEndConversion(1)){
        
-    FRQ_CTRL=(((ADC_SAR_Seq_GetResult16(0)))+1);
+    FRQ_CTRL=(1);
     PWM_ADC_CK_WritePeriod(FRQ_CTRL);
     PWM_ADC_CK_WriteCompare(FRQ_CTRL>>2);
-    DIV_MASK_CTRL = ADC_SAR_Seq_GetResult16(2);
+    //ADC_SAR_Seq_GetResult16(3)>>8);
+    DIV_MASK_CTRL = 0x000;//ADC_SAR_Seq_GetResult16(2);
     DIV_MASK_LSB_Write(DIV_MASK_CTRL & 0xFF);
-    DIV_MASK_LSB_Write(DIV_MASK_CTRL>>4);
+    DIV_MASK_MSB_Write(DIV_MASK_CTRL>>8u);
+    //    BIT_DIV_Write(0x0u);//ADC_SAR_Seq_GetResult16(3) >>9);
     BIT_MASK_CTRL = Effect(ADC_SAR_Seq_GetResult16(1));
 }
-        
+}
+   /*     
 
 
-    /*
+   _S
     if (CTR == 5)
     {
     LCD_Char_1_Position(0u, strlen("ADC1 "));
@@ -94,12 +106,13 @@ int main()
     LCD_Char_1_PrintInt16(MASK_CTRL); 
     
     }
-    CTR++;*/
+    CTR++;
+    
+    */
     }
 }
 uint16 Effect(uint16 depth)
 {
-    depth = depth>>3;
             uint16 mask;
             switch (depth) 
         {
@@ -172,11 +185,11 @@ uint16 Effect(uint16 depth)
 }
 void PWM_Start(void)
 {
-    PWM_ADC_CK_Enable();
+    
 //    PWM_1_Enable();
 //    PWM_2_Enable();
 //    PWM_3_Enable();
-    PWM_4_Enable();
+   PWM_4_Enable();
     PWM_5_Enable();
     PWM_6_Enable();
     PWM_7_Enable();
@@ -184,7 +197,7 @@ void PWM_Start(void)
     PWM_9_Enable();
     PWM_10_Enable();
     PWM_11_Enable();
-    PWM_ADC_CK_Start();
+    
 //    PWM_1_Start();
 //    PWM_2_Start();
 //    PWM_3_Start();

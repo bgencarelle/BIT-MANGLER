@@ -1,16 +1,15 @@
 # ADC_DAC
-# 2017-04-10 08:20:48Z
+# 2017-04-15 11:41:20Z
 
 set_io "AUDIO_IN(0)" iocell 4 7
-set_io "DIV_MUX_CONTROL(0)" iocell 0 4
+set_io "DIV_MUX_CONTROL(0)" iocell 4 2
 set_io "MASK_OFF_CONTROL(0)" iocell 4 4
-set_io "MOSI_OUT(0)" iocell 12 5
+set_io "MOSI_OUT(0)" iocell 12 6
 set_io "SAMPLE_RATE_CONTROL(0)" iocell 4 0
-set_io "VREF_BUFF(0)" iocell 0 7
-set_io "SCLK_OUT(0)" iocell 1 6
-set_io "SS_OUT(0)" iocell 1 7
-set_io "PWM_1_CONTROL(0)" iocell 0 6
-set_io "PWM_DIV_CONTROL(0)" iocell 4 2
+set_io "VREF_BUFF(0)" iocell 0 6
+set_io "SCLK_OUT(0)" iocell 12 5
+set_io "SS_OUT(0)" iocell 12 4
+set_io "PWM_1_CONTROL(0)" iocell 4 6
 set_location "\ADC_SAR_1:ADC_SAR\" sarcell -1 -1 1
 set_location "\Opamp_1:ABuf\" abufcell -1 -1 1
 set_location "\Opamp_2:ABuf\" abufcell -1 -1 2
