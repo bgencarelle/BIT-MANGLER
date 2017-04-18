@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: MASK_OFF_CONTROL.c  
+* File Name: DIV_AMT_CONTROL.c  
 * Version 2.20
 *
 * Description:
@@ -15,15 +15,15 @@
 *******************************************************************************/
 
 #include "cytypes.h"
-#include "MASK_OFF_CONTROL.h"
+#include "DIV_AMT_CONTROL.h"
 
 /* APIs are not generated for P15[7:6] on PSoC 5 */
 #if !(CY_PSOC5A &&\
-	 MASK_OFF_CONTROL__PORT == 15 && ((MASK_OFF_CONTROL__MASK & 0xC0) != 0))
+	 DIV_AMT_CONTROL__PORT == 15 && ((DIV_AMT_CONTROL__MASK & 0xC0) != 0))
 
 
 /*******************************************************************************
-* Function Name: MASK_OFF_CONTROL_Write
+* Function Name: DIV_AMT_CONTROL_Write
 ****************************************************************************//**
 *
 * \brief Writes the value to the physical port (data output register), masking
@@ -52,17 +52,17 @@
 *  this function.
 *
 * \funcusage
-*  \snippet MASK_OFF_CONTROL_SUT.c usage_MASK_OFF_CONTROL_Write
+*  \snippet DIV_AMT_CONTROL_SUT.c usage_DIV_AMT_CONTROL_Write
 *******************************************************************************/
-void MASK_OFF_CONTROL_Write(uint8 value)
+void DIV_AMT_CONTROL_Write(uint8 value)
 {
-    uint8 staticBits = (MASK_OFF_CONTROL_DR & (uint8)(~MASK_OFF_CONTROL_MASK));
-    MASK_OFF_CONTROL_DR = staticBits | ((uint8)(value << MASK_OFF_CONTROL_SHIFT) & MASK_OFF_CONTROL_MASK);
+    uint8 staticBits = (DIV_AMT_CONTROL_DR & (uint8)(~DIV_AMT_CONTROL_MASK));
+    DIV_AMT_CONTROL_DR = staticBits | ((uint8)(value << DIV_AMT_CONTROL_SHIFT) & DIV_AMT_CONTROL_MASK);
 }
 
 
 /*******************************************************************************
-* Function Name: MASK_OFF_CONTROL_SetDriveMode
+* Function Name: DIV_AMT_CONTROL_SetDriveMode
 ****************************************************************************//**
 *
 * \brief Sets the drive mode for each of the Pins component's pins.
@@ -85,16 +85,16 @@ void MASK_OFF_CONTROL_Write(uint8 value)
 *  APIs (primary method) or disable interrupts around this function.
 *
 * \funcusage
-*  \snippet MASK_OFF_CONTROL_SUT.c usage_MASK_OFF_CONTROL_SetDriveMode
+*  \snippet DIV_AMT_CONTROL_SUT.c usage_DIV_AMT_CONTROL_SetDriveMode
 *******************************************************************************/
-void MASK_OFF_CONTROL_SetDriveMode(uint8 mode)
+void DIV_AMT_CONTROL_SetDriveMode(uint8 mode)
 {
-	CyPins_SetPinDriveMode(MASK_OFF_CONTROL_0, mode);
+	CyPins_SetPinDriveMode(DIV_AMT_CONTROL_0, mode);
 }
 
 
 /*******************************************************************************
-* Function Name: MASK_OFF_CONTROL_Read
+* Function Name: DIV_AMT_CONTROL_Read
 ****************************************************************************//**
 *
 * \brief Reads the associated physical port (pin status register) and masks 
@@ -108,16 +108,16 @@ void MASK_OFF_CONTROL_SetDriveMode(uint8 mode)
 *  The current value for the pins in the component as a right justified number.
 *
 * \funcusage
-*  \snippet MASK_OFF_CONTROL_SUT.c usage_MASK_OFF_CONTROL_Read  
+*  \snippet DIV_AMT_CONTROL_SUT.c usage_DIV_AMT_CONTROL_Read  
 *******************************************************************************/
-uint8 MASK_OFF_CONTROL_Read(void)
+uint8 DIV_AMT_CONTROL_Read(void)
 {
-    return (MASK_OFF_CONTROL_PS & MASK_OFF_CONTROL_MASK) >> MASK_OFF_CONTROL_SHIFT;
+    return (DIV_AMT_CONTROL_PS & DIV_AMT_CONTROL_MASK) >> DIV_AMT_CONTROL_SHIFT;
 }
 
 
 /*******************************************************************************
-* Function Name: MASK_OFF_CONTROL_ReadDataReg
+* Function Name: DIV_AMT_CONTROL_ReadDataReg
 ****************************************************************************//**
 *
 * \brief Reads the associated physical port's data output register and masks 
@@ -126,8 +126,8 @@ uint8 MASK_OFF_CONTROL_Read(void)
 *
 * The data output register controls the signal applied to the physical pin in 
 * conjunction with the drive mode parameter. This is not the same as the 
-* preferred MASK_OFF_CONTROL_Read() API because the 
-* MASK_OFF_CONTROL_ReadDataReg() reads the data register instead of the status 
+* preferred DIV_AMT_CONTROL_Read() API because the 
+* DIV_AMT_CONTROL_ReadDataReg() reads the data register instead of the status 
 * register. For output pins this is a useful function to determine the value 
 * just written to the pin.
 *
@@ -136,19 +136,19 @@ uint8 MASK_OFF_CONTROL_Read(void)
 *  justified number for the component instance.
 *
 * \funcusage
-*  \snippet MASK_OFF_CONTROL_SUT.c usage_MASK_OFF_CONTROL_ReadDataReg 
+*  \snippet DIV_AMT_CONTROL_SUT.c usage_DIV_AMT_CONTROL_ReadDataReg 
 *******************************************************************************/
-uint8 MASK_OFF_CONTROL_ReadDataReg(void)
+uint8 DIV_AMT_CONTROL_ReadDataReg(void)
 {
-    return (MASK_OFF_CONTROL_DR & MASK_OFF_CONTROL_MASK) >> MASK_OFF_CONTROL_SHIFT;
+    return (DIV_AMT_CONTROL_DR & DIV_AMT_CONTROL_MASK) >> DIV_AMT_CONTROL_SHIFT;
 }
 
 
 /* If interrupt is connected for this Pins component */ 
-#if defined(MASK_OFF_CONTROL_INTSTAT) 
+#if defined(DIV_AMT_CONTROL_INTSTAT) 
 
     /*******************************************************************************
-    * Function Name: MASK_OFF_CONTROL_SetInterruptMode
+    * Function Name: DIV_AMT_CONTROL_SetInterruptMode
     ****************************************************************************//**
     *
     * \brief Configures the interrupt mode for each of the Pins component's
@@ -161,12 +161,12 @@ uint8 MASK_OFF_CONTROL_ReadDataReg(void)
     * \param position
     *  The pin position as listed in the Pins component. You may OR these to be 
     *  able to configure the interrupt mode of multiple pins within a Pins 
-    *  component. Or you may use MASK_OFF_CONTROL_INTR_ALL to configure the
+    *  component. Or you may use DIV_AMT_CONTROL_INTR_ALL to configure the
     *  interrupt mode of all the pins in the Pins component.       
-    *  - MASK_OFF_CONTROL_0_INTR       (First pin in the list)
-    *  - MASK_OFF_CONTROL_1_INTR       (Second pin in the list)
+    *  - DIV_AMT_CONTROL_0_INTR       (First pin in the list)
+    *  - DIV_AMT_CONTROL_1_INTR       (Second pin in the list)
     *  - ...
-    *  - MASK_OFF_CONTROL_INTR_ALL     (All pins in Pins component)
+    *  - DIV_AMT_CONTROL_INTR_ALL     (All pins in Pins component)
     *
     * \param mode
     *  Interrupt mode for the selected pins. Valid options are documented in
@@ -182,19 +182,19 @@ uint8 MASK_OFF_CONTROL_ReadDataReg(void)
     *  port.
     *
     * \funcusage
-    *  \snippet MASK_OFF_CONTROL_SUT.c usage_MASK_OFF_CONTROL_SetInterruptMode
+    *  \snippet DIV_AMT_CONTROL_SUT.c usage_DIV_AMT_CONTROL_SetInterruptMode
     *******************************************************************************/
-    void MASK_OFF_CONTROL_SetInterruptMode(uint16 position, uint16 mode)
+    void DIV_AMT_CONTROL_SetInterruptMode(uint16 position, uint16 mode)
     {
-		if((position & MASK_OFF_CONTROL_0_INTR) != 0u) 
+		if((position & DIV_AMT_CONTROL_0_INTR) != 0u) 
 		{ 
-			 MASK_OFF_CONTROL_0_INTTYPE_REG = (uint8)mode; 
+			 DIV_AMT_CONTROL_0_INTTYPE_REG = (uint8)mode; 
 		}
     }
     
     
     /*******************************************************************************
-    * Function Name: MASK_OFF_CONTROL_ClearInterrupt
+    * Function Name: DIV_AMT_CONTROL_ClearInterrupt
     ****************************************************************************//**
     *
     * \brief Clears any active interrupts attached with the component and returns 
@@ -211,11 +211,11 @@ uint8 MASK_OFF_CONTROL_ReadDataReg(void)
     *  those associated with the Pins component.
     *
     * \funcusage
-    *  \snippet MASK_OFF_CONTROL_SUT.c usage_MASK_OFF_CONTROL_ClearInterrupt
+    *  \snippet DIV_AMT_CONTROL_SUT.c usage_DIV_AMT_CONTROL_ClearInterrupt
     *******************************************************************************/
-    uint8 MASK_OFF_CONTROL_ClearInterrupt(void)
+    uint8 DIV_AMT_CONTROL_ClearInterrupt(void)
     {
-        return (MASK_OFF_CONTROL_INTSTAT & MASK_OFF_CONTROL_MASK) >> MASK_OFF_CONTROL_SHIFT;
+        return (DIV_AMT_CONTROL_INTSTAT & DIV_AMT_CONTROL_MASK) >> DIV_AMT_CONTROL_SHIFT;
     }
 
 #endif /* If Interrupts Are Enabled for this Pins component */ 

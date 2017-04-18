@@ -39,7 +39,7 @@ extern uint8 PWM_9_initVar;
 #define PWM_9_DeadBand2_4                    (0u)
 
 #if !defined(PWM_9_PWMUDB_genblk8_stsreg__REMOVED)
-    #define PWM_9_UseStatus                  (1u)
+    #define PWM_9_UseStatus                  (0u)
 #else
     #define PWM_9_UseStatus                  (0u)
 #endif /* !defined(PWM_9_PWMUDB_genblk8_stsreg__REMOVED) */

@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: DIV_MUX_CONTROL.c  
+* File Name: MASK_CONTROL.c  
 * Version 2.20
 *
 * Description:
@@ -15,15 +15,15 @@
 *******************************************************************************/
 
 #include "cytypes.h"
-#include "DIV_MUX_CONTROL.h"
+#include "MASK_CONTROL.h"
 
 /* APIs are not generated for P15[7:6] on PSoC 5 */
 #if !(CY_PSOC5A &&\
-	 DIV_MUX_CONTROL__PORT == 15 && ((DIV_MUX_CONTROL__MASK & 0xC0) != 0))
+	 MASK_CONTROL__PORT == 15 && ((MASK_CONTROL__MASK & 0xC0) != 0))
 
 
 /*******************************************************************************
-* Function Name: DIV_MUX_CONTROL_Write
+* Function Name: MASK_CONTROL_Write
 ****************************************************************************//**
 *
 * \brief Writes the value to the physical port (data output register), masking
@@ -52,17 +52,17 @@
 *  this function.
 *
 * \funcusage
-*  \snippet DIV_MUX_CONTROL_SUT.c usage_DIV_MUX_CONTROL_Write
+*  \snippet MASK_CONTROL_SUT.c usage_MASK_CONTROL_Write
 *******************************************************************************/
-void DIV_MUX_CONTROL_Write(uint8 value)
+void MASK_CONTROL_Write(uint8 value)
 {
-    uint8 staticBits = (DIV_MUX_CONTROL_DR & (uint8)(~DIV_MUX_CONTROL_MASK));
-    DIV_MUX_CONTROL_DR = staticBits | ((uint8)(value << DIV_MUX_CONTROL_SHIFT) & DIV_MUX_CONTROL_MASK);
+    uint8 staticBits = (MASK_CONTROL_DR & (uint8)(~MASK_CONTROL_MASK));
+    MASK_CONTROL_DR = staticBits | ((uint8)(value << MASK_CONTROL_SHIFT) & MASK_CONTROL_MASK);
 }
 
 
 /*******************************************************************************
-* Function Name: DIV_MUX_CONTROL_SetDriveMode
+* Function Name: MASK_CONTROL_SetDriveMode
 ****************************************************************************//**
 *
 * \brief Sets the drive mode for each of the Pins component's pins.
@@ -85,16 +85,16 @@ void DIV_MUX_CONTROL_Write(uint8 value)
 *  APIs (primary method) or disable interrupts around this function.
 *
 * \funcusage
-*  \snippet DIV_MUX_CONTROL_SUT.c usage_DIV_MUX_CONTROL_SetDriveMode
+*  \snippet MASK_CONTROL_SUT.c usage_MASK_CONTROL_SetDriveMode
 *******************************************************************************/
-void DIV_MUX_CONTROL_SetDriveMode(uint8 mode)
+void MASK_CONTROL_SetDriveMode(uint8 mode)
 {
-	CyPins_SetPinDriveMode(DIV_MUX_CONTROL_0, mode);
+	CyPins_SetPinDriveMode(MASK_CONTROL_0, mode);
 }
 
 
 /*******************************************************************************
-* Function Name: DIV_MUX_CONTROL_Read
+* Function Name: MASK_CONTROL_Read
 ****************************************************************************//**
 *
 * \brief Reads the associated physical port (pin status register) and masks 
@@ -108,16 +108,16 @@ void DIV_MUX_CONTROL_SetDriveMode(uint8 mode)
 *  The current value for the pins in the component as a right justified number.
 *
 * \funcusage
-*  \snippet DIV_MUX_CONTROL_SUT.c usage_DIV_MUX_CONTROL_Read  
+*  \snippet MASK_CONTROL_SUT.c usage_MASK_CONTROL_Read  
 *******************************************************************************/
-uint8 DIV_MUX_CONTROL_Read(void)
+uint8 MASK_CONTROL_Read(void)
 {
-    return (DIV_MUX_CONTROL_PS & DIV_MUX_CONTROL_MASK) >> DIV_MUX_CONTROL_SHIFT;
+    return (MASK_CONTROL_PS & MASK_CONTROL_MASK) >> MASK_CONTROL_SHIFT;
 }
 
 
 /*******************************************************************************
-* Function Name: DIV_MUX_CONTROL_ReadDataReg
+* Function Name: MASK_CONTROL_ReadDataReg
 ****************************************************************************//**
 *
 * \brief Reads the associated physical port's data output register and masks 
@@ -126,8 +126,8 @@ uint8 DIV_MUX_CONTROL_Read(void)
 *
 * The data output register controls the signal applied to the physical pin in 
 * conjunction with the drive mode parameter. This is not the same as the 
-* preferred DIV_MUX_CONTROL_Read() API because the 
-* DIV_MUX_CONTROL_ReadDataReg() reads the data register instead of the status 
+* preferred MASK_CONTROL_Read() API because the 
+* MASK_CONTROL_ReadDataReg() reads the data register instead of the status 
 * register. For output pins this is a useful function to determine the value 
 * just written to the pin.
 *
@@ -136,19 +136,19 @@ uint8 DIV_MUX_CONTROL_Read(void)
 *  justified number for the component instance.
 *
 * \funcusage
-*  \snippet DIV_MUX_CONTROL_SUT.c usage_DIV_MUX_CONTROL_ReadDataReg 
+*  \snippet MASK_CONTROL_SUT.c usage_MASK_CONTROL_ReadDataReg 
 *******************************************************************************/
-uint8 DIV_MUX_CONTROL_ReadDataReg(void)
+uint8 MASK_CONTROL_ReadDataReg(void)
 {
-    return (DIV_MUX_CONTROL_DR & DIV_MUX_CONTROL_MASK) >> DIV_MUX_CONTROL_SHIFT;
+    return (MASK_CONTROL_DR & MASK_CONTROL_MASK) >> MASK_CONTROL_SHIFT;
 }
 
 
 /* If interrupt is connected for this Pins component */ 
-#if defined(DIV_MUX_CONTROL_INTSTAT) 
+#if defined(MASK_CONTROL_INTSTAT) 
 
     /*******************************************************************************
-    * Function Name: DIV_MUX_CONTROL_SetInterruptMode
+    * Function Name: MASK_CONTROL_SetInterruptMode
     ****************************************************************************//**
     *
     * \brief Configures the interrupt mode for each of the Pins component's
@@ -161,12 +161,12 @@ uint8 DIV_MUX_CONTROL_ReadDataReg(void)
     * \param position
     *  The pin position as listed in the Pins component. You may OR these to be 
     *  able to configure the interrupt mode of multiple pins within a Pins 
-    *  component. Or you may use DIV_MUX_CONTROL_INTR_ALL to configure the
+    *  component. Or you may use MASK_CONTROL_INTR_ALL to configure the
     *  interrupt mode of all the pins in the Pins component.       
-    *  - DIV_MUX_CONTROL_0_INTR       (First pin in the list)
-    *  - DIV_MUX_CONTROL_1_INTR       (Second pin in the list)
+    *  - MASK_CONTROL_0_INTR       (First pin in the list)
+    *  - MASK_CONTROL_1_INTR       (Second pin in the list)
     *  - ...
-    *  - DIV_MUX_CONTROL_INTR_ALL     (All pins in Pins component)
+    *  - MASK_CONTROL_INTR_ALL     (All pins in Pins component)
     *
     * \param mode
     *  Interrupt mode for the selected pins. Valid options are documented in
@@ -182,19 +182,19 @@ uint8 DIV_MUX_CONTROL_ReadDataReg(void)
     *  port.
     *
     * \funcusage
-    *  \snippet DIV_MUX_CONTROL_SUT.c usage_DIV_MUX_CONTROL_SetInterruptMode
+    *  \snippet MASK_CONTROL_SUT.c usage_MASK_CONTROL_SetInterruptMode
     *******************************************************************************/
-    void DIV_MUX_CONTROL_SetInterruptMode(uint16 position, uint16 mode)
+    void MASK_CONTROL_SetInterruptMode(uint16 position, uint16 mode)
     {
-		if((position & DIV_MUX_CONTROL_0_INTR) != 0u) 
+		if((position & MASK_CONTROL_0_INTR) != 0u) 
 		{ 
-			 DIV_MUX_CONTROL_0_INTTYPE_REG = (uint8)mode; 
+			 MASK_CONTROL_0_INTTYPE_REG = (uint8)mode; 
 		}
     }
     
     
     /*******************************************************************************
-    * Function Name: DIV_MUX_CONTROL_ClearInterrupt
+    * Function Name: MASK_CONTROL_ClearInterrupt
     ****************************************************************************//**
     *
     * \brief Clears any active interrupts attached with the component and returns 
@@ -211,11 +211,11 @@ uint8 DIV_MUX_CONTROL_ReadDataReg(void)
     *  those associated with the Pins component.
     *
     * \funcusage
-    *  \snippet DIV_MUX_CONTROL_SUT.c usage_DIV_MUX_CONTROL_ClearInterrupt
+    *  \snippet MASK_CONTROL_SUT.c usage_MASK_CONTROL_ClearInterrupt
     *******************************************************************************/
-    uint8 DIV_MUX_CONTROL_ClearInterrupt(void)
+    uint8 MASK_CONTROL_ClearInterrupt(void)
     {
-        return (DIV_MUX_CONTROL_INTSTAT & DIV_MUX_CONTROL_MASK) >> DIV_MUX_CONTROL_SHIFT;
+        return (MASK_CONTROL_INTSTAT & MASK_CONTROL_MASK) >> MASK_CONTROL_SHIFT;
     }
 
 #endif /* If Interrupts Are Enabled for this Pins component */ 

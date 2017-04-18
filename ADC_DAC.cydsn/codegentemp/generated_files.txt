@@ -38,12 +38,12 @@
   <file name="C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\codegentemp\AUDIO_IN_aliases.h" value="HEADER;;;;;AUDIO_IN" />
   <file name="C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\codegentemp\AUDIO_IN.c" value="SOURCE_C;CortexM3;;;;AUDIO_IN" />
   <file name="C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\codegentemp\AUDIO_IN.h" value="HEADER;;;;;AUDIO_IN" />
-  <file name="C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\codegentemp\DIV_MUX_CONTROL_aliases.h" value="HEADER;;;;;DIV_MUX_CONTROL" />
-  <file name="C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\codegentemp\DIV_MUX_CONTROL.c" value="SOURCE_C;CortexM3;;;;DIV_MUX_CONTROL" />
-  <file name="C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\codegentemp\DIV_MUX_CONTROL.h" value="HEADER;;;;;DIV_MUX_CONTROL" />
-  <file name="C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\codegentemp\MASK_OFF_CONTROL_aliases.h" value="HEADER;;;;;MASK_OFF_CONTROL" />
-  <file name="C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\codegentemp\MASK_OFF_CONTROL.c" value="SOURCE_C;CortexM3;;;;MASK_OFF_CONTROL" />
-  <file name="C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\codegentemp\MASK_OFF_CONTROL.h" value="HEADER;;;;;MASK_OFF_CONTROL" />
+  <file name="C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\codegentemp\DIV_AMT_CONTROL_aliases.h" value="HEADER;;;;;DIV_AMT_CONTROL" />
+  <file name="C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\codegentemp\DIV_AMT_CONTROL.c" value="SOURCE_C;CortexM3;;;;DIV_AMT_CONTROL" />
+  <file name="C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\codegentemp\DIV_AMT_CONTROL.h" value="HEADER;;;;;DIV_AMT_CONTROL" />
+  <file name="C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\codegentemp\DIV_DEPTH_CONTROL_aliases.h" value="HEADER;;;;;DIV_DEPTH_CONTROL" />
+  <file name="C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\codegentemp\DIV_DEPTH_CONTROL.c" value="SOURCE_C;CortexM3;;;;DIV_DEPTH_CONTROL" />
+  <file name="C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\codegentemp\DIV_DEPTH_CONTROL.h" value="HEADER;;;;;DIV_DEPTH_CONTROL" />
   <file name="C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\codegentemp\MOSI_OUT_aliases.h" value="HEADER;;;;;MOSI_OUT" />
   <file name="C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\codegentemp\MOSI_OUT.c" value="SOURCE_C;CortexM3;;;;MOSI_OUT" />
   <file name="C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\codegentemp\MOSI_OUT.h" value="HEADER;;;;;MOSI_OUT" />
@@ -82,9 +82,9 @@
   <file name="C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\codegentemp\PWM_ADC_CK_PM.c" value="SOURCE_C;CortexM3;;;;PWM_ADC_CK" />
   <file name="C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\codegentemp\ADC_REG_CLOCK.c" value="SOURCE_C;CortexM3;;;;ADC_REG_CLOCK" />
   <file name="C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\codegentemp\ADC_REG_CLOCK.h" value="HEADER;;;;;ADC_REG_CLOCK" />
-  <file name="C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\codegentemp\PWM_1_CONTROL_aliases.h" value="HEADER;;;;;PWM_1_CONTROL" />
-  <file name="C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\codegentemp\PWM_1_CONTROL.c" value="SOURCE_C;CortexM3;;;;PWM_1_CONTROL" />
-  <file name="C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\codegentemp\PWM_1_CONTROL.h" value="HEADER;;;;;PWM_1_CONTROL" />
+  <file name="C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\codegentemp\MASK_CONTROL_aliases.h" value="HEADER;;;;;MASK_CONTROL" />
+  <file name="C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\codegentemp\MASK_CONTROL.c" value="SOURCE_C;CortexM3;;;;MASK_CONTROL" />
+  <file name="C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\codegentemp\MASK_CONTROL.h" value="HEADER;;;;;MASK_CONTROL" />
   <file name="C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\codegentemp\DIV_MASK_MSB.h" value="HEADER;;;;;DIV_MASK_MSB" />
   <file name="C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\codegentemp\DIV_MASK_MSB.c" value="SOURCE_C;CortexM3;;;;DIV_MASK_MSB" />
   <file name="C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\codegentemp\DIV_MASK_MSB_PM.c" value="SOURCE_C;CortexM3;;;;DIV_MASK_MSB" />
@@ -136,6 +136,8 @@
   <file name="C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\codegentemp\ADC_SAR_Seq_SAR.h" value="HEADER;;;;;ADC_SAR_Seq_SAR" />
   <file name="C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\codegentemp\ADC_SAR_Seq_SAR_INT.c" value="SOURCE_C;CortexM3;;;;ADC_SAR_Seq_SAR" />
   <file name="C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\codegentemp\ADC_SAR_Seq_SAR_PM.c" value="SOURCE_C;CortexM3;;;;ADC_SAR_Seq_SAR" />
+  <file name="C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\codegentemp\ADC_SAR_Seq_IntClock.c" value="SOURCE_C;CortexM3;;;;ADC_SAR_Seq_IntClock" />
+  <file name="C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\codegentemp\ADC_SAR_Seq_IntClock.h" value="HEADER;;;;;ADC_SAR_Seq_IntClock" />
   <file name="C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\codegentemp\ADC_SAR_Seq_TempBuf_dma.c" value="SOURCE_C;CortexM3;;;;ADC_SAR_Seq_TempBuf" />
   <file name="C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\codegentemp\ADC_SAR_Seq_TempBuf_dma.h" value="HEADER;;;;;ADC_SAR_Seq_TempBuf" />
   <file name="C:\Users\ben\Documents\PSoC Creator\New Pedal Thingz\PSOC_BIT_MANGLER\BIT-MANGLER\ADC_DAC.cydsn\codegentemp\ADC_SAR_Seq_FinalBuf_dma.c" value="SOURCE_C;CortexM3;;;;ADC_SAR_Seq_FinalBuf" />

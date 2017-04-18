@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: PWM_1_CONTROL.h  
+* File Name: DIV_DEPTH_CONTROL.h  
 * Version 2.20
 *
 * Description:
@@ -15,8 +15,8 @@
 * the software package with which this file was provided.
 *******************************************************************************/
 
-#if !defined(CY_PINS_PWM_1_CONTROL_ALIASES_H) /* Pins PWM_1_CONTROL_ALIASES_H */
-#define CY_PINS_PWM_1_CONTROL_ALIASES_H
+#if !defined(CY_PINS_DIV_DEPTH_CONTROL_ALIASES_H) /* Pins DIV_DEPTH_CONTROL_ALIASES_H */
+#define CY_PINS_DIV_DEPTH_CONTROL_ALIASES_H
 
 #include "cytypes.h"
 #include "cyfitter.h"
@@ -25,12 +25,12 @@
 /***************************************
 *              Constants        
 ***************************************/
-#define PWM_1_CONTROL_0			(PWM_1_CONTROL__0__PC)
-#define PWM_1_CONTROL_0_INTR	((uint16)((uint16)0x0001u << PWM_1_CONTROL__0__SHIFT))
+#define DIV_DEPTH_CONTROL_0			(DIV_DEPTH_CONTROL__0__PC)
+#define DIV_DEPTH_CONTROL_0_INTR	((uint16)((uint16)0x0001u << DIV_DEPTH_CONTROL__0__SHIFT))
 
-#define PWM_1_CONTROL_INTR_ALL	 ((uint16)(PWM_1_CONTROL_0_INTR))
+#define DIV_DEPTH_CONTROL_INTR_ALL	 ((uint16)(DIV_DEPTH_CONTROL_0_INTR))
 
-#endif /* End Pins PWM_1_CONTROL_ALIASES_H */
+#endif /* End Pins DIV_DEPTH_CONTROL_ALIASES_H */
 
 
 /* [] END OF FILE */

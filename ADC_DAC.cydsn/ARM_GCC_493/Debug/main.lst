@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccz2eT1G.s 			page 1
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPXmHMV.s 			page 1
 
 
    1              		.syntax unified
@@ -18,1156 +18,1768 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccz2eT1G.s 			page 1
   15              		.text
   16              	.Ltext0:
   17              		.cfi_sections	.debug_frame
-  18              		.comm	EFFECT_ADC,2,2
-  19              		.comm	POT_READ_SCALED,2,2
-  20              		.global	val
-  21              		.bss
-  22              		.type	val, %object
-  23              		.size	val, 1
-  24              	val:
-  25 0000 00       		.space	1
-  26              		.global	dataready
-  27              		.type	dataready, %object
-  28              		.size	dataready, 1
-  29              	dataready:
-  30 0001 00       		.space	1
-  31              		.section	.rodata
-  32              		.align	2
-  33              	.LC0:
-  34 0000 41444331 		.ascii	"ADC1 \000"
-  34      2000
-  35 0006 0000     		.align	2
-  36              	.LC1:
-  37 0008 41444332 		.ascii	"ADC2 \000"
-  37      2000
-  38 000e 0000     		.section	.text.main,"ax",%progbits
-  39              		.align	2
-  40              		.global	main
-  41              		.thumb
-  42              		.thumb_func
-  43              		.type	main, %function
-  44              	main:
-  45              	.LFB63:
-  46              		.file 1 "main.c"
+  18              		.global	BIT_MASK_CTRL
+  19              		.bss
+  20              		.align	1
+  21              		.type	BIT_MASK_CTRL, %object
+  22              		.size	BIT_MASK_CTRL, 2
+  23              	BIT_MASK_CTRL:
+  24 0000 0000     		.space	2
+  25              		.global	DIV_MASK_CTRL
+  26              		.align	1
+  27              		.type	DIV_MASK_CTRL, %object
+  28              		.size	DIV_MASK_CTRL, 2
+  29              	DIV_MASK_CTRL:
+  30 0002 0000     		.space	2
+  31              		.global	OLD_BIT_MASK_DEPTH
+  32              		.align	1
+  33              		.type	OLD_BIT_MASK_DEPTH, %object
+  34              		.size	OLD_BIT_MASK_DEPTH, 2
+  35              	OLD_BIT_MASK_DEPTH:
+  36 0004 0000     		.space	2
+  37              		.global	OLD_DIV_MASK_DEPTH
+  38              		.align	1
+  39              		.type	OLD_DIV_MASK_DEPTH, %object
+  40              		.size	OLD_DIV_MASK_DEPTH, 2
+  41              	OLD_DIV_MASK_DEPTH:
+  42 0006 0000     		.space	2
+  43              		.global	FINAL_OUT
+  44              		.align	1
+  45              		.type	FINAL_OUT, %object
+  46              		.size	FINAL_OUT, 2
+  47              	FINAL_OUT:
+  48 0008 0000     		.space	2
+  49              		.global	MASK_CTRL
+  50              		.align	1
+  51              		.type	MASK_CTRL, %object
+  52              		.size	MASK_CTRL, 2
+  53              	MASK_CTRL:
+  54 000a 0000     		.space	2
+  55              		.global	OLD_MASK_DEPTH
+  56              		.align	1
+  57              		.type	OLD_MASK_DEPTH, %object
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPXmHMV.s 			page 2
+
+
+  58              		.size	OLD_MASK_DEPTH, 2
+  59              	OLD_MASK_DEPTH:
+  60 000c 0000     		.space	2
+  61              		.global	MASK_EFFECT
+  62              		.type	MASK_EFFECT, %object
+  63              		.size	MASK_EFFECT, 1
+  64              	MASK_EFFECT:
+  65 000e 00       		.space	1
+  66              		.comm	SAR_ADCResultArray,8,4
+  67              		.comm	seq_sar_dataReady,1,1
+  68              		.comm	audio_result,4,4
+  69              		.comm	audio_dataReady,1,1
+  70              		.comm	audio_lsb,1,1
+  71              		.comm	audio_msb,1,1
+  72              		.global	FRQ_CTRL
+  73 000f 00       		.align	1
+  74              		.type	FRQ_CTRL, %object
+  75              		.size	FRQ_CTRL, 2
+  76              	FRQ_CTRL:
+  77 0010 0000     		.space	2
+  78              		.section	.rodata
+  79              		.align	2
+  80              	.LC0:
+  81 0000 41444331 		.ascii	"ADC1 \000"
+  81      2000
+  82 0006 0000     		.align	2
+  83              	.LC1:
+  84 0008 41444332 		.ascii	"ADC2 \000"
+  84      2000
+  85 000e 0000     		.section	.text.main,"ax",%progbits
+  86              		.align	2
+  87              		.global	main
+  88              		.thumb
+  89              		.thumb_func
+  90              		.type	main, %function
+  91              	main:
+  92              	.LFB63:
+  93              		.file 1 "main.c"
    1:main.c        ****  /*******************************************************************************
    2:main.c        **** * File Name: main.c
-   3:main.c        **** *
-   4:main.c        **** * Version: 1.00
+   3:main.c        **** 
+   4:main.c        **** * Note that this file contains the DMA_Config function as well.
    5:main.c        **** *
-   6:main.c        **** * Description:
-   7:main.c        **** *   This example project uses ADC, DMA and VDAC components along with the LCD
-   8:main.c        **** *     status register. ADC output is transferred to VDAC input register using
-   9:main.c        **** *   the DMA.
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccz2eT1G.s 			page 2
+   6:main.c        **** ********************************************************************************
+   7:main.c        **** * Copyright 2012, Cypress Semiconductor Corporation. All rights reserved.
+   8:main.c        **** * This software is owned by Cypress Semiconductor Corporation and is protected
+   9:main.c        **** * by and subject to worldwide patent and copyright laws and treaties.
+  10:main.c        **** * Therefore, you may use this software only as provided in the license agreement
+  11:main.c        **** * accompanying the software package from which you obtained this software.
+  12:main.c        **** * CYPRESS AND ITS SUPPLIERS MAKE NO WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+  13:main.c        **** * WITH REGARD TO THIS SOFTWARE, INCLUDING, BUT NOT LIMITED TO, NONINFRINGEMENT,
+  14:main.c        **** * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+  15:main.c        **** *******************************************************************************/
+  16:main.c        **** 
+  17:main.c        **** #include <project.h>
+  18:main.c        **** 
+  19:main.c        **** 
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPXmHMV.s 			page 3
 
 
-  10:main.c        **** *
-  11:main.c        **** * Note that this file contains the DMA_Config function as well.
-  12:main.c        **** *
-  13:main.c        **** ********************************************************************************
-  14:main.c        **** * Copyright 2012, Cypress Semiconductor Corporation. All rights reserved.
-  15:main.c        **** * This software is owned by Cypress Semiconductor Corporation and is protected
-  16:main.c        **** * by and subject to worldwide patent and copyright laws and treaties.
-  17:main.c        **** * Therefore, you may use this software only as provided in the license agreement
-  18:main.c        **** * accompanying the software package from which you obtained this software.
-  19:main.c        **** * CYPRESS AND ITS SUPPLIERS MAKE NO WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
-  20:main.c        **** * WITH REGARD TO THIS SOFTWARE, INCLUDING, BUT NOT LIMITED TO, NONINFRINGEMENT,
-  21:main.c        **** * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
-  22:main.c        **** *******************************************************************************/
+  20:main.c        **** void PWM_Start(void);
+  21:main.c        **** void PWM_Set(uint8 PWMin);
+  22:main.c        **** 
   23:main.c        **** 
-  24:main.c        **** #include <project.h>
-  25:main.c        **** 
-  26:main.c        **** 
-  27:main.c        **** uint16 EFFECT_ADC;
-  28:main.c        **** uint16 POT_READ_SCALED;
-  29:main.c        **** uint8 Effect(uint16 Filterout, uint16 depth);
-  30:main.c        **** uint8 val = 0;
-  31:main.c        **** 
-  32:main.c        **** volatile uint8 dataready=0u;
-  33:main.c        **** 
-  34:main.c        **** /*******************************************************************************
-  35:main.c        **** * Function Name: main
-  36:main.c        **** ********************************************************************************
-  37:main.c        **** *
-  38:main.c        **** * Summary:
-  39:main.c        **** *  main() performs following functions:
-  40:main.c        **** *  1: Starts the components
-  41:main.c        **** *  2: Calls function DMA_Config to setup the DMA.
-  42:main.c        **** *  3: Starts ADC continuous conversion.
-  43:main.c        **** *  4: Gets the converted result and displays it in LCD. Also displays VDAC data
-  44:main.c        **** *     register value on LCD.
-  45:main.c        **** *
-  46:main.c        **** * Parameters:
-  47:main.c        **** *  None.
-  48:main.c        **** *
-  49:main.c        **** * Return:
-  50:main.c        **** *  None.
-  51:main.c        **** *
-  52:main.c        **** *******************************************************************************/
-  53:main.c        **** int main()
-  54:main.c        **** {
-  47              		.loc 1 54 0
-  48              		.cfi_startproc
-  49              		@ args = 0, pretend = 0, frame = 8
-  50              		@ frame_needed = 1, uses_anonymous_args = 0
-  51 0000 80B5     		push	{r7, lr}
-  52              		.cfi_def_cfa_offset 8
-  53              		.cfi_offset 7, -8
-  54              		.cfi_offset 14, -4
-  55 0002 82B0     		sub	sp, sp, #8
-  56              		.cfi_def_cfa_offset 16
-  57 0004 00AF     		add	r7, sp, #0
-  58              		.cfi_def_cfa_register 7
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccz2eT1G.s 			page 3
+  24:main.c        **** uint16  BIT_MASK_CTRL = 0;
+  25:main.c        **** uint16  DIV_MASK_CTRL = 0;
+  26:main.c        **** uint16  OLD_BIT_MASK_DEPTH = 0;
+  27:main.c        **** uint16  OLD_DIV_MASK_DEPTH = 0;
+  28:main.c        **** uint16  FINAL_OUT = 0;        
+  29:main.c        **** uint16  MASK_CTRL = 0;
+  30:main.c        **** uint16  OLD_MASK_DEPTH = 0;
+  31:main.c        **** uint8   MASK_EFFECT = 0;
+  32:main.c        **** uint16  Effect(uint16 depth);
+  33:main.c        **** uint16  SAR_ADCResultArray[ADC_SAR_Seq_NUMBER_OF_CHANNELS];
+  34:main.c        **** uint8   seq_sar_dataReady; 
+  35:main.c        **** int32   audio_result;
+  36:main.c        **** uint8   audio_dataReady;   
+  37:main.c        **** uint8   audio_lsb;
+  38:main.c        **** uint8   audio_msb;
+  39:main.c        **** uint16  FRQ_CTRL = 0;
+  40:main.c        **** 
+  41:main.c        **** 
+  42:main.c        **** int main(void)
+  43:main.c        **** {
+  94              		.loc 1 43 0
+  95              		.cfi_startproc
+  96              		@ args = 0, pretend = 0, frame = 0
+  97              		@ frame_needed = 1, uses_anonymous_args = 0
+  98 0000 98B5     		push	{r3, r4, r7, lr}
+  99              		.cfi_def_cfa_offset 16
+ 100              		.cfi_offset 3, -16
+ 101              		.cfi_offset 4, -12
+ 102              		.cfi_offset 7, -8
+ 103              		.cfi_offset 14, -4
+ 104 0002 00AF     		add	r7, sp, #0
+ 105              		.cfi_def_cfa_register 7
+  44:main.c        ****     int32   Filt_ADC;
+  45:main.c        ****     
+  46:main.c        ****     /* Start the components */
+  47:main.c        ****     Opamp_1_Start();
+ 106              		.loc 1 47 0
+ 107 0004 FFF7FEFF 		bl	Opamp_1_Start
+  48:main.c        ****     Opamp_2_Start();
+ 108              		.loc 1 48 0
+ 109 0008 FFF7FEFF 		bl	Opamp_2_Start
+  49:main.c        ****     PWM_Start();
+ 110              		.loc 1 49 0
+ 111 000c FFF7FEFF 		bl	PWM_Start
+  50:main.c        ****     PWM_ADC_CK_Enable();
+ 112              		.loc 1 50 0
+ 113 0010 FFF7FEFF 		bl	PWM_ADC_CK_Enable
+  51:main.c        ****     PWM_ADC_CK_Start();
+ 114              		.loc 1 51 0
+ 115 0014 FFF7FEFF 		bl	PWM_ADC_CK_Start
+  52:main.c        ****     LCD_Char_1_Start();
+ 116              		.loc 1 52 0
+ 117 0018 FFF7FEFF 		bl	LCD_Char_1_Start
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPXmHMV.s 			page 4
 
 
-  55:main.c        ****     /* Start the components */
-  56:main.c        ****     Opamp_1_Start();
-  59              		.loc 1 56 0
-  60 0006 FFF7FEFF 		bl	Opamp_1_Start
-  57:main.c        ****     Opamp_2_Start();
-  61              		.loc 1 57 0
-  62 000a FFF7FEFF 		bl	Opamp_2_Start
-  58:main.c        ****     Opamp_3_Start();
-  63              		.loc 1 58 0
-  64 000e FFF7FEFF 		bl	Opamp_3_Start
-  59:main.c        ****   //  Opamp_4_Start();
-  60:main.c        ****     LCD_Char_1_Start();
-  65              		.loc 1 60 0
-  66 0012 FFF7FEFF 		bl	LCD_Char_1_Start
-  61:main.c        ****  //   ADC_DelSig_1_Start();
-  62:main.c        ****     Filter_Start();
-  67              		.loc 1 62 0
-  68 0016 FFF7FEFF 		bl	Filter_Start
-  63:main.c        ****     ADC_SAR_1_Start();
-  69              		.loc 1 63 0
-  70 001a FFF7FEFF 		bl	ADC_SAR_1_Start
-  64:main.c        ****     ADC_SAR_2_Start();
-  71              		.loc 1 64 0
-  72 001e FFF7FEFF 		bl	ADC_SAR_2_Start
-  65:main.c        ****   //  CapSense_1_Start();
-  66:main.c        ****     SPI_DAC_Start();
-  73              		.loc 1 66 0
-  74 0022 FFF7FEFF 		bl	SPI_DAC_Start
-  67:main.c        ****     uint16 CK_DIV = 0;
-  75              		.loc 1 67 0
-  76 0026 0023     		movs	r3, #0
-  77 0028 FB80     		strh	r3, [r7, #6]	@ movhi
-  68:main.c        ****     uint16 AUDIO_IN = 0;
-  78              		.loc 1 68 0
-  79 002a 0023     		movs	r3, #0
-  80 002c BB80     		strh	r3, [r7, #4]	@ movhi
-  69:main.c        ****     uint16 ADC_SAR2_READ =0;
-  81              		.loc 1 69 0
-  82 002e 0023     		movs	r3, #0
-  83 0030 7B80     		strh	r3, [r7, #2]	@ movhi
-  70:main.c        ****     val = 0;
-  84              		.loc 1 70 0
-  85 0032 174B     		ldr	r3, .L4
-  86 0034 0022     		movs	r2, #0
-  87 0036 1A70     		strb	r2, [r3]
-  71:main.c        ****         /* Start ISRs */
-  72:main.c        ****     /* Enable global interrupts */
-  73:main.c        ****    CyGlobalIntEnable;
-  88              		.loc 1 73 0
-  89              	@ 73 "main.c" 1
-  90 0038 62B6     		CPSIE   i
-  91              	@ 0 "" 2
-  74:main.c        ****     /* Start ADC conversion */
-  75:main.c        ****     ADC_SAR_1_StartConvert();
-  92              		.loc 1 75 0
-  93              		.thumb
-  94 003a FFF7FEFF 		bl	ADC_SAR_1_StartConvert
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccz2eT1G.s 			page 4
+  53:main.c        **** //   ADC_DelSig_1_Start();
+  54:main.c        ****     Filter_Start();
+ 118              		.loc 1 54 0
+ 119 001c FFF7FEFF 		bl	Filter_Start
+  55:main.c        ****     ADC_SAR_1_Start();
+ 120              		.loc 1 55 0
+ 121 0020 FFF7FEFF 		bl	ADC_SAR_1_Start
+  56:main.c        ****     ADC_SAR_1_IRQ_Enable();
+ 122              		.loc 1 56 0
+ 123 0024 FFF7FEFF 		bl	ADC_SAR_1_IRQ_Enable
+  57:main.c        ****     ADC_SAR_Seq_Start();
+ 124              		.loc 1 57 0
+ 125 0028 FFF7FEFF 		bl	ADC_SAR_Seq_Start
+  58:main.c        ****     ADC_SAR_Seq_IRQ_Enable();
+ 126              		.loc 1 58 0
+ 127 002c FFF7FEFF 		bl	ADC_SAR_Seq_IRQ_Enable
+  59:main.c        ****     ADC_SAR_Seq_StartConvert();
+ 128              		.loc 1 59 0
+ 129 0030 FFF7FEFF 		bl	ADC_SAR_Seq_StartConvert
+  60:main.c        ****     
+  61:main.c        ****  //  CapSense_1_Start();
+  62:main.c        ****     SPI_DAC_Start();
+ 130              		.loc 1 62 0
+ 131 0034 FFF7FEFF 		bl	SPI_DAC_Start
+  63:main.c        ****     
+  64:main.c        ****     /* Start ISRs */
+  65:main.c        ****     /* Enable global interrupts */
+  66:main.c        ****     CyGlobalIntEnable;
+ 132              		.loc 1 66 0
+ 133              	@ 66 "main.c" 1
+ 134 0038 62B6     		CPSIE   i
+ 135              	@ 0 "" 2
+  67:main.c        ****     ADC_SAR_Seq_StartConvert();
+ 136              		.loc 1 67 0
+ 137              		.thumb
+ 138 003a FFF7FEFF 		bl	ADC_SAR_Seq_StartConvert
+  68:main.c        ****     LCD_Char_1_Position(0u, 0u);
+ 139              		.loc 1 68 0
+ 140 003e 0020     		movs	r0, #0
+ 141 0040 0021     		movs	r1, #0
+ 142 0042 FFF7FEFF 		bl	LCD_Char_1_Position
+  69:main.c        ****     LCD_Char_1_PrintString("ADC1 ");
+ 143              		.loc 1 69 0
+ 144 0046 2C48     		ldr	r0, .L6
+ 145 0048 FFF7FEFF 		bl	LCD_Char_1_PrintString
+  70:main.c        ****     LCD_Char_1_Position(1u, 0u);
+ 146              		.loc 1 70 0
+ 147 004c 0120     		movs	r0, #1
+ 148 004e 0021     		movs	r1, #0
+ 149 0050 FFF7FEFF 		bl	LCD_Char_1_Position
+  71:main.c        ****     LCD_Char_1_PrintString("ADC2 ");
+ 150              		.loc 1 71 0
+ 151 0054 2948     		ldr	r0, .L6+4
+ 152 0056 FFF7FEFF 		bl	LCD_Char_1_PrintString
+ 153              	.L4:
+  72:main.c        ****     
+  73:main.c        ****     
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPXmHMV.s 			page 5
 
 
-  76:main.c        ****     ADC_SAR_2_StartConvert();
-  95              		.loc 1 76 0
-  96 003e FFF7FEFF 		bl	ADC_SAR_2_StartConvert
-  77:main.c        ****     LCD_Char_1_Position(0u, 0u);
-  97              		.loc 1 77 0
-  98 0042 0020     		movs	r0, #0
-  99 0044 0021     		movs	r1, #0
- 100 0046 FFF7FEFF 		bl	LCD_Char_1_Position
-  78:main.c        ****     LCD_Char_1_PrintString("ADC1 ");
- 101              		.loc 1 78 0
- 102 004a 1248     		ldr	r0, .L4+4
- 103 004c FFF7FEFF 		bl	LCD_Char_1_PrintString
-  79:main.c        ****     LCD_Char_1_Position(1u, 0u);
- 104              		.loc 1 79 0
- 105 0050 0120     		movs	r0, #1
- 106 0052 0021     		movs	r1, #0
- 107 0054 FFF7FEFF 		bl	LCD_Char_1_Position
-  80:main.c        ****     LCD_Char_1_PrintString("ADC2 ");
- 108              		.loc 1 80 0
- 109 0058 0F48     		ldr	r0, .L4+8
- 110 005a FFF7FEFF 		bl	LCD_Char_1_PrintString
- 111              	.L3:
-  81:main.c        ****     
-  82:main.c        ****     for(;;)
-  83:main.c        ****     {
-  84:main.c        ****        
-  85:main.c        ****        
-  86:main.c        ****  /*   if (ADC_SAR_2_IsEndConversion(1)){
-  87:main.c        ****        ADC_SAR2_READ= ADC_SAR_2_GetResult16();
-  88:main.c        ****         CK_DIV= ADC_SAR2_READ <<4u;
-  89:main.c        ****    //   DAC_CLOCK_SetDivider((1));
-  90:main.c        ****         POT_READ_SCALED = ADC_SAR2_READ>>8u;
-  91:main.c        ****         }*/
-  92:main.c        ****  //  if (ADC_SAR_1_IsEndConversion(1))
-  93:main.c        ****    // {  }
-  94:main.c        ****         
-  95:main.c        ****   //  LCD_Char_1_Position(0u, strlen("ADC1 "));
-  96:main.c        ****   //  LCD_Char_1_PrintInt16(AUDIO_IN | 0x7000u);
-  97:main.c        ****    // LCD_Char_1_Position(1u, strlen("ADC2 "));
-  98:main.c        ****  //   LCD_Char_1_PrintInt16(ADC_SAR2_READ | 0xF000u); 
-  99:main.c        ****     //    AUDIO_IN= ADC_SAR_1_GetResult16();
- 100:main.c        ****         //ADC_1_OUT_LSB_Write(ADC_SAR_1_GetResult8());
- 101:main.c        ****        // ADC_1_OUT_MSB_Write(ADC_SAR_1_GetResult16()>>4);
- 102:main.c        ****         if (ADC_SAR_1_IsEndConversion(1))
- 112              		.loc 1 102 0
- 113 005e 0120     		movs	r0, #1
- 114 0060 FFF7FEFF 		bl	ADC_SAR_1_IsEndConversion
- 115 0064 0346     		mov	r3, r0
- 116 0066 002B     		cmp	r3, #0
- 117 0068 11D0     		beq	.L2
- 103:main.c        ****   {  
- 104:main.c        ****         Effect(ADC_SAR_1_GetResult16(), 6);
- 118              		.loc 1 104 0
- 119 006a FFF7FEFF 		bl	ADC_SAR_1_GetResult16
- 120 006e 0346     		mov	r3, r0
- 121 0070 9BB2     		uxth	r3, r3
- 122 0072 1846     		mov	r0, r3
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccz2eT1G.s 			page 5
+  74:main.c        ****     for(;;)
+  75:main.c        ****     {
+  76:main.c        ****     
+  77:main.c        ****     
+  78:main.c        ****     if (audio_dataReady !=0)
+ 154              		.loc 1 78 0
+ 155 005a 294B     		ldr	r3, .L6+8
+ 156 005c 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 157 005e 002B     		cmp	r3, #0
+ 158 0060 25D0     		beq	.L2
+  79:main.c        ****     {   
+  80:main.c        ****     ADC_1_OUT_LSB_Write(audio_lsb);
+ 159              		.loc 1 80 0
+ 160 0062 284B     		ldr	r3, .L6+12
+ 161 0064 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 162 0066 1846     		mov	r0, r3
+ 163 0068 FFF7FEFF 		bl	ADC_1_OUT_LSB_Write
+  81:main.c        ****     ADC_1_OUT_MSB_Write((audio_msb));
+ 164              		.loc 1 81 0
+ 165 006c 264B     		ldr	r3, .L6+16
+ 166 006e 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 167 0070 1846     		mov	r0, r3
+ 168 0072 FFF7FEFF 		bl	ADC_1_OUT_MSB_Write
+  82:main.c        ****     FINAL_OUT = (((DAC_IN_MSB_Read()<<8) | DAC_IN_LSB_Read()));
+ 169              		.loc 1 82 0
+ 170 0076 FFF7FEFF 		bl	DAC_IN_MSB_Read
+ 171 007a 0346     		mov	r3, r0
+ 172 007c 1B02     		lsls	r3, r3, #8
+ 173 007e 9CB2     		uxth	r4, r3
+ 174 0080 FFF7FEFF 		bl	DAC_IN_LSB_Read
+ 175 0084 0346     		mov	r3, r0
+ 176 0086 9BB2     		uxth	r3, r3
+ 177 0088 2246     		mov	r2, r4	@ movhi
+ 178 008a 1343     		orrs	r3, r3, r2
+ 179 008c 9BB2     		uxth	r3, r3
+ 180 008e 9AB2     		uxth	r2, r3
+ 181 0090 1E4B     		ldr	r3, .L6+20
+ 182 0092 1A80     		strh	r2, [r3]	@ movhi
+  83:main.c        ****     SPI_DAC_WriteTxData((FINAL_OUT)| 0b1111000000000000);
+ 183              		.loc 1 83 0
+ 184 0094 1D4B     		ldr	r3, .L6+20
+ 185 0096 1B88     		ldrh	r3, [r3]
+ 186 0098 6FEA0353 		mvn	r3, r3, lsl #20
+ 187 009c 6FEA1353 		mvn	r3, r3, lsr #20
+ 188 00a0 9BB2     		uxth	r3, r3
+ 189 00a2 1846     		mov	r0, r3
+ 190 00a4 FFF7FEFF 		bl	SPI_DAC_WriteTxData
+  84:main.c        ****         audio_dataReady = 0;
+ 191              		.loc 1 84 0
+ 192 00a8 154B     		ldr	r3, .L6+8
+ 193 00aa 0022     		movs	r2, #0
+ 194 00ac 1A70     		strb	r2, [r3]
+ 195              	.L2:
+  85:main.c        ****     }
+  86:main.c        ****       if (seq_sar_dataReady !=0)
+ 196              		.loc 1 86 0
+ 197 00ae 184B     		ldr	r3, .L6+24
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPXmHMV.s 			page 6
 
 
- 123 0074 0621     		movs	r1, #6
- 124 0076 FFF7FEFF 		bl	Effect
- 105:main.c        ****   //     (AUDIO_IN | 0xF000u);
- 106:main.c        ****    // }
- 107:main.c        ****       //  if(val){
- 108:main.c        ****         
- 109:main.c        ****         SPI_DAC_WriteTxData(EFFECT_ADC| 0b1111000000000000);
- 125              		.loc 1 109 0
- 126 007a 084B     		ldr	r3, .L4+12
- 127 007c 1B88     		ldrh	r3, [r3]
- 128 007e 6FEA0353 		mvn	r3, r3, lsl #20
- 129 0082 6FEA1353 		mvn	r3, r3, lsr #20
- 130 0086 9BB2     		uxth	r3, r3
- 131 0088 1846     		mov	r0, r3
- 132 008a FFF7FEFF 		bl	SPI_DAC_WriteTxData
- 133              	.L2:
- 110:main.c        ****  }
- 111:main.c        ****         // val = !val;
- 112:main.c        ****        // }
- 113:main.c        ****         
- 114:main.c        ****         //else{
- 115:main.c        ****         //SPI_DAC_WriteTxData(AUDIO_IN | 0b1111000000000000);
- 116:main.c        ****        // }
- 117:main.c        ****    
- 118:main.c        ****    
- 119:main.c        ****  
- 120:main.c        ****  //   Filter_Write16(0, ADC_SAR_1_GetResult16());
- 121:main.c        ****    // uint16 FILT_ADC = Filter_Read16(0);
- 122:main.c        ****     
- 123:main.c        ****     
- 124:main.c        ****  //   Filter_Write16(1,EFFECT_ADC); 
- 125:main.c        ****  //   uint16 FILT_DAC = Filter_Read16(1);
- 126:main.c        ****     
- 127:main.c        ****    // DVDAC_SetValue(ADC_SAR_1_GetResult16());
- 128:main.c        ****         /* Print the ADC output value on LCD */
- 129:main.c        ****   
- 130:main.c        ****      //  }
- 131:main.c        ****     }
- 134              		.loc 1 131 0
- 135 008e E6E7     		b	.L3
- 136              	.L5:
- 137              		.align	2
- 138              	.L4:
- 139 0090 00000000 		.word	val
- 140 0094 00000000 		.word	.LC0
- 141 0098 08000000 		.word	.LC1
- 142 009c 00000000 		.word	EFFECT_ADC
- 143              		.cfi_endproc
- 144              	.LFE63:
- 145              		.size	main, .-main
- 146              		.section	.text.Effect,"ax",%progbits
- 147              		.align	2
- 148              		.global	Effect
- 149              		.thumb
- 150              		.thumb_func
- 151              		.type	Effect, %function
- 152              	Effect:
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccz2eT1G.s 			page 6
+ 198 00b0 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 199 00b2 002B     		cmp	r3, #0
+ 200 00b4 1ED0     		beq	.L5
+  87:main.c        ****         {   
+  88:main.c        **** 
+  89:main.c        ****     PWM_ADC_CK_WritePeriod((SAR_ADCResultArray[0]>>3)+1);//sample rate control
+ 201              		.loc 1 89 0
+ 202 00b6 174B     		ldr	r3, .L6+28
+ 203 00b8 1B88     		ldrh	r3, [r3]
+ 204 00ba DB08     		lsrs	r3, r3, #3
+ 205 00bc 9BB2     		uxth	r3, r3
+ 206 00be 0133     		adds	r3, r3, #1
+ 207 00c0 9BB2     		uxth	r3, r3
+ 208 00c2 1846     		mov	r0, r3
+ 209 00c4 FFF7FEFF 		bl	PWM_ADC_CK_WritePeriod
+  90:main.c        ****     PWM_ADC_CK_WriteCompare((SAR_ADCResultArray[0]>>4));//SAR_ADCResultArray[0]>>1);//compare for 5
+ 210              		.loc 1 90 0
+ 211 00c8 124B     		ldr	r3, .L6+28
+ 212 00ca 1B88     		ldrh	r3, [r3]
+ 213 00cc 1B09     		lsrs	r3, r3, #4
+ 214 00ce 9BB2     		uxth	r3, r3
+ 215 00d0 1846     		mov	r0, r3
+ 216 00d2 FFF7FEFF 		bl	PWM_ADC_CK_WriteCompare
+  91:main.c        ****     DIV_MASK_LSB_Write(0);//SAR_ADCResultArray[1] & 0xFF);//frequency div depth LSB;
+ 217              		.loc 1 91 0
+ 218 00d6 0020     		movs	r0, #0
+ 219 00d8 FFF7FEFF 		bl	DIV_MASK_LSB_Write
+  92:main.c        ****     DIV_MASK_MSB_Write(0);//SAR_ADCResultArray[1]>>8u);//frequency div depth MSB;
+ 220              		.loc 1 92 0
+ 221 00dc 0020     		movs	r0, #0
+ 222 00de FFF7FEFF 		bl	DIV_MASK_MSB_Write
+  93:main.c        ****     PWM_Set(1);//SAR_ADCResultArray[2]>>7)+1);//div value
+ 223              		.loc 1 93 0
+ 224 00e2 0120     		movs	r0, #1
+ 225 00e4 FFF7FEFF 		bl	PWM_Set
+  94:main.c        ****     BIT_MASK_CTRL = 0;//Effect(SAR_ADCResultArray[3]>>7);
+ 226              		.loc 1 94 0
+ 227 00e8 0B4B     		ldr	r3, .L6+32
+ 228 00ea 0022     		movs	r2, #0
+ 229 00ec 1A80     		strh	r2, [r3]	@ movhi
+  95:main.c        ****     seq_sar_dataReady=0;
+ 230              		.loc 1 95 0
+ 231 00ee 084B     		ldr	r3, .L6+24
+ 232 00f0 0022     		movs	r2, #0
+ 233 00f2 1A70     		strb	r2, [r3]
+ 234              	.L5:
+  96:main.c        ****         }  
+  97:main.c        **** 
+  98:main.c        ****     
+  99:main.c        ****     if (1 == 0)
+ 100:main.c        ****     {
+ 101:main.c        ****         
+ 102:main.c        ****     LCD_Char_1_Position(0u, strlen("ADC1 "));
+ 103:main.c        ****     LCD_Char_1_PrintInt16(FRQ_CTRL); 
+ 104:main.c        ****     LCD_Char_1_Position(1u, strlen("ADC2 "));
+ 105:main.c        ****     LCD_Char_1_PrintInt16(MASK_CTRL); 
+ 106:main.c        ****     
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPXmHMV.s 			page 7
 
 
- 153              	.LFB64:
- 132:main.c        **** }
- 133:main.c        **** uint8 Effect(uint16 Filterout, uint16 depth)
- 134:main.c        **** {
- 154              		.loc 1 134 0
- 155              		.cfi_startproc
- 156              		@ args = 0, pretend = 0, frame = 16
- 157              		@ frame_needed = 1, uses_anonymous_args = 0
- 158              		@ link register save eliminated.
- 159 0000 80B4     		push	{r7}
- 160              		.cfi_def_cfa_offset 4
- 161              		.cfi_offset 7, -4
- 162 0002 85B0     		sub	sp, sp, #20
- 163              		.cfi_def_cfa_offset 24
- 164 0004 00AF     		add	r7, sp, #0
- 165              		.cfi_def_cfa_register 7
- 166 0006 0346     		mov	r3, r0
- 167 0008 0A46     		mov	r2, r1
- 168 000a FB80     		strh	r3, [r7, #6]	@ movhi
- 169 000c 1346     		mov	r3, r2	@ movhi
- 170 000e BB80     		strh	r3, [r7, #4]	@ movhi
- 135:main.c        ****             uint16 mask;
- 136:main.c        ****             switch (depth) 
- 171              		.loc 1 136 0
- 172 0010 BB88     		ldrh	r3, [r7, #4]
- 173 0012 0F2B     		cmp	r3, #15
- 174 0014 62D8     		bhi	.L7
- 175 0016 01A2     		adr	r2, .L9
- 176 0018 52F823F0 		ldr	pc, [r2, r3, lsl #2]
- 177              		.p2align 2
- 178              	.L9:
- 179 001c 5D000000 		.word	.L8+1
- 180 0020 65000000 		.word	.L10+1
- 181 0024 6D000000 		.word	.L11+1
- 182 0028 75000000 		.word	.L12+1
- 183 002c 7D000000 		.word	.L13+1
- 184 0030 85000000 		.word	.L14+1
- 185 0034 8D000000 		.word	.L15+1
- 186 0038 95000000 		.word	.L16+1
- 187 003c 9D000000 		.word	.L17+1
- 188 0040 A5000000 		.word	.L18+1
- 189 0044 AD000000 		.word	.L19+1
- 190 0048 B5000000 		.word	.L20+1
- 191 004c BD000000 		.word	.L21+1
- 192 0050 C5000000 		.word	.L22+1
- 193 0054 CD000000 		.word	.L23+1
- 194 0058 D5000000 		.word	.L24+1
- 195              		.p2align 1
- 196              	.L8:
- 137:main.c        ****         {
- 138:main.c        ****         case 0:
- 139:main.c        ****             mask = 0xFFFu;//b1111 1111 1111;
- 197              		.loc 1 139 0
- 198 005c 40F6FF73 		movw	r3, #4095
- 199 0060 FB81     		strh	r3, [r7, #14]	@ movhi
- 140:main.c        ****             break;
- 200              		.loc 1 140 0
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccz2eT1G.s 			page 7
+ 107:main.c        ****     }
+ 108:main.c        ****     
+ 109:main.c        ****     
+ 110:main.c        ****     }
+ 235              		.loc 1 110 0
+ 236 00f4 B1E7     		b	.L4
+ 237              	.L7:
+ 238 00f6 00BF     		.align	2
+ 239              	.L6:
+ 240 00f8 00000000 		.word	.LC0
+ 241 00fc 08000000 		.word	.LC1
+ 242 0100 00000000 		.word	audio_dataReady
+ 243 0104 00000000 		.word	audio_lsb
+ 244 0108 00000000 		.word	audio_msb
+ 245 010c 00000000 		.word	FINAL_OUT
+ 246 0110 00000000 		.word	seq_sar_dataReady
+ 247 0114 00000000 		.word	SAR_ADCResultArray
+ 248 0118 00000000 		.word	BIT_MASK_CTRL
+ 249              		.cfi_endproc
+ 250              	.LFE63:
+ 251              		.size	main, .-main
+ 252              		.section	.text.Effect,"ax",%progbits
+ 253              		.align	2
+ 254              		.global	Effect
+ 255              		.thumb
+ 256              		.thumb_func
+ 257              		.type	Effect, %function
+ 258              	Effect:
+ 259              	.LFB64:
+ 111:main.c        **** }
+ 112:main.c        **** 
+ 113:main.c        **** 
+ 114:main.c        **** uint16 Effect(uint16 depth)
+ 115:main.c        **** {
+ 260              		.loc 1 115 0
+ 261              		.cfi_startproc
+ 262              		@ args = 0, pretend = 0, frame = 16
+ 263              		@ frame_needed = 1, uses_anonymous_args = 0
+ 264              		@ link register save eliminated.
+ 265 0000 80B4     		push	{r7}
+ 266              		.cfi_def_cfa_offset 4
+ 267              		.cfi_offset 7, -4
+ 268 0002 85B0     		sub	sp, sp, #20
+ 269              		.cfi_def_cfa_offset 24
+ 270 0004 00AF     		add	r7, sp, #0
+ 271              		.cfi_def_cfa_register 7
+ 272 0006 0346     		mov	r3, r0
+ 273 0008 FB80     		strh	r3, [r7, #6]	@ movhi
+ 116:main.c        ****             uint16 mask;
+ 117:main.c        ****             switch (depth) 
+ 274              		.loc 1 117 0
+ 275 000a FB88     		ldrh	r3, [r7, #6]
+ 276 000c 1F2B     		cmp	r3, #31
+ 277 000e 00F29880 		bhi	.L9
+ 278 0012 01A2     		adr	r2, .L11
+ 279 0014 52F823F0 		ldr	pc, [r2, r3, lsl #2]
+ 280              		.p2align 2
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPXmHMV.s 			page 8
 
 
- 201 0062 3EE0     		b	.L25
- 202              	.L10:
- 141:main.c        ****         case 1:
- 142:main.c        ****             mask = 0xFFEu;//b1111 1111 1110;
- 203              		.loc 1 142 0
- 204 0064 40F6FE73 		movw	r3, #4094
- 205 0068 FB81     		strh	r3, [r7, #14]	@ movhi
- 143:main.c        ****             break;  
- 206              		.loc 1 143 0
- 207 006a 3AE0     		b	.L25
- 208              	.L11:
- 144:main.c        ****         case 2:
- 145:main.c        ****             mask = 0xFFCu;//b1111 1111 1100;
- 209              		.loc 1 145 0
- 210 006c 40F6FC73 		movw	r3, #4092
- 211 0070 FB81     		strh	r3, [r7, #14]	@ movhi
- 146:main.c        ****             break; 
- 212              		.loc 1 146 0
- 213 0072 36E0     		b	.L25
- 214              	.L12:
- 147:main.c        ****         case 3:
- 148:main.c        ****             mask = 0xFF8u;//b1111 1111 1000;
- 215              		.loc 1 148 0
- 216 0074 40F6F873 		movw	r3, #4088
- 217 0078 FB81     		strh	r3, [r7, #14]	@ movhi
- 149:main.c        ****             break;
- 218              		.loc 1 149 0
- 219 007a 32E0     		b	.L25
- 220              	.L13:
- 150:main.c        ****         case 4:
- 151:main.c        ****             mask = 0xFF0u;//b1111 1111 0000;
- 221              		.loc 1 151 0
- 222 007c 4FF47F63 		mov	r3, #4080
- 223 0080 FB81     		strh	r3, [r7, #14]	@ movhi
- 152:main.c        ****             break;  
- 224              		.loc 1 152 0
- 225 0082 2EE0     		b	.L25
- 226              	.L14:
- 153:main.c        ****         case 5:
- 154:main.c        ****             mask = 0xFE0u;//b1111 1110 0000;
- 227              		.loc 1 154 0
- 228 0084 4FF47E63 		mov	r3, #4064
- 229 0088 FB81     		strh	r3, [r7, #14]	@ movhi
- 155:main.c        ****             break; 
- 230              		.loc 1 155 0
- 231 008a 2AE0     		b	.L25
- 232              	.L15:
- 156:main.c        ****          case 6:
- 157:main.c        ****             mask = 0xFC0u;//b1111 1100 0000;
- 233              		.loc 1 157 0
- 234 008c 4FF47C63 		mov	r3, #4032
- 235 0090 FB81     		strh	r3, [r7, #14]	@ movhi
- 158:main.c        ****             break; 
- 236              		.loc 1 158 0
- 237 0092 26E0     		b	.L25
- 238              	.L16:
- 159:main.c        ****         case 7:
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccz2eT1G.s 			page 8
+ 281              	.L11:
+ 282 0018 99000000 		.word	.L10+1
+ 283 001c A1000000 		.word	.L12+1
+ 284 0020 A9000000 		.word	.L13+1
+ 285 0024 B1000000 		.word	.L14+1
+ 286 0028 B9000000 		.word	.L15+1
+ 287 002c C1000000 		.word	.L16+1
+ 288 0030 C9000000 		.word	.L17+1
+ 289 0034 D1000000 		.word	.L18+1
+ 290 0038 D9000000 		.word	.L19+1
+ 291 003c E1000000 		.word	.L20+1
+ 292 0040 E9000000 		.word	.L21+1
+ 293 0044 F1000000 		.word	.L22+1
+ 294 0048 F9000000 		.word	.L23+1
+ 295 004c 01010000 		.word	.L24+1
+ 296 0050 09010000 		.word	.L25+1
+ 297 0054 11010000 		.word	.L26+1
+ 298 0058 17010000 		.word	.L27+1
+ 299 005c 1D010000 		.word	.L28+1
+ 300 0060 43010000 		.word	.L9+1
+ 301 0064 43010000 		.word	.L9+1
+ 302 0068 43010000 		.word	.L9+1
+ 303 006c 43010000 		.word	.L9+1
+ 304 0070 43010000 		.word	.L9+1
+ 305 0074 43010000 		.word	.L9+1
+ 306 0078 43010000 		.word	.L9+1
+ 307 007c 43010000 		.word	.L9+1
+ 308 0080 43010000 		.word	.L9+1
+ 309 0084 23010000 		.word	.L29+1
+ 310 0088 29010000 		.word	.L30+1
+ 311 008c 2F010000 		.word	.L31+1
+ 312 0090 35010000 		.word	.L32+1
+ 313 0094 3B010000 		.word	.L33+1
+ 314              		.p2align 1
+ 315              	.L10:
+ 118:main.c        ****         {
+ 119:main.c        ****         case 0:
+ 120:main.c        ****             mask = 0xFFFFu;//b1111 1111 1111;
+ 316              		.loc 1 120 0
+ 317 0098 4FF6FF73 		movw	r3, #65535
+ 318 009c FB81     		strh	r3, [r7, #14]	@ movhi
+ 121:main.c        ****             break;
+ 319              		.loc 1 121 0
+ 320 009e 53E0     		b	.L34
+ 321              	.L12:
+ 122:main.c        ****         case 1:
+ 123:main.c        ****             mask = 0xFFFEu;//b1111 1111 1110;
+ 322              		.loc 1 123 0
+ 323 00a0 4FF6FE73 		movw	r3, #65534
+ 324 00a4 FB81     		strh	r3, [r7, #14]	@ movhi
+ 124:main.c        ****             break;  
+ 325              		.loc 1 124 0
+ 326 00a6 4FE0     		b	.L34
+ 327              	.L13:
+ 125:main.c        ****         case 2:
+ 126:main.c        ****             mask = 0xFFFCu;//b1111 1111 1100;
+ 328              		.loc 1 126 0
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPXmHMV.s 			page 9
 
 
- 160:main.c        ****             mask = 0xF80u;//b1111 1000 0000;
- 239              		.loc 1 160 0
- 240 0094 4FF47863 		mov	r3, #3968
- 241 0098 FB81     		strh	r3, [r7, #14]	@ movhi
- 161:main.c        ****             break;  
- 242              		.loc 1 161 0
- 243 009a 22E0     		b	.L25
- 244              	.L17:
- 162:main.c        ****         case 8:
- 163:main.c        ****             mask = 0xF00u;//b1111 0000 0000;
- 245              		.loc 1 163 0
- 246 009c 4FF47063 		mov	r3, #3840
- 247 00a0 FB81     		strh	r3, [r7, #14]	@ movhi
- 164:main.c        ****             break;  
- 248              		.loc 1 164 0
- 249 00a2 1EE0     		b	.L25
- 250              	.L18:
- 165:main.c        ****         case 9:
- 166:main.c        ****             mask = 0xE00u;//b1110 0000 0000;
- 251              		.loc 1 166 0
- 252 00a4 4FF46063 		mov	r3, #3584
- 253 00a8 FB81     		strh	r3, [r7, #14]	@ movhi
- 167:main.c        ****             break;  
- 254              		.loc 1 167 0
- 255 00aa 1AE0     		b	.L25
- 256              	.L19:
- 168:main.c        ****         case  10:
- 169:main.c        ****             mask = 0xD00u;//b1101 0000 0000;
- 257              		.loc 1 169 0
- 258 00ac 4FF45063 		mov	r3, #3328
- 259 00b0 FB81     		strh	r3, [r7, #14]	@ movhi
- 170:main.c        ****             break;  
- 260              		.loc 1 170 0
- 261 00b2 16E0     		b	.L25
- 262              	.L20:
- 171:main.c        ****         case 11:
- 172:main.c        ****             mask = 0xC00u;//b1100 0000 0000;
- 263              		.loc 1 172 0
- 264 00b4 4FF44063 		mov	r3, #3072
- 265 00b8 FB81     		strh	r3, [r7, #14]	@ movhi
- 173:main.c        ****             break;  
- 266              		.loc 1 173 0
- 267 00ba 12E0     		b	.L25
- 268              	.L21:
- 174:main.c        ****         case 12:
- 175:main.c        ****             mask = 0xB00u;//b1011 0000 0000;
- 269              		.loc 1 175 0
- 270 00bc 4FF43063 		mov	r3, #2816
- 271 00c0 FB81     		strh	r3, [r7, #14]	@ movhi
- 176:main.c        ****             break;  
- 272              		.loc 1 176 0
- 273 00c2 0EE0     		b	.L25
- 274              	.L22:
- 177:main.c        ****         case 13:
- 178:main.c        ****             mask = 0xA00u;//b1010 0000 0000;
- 275              		.loc 1 178 0
- 276 00c4 4FF42063 		mov	r3, #2560
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccz2eT1G.s 			page 9
+ 329 00a8 4FF6FC73 		movw	r3, #65532
+ 330 00ac FB81     		strh	r3, [r7, #14]	@ movhi
+ 127:main.c        ****             break; 
+ 331              		.loc 1 127 0
+ 332 00ae 4BE0     		b	.L34
+ 333              	.L14:
+ 128:main.c        ****         case 3:
+ 129:main.c        ****             mask = 0xFFF8u;//b1111 1111 1000;
+ 334              		.loc 1 129 0
+ 335 00b0 4FF6F873 		movw	r3, #65528
+ 336 00b4 FB81     		strh	r3, [r7, #14]	@ movhi
+ 130:main.c        ****             break;
+ 337              		.loc 1 130 0
+ 338 00b6 47E0     		b	.L34
+ 339              	.L15:
+ 131:main.c        ****         case 4:
+ 132:main.c        ****             mask = 0xFFF0u;//b1111 1111 0000;
+ 340              		.loc 1 132 0
+ 341 00b8 4FF6F073 		movw	r3, #65520
+ 342 00bc FB81     		strh	r3, [r7, #14]	@ movhi
+ 133:main.c        ****             break;  
+ 343              		.loc 1 133 0
+ 344 00be 43E0     		b	.L34
+ 345              	.L16:
+ 134:main.c        ****         case 5:
+ 135:main.c        ****             mask = 0xFFE0u;//b1111 1110 0000;
+ 346              		.loc 1 135 0
+ 347 00c0 4FF6E073 		movw	r3, #65504
+ 348 00c4 FB81     		strh	r3, [r7, #14]	@ movhi
+ 136:main.c        ****             break; 
+ 349              		.loc 1 136 0
+ 350 00c6 3FE0     		b	.L34
+ 351              	.L17:
+ 137:main.c        ****          case 6:
+ 138:main.c        ****             mask = 0b111111010000;
+ 352              		.loc 1 138 0
+ 353 00c8 4FF47D63 		mov	r3, #4048
+ 354 00cc FB81     		strh	r3, [r7, #14]	@ movhi
+ 139:main.c        ****             break; 
+ 355              		.loc 1 139 0
+ 356 00ce 3BE0     		b	.L34
+ 357              	.L18:
+ 140:main.c        ****         case 7:
+ 141:main.c        ****             mask = 0b111111000000;
+ 358              		.loc 1 141 0
+ 359 00d0 4FF47C63 		mov	r3, #4032
+ 360 00d4 FB81     		strh	r3, [r7, #14]	@ movhi
+ 142:main.c        ****             break;  
+ 361              		.loc 1 142 0
+ 362 00d6 37E0     		b	.L34
+ 363              	.L19:
+ 143:main.c        ****         case 8:
+ 144:main.c        ****             mask = 0b111110110000;
+ 364              		.loc 1 144 0
+ 365 00d8 4FF47B63 		mov	r3, #4016
+ 366 00dc FB81     		strh	r3, [r7, #14]	@ movhi
+ 145:main.c        ****             break;  
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPXmHMV.s 			page 10
 
 
- 277 00c8 FB81     		strh	r3, [r7, #14]	@ movhi
- 179:main.c        ****             break;  
- 278              		.loc 1 179 0
- 279 00ca 0AE0     		b	.L25
- 280              	.L23:
- 180:main.c        ****         case 14:
- 181:main.c        ****             mask = 0x900u;//b1001 0000 0000;
- 281              		.loc 1 181 0
- 282 00cc 4FF41063 		mov	r3, #2304
- 283 00d0 FB81     		strh	r3, [r7, #14]	@ movhi
- 182:main.c        ****             break;  
- 284              		.loc 1 182 0
- 285 00d2 06E0     		b	.L25
- 286              	.L24:
- 183:main.c        ****         case 15:
- 184:main.c        ****             mask = 0x800u;//b1000 0000 0000;
- 287              		.loc 1 184 0
- 288 00d4 4FF40063 		mov	r3, #2048
- 289 00d8 FB81     		strh	r3, [r7, #14]	@ movhi
- 185:main.c        ****             break;  
- 290              		.loc 1 185 0
- 291 00da 02E0     		b	.L25
- 292              	.L7:
- 186:main.c        ****         default:
- 187:main.c        ****             mask= 0xFFFu;
- 293              		.loc 1 187 0
- 294 00dc 40F6FF73 		movw	r3, #4095
- 295 00e0 FB81     		strh	r3, [r7, #14]	@ movhi
- 296              	.L25:
- 188:main.c        ****             
- 189:main.c        ****         }
- 190:main.c        ****          EFFECT_ADC =  Filterout & mask;
- 297              		.loc 1 190 0
- 298 00e2 FA88     		ldrh	r2, [r7, #6]	@ movhi
- 299 00e4 FB89     		ldrh	r3, [r7, #14]	@ movhi
- 300 00e6 1340     		ands	r3, r3, r2
- 301 00e8 9AB2     		uxth	r2, r3
- 302 00ea 054B     		ldr	r3, .L27
- 303 00ec 1A80     		strh	r2, [r3]	@ movhi
- 191:main.c        ****     return EFFECT_ADC;
- 304              		.loc 1 191 0
- 305 00ee 044B     		ldr	r3, .L27
- 306 00f0 1B88     		ldrh	r3, [r3]
- 307 00f2 DBB2     		uxtb	r3, r3
- 192:main.c        **** }
- 308              		.loc 1 192 0
- 309 00f4 1846     		mov	r0, r3
- 310 00f6 1437     		adds	r7, r7, #20
- 311              		.cfi_def_cfa_offset 4
- 312 00f8 BD46     		mov	sp, r7
- 313              		.cfi_def_cfa_register 13
- 314              		@ sp needed
- 315 00fa 5DF8047B 		ldr	r7, [sp], #4
- 316              		.cfi_restore 7
- 317              		.cfi_def_cfa_offset 0
- 318 00fe 7047     		bx	lr
- 319              	.L28:
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccz2eT1G.s 			page 10
+ 367              		.loc 1 145 0
+ 368 00de 33E0     		b	.L34
+ 369              	.L20:
+ 146:main.c        ****         case 9:
+ 147:main.c        ****             mask = 0b111110100000;
+ 370              		.loc 1 147 0
+ 371 00e0 4FF47A63 		mov	r3, #4000
+ 372 00e4 FB81     		strh	r3, [r7, #14]	@ movhi
+ 148:main.c        ****             break;  
+ 373              		.loc 1 148 0
+ 374 00e6 2FE0     		b	.L34
+ 375              	.L21:
+ 149:main.c        ****         case 10:
+ 150:main.c        ****             mask = 0b111110010000;
+ 376              		.loc 1 150 0
+ 377 00e8 4FF47963 		mov	r3, #3984
+ 378 00ec FB81     		strh	r3, [r7, #14]	@ movhi
+ 151:main.c        ****             break;  
+ 379              		.loc 1 151 0
+ 380 00ee 2BE0     		b	.L34
+ 381              	.L22:
+ 152:main.c        ****         case 11:
+ 153:main.c        ****             mask = 0b111110000000;
+ 382              		.loc 1 153 0
+ 383 00f0 4FF47863 		mov	r3, #3968
+ 384 00f4 FB81     		strh	r3, [r7, #14]	@ movhi
+ 154:main.c        ****             break;  
+ 385              		.loc 1 154 0
+ 386 00f6 27E0     		b	.L34
+ 387              	.L23:
+ 155:main.c        ****         case 12:
+ 156:main.c        ****             mask = 0b111101110000;
+ 388              		.loc 1 156 0
+ 389 00f8 4FF47763 		mov	r3, #3952
+ 390 00fc FB81     		strh	r3, [r7, #14]	@ movhi
+ 157:main.c        ****             break;  
+ 391              		.loc 1 157 0
+ 392 00fe 23E0     		b	.L34
+ 393              	.L24:
+ 158:main.c        ****         case 13:
+ 159:main.c        ****             mask = 0b111101100000;
+ 394              		.loc 1 159 0
+ 395 0100 4FF47663 		mov	r3, #3936
+ 396 0104 FB81     		strh	r3, [r7, #14]	@ movhi
+ 160:main.c        ****             break;  
+ 397              		.loc 1 160 0
+ 398 0106 1FE0     		b	.L34
+ 399              	.L25:
+ 161:main.c        ****         case 14:
+ 162:main.c        ****             mask = 0b111101000000;
+ 400              		.loc 1 162 0
+ 401 0108 4FF47463 		mov	r3, #3904
+ 402 010c FB81     		strh	r3, [r7, #14]	@ movhi
+ 163:main.c        ****             break;  
+ 403              		.loc 1 163 0
+ 404 010e 1BE0     		b	.L34
+ 405              	.L26:
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPXmHMV.s 			page 11
 
 
- 320              		.align	2
- 321              	.L27:
- 322 0100 00000000 		.word	EFFECT_ADC
- 323              		.cfi_endproc
- 324              	.LFE64:
- 325              		.size	Effect, .-Effect
- 326              		.text
- 327              	.Letext0:
- 328              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.0\\psoc creator\\import\\gnu\\arm\\4.9.
- 329              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.0\\psoc creator\\import\\gnu\\arm\\4.9.
- 330              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
- 331              		.file 5 "Generated_Source\\PSoC5/core_cm3.h"
- 332              		.section	.debug_info,"",%progbits
- 333              	.Ldebug_info0:
- 334 0000 94010000 		.4byte	0x194
- 335 0004 0400     		.2byte	0x4
- 336 0006 00000000 		.4byte	.Ldebug_abbrev0
- 337 000a 04       		.byte	0x4
- 338 000b 01       		.uleb128 0x1
- 339 000c 0F000000 		.4byte	.LASF27
- 340 0010 01       		.byte	0x1
- 341 0011 AD010000 		.4byte	.LASF28
- 342 0015 65010000 		.4byte	.LASF29
- 343 0019 00000000 		.4byte	.Ldebug_ranges0+0
- 344 001d 00000000 		.4byte	0
- 345 0021 00000000 		.4byte	.Ldebug_line0
- 346 0025 02       		.uleb128 0x2
- 347 0026 01       		.byte	0x1
- 348 0027 06       		.byte	0x6
- 349 0028 F2010000 		.4byte	.LASF0
- 350 002c 02       		.uleb128 0x2
- 351 002d 01       		.byte	0x1
- 352 002e 08       		.byte	0x8
- 353 002f BB000000 		.4byte	.LASF1
- 354 0033 02       		.uleb128 0x2
- 355 0034 02       		.byte	0x2
- 356 0035 05       		.byte	0x5
- 357 0036 02010000 		.4byte	.LASF2
- 358 003a 02       		.uleb128 0x2
- 359 003b 02       		.byte	0x2
- 360 003c 07       		.byte	0x7
- 361 003d DB000000 		.4byte	.LASF3
- 362 0041 03       		.uleb128 0x3
- 363 0042 00000000 		.4byte	.LASF9
- 364 0046 02       		.byte	0x2
- 365 0047 3F       		.byte	0x3f
- 366 0048 4C000000 		.4byte	0x4c
- 367 004c 02       		.uleb128 0x2
- 368 004d 04       		.byte	0x4
- 369 004e 05       		.byte	0x5
- 370 004f D5010000 		.4byte	.LASF4
- 371 0053 02       		.uleb128 0x2
- 372 0054 04       		.byte	0x4
- 373 0055 07       		.byte	0x7
- 374 0056 C9000000 		.4byte	.LASF5
- 375 005a 02       		.uleb128 0x2
- 376 005b 08       		.byte	0x8
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccz2eT1G.s 			page 11
+ 164:main.c        ****         case 15:
+ 165:main.c        ****             mask = 0b111100000000;
+ 406              		.loc 1 165 0
+ 407 0110 4FF47063 		mov	r3, #3840
+ 408 0114 FB81     		strh	r3, [r7, #14]	@ movhi
+ 409              	.L27:
+ 166:main.c        ****         case 16:
+ 167:main.c        ****             mask = 0b111100000000;
+ 410              		.loc 1 167 0
+ 411 0116 4FF47063 		mov	r3, #3840
+ 412 011a FB81     		strh	r3, [r7, #14]	@ movhi
+ 413              	.L28:
+ 168:main.c        ****         case 17:
+ 169:main.c        ****             mask = 0b111000000000;
+ 414              		.loc 1 169 0
+ 415 011c 4FF46063 		mov	r3, #3584
+ 416 0120 FB81     		strh	r3, [r7, #14]	@ movhi
+ 417              	.L29:
+ 170:main.c        ****         case 27:
+ 171:main.c        ****             mask = 0b110100000000;
+ 418              		.loc 1 171 0
+ 419 0122 4FF45063 		mov	r3, #3328
+ 420 0126 FB81     		strh	r3, [r7, #14]	@ movhi
+ 421              	.L30:
+ 172:main.c        ****         case 28:
+ 173:main.c        ****             mask = 0b110000000000;
+ 422              		.loc 1 173 0
+ 423 0128 4FF44063 		mov	r3, #3072
+ 424 012c FB81     		strh	r3, [r7, #14]	@ movhi
+ 425              	.L31:
+ 174:main.c        ****         case 29:
+ 175:main.c        ****             mask = 0b101100000000;
+ 426              		.loc 1 175 0
+ 427 012e 4FF43063 		mov	r3, #2816
+ 428 0132 FB81     		strh	r3, [r7, #14]	@ movhi
+ 429              	.L32:
+ 176:main.c        ****         case 30:
+ 177:main.c        ****             mask = 0b101000000000;
+ 430              		.loc 1 177 0
+ 431 0134 4FF42063 		mov	r3, #2560
+ 432 0138 FB81     		strh	r3, [r7, #14]	@ movhi
+ 433              	.L33:
+ 178:main.c        ****         case 31:
+ 179:main.c        ****             mask = 0b100000000000;
+ 434              		.loc 1 179 0
+ 435 013a 4FF40063 		mov	r3, #2048
+ 436 013e FB81     		strh	r3, [r7, #14]	@ movhi
+ 180:main.c        ****             break;  
+ 437              		.loc 1 180 0
+ 438 0140 02E0     		b	.L34
+ 439              	.L9:
+ 181:main.c        ****         default:
+ 182:main.c        ****             mask= 0xFFFFu;
+ 440              		.loc 1 182 0
+ 441 0142 4FF6FF73 		movw	r3, #65535
+ 442 0146 FB81     		strh	r3, [r7, #14]	@ movhi
+ 443              	.L34:
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPXmHMV.s 			page 12
 
 
- 377 005c 05       		.byte	0x5
- 378 005d 9F010000 		.4byte	.LASF6
- 379 0061 02       		.uleb128 0x2
- 380 0062 08       		.byte	0x8
- 381 0063 07       		.byte	0x7
- 382 0064 2C010000 		.4byte	.LASF7
- 383 0068 04       		.uleb128 0x4
- 384 0069 04       		.byte	0x4
- 385 006a 05       		.byte	0x5
- 386 006b 696E7400 		.ascii	"int\000"
- 387 006f 02       		.uleb128 0x2
- 388 0070 04       		.byte	0x4
- 389 0071 07       		.byte	0x7
- 390 0072 18010000 		.4byte	.LASF8
- 391 0076 03       		.uleb128 0x3
- 392 0077 54010000 		.4byte	.LASF10
- 393 007b 03       		.byte	0x3
- 394 007c 2C       		.byte	0x2c
- 395 007d 41000000 		.4byte	0x41
- 396 0081 05       		.uleb128 0x5
- 397 0082 CF010000 		.4byte	.LASF11
- 398 0086 04       		.byte	0x4
- 399 0087 9201     		.2byte	0x192
- 400 0089 2C000000 		.4byte	0x2c
- 401 008d 05       		.uleb128 0x5
- 402 008e 0C010000 		.4byte	.LASF12
- 403 0092 04       		.byte	0x4
- 404 0093 9301     		.2byte	0x193
- 405 0095 3A000000 		.4byte	0x3a
- 406 0099 02       		.uleb128 0x2
- 407 009a 04       		.byte	0x4
- 408 009b 04       		.byte	0x4
- 409 009c B5000000 		.4byte	.LASF13
- 410 00a0 02       		.uleb128 0x2
- 411 00a1 08       		.byte	0x8
- 412 00a2 04       		.byte	0x4
- 413 00a3 FB000000 		.4byte	.LASF14
- 414 00a7 02       		.uleb128 0x2
- 415 00a8 01       		.byte	0x1
- 416 00a9 08       		.byte	0x8
- 417 00aa DE010000 		.4byte	.LASF15
- 418 00ae 06       		.uleb128 0x6
- 419 00af 81000000 		.4byte	0x81
- 420 00b3 02       		.uleb128 0x2
- 421 00b4 04       		.byte	0x4
- 422 00b5 07       		.byte	0x7
- 423 00b6 5C010000 		.4byte	.LASF16
- 424 00ba 07       		.uleb128 0x7
- 425 00bb 13010000 		.4byte	.LASF30
- 426 00bf 01       		.byte	0x1
- 427 00c0 35       		.byte	0x35
- 428 00c1 68000000 		.4byte	0x68
- 429 00c5 00000000 		.4byte	.LFB63
- 430 00c9 A0000000 		.4byte	.LFE63-.LFB63
- 431 00cd 01       		.uleb128 0x1
- 432 00ce 9C       		.byte	0x9c
- 433 00cf FE000000 		.4byte	0xfe
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccz2eT1G.s 			page 12
+ 183:main.c        ****         }
+ 184:main.c        ****     return mask | 0xF000u;
+ 444              		.loc 1 184 0
+ 445 0148 FB89     		ldrh	r3, [r7, #14]	@ movhi
+ 446 014a 6FEA0353 		mvn	r3, r3, lsl #20
+ 447 014e 6FEA1353 		mvn	r3, r3, lsr #20
+ 448 0152 9BB2     		uxth	r3, r3
+ 185:main.c        **** }
+ 449              		.loc 1 185 0
+ 450 0154 1846     		mov	r0, r3
+ 451 0156 1437     		adds	r7, r7, #20
+ 452              		.cfi_def_cfa_offset 4
+ 453 0158 BD46     		mov	sp, r7
+ 454              		.cfi_def_cfa_register 13
+ 455              		@ sp needed
+ 456 015a 5DF8047B 		ldr	r7, [sp], #4
+ 457              		.cfi_restore 7
+ 458              		.cfi_def_cfa_offset 0
+ 459 015e 7047     		bx	lr
+ 460              		.cfi_endproc
+ 461              	.LFE64:
+ 462              		.size	Effect, .-Effect
+ 463              		.section	.text.PWM_Start,"ax",%progbits
+ 464              		.align	2
+ 465              		.global	PWM_Start
+ 466              		.thumb
+ 467              		.thumb_func
+ 468              		.type	PWM_Start, %function
+ 469              	PWM_Start:
+ 470              	.LFB65:
+ 186:main.c        **** void PWM_Start(void)
+ 187:main.c        **** {
+ 471              		.loc 1 187 0
+ 472              		.cfi_startproc
+ 473              		@ args = 0, pretend = 0, frame = 0
+ 474              		@ frame_needed = 1, uses_anonymous_args = 0
+ 475 0000 80B5     		push	{r7, lr}
+ 476              		.cfi_def_cfa_offset 8
+ 477              		.cfi_offset 7, -8
+ 478              		.cfi_offset 14, -4
+ 479 0002 00AF     		add	r7, sp, #0
+ 480              		.cfi_def_cfa_register 7
+ 188:main.c        ****     
+ 189:main.c        **** //  PWM_1_Enable();
+ 190:main.c        **** //  PWM_2_Enable();
+ 191:main.c        **** //  PWM_3_Enable();
+ 192:main.c        ****     PWM_4_Enable();
+ 481              		.loc 1 192 0
+ 482 0004 FFF7FEFF 		bl	PWM_4_Enable
+ 193:main.c        ****     PWM_5_Enable();
+ 483              		.loc 1 193 0
+ 484 0008 FFF7FEFF 		bl	PWM_5_Enable
+ 194:main.c        ****     PWM_6_Enable();
+ 485              		.loc 1 194 0
+ 486 000c FFF7FEFF 		bl	PWM_6_Enable
+ 195:main.c        ****     PWM_7_Enable();
+ 487              		.loc 1 195 0
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPXmHMV.s 			page 13
 
 
- 434 00d3 08       		.uleb128 0x8
- 435 00d4 25010000 		.4byte	.LASF17
- 436 00d8 01       		.byte	0x1
- 437 00d9 43       		.byte	0x43
- 438 00da 8D000000 		.4byte	0x8d
- 439 00de 02       		.uleb128 0x2
- 440 00df 91       		.byte	0x91
- 441 00e0 76       		.sleb128 -10
- 442 00e1 08       		.uleb128 0x8
- 443 00e2 E3010000 		.4byte	.LASF18
- 444 00e6 01       		.byte	0x1
- 445 00e7 44       		.byte	0x44
- 446 00e8 8D000000 		.4byte	0x8d
- 447 00ec 02       		.uleb128 0x2
- 448 00ed 91       		.byte	0x91
- 449 00ee 74       		.sleb128 -12
- 450 00ef 08       		.uleb128 0x8
- 451 00f0 9D000000 		.4byte	.LASF19
- 452 00f4 01       		.byte	0x1
- 453 00f5 45       		.byte	0x45
- 454 00f6 8D000000 		.4byte	0x8d
- 455 00fa 02       		.uleb128 0x2
- 456 00fb 91       		.byte	0x91
- 457 00fc 72       		.sleb128 -14
- 458 00fd 00       		.byte	0
- 459 00fe 09       		.uleb128 0x9
- 460 00ff 4D010000 		.4byte	.LASF31
- 461 0103 01       		.byte	0x1
- 462 0104 85       		.byte	0x85
- 463 0105 81000000 		.4byte	0x81
- 464 0109 00000000 		.4byte	.LFB64
- 465 010d 04010000 		.4byte	.LFE64-.LFB64
- 466 0111 01       		.uleb128 0x1
- 467 0112 9C       		.byte	0x9c
- 468 0113 42010000 		.4byte	0x142
- 469 0117 0A       		.uleb128 0xa
- 470 0118 AB000000 		.4byte	.LASF20
- 471 011c 01       		.byte	0x1
- 472 011d 85       		.byte	0x85
- 473 011e 8D000000 		.4byte	0x8d
- 474 0122 02       		.uleb128 0x2
- 475 0123 91       		.byte	0x91
- 476 0124 6E       		.sleb128 -18
- 477 0125 0A       		.uleb128 0xa
- 478 0126 EC010000 		.4byte	.LASF21
- 479 012a 01       		.byte	0x1
- 480 012b 85       		.byte	0x85
- 481 012c 8D000000 		.4byte	0x8d
- 482 0130 02       		.uleb128 0x2
- 483 0131 91       		.byte	0x91
- 484 0132 6C       		.sleb128 -20
- 485 0133 08       		.uleb128 0x8
- 486 0134 0A000000 		.4byte	.LASF22
- 487 0138 01       		.byte	0x1
- 488 0139 87       		.byte	0x87
- 489 013a 8D000000 		.4byte	0x8d
- 490 013e 02       		.uleb128 0x2
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccz2eT1G.s 			page 13
+ 488 0010 FFF7FEFF 		bl	PWM_7_Enable
+ 196:main.c        ****     PWM_8_Enable();
+ 489              		.loc 1 196 0
+ 490 0014 FFF7FEFF 		bl	PWM_8_Enable
+ 197:main.c        ****     PWM_9_Enable();
+ 491              		.loc 1 197 0
+ 492 0018 FFF7FEFF 		bl	PWM_9_Enable
+ 198:main.c        ****     PWM_10_Enable();
+ 493              		.loc 1 198 0
+ 494 001c FFF7FEFF 		bl	PWM_10_Enable
+ 199:main.c        ****     PWM_11_Enable();
+ 495              		.loc 1 199 0
+ 496 0020 FFF7FEFF 		bl	PWM_11_Enable
+ 200:main.c        ****     
+ 201:main.c        **** //  PWM_1_Start();
+ 202:main.c        **** //  PWM_2_Start();
+ 203:main.c        **** //  PWM_3_Start();
+ 204:main.c        ****     PWM_4_Start();
+ 497              		.loc 1 204 0
+ 498 0024 FFF7FEFF 		bl	PWM_4_Start
+ 205:main.c        ****     PWM_5_Start();
+ 499              		.loc 1 205 0
+ 500 0028 FFF7FEFF 		bl	PWM_5_Start
+ 206:main.c        ****     PWM_6_Start();
+ 501              		.loc 1 206 0
+ 502 002c FFF7FEFF 		bl	PWM_6_Start
+ 207:main.c        ****     PWM_7_Start();
+ 503              		.loc 1 207 0
+ 504 0030 FFF7FEFF 		bl	PWM_7_Start
+ 208:main.c        ****     PWM_8_Start();
+ 505              		.loc 1 208 0
+ 506 0034 FFF7FEFF 		bl	PWM_8_Start
+ 209:main.c        ****     PWM_9_Start();
+ 507              		.loc 1 209 0
+ 508 0038 FFF7FEFF 		bl	PWM_9_Start
+ 210:main.c        ****     PWM_10_Start();
+ 509              		.loc 1 210 0
+ 510 003c FFF7FEFF 		bl	PWM_10_Start
+ 211:main.c        ****     PWM_11_Start();
+ 511              		.loc 1 211 0
+ 512 0040 FFF7FEFF 		bl	PWM_11_Start
+ 212:main.c        ****     return;
+ 513              		.loc 1 212 0
+ 514 0044 00BF     		nop
+ 213:main.c        **** }
+ 515              		.loc 1 213 0
+ 516 0046 80BD     		pop	{r7, pc}
+ 517              		.cfi_endproc
+ 518              	.LFE65:
+ 519              		.size	PWM_Start, .-PWM_Start
+ 520              		.section	.text.PWM_Set,"ax",%progbits
+ 521              		.align	2
+ 522              		.global	PWM_Set
+ 523              		.thumb
+ 524              		.thumb_func
+ 525              		.type	PWM_Set, %function
+ 526              	PWM_Set:
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPXmHMV.s 			page 14
 
 
- 491 013f 91       		.byte	0x91
- 492 0140 76       		.sleb128 -10
- 493 0141 00       		.byte	0
- 494 0142 0B       		.uleb128 0xb
- 495 0143 EE000000 		.4byte	.LASF23
- 496 0147 05       		.byte	0x5
- 497 0148 9606     		.2byte	0x696
- 498 014a 4E010000 		.4byte	0x14e
- 499 014e 06       		.uleb128 0x6
- 500 014f 76000000 		.4byte	0x76
- 501 0153 0C       		.uleb128 0xc
- 502 0154 B4010000 		.4byte	.LASF24
- 503 0158 01       		.byte	0x1
- 504 0159 1B       		.byte	0x1b
- 505 015a 8D000000 		.4byte	0x8d
- 506 015e 05       		.uleb128 0x5
- 507 015f 03       		.byte	0x3
- 508 0160 00000000 		.4byte	EFFECT_ADC
- 509 0164 0C       		.uleb128 0xc
- 510 0165 BF010000 		.4byte	.LASF25
- 511 0169 01       		.byte	0x1
- 512 016a 1C       		.byte	0x1c
- 513 016b 8D000000 		.4byte	0x8d
- 514 016f 05       		.uleb128 0x5
- 515 0170 03       		.byte	0x3
- 516 0171 00000000 		.4byte	POT_READ_SCALED
- 517 0175 0D       		.uleb128 0xd
- 518 0176 76616C00 		.ascii	"val\000"
- 519 017a 01       		.byte	0x1
- 520 017b 1E       		.byte	0x1e
- 521 017c 81000000 		.4byte	0x81
- 522 0180 05       		.uleb128 0x5
- 523 0181 03       		.byte	0x3
- 524 0182 00000000 		.4byte	val
- 525 0186 0C       		.uleb128 0xc
- 526 0187 43010000 		.4byte	.LASF26
- 527 018b 01       		.byte	0x1
- 528 018c 20       		.byte	0x20
- 529 018d AE000000 		.4byte	0xae
- 530 0191 05       		.uleb128 0x5
- 531 0192 03       		.byte	0x3
- 532 0193 00000000 		.4byte	dataready
- 533 0197 00       		.byte	0
- 534              		.section	.debug_abbrev,"",%progbits
- 535              	.Ldebug_abbrev0:
- 536 0000 01       		.uleb128 0x1
- 537 0001 11       		.uleb128 0x11
- 538 0002 01       		.byte	0x1
- 539 0003 25       		.uleb128 0x25
- 540 0004 0E       		.uleb128 0xe
- 541 0005 13       		.uleb128 0x13
- 542 0006 0B       		.uleb128 0xb
- 543 0007 03       		.uleb128 0x3
- 544 0008 0E       		.uleb128 0xe
- 545 0009 1B       		.uleb128 0x1b
- 546 000a 0E       		.uleb128 0xe
- 547 000b 55       		.uleb128 0x55
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccz2eT1G.s 			page 14
+ 527              	.LFB66:
+ 214:main.c        **** void PWM_Set(uint8 PWMin){
+ 528              		.loc 1 214 0
+ 529              		.cfi_startproc
+ 530              		@ args = 0, pretend = 0, frame = 16
+ 531              		@ frame_needed = 1, uses_anonymous_args = 0
+ 532 0000 80B5     		push	{r7, lr}
+ 533              		.cfi_def_cfa_offset 8
+ 534              		.cfi_offset 7, -8
+ 535              		.cfi_offset 14, -4
+ 536 0002 84B0     		sub	sp, sp, #16
+ 537              		.cfi_def_cfa_offset 24
+ 538 0004 00AF     		add	r7, sp, #0
+ 539              		.cfi_def_cfa_register 7
+ 540 0006 0346     		mov	r3, r0
+ 541 0008 FB71     		strb	r3, [r7, #7]
+ 215:main.c        ****    uint8 PWMdiv = PWMin>>1;
+ 542              		.loc 1 215 0
+ 543 000a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 544 000c 5B08     		lsrs	r3, r3, #1
+ 545 000e FB73     		strb	r3, [r7, #15]
+ 216:main.c        **** //  division
+ 217:main.c        ****     PWM_4_WritePeriod(PWMin);
+ 546              		.loc 1 217 0
+ 547 0010 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 548 0012 1846     		mov	r0, r3
+ 549 0014 FFF7FEFF 		bl	PWM_4_WritePeriod
+ 218:main.c        ****     PWM_5_WritePeriod(PWMin);
+ 550              		.loc 1 218 0
+ 551 0018 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 552 001a 1846     		mov	r0, r3
+ 553 001c FFF7FEFF 		bl	PWM_5_WritePeriod
+ 219:main.c        ****     PWM_6_WritePeriod(PWMin);
+ 554              		.loc 1 219 0
+ 555 0020 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 556 0022 1846     		mov	r0, r3
+ 557 0024 FFF7FEFF 		bl	PWM_6_WritePeriod
+ 220:main.c        ****     PWM_7_WritePeriod(PWMin);
+ 558              		.loc 1 220 0
+ 559 0028 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 560 002a 1846     		mov	r0, r3
+ 561 002c FFF7FEFF 		bl	PWM_7_WritePeriod
+ 221:main.c        ****     PWM_8_WritePeriod(PWMin);
+ 562              		.loc 1 221 0
+ 563 0030 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 564 0032 1846     		mov	r0, r3
+ 565 0034 FFF7FEFF 		bl	PWM_8_WritePeriod
+ 222:main.c        ****     PWM_9_WritePeriod(PWMin);
+ 566              		.loc 1 222 0
+ 567 0038 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 568 003a 1846     		mov	r0, r3
+ 569 003c FFF7FEFF 		bl	PWM_9_WritePeriod
+ 223:main.c        ****     PWM_10_WritePeriod(PWMin);
+ 570              		.loc 1 223 0
+ 571 0040 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 572 0042 1846     		mov	r0, r3
+ 573 0044 FFF7FEFF 		bl	PWM_10_WritePeriod
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPXmHMV.s 			page 15
 
 
- 548 000c 17       		.uleb128 0x17
- 549 000d 11       		.uleb128 0x11
- 550 000e 01       		.uleb128 0x1
- 551 000f 10       		.uleb128 0x10
- 552 0010 17       		.uleb128 0x17
- 553 0011 00       		.byte	0
- 554 0012 00       		.byte	0
- 555 0013 02       		.uleb128 0x2
- 556 0014 24       		.uleb128 0x24
- 557 0015 00       		.byte	0
- 558 0016 0B       		.uleb128 0xb
- 559 0017 0B       		.uleb128 0xb
- 560 0018 3E       		.uleb128 0x3e
- 561 0019 0B       		.uleb128 0xb
- 562 001a 03       		.uleb128 0x3
- 563 001b 0E       		.uleb128 0xe
- 564 001c 00       		.byte	0
- 565 001d 00       		.byte	0
- 566 001e 03       		.uleb128 0x3
- 567 001f 16       		.uleb128 0x16
- 568 0020 00       		.byte	0
- 569 0021 03       		.uleb128 0x3
- 570 0022 0E       		.uleb128 0xe
- 571 0023 3A       		.uleb128 0x3a
- 572 0024 0B       		.uleb128 0xb
- 573 0025 3B       		.uleb128 0x3b
- 574 0026 0B       		.uleb128 0xb
- 575 0027 49       		.uleb128 0x49
- 576 0028 13       		.uleb128 0x13
- 577 0029 00       		.byte	0
- 578 002a 00       		.byte	0
- 579 002b 04       		.uleb128 0x4
- 580 002c 24       		.uleb128 0x24
- 581 002d 00       		.byte	0
- 582 002e 0B       		.uleb128 0xb
- 583 002f 0B       		.uleb128 0xb
- 584 0030 3E       		.uleb128 0x3e
- 585 0031 0B       		.uleb128 0xb
- 586 0032 03       		.uleb128 0x3
- 587 0033 08       		.uleb128 0x8
- 588 0034 00       		.byte	0
- 589 0035 00       		.byte	0
- 590 0036 05       		.uleb128 0x5
- 591 0037 16       		.uleb128 0x16
- 592 0038 00       		.byte	0
- 593 0039 03       		.uleb128 0x3
- 594 003a 0E       		.uleb128 0xe
- 595 003b 3A       		.uleb128 0x3a
- 596 003c 0B       		.uleb128 0xb
- 597 003d 3B       		.uleb128 0x3b
- 598 003e 05       		.uleb128 0x5
- 599 003f 49       		.uleb128 0x49
- 600 0040 13       		.uleb128 0x13
- 601 0041 00       		.byte	0
- 602 0042 00       		.byte	0
- 603 0043 06       		.uleb128 0x6
- 604 0044 35       		.uleb128 0x35
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccz2eT1G.s 			page 15
+ 224:main.c        ****     PWM_11_WritePeriod(PWMin);
+ 574              		.loc 1 224 0
+ 575 0048 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 576 004a 1846     		mov	r0, r3
+ 577 004c FFF7FEFF 		bl	PWM_11_WritePeriod
+ 225:main.c        **** //  compare    
+ 226:main.c        ****     PWM_4_WriteCompare(PWMdiv);
+ 578              		.loc 1 226 0
+ 579 0050 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 580 0052 1846     		mov	r0, r3
+ 581 0054 FFF7FEFF 		bl	PWM_4_WriteCompare
+ 227:main.c        ****     PWM_5_WriteCompare(PWMdiv);
+ 582              		.loc 1 227 0
+ 583 0058 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 584 005a 1846     		mov	r0, r3
+ 585 005c FFF7FEFF 		bl	PWM_5_WriteCompare
+ 228:main.c        ****     PWM_6_WriteCompare(PWMdiv);
+ 586              		.loc 1 228 0
+ 587 0060 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 588 0062 1846     		mov	r0, r3
+ 589 0064 FFF7FEFF 		bl	PWM_6_WriteCompare
+ 229:main.c        ****     PWM_7_WriteCompare(PWMdiv);
+ 590              		.loc 1 229 0
+ 591 0068 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 592 006a 1846     		mov	r0, r3
+ 593 006c FFF7FEFF 		bl	PWM_7_WriteCompare
+ 230:main.c        ****     PWM_8_WriteCompare(PWMdiv);
+ 594              		.loc 1 230 0
+ 595 0070 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 596 0072 1846     		mov	r0, r3
+ 597 0074 FFF7FEFF 		bl	PWM_8_WriteCompare
+ 231:main.c        ****     PWM_9_WriteCompare(PWMdiv);
+ 598              		.loc 1 231 0
+ 599 0078 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 600 007a 1846     		mov	r0, r3
+ 601 007c FFF7FEFF 		bl	PWM_9_WriteCompare
+ 232:main.c        ****     PWM_10_WriteCompare(PWMdiv);
+ 602              		.loc 1 232 0
+ 603 0080 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 604 0082 1846     		mov	r0, r3
+ 605 0084 FFF7FEFF 		bl	PWM_10_WriteCompare
+ 233:main.c        ****     PWM_11_WriteCompare(PWMdiv);
+ 606              		.loc 1 233 0
+ 607 0088 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 608 008a 1846     		mov	r0, r3
+ 609 008c FFF7FEFF 		bl	PWM_11_WriteCompare
+ 234:main.c        ****     return;
+ 610              		.loc 1 234 0
+ 611 0090 00BF     		nop
+ 235:main.c        **** }
+ 612              		.loc 1 235 0
+ 613 0092 1037     		adds	r7, r7, #16
+ 614              		.cfi_def_cfa_offset 8
+ 615 0094 BD46     		mov	sp, r7
+ 616              		.cfi_def_cfa_register 13
+ 617              		@ sp needed
+ 618 0096 80BD     		pop	{r7, pc}
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPXmHMV.s 			page 16
 
 
- 605 0045 00       		.byte	0
- 606 0046 49       		.uleb128 0x49
- 607 0047 13       		.uleb128 0x13
- 608 0048 00       		.byte	0
- 609 0049 00       		.byte	0
- 610 004a 07       		.uleb128 0x7
- 611 004b 2E       		.uleb128 0x2e
- 612 004c 01       		.byte	0x1
- 613 004d 3F       		.uleb128 0x3f
- 614 004e 19       		.uleb128 0x19
- 615 004f 03       		.uleb128 0x3
- 616 0050 0E       		.uleb128 0xe
- 617 0051 3A       		.uleb128 0x3a
- 618 0052 0B       		.uleb128 0xb
- 619 0053 3B       		.uleb128 0x3b
- 620 0054 0B       		.uleb128 0xb
- 621 0055 49       		.uleb128 0x49
- 622 0056 13       		.uleb128 0x13
- 623 0057 11       		.uleb128 0x11
- 624 0058 01       		.uleb128 0x1
- 625 0059 12       		.uleb128 0x12
- 626 005a 06       		.uleb128 0x6
- 627 005b 40       		.uleb128 0x40
- 628 005c 18       		.uleb128 0x18
- 629 005d 9642     		.uleb128 0x2116
- 630 005f 19       		.uleb128 0x19
- 631 0060 01       		.uleb128 0x1
- 632 0061 13       		.uleb128 0x13
- 633 0062 00       		.byte	0
- 634 0063 00       		.byte	0
- 635 0064 08       		.uleb128 0x8
- 636 0065 34       		.uleb128 0x34
- 637 0066 00       		.byte	0
- 638 0067 03       		.uleb128 0x3
- 639 0068 0E       		.uleb128 0xe
- 640 0069 3A       		.uleb128 0x3a
- 641 006a 0B       		.uleb128 0xb
- 642 006b 3B       		.uleb128 0x3b
- 643 006c 0B       		.uleb128 0xb
- 644 006d 49       		.uleb128 0x49
- 645 006e 13       		.uleb128 0x13
- 646 006f 02       		.uleb128 0x2
- 647 0070 18       		.uleb128 0x18
- 648 0071 00       		.byte	0
- 649 0072 00       		.byte	0
- 650 0073 09       		.uleb128 0x9
- 651 0074 2E       		.uleb128 0x2e
- 652 0075 01       		.byte	0x1
- 653 0076 3F       		.uleb128 0x3f
- 654 0077 19       		.uleb128 0x19
- 655 0078 03       		.uleb128 0x3
- 656 0079 0E       		.uleb128 0xe
- 657 007a 3A       		.uleb128 0x3a
- 658 007b 0B       		.uleb128 0xb
- 659 007c 3B       		.uleb128 0x3b
- 660 007d 0B       		.uleb128 0xb
- 661 007e 27       		.uleb128 0x27
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccz2eT1G.s 			page 16
+ 619              		.cfi_endproc
+ 620              	.LFE66:
+ 621              		.size	PWM_Set, .-PWM_Set
+ 622              		.text
+ 623              	.Letext0:
+ 624              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.0\\psoc creator\\import\\gnu\\arm\\4.9.
+ 625              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.0\\psoc creator\\import\\gnu\\arm\\4.9.
+ 626              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 627              		.file 5 "Generated_Source\\PSoC5/core_cm3.h"
+ 628              		.section	.debug_info,"",%progbits
+ 629              	.Ldebug_info0:
+ 630 0000 7C020000 		.4byte	0x27c
+ 631 0004 0400     		.2byte	0x4
+ 632 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 633 000a 04       		.byte	0x4
+ 634 000b 01       		.uleb128 0x1
+ 635 000c 50000000 		.4byte	.LASF40
+ 636 0010 01       		.byte	0x1
+ 637 0011 4C020000 		.4byte	.LASF41
+ 638 0015 0A010000 		.4byte	.LASF42
+ 639 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 640 001d 00000000 		.4byte	0
+ 641 0021 00000000 		.4byte	.Ldebug_line0
+ 642 0025 02       		.uleb128 0x2
+ 643 0026 01       		.byte	0x1
+ 644 0027 06       		.byte	0x6
+ 645 0028 B6020000 		.4byte	.LASF0
+ 646 002c 02       		.uleb128 0x2
+ 647 002d 01       		.byte	0x1
+ 648 002e 08       		.byte	0x8
+ 649 002f A8010000 		.4byte	.LASF1
+ 650 0033 02       		.uleb128 0x2
+ 651 0034 02       		.byte	0x2
+ 652 0035 05       		.byte	0x5
+ 653 0036 88020000 		.4byte	.LASF2
+ 654 003a 02       		.uleb128 0x2
+ 655 003b 02       		.byte	0x2
+ 656 003c 07       		.byte	0x7
+ 657 003d C2020000 		.4byte	.LASF3
+ 658 0041 03       		.uleb128 0x3
+ 659 0042 2F000000 		.4byte	.LASF9
+ 660 0046 02       		.byte	0x2
+ 661 0047 3F       		.byte	0x3f
+ 662 0048 4C000000 		.4byte	0x4c
+ 663 004c 02       		.uleb128 0x2
+ 664 004d 04       		.byte	0x4
+ 665 004e 05       		.byte	0x5
+ 666 004f 8C010000 		.4byte	.LASF4
+ 667 0053 02       		.uleb128 0x2
+ 668 0054 04       		.byte	0x4
+ 669 0055 07       		.byte	0x7
+ 670 0056 74010000 		.4byte	.LASF5
+ 671 005a 02       		.uleb128 0x2
+ 672 005b 08       		.byte	0x8
+ 673 005c 05       		.byte	0x5
+ 674 005d 3E020000 		.4byte	.LASF6
+ 675 0061 02       		.uleb128 0x2
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPXmHMV.s 			page 17
 
 
- 662 007f 19       		.uleb128 0x19
- 663 0080 49       		.uleb128 0x49
- 664 0081 13       		.uleb128 0x13
- 665 0082 11       		.uleb128 0x11
- 666 0083 01       		.uleb128 0x1
- 667 0084 12       		.uleb128 0x12
- 668 0085 06       		.uleb128 0x6
- 669 0086 40       		.uleb128 0x40
- 670 0087 18       		.uleb128 0x18
- 671 0088 9742     		.uleb128 0x2117
- 672 008a 19       		.uleb128 0x19
- 673 008b 01       		.uleb128 0x1
- 674 008c 13       		.uleb128 0x13
- 675 008d 00       		.byte	0
- 676 008e 00       		.byte	0
- 677 008f 0A       		.uleb128 0xa
- 678 0090 05       		.uleb128 0x5
- 679 0091 00       		.byte	0
- 680 0092 03       		.uleb128 0x3
- 681 0093 0E       		.uleb128 0xe
- 682 0094 3A       		.uleb128 0x3a
- 683 0095 0B       		.uleb128 0xb
- 684 0096 3B       		.uleb128 0x3b
- 685 0097 0B       		.uleb128 0xb
- 686 0098 49       		.uleb128 0x49
- 687 0099 13       		.uleb128 0x13
- 688 009a 02       		.uleb128 0x2
- 689 009b 18       		.uleb128 0x18
- 690 009c 00       		.byte	0
- 691 009d 00       		.byte	0
- 692 009e 0B       		.uleb128 0xb
- 693 009f 34       		.uleb128 0x34
- 694 00a0 00       		.byte	0
- 695 00a1 03       		.uleb128 0x3
- 696 00a2 0E       		.uleb128 0xe
- 697 00a3 3A       		.uleb128 0x3a
- 698 00a4 0B       		.uleb128 0xb
- 699 00a5 3B       		.uleb128 0x3b
- 700 00a6 05       		.uleb128 0x5
- 701 00a7 49       		.uleb128 0x49
- 702 00a8 13       		.uleb128 0x13
- 703 00a9 3F       		.uleb128 0x3f
- 704 00aa 19       		.uleb128 0x19
- 705 00ab 3C       		.uleb128 0x3c
- 706 00ac 19       		.uleb128 0x19
- 707 00ad 00       		.byte	0
- 708 00ae 00       		.byte	0
- 709 00af 0C       		.uleb128 0xc
- 710 00b0 34       		.uleb128 0x34
- 711 00b1 00       		.byte	0
- 712 00b2 03       		.uleb128 0x3
- 713 00b3 0E       		.uleb128 0xe
- 714 00b4 3A       		.uleb128 0x3a
- 715 00b5 0B       		.uleb128 0xb
- 716 00b6 3B       		.uleb128 0x3b
- 717 00b7 0B       		.uleb128 0xb
- 718 00b8 49       		.uleb128 0x49
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccz2eT1G.s 			page 17
+ 676 0062 08       		.byte	0x8
+ 677 0063 07       		.byte	0x7
+ 678 0064 01020000 		.4byte	.LASF7
+ 679 0068 04       		.uleb128 0x4
+ 680 0069 04       		.byte	0x4
+ 681 006a 05       		.byte	0x5
+ 682 006b 696E7400 		.ascii	"int\000"
+ 683 006f 02       		.uleb128 0x2
+ 684 0070 04       		.byte	0x4
+ 685 0071 07       		.byte	0x7
+ 686 0072 EB010000 		.4byte	.LASF8
+ 687 0076 03       		.uleb128 0x3
+ 688 0077 E4000000 		.4byte	.LASF10
+ 689 007b 03       		.byte	0x3
+ 690 007c 2C       		.byte	0x2c
+ 691 007d 41000000 		.4byte	0x41
+ 692 0081 05       		.uleb128 0x5
+ 693 0082 DE000000 		.4byte	.LASF11
+ 694 0086 04       		.byte	0x4
+ 695 0087 9201     		.2byte	0x192
+ 696 0089 2C000000 		.4byte	0x2c
+ 697 008d 05       		.uleb128 0x5
+ 698 008e C5010000 		.4byte	.LASF12
+ 699 0092 04       		.byte	0x4
+ 700 0093 9301     		.2byte	0x193
+ 701 0095 3A000000 		.4byte	0x3a
+ 702 0099 05       		.uleb128 0x5
+ 703 009a 86010000 		.4byte	.LASF13
+ 704 009e 04       		.byte	0x4
+ 705 009f 9701     		.2byte	0x197
+ 706 00a1 4C000000 		.4byte	0x4c
+ 707 00a5 02       		.uleb128 0x2
+ 708 00a6 04       		.byte	0x4
+ 709 00a7 04       		.byte	0x4
+ 710 00a8 EC000000 		.4byte	.LASF14
+ 711 00ac 02       		.uleb128 0x2
+ 712 00ad 08       		.byte	0x8
+ 713 00ae 04       		.byte	0x4
+ 714 00af BE010000 		.4byte	.LASF15
+ 715 00b3 02       		.uleb128 0x2
+ 716 00b4 01       		.byte	0x1
+ 717 00b5 08       		.byte	0x8
+ 718 00b6 53020000 		.4byte	.LASF16
+ 719 00ba 02       		.uleb128 0x2
+ 720 00bb 04       		.byte	0x4
+ 721 00bc 07       		.byte	0x7
+ 722 00bd 35020000 		.4byte	.LASF17
+ 723 00c1 06       		.uleb128 0x6
+ 724 00c2 CC010000 		.4byte	.LASF18
+ 725 00c6 01       		.byte	0x1
+ 726 00c7 2A       		.byte	0x2a
+ 727 00c8 68000000 		.4byte	0x68
+ 728 00cc 00000000 		.4byte	.LFB63
+ 729 00d0 1C010000 		.4byte	.LFE63-.LFB63
+ 730 00d4 01       		.uleb128 0x1
+ 731 00d5 9C       		.byte	0x9c
+ 732 00d6 E6000000 		.4byte	0xe6
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPXmHMV.s 			page 18
 
 
- 719 00b9 13       		.uleb128 0x13
- 720 00ba 3F       		.uleb128 0x3f
- 721 00bb 19       		.uleb128 0x19
- 722 00bc 02       		.uleb128 0x2
- 723 00bd 18       		.uleb128 0x18
- 724 00be 00       		.byte	0
- 725 00bf 00       		.byte	0
- 726 00c0 0D       		.uleb128 0xd
- 727 00c1 34       		.uleb128 0x34
- 728 00c2 00       		.byte	0
- 729 00c3 03       		.uleb128 0x3
- 730 00c4 08       		.uleb128 0x8
- 731 00c5 3A       		.uleb128 0x3a
- 732 00c6 0B       		.uleb128 0xb
- 733 00c7 3B       		.uleb128 0x3b
- 734 00c8 0B       		.uleb128 0xb
- 735 00c9 49       		.uleb128 0x49
- 736 00ca 13       		.uleb128 0x13
- 737 00cb 3F       		.uleb128 0x3f
- 738 00cc 19       		.uleb128 0x19
- 739 00cd 02       		.uleb128 0x2
- 740 00ce 18       		.uleb128 0x18
- 741 00cf 00       		.byte	0
- 742 00d0 00       		.byte	0
- 743 00d1 00       		.byte	0
- 744              		.section	.debug_aranges,"",%progbits
- 745 0000 24000000 		.4byte	0x24
- 746 0004 0200     		.2byte	0x2
- 747 0006 00000000 		.4byte	.Ldebug_info0
- 748 000a 04       		.byte	0x4
- 749 000b 00       		.byte	0
- 750 000c 0000     		.2byte	0
- 751 000e 0000     		.2byte	0
- 752 0010 00000000 		.4byte	.LFB63
- 753 0014 A0000000 		.4byte	.LFE63-.LFB63
- 754 0018 00000000 		.4byte	.LFB64
- 755 001c 04010000 		.4byte	.LFE64-.LFB64
- 756 0020 00000000 		.4byte	0
- 757 0024 00000000 		.4byte	0
- 758              		.section	.debug_ranges,"",%progbits
- 759              	.Ldebug_ranges0:
- 760 0000 00000000 		.4byte	.LFB63
- 761 0004 A0000000 		.4byte	.LFE63
- 762 0008 00000000 		.4byte	.LFB64
- 763 000c 04010000 		.4byte	.LFE64
- 764 0010 00000000 		.4byte	0
- 765 0014 00000000 		.4byte	0
- 766              		.section	.debug_line,"",%progbits
- 767              	.Ldebug_line0:
- 768 0000 AE010000 		.section	.debug_str,"MS",%progbits,1
- 768      02004701 
- 768      00000201 
- 768      FB0E0D00 
- 768      01010101 
- 769              	.LASF9:
- 770 0000 5F5F696E 		.ascii	"__int32_t\000"
- 770      7433325F 
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccz2eT1G.s 			page 18
+ 733 00da 07       		.uleb128 0x7
+ 734 00db 26000000 		.4byte	.LASF43
+ 735 00df 01       		.byte	0x1
+ 736 00e0 2C       		.byte	0x2c
+ 737 00e1 99000000 		.4byte	0x99
+ 738 00e5 00       		.byte	0
+ 739 00e6 08       		.uleb128 0x8
+ 740 00e7 AF020000 		.4byte	.LASF19
+ 741 00eb 01       		.byte	0x1
+ 742 00ec 72       		.byte	0x72
+ 743 00ed 8D000000 		.4byte	0x8d
+ 744 00f1 00000000 		.4byte	.LFB64
+ 745 00f5 60010000 		.4byte	.LFE64-.LFB64
+ 746 00f9 01       		.uleb128 0x1
+ 747 00fa 9C       		.byte	0x9c
+ 748 00fb 1C010000 		.4byte	0x11c
+ 749 00ff 09       		.uleb128 0x9
+ 750 0100 A9020000 		.4byte	.LASF20
+ 751 0104 01       		.byte	0x1
+ 752 0105 72       		.byte	0x72
+ 753 0106 8D000000 		.4byte	0x8d
+ 754 010a 02       		.uleb128 0x2
+ 755 010b 91       		.byte	0x91
+ 756 010c 6E       		.sleb128 -18
+ 757 010d 0A       		.uleb128 0xa
+ 758 010e 39000000 		.4byte	.LASF22
+ 759 0112 01       		.byte	0x1
+ 760 0113 74       		.byte	0x74
+ 761 0114 8D000000 		.4byte	0x8d
+ 762 0118 02       		.uleb128 0x2
+ 763 0119 91       		.byte	0x91
+ 764 011a 76       		.sleb128 -10
+ 765 011b 00       		.byte	0
+ 766 011c 0B       		.uleb128 0xb
+ 767 011d 92020000 		.4byte	.LASF44
+ 768 0121 01       		.byte	0x1
+ 769 0122 BA       		.byte	0xba
+ 770 0123 00000000 		.4byte	.LFB65
+ 771 0127 48000000 		.4byte	.LFE65-.LFB65
+ 772 012b 01       		.uleb128 0x1
+ 773 012c 9C       		.byte	0x9c
+ 774 012d 0C       		.uleb128 0xc
+ 775 012e B6010000 		.4byte	.LASF45
+ 776 0132 01       		.byte	0x1
+ 777 0133 D6       		.byte	0xd6
+ 778 0134 00000000 		.4byte	.LFB66
+ 779 0138 98000000 		.4byte	.LFE66-.LFB66
+ 780 013c 01       		.uleb128 0x1
+ 781 013d 9C       		.byte	0x9c
+ 782 013e 5F010000 		.4byte	0x15f
+ 783 0142 09       		.uleb128 0x9
+ 784 0143 95010000 		.4byte	.LASF21
+ 785 0147 01       		.byte	0x1
+ 786 0148 D6       		.byte	0xd6
+ 787 0149 81000000 		.4byte	0x81
+ 788 014d 02       		.uleb128 0x2
+ 789 014e 91       		.byte	0x91
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPXmHMV.s 			page 19
 
 
- 770      7400
- 771              	.LASF22:
- 772 000a 6D61736B 		.ascii	"mask\000"
- 772      00
- 773              	.LASF27:
- 774 000f 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 774      4320342E 
- 774      392E3320 
- 774      32303135 
- 774      30333033 
- 775 0042 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 775      20726576 
- 775      6973696F 
- 775      6E203232 
- 775      31323230 
- 776 0075 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
- 776      66756E63 
- 776      74696F6E 
- 776      2D736563 
- 776      74696F6E 
- 777              	.LASF19:
- 778 009d 4144435F 		.ascii	"ADC_SAR2_READ\000"
- 778      53415232 
- 778      5F524541 
- 778      4400
- 779              	.LASF20:
- 780 00ab 46696C74 		.ascii	"Filterout\000"
- 780      65726F75 
- 780      7400
- 781              	.LASF13:
- 782 00b5 666C6F61 		.ascii	"float\000"
- 782      7400
- 783              	.LASF1:
- 784 00bb 756E7369 		.ascii	"unsigned char\000"
- 784      676E6564 
- 784      20636861 
- 784      7200
- 785              	.LASF5:
- 786 00c9 6C6F6E67 		.ascii	"long unsigned int\000"
- 786      20756E73 
- 786      69676E65 
- 786      6420696E 
- 786      7400
- 787              	.LASF3:
- 788 00db 73686F72 		.ascii	"short unsigned int\000"
- 788      7420756E 
- 788      7369676E 
- 788      65642069 
- 788      6E7400
- 789              	.LASF23:
- 790 00ee 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 790      52784275 
- 790      66666572 
- 790      00
- 791              	.LASF14:
- 792 00fb 646F7562 		.ascii	"double\000"
- 792      6C6500
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccz2eT1G.s 			page 19
+ 790 014f 6F       		.sleb128 -17
+ 791 0150 0A       		.uleb128 0xa
+ 792 0151 10000000 		.4byte	.LASF23
+ 793 0155 01       		.byte	0x1
+ 794 0156 D7       		.byte	0xd7
+ 795 0157 81000000 		.4byte	0x81
+ 796 015b 02       		.uleb128 0x2
+ 797 015c 91       		.byte	0x91
+ 798 015d 77       		.sleb128 -9
+ 799 015e 00       		.byte	0
+ 800 015f 0D       		.uleb128 0xd
+ 801 0160 9B010000 		.4byte	.LASF24
+ 802 0164 05       		.byte	0x5
+ 803 0165 9606     		.2byte	0x696
+ 804 0167 6B010000 		.4byte	0x16b
+ 805 016b 0E       		.uleb128 0xe
+ 806 016c 76000000 		.4byte	0x76
+ 807 0170 0F       		.uleb128 0xf
+ 808 0171 D1010000 		.4byte	.LASF25
+ 809 0175 01       		.byte	0x1
+ 810 0176 18       		.byte	0x18
+ 811 0177 8D000000 		.4byte	0x8d
+ 812 017b 05       		.uleb128 0x5
+ 813 017c 03       		.byte	0x3
+ 814 017d 00000000 		.4byte	BIT_MASK_CTRL
+ 815 0181 0F       		.uleb128 0xf
+ 816 0182 FC000000 		.4byte	.LASF26
+ 817 0186 01       		.byte	0x1
+ 818 0187 19       		.byte	0x19
+ 819 0188 8D000000 		.4byte	0x8d
+ 820 018c 05       		.uleb128 0x5
+ 821 018d 03       		.byte	0x3
+ 822 018e 00000000 		.4byte	DIV_MASK_CTRL
+ 823 0192 0F       		.uleb128 0xf
+ 824 0193 6B020000 		.4byte	.LASF27
+ 825 0197 01       		.byte	0x1
+ 826 0198 1A       		.byte	0x1a
+ 827 0199 8D000000 		.4byte	0x8d
+ 828 019d 05       		.uleb128 0x5
+ 829 019e 03       		.byte	0x3
+ 830 019f 00000000 		.4byte	OLD_BIT_MASK_DEPTH
+ 831 01a3 0F       		.uleb128 0xf
+ 832 01a4 58020000 		.4byte	.LASF28
+ 833 01a8 01       		.byte	0x1
+ 834 01a9 1B       		.byte	0x1b
+ 835 01aa 8D000000 		.4byte	0x8d
+ 836 01ae 05       		.uleb128 0x5
+ 837 01af 03       		.byte	0x3
+ 838 01b0 00000000 		.4byte	OLD_DIV_MASK_DEPTH
+ 839 01b4 0F       		.uleb128 0xf
+ 840 01b5 F2000000 		.4byte	.LASF29
+ 841 01b9 01       		.byte	0x1
+ 842 01ba 1C       		.byte	0x1c
+ 843 01bb 8D000000 		.4byte	0x8d
+ 844 01bf 05       		.uleb128 0x5
+ 845 01c0 03       		.byte	0x3
+ 846 01c1 00000000 		.4byte	FINAL_OUT
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPXmHMV.s 			page 20
 
 
- 793              	.LASF2:
- 794 0102 73686F72 		.ascii	"short int\000"
- 794      7420696E 
- 794      7400
- 795              	.LASF12:
- 796 010c 75696E74 		.ascii	"uint16\000"
- 796      313600
- 797              	.LASF30:
- 798 0113 6D61696E 		.ascii	"main\000"
- 798      00
- 799              	.LASF8:
- 800 0118 756E7369 		.ascii	"unsigned int\000"
- 800      676E6564 
- 800      20696E74 
- 800      00
- 801              	.LASF17:
- 802 0125 434B5F44 		.ascii	"CK_DIV\000"
- 802      495600
- 803              	.LASF7:
- 804 012c 6C6F6E67 		.ascii	"long long unsigned int\000"
- 804      206C6F6E 
- 804      6720756E 
- 804      7369676E 
- 804      65642069 
- 805              	.LASF26:
- 806 0143 64617461 		.ascii	"dataready\000"
- 806      72656164 
- 806      7900
- 807              	.LASF31:
- 808 014d 45666665 		.ascii	"Effect\000"
- 808      637400
- 809              	.LASF10:
- 810 0154 696E7433 		.ascii	"int32_t\000"
- 810      325F7400 
- 811              	.LASF16:
- 812 015c 73697A65 		.ascii	"sizetype\000"
- 812      74797065 
- 812      00
- 813              	.LASF29:
- 814 0165 433A5C55 		.ascii	"C:\\Users\\ben\\Documents\\PSoC Creator\\DACTEST\\A"
- 814      73657273 
- 814      5C62656E 
- 814      5C446F63 
- 814      756D656E 
- 815 0192 44435F44 		.ascii	"DC_DAC.cydsn\000"
- 815      41432E63 
- 815      7964736E 
- 815      00
- 816              	.LASF6:
- 817 019f 6C6F6E67 		.ascii	"long long int\000"
- 817      206C6F6E 
- 817      6720696E 
- 817      7400
- 818              	.LASF28:
- 819 01ad 6D61696E 		.ascii	"main.c\000"
- 819      2E6300
- 820              	.LASF24:
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccz2eT1G.s 			page 20
+ 847 01c5 0F       		.uleb128 0xf
+ 848 01c6 7E020000 		.4byte	.LASF30
+ 849 01ca 01       		.byte	0x1
+ 850 01cb 1D       		.byte	0x1d
+ 851 01cc 8D000000 		.4byte	0x8d
+ 852 01d0 05       		.uleb128 0x5
+ 853 01d1 03       		.byte	0x3
+ 854 01d2 00000000 		.4byte	MASK_CTRL
+ 855 01d6 0F       		.uleb128 0xf
+ 856 01d7 17000000 		.4byte	.LASF31
+ 857 01db 01       		.byte	0x1
+ 858 01dc 1E       		.byte	0x1e
+ 859 01dd 8D000000 		.4byte	0x8d
+ 860 01e1 05       		.uleb128 0x5
+ 861 01e2 03       		.byte	0x3
+ 862 01e3 00000000 		.4byte	OLD_MASK_DEPTH
+ 863 01e7 0F       		.uleb128 0xf
+ 864 01e8 DF010000 		.4byte	.LASF32
+ 865 01ec 01       		.byte	0x1
+ 866 01ed 1F       		.byte	0x1f
+ 867 01ee 81000000 		.4byte	0x81
+ 868 01f2 05       		.uleb128 0x5
+ 869 01f3 03       		.byte	0x3
+ 870 01f4 00000000 		.4byte	MASK_EFFECT
+ 871 01f8 10       		.uleb128 0x10
+ 872 01f9 8D000000 		.4byte	0x8d
+ 873 01fd 08020000 		.4byte	0x208
+ 874 0201 11       		.uleb128 0x11
+ 875 0202 BA000000 		.4byte	0xba
+ 876 0206 03       		.byte	0x3
+ 877 0207 00       		.byte	0
+ 878 0208 0F       		.uleb128 0xf
+ 879 0209 18020000 		.4byte	.LASF33
+ 880 020d 01       		.byte	0x1
+ 881 020e 21       		.byte	0x21
+ 882 020f F8010000 		.4byte	0x1f8
+ 883 0213 05       		.uleb128 0x5
+ 884 0214 03       		.byte	0x3
+ 885 0215 00000000 		.4byte	SAR_ADCResultArray
+ 886 0219 0F       		.uleb128 0xf
+ 887 021a 3E000000 		.4byte	.LASF34
+ 888 021e 01       		.byte	0x1
+ 889 021f 22       		.byte	0x22
+ 890 0220 81000000 		.4byte	0x81
+ 891 0224 05       		.uleb128 0x5
+ 892 0225 03       		.byte	0x3
+ 893 0226 00000000 		.4byte	seq_sar_dataReady
+ 894 022a 0F       		.uleb128 0xf
+ 895 022b 9C020000 		.4byte	.LASF35
+ 896 022f 01       		.byte	0x1
+ 897 0230 23       		.byte	0x23
+ 898 0231 99000000 		.4byte	0x99
+ 899 0235 05       		.uleb128 0x5
+ 900 0236 03       		.byte	0x3
+ 901 0237 00000000 		.4byte	audio_result
+ 902 023b 0F       		.uleb128 0xf
+ 903 023c 00000000 		.4byte	.LASF36
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPXmHMV.s 			page 21
 
 
- 821 01b4 45464645 		.ascii	"EFFECT_ADC\000"
- 821      43545F41 
- 821      444300
- 822              	.LASF25:
- 823 01bf 504F545F 		.ascii	"POT_READ_SCALED\000"
- 823      52454144 
- 823      5F534341 
- 823      4C454400 
- 824              	.LASF11:
- 825 01cf 75696E74 		.ascii	"uint8\000"
- 825      3800
- 826              	.LASF4:
- 827 01d5 6C6F6E67 		.ascii	"long int\000"
- 827      20696E74 
- 827      00
- 828              	.LASF15:
- 829 01de 63686172 		.ascii	"char\000"
- 829      00
- 830              	.LASF18:
- 831 01e3 41554449 		.ascii	"AUDIO_IN\000"
- 831      4F5F494E 
- 831      00
- 832              	.LASF21:
- 833 01ec 64657074 		.ascii	"depth\000"
- 833      6800
- 834              	.LASF0:
- 835 01f2 7369676E 		.ascii	"signed char\000"
- 835      65642063 
- 835      68617200 
- 836              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ 904 0240 01       		.byte	0x1
+ 905 0241 24       		.byte	0x24
+ 906 0242 81000000 		.4byte	0x81
+ 907 0246 05       		.uleb128 0x5
+ 908 0247 03       		.byte	0x3
+ 909 0248 00000000 		.4byte	audio_dataReady
+ 910 024c 0F       		.uleb128 0xf
+ 911 024d 6A010000 		.4byte	.LASF37
+ 912 0251 01       		.byte	0x1
+ 913 0252 25       		.byte	0x25
+ 914 0253 81000000 		.4byte	0x81
+ 915 0257 05       		.uleb128 0x5
+ 916 0258 03       		.byte	0x3
+ 917 0259 00000000 		.4byte	audio_lsb
+ 918 025d 0F       		.uleb128 0xf
+ 919 025e 2B020000 		.4byte	.LASF38
+ 920 0262 01       		.byte	0x1
+ 921 0263 26       		.byte	0x26
+ 922 0264 81000000 		.4byte	0x81
+ 923 0268 05       		.uleb128 0x5
+ 924 0269 03       		.byte	0x3
+ 925 026a 00000000 		.4byte	audio_msb
+ 926 026e 0F       		.uleb128 0xf
+ 927 026f F8010000 		.4byte	.LASF39
+ 928 0273 01       		.byte	0x1
+ 929 0274 27       		.byte	0x27
+ 930 0275 8D000000 		.4byte	0x8d
+ 931 0279 05       		.uleb128 0x5
+ 932 027a 03       		.byte	0x3
+ 933 027b 00000000 		.4byte	FRQ_CTRL
+ 934 027f 00       		.byte	0
+ 935              		.section	.debug_abbrev,"",%progbits
+ 936              	.Ldebug_abbrev0:
+ 937 0000 01       		.uleb128 0x1
+ 938 0001 11       		.uleb128 0x11
+ 939 0002 01       		.byte	0x1
+ 940 0003 25       		.uleb128 0x25
+ 941 0004 0E       		.uleb128 0xe
+ 942 0005 13       		.uleb128 0x13
+ 943 0006 0B       		.uleb128 0xb
+ 944 0007 03       		.uleb128 0x3
+ 945 0008 0E       		.uleb128 0xe
+ 946 0009 1B       		.uleb128 0x1b
+ 947 000a 0E       		.uleb128 0xe
+ 948 000b 55       		.uleb128 0x55
+ 949 000c 17       		.uleb128 0x17
+ 950 000d 11       		.uleb128 0x11
+ 951 000e 01       		.uleb128 0x1
+ 952 000f 10       		.uleb128 0x10
+ 953 0010 17       		.uleb128 0x17
+ 954 0011 00       		.byte	0
+ 955 0012 00       		.byte	0
+ 956 0013 02       		.uleb128 0x2
+ 957 0014 24       		.uleb128 0x24
+ 958 0015 00       		.byte	0
+ 959 0016 0B       		.uleb128 0xb
+ 960 0017 0B       		.uleb128 0xb
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPXmHMV.s 			page 22
+
+
+ 961 0018 3E       		.uleb128 0x3e
+ 962 0019 0B       		.uleb128 0xb
+ 963 001a 03       		.uleb128 0x3
+ 964 001b 0E       		.uleb128 0xe
+ 965 001c 00       		.byte	0
+ 966 001d 00       		.byte	0
+ 967 001e 03       		.uleb128 0x3
+ 968 001f 16       		.uleb128 0x16
+ 969 0020 00       		.byte	0
+ 970 0021 03       		.uleb128 0x3
+ 971 0022 0E       		.uleb128 0xe
+ 972 0023 3A       		.uleb128 0x3a
+ 973 0024 0B       		.uleb128 0xb
+ 974 0025 3B       		.uleb128 0x3b
+ 975 0026 0B       		.uleb128 0xb
+ 976 0027 49       		.uleb128 0x49
+ 977 0028 13       		.uleb128 0x13
+ 978 0029 00       		.byte	0
+ 979 002a 00       		.byte	0
+ 980 002b 04       		.uleb128 0x4
+ 981 002c 24       		.uleb128 0x24
+ 982 002d 00       		.byte	0
+ 983 002e 0B       		.uleb128 0xb
+ 984 002f 0B       		.uleb128 0xb
+ 985 0030 3E       		.uleb128 0x3e
+ 986 0031 0B       		.uleb128 0xb
+ 987 0032 03       		.uleb128 0x3
+ 988 0033 08       		.uleb128 0x8
+ 989 0034 00       		.byte	0
+ 990 0035 00       		.byte	0
+ 991 0036 05       		.uleb128 0x5
+ 992 0037 16       		.uleb128 0x16
+ 993 0038 00       		.byte	0
+ 994 0039 03       		.uleb128 0x3
+ 995 003a 0E       		.uleb128 0xe
+ 996 003b 3A       		.uleb128 0x3a
+ 997 003c 0B       		.uleb128 0xb
+ 998 003d 3B       		.uleb128 0x3b
+ 999 003e 05       		.uleb128 0x5
+ 1000 003f 49       		.uleb128 0x49
+ 1001 0040 13       		.uleb128 0x13
+ 1002 0041 00       		.byte	0
+ 1003 0042 00       		.byte	0
+ 1004 0043 06       		.uleb128 0x6
+ 1005 0044 2E       		.uleb128 0x2e
+ 1006 0045 01       		.byte	0x1
+ 1007 0046 3F       		.uleb128 0x3f
+ 1008 0047 19       		.uleb128 0x19
+ 1009 0048 03       		.uleb128 0x3
+ 1010 0049 0E       		.uleb128 0xe
+ 1011 004a 3A       		.uleb128 0x3a
+ 1012 004b 0B       		.uleb128 0xb
+ 1013 004c 3B       		.uleb128 0x3b
+ 1014 004d 0B       		.uleb128 0xb
+ 1015 004e 27       		.uleb128 0x27
+ 1016 004f 19       		.uleb128 0x19
+ 1017 0050 49       		.uleb128 0x49
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPXmHMV.s 			page 23
+
+
+ 1018 0051 13       		.uleb128 0x13
+ 1019 0052 11       		.uleb128 0x11
+ 1020 0053 01       		.uleb128 0x1
+ 1021 0054 12       		.uleb128 0x12
+ 1022 0055 06       		.uleb128 0x6
+ 1023 0056 40       		.uleb128 0x40
+ 1024 0057 18       		.uleb128 0x18
+ 1025 0058 9642     		.uleb128 0x2116
+ 1026 005a 19       		.uleb128 0x19
+ 1027 005b 01       		.uleb128 0x1
+ 1028 005c 13       		.uleb128 0x13
+ 1029 005d 00       		.byte	0
+ 1030 005e 00       		.byte	0
+ 1031 005f 07       		.uleb128 0x7
+ 1032 0060 34       		.uleb128 0x34
+ 1033 0061 00       		.byte	0
+ 1034 0062 03       		.uleb128 0x3
+ 1035 0063 0E       		.uleb128 0xe
+ 1036 0064 3A       		.uleb128 0x3a
+ 1037 0065 0B       		.uleb128 0xb
+ 1038 0066 3B       		.uleb128 0x3b
+ 1039 0067 0B       		.uleb128 0xb
+ 1040 0068 49       		.uleb128 0x49
+ 1041 0069 13       		.uleb128 0x13
+ 1042 006a 00       		.byte	0
+ 1043 006b 00       		.byte	0
+ 1044 006c 08       		.uleb128 0x8
+ 1045 006d 2E       		.uleb128 0x2e
+ 1046 006e 01       		.byte	0x1
+ 1047 006f 3F       		.uleb128 0x3f
+ 1048 0070 19       		.uleb128 0x19
+ 1049 0071 03       		.uleb128 0x3
+ 1050 0072 0E       		.uleb128 0xe
+ 1051 0073 3A       		.uleb128 0x3a
+ 1052 0074 0B       		.uleb128 0xb
+ 1053 0075 3B       		.uleb128 0x3b
+ 1054 0076 0B       		.uleb128 0xb
+ 1055 0077 27       		.uleb128 0x27
+ 1056 0078 19       		.uleb128 0x19
+ 1057 0079 49       		.uleb128 0x49
+ 1058 007a 13       		.uleb128 0x13
+ 1059 007b 11       		.uleb128 0x11
+ 1060 007c 01       		.uleb128 0x1
+ 1061 007d 12       		.uleb128 0x12
+ 1062 007e 06       		.uleb128 0x6
+ 1063 007f 40       		.uleb128 0x40
+ 1064 0080 18       		.uleb128 0x18
+ 1065 0081 9742     		.uleb128 0x2117
+ 1066 0083 19       		.uleb128 0x19
+ 1067 0084 01       		.uleb128 0x1
+ 1068 0085 13       		.uleb128 0x13
+ 1069 0086 00       		.byte	0
+ 1070 0087 00       		.byte	0
+ 1071 0088 09       		.uleb128 0x9
+ 1072 0089 05       		.uleb128 0x5
+ 1073 008a 00       		.byte	0
+ 1074 008b 03       		.uleb128 0x3
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPXmHMV.s 			page 24
+
+
+ 1075 008c 0E       		.uleb128 0xe
+ 1076 008d 3A       		.uleb128 0x3a
+ 1077 008e 0B       		.uleb128 0xb
+ 1078 008f 3B       		.uleb128 0x3b
+ 1079 0090 0B       		.uleb128 0xb
+ 1080 0091 49       		.uleb128 0x49
+ 1081 0092 13       		.uleb128 0x13
+ 1082 0093 02       		.uleb128 0x2
+ 1083 0094 18       		.uleb128 0x18
+ 1084 0095 00       		.byte	0
+ 1085 0096 00       		.byte	0
+ 1086 0097 0A       		.uleb128 0xa
+ 1087 0098 34       		.uleb128 0x34
+ 1088 0099 00       		.byte	0
+ 1089 009a 03       		.uleb128 0x3
+ 1090 009b 0E       		.uleb128 0xe
+ 1091 009c 3A       		.uleb128 0x3a
+ 1092 009d 0B       		.uleb128 0xb
+ 1093 009e 3B       		.uleb128 0x3b
+ 1094 009f 0B       		.uleb128 0xb
+ 1095 00a0 49       		.uleb128 0x49
+ 1096 00a1 13       		.uleb128 0x13
+ 1097 00a2 02       		.uleb128 0x2
+ 1098 00a3 18       		.uleb128 0x18
+ 1099 00a4 00       		.byte	0
+ 1100 00a5 00       		.byte	0
+ 1101 00a6 0B       		.uleb128 0xb
+ 1102 00a7 2E       		.uleb128 0x2e
+ 1103 00a8 00       		.byte	0
+ 1104 00a9 3F       		.uleb128 0x3f
+ 1105 00aa 19       		.uleb128 0x19
+ 1106 00ab 03       		.uleb128 0x3
+ 1107 00ac 0E       		.uleb128 0xe
+ 1108 00ad 3A       		.uleb128 0x3a
+ 1109 00ae 0B       		.uleb128 0xb
+ 1110 00af 3B       		.uleb128 0x3b
+ 1111 00b0 0B       		.uleb128 0xb
+ 1112 00b1 27       		.uleb128 0x27
+ 1113 00b2 19       		.uleb128 0x19
+ 1114 00b3 11       		.uleb128 0x11
+ 1115 00b4 01       		.uleb128 0x1
+ 1116 00b5 12       		.uleb128 0x12
+ 1117 00b6 06       		.uleb128 0x6
+ 1118 00b7 40       		.uleb128 0x40
+ 1119 00b8 18       		.uleb128 0x18
+ 1120 00b9 9642     		.uleb128 0x2116
+ 1121 00bb 19       		.uleb128 0x19
+ 1122 00bc 00       		.byte	0
+ 1123 00bd 00       		.byte	0
+ 1124 00be 0C       		.uleb128 0xc
+ 1125 00bf 2E       		.uleb128 0x2e
+ 1126 00c0 01       		.byte	0x1
+ 1127 00c1 3F       		.uleb128 0x3f
+ 1128 00c2 19       		.uleb128 0x19
+ 1129 00c3 03       		.uleb128 0x3
+ 1130 00c4 0E       		.uleb128 0xe
+ 1131 00c5 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPXmHMV.s 			page 25
+
+
+ 1132 00c6 0B       		.uleb128 0xb
+ 1133 00c7 3B       		.uleb128 0x3b
+ 1134 00c8 0B       		.uleb128 0xb
+ 1135 00c9 27       		.uleb128 0x27
+ 1136 00ca 19       		.uleb128 0x19
+ 1137 00cb 11       		.uleb128 0x11
+ 1138 00cc 01       		.uleb128 0x1
+ 1139 00cd 12       		.uleb128 0x12
+ 1140 00ce 06       		.uleb128 0x6
+ 1141 00cf 40       		.uleb128 0x40
+ 1142 00d0 18       		.uleb128 0x18
+ 1143 00d1 9642     		.uleb128 0x2116
+ 1144 00d3 19       		.uleb128 0x19
+ 1145 00d4 01       		.uleb128 0x1
+ 1146 00d5 13       		.uleb128 0x13
+ 1147 00d6 00       		.byte	0
+ 1148 00d7 00       		.byte	0
+ 1149 00d8 0D       		.uleb128 0xd
+ 1150 00d9 34       		.uleb128 0x34
+ 1151 00da 00       		.byte	0
+ 1152 00db 03       		.uleb128 0x3
+ 1153 00dc 0E       		.uleb128 0xe
+ 1154 00dd 3A       		.uleb128 0x3a
+ 1155 00de 0B       		.uleb128 0xb
+ 1156 00df 3B       		.uleb128 0x3b
+ 1157 00e0 05       		.uleb128 0x5
+ 1158 00e1 49       		.uleb128 0x49
+ 1159 00e2 13       		.uleb128 0x13
+ 1160 00e3 3F       		.uleb128 0x3f
+ 1161 00e4 19       		.uleb128 0x19
+ 1162 00e5 3C       		.uleb128 0x3c
+ 1163 00e6 19       		.uleb128 0x19
+ 1164 00e7 00       		.byte	0
+ 1165 00e8 00       		.byte	0
+ 1166 00e9 0E       		.uleb128 0xe
+ 1167 00ea 35       		.uleb128 0x35
+ 1168 00eb 00       		.byte	0
+ 1169 00ec 49       		.uleb128 0x49
+ 1170 00ed 13       		.uleb128 0x13
+ 1171 00ee 00       		.byte	0
+ 1172 00ef 00       		.byte	0
+ 1173 00f0 0F       		.uleb128 0xf
+ 1174 00f1 34       		.uleb128 0x34
+ 1175 00f2 00       		.byte	0
+ 1176 00f3 03       		.uleb128 0x3
+ 1177 00f4 0E       		.uleb128 0xe
+ 1178 00f5 3A       		.uleb128 0x3a
+ 1179 00f6 0B       		.uleb128 0xb
+ 1180 00f7 3B       		.uleb128 0x3b
+ 1181 00f8 0B       		.uleb128 0xb
+ 1182 00f9 49       		.uleb128 0x49
+ 1183 00fa 13       		.uleb128 0x13
+ 1184 00fb 3F       		.uleb128 0x3f
+ 1185 00fc 19       		.uleb128 0x19
+ 1186 00fd 02       		.uleb128 0x2
+ 1187 00fe 18       		.uleb128 0x18
+ 1188 00ff 00       		.byte	0
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPXmHMV.s 			page 26
+
+
+ 1189 0100 00       		.byte	0
+ 1190 0101 10       		.uleb128 0x10
+ 1191 0102 01       		.uleb128 0x1
+ 1192 0103 01       		.byte	0x1
+ 1193 0104 49       		.uleb128 0x49
+ 1194 0105 13       		.uleb128 0x13
+ 1195 0106 01       		.uleb128 0x1
+ 1196 0107 13       		.uleb128 0x13
+ 1197 0108 00       		.byte	0
+ 1198 0109 00       		.byte	0
+ 1199 010a 11       		.uleb128 0x11
+ 1200 010b 21       		.uleb128 0x21
+ 1201 010c 00       		.byte	0
+ 1202 010d 49       		.uleb128 0x49
+ 1203 010e 13       		.uleb128 0x13
+ 1204 010f 2F       		.uleb128 0x2f
+ 1205 0110 0B       		.uleb128 0xb
+ 1206 0111 00       		.byte	0
+ 1207 0112 00       		.byte	0
+ 1208 0113 00       		.byte	0
+ 1209              		.section	.debug_aranges,"",%progbits
+ 1210 0000 34000000 		.4byte	0x34
+ 1211 0004 0200     		.2byte	0x2
+ 1212 0006 00000000 		.4byte	.Ldebug_info0
+ 1213 000a 04       		.byte	0x4
+ 1214 000b 00       		.byte	0
+ 1215 000c 0000     		.2byte	0
+ 1216 000e 0000     		.2byte	0
+ 1217 0010 00000000 		.4byte	.LFB63
+ 1218 0014 1C010000 		.4byte	.LFE63-.LFB63
+ 1219 0018 00000000 		.4byte	.LFB64
+ 1220 001c 60010000 		.4byte	.LFE64-.LFB64
+ 1221 0020 00000000 		.4byte	.LFB65
+ 1222 0024 48000000 		.4byte	.LFE65-.LFB65
+ 1223 0028 00000000 		.4byte	.LFB66
+ 1224 002c 98000000 		.4byte	.LFE66-.LFB66
+ 1225 0030 00000000 		.4byte	0
+ 1226 0034 00000000 		.4byte	0
+ 1227              		.section	.debug_ranges,"",%progbits
+ 1228              	.Ldebug_ranges0:
+ 1229 0000 00000000 		.4byte	.LFB63
+ 1230 0004 1C010000 		.4byte	.LFE63
+ 1231 0008 00000000 		.4byte	.LFB64
+ 1232 000c 60010000 		.4byte	.LFE64
+ 1233 0010 00000000 		.4byte	.LFB65
+ 1234 0014 48000000 		.4byte	.LFE65
+ 1235 0018 00000000 		.4byte	.LFB66
+ 1236 001c 98000000 		.4byte	.LFE66
+ 1237 0020 00000000 		.4byte	0
+ 1238 0024 00000000 		.4byte	0
+ 1239              		.section	.debug_line,"",%progbits
+ 1240              	.Ldebug_line0:
+ 1241 0000 02020000 		.section	.debug_str,"MS",%progbits,1
+ 1241      02004701 
+ 1241      00000201 
+ 1241      FB0E0D00 
+ 1241      01010101 
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPXmHMV.s 			page 27
+
+
+ 1242              	.LASF36:
+ 1243 0000 61756469 		.ascii	"audio_dataReady\000"
+ 1243      6F5F6461 
+ 1243      74615265 
+ 1243      61647900 
+ 1244              	.LASF23:
+ 1245 0010 50574D64 		.ascii	"PWMdiv\000"
+ 1245      697600
+ 1246              	.LASF31:
+ 1247 0017 4F4C445F 		.ascii	"OLD_MASK_DEPTH\000"
+ 1247      4D41534B 
+ 1247      5F444550 
+ 1247      544800
+ 1248              	.LASF43:
+ 1249 0026 46696C74 		.ascii	"Filt_ADC\000"
+ 1249      5F414443 
+ 1249      00
+ 1250              	.LASF9:
+ 1251 002f 5F5F696E 		.ascii	"__int32_t\000"
+ 1251      7433325F 
+ 1251      7400
+ 1252              	.LASF22:
+ 1253 0039 6D61736B 		.ascii	"mask\000"
+ 1253      00
+ 1254              	.LASF34:
+ 1255 003e 7365715F 		.ascii	"seq_sar_dataReady\000"
+ 1255      7361725F 
+ 1255      64617461 
+ 1255      52656164 
+ 1255      7900
+ 1256              	.LASF40:
+ 1257 0050 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 1257      4320342E 
+ 1257      392E3320 
+ 1257      32303135 
+ 1257      30333033 
+ 1258 0083 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 1258      20726576 
+ 1258      6973696F 
+ 1258      6E203232 
+ 1258      31323230 
+ 1259 00b6 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 1259      66756E63 
+ 1259      74696F6E 
+ 1259      2D736563 
+ 1259      74696F6E 
+ 1260              	.LASF11:
+ 1261 00de 75696E74 		.ascii	"uint8\000"
+ 1261      3800
+ 1262              	.LASF10:
+ 1263 00e4 696E7433 		.ascii	"int32_t\000"
+ 1263      325F7400 
+ 1264              	.LASF14:
+ 1265 00ec 666C6F61 		.ascii	"float\000"
+ 1265      7400
+ 1266              	.LASF29:
+ 1267 00f2 46494E41 		.ascii	"FINAL_OUT\000"
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPXmHMV.s 			page 28
+
+
+ 1267      4C5F4F55 
+ 1267      5400
+ 1268              	.LASF26:
+ 1269 00fc 4449565F 		.ascii	"DIV_MASK_CTRL\000"
+ 1269      4D41534B 
+ 1269      5F435452 
+ 1269      4C00
+ 1270              	.LASF42:
+ 1271 010a 433A5C55 		.ascii	"C:\\Users\\ben\\Documents\\PSoC Creator\\New Pedal "
+ 1271      73657273 
+ 1271      5C62656E 
+ 1271      5C446F63 
+ 1271      756D656E 
+ 1272 0138 5468696E 		.ascii	"Thingz\\PSOC_BIT_MANGLER\\BIT-MANGLER\\ADC_DAC.cyds"
+ 1272      677A5C50 
+ 1272      534F435F 
+ 1272      4249545F 
+ 1272      4D414E47 
+ 1273 0168 6E00     		.ascii	"n\000"
+ 1274              	.LASF37:
+ 1275 016a 61756469 		.ascii	"audio_lsb\000"
+ 1275      6F5F6C73 
+ 1275      6200
+ 1276              	.LASF5:
+ 1277 0174 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1277      20756E73 
+ 1277      69676E65 
+ 1277      6420696E 
+ 1277      7400
+ 1278              	.LASF13:
+ 1279 0186 696E7433 		.ascii	"int32\000"
+ 1279      3200
+ 1280              	.LASF4:
+ 1281 018c 6C6F6E67 		.ascii	"long int\000"
+ 1281      20696E74 
+ 1281      00
+ 1282              	.LASF21:
+ 1283 0195 50574D69 		.ascii	"PWMin\000"
+ 1283      6E00
+ 1284              	.LASF24:
+ 1285 019b 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1285      52784275 
+ 1285      66666572 
+ 1285      00
+ 1286              	.LASF1:
+ 1287 01a8 756E7369 		.ascii	"unsigned char\000"
+ 1287      676E6564 
+ 1287      20636861 
+ 1287      7200
+ 1288              	.LASF45:
+ 1289 01b6 50574D5F 		.ascii	"PWM_Set\000"
+ 1289      53657400 
+ 1290              	.LASF15:
+ 1291 01be 646F7562 		.ascii	"double\000"
+ 1291      6C6500
+ 1292              	.LASF12:
+ 1293 01c5 75696E74 		.ascii	"uint16\000"
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPXmHMV.s 			page 29
+
+
+ 1293      313600
+ 1294              	.LASF18:
+ 1295 01cc 6D61696E 		.ascii	"main\000"
+ 1295      00
+ 1296              	.LASF25:
+ 1297 01d1 4249545F 		.ascii	"BIT_MASK_CTRL\000"
+ 1297      4D41534B 
+ 1297      5F435452 
+ 1297      4C00
+ 1298              	.LASF32:
+ 1299 01df 4D41534B 		.ascii	"MASK_EFFECT\000"
+ 1299      5F454646 
+ 1299      45435400 
+ 1300              	.LASF8:
+ 1301 01eb 756E7369 		.ascii	"unsigned int\000"
+ 1301      676E6564 
+ 1301      20696E74 
+ 1301      00
+ 1302              	.LASF39:
+ 1303 01f8 4652515F 		.ascii	"FRQ_CTRL\000"
+ 1303      4354524C 
+ 1303      00
+ 1304              	.LASF7:
+ 1305 0201 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1305      206C6F6E 
+ 1305      6720756E 
+ 1305      7369676E 
+ 1305      65642069 
+ 1306              	.LASF33:
+ 1307 0218 5341525F 		.ascii	"SAR_ADCResultArray\000"
+ 1307      41444352 
+ 1307      6573756C 
+ 1307      74417272 
+ 1307      617900
+ 1308              	.LASF38:
+ 1309 022b 61756469 		.ascii	"audio_msb\000"
+ 1309      6F5F6D73 
+ 1309      6200
+ 1310              	.LASF17:
+ 1311 0235 73697A65 		.ascii	"sizetype\000"
+ 1311      74797065 
+ 1311      00
+ 1312              	.LASF6:
+ 1313 023e 6C6F6E67 		.ascii	"long long int\000"
+ 1313      206C6F6E 
+ 1313      6720696E 
+ 1313      7400
+ 1314              	.LASF41:
+ 1315 024c 6D61696E 		.ascii	"main.c\000"
+ 1315      2E6300
+ 1316              	.LASF16:
+ 1317 0253 63686172 		.ascii	"char\000"
+ 1317      00
+ 1318              	.LASF28:
+ 1319 0258 4F4C445F 		.ascii	"OLD_DIV_MASK_DEPTH\000"
+ 1319      4449565F 
+ 1319      4D41534B 
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccPXmHMV.s 			page 30
+
+
+ 1319      5F444550 
+ 1319      544800
+ 1320              	.LASF27:
+ 1321 026b 4F4C445F 		.ascii	"OLD_BIT_MASK_DEPTH\000"
+ 1321      4249545F 
+ 1321      4D41534B 
+ 1321      5F444550 
+ 1321      544800
+ 1322              	.LASF30:
+ 1323 027e 4D41534B 		.ascii	"MASK_CTRL\000"
+ 1323      5F435452 
+ 1323      4C00
+ 1324              	.LASF2:
+ 1325 0288 73686F72 		.ascii	"short int\000"
+ 1325      7420696E 
+ 1325      7400
+ 1326              	.LASF44:
+ 1327 0292 50574D5F 		.ascii	"PWM_Start\000"
+ 1327      53746172 
+ 1327      7400
+ 1328              	.LASF35:
+ 1329 029c 61756469 		.ascii	"audio_result\000"
+ 1329      6F5F7265 
+ 1329      73756C74 
+ 1329      00
+ 1330              	.LASF20:
+ 1331 02a9 64657074 		.ascii	"depth\000"
+ 1331      6800
+ 1332              	.LASF19:
+ 1333 02af 45666665 		.ascii	"Effect\000"
+ 1333      637400
+ 1334              	.LASF0:
+ 1335 02b6 7369676E 		.ascii	"signed char\000"
+ 1335      65642063 
+ 1335      68617200 
+ 1336              	.LASF3:
+ 1337 02c2 73686F72 		.ascii	"short unsigned int\000"
+ 1337      7420756E 
+ 1337      7369676E 
+ 1337      65642069 
+ 1337      6E7400
+ 1338              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

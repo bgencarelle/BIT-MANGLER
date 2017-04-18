@@ -1,5 +1,5 @@
 -- Project:   ADC_DAC
--- Generated: 04/15/2017 13:41:20
+-- Generated: 04/17/2017 22:17:48
 -- PSoC Creator  4.0 Update 1
 
 ENTITY ADC_DAC IS
@@ -27,7 +27,6 @@ END ADC_DAC;
 
 ARCHITECTURE __DEFAULT__ OF ADC_DAC IS
     SIGNAL ADC_CLK : bit;
-    ATTRIBUTE udbclken_assigned OF ADC_CLK : SIGNAL IS "True";
     ATTRIBUTE global_signal OF ADC_CLK : SIGNAL IS true;
     SIGNAL ADC_CLK_local : bit;
     SIGNAL ADC_DIV_Q_0 : bit;
@@ -55,6 +54,7 @@ ARCHITECTURE __DEFAULT__ OF ADC_DAC IS
     SIGNAL ClockBlock_1k : bit;
     SIGNAL ClockBlock_32k : bit;
     SIGNAL ClockBlock_BUS_CLK : bit;
+    ATTRIBUTE udbclken_assigned OF ClockBlock_BUS_CLK : SIGNAL IS "True";
     ATTRIBUTE global_signal OF ClockBlock_BUS_CLK : SIGNAL IS true;
     SIGNAL ClockBlock_BUS_CLK_local : bit;
     SIGNAL ClockBlock_ILO : bit;
@@ -63,6 +63,8 @@ ARCHITECTURE __DEFAULT__ OF ADC_DAC IS
     SIGNAL ClockBlock_PLL_OUT : bit;
     SIGNAL ClockBlock_XTAL : bit;
     SIGNAL ClockBlock_XTAL_32KHZ : bit;
+    SIGNAL DIV_AMT_CONTROL(0)__PA : bit;
+    SIGNAL DIV_DEPTH_CONTROL(0)__PA : bit;
     SIGNAL DIV_MASK_BUS_0 : bit;
     SIGNAL DIV_MASK_BUS_1 : bit;
     SIGNAL DIV_MASK_BUS_10 : bit;
@@ -75,10 +77,9 @@ ARCHITECTURE __DEFAULT__ OF ADC_DAC IS
     SIGNAL DIV_MASK_BUS_7 : bit;
     SIGNAL DIV_MASK_BUS_8 : bit;
     SIGNAL DIV_MASK_BUS_9 : bit;
-    SIGNAL DIV_MUX_CONTROL(0)__PA : bit;
     SIGNAL Dedicated_Output_1__PA : bit;
     SIGNAL Dedicated_Output__PA : bit;
-    SIGNAL MASK_OFF_CONTROL(0)__PA : bit;
+    SIGNAL MASK_CONTROL(0)__PA : bit;
     SIGNAL MISO_IN(0)__PA : bit;
     SIGNAL MOSI_OUT(0)__PA : bit;
     SIGNAL MUX_BUS_0 : bit;
@@ -98,13 +99,12 @@ ARCHITECTURE __DEFAULT__ OF ADC_DAC IS
     SIGNAL Net_1326 : bit;
     SIGNAL Net_1327 : bit;
     SIGNAL Net_1328 : bit;
+    SIGNAL Net_29076 : bit;
+    SIGNAL Net_29130 : bit;
     SIGNAL Net_576 : bit;
-    SIGNAL Net_5999 : bit;
     SIGNAL Net_6025 : bit;
     SIGNAL Net_6026 : bit;
     SIGNAL Net_6027 : bit;
-    SIGNAL Net_6028 : bit;
-    SIGNAL PWM_1_CONTROL(0)__PA : bit;
     SIGNAL PWM_CK : bit;
     SIGNAL SAMPLE_RATE_CONTROL(0)__PA : bit;
     SIGNAL SCLK_OUT(0)__PA : bit;
@@ -235,6 +235,10 @@ ARCHITECTURE __DEFAULT__ OF ADC_DAC IS
     SIGNAL \ADC_SAR_Seq:ch_addr_3\ : bit;
     SIGNAL \ADC_SAR_Seq:ch_addr_4\ : bit;
     SIGNAL \ADC_SAR_Seq:ch_addr_5\ : bit;
+    SIGNAL \ADC_SAR_Seq:clock\ : bit;
+    ATTRIBUTE udbclken_assigned OF \ADC_SAR_Seq:clock\ : SIGNAL IS "True";
+    ATTRIBUTE global_signal OF \ADC_SAR_Seq:clock\ : SIGNAL IS true;
+    SIGNAL \ADC_SAR_Seq:clock_local\ : bit;
     SIGNAL \ADC_SAR_Seq:nrq\ : bit;
     SIGNAL \DIV_MASK_MSB:control_4\ : bit;
     SIGNAL \DIV_MASK_MSB:control_5\ : bit;
@@ -259,11 +263,7 @@ ARCHITECTURE __DEFAULT__ OF ADC_DAC IS
     SIGNAL \PWM_10:PWMUDB:control_5\ : bit;
     SIGNAL \PWM_10:PWMUDB:control_6\ : bit;
     SIGNAL \PWM_10:PWMUDB:control_7\ : bit;
-    SIGNAL \PWM_10:PWMUDB:prevCompare1\ : bit;
     SIGNAL \PWM_10:PWMUDB:runmode_enable\ : bit;
-    SIGNAL \PWM_10:PWMUDB:status_0\ : bit;
-    SIGNAL \PWM_10:PWMUDB:status_2\ : bit;
-    SIGNAL \PWM_10:PWMUDB:status_3\ : bit;
     SIGNAL \PWM_10:PWMUDB:tc_i\ : bit;
     SIGNAL \PWM_11:PWMUDB:cmp1_eq\ : bit;
     SIGNAL \PWM_11:PWMUDB:cmp1_less\ : bit;
@@ -275,11 +275,7 @@ ARCHITECTURE __DEFAULT__ OF ADC_DAC IS
     SIGNAL \PWM_11:PWMUDB:control_5\ : bit;
     SIGNAL \PWM_11:PWMUDB:control_6\ : bit;
     SIGNAL \PWM_11:PWMUDB:control_7\ : bit;
-    SIGNAL \PWM_11:PWMUDB:prevCompare1\ : bit;
     SIGNAL \PWM_11:PWMUDB:runmode_enable\ : bit;
-    SIGNAL \PWM_11:PWMUDB:status_0\ : bit;
-    SIGNAL \PWM_11:PWMUDB:status_2\ : bit;
-    SIGNAL \PWM_11:PWMUDB:status_3\ : bit;
     SIGNAL \PWM_11:PWMUDB:tc_i\ : bit;
     SIGNAL \PWM_4:PWMUDB:cmp1_eq\ : bit;
     SIGNAL \PWM_4:PWMUDB:cmp1_less\ : bit;
@@ -291,11 +287,7 @@ ARCHITECTURE __DEFAULT__ OF ADC_DAC IS
     SIGNAL \PWM_4:PWMUDB:control_5\ : bit;
     SIGNAL \PWM_4:PWMUDB:control_6\ : bit;
     SIGNAL \PWM_4:PWMUDB:control_7\ : bit;
-    SIGNAL \PWM_4:PWMUDB:prevCompare1\ : bit;
     SIGNAL \PWM_4:PWMUDB:runmode_enable\ : bit;
-    SIGNAL \PWM_4:PWMUDB:status_0\ : bit;
-    SIGNAL \PWM_4:PWMUDB:status_2\ : bit;
-    SIGNAL \PWM_4:PWMUDB:status_3\ : bit;
     SIGNAL \PWM_4:PWMUDB:tc_i\ : bit;
     SIGNAL \PWM_5:PWMUDB:cmp1_eq\ : bit;
     SIGNAL \PWM_5:PWMUDB:cmp1_less\ : bit;
@@ -307,11 +299,7 @@ ARCHITECTURE __DEFAULT__ OF ADC_DAC IS
     SIGNAL \PWM_5:PWMUDB:control_5\ : bit;
     SIGNAL \PWM_5:PWMUDB:control_6\ : bit;
     SIGNAL \PWM_5:PWMUDB:control_7\ : bit;
-    SIGNAL \PWM_5:PWMUDB:prevCompare1\ : bit;
     SIGNAL \PWM_5:PWMUDB:runmode_enable\ : bit;
-    SIGNAL \PWM_5:PWMUDB:status_0\ : bit;
-    SIGNAL \PWM_5:PWMUDB:status_2\ : bit;
-    SIGNAL \PWM_5:PWMUDB:status_3\ : bit;
     SIGNAL \PWM_5:PWMUDB:tc_i\ : bit;
     SIGNAL \PWM_6:PWMUDB:cmp1_eq\ : bit;
     SIGNAL \PWM_6:PWMUDB:cmp1_less\ : bit;
@@ -323,11 +311,7 @@ ARCHITECTURE __DEFAULT__ OF ADC_DAC IS
     SIGNAL \PWM_6:PWMUDB:control_5\ : bit;
     SIGNAL \PWM_6:PWMUDB:control_6\ : bit;
     SIGNAL \PWM_6:PWMUDB:control_7\ : bit;
-    SIGNAL \PWM_6:PWMUDB:prevCompare1\ : bit;
     SIGNAL \PWM_6:PWMUDB:runmode_enable\ : bit;
-    SIGNAL \PWM_6:PWMUDB:status_0\ : bit;
-    SIGNAL \PWM_6:PWMUDB:status_2\ : bit;
-    SIGNAL \PWM_6:PWMUDB:status_3\ : bit;
     SIGNAL \PWM_6:PWMUDB:tc_i\ : bit;
     SIGNAL \PWM_7:PWMUDB:cmp1_eq\ : bit;
     SIGNAL \PWM_7:PWMUDB:cmp1_less\ : bit;
@@ -339,11 +323,7 @@ ARCHITECTURE __DEFAULT__ OF ADC_DAC IS
     SIGNAL \PWM_7:PWMUDB:control_5\ : bit;
     SIGNAL \PWM_7:PWMUDB:control_6\ : bit;
     SIGNAL \PWM_7:PWMUDB:control_7\ : bit;
-    SIGNAL \PWM_7:PWMUDB:prevCompare1\ : bit;
     SIGNAL \PWM_7:PWMUDB:runmode_enable\ : bit;
-    SIGNAL \PWM_7:PWMUDB:status_0\ : bit;
-    SIGNAL \PWM_7:PWMUDB:status_2\ : bit;
-    SIGNAL \PWM_7:PWMUDB:status_3\ : bit;
     SIGNAL \PWM_7:PWMUDB:tc_i\ : bit;
     SIGNAL \PWM_8:PWMUDB:cmp1_less\ : bit;
     SIGNAL \PWM_8:PWMUDB:control_0\ : bit;
@@ -354,11 +334,7 @@ ARCHITECTURE __DEFAULT__ OF ADC_DAC IS
     SIGNAL \PWM_8:PWMUDB:control_5\ : bit;
     SIGNAL \PWM_8:PWMUDB:control_6\ : bit;
     SIGNAL \PWM_8:PWMUDB:control_7\ : bit;
-    SIGNAL \PWM_8:PWMUDB:prevCompare1\ : bit;
     SIGNAL \PWM_8:PWMUDB:runmode_enable\ : bit;
-    SIGNAL \PWM_8:PWMUDB:status_0\ : bit;
-    SIGNAL \PWM_8:PWMUDB:status_2\ : bit;
-    SIGNAL \PWM_8:PWMUDB:status_3\ : bit;
     SIGNAL \PWM_8:PWMUDB:tc_i\ : bit;
     SIGNAL \PWM_9:PWMUDB:cmp1_less\ : bit;
     SIGNAL \PWM_9:PWMUDB:control_0\ : bit;
@@ -369,11 +345,7 @@ ARCHITECTURE __DEFAULT__ OF ADC_DAC IS
     SIGNAL \PWM_9:PWMUDB:control_5\ : bit;
     SIGNAL \PWM_9:PWMUDB:control_6\ : bit;
     SIGNAL \PWM_9:PWMUDB:control_7\ : bit;
-    SIGNAL \PWM_9:PWMUDB:prevCompare1\ : bit;
     SIGNAL \PWM_9:PWMUDB:runmode_enable\ : bit;
-    SIGNAL \PWM_9:PWMUDB:status_0\ : bit;
-    SIGNAL \PWM_9:PWMUDB:status_2\ : bit;
-    SIGNAL \PWM_9:PWMUDB:status_3\ : bit;
     SIGNAL \PWM_9:PWMUDB:tc_i\ : bit;
     SIGNAL \PWM_ADC_CK:Net_54\ : bit;
     SIGNAL \PWM_ADC_CK:Net_63\ : bit;
@@ -433,10 +405,10 @@ ARCHITECTURE __DEFAULT__ OF ADC_DAC IS
     ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active_split\ : LABEL IS "macrocell1";
     ATTRIBUTE lib_model OF AUDIO_IN(0) : LABEL IS "iocell1";
     ATTRIBUTE Location OF AUDIO_IN(0) : LABEL IS "P4[7]";
-    ATTRIBUTE lib_model OF DIV_MUX_CONTROL(0) : LABEL IS "iocell2";
-    ATTRIBUTE Location OF DIV_MUX_CONTROL(0) : LABEL IS "P4[2]";
-    ATTRIBUTE lib_model OF MASK_OFF_CONTROL(0) : LABEL IS "iocell3";
-    ATTRIBUTE Location OF MASK_OFF_CONTROL(0) : LABEL IS "P4[4]";
+    ATTRIBUTE lib_model OF DIV_AMT_CONTROL(0) : LABEL IS "iocell2";
+    ATTRIBUTE Location OF DIV_AMT_CONTROL(0) : LABEL IS "P4[2]";
+    ATTRIBUTE lib_model OF DIV_DEPTH_CONTROL(0) : LABEL IS "iocell3";
+    ATTRIBUTE Location OF DIV_DEPTH_CONTROL(0) : LABEL IS "P4[1]";
     ATTRIBUTE lib_model OF MOSI_OUT(0) : LABEL IS "iocell4";
     ATTRIBUTE Location OF MOSI_OUT(0) : LABEL IS "P12[6]";
     ATTRIBUTE lib_model OF SAMPLE_RATE_CONTROL(0) : LABEL IS "iocell5";
@@ -447,8 +419,8 @@ ARCHITECTURE __DEFAULT__ OF ADC_DAC IS
     ATTRIBUTE Location OF SCLK_OUT(0) : LABEL IS "P12[5]";
     ATTRIBUTE lib_model OF SS_OUT(0) : LABEL IS "iocell8";
     ATTRIBUTE Location OF SS_OUT(0) : LABEL IS "P12[4]";
-    ATTRIBUTE lib_model OF PWM_1_CONTROL(0) : LABEL IS "iocell9";
-    ATTRIBUTE Location OF PWM_1_CONTROL(0) : LABEL IS "P4[6]";
+    ATTRIBUTE lib_model OF MASK_CONTROL(0) : LABEL IS "iocell9";
+    ATTRIBUTE Location OF MASK_CONTROL(0) : LABEL IS "P0[4]";
     ATTRIBUTE lib_model OF \SPI_DAC:BSPIM:load_rx_data\ : LABEL IS "macrocell2";
     ATTRIBUTE lib_model OF \SPI_DAC:BSPIM:tx_status_0\ : LABEL IS "macrocell3";
     ATTRIBUTE lib_model OF \SPI_DAC:BSPIM:tx_status_4\ : LABEL IS "macrocell4";
@@ -465,19 +437,11 @@ ARCHITECTURE __DEFAULT__ OF ADC_DAC IS
     ATTRIBUTE lib_model OF MUX_BUS_3 : LABEL IS "macrocell15";
     ATTRIBUTE lib_model OF MUX_BUS_6 : LABEL IS "macrocell16";
     ATTRIBUTE lib_model OF MUX_BUS_4 : LABEL IS "macrocell17";
-    ATTRIBUTE lib_model OF \PWM_4:PWMUDB:status_2\ : LABEL IS "macrocell18";
-    ATTRIBUTE lib_model OF \PWM_5:PWMUDB:status_2\ : LABEL IS "macrocell19";
-    ATTRIBUTE lib_model OF \PWM_11:PWMUDB:status_2\ : LABEL IS "macrocell20";
-    ATTRIBUTE lib_model OF \PWM_10:PWMUDB:status_2\ : LABEL IS "macrocell21";
-    ATTRIBUTE lib_model OF \PWM_7:PWMUDB:status_2\ : LABEL IS "macrocell22";
-    ATTRIBUTE lib_model OF \PWM_9:PWMUDB:status_2\ : LABEL IS "macrocell23";
-    ATTRIBUTE lib_model OF \PWM_8:PWMUDB:status_2\ : LABEL IS "macrocell24";
-    ATTRIBUTE lib_model OF \PWM_6:PWMUDB:status_2\ : LABEL IS "macrocell25";
-    ATTRIBUTE lib_model OF MUX_BUS_2 : LABEL IS "macrocell26";
-    ATTRIBUTE lib_model OF MUX_BUS_1 : LABEL IS "macrocell27";
+    ATTRIBUTE lib_model OF MUX_BUS_2 : LABEL IS "macrocell18";
+    ATTRIBUTE lib_model OF MUX_BUS_1 : LABEL IS "macrocell19";
     ATTRIBUTE Location OF \ADC_SAR_1:ADC_SAR\ : LABEL IS "F(SAR,1)";
     ATTRIBUTE Location OF \Opamp_1:ABuf\ : LABEL IS "F(OpAmp,1)";
-    ATTRIBUTE lib_model OF __ONE__ : LABEL IS "macrocell28";
+    ATTRIBUTE lib_model OF __ONE__ : LABEL IS "macrocell20";
     ATTRIBUTE lib_model OF \SPI_DAC:BSPIM:TxStsReg\ : LABEL IS "statusicell1";
     ATTRIBUTE lib_model OF \SPI_DAC:BSPIM:RxStsReg\ : LABEL IS "statusicell2";
     ATTRIBUTE lib_model OF \SPI_DAC:BSPIM:sR16:Dp:u0\ : LABEL IS "datapathcell1";
@@ -491,155 +455,131 @@ ARCHITECTURE __DEFAULT__ OF ADC_DAC IS
     ATTRIBUTE lib_model OF \DIV_MASK_MSB:Sync:ctrl_reg\ : LABEL IS "controlcell2";
     ATTRIBUTE lib_model OF \DIV_MASK_LSB:Sync:ctrl_reg\ : LABEL IS "controlcell3";
     ATTRIBUTE lib_model OF \PWM_4:PWMUDB:genblk1:ctrlreg\ : LABEL IS "controlcell4";
-    ATTRIBUTE lib_model OF \PWM_4:PWMUDB:genblk8:stsreg\ : LABEL IS "statusicell3";
     ATTRIBUTE lib_model OF \PWM_4:PWMUDB:sP8:pwmdp:u0\ : LABEL IS "datapathcell3";
     ATTRIBUTE lib_model OF \PWM_5:PWMUDB:genblk1:ctrlreg\ : LABEL IS "controlcell5";
-    ATTRIBUTE lib_model OF \PWM_5:PWMUDB:genblk8:stsreg\ : LABEL IS "statusicell4";
     ATTRIBUTE lib_model OF \PWM_5:PWMUDB:sP8:pwmdp:u0\ : LABEL IS "datapathcell4";
     ATTRIBUTE lib_model OF \PWM_11:PWMUDB:genblk1:ctrlreg\ : LABEL IS "controlcell6";
-    ATTRIBUTE lib_model OF \PWM_11:PWMUDB:genblk8:stsreg\ : LABEL IS "statusicell5";
     ATTRIBUTE lib_model OF \PWM_11:PWMUDB:sP8:pwmdp:u0\ : LABEL IS "datapathcell5";
     ATTRIBUTE lib_model OF \PWM_10:PWMUDB:genblk1:ctrlreg\ : LABEL IS "controlcell7";
-    ATTRIBUTE lib_model OF \PWM_10:PWMUDB:genblk8:stsreg\ : LABEL IS "statusicell6";
     ATTRIBUTE lib_model OF \PWM_10:PWMUDB:sP8:pwmdp:u0\ : LABEL IS "datapathcell6";
     ATTRIBUTE lib_model OF \PWM_7:PWMUDB:genblk1:ctrlreg\ : LABEL IS "controlcell8";
-    ATTRIBUTE lib_model OF \PWM_7:PWMUDB:genblk8:stsreg\ : LABEL IS "statusicell7";
     ATTRIBUTE lib_model OF \PWM_7:PWMUDB:sP8:pwmdp:u0\ : LABEL IS "datapathcell7";
     ATTRIBUTE lib_model OF \PWM_9:PWMUDB:genblk1:ctrlreg\ : LABEL IS "controlcell9";
-    ATTRIBUTE lib_model OF \PWM_9:PWMUDB:genblk8:stsreg\ : LABEL IS "statusicell8";
     ATTRIBUTE lib_model OF \PWM_9:PWMUDB:sP8:pwmdp:u0\ : LABEL IS "datapathcell8";
     ATTRIBUTE lib_model OF \PWM_8:PWMUDB:genblk1:ctrlreg\ : LABEL IS "controlcell10";
-    ATTRIBUTE lib_model OF \PWM_8:PWMUDB:genblk8:stsreg\ : LABEL IS "statusicell9";
     ATTRIBUTE lib_model OF \PWM_8:PWMUDB:sP8:pwmdp:u0\ : LABEL IS "datapathcell9";
     ATTRIBUTE lib_model OF \PWM_6:PWMUDB:genblk1:ctrlreg\ : LABEL IS "controlcell11";
-    ATTRIBUTE lib_model OF \PWM_6:PWMUDB:genblk8:stsreg\ : LABEL IS "statusicell10";
     ATTRIBUTE lib_model OF \PWM_6:PWMUDB:sP8:pwmdp:u0\ : LABEL IS "datapathcell10";
     ATTRIBUTE lib_model OF \ADC_1_OUT_MSB:Sync:ctrl_reg\ : LABEL IS "controlcell12";
     ATTRIBUTE lib_model OF \ADC_1_OUT_LSB:Sync:ctrl_reg\ : LABEL IS "controlcell13";
     ATTRIBUTE lib_model OF \DAC_IN_MSB:sts:sts_reg\ : LABEL IS "statuscell2";
     ATTRIBUTE lib_model OF \DAC_IN_LSB:sts:sts_reg\ : LABEL IS "statuscell3";
-    ATTRIBUTE lib_model OF Net_6027 : LABEL IS "macrocell29";
-    ATTRIBUTE lib_model OF \SPI_DAC:BSPIM:state_2\ : LABEL IS "macrocell30";
-    ATTRIBUTE lib_model OF \SPI_DAC:BSPIM:state_1\ : LABEL IS "macrocell31";
-    ATTRIBUTE lib_model OF \SPI_DAC:BSPIM:state_0\ : LABEL IS "macrocell32";
-    ATTRIBUTE lib_model OF Net_6025 : LABEL IS "macrocell33";
-    ATTRIBUTE lib_model OF \SPI_DAC:BSPIM:load_cond\ : LABEL IS "macrocell34";
-    ATTRIBUTE lib_model OF \SPI_DAC:BSPIM:ld_ident\ : LABEL IS "macrocell35";
-    ATTRIBUTE lib_model OF \SPI_DAC:BSPIM:cnt_enable\ : LABEL IS "macrocell36";
-    ATTRIBUTE lib_model OF Net_6026 : LABEL IS "macrocell37";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\ : LABEL IS "macrocell38";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\ : LABEL IS "macrocell39";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_3\ : LABEL IS "macrocell40";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_2\ : LABEL IS "macrocell41";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_1\ : LABEL IS "macrocell42";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_0\ : LABEL IS "macrocell43";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_0\ : LABEL IS "macrocell44";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_1\ : LABEL IS "macrocell45";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_2\ : LABEL IS "macrocell46";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_3\ : LABEL IS "macrocell47";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_4\ : LABEL IS "macrocell48";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_5\ : LABEL IS "macrocell49";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_6\ : LABEL IS "macrocell50";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_7\ : LABEL IS "macrocell51";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_8\ : LABEL IS "macrocell52";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_9\ : LABEL IS "macrocell53";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_10\ : LABEL IS "macrocell54";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_11\ : LABEL IS "macrocell55";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_12\ : LABEL IS "macrocell56";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_13\ : LABEL IS "macrocell57";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_14\ : LABEL IS "macrocell58";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_15\ : LABEL IS "macrocell59";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_16\ : LABEL IS "macrocell60";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_17\ : LABEL IS "macrocell61";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_18\ : LABEL IS "macrocell62";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_19\ : LABEL IS "macrocell63";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_20\ : LABEL IS "macrocell64";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_21\ : LABEL IS "macrocell65";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_22\ : LABEL IS "macrocell66";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_23\ : LABEL IS "macrocell67";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_24\ : LABEL IS "macrocell68";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_25\ : LABEL IS "macrocell69";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_26\ : LABEL IS "macrocell70";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_27\ : LABEL IS "macrocell71";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_28\ : LABEL IS "macrocell72";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_29\ : LABEL IS "macrocell73";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_30\ : LABEL IS "macrocell74";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_31\ : LABEL IS "macrocell75";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_32\ : LABEL IS "macrocell76";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_33\ : LABEL IS "macrocell77";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_34\ : LABEL IS "macrocell78";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_35\ : LABEL IS "macrocell79";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_36\ : LABEL IS "macrocell80";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_37\ : LABEL IS "macrocell81";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_38\ : LABEL IS "macrocell82";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_39\ : LABEL IS "macrocell83";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_40\ : LABEL IS "macrocell84";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_41\ : LABEL IS "macrocell85";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_42\ : LABEL IS "macrocell86";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_43\ : LABEL IS "macrocell87";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_44\ : LABEL IS "macrocell88";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_45\ : LABEL IS "macrocell89";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_46\ : LABEL IS "macrocell90";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_47\ : LABEL IS "macrocell91";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_48\ : LABEL IS "macrocell92";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_49\ : LABEL IS "macrocell93";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_50\ : LABEL IS "macrocell94";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_51\ : LABEL IS "macrocell95";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_52\ : LABEL IS "macrocell96";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_53\ : LABEL IS "macrocell97";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_54\ : LABEL IS "macrocell98";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_55\ : LABEL IS "macrocell99";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_56\ : LABEL IS "macrocell100";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_57\ : LABEL IS "macrocell101";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_58\ : LABEL IS "macrocell102";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_59\ : LABEL IS "macrocell103";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_60\ : LABEL IS "macrocell104";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_61\ : LABEL IS "macrocell105";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_62\ : LABEL IS "macrocell106";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_63\ : LABEL IS "macrocell107";
-    ATTRIBUTE lib_model OF Net_12630 : LABEL IS "macrocell108";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:bSAR_SEQ:bus_clk_nrq_reg\ : LABEL IS "macrocell109";
-    ATTRIBUTE lib_model OF \ADC_SAR_Seq:bSAR_SEQ:nrq_reg\ : LABEL IS "macrocell110";
-    ATTRIBUTE lib_model OF \PWM_4:PWMUDB:runmode_enable\ : LABEL IS "macrocell111";
-    ATTRIBUTE lib_model OF \PWM_4:PWMUDB:prevCompare1\ : LABEL IS "macrocell112";
-    ATTRIBUTE lib_model OF \PWM_4:PWMUDB:status_0\ : LABEL IS "macrocell113";
-    ATTRIBUTE lib_model OF ADC_DIV_Q_4 : LABEL IS "macrocell114";
-    ATTRIBUTE lib_model OF \PWM_5:PWMUDB:runmode_enable\ : LABEL IS "macrocell115";
-    ATTRIBUTE lib_model OF \PWM_5:PWMUDB:prevCompare1\ : LABEL IS "macrocell116";
-    ATTRIBUTE lib_model OF \PWM_5:PWMUDB:status_0\ : LABEL IS "macrocell117";
-    ATTRIBUTE lib_model OF ADC_DIV_Q_5 : LABEL IS "macrocell118";
-    ATTRIBUTE lib_model OF ADC_DIV_Q_3 : LABEL IS "macrocell119";
-    ATTRIBUTE lib_model OF cy_tff_3 : LABEL IS "macrocell120";
-    ATTRIBUTE lib_model OF cy_tff_2 : LABEL IS "macrocell121";
-    ATTRIBUTE lib_model OF ADC_DIV_Q_0 : LABEL IS "macrocell122";
-    ATTRIBUTE lib_model OF \PWM_11:PWMUDB:runmode_enable\ : LABEL IS "macrocell123";
-    ATTRIBUTE lib_model OF \PWM_11:PWMUDB:prevCompare1\ : LABEL IS "macrocell124";
-    ATTRIBUTE lib_model OF \PWM_11:PWMUDB:status_0\ : LABEL IS "macrocell125";
-    ATTRIBUTE lib_model OF ADC_DIV_Q_11 : LABEL IS "macrocell126";
-    ATTRIBUTE lib_model OF \PWM_10:PWMUDB:runmode_enable\ : LABEL IS "macrocell127";
-    ATTRIBUTE lib_model OF \PWM_10:PWMUDB:prevCompare1\ : LABEL IS "macrocell128";
-    ATTRIBUTE lib_model OF \PWM_10:PWMUDB:status_0\ : LABEL IS "macrocell129";
-    ATTRIBUTE lib_model OF ADC_DIV_Q_10 : LABEL IS "macrocell130";
-    ATTRIBUTE lib_model OF \PWM_7:PWMUDB:runmode_enable\ : LABEL IS "macrocell131";
-    ATTRIBUTE lib_model OF \PWM_7:PWMUDB:prevCompare1\ : LABEL IS "macrocell132";
-    ATTRIBUTE lib_model OF \PWM_7:PWMUDB:status_0\ : LABEL IS "macrocell133";
-    ATTRIBUTE lib_model OF ADC_DIV_Q_7 : LABEL IS "macrocell134";
-    ATTRIBUTE lib_model OF \PWM_9:PWMUDB:runmode_enable\ : LABEL IS "macrocell135";
-    ATTRIBUTE lib_model OF \PWM_9:PWMUDB:prevCompare1\ : LABEL IS "macrocell136";
-    ATTRIBUTE lib_model OF \PWM_9:PWMUDB:status_0\ : LABEL IS "macrocell137";
-    ATTRIBUTE lib_model OF ADC_DIV_Q_9 : LABEL IS "macrocell138";
-    ATTRIBUTE lib_model OF \PWM_8:PWMUDB:runmode_enable\ : LABEL IS "macrocell139";
+    ATTRIBUTE lib_model OF Net_29130 : LABEL IS "macrocell21";
+    ATTRIBUTE lib_model OF \SPI_DAC:BSPIM:state_2\ : LABEL IS "macrocell22";
+    ATTRIBUTE lib_model OF \SPI_DAC:BSPIM:state_1\ : LABEL IS "macrocell23";
+    ATTRIBUTE lib_model OF \SPI_DAC:BSPIM:state_0\ : LABEL IS "macrocell24";
+    ATTRIBUTE lib_model OF Net_6025 : LABEL IS "macrocell25";
+    ATTRIBUTE lib_model OF \SPI_DAC:BSPIM:load_cond\ : LABEL IS "macrocell26";
+    ATTRIBUTE lib_model OF \SPI_DAC:BSPIM:ld_ident\ : LABEL IS "macrocell27";
+    ATTRIBUTE lib_model OF \SPI_DAC:BSPIM:cnt_enable\ : LABEL IS "macrocell28";
+    ATTRIBUTE lib_model OF Net_6026 : LABEL IS "macrocell29";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\ : LABEL IS "macrocell30";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\ : LABEL IS "macrocell31";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_3\ : LABEL IS "macrocell32";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_2\ : LABEL IS "macrocell33";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_1\ : LABEL IS "macrocell34";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_0\ : LABEL IS "macrocell35";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_0\ : LABEL IS "macrocell36";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_1\ : LABEL IS "macrocell37";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_2\ : LABEL IS "macrocell38";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_3\ : LABEL IS "macrocell39";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_4\ : LABEL IS "macrocell40";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_5\ : LABEL IS "macrocell41";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_6\ : LABEL IS "macrocell42";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_7\ : LABEL IS "macrocell43";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_8\ : LABEL IS "macrocell44";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_9\ : LABEL IS "macrocell45";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_10\ : LABEL IS "macrocell46";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_11\ : LABEL IS "macrocell47";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_12\ : LABEL IS "macrocell48";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_13\ : LABEL IS "macrocell49";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_14\ : LABEL IS "macrocell50";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_15\ : LABEL IS "macrocell51";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_16\ : LABEL IS "macrocell52";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_17\ : LABEL IS "macrocell53";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_18\ : LABEL IS "macrocell54";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_19\ : LABEL IS "macrocell55";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_20\ : LABEL IS "macrocell56";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_21\ : LABEL IS "macrocell57";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_22\ : LABEL IS "macrocell58";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_23\ : LABEL IS "macrocell59";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_24\ : LABEL IS "macrocell60";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_25\ : LABEL IS "macrocell61";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_26\ : LABEL IS "macrocell62";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_27\ : LABEL IS "macrocell63";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_28\ : LABEL IS "macrocell64";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_29\ : LABEL IS "macrocell65";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_30\ : LABEL IS "macrocell66";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_31\ : LABEL IS "macrocell67";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_32\ : LABEL IS "macrocell68";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_33\ : LABEL IS "macrocell69";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_34\ : LABEL IS "macrocell70";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_35\ : LABEL IS "macrocell71";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_36\ : LABEL IS "macrocell72";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_37\ : LABEL IS "macrocell73";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_38\ : LABEL IS "macrocell74";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_39\ : LABEL IS "macrocell75";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_40\ : LABEL IS "macrocell76";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_41\ : LABEL IS "macrocell77";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_42\ : LABEL IS "macrocell78";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_43\ : LABEL IS "macrocell79";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_44\ : LABEL IS "macrocell80";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_45\ : LABEL IS "macrocell81";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_46\ : LABEL IS "macrocell82";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_47\ : LABEL IS "macrocell83";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_48\ : LABEL IS "macrocell84";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_49\ : LABEL IS "macrocell85";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_50\ : LABEL IS "macrocell86";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_51\ : LABEL IS "macrocell87";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_52\ : LABEL IS "macrocell88";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_53\ : LABEL IS "macrocell89";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_54\ : LABEL IS "macrocell90";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_55\ : LABEL IS "macrocell91";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_56\ : LABEL IS "macrocell92";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_57\ : LABEL IS "macrocell93";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_58\ : LABEL IS "macrocell94";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_59\ : LABEL IS "macrocell95";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_60\ : LABEL IS "macrocell96";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_61\ : LABEL IS "macrocell97";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_62\ : LABEL IS "macrocell98";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_63\ : LABEL IS "macrocell99";
+    ATTRIBUTE lib_model OF Net_12630 : LABEL IS "macrocell100";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:bSAR_SEQ:bus_clk_nrq_reg\ : LABEL IS "macrocell101";
+    ATTRIBUTE lib_model OF \ADC_SAR_Seq:bSAR_SEQ:nrq_reg\ : LABEL IS "macrocell102";
+    ATTRIBUTE lib_model OF \PWM_4:PWMUDB:runmode_enable\ : LABEL IS "macrocell103";
+    ATTRIBUTE lib_model OF ADC_DIV_Q_4 : LABEL IS "macrocell104";
+    ATTRIBUTE lib_model OF \PWM_5:PWMUDB:runmode_enable\ : LABEL IS "macrocell105";
+    ATTRIBUTE lib_model OF ADC_DIV_Q_5 : LABEL IS "macrocell106";
+    ATTRIBUTE lib_model OF ADC_DIV_Q_3 : LABEL IS "macrocell107";
+    ATTRIBUTE lib_model OF cy_tff_3 : LABEL IS "macrocell108";
+    ATTRIBUTE lib_model OF cy_tff_2 : LABEL IS "macrocell109";
+    ATTRIBUTE lib_model OF ADC_DIV_Q_0 : LABEL IS "macrocell110";
+    ATTRIBUTE lib_model OF \PWM_11:PWMUDB:runmode_enable\ : LABEL IS "macrocell111";
+    ATTRIBUTE lib_model OF ADC_DIV_Q_11 : LABEL IS "macrocell112";
+    ATTRIBUTE lib_model OF \PWM_10:PWMUDB:runmode_enable\ : LABEL IS "macrocell113";
+    ATTRIBUTE lib_model OF ADC_DIV_Q_10 : LABEL IS "macrocell114";
+    ATTRIBUTE lib_model OF \PWM_7:PWMUDB:runmode_enable\ : LABEL IS "macrocell115";
+    ATTRIBUTE lib_model OF ADC_DIV_Q_7 : LABEL IS "macrocell116";
+    ATTRIBUTE lib_model OF \PWM_9:PWMUDB:runmode_enable\ : LABEL IS "macrocell117";
+    ATTRIBUTE lib_model OF ADC_DIV_Q_9 : LABEL IS "macrocell118";
+    ATTRIBUTE lib_model OF \PWM_8:PWMUDB:runmode_enable\ : LABEL IS "macrocell119";
     ATTRIBUTE lib_model OF Dedicated_Output_1 : LABEL IS "iocell10";
     ATTRIBUTE Location OF Dedicated_Output_1 : LABEL IS "P3[6]";
-    ATTRIBUTE lib_model OF \PWM_8:PWMUDB:prevCompare1\ : LABEL IS "macrocell140";
-    ATTRIBUTE lib_model OF \PWM_8:PWMUDB:status_0\ : LABEL IS "macrocell141";
-    ATTRIBUTE lib_model OF ADC_DIV_Q_8 : LABEL IS "macrocell142";
-    ATTRIBUTE lib_model OF \PWM_6:PWMUDB:runmode_enable\ : LABEL IS "macrocell143";
+    ATTRIBUTE lib_model OF ADC_DIV_Q_8 : LABEL IS "macrocell120";
+    ATTRIBUTE lib_model OF \PWM_6:PWMUDB:runmode_enable\ : LABEL IS "macrocell121";
     ATTRIBUTE lib_model OF Dedicated_Output : LABEL IS "iocell11";
     ATTRIBUTE Location OF Dedicated_Output : LABEL IS "P0[0]";
-    ATTRIBUTE lib_model OF \PWM_6:PWMUDB:prevCompare1\ : LABEL IS "macrocell144";
-    ATTRIBUTE lib_model OF \PWM_6:PWMUDB:status_0\ : LABEL IS "macrocell145";
-    ATTRIBUTE lib_model OF ADC_DIV_Q_6 : LABEL IS "macrocell146";
+    ATTRIBUTE lib_model OF ADC_DIV_Q_6 : LABEL IS "macrocell122";
     COMPONENT abufcell
     END COMPONENT;
     COMPONENT clockblockcell
@@ -1095,6 +1035,8 @@ BEGIN
             dclk_0 => \SPI_DAC:Net_276_local\,
             dclk_glb_1 => ADC_CLK,
             dclk_1 => ADC_CLK_local,
+            dclk_glb_2 => \ADC_SAR_Seq:clock\,
+            dclk_2 => \ADC_SAR_Seq:clock_local\,
             dclk_glb_ff_1 => \ClockBlock.dclk_glb_ff_1__sig\);
 
     \LCD_Char_1:LCDPort\:logicalport
@@ -1390,7 +1332,7 @@ BEGIN
             out_clock_en => '1',
             out_reset => '0');
 
-    DIV_MUX_CONTROL:logicalport
+    DIV_AMT_CONTROL:logicalport
         GENERIC MAP(
             drive_mode => "000",
             ibuf_enabled => "0",
@@ -1461,16 +1403,16 @@ BEGIN
             out_clock_en => open,
             out_reset => open);
 
-    DIV_MUX_CONTROL(0):iocell
+    DIV_AMT_CONTROL(0):iocell
         GENERIC MAP(
             in_sync_mode => 0,
             out_sync_mode => 0,
             oe_sync_mode => 0,
-            logicalport => "DIV_MUX_CONTROL",
+            logicalport => "DIV_AMT_CONTROL",
             logicalport_pin_id => 0,
             io_capabilities => "0000000000000000000000000000000000000000000000000000000000000010")
         PORT MAP(
-            pa_out => DIV_MUX_CONTROL(0)__PA,
+            pa_out => DIV_AMT_CONTROL(0)__PA,
             oe => open,
             in_clock => open,
             pin_input => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_2\,
@@ -1480,7 +1422,7 @@ BEGIN
             out_clock_en => '1',
             out_reset => '0');
 
-    MASK_OFF_CONTROL:logicalport
+    DIV_DEPTH_CONTROL:logicalport
         GENERIC MAP(
             drive_mode => "000",
             ibuf_enabled => "0",
@@ -1551,16 +1493,16 @@ BEGIN
             out_clock_en => open,
             out_reset => open);
 
-    MASK_OFF_CONTROL(0):iocell
+    DIV_DEPTH_CONTROL(0):iocell
         GENERIC MAP(
             in_sync_mode => 0,
             out_sync_mode => 0,
             oe_sync_mode => 0,
-            logicalport => "MASK_OFF_CONTROL",
+            logicalport => "DIV_DEPTH_CONTROL",
             logicalport_pin_id => 0,
             io_capabilities => "0000000000000000000000000000000000000000000000000000000000000010")
         PORT MAP(
-            pa_out => MASK_OFF_CONTROL(0)__PA,
+            pa_out => DIV_DEPTH_CONTROL(0)__PA,
             oe => open,
             in_clock => open,
             pin_input => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_1\,
@@ -1652,7 +1594,7 @@ BEGIN
         PORT MAP(
             pa_out => MOSI_OUT(0)__PA,
             oe => open,
-            pin_input => Net_6027,
+            pin_input => Net_29130,
             pad_out => MOSI_OUT(0)_PAD,
             pad_in => MOSI_OUT(0)_PAD,
             in_clock => open,
@@ -1923,7 +1865,7 @@ BEGIN
         PORT MAP(
             pa_out => MISO_IN(0)__PA,
             oe => open,
-            fb => Net_6028,
+            fb => Net_6027,
             pad_in => MISO_IN(0)_PAD,
             in_clock => open,
             in_clock_en => '1',
@@ -2116,7 +2058,7 @@ BEGIN
             out_clock_en => '1',
             out_reset => '0');
 
-    PWM_1_CONTROL:logicalport
+    MASK_CONTROL:logicalport
         GENERIC MAP(
             drive_mode => "000",
             ibuf_enabled => "0",
@@ -2187,16 +2129,16 @@ BEGIN
             out_clock_en => open,
             out_reset => open);
 
-    PWM_1_CONTROL(0):iocell
+    MASK_CONTROL(0):iocell
         GENERIC MAP(
             in_sync_mode => 0,
             out_sync_mode => 0,
             oe_sync_mode => 0,
-            logicalport => "PWM_1_CONTROL",
+            logicalport => "MASK_CONTROL",
             logicalport_pin_id => 0,
             io_capabilities => "0000000000000000000000000000000000000000000000000000000000000010")
         PORT MAP(
-            pa_out => PWM_1_CONTROL(0)__PA,
+            pa_out => MASK_CONTROL(0)__PA,
             oe => open,
             in_clock => open,
             pin_input => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_3\,
@@ -2393,86 +2335,6 @@ BEGIN
             main_1 => ADC_OUT_BUS_4,
             main_2 => ADC_DIV_Q_4);
 
-    \PWM_4:PWMUDB:status_2\:macrocell
-        GENERIC MAP(
-            eqn_main => "(main_0 * main_1)",
-            regmode => 0,
-            clken_mode => 1)
-        PORT MAP(
-            q => \PWM_4:PWMUDB:status_2\,
-            main_0 => \PWM_4:PWMUDB:runmode_enable\,
-            main_1 => \PWM_4:PWMUDB:tc_i\);
-
-    \PWM_5:PWMUDB:status_2\:macrocell
-        GENERIC MAP(
-            eqn_main => "(main_0 * main_1)",
-            regmode => 0,
-            clken_mode => 1)
-        PORT MAP(
-            q => \PWM_5:PWMUDB:status_2\,
-            main_0 => \PWM_5:PWMUDB:runmode_enable\,
-            main_1 => \PWM_5:PWMUDB:tc_i\);
-
-    \PWM_11:PWMUDB:status_2\:macrocell
-        GENERIC MAP(
-            eqn_main => "(main_0 * main_1)",
-            regmode => 0,
-            clken_mode => 1)
-        PORT MAP(
-            q => \PWM_11:PWMUDB:status_2\,
-            main_0 => \PWM_11:PWMUDB:runmode_enable\,
-            main_1 => \PWM_11:PWMUDB:tc_i\);
-
-    \PWM_10:PWMUDB:status_2\:macrocell
-        GENERIC MAP(
-            eqn_main => "(main_0 * main_1)",
-            regmode => 0,
-            clken_mode => 1)
-        PORT MAP(
-            q => \PWM_10:PWMUDB:status_2\,
-            main_0 => \PWM_10:PWMUDB:runmode_enable\,
-            main_1 => \PWM_10:PWMUDB:tc_i\);
-
-    \PWM_7:PWMUDB:status_2\:macrocell
-        GENERIC MAP(
-            eqn_main => "(main_0 * main_1)",
-            regmode => 0,
-            clken_mode => 1)
-        PORT MAP(
-            q => \PWM_7:PWMUDB:status_2\,
-            main_0 => \PWM_7:PWMUDB:runmode_enable\,
-            main_1 => \PWM_7:PWMUDB:tc_i\);
-
-    \PWM_9:PWMUDB:status_2\:macrocell
-        GENERIC MAP(
-            eqn_main => "(main_0 * main_1)",
-            regmode => 0,
-            clken_mode => 1)
-        PORT MAP(
-            q => \PWM_9:PWMUDB:status_2\,
-            main_0 => \PWM_9:PWMUDB:runmode_enable\,
-            main_1 => \PWM_9:PWMUDB:tc_i\);
-
-    \PWM_8:PWMUDB:status_2\:macrocell
-        GENERIC MAP(
-            eqn_main => "(main_0 * main_1)",
-            regmode => 0,
-            clken_mode => 1)
-        PORT MAP(
-            q => \PWM_8:PWMUDB:status_2\,
-            main_0 => \PWM_8:PWMUDB:runmode_enable\,
-            main_1 => \PWM_8:PWMUDB:tc_i\);
-
-    \PWM_6:PWMUDB:status_2\:macrocell
-        GENERIC MAP(
-            eqn_main => "(main_0 * main_1)",
-            regmode => 0,
-            clken_mode => 1)
-        PORT MAP(
-            q => \PWM_6:PWMUDB:status_2\,
-            main_0 => \PWM_6:PWMUDB:runmode_enable\,
-            main_1 => \PWM_6:PWMUDB:tc_i\);
-
     MUX_BUS_2:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * main_1) + (main_0 * main_2)",
@@ -2530,7 +2392,7 @@ BEGIN
             vn_ctl_udb_1 => open,
             vn_ctl_udb_0 => open,
             irq => \ADC_SAR_1:Net_252\,
-            next => Net_5999,
+            next => Net_29076,
             data_out_udb_11 => \ADC_SAR_1:Net_207_11\,
             data_out_udb_10 => \ADC_SAR_1:Net_207_10\,
             data_out_udb_9 => \ADC_SAR_1:Net_207_9\,
@@ -2645,7 +2507,7 @@ BEGIN
             cs_addr_2 => \SPI_DAC:BSPIM:state_2\,
             cs_addr_1 => \SPI_DAC:BSPIM:state_1\,
             cs_addr_0 => \SPI_DAC:BSPIM:state_0\,
-            route_si => Net_6028,
+            route_si => Net_6027,
             f1_load => \SPI_DAC:BSPIM:load_rx_data\,
             busclk => ClockBlock_BUS_CLK,
             ce0 => \SPI_DAC:BSPIM:sR16:Dp:u0.ce0__sig\,
@@ -2694,7 +2556,7 @@ BEGIN
             cs_addr_2 => \SPI_DAC:BSPIM:state_2\,
             cs_addr_1 => \SPI_DAC:BSPIM:state_1\,
             cs_addr_0 => \SPI_DAC:BSPIM:state_0\,
-            route_si => Net_6028,
+            route_si => Net_6027,
             f1_load => \SPI_DAC:BSPIM:load_rx_data\,
             so_comb => \SPI_DAC:BSPIM:mosi_from_dp\,
             f0_bus_stat_comb => \SPI_DAC:BSPIM:tx_status_2\,
@@ -2724,7 +2586,7 @@ BEGIN
         GENERIC MAP(
             cy_registers => "")
         PORT MAP(
-            clk_udb => ADC_CLK_local,
+            clk_udb => \ADC_SAR_Seq:clock_local\,
             sof_udb => open,
             vp_ctl_udb_3 => open,
             vp_ctl_udb_2 => open,
@@ -2760,7 +2622,7 @@ BEGIN
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
-            clock => ADC_CLK,
+            clock => \ADC_SAR_Seq:clock\,
             control_7 => \ADC_SAR_Seq:bSAR_SEQ:control_7\,
             control_6 => \ADC_SAR_Seq:bSAR_SEQ:control_6\,
             control_5 => \ADC_SAR_Seq:bSAR_SEQ:control_5\,
@@ -2782,7 +2644,7 @@ BEGIN
             clken_inv => '0',
             clken_mode => 3)
         PORT MAP(
-            clock => ADC_CLK,
+            clock => \ADC_SAR_Seq:clock\,
             load => \ADC_SAR_Seq:bSAR_SEQ:load_period\,
             enable => \ADC_SAR_Seq:bSAR_SEQ:cnt_enable\,
             count_6 => \ADC_SAR_Seq:bSAR_SEQ:count_6\,
@@ -2803,7 +2665,7 @@ BEGIN
             clken_inv => '0',
             clken_mode => 3)
         PORT MAP(
-            clock => ADC_CLK,
+            clock => \ADC_SAR_Seq:clock\,
             status_7 => open,
             status_6 => open,
             status_5 => open,
@@ -2866,15 +2728,13 @@ BEGIN
 
     \DIV_MASK_MSB:Sync:ctrl_reg\:controlcell
         GENERIC MAP(
-            cy_ctrl_mode_0 => "00001111",
+            cy_ctrl_mode_0 => "00000000",
             cy_ctrl_mode_1 => "00000000",
-            cy_ext_reset => 1,
+            cy_ext_reset => 0,
             cy_force_order => 1,
             cy_init_value => "00000000",
-            clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
-            clock => ADC_CLK,
             control_7 => \DIV_MASK_MSB:control_7\,
             control_6 => \DIV_MASK_MSB:control_6\,
             control_5 => \DIV_MASK_MSB:control_5\,
@@ -2887,15 +2747,13 @@ BEGIN
 
     \DIV_MASK_LSB:Sync:ctrl_reg\:controlcell
         GENERIC MAP(
-            cy_ctrl_mode_0 => "11111111",
+            cy_ctrl_mode_0 => "00000000",
             cy_ctrl_mode_1 => "00000000",
-            cy_ext_reset => 1,
+            cy_ext_reset => 0,
             cy_force_order => 1,
             cy_init_value => "00000000",
-            clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
-            clock => ADC_CLK,
             control_7 => DIV_MASK_BUS_7,
             control_6 => DIV_MASK_BUS_6,
             control_5 => DIV_MASK_BUS_5,
@@ -2917,7 +2775,7 @@ BEGIN
             clken_inv => '0',
             clken_mode => 2)
         PORT MAP(
-            clock => ADC_CLK,
+            clock => ClockBlock_BUS_CLK,
             control_7 => \PWM_4:PWMUDB:control_7\,
             control_6 => \PWM_4:PWMUDB:control_6\,
             control_5 => \PWM_4:PWMUDB:control_5\,
@@ -2928,25 +2786,6 @@ BEGIN
             control_0 => \PWM_4:PWMUDB:control_0\,
             clk_en => ADC_OUT_BUS_4,
             busclk => ClockBlock_BUS_CLK);
-
-    \PWM_4:PWMUDB:genblk8:stsreg\:statusicell
-        GENERIC MAP(
-            cy_force_order => 1,
-            cy_int_mask => "1111111",
-            cy_md_select => "0100111",
-            clk_inv => '0',
-            clken_inv => '0',
-            clken_mode => 2)
-        PORT MAP(
-            clock => ADC_CLK,
-            status_6 => open,
-            status_5 => open,
-            status_4 => open,
-            status_3 => \PWM_4:PWMUDB:status_3\,
-            status_2 => \PWM_4:PWMUDB:status_2\,
-            status_1 => open,
-            status_0 => \PWM_4:PWMUDB:status_0\,
-            clk_en => ADC_OUT_BUS_4);
 
     \PWM_4:PWMUDB:sP8:pwmdp:u0\:datapathcell
         GENERIC MAP(
@@ -2977,13 +2816,12 @@ BEGIN
             clken_inv => '0',
             clken_mode => 2)
         PORT MAP(
-            clock => ADC_CLK,
+            clock => ClockBlock_BUS_CLK,
             cs_addr_2 => \PWM_4:PWMUDB:tc_i\,
             cs_addr_1 => \PWM_4:PWMUDB:runmode_enable\,
             ce0_comb => \PWM_4:PWMUDB:cmp1_eq\,
             cl0_comb => \PWM_4:PWMUDB:cmp1_less\,
             z0_comb => \PWM_4:PWMUDB:tc_i\,
-            f1_blk_stat_comb => \PWM_4:PWMUDB:status_3\,
             clk_en => ADC_OUT_BUS_4,
             busclk => ClockBlock_BUS_CLK);
 
@@ -2998,7 +2836,7 @@ BEGIN
             clken_inv => '0',
             clken_mode => 2)
         PORT MAP(
-            clock => ADC_CLK,
+            clock => ClockBlock_BUS_CLK,
             control_7 => \PWM_5:PWMUDB:control_7\,
             control_6 => \PWM_5:PWMUDB:control_6\,
             control_5 => \PWM_5:PWMUDB:control_5\,
@@ -3009,25 +2847,6 @@ BEGIN
             control_0 => \PWM_5:PWMUDB:control_0\,
             clk_en => ADC_OUT_BUS_5,
             busclk => ClockBlock_BUS_CLK);
-
-    \PWM_5:PWMUDB:genblk8:stsreg\:statusicell
-        GENERIC MAP(
-            cy_force_order => 1,
-            cy_int_mask => "1111111",
-            cy_md_select => "0100111",
-            clk_inv => '0',
-            clken_inv => '0',
-            clken_mode => 2)
-        PORT MAP(
-            clock => ADC_CLK,
-            status_6 => open,
-            status_5 => open,
-            status_4 => open,
-            status_3 => \PWM_5:PWMUDB:status_3\,
-            status_2 => \PWM_5:PWMUDB:status_2\,
-            status_1 => open,
-            status_0 => \PWM_5:PWMUDB:status_0\,
-            clk_en => ADC_OUT_BUS_5);
 
     \PWM_5:PWMUDB:sP8:pwmdp:u0\:datapathcell
         GENERIC MAP(
@@ -3058,13 +2877,12 @@ BEGIN
             clken_inv => '0',
             clken_mode => 2)
         PORT MAP(
-            clock => ADC_CLK,
+            clock => ClockBlock_BUS_CLK,
             cs_addr_2 => \PWM_5:PWMUDB:tc_i\,
             cs_addr_1 => \PWM_5:PWMUDB:runmode_enable\,
             ce0_comb => \PWM_5:PWMUDB:cmp1_eq\,
             cl0_comb => \PWM_5:PWMUDB:cmp1_less\,
             z0_comb => \PWM_5:PWMUDB:tc_i\,
-            f1_blk_stat_comb => \PWM_5:PWMUDB:status_3\,
             clk_en => ADC_OUT_BUS_5,
             busclk => ClockBlock_BUS_CLK);
 
@@ -3079,7 +2897,7 @@ BEGIN
             clken_inv => '0',
             clken_mode => 2)
         PORT MAP(
-            clock => ADC_CLK,
+            clock => ClockBlock_BUS_CLK,
             control_7 => \PWM_11:PWMUDB:control_7\,
             control_6 => \PWM_11:PWMUDB:control_6\,
             control_5 => \PWM_11:PWMUDB:control_5\,
@@ -3090,25 +2908,6 @@ BEGIN
             control_0 => \PWM_11:PWMUDB:control_0\,
             clk_en => ADC_OUT_BUS_11,
             busclk => ClockBlock_BUS_CLK);
-
-    \PWM_11:PWMUDB:genblk8:stsreg\:statusicell
-        GENERIC MAP(
-            cy_force_order => 1,
-            cy_int_mask => "1111111",
-            cy_md_select => "0100111",
-            clk_inv => '0',
-            clken_inv => '0',
-            clken_mode => 2)
-        PORT MAP(
-            clock => ADC_CLK,
-            status_6 => open,
-            status_5 => open,
-            status_4 => open,
-            status_3 => \PWM_11:PWMUDB:status_3\,
-            status_2 => \PWM_11:PWMUDB:status_2\,
-            status_1 => open,
-            status_0 => \PWM_11:PWMUDB:status_0\,
-            clk_en => ADC_OUT_BUS_11);
 
     \PWM_11:PWMUDB:sP8:pwmdp:u0\:datapathcell
         GENERIC MAP(
@@ -3139,13 +2938,12 @@ BEGIN
             clken_inv => '0',
             clken_mode => 2)
         PORT MAP(
-            clock => ADC_CLK,
+            clock => ClockBlock_BUS_CLK,
             cs_addr_2 => \PWM_11:PWMUDB:tc_i\,
             cs_addr_1 => \PWM_11:PWMUDB:runmode_enable\,
             ce0_comb => \PWM_11:PWMUDB:cmp1_eq\,
             cl0_comb => \PWM_11:PWMUDB:cmp1_less\,
             z0_comb => \PWM_11:PWMUDB:tc_i\,
-            f1_blk_stat_comb => \PWM_11:PWMUDB:status_3\,
             clk_en => ADC_OUT_BUS_11,
             busclk => ClockBlock_BUS_CLK);
 
@@ -3160,7 +2958,7 @@ BEGIN
             clken_inv => '0',
             clken_mode => 2)
         PORT MAP(
-            clock => ADC_CLK,
+            clock => ClockBlock_BUS_CLK,
             control_7 => \PWM_10:PWMUDB:control_7\,
             control_6 => \PWM_10:PWMUDB:control_6\,
             control_5 => \PWM_10:PWMUDB:control_5\,
@@ -3171,25 +2969,6 @@ BEGIN
             control_0 => \PWM_10:PWMUDB:control_0\,
             clk_en => ADC_OUT_BUS_10,
             busclk => ClockBlock_BUS_CLK);
-
-    \PWM_10:PWMUDB:genblk8:stsreg\:statusicell
-        GENERIC MAP(
-            cy_force_order => 1,
-            cy_int_mask => "1111111",
-            cy_md_select => "0100111",
-            clk_inv => '0',
-            clken_inv => '0',
-            clken_mode => 2)
-        PORT MAP(
-            clock => ADC_CLK,
-            status_6 => open,
-            status_5 => open,
-            status_4 => open,
-            status_3 => \PWM_10:PWMUDB:status_3\,
-            status_2 => \PWM_10:PWMUDB:status_2\,
-            status_1 => open,
-            status_0 => \PWM_10:PWMUDB:status_0\,
-            clk_en => ADC_OUT_BUS_10);
 
     \PWM_10:PWMUDB:sP8:pwmdp:u0\:datapathcell
         GENERIC MAP(
@@ -3220,13 +2999,12 @@ BEGIN
             clken_inv => '0',
             clken_mode => 2)
         PORT MAP(
-            clock => ADC_CLK,
+            clock => ClockBlock_BUS_CLK,
             cs_addr_2 => \PWM_10:PWMUDB:tc_i\,
             cs_addr_1 => \PWM_10:PWMUDB:runmode_enable\,
             ce0_comb => \PWM_10:PWMUDB:cmp1_eq\,
             cl0_comb => \PWM_10:PWMUDB:cmp1_less\,
             z0_comb => \PWM_10:PWMUDB:tc_i\,
-            f1_blk_stat_comb => \PWM_10:PWMUDB:status_3\,
             clk_en => ADC_OUT_BUS_10,
             busclk => ClockBlock_BUS_CLK);
 
@@ -3241,7 +3019,7 @@ BEGIN
             clken_inv => '0',
             clken_mode => 2)
         PORT MAP(
-            clock => ADC_CLK,
+            clock => ClockBlock_BUS_CLK,
             control_7 => \PWM_7:PWMUDB:control_7\,
             control_6 => \PWM_7:PWMUDB:control_6\,
             control_5 => \PWM_7:PWMUDB:control_5\,
@@ -3252,25 +3030,6 @@ BEGIN
             control_0 => \PWM_7:PWMUDB:control_0\,
             clk_en => ADC_OUT_BUS_7,
             busclk => ClockBlock_BUS_CLK);
-
-    \PWM_7:PWMUDB:genblk8:stsreg\:statusicell
-        GENERIC MAP(
-            cy_force_order => 1,
-            cy_int_mask => "1111111",
-            cy_md_select => "0100111",
-            clk_inv => '0',
-            clken_inv => '0',
-            clken_mode => 2)
-        PORT MAP(
-            clock => ADC_CLK,
-            status_6 => open,
-            status_5 => open,
-            status_4 => open,
-            status_3 => \PWM_7:PWMUDB:status_3\,
-            status_2 => \PWM_7:PWMUDB:status_2\,
-            status_1 => open,
-            status_0 => \PWM_7:PWMUDB:status_0\,
-            clk_en => ADC_OUT_BUS_7);
 
     \PWM_7:PWMUDB:sP8:pwmdp:u0\:datapathcell
         GENERIC MAP(
@@ -3301,13 +3060,12 @@ BEGIN
             clken_inv => '0',
             clken_mode => 2)
         PORT MAP(
-            clock => ADC_CLK,
+            clock => ClockBlock_BUS_CLK,
             cs_addr_2 => \PWM_7:PWMUDB:tc_i\,
             cs_addr_1 => \PWM_7:PWMUDB:runmode_enable\,
             ce0_comb => \PWM_7:PWMUDB:cmp1_eq\,
             cl0_comb => \PWM_7:PWMUDB:cmp1_less\,
             z0_comb => \PWM_7:PWMUDB:tc_i\,
-            f1_blk_stat_comb => \PWM_7:PWMUDB:status_3\,
             clk_en => ADC_OUT_BUS_7,
             busclk => ClockBlock_BUS_CLK);
 
@@ -3322,7 +3080,7 @@ BEGIN
             clken_inv => '0',
             clken_mode => 2)
         PORT MAP(
-            clock => ADC_CLK,
+            clock => ClockBlock_BUS_CLK,
             control_7 => \PWM_9:PWMUDB:control_7\,
             control_6 => \PWM_9:PWMUDB:control_6\,
             control_5 => \PWM_9:PWMUDB:control_5\,
@@ -3333,25 +3091,6 @@ BEGIN
             control_0 => \PWM_9:PWMUDB:control_0\,
             clk_en => ADC_OUT_BUS_9,
             busclk => ClockBlock_BUS_CLK);
-
-    \PWM_9:PWMUDB:genblk8:stsreg\:statusicell
-        GENERIC MAP(
-            cy_force_order => 1,
-            cy_int_mask => "1111111",
-            cy_md_select => "0100111",
-            clk_inv => '0',
-            clken_inv => '0',
-            clken_mode => 2)
-        PORT MAP(
-            clock => ADC_CLK,
-            status_6 => open,
-            status_5 => open,
-            status_4 => open,
-            status_3 => \PWM_9:PWMUDB:status_3\,
-            status_2 => \PWM_9:PWMUDB:status_2\,
-            status_1 => open,
-            status_0 => \PWM_9:PWMUDB:status_0\,
-            clk_en => ADC_OUT_BUS_9);
 
     \PWM_9:PWMUDB:sP8:pwmdp:u0\:datapathcell
         GENERIC MAP(
@@ -3382,12 +3121,11 @@ BEGIN
             clken_inv => '0',
             clken_mode => 2)
         PORT MAP(
-            clock => ADC_CLK,
+            clock => ClockBlock_BUS_CLK,
             cs_addr_2 => \PWM_9:PWMUDB:tc_i\,
             cs_addr_1 => \PWM_9:PWMUDB:runmode_enable\,
             cl0_comb => \PWM_9:PWMUDB:cmp1_less\,
             z0_comb => \PWM_9:PWMUDB:tc_i\,
-            f1_blk_stat_comb => \PWM_9:PWMUDB:status_3\,
             clk_en => ADC_OUT_BUS_9,
             busclk => ClockBlock_BUS_CLK);
 
@@ -3402,7 +3140,7 @@ BEGIN
             clken_inv => '0',
             clken_mode => 2)
         PORT MAP(
-            clock => ADC_CLK,
+            clock => ClockBlock_BUS_CLK,
             control_7 => \PWM_8:PWMUDB:control_7\,
             control_6 => \PWM_8:PWMUDB:control_6\,
             control_5 => \PWM_8:PWMUDB:control_5\,
@@ -3413,25 +3151,6 @@ BEGIN
             control_0 => \PWM_8:PWMUDB:control_0\,
             clk_en => ADC_OUT_BUS_8,
             busclk => ClockBlock_BUS_CLK);
-
-    \PWM_8:PWMUDB:genblk8:stsreg\:statusicell
-        GENERIC MAP(
-            cy_force_order => 1,
-            cy_int_mask => "1111111",
-            cy_md_select => "0100111",
-            clk_inv => '0',
-            clken_inv => '0',
-            clken_mode => 2)
-        PORT MAP(
-            clock => ADC_CLK,
-            status_6 => open,
-            status_5 => open,
-            status_4 => open,
-            status_3 => \PWM_8:PWMUDB:status_3\,
-            status_2 => \PWM_8:PWMUDB:status_2\,
-            status_1 => open,
-            status_0 => \PWM_8:PWMUDB:status_0\,
-            clk_en => ADC_OUT_BUS_8);
 
     \PWM_8:PWMUDB:sP8:pwmdp:u0\:datapathcell
         GENERIC MAP(
@@ -3462,12 +3181,11 @@ BEGIN
             clken_inv => '0',
             clken_mode => 2)
         PORT MAP(
-            clock => ADC_CLK,
+            clock => ClockBlock_BUS_CLK,
             cs_addr_2 => \PWM_8:PWMUDB:tc_i\,
             cs_addr_1 => \PWM_8:PWMUDB:runmode_enable\,
             cl0_comb => \PWM_8:PWMUDB:cmp1_less\,
             z0_comb => \PWM_8:PWMUDB:tc_i\,
-            f1_blk_stat_comb => \PWM_8:PWMUDB:status_3\,
             clk_en => ADC_OUT_BUS_8,
             busclk => ClockBlock_BUS_CLK);
 
@@ -3482,7 +3200,7 @@ BEGIN
             clken_inv => '0',
             clken_mode => 2)
         PORT MAP(
-            clock => ADC_CLK,
+            clock => ClockBlock_BUS_CLK,
             control_7 => \PWM_6:PWMUDB:control_7\,
             control_6 => \PWM_6:PWMUDB:control_6\,
             control_5 => \PWM_6:PWMUDB:control_5\,
@@ -3493,25 +3211,6 @@ BEGIN
             control_0 => \PWM_6:PWMUDB:control_0\,
             clk_en => ADC_OUT_BUS_6,
             busclk => ClockBlock_BUS_CLK);
-
-    \PWM_6:PWMUDB:genblk8:stsreg\:statusicell
-        GENERIC MAP(
-            cy_force_order => 1,
-            cy_int_mask => "1111111",
-            cy_md_select => "0100111",
-            clk_inv => '0',
-            clken_inv => '0',
-            clken_mode => 2)
-        PORT MAP(
-            clock => ADC_CLK,
-            status_6 => open,
-            status_5 => open,
-            status_4 => open,
-            status_3 => \PWM_6:PWMUDB:status_3\,
-            status_2 => \PWM_6:PWMUDB:status_2\,
-            status_1 => open,
-            status_0 => \PWM_6:PWMUDB:status_0\,
-            clk_en => ADC_OUT_BUS_6);
 
     \PWM_6:PWMUDB:sP8:pwmdp:u0\:datapathcell
         GENERIC MAP(
@@ -3542,13 +3241,12 @@ BEGIN
             clken_inv => '0',
             clken_mode => 2)
         PORT MAP(
-            clock => ADC_CLK,
+            clock => ClockBlock_BUS_CLK,
             cs_addr_2 => \PWM_6:PWMUDB:tc_i\,
             cs_addr_1 => \PWM_6:PWMUDB:runmode_enable\,
             ce0_comb => \PWM_6:PWMUDB:cmp1_eq\,
             cl0_comb => \PWM_6:PWMUDB:cmp1_less\,
             z0_comb => \PWM_6:PWMUDB:tc_i\,
-            f1_blk_stat_comb => \PWM_6:PWMUDB:status_3\,
             clk_en => ADC_OUT_BUS_6,
             busclk => ClockBlock_BUS_CLK);
 
@@ -3562,7 +3260,7 @@ BEGIN
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
-            clock => ADC_CLK,
+            clock => ClockBlock_BUS_CLK,
             control_7 => \ADC_1_OUT_MSB:control_7\,
             control_6 => \ADC_1_OUT_MSB:control_6\,
             control_5 => \ADC_1_OUT_MSB:control_5\,
@@ -3583,7 +3281,7 @@ BEGIN
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
-            clock => ADC_CLK,
+            clock => ClockBlock_BUS_CLK,
             control_7 => ADC_OUT_BUS_7,
             control_6 => ADC_OUT_BUS_6,
             control_5 => ADC_OUT_BUS_5,
@@ -3626,16 +3324,16 @@ BEGIN
             status_1 => MUX_BUS_1,
             status_0 => MUX_BUS_0);
 
-    Net_6027:macrocell
+    Net_29130:macrocell
         GENERIC MAP(
             eqn_main => "(!main_0 * !main_1 * main_3) + (!main_1 * !main_2 * !main_3) + (!main_1 * !main_3 * !main_5 * !main_6 * !main_7 * main_8 * !main_9 * !main_10) + (main_1 * !main_2 * main_3) + (main_1 * main_2 * !main_3) + (main_1 * !main_4) + (!main_3 * !main_4)",
             regmode => 1,
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
-            q => Net_6027,
+            q => Net_29130,
             clock_0 => \SPI_DAC:Net_276\,
-            main_0 => Net_6027,
+            main_0 => Net_29130,
             main_1 => \SPI_DAC:BSPIM:state_2\,
             main_2 => \SPI_DAC:BSPIM:state_1\,
             main_3 => \SPI_DAC:BSPIM:state_0\,
@@ -3789,7 +3487,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:ch_addr_5\);
 
     \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\:macrocell
@@ -3800,7 +3498,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:ch_addr_4\);
 
     \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_3\:macrocell
@@ -3811,7 +3509,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_3\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:ch_addr_3\);
 
     \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_2\:macrocell
@@ -3822,7 +3520,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_2\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:ch_addr_2\);
 
     \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_1\:macrocell
@@ -3833,7 +3531,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_1\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:ch_addr_1\);
 
     \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_0\:macrocell
@@ -3844,7 +3542,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_0\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:ch_addr_0\);
 
     \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_0\:macrocell
@@ -3855,7 +3553,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_0\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -3872,7 +3570,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_1\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -3889,7 +3587,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_2\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -3906,7 +3604,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_3\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -3923,7 +3621,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_4\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -3940,7 +3638,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_5\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -3957,7 +3655,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_6\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -3974,7 +3672,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_7\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -3991,7 +3689,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_8\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4008,7 +3706,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_9\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4025,7 +3723,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_10\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4042,7 +3740,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_11\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4059,7 +3757,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_12\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4076,7 +3774,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_13\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4093,7 +3791,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_14\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4110,7 +3808,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_15\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4127,7 +3825,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_16\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4144,7 +3842,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_17\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4161,7 +3859,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_18\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4178,7 +3876,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_19\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4195,7 +3893,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_20\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4212,7 +3910,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_21\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4229,7 +3927,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_22\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4246,7 +3944,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_23\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4263,7 +3961,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_24\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4280,7 +3978,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_25\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4297,7 +3995,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_26\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4314,7 +4012,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_27\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4331,7 +4029,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_28\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4348,7 +4046,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_29\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4365,7 +4063,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_30\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4382,7 +4080,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_31\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4399,7 +4097,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_32\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4416,7 +4114,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_33\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4433,7 +4131,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_34\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4450,7 +4148,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_35\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4467,7 +4165,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_36\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4484,7 +4182,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_37\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4501,7 +4199,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_38\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4518,7 +4216,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_39\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4535,7 +4233,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_40\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4552,7 +4250,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_41\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4569,7 +4267,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_42\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4586,7 +4284,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_43\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4603,7 +4301,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_44\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4620,7 +4318,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_45\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4637,7 +4335,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_46\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4654,7 +4352,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_47\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4671,7 +4369,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_48\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4688,7 +4386,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_49\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4705,7 +4403,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_50\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4722,7 +4420,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_51\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4739,7 +4437,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_52\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4756,7 +4454,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_53\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4773,7 +4471,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_54\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4790,7 +4488,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_55\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4807,7 +4505,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_56\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4824,7 +4522,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_57\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4841,7 +4539,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_58\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4858,7 +4556,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_59\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4875,7 +4573,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_60\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4892,7 +4590,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_61\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4909,7 +4607,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_62\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4926,7 +4624,7 @@ BEGIN
             clken_mode => 1)
         PORT MAP(
             q => \ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_63\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\,
             main_1 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\,
             main_2 => \ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\,
@@ -4945,7 +4643,7 @@ BEGIN
         PORT MAP(
             q => Net_12630,
             clk_en => \ADC_SAR_Seq:bSAR_SEQ:enable\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:bSAR_SEQ:bus_clk_nrq_reg\,
             main_1 => \ADC_SAR_Seq:bSAR_SEQ:nrq_reg\);
 
@@ -4972,7 +4670,7 @@ BEGIN
         PORT MAP(
             q => \ADC_SAR_Seq:bSAR_SEQ:nrq_reg\,
             clk_en => \ADC_SAR_Seq:bSAR_SEQ:enable\,
-            clock_0 => ADC_CLK,
+            clock_0 => \ADC_SAR_Seq:clock\,
             main_0 => \ADC_SAR_Seq:bSAR_SEQ:bus_clk_nrq_reg\);
 
     \PWM_4:PWMUDB:runmode_enable\:macrocell
@@ -4985,37 +4683,8 @@ BEGIN
         PORT MAP(
             q => \PWM_4:PWMUDB:runmode_enable\,
             clk_en => ADC_OUT_BUS_4,
-            clock_0 => ADC_CLK,
+            clock_0 => ClockBlock_BUS_CLK,
             main_0 => \PWM_4:PWMUDB:control_7\);
-
-    \PWM_4:PWMUDB:prevCompare1\:macrocell
-        GENERIC MAP(
-            eqn_main => "(!main_0 * !main_1)",
-            regmode => 1,
-            clk_inv => '0',
-            clken_inv => '0',
-            clken_mode => 2)
-        PORT MAP(
-            q => \PWM_4:PWMUDB:prevCompare1\,
-            clk_en => ADC_OUT_BUS_4,
-            clock_0 => ADC_CLK,
-            main_0 => \PWM_4:PWMUDB:cmp1_eq\,
-            main_1 => \PWM_4:PWMUDB:cmp1_less\);
-
-    \PWM_4:PWMUDB:status_0\:macrocell
-        GENERIC MAP(
-            eqn_main => "(!main_0 * main_1) + (!main_0 * main_2)",
-            regmode => 1,
-            clk_inv => '0',
-            clken_inv => '0',
-            clken_mode => 2)
-        PORT MAP(
-            q => \PWM_4:PWMUDB:status_0\,
-            clk_en => ADC_OUT_BUS_4,
-            clock_0 => ADC_CLK,
-            main_0 => \PWM_4:PWMUDB:prevCompare1\,
-            main_1 => \PWM_4:PWMUDB:cmp1_eq\,
-            main_2 => \PWM_4:PWMUDB:cmp1_less\);
 
     ADC_DIV_Q_4:macrocell
         GENERIC MAP(
@@ -5027,7 +4696,7 @@ BEGIN
         PORT MAP(
             q => ADC_DIV_Q_4,
             clk_en => ADC_OUT_BUS_4,
-            clock_0 => ADC_CLK,
+            clock_0 => ClockBlock_BUS_CLK,
             main_0 => \PWM_4:PWMUDB:runmode_enable\,
             main_1 => \PWM_4:PWMUDB:cmp1_eq\,
             main_2 => \PWM_4:PWMUDB:cmp1_less\);
@@ -5042,37 +4711,8 @@ BEGIN
         PORT MAP(
             q => \PWM_5:PWMUDB:runmode_enable\,
             clk_en => ADC_OUT_BUS_5,
-            clock_0 => ADC_CLK,
+            clock_0 => ClockBlock_BUS_CLK,
             main_0 => \PWM_5:PWMUDB:control_7\);
-
-    \PWM_5:PWMUDB:prevCompare1\:macrocell
-        GENERIC MAP(
-            eqn_main => "(!main_0 * !main_1)",
-            regmode => 1,
-            clk_inv => '0',
-            clken_inv => '0',
-            clken_mode => 2)
-        PORT MAP(
-            q => \PWM_5:PWMUDB:prevCompare1\,
-            clk_en => ADC_OUT_BUS_5,
-            clock_0 => ADC_CLK,
-            main_0 => \PWM_5:PWMUDB:cmp1_eq\,
-            main_1 => \PWM_5:PWMUDB:cmp1_less\);
-
-    \PWM_5:PWMUDB:status_0\:macrocell
-        GENERIC MAP(
-            eqn_main => "(!main_0 * main_1) + (!main_0 * main_2)",
-            regmode => 1,
-            clk_inv => '0',
-            clken_inv => '0',
-            clken_mode => 2)
-        PORT MAP(
-            q => \PWM_5:PWMUDB:status_0\,
-            clk_en => ADC_OUT_BUS_5,
-            clock_0 => ADC_CLK,
-            main_0 => \PWM_5:PWMUDB:prevCompare1\,
-            main_1 => \PWM_5:PWMUDB:cmp1_eq\,
-            main_2 => \PWM_5:PWMUDB:cmp1_less\);
 
     ADC_DIV_Q_5:macrocell
         GENERIC MAP(
@@ -5084,7 +4724,7 @@ BEGIN
         PORT MAP(
             q => ADC_DIV_Q_5,
             clk_en => ADC_OUT_BUS_5,
-            clock_0 => ADC_CLK,
+            clock_0 => ClockBlock_BUS_CLK,
             main_0 => \PWM_5:PWMUDB:runmode_enable\,
             main_1 => \PWM_5:PWMUDB:cmp1_eq\,
             main_2 => \PWM_5:PWMUDB:cmp1_less\);
@@ -5099,7 +4739,7 @@ BEGIN
         PORT MAP(
             q => ADC_DIV_Q_3,
             clk_en => ADC_OUT_BUS_3,
-            clock_0 => ADC_CLK);
+            clock_0 => ClockBlock_BUS_CLK);
 
     cy_tff_3:macrocell
         GENERIC MAP(
@@ -5111,7 +4751,7 @@ BEGIN
         PORT MAP(
             q => cy_tff_3,
             clk_en => tmp__cy_tff_3_clk,
-            clock_0 => ADC_CLK);
+            clock_0 => ClockBlock_BUS_CLK);
 
     cy_tff_2:macrocell
         GENERIC MAP(
@@ -5123,7 +4763,7 @@ BEGIN
         PORT MAP(
             q => cy_tff_2,
             clk_en => tmp__cy_tff_2_clk,
-            clock_0 => ADC_CLK);
+            clock_0 => ClockBlock_BUS_CLK);
 
     ADC_DIV_Q_0:macrocell
         GENERIC MAP(
@@ -5135,7 +4775,7 @@ BEGIN
         PORT MAP(
             q => ADC_DIV_Q_0,
             clk_en => ADC_OUT_BUS_0,
-            clock_0 => ADC_CLK);
+            clock_0 => ClockBlock_BUS_CLK);
 
     \PWM_11:PWMUDB:runmode_enable\:macrocell
         GENERIC MAP(
@@ -5147,37 +4787,8 @@ BEGIN
         PORT MAP(
             q => \PWM_11:PWMUDB:runmode_enable\,
             clk_en => ADC_OUT_BUS_11,
-            clock_0 => ADC_CLK,
+            clock_0 => ClockBlock_BUS_CLK,
             main_0 => \PWM_11:PWMUDB:control_7\);
-
-    \PWM_11:PWMUDB:prevCompare1\:macrocell
-        GENERIC MAP(
-            eqn_main => "(!main_0 * !main_1)",
-            regmode => 1,
-            clk_inv => '0',
-            clken_inv => '0',
-            clken_mode => 2)
-        PORT MAP(
-            q => \PWM_11:PWMUDB:prevCompare1\,
-            clk_en => ADC_OUT_BUS_11,
-            clock_0 => ADC_CLK,
-            main_0 => \PWM_11:PWMUDB:cmp1_eq\,
-            main_1 => \PWM_11:PWMUDB:cmp1_less\);
-
-    \PWM_11:PWMUDB:status_0\:macrocell
-        GENERIC MAP(
-            eqn_main => "(!main_0 * main_1) + (!main_0 * main_2)",
-            regmode => 1,
-            clk_inv => '0',
-            clken_inv => '0',
-            clken_mode => 2)
-        PORT MAP(
-            q => \PWM_11:PWMUDB:status_0\,
-            clk_en => ADC_OUT_BUS_11,
-            clock_0 => ADC_CLK,
-            main_0 => \PWM_11:PWMUDB:prevCompare1\,
-            main_1 => \PWM_11:PWMUDB:cmp1_eq\,
-            main_2 => \PWM_11:PWMUDB:cmp1_less\);
 
     ADC_DIV_Q_11:macrocell
         GENERIC MAP(
@@ -5189,7 +4800,7 @@ BEGIN
         PORT MAP(
             q => ADC_DIV_Q_11,
             clk_en => ADC_OUT_BUS_11,
-            clock_0 => ADC_CLK,
+            clock_0 => ClockBlock_BUS_CLK,
             main_0 => \PWM_11:PWMUDB:runmode_enable\,
             main_1 => \PWM_11:PWMUDB:cmp1_eq\,
             main_2 => \PWM_11:PWMUDB:cmp1_less\);
@@ -5204,37 +4815,8 @@ BEGIN
         PORT MAP(
             q => \PWM_10:PWMUDB:runmode_enable\,
             clk_en => ADC_OUT_BUS_10,
-            clock_0 => ADC_CLK,
+            clock_0 => ClockBlock_BUS_CLK,
             main_0 => \PWM_10:PWMUDB:control_7\);
-
-    \PWM_10:PWMUDB:prevCompare1\:macrocell
-        GENERIC MAP(
-            eqn_main => "(!main_0 * !main_1)",
-            regmode => 1,
-            clk_inv => '0',
-            clken_inv => '0',
-            clken_mode => 2)
-        PORT MAP(
-            q => \PWM_10:PWMUDB:prevCompare1\,
-            clk_en => ADC_OUT_BUS_10,
-            clock_0 => ADC_CLK,
-            main_0 => \PWM_10:PWMUDB:cmp1_eq\,
-            main_1 => \PWM_10:PWMUDB:cmp1_less\);
-
-    \PWM_10:PWMUDB:status_0\:macrocell
-        GENERIC MAP(
-            eqn_main => "(!main_0 * main_1) + (!main_0 * main_2)",
-            regmode => 1,
-            clk_inv => '0',
-            clken_inv => '0',
-            clken_mode => 2)
-        PORT MAP(
-            q => \PWM_10:PWMUDB:status_0\,
-            clk_en => ADC_OUT_BUS_10,
-            clock_0 => ADC_CLK,
-            main_0 => \PWM_10:PWMUDB:prevCompare1\,
-            main_1 => \PWM_10:PWMUDB:cmp1_eq\,
-            main_2 => \PWM_10:PWMUDB:cmp1_less\);
 
     ADC_DIV_Q_10:macrocell
         GENERIC MAP(
@@ -5246,7 +4828,7 @@ BEGIN
         PORT MAP(
             q => ADC_DIV_Q_10,
             clk_en => ADC_OUT_BUS_10,
-            clock_0 => ADC_CLK,
+            clock_0 => ClockBlock_BUS_CLK,
             main_0 => \PWM_10:PWMUDB:runmode_enable\,
             main_1 => \PWM_10:PWMUDB:cmp1_eq\,
             main_2 => \PWM_10:PWMUDB:cmp1_less\);
@@ -5261,37 +4843,8 @@ BEGIN
         PORT MAP(
             q => \PWM_7:PWMUDB:runmode_enable\,
             clk_en => ADC_OUT_BUS_7,
-            clock_0 => ADC_CLK,
+            clock_0 => ClockBlock_BUS_CLK,
             main_0 => \PWM_7:PWMUDB:control_7\);
-
-    \PWM_7:PWMUDB:prevCompare1\:macrocell
-        GENERIC MAP(
-            eqn_main => "(!main_0 * !main_1)",
-            regmode => 1,
-            clk_inv => '0',
-            clken_inv => '0',
-            clken_mode => 2)
-        PORT MAP(
-            q => \PWM_7:PWMUDB:prevCompare1\,
-            clk_en => ADC_OUT_BUS_7,
-            clock_0 => ADC_CLK,
-            main_0 => \PWM_7:PWMUDB:cmp1_eq\,
-            main_1 => \PWM_7:PWMUDB:cmp1_less\);
-
-    \PWM_7:PWMUDB:status_0\:macrocell
-        GENERIC MAP(
-            eqn_main => "(!main_0 * main_1) + (!main_0 * main_2)",
-            regmode => 1,
-            clk_inv => '0',
-            clken_inv => '0',
-            clken_mode => 2)
-        PORT MAP(
-            q => \PWM_7:PWMUDB:status_0\,
-            clk_en => ADC_OUT_BUS_7,
-            clock_0 => ADC_CLK,
-            main_0 => \PWM_7:PWMUDB:prevCompare1\,
-            main_1 => \PWM_7:PWMUDB:cmp1_eq\,
-            main_2 => \PWM_7:PWMUDB:cmp1_less\);
 
     ADC_DIV_Q_7:macrocell
         GENERIC MAP(
@@ -5303,7 +4856,7 @@ BEGIN
         PORT MAP(
             q => ADC_DIV_Q_7,
             clk_en => ADC_OUT_BUS_7,
-            clock_0 => ADC_CLK,
+            clock_0 => ClockBlock_BUS_CLK,
             main_0 => \PWM_7:PWMUDB:runmode_enable\,
             main_1 => \PWM_7:PWMUDB:cmp1_eq\,
             main_2 => \PWM_7:PWMUDB:cmp1_less\);
@@ -5318,35 +4871,8 @@ BEGIN
         PORT MAP(
             q => \PWM_9:PWMUDB:runmode_enable\,
             clk_en => ADC_OUT_BUS_9,
-            clock_0 => ADC_CLK,
+            clock_0 => ClockBlock_BUS_CLK,
             main_0 => \PWM_9:PWMUDB:control_7\);
-
-    \PWM_9:PWMUDB:prevCompare1\:macrocell
-        GENERIC MAP(
-            eqn_main => "(!main_0)",
-            regmode => 1,
-            clk_inv => '0',
-            clken_inv => '0',
-            clken_mode => 2)
-        PORT MAP(
-            q => \PWM_9:PWMUDB:prevCompare1\,
-            clk_en => ADC_OUT_BUS_9,
-            clock_0 => ADC_CLK,
-            main_0 => \PWM_9:PWMUDB:cmp1_less\);
-
-    \PWM_9:PWMUDB:status_0\:macrocell
-        GENERIC MAP(
-            eqn_main => "(!main_0 * !main_1)",
-            regmode => 1,
-            clk_inv => '0',
-            clken_inv => '0',
-            clken_mode => 2)
-        PORT MAP(
-            q => \PWM_9:PWMUDB:status_0\,
-            clk_en => ADC_OUT_BUS_9,
-            clock_0 => ADC_CLK,
-            main_0 => \PWM_9:PWMUDB:prevCompare1\,
-            main_1 => \PWM_9:PWMUDB:cmp1_less\);
 
     ADC_DIV_Q_9:macrocell
         GENERIC MAP(
@@ -5358,7 +4884,7 @@ BEGIN
         PORT MAP(
             q => ADC_DIV_Q_9,
             clk_en => ADC_OUT_BUS_9,
-            clock_0 => ADC_CLK,
+            clock_0 => ClockBlock_BUS_CLK,
             main_0 => \PWM_9:PWMUDB:runmode_enable\,
             main_1 => \PWM_9:PWMUDB:cmp1_less\);
 
@@ -5372,7 +4898,7 @@ BEGIN
         PORT MAP(
             q => \PWM_8:PWMUDB:runmode_enable\,
             clk_en => ADC_OUT_BUS_8,
-            clock_0 => ADC_CLK,
+            clock_0 => ClockBlock_BUS_CLK,
             main_0 => \PWM_8:PWMUDB:control_7\);
 
     Dedicated_Output_1:iocell
@@ -5390,33 +4916,6 @@ BEGIN
             out_clock_en => open,
             out_reset => open);
 
-    \PWM_8:PWMUDB:prevCompare1\:macrocell
-        GENERIC MAP(
-            eqn_main => "(!main_0)",
-            regmode => 1,
-            clk_inv => '0',
-            clken_inv => '0',
-            clken_mode => 2)
-        PORT MAP(
-            q => \PWM_8:PWMUDB:prevCompare1\,
-            clk_en => ADC_OUT_BUS_8,
-            clock_0 => ADC_CLK,
-            main_0 => \PWM_8:PWMUDB:cmp1_less\);
-
-    \PWM_8:PWMUDB:status_0\:macrocell
-        GENERIC MAP(
-            eqn_main => "(!main_0 * !main_1)",
-            regmode => 1,
-            clk_inv => '0',
-            clken_inv => '0',
-            clken_mode => 2)
-        PORT MAP(
-            q => \PWM_8:PWMUDB:status_0\,
-            clk_en => ADC_OUT_BUS_8,
-            clock_0 => ADC_CLK,
-            main_0 => \PWM_8:PWMUDB:prevCompare1\,
-            main_1 => \PWM_8:PWMUDB:cmp1_less\);
-
     ADC_DIV_Q_8:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * !main_1)",
@@ -5427,7 +4926,7 @@ BEGIN
         PORT MAP(
             q => ADC_DIV_Q_8,
             clk_en => ADC_OUT_BUS_8,
-            clock_0 => ADC_CLK,
+            clock_0 => ClockBlock_BUS_CLK,
             main_0 => \PWM_8:PWMUDB:runmode_enable\,
             main_1 => \PWM_8:PWMUDB:cmp1_less\);
 
@@ -5441,7 +4940,7 @@ BEGIN
         PORT MAP(
             q => \PWM_6:PWMUDB:runmode_enable\,
             clk_en => ADC_OUT_BUS_6,
-            clock_0 => ADC_CLK,
+            clock_0 => ClockBlock_BUS_CLK,
             main_0 => \PWM_6:PWMUDB:control_7\);
 
     Dedicated_Output:iocell
@@ -5459,35 +4958,6 @@ BEGIN
             out_clock_en => open,
             out_reset => open);
 
-    \PWM_6:PWMUDB:prevCompare1\:macrocell
-        GENERIC MAP(
-            eqn_main => "(!main_0 * !main_1)",
-            regmode => 1,
-            clk_inv => '0',
-            clken_inv => '0',
-            clken_mode => 2)
-        PORT MAP(
-            q => \PWM_6:PWMUDB:prevCompare1\,
-            clk_en => ADC_OUT_BUS_6,
-            clock_0 => ADC_CLK,
-            main_0 => \PWM_6:PWMUDB:cmp1_eq\,
-            main_1 => \PWM_6:PWMUDB:cmp1_less\);
-
-    \PWM_6:PWMUDB:status_0\:macrocell
-        GENERIC MAP(
-            eqn_main => "(!main_0 * main_1) + (!main_0 * main_2)",
-            regmode => 1,
-            clk_inv => '0',
-            clken_inv => '0',
-            clken_mode => 2)
-        PORT MAP(
-            q => \PWM_6:PWMUDB:status_0\,
-            clk_en => ADC_OUT_BUS_6,
-            clock_0 => ADC_CLK,
-            main_0 => \PWM_6:PWMUDB:prevCompare1\,
-            main_1 => \PWM_6:PWMUDB:cmp1_eq\,
-            main_2 => \PWM_6:PWMUDB:cmp1_less\);
-
     ADC_DIV_Q_6:macrocell
         GENERIC MAP(
             eqn_main => "(main_0 * main_1) + (main_0 * main_2)",
@@ -5498,7 +4968,7 @@ BEGIN
         PORT MAP(
             q => ADC_DIV_Q_6,
             clk_en => ADC_OUT_BUS_6,
-            clock_0 => ADC_CLK,
+            clock_0 => ClockBlock_BUS_CLK,
             main_0 => \PWM_6:PWMUDB:runmode_enable\,
             main_1 => \PWM_6:PWMUDB:cmp1_eq\,
             main_2 => \PWM_6:PWMUDB:cmp1_less\);

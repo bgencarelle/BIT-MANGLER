@@ -144,7 +144,7 @@ extern uint8 SPI_DAC_initVar;
 #define SPI_DAC_INT_ON_TX_EMPTY    ((uint8) (0u   << SPI_DAC_STS_TX_FIFO_EMPTY_SHIFT))
 #define SPI_DAC_INT_ON_TX_NOT_FULL ((uint8) (0u << \
                                                                            SPI_DAC_STS_TX_FIFO_NOT_FULL_SHIFT))
-#define SPI_DAC_INT_ON_BYTE_COMP   ((uint8) (1u  << SPI_DAC_STS_BYTE_COMPLETE_SHIFT))
+#define SPI_DAC_INT_ON_BYTE_COMP   ((uint8) (0u  << SPI_DAC_STS_BYTE_COMPLETE_SHIFT))
 #define SPI_DAC_INT_ON_SPI_IDLE    ((uint8) (0u   << SPI_DAC_STS_SPI_IDLE_SHIFT))
 
 /* Disable TX_NOT_FULL if software buffer is used */

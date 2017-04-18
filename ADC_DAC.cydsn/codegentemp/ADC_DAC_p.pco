@@ -1,218 +1,187 @@
-set_location "\PWM_4:PWMUDB:sP8:pwmdp:u0\" datapathcell 2 2 2 
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_61\" macrocell 3 5 1 0
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_17\" macrocell 0 2 1 1
-set_location "\SPI_DAC:BSPIM:sR16:Dp:u1\" datapathcell 0 4 2 
-set_location "\SPI_DAC:BSPIM:tx_status_4\" macrocell 1 3 1 1
-set_location "\PWM_4:PWMUDB:genblk8:stsreg\" statusicell 2 3 4 
-set_location "\PWM_6:PWMUDB:genblk8:stsreg\" statusicell 1 0 4 
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_10\" macrocell 0 3 0 0
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_43\" macrocell 2 5 1 3
-set_location "\PWM_9:PWMUDB:runmode_enable\" macrocell 3 0 0 1
-set_location "\PWM_8:PWMUDB:status_0\" macrocell 2 0 0 2
-set_location "\ADC_SAR_Seq:bSAR_SEQ:ChannelCounter\" count7cell 1 3 7 
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_32\" macrocell 0 0 0 0
-set_location "\ADC_SAR_Seq:bSAR_SEQ:nrq_reg\" macrocell 3 2 0 2
-set_location "__ONE__" macrocell 2 0 1 3
-set_location "MUX_BUS_0" macrocell 2 2 1 0
-set_location "\PWM_10:PWMUDB:status_0\" macrocell 2 5 0 3
-set_location "\PWM_5:PWMUDB:runmode_enable\" macrocell 1 1 0 3
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\" macrocell 3 5 0 1
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_0\" macrocell 1 1 1 0
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_21\" macrocell 3 3 0 3
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_57\" macrocell 0 0 1 3
-set_location "ADC_DIV_Q_3" macrocell 2 0 1 1
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_12\" macrocell 3 1 0 2
-set_location "ADC_DIV_Q_8" macrocell 2 0 0 1
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_33\" macrocell 0 2 0 0
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_31\" macrocell 0 4 0 2
-set_location "\PWM_4:PWMUDB:status_2\" macrocell 2 3 0 3
-set_location "\PWM_10:PWMUDB:status_2\" macrocell 1 5 0 3
-set_location "\PWM_11:PWMUDB:status_2\" macrocell 2 4 1 0
-set_location "\PWM_7:PWMUDB:prevCompare1\" macrocell 1 2 0 1
-set_location "\PWM_7:PWMUDB:genblk8:stsreg\" statusicell 1 2 4 
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_25\" macrocell 3 5 0 0
-set_location "\PWM_11:PWMUDB:status_0\" macrocell 2 4 0 2
-set_location "\ADC_SAR_Seq:bSAR_SEQ:cnt_enable\" macrocell 0 3 0 1
-set_location "\SPI_DAC:BSPIM:RxStsReg\" statusicell 1 4 4 
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_60\" macrocell 3 3 0 1
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_2\" macrocell 2 3 1 0
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_22\" macrocell 0 1 0 0
-set_location "\SPI_DAC:BSPIM:BitCounter\" count7cell 1 5 7 
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_7\" macrocell 1 4 0 2
-set_location "\PWM_5:PWMUDB:status_0\" macrocell 1 1 0 2
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_5\" macrocell 3 4 0 2
-set_location "\SPI_DAC:BSPIM:ld_ident\" macrocell 1 5 1 0
-set_location "\PWM_8:PWMUDB:sP8:pwmdp:u0\" datapathcell 2 0 2 
-set_location "\SPI_DAC:BSPIM:state_2\" macrocell 1 5 1 2
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_62\" macrocell 0 3 0 2
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_34\" macrocell 0 2 1 2
-set_location "MUX_BUS_5" macrocell 1 1 1 1
-set_location "MUX_BUS_8" macrocell 2 2 0 1
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_26\" macrocell 3 3 1 1
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_28\" macrocell 0 4 1 2
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_41\" macrocell 0 2 0 1
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_3\" macrocell 1 4 1 3
-set_location "\PWM_6:PWMUDB:prevCompare1\" macrocell 1 0 0 1
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_18\" macrocell 0 1 0 1
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_46\" macrocell 1 1 1 2
-set_location "\PWM_10:PWMUDB:sP8:pwmdp:u0\" datapathcell 2 4 2 
-set_location "\PWM_11:PWMUDB:runmode_enable\" macrocell 2 4 0 3
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_42\" macrocell 3 1 1 2
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_63\" macrocell 0 1 1 1
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_19\" macrocell 3 3 0 2
-set_location "\PWM_9:PWMUDB:status_2\" macrocell 3 0 0 2
-set_location "\PWM_5:PWMUDB:status_2\" macrocell 1 2 0 3
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_59\" macrocell 3 4 1 1
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_1\" macrocell 3 5 0 2
-set_location "\PWM_9:PWMUDB:prevCompare1\" macrocell 3 0 0 3
-set_location "\PWM_11:PWMUDB:sP8:pwmdp:u0\" datapathcell 2 3 2 
-set_location "\PWM_6:PWMUDB:status_0\" macrocell 1 0 0 2
-set_location "cy_tff_3" macrocell 2 2 0 0
-set_location "\SPI_DAC:BSPIM:state_0\" macrocell 0 5 1 0
-set_location "\PWM_6:PWMUDB:runmode_enable\" macrocell 1 0 0 3
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_40\" macrocell 3 3 1 2
-set_location "\PWM_8:PWMUDB:genblk8:stsreg\" statusicell 2 0 4 
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_38\" macrocell 2 5 1 1
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_is_active_split\" macrocell 1 3 0 0
-set_location "\PWM_10:PWMUDB:runmode_enable\" macrocell 2 5 0 1
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_15\" macrocell 3 1 0 1
-set_location "MUX_BUS_9" macrocell 2 3 1 3
-set_location "\SPI_DAC:BSPIM:tx_status_0\" macrocell 0 5 1 1
-set_location "\PWM_7:PWMUDB:runmode_enable\" macrocell 1 2 1 2
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_14\" macrocell 3 1 1 0
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_30\" macrocell 3 3 1 3
-set_location "ADC_DIV_Q_11" macrocell 2 4 0 0
-set_location "\PWM_4:PWMUDB:runmode_enable\" macrocell 2 4 1 3
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_45\" macrocell 3 4 1 3
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_49\" macrocell 3 4 0 0
-set_location "\PWM_7:PWMUDB:status_0\" macrocell 1 2 0 2
-set_location "\PWM_4:PWMUDB:prevCompare1\" macrocell 2 3 0 1
-set_location "MUX_BUS_11" macrocell 2 4 1 1
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\" macrocell 2 5 1 0
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_29\" macrocell 3 1 0 3
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_24\" macrocell 2 5 1 2
-set_location "\SPI_DAC:BSPIM:cnt_enable\" macrocell 0 5 0 2
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_54\" macrocell 0 0 0 1
-set_location "Net_6025" macrocell 0 5 1 2
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_52\" macrocell 0 3 0 3
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_44\" macrocell 0 2 0 3
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_55\" macrocell 0 2 1 0
-set_location "MUX_BUS_2" macrocell 2 2 1 1
-set_location "\SPI_DAC:BSPIM:rx_status_6\" macrocell 1 5 0 1
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_3\" macrocell 3 5 1 2
-set_location "\SPI_DAC:BSPIM:sR16:Dp:u0\" datapathcell 1 4 2 
-set_location "\PWM_5:PWMUDB:prevCompare1\" macrocell 1 1 0 1
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_11\" macrocell 3 4 0 1
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_39\" macrocell 0 1 1 3
-set_location "\PWM_6:PWMUDB:sP8:pwmdp:u0\" datapathcell 1 0 2 
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_23\" macrocell 0 1 0 2
-set_location "ADC_DIV_Q_7" macrocell 1 2 0 0
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_6\" macrocell 0 4 0 3
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_1\" macrocell 1 4 1 2
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_0\" macrocell 1 4 1 1
-set_location "\PWM_9:PWMUDB:genblk8:stsreg\" statusicell 3 0 4 
-set_location "Net_6026" macrocell 0 5 0 0
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_35\" macrocell 0 4 1 0
-set_location "\PWM_10:PWMUDB:genblk8:stsreg\" statusicell 2 5 4 
-set_location "\SPI_DAC:BSPIM:TxStsReg\" statusicell 0 4 4 
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_50\" macrocell 0 4 0 1
-set_location "\ADC_SAR_Seq:bSAR_SEQ:bus_clk_nrq_reg\" macrocell 3 2 1 0
-set_location "ADC_DIV_Q_10" macrocell 2 5 0 0
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_56\" macrocell 3 4 1 0
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_4\" macrocell 1 4 0 3
-set_location "Net_6027" macrocell 1 3 1 0
-set_location "\PWM_9:PWMUDB:status_0\" macrocell 3 0 0 0
-set_location "\PWM_8:PWMUDB:prevCompare1\" macrocell 2 0 0 3
-set_location "\PWM_5:PWMUDB:sP8:pwmdp:u0\" datapathcell 1 1 2 
-set_location "\PWM_5:PWMUDB:genblk8:stsreg\" statusicell 1 1 4 
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_36\" macrocell 0 1 1 2
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_20\" macrocell 0 0 1 1
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_7\" macrocell 3 0 1 2
+set_location "\PWM_7:PWMUDB:sP8:pwmdp:u0\" datapathcell 3 1 2 
+set_location "\SPI_DAC:BSPIM:tx_status_4\" macrocell 2 3 1 3
+set_location "MUX_BUS_9" macrocell 2 5 0 0
+set_location "Net_12630" macrocell 3 2 0 0
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_41\" macrocell 3 0 0 3
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_28\" macrocell 0 2 0 3
+set_location "\PWM_9:PWMUDB:runmode_enable\" macrocell 0 5 0 2
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_46\" macrocell 1 2 1 3
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_18\" macrocell 0 3 0 0
+set_location "MUX_BUS_11" macrocell 1 3 0 3
+set_location "__ONE__" macrocell 0 3 1 2
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_is_active\" macrocell 1 5 0 0
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_35\" macrocell 1 5 0 3
+set_location "MUX_BUS_5" macrocell 2 2 0 1
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_26\" macrocell 3 5 0 3
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_62\" macrocell 3 5 0 2
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_34\" macrocell 0 3 1 3
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_6\" macrocell 0 3 0 3
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_2\" macrocell 2 4 0 2
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_23\" macrocell 1 2 1 2
+set_location "ADC_DIV_Q_5" macrocell 2 3 1 0
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_36\" macrocell 0 4 1 2
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_20\" macrocell 3 1 0 3
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_39\" macrocell 0 4 1 1
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_11\" macrocell 3 3 0 3
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_5\" macrocell 3 1 1 2
+set_location "\ADC_SAR_Seq:bSAR_SEQ:ChannelCounter\" count7cell 1 2 7 
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_50\" macrocell 0 5 1 0
+set_location "\PWM_9:PWMUDB:sP8:pwmdp:u0\" datapathcell 0 5 2 
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_49\" macrocell 0 2 0 0
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_45\" macrocell 3 5 1 1
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_30\" macrocell 0 3 1 1
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_4\" macrocell 3 1 1 1
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_56\" macrocell 3 0 0 0
+set_location "cy_tff_3" macrocell 3 3 1 0
+set_location "\SPI_DAC:BSPIM:RxStsReg\" statusicell 0 4 4 
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_15\" macrocell 1 5 0 1
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_14\" macrocell 2 4 0 0
+set_location "\SPI_DAC:BSPIM:BitCounter\" count7cell 2 5 7 
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_55\" macrocell 3 0 0 1
+set_location "ADC_DIV_Q_3" macrocell 2 2 1 0
+set_location "ADC_DIV_Q_10" macrocell 1 4 1 0
+set_location "\SPI_DAC:BSPIM:ld_ident\" macrocell 2 5 1 0
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_54\" macrocell 3 4 0 2
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_44\" macrocell 3 3 0 2
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_0\" macrocell 3 5 1 0
+set_location "\SPI_DAC:BSPIM:state_2\" macrocell 2 5 1 2
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_1\" macrocell 3 5 1 2
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_52\" macrocell 1 2 1 0
+set_location "\SPI_DAC:BSPIM:sR16:Dp:u1\" datapathcell 1 3 2 
+set_location "MUX_BUS_0" macrocell 2 1 0 2
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_24\" macrocell 3 4 1 2
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_29\" macrocell 3 5 0 0
+set_location "\SPI_DAC:BSPIM:sR16:Dp:u0\" datapathcell 0 3 2 
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_47\" macrocell 3 4 0 0
+set_location "\PWM_5:PWMUDB:runmode_enable\" macrocell 2 3 1 1
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_53\" macrocell 3 4 1 3
+set_location "MUX_BUS_10" macrocell 1 3 1 0
+set_location "\PWM_4:PWMUDB:sP8:pwmdp:u0\" datapathcell 2 1 2 
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_37\" macrocell 3 1 0 2
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_9\" macrocell 3 0 1 3
+set_location "ADC_DIV_Q_6" macrocell 2 0 1 0
+set_location "\SPI_DAC:BSPIM:state_0\" macrocell 0 4 0 0
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_58\" macrocell 0 4 1 0
+set_location "\ADC_SAR_Seq:bSAR_SEQ:cnt_enable\" macrocell 1 5 1 3
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_27\" macrocell 3 4 0 1
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_3\" macrocell 1 4 0 3
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_16\" macrocell 0 5 1 3
+set_location "\PWM_11:PWMUDB:sP8:pwmdp:u0\" datapathcell 1 2 2 
+set_location "\PWM_6:PWMUDB:runmode_enable\" macrocell 0 2 1 2
+set_location "\ADC_SAR_Seq:bSAR_SEQ:nrq_reg\" macrocell 3 2 0 1
+set_location "\PWM_10:PWMUDB:sP8:pwmdp:u0\" datapathcell 1 4 2 
 set_location "MUX_BUS_4" macrocell 2 2 0 2
-set_location "\PWM_11:PWMUDB:genblk8:stsreg\" statusicell 3 4 4 
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_8\" macrocell 0 0 1 2
-set_location "MUX_BUS_1" macrocell 2 1 0 2
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_27\" macrocell 0 2 0 2
-set_location "\SPI_DAC:BSPIM:load_cond\" macrocell 1 5 0 2
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_16\" macrocell 0 4 1 1
-set_location "\PWM_11:PWMUDB:prevCompare1\" macrocell 2 4 0 1
-set_location "ADC_DIV_Q_9" macrocell 3 0 1 1
-set_location "MUX_BUS_3" macrocell 2 1 0 0
-set_location "MUX_BUS_7" macrocell 1 2 1 1
-set_location "\PWM_10:PWMUDB:prevCompare1\" macrocell 2 5 0 2
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_13\" macrocell 1 4 0 0
-set_location "Net_12630" macrocell 3 2 0 1
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_51\" macrocell 3 1 1 3
-set_location "MUX_BUS_6" macrocell 2 1 0 3
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_48\" macrocell 1 0 1 3
-set_location "ADC_DIV_Q_6" macrocell 1 0 0 0
-set_location "MUX_BUS_10" macrocell 2 3 1 1
-set_location "\SPI_DAC:BSPIM:state_1\" macrocell 1 5 1 1
-set_location "\SPI_DAC:BSPIM:load_rx_data\" macrocell 1 3 1 2
-set_location "\PWM_6:PWMUDB:status_2\" macrocell 1 0 1 0
-set_location "\PWM_8:PWMUDB:status_2\" macrocell 2 0 1 2
-set_location "\PWM_7:PWMUDB:status_2\" macrocell 1 2 1 0
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_2\" macrocell 3 1 1 1
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_53\" macrocell 0 4 1 3
-set_location "ADC_DIV_Q_4" macrocell 2 3 0 2
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_47\" macrocell 0 1 0 3
-set_location "\PWM_4:PWMUDB:status_0\" macrocell 2 3 0 0
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\" macrocell 1 0 1 2
-set_location "\PWM_8:PWMUDB:runmode_enable\" macrocell 2 1 1 0
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_58\" macrocell 3 5 0 3
-set_location "ADC_DIV_Q_5" macrocell 1 1 0 0
-set_location "\PWM_7:PWMUDB:sP8:pwmdp:u0\" datapathcell 1 2 2 
-set_location "cy_tff_2" macrocell 2 1 0 1
-set_location "\PWM_9:PWMUDB:sP8:pwmdp:u0\" datapathcell 3 0 2 
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_37\" macrocell 0 4 0 0
-set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_9\" macrocell 3 4 0 3
-set_location "ADC_DIV_Q_0" macrocell 1 3 0 1
-set_io "\LCD_Char_1:LCDPort(6)\" iocell 1 6
-set_io "\LCD_Char_1:LCDPort(5)\" iocell 1 5
-set_io "\LCD_Char_1:LCDPort(3)\" iocell 1 3
-set_io "\LCD_Char_1:LCDPort(4)\" iocell 1 4
-set_location "\Filter:DFB\" dfbcell -1 -1 0
-set_location "\ADC_SAR_Seq:bSAR_SEQ:CtrlReg\" controlcell 3 5 6 
-set_location "\PWM_4:PWMUDB:genblk1:ctrlreg\" controlcell 3 1 6 
-set_location "\ADC_SAR_1:ADC_SAR\" sarcell -1 -1 1
+set_location "\PWM_11:PWMUDB:runmode_enable\" macrocell 1 3 0 1
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_8\" macrocell 1 4 0 2
+set_location "\PWM_4:PWMUDB:runmode_enable\" macrocell 2 1 0 1
+set_location "MUX_BUS_1" macrocell 2 2 1 2
+set_location "ADC_DIV_Q_8" macrocell 1 5 1 0
+set_location "\SPI_DAC:BSPIM:tx_status_0\" macrocell 3 4 1 0
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_51\" macrocell 0 3 0 2
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_13\" macrocell 1 4 0 1
+set_location "\PWM_7:PWMUDB:runmode_enable\" macrocell 2 0 0 1
+set_location "\PWM_5:PWMUDB:sP8:pwmdp:u0\" datapathcell 2 3 2 
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_48\" macrocell 3 1 1 0
+set_location "MUX_BUS_3" macrocell 2 1 0 3
+set_location "MUX_BUS_7" macrocell 2 0 0 2
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_0\" macrocell 1 3 1 2
+set_location "\SPI_DAC:BSPIM:cnt_enable\" macrocell 2 2 0 0
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_3\" macrocell 3 4 1 1
+set_location "\PWM_10:PWMUDB:runmode_enable\" macrocell 1 4 1 1
+set_location "MUX_BUS_6" macrocell 2 0 0 3
+set_location "Net_6025" macrocell 0 4 0 2
+set_location "ADC_DIV_Q_11" macrocell 1 3 0 0
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_22\" macrocell 3 4 0 3
+set_location "\SPI_DAC:BSPIM:rx_status_6\" macrocell 2 4 1 1
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_33\" macrocell 3 3 0 0
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_31\" macrocell 1 5 0 2
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_12\" macrocell 2 5 0 3
+set_location "ADC_DIV_Q_4" macrocell 2 1 0 0
+set_location "ADC_DIV_Q_0" macrocell 2 1 1 0
+set_location "cy_tff_2" macrocell 1 2 0 1
+set_location "Net_6026" macrocell 2 4 1 3
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_4\" macrocell 2 4 0 3
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_60\" macrocell 2 4 0 1
+set_location "\SPI_DAC:BSPIM:TxStsReg\" statusicell 2 2 4 
+set_location "ADC_DIV_Q_9" macrocell 0 5 0 1
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_32\" macrocell 0 4 1 3
+set_location "\ADC_SAR_Seq:bSAR_SEQ:bus_clk_nrq_reg\" macrocell 3 2 1 0
+set_location "Net_29130" macrocell 2 3 0 0
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_25\" macrocell 2 5 0 1
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_43\" macrocell 3 0 1 1
+set_location "\PWM_6:PWMUDB:sP8:pwmdp:u0\" datapathcell 2 2 2 
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_10\" macrocell 3 5 1 3
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_21\" macrocell 3 1 0 0
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_17\" macrocell 3 1 0 1
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_61\" macrocell 1 2 1 1
+set_location "\SPI_DAC:BSPIM:load_cond\" macrocell 2 4 1 2
+set_location "\PWM_8:PWMUDB:runmode_enable\" macrocell 1 5 1 1
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_57\" macrocell 0 5 1 2
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_2\" macrocell 3 5 0 1
+set_location "MUX_BUS_8" macrocell 1 4 1 2
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_old_id_1\" macrocell 1 4 0 0
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_59\" macrocell 0 2 0 1
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_63\" macrocell 2 5 0 2
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_19\" macrocell 0 3 0 1
+set_location "\PWM_8:PWMUDB:sP8:pwmdp:u0\" datapathcell 1 5 2 
+set_location "ADC_DIV_Q_7" macrocell 2 0 0 0
+set_location "MUX_BUS_2" macrocell 2 3 1 2
+set_location "\SPI_DAC:BSPIM:state_1\" macrocell 2 5 1 1
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_42\" macrocell 0 3 1 0
+set_location "\SPI_DAC:BSPIM:load_rx_data\" macrocell 2 3 0 1
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_40\" macrocell 3 3 0 1
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_38\" macrocell 0 5 1 1
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_is_active_split\" macrocell 1 2 0 0
+set_location "\ADC_SAR_Seq:AMuxHw_2_Decoder_one_hot_5\" macrocell 3 0 1 0
+set_location "\PWM_5:PWMUDB:genblk1:ctrlreg\" controlcell 3 2 6 
+set_location "\PWM_6:PWMUDB:genblk1:ctrlreg\" controlcell 0 2 6 
 set_location "\DIV_MASK_LSB:Sync:ctrl_reg\" controlcell 2 2 6 
+set_io "\LCD_Char_1:LCDPort(6)\" iocell 5 6
+set_io "\LCD_Char_1:LCDPort(5)\" iocell 5 5
+set_location "\PWM_11:PWMUDB:genblk1:ctrlreg\" controlcell 3 3 6 
+set_io "\LCD_Char_1:LCDPort(3)\" iocell 5 3
+set_io "\LCD_Char_1:LCDPort(4)\" iocell 5 4
+set_location "\PWM_10:PWMUDB:genblk1:ctrlreg\" controlcell 0 5 6 
+set_location "\Filter:DFB\" dfbcell -1 -1 0
+set_location "\ADC_1_OUT_MSB:Sync:ctrl_reg\" controlcell 1 4 6 
+set_location "\ADC_SAR_Seq:bSAR_SEQ:CtrlReg\" controlcell 3 4 6 
+set_location "\ADC_SAR_1:ADC_SAR\" sarcell -1 -1 1
+set_location "\PWM_7:PWMUDB:genblk1:ctrlreg\" controlcell 3 0 6 
 set_io "Dedicated_Output_1" iocell 3 6
 set_io "Dedicated_Output" iocell 0 0
-set_location "\PWM_10:PWMUDB:genblk1:ctrlreg\" controlcell 2 5 6 
-set_location "\PWM_11:PWMUDB:genblk1:ctrlreg\" controlcell 3 2 6 
+set_location "\ADC_1_OUT_LSB:Sync:ctrl_reg\" controlcell 2 0 6 
 set_location "\PWM_ADC_CK:PWMHW\" timercell -1 -1 0
-set_location "ClockBlock" clockblockcell -1 -1 0
-set_location "\ADC_SAR_Seq:FinalBuf\" drqcell -1 -1 0
-set_location "\ADC_SAR_Seq:bSAR_SEQ:EOCSts\" statuscell 0 3 3 
-set_location "\ADC_SAR_1:IRQ\" interrupt -1 -1 0
-set_location "\PWM_7:PWMUDB:genblk1:ctrlreg\" controlcell 1 2 6 
 set_location "\ADC_SAR_Seq:SAR:ADC_SAR\" sarcell -1 -1 0
-set_location "\ADC_1_OUT_LSB:Sync:ctrl_reg\" controlcell 2 1 6 
+set_location "\ADC_SAR_Seq:FinalBuf\" drqcell -1 -1 0
+set_location "\ADC_SAR_1:IRQ\" interrupt -1 -1 0
+set_location "\PWM_9:PWMUDB:genblk1:ctrlreg\" controlcell 3 5 6 
+set_location "ClockBlock" clockblockcell -1 -1 0
 set_location "\ADC_SAR_Seq:IRQ\" interrupt -1 -1 1
 set_location "\Opamp_1:ABuf\" abufcell -1 -1 1
 set_location "\Opamp_2:ABuf\" abufcell -1 -1 2
-set_location "\DAC_IN_LSB:sts:sts_reg\" statuscell 2 1 3 
+set_location "\DAC_IN_LSB:sts:sts_reg\" statuscell 2 0 3 
 # Note: port 12 is the logical name for port 7
 set_io "MOSI_OUT(0)" iocell 12 6
-set_location "\PWM_6:PWMUDB:genblk1:ctrlreg\" controlcell 1 0 6 
 set_location "\ADC_SAR_Seq:TempBuf\" drqcell -1 -1 1
-set_location "\PWM_9:PWMUDB:genblk1:ctrlreg\" controlcell 3 0 6 
-set_location "\ADC_1_OUT_MSB:Sync:ctrl_reg\" controlcell 3 3 6 
+set_location "\DIV_MASK_MSB:Sync:ctrl_reg\" controlcell 2 3 6 
 # Note: port 12 is the logical name for port 7
 set_io "SCLK_OUT(0)" iocell 12 5
-set_io "\LCD_Char_1:LCDPort(0)\" iocell 1 0
+set_location "\PWM_4:PWMUDB:genblk1:ctrlreg\" controlcell 2 1 6 
+set_io "\LCD_Char_1:LCDPort(0)\" iocell 5 0
 set_io "AUDIO_IN(0)" iocell 4 7
 set_io "VREF_BUFF(0)" iocell 0 6
+set_location "\PWM_8:PWMUDB:genblk1:ctrlreg\" controlcell 1 5 6 
 # Note: port 12 is the logical name for port 7
 set_io "SS_OUT(0)" iocell 12 4
-set_io "MISO_IN(0)" iocell 0 2
-set_location "\DIV_MASK_MSB:Sync:ctrl_reg\" controlcell 2 4 6 
-set_location "\ADC_SAR_Seq:Sync:genblk1[0]:INST\" synccell 0 2 5 0
-set_location "\PWM_5:PWMUDB:genblk1:ctrlreg\" controlcell 1 1 6 
-set_io "MASK_OFF_CONTROL(0)" iocell 4 4
-set_io "DIV_MUX_CONTROL(0)" iocell 4 2
+# Note: port 15 is the logical name for port 8
+set_io "MISO_IN(0)" iocell 15 4
+set_location "\ADC_SAR_Seq:Sync:genblk1[0]:INST\" synccell 3 1 5 0
+set_io "DIV_DEPTH_CONTROL(0)" iocell 4 1
+set_io "DIV_AMT_CONTROL(0)" iocell 4 2
 set_io "SAMPLE_RATE_CONTROL(0)" iocell 4 0
-set_io "PWM_1_CONTROL(0)" iocell 4 6
-set_location "\DAC_IN_MSB:sts:sts_reg\" statuscell 2 2 3 
-set_io "\LCD_Char_1:LCDPort(2)\" iocell 1 2
-set_io "\LCD_Char_1:LCDPort(1)\" iocell 1 1
-set_location "\PWM_8:PWMUDB:genblk1:ctrlreg\" controlcell 2 0 6 
+set_io "MASK_CONTROL(0)" iocell 0 4
+set_location "\DAC_IN_MSB:sts:sts_reg\" statuscell 1 3 3 
+set_location "\ADC_SAR_Seq:bSAR_SEQ:EOCSts\" statuscell 2 4 3 
+set_io "\LCD_Char_1:LCDPort(2)\" iocell 5 2
+set_io "\LCD_Char_1:LCDPort(1)\" iocell 5 1

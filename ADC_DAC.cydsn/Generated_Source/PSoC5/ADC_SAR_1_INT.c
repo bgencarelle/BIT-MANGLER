@@ -25,7 +25,10 @@
 *   #START and #END tags
 ******************************************************************************/
 /* `#START ADC_SYS_VAR`  */
-
+extern int16    audio_result;
+extern uint8    audio_dataReady;   
+extern uint8     audio_lsb;
+extern uint8     audio_msb;
 /* `#END`  */
 
 #if(ADC_SAR_1_IRQ_REMOVE == 0u)
@@ -60,7 +63,11 @@
         *  - add user ISR code between the following #START and #END tags
         *************************************************************************/
           /* `#START MAIN_ADC_ISR`  */
-
+        audio_result = CY_GET_REG16(ADC_SAR_1_SAR_WRK0_PTR);
+        
+        audio_lsb = CY_GET_REG8(ADC_SAR_1_SAR_WRK0_PTR);
+        audio_msb = CY_GET_REG8(ADC_SAR_1_SAR_WRK1_PTR);
+        audio_dataReady = 1;
           /* `#END`  */
     }
 

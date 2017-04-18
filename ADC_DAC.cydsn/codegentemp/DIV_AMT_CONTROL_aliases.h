@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: MASK_OFF_CONTROL.h  
+* File Name: DIV_AMT_CONTROL.h  
 * Version 2.20
 *
 * Description:
@@ -15,8 +15,8 @@
 * the software package with which this file was provided.
 *******************************************************************************/
 
-#if !defined(CY_PINS_MASK_OFF_CONTROL_ALIASES_H) /* Pins MASK_OFF_CONTROL_ALIASES_H */
-#define CY_PINS_MASK_OFF_CONTROL_ALIASES_H
+#if !defined(CY_PINS_DIV_AMT_CONTROL_ALIASES_H) /* Pins DIV_AMT_CONTROL_ALIASES_H */
+#define CY_PINS_DIV_AMT_CONTROL_ALIASES_H
 
 #include "cytypes.h"
 #include "cyfitter.h"
@@ -25,12 +25,12 @@
 /***************************************
 *              Constants        
 ***************************************/
-#define MASK_OFF_CONTROL_0			(MASK_OFF_CONTROL__0__PC)
-#define MASK_OFF_CONTROL_0_INTR	((uint16)((uint16)0x0001u << MASK_OFF_CONTROL__0__SHIFT))
+#define DIV_AMT_CONTROL_0			(DIV_AMT_CONTROL__0__PC)
+#define DIV_AMT_CONTROL_0_INTR	((uint16)((uint16)0x0001u << DIV_AMT_CONTROL__0__SHIFT))
 
-#define MASK_OFF_CONTROL_INTR_ALL	 ((uint16)(MASK_OFF_CONTROL_0_INTR))
+#define DIV_AMT_CONTROL_INTR_ALL	 ((uint16)(DIV_AMT_CONTROL_0_INTR))
 
-#endif /* End Pins MASK_OFF_CONTROL_ALIASES_H */
+#endif /* End Pins DIV_AMT_CONTROL_ALIASES_H */
 
 
 /* [] END OF FILE */

@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: DIV_MUX_CONTROL.h  
+* File Name: DIV_AMT_CONTROL.h  
 * Version 2.20
 *
 * Description:
@@ -15,8 +15,8 @@
 * the software package with which this file was provided.
 *******************************************************************************/
 
-#if !defined(CY_PINS_DIV_MUX_CONTROL_ALIASES_H) /* Pins DIV_MUX_CONTROL_ALIASES_H */
-#define CY_PINS_DIV_MUX_CONTROL_ALIASES_H
+#if !defined(CY_PINS_DIV_AMT_CONTROL_ALIASES_H) /* Pins DIV_AMT_CONTROL_ALIASES_H */
+#define CY_PINS_DIV_AMT_CONTROL_ALIASES_H
 
 #include "cytypes.h"
 #include "cyfitter.h"
@@ -25,12 +25,12 @@
 /***************************************
 *              Constants        
 ***************************************/
-#define DIV_MUX_CONTROL_0			(DIV_MUX_CONTROL__0__PC)
-#define DIV_MUX_CONTROL_0_INTR	((uint16)((uint16)0x0001u << DIV_MUX_CONTROL__0__SHIFT))
+#define DIV_AMT_CONTROL_0			(DIV_AMT_CONTROL__0__PC)
+#define DIV_AMT_CONTROL_0_INTR	((uint16)((uint16)0x0001u << DIV_AMT_CONTROL__0__SHIFT))
 
-#define DIV_MUX_CONTROL_INTR_ALL	 ((uint16)(DIV_MUX_CONTROL_0_INTR))
+#define DIV_AMT_CONTROL_INTR_ALL	 ((uint16)(DIV_AMT_CONTROL_0_INTR))
 
-#endif /* End Pins DIV_MUX_CONTROL_ALIASES_H */
+#endif /* End Pins DIV_AMT_CONTROL_ALIASES_H */
 
 
 /* [] END OF FILE */

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccubzHAv.s 			page 1
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccBPx29a.s 			page 1
 
 
    1              		.syntax unified
@@ -54,35 +54,38 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccubzHAv.s 			page 1
   25:Generated_Source\PSoC5/ADC_SAR_1_INT.c **** *   #START and #END tags
   26:Generated_Source\PSoC5/ADC_SAR_1_INT.c **** ******************************************************************************/
   27:Generated_Source\PSoC5/ADC_SAR_1_INT.c **** /* `#START ADC_SYS_VAR`  */
-  28:Generated_Source\PSoC5/ADC_SAR_1_INT.c **** 
-  29:Generated_Source\PSoC5/ADC_SAR_1_INT.c **** /* `#END`  */
-  30:Generated_Source\PSoC5/ADC_SAR_1_INT.c **** 
-  31:Generated_Source\PSoC5/ADC_SAR_1_INT.c **** #if(ADC_SAR_1_IRQ_REMOVE == 0u)
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccubzHAv.s 			page 2
+  28:Generated_Source\PSoC5/ADC_SAR_1_INT.c **** extern int16    audio_result;
+  29:Generated_Source\PSoC5/ADC_SAR_1_INT.c **** extern uint8    audio_dataReady;   
+  30:Generated_Source\PSoC5/ADC_SAR_1_INT.c **** extern uint8     audio_lsb;
+  31:Generated_Source\PSoC5/ADC_SAR_1_INT.c **** extern uint8     audio_msb;
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccBPx29a.s 			page 2
 
 
-  32:Generated_Source\PSoC5/ADC_SAR_1_INT.c **** 
+  32:Generated_Source\PSoC5/ADC_SAR_1_INT.c **** /* `#END`  */
   33:Generated_Source\PSoC5/ADC_SAR_1_INT.c **** 
-  34:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****     /******************************************************************************
-  35:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****     * Function Name: ADC_SAR_1_ISR
-  36:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****     *******************************************************************************
-  37:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****     *
-  38:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****     * Summary:
-  39:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****     *  Handle Interrupt Service Routine.
+  34:Generated_Source\PSoC5/ADC_SAR_1_INT.c **** #if(ADC_SAR_1_IRQ_REMOVE == 0u)
+  35:Generated_Source\PSoC5/ADC_SAR_1_INT.c **** 
+  36:Generated_Source\PSoC5/ADC_SAR_1_INT.c **** 
+  37:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****     /******************************************************************************
+  38:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****     * Function Name: ADC_SAR_1_ISR
+  39:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****     *******************************************************************************
   40:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****     *
-  41:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****     * Parameters:
-  42:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****     *  None.
+  41:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****     * Summary:
+  42:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****     *  Handle Interrupt Service Routine.
   43:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****     *
-  44:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****     * Return:
+  44:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****     * Parameters:
   45:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****     *  None.
   46:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****     *
-  47:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****     * Reentrant:
-  48:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****     *  No.
+  47:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****     * Return:
+  48:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****     *  None.
   49:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****     *
-  50:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****     ******************************************************************************/
-  51:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****     CY_ISR( ADC_SAR_1_ISR )
-  52:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****     {
-  27              		.loc 1 52 0
+  50:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****     * Reentrant:
+  51:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****     *  No.
+  52:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****     *
+  53:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****     ******************************************************************************/
+  54:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****     CY_ISR( ADC_SAR_1_ISR )
+  55:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****     {
+  27              		.loc 1 55 0
   28              		.cfi_startproc
   29              		@ args = 0, pretend = 0, frame = 0
   30              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -92,303 +95,470 @@ ARM GAS  C:\Users\ben\AppData\Local\Temp\ccubzHAv.s 			page 1
   34              		.cfi_offset 7, -4
   35 0002 00AF     		add	r7, sp, #0
   36              		.cfi_def_cfa_register 7
-  53:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****         #ifdef ADC_SAR_1_ISR_INTERRUPT_CALLBACK
-  54:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****             ADC_SAR_1_ISR_InterruptCallback();
-  55:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****         #endif /* ADC_SAR_1_ISR_INTERRUPT_CALLBACK */          
-  56:Generated_Source\PSoC5/ADC_SAR_1_INT.c **** 
-  57:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****         
-  58:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****         /************************************************************************
-  59:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****         *  Custom Code
-  60:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****         *  - add user ISR code between the following #START and #END tags
-  61:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****         *************************************************************************/
-  62:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****           /* `#START MAIN_ADC_ISR`  */
-  63:Generated_Source\PSoC5/ADC_SAR_1_INT.c **** 
-  64:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****           /* `#END`  */
-  65:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****     }
-  37              		.loc 1 65 0
-  38 0004 BD46     		mov	sp, r7
-  39              		.cfi_def_cfa_register 13
-  40              		@ sp needed
-  41 0006 5DF8047B 		ldr	r7, [sp], #4
-  42              		.cfi_restore 7
-  43              		.cfi_def_cfa_offset 0
-  44 000a 7047     		bx	lr
-  45              		.cfi_endproc
-  46              	.LFE0:
-  47              		.size	ADC_SAR_1_ISR, .-ADC_SAR_1_ISR
-  48              		.text
-  49              	.Letext0:
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccubzHAv.s 			page 3
+  56:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****         #ifdef ADC_SAR_1_ISR_INTERRUPT_CALLBACK
+  57:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****             ADC_SAR_1_ISR_InterruptCallback();
+  58:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****         #endif /* ADC_SAR_1_ISR_INTERRUPT_CALLBACK */          
+  59:Generated_Source\PSoC5/ADC_SAR_1_INT.c **** 
+  60:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****         
+  61:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****         /************************************************************************
+  62:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****         *  Custom Code
+  63:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****         *  - add user ISR code between the following #START and #END tags
+  64:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****         *************************************************************************/
+  65:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****           /* `#START MAIN_ADC_ISR`  */
+  66:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****         audio_result = CY_GET_REG16(ADC_SAR_1_SAR_WRK0_PTR);
+  37              		.loc 1 66 0
+  38 0004 0B4B     		ldr	r3, .L2
+  39 0006 1B88     		ldrh	r3, [r3]	@ movhi
+  40 0008 9BB2     		uxth	r3, r3
+  41 000a 9AB2     		uxth	r2, r3
+  42 000c 0A4B     		ldr	r3, .L2+4
+  43 000e 1A80     		strh	r2, [r3]	@ movhi
+  67:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****         
+  68:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****         audio_lsb = CY_GET_REG8(ADC_SAR_1_SAR_WRK0_PTR);
+  44              		.loc 1 68 0
+  45 0010 084B     		ldr	r3, .L2
+  46 0012 1B78     		ldrb	r3, [r3]
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccBPx29a.s 			page 3
 
 
-  50              		.section	.debug_info,"",%progbits
-  51              	.Ldebug_info0:
-  52 0000 8E000000 		.4byte	0x8e
-  53 0004 0400     		.2byte	0x4
-  54 0006 00000000 		.4byte	.Ldebug_abbrev0
-  55 000a 04       		.byte	0x4
-  56 000b 01       		.uleb128 0x1
-  57 000c 00000000 		.4byte	.LASF12
-  58 0010 01       		.byte	0x1
-  59 0011 3F010000 		.4byte	.LASF13
-  60 0015 00010000 		.4byte	.LASF14
-  61 0019 00000000 		.4byte	.Ldebug_ranges0+0
-  62 001d 00000000 		.4byte	0
-  63 0021 00000000 		.4byte	.Ldebug_line0
-  64 0025 02       		.uleb128 0x2
-  65 0026 01       		.byte	0x1
-  66 0027 06       		.byte	0x6
-  67 0028 79010000 		.4byte	.LASF0
-  68 002c 02       		.uleb128 0x2
-  69 002d 01       		.byte	0x1
-  70 002e 08       		.byte	0x8
-  71 002f 94000000 		.4byte	.LASF1
-  72 0033 02       		.uleb128 0x2
-  73 0034 02       		.byte	0x2
-  74 0035 05       		.byte	0x5
-  75 0036 66010000 		.4byte	.LASF2
-  76 003a 02       		.uleb128 0x2
-  77 003b 02       		.byte	0x2
-  78 003c 07       		.byte	0x7
-  79 003d B4000000 		.4byte	.LASF3
-  80 0041 02       		.uleb128 0x2
-  81 0042 04       		.byte	0x4
-  82 0043 05       		.byte	0x5
-  83 0044 70010000 		.4byte	.LASF4
-  84 0048 02       		.uleb128 0x2
-  85 0049 04       		.byte	0x4
-  86 004a 07       		.byte	0x7
-  87 004b A2000000 		.4byte	.LASF5
-  88 004f 02       		.uleb128 0x2
-  89 0050 08       		.byte	0x8
-  90 0051 05       		.byte	0x5
-  91 0052 F2000000 		.4byte	.LASF6
-  92 0056 02       		.uleb128 0x2
-  93 0057 08       		.byte	0x8
-  94 0058 07       		.byte	0x7
-  95 0059 DB000000 		.4byte	.LASF7
-  96 005d 03       		.uleb128 0x3
-  97 005e 04       		.byte	0x4
-  98 005f 05       		.byte	0x5
-  99 0060 696E7400 		.ascii	"int\000"
- 100 0064 02       		.uleb128 0x2
- 101 0065 04       		.byte	0x4
- 102 0066 07       		.byte	0x7
- 103 0067 CE000000 		.4byte	.LASF8
- 104 006b 02       		.uleb128 0x2
- 105 006c 04       		.byte	0x4
- 106 006d 04       		.byte	0x4
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccubzHAv.s 			page 4
+  47 0014 DAB2     		uxtb	r2, r3
+  48 0016 094B     		ldr	r3, .L2+8
+  49 0018 1A70     		strb	r2, [r3]
+  69:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****         audio_msb = CY_GET_REG8(ADC_SAR_1_SAR_WRK1_PTR);
+  50              		.loc 1 69 0
+  51 001a 094B     		ldr	r3, .L2+12
+  52 001c 1B78     		ldrb	r3, [r3]
+  53 001e DAB2     		uxtb	r2, r3
+  54 0020 084B     		ldr	r3, .L2+16
+  55 0022 1A70     		strb	r2, [r3]
+  70:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****         audio_dataReady = 1;
+  56              		.loc 1 70 0
+  57 0024 084B     		ldr	r3, .L2+20
+  58 0026 0122     		movs	r2, #1
+  59 0028 1A70     		strb	r2, [r3]
+  71:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****           /* `#END`  */
+  72:Generated_Source\PSoC5/ADC_SAR_1_INT.c ****     }
+  60              		.loc 1 72 0
+  61 002a BD46     		mov	sp, r7
+  62              		.cfi_def_cfa_register 13
+  63              		@ sp needed
+  64 002c 5DF8047B 		ldr	r7, [sp], #4
+  65              		.cfi_restore 7
+  66              		.cfi_def_cfa_offset 0
+  67 0030 7047     		bx	lr
+  68              	.L3:
+  69 0032 00BF     		.align	2
+  70              	.L2:
+  71 0034 A25B0040 		.word	1073765282
+  72 0038 00000000 		.word	audio_result
+  73 003c 00000000 		.word	audio_lsb
+  74 0040 A35B0040 		.word	1073765283
+  75 0044 00000000 		.word	audio_msb
+  76 0048 00000000 		.word	audio_dataReady
+  77              		.cfi_endproc
+  78              	.LFE0:
+  79              		.size	ADC_SAR_1_ISR, .-ADC_SAR_1_ISR
+  80              		.text
+  81              	.Letext0:
+  82              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
+  83              		.section	.debug_info,"",%progbits
+  84              	.Ldebug_info0:
+  85 0000 00010000 		.4byte	0x100
+  86 0004 0400     		.2byte	0x4
+  87 0006 00000000 		.4byte	.Ldebug_abbrev0
+  88 000a 04       		.byte	0x4
+  89 000b 01       		.uleb128 0x1
+  90 000c 13000000 		.4byte	.LASF21
+  91 0010 01       		.byte	0x1
+  92 0011 AE010000 		.4byte	.LASF22
+  93 0015 A7000000 		.4byte	.LASF23
+  94 0019 00000000 		.4byte	.Ldebug_ranges0+0
+  95 001d 00000000 		.4byte	0
+  96 0021 00000000 		.4byte	.Ldebug_line0
+  97 0025 02       		.uleb128 0x2
+  98 0026 01       		.byte	0x1
+  99 0027 06       		.byte	0x6
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccBPx29a.s 			page 4
 
 
- 107 006e 8E000000 		.4byte	.LASF9
- 108 0072 02       		.uleb128 0x2
- 109 0073 08       		.byte	0x8
- 110 0074 04       		.byte	0x4
- 111 0075 C7000000 		.4byte	.LASF10
- 112 0079 02       		.uleb128 0x2
- 113 007a 01       		.byte	0x1
- 114 007b 08       		.byte	0x8
- 115 007c 3A010000 		.4byte	.LASF11
- 116 0080 04       		.uleb128 0x4
- 117 0081 85010000 		.4byte	.LASF15
- 118 0085 01       		.byte	0x1
- 119 0086 33       		.byte	0x33
- 120 0087 00000000 		.4byte	.LFB0
- 121 008b 0C000000 		.4byte	.LFE0-.LFB0
- 122 008f 01       		.uleb128 0x1
- 123 0090 9C       		.byte	0x9c
- 124 0091 00       		.byte	0
- 125              		.section	.debug_abbrev,"",%progbits
- 126              	.Ldebug_abbrev0:
- 127 0000 01       		.uleb128 0x1
- 128 0001 11       		.uleb128 0x11
- 129 0002 01       		.byte	0x1
- 130 0003 25       		.uleb128 0x25
- 131 0004 0E       		.uleb128 0xe
- 132 0005 13       		.uleb128 0x13
- 133 0006 0B       		.uleb128 0xb
- 134 0007 03       		.uleb128 0x3
- 135 0008 0E       		.uleb128 0xe
- 136 0009 1B       		.uleb128 0x1b
- 137 000a 0E       		.uleb128 0xe
- 138 000b 55       		.uleb128 0x55
- 139 000c 17       		.uleb128 0x17
- 140 000d 11       		.uleb128 0x11
- 141 000e 01       		.uleb128 0x1
- 142 000f 10       		.uleb128 0x10
- 143 0010 17       		.uleb128 0x17
- 144 0011 00       		.byte	0
- 145 0012 00       		.byte	0
- 146 0013 02       		.uleb128 0x2
- 147 0014 24       		.uleb128 0x24
- 148 0015 00       		.byte	0
- 149 0016 0B       		.uleb128 0xb
- 150 0017 0B       		.uleb128 0xb
- 151 0018 3E       		.uleb128 0x3e
- 152 0019 0B       		.uleb128 0xb
- 153 001a 03       		.uleb128 0x3
- 154 001b 0E       		.uleb128 0xe
- 155 001c 00       		.byte	0
- 156 001d 00       		.byte	0
- 157 001e 03       		.uleb128 0x3
- 158 001f 24       		.uleb128 0x24
- 159 0020 00       		.byte	0
- 160 0021 0B       		.uleb128 0xb
- 161 0022 0B       		.uleb128 0xb
- 162 0023 3E       		.uleb128 0x3e
- 163 0024 0B       		.uleb128 0xb
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccubzHAv.s 			page 5
+ 100 0028 EE010000 		.4byte	.LASF0
+ 101 002c 02       		.uleb128 0x2
+ 102 002d 01       		.byte	0x1
+ 103 002e 08       		.byte	0x8
+ 104 002f 41010000 		.4byte	.LASF1
+ 105 0033 02       		.uleb128 0x2
+ 106 0034 02       		.byte	0x2
+ 107 0035 05       		.byte	0x5
+ 108 0036 D5010000 		.4byte	.LASF2
+ 109 003a 02       		.uleb128 0x2
+ 110 003b 02       		.byte	0x2
+ 111 003c 07       		.byte	0x7
+ 112 003d 2E010000 		.4byte	.LASF3
+ 113 0041 02       		.uleb128 0x2
+ 114 0042 04       		.byte	0x4
+ 115 0043 05       		.byte	0x5
+ 116 0044 E5010000 		.4byte	.LASF4
+ 117 0048 02       		.uleb128 0x2
+ 118 0049 04       		.byte	0x4
+ 119 004a 07       		.byte	0x7
+ 120 004b 1C010000 		.4byte	.LASF5
+ 121 004f 02       		.uleb128 0x2
+ 122 0050 08       		.byte	0x8
+ 123 0051 05       		.byte	0x5
+ 124 0052 9B010000 		.4byte	.LASF6
+ 125 0056 02       		.uleb128 0x2
+ 126 0057 08       		.byte	0x8
+ 127 0058 07       		.byte	0x7
+ 128 0059 6A010000 		.4byte	.LASF7
+ 129 005d 03       		.uleb128 0x3
+ 130 005e 04       		.byte	0x4
+ 131 005f 05       		.byte	0x5
+ 132 0060 696E7400 		.ascii	"int\000"
+ 133 0064 02       		.uleb128 0x2
+ 134 0065 04       		.byte	0x4
+ 135 0066 07       		.byte	0x7
+ 136 0067 5D010000 		.4byte	.LASF8
+ 137 006b 04       		.uleb128 0x4
+ 138 006c DF010000 		.4byte	.LASF9
+ 139 0070 02       		.byte	0x2
+ 140 0071 9201     		.2byte	0x192
+ 141 0073 2C000000 		.4byte	0x2c
+ 142 0077 04       		.uleb128 0x4
+ 143 0078 56010000 		.4byte	.LASF10
+ 144 007c 02       		.byte	0x2
+ 145 007d 9301     		.2byte	0x193
+ 146 007f 3A000000 		.4byte	0x3a
+ 147 0083 04       		.uleb128 0x4
+ 148 0084 16010000 		.4byte	.LASF11
+ 149 0088 02       		.byte	0x2
+ 150 0089 9601     		.2byte	0x196
+ 151 008b 33000000 		.4byte	0x33
+ 152 008f 02       		.uleb128 0x2
+ 153 0090 04       		.byte	0x4
+ 154 0091 04       		.byte	0x4
+ 155 0092 A1000000 		.4byte	.LASF12
+ 156 0096 02       		.uleb128 0x2
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccBPx29a.s 			page 5
 
 
- 164 0025 03       		.uleb128 0x3
- 165 0026 08       		.uleb128 0x8
- 166 0027 00       		.byte	0
- 167 0028 00       		.byte	0
- 168 0029 04       		.uleb128 0x4
- 169 002a 2E       		.uleb128 0x2e
- 170 002b 00       		.byte	0
- 171 002c 3F       		.uleb128 0x3f
- 172 002d 19       		.uleb128 0x19
- 173 002e 03       		.uleb128 0x3
- 174 002f 0E       		.uleb128 0xe
- 175 0030 3A       		.uleb128 0x3a
- 176 0031 0B       		.uleb128 0xb
- 177 0032 3B       		.uleb128 0x3b
- 178 0033 0B       		.uleb128 0xb
- 179 0034 27       		.uleb128 0x27
- 180 0035 19       		.uleb128 0x19
- 181 0036 11       		.uleb128 0x11
- 182 0037 01       		.uleb128 0x1
- 183 0038 12       		.uleb128 0x12
- 184 0039 06       		.uleb128 0x6
- 185 003a 40       		.uleb128 0x40
- 186 003b 18       		.uleb128 0x18
- 187 003c 9742     		.uleb128 0x2117
- 188 003e 19       		.uleb128 0x19
- 189 003f 00       		.byte	0
- 190 0040 00       		.byte	0
- 191 0041 00       		.byte	0
- 192              		.section	.debug_aranges,"",%progbits
- 193 0000 1C000000 		.4byte	0x1c
- 194 0004 0200     		.2byte	0x2
- 195 0006 00000000 		.4byte	.Ldebug_info0
- 196 000a 04       		.byte	0x4
- 197 000b 00       		.byte	0
- 198 000c 0000     		.2byte	0
- 199 000e 0000     		.2byte	0
- 200 0010 00000000 		.4byte	.LFB0
- 201 0014 0C000000 		.4byte	.LFE0-.LFB0
- 202 0018 00000000 		.4byte	0
- 203 001c 00000000 		.4byte	0
- 204              		.section	.debug_ranges,"",%progbits
- 205              	.Ldebug_ranges0:
- 206 0000 00000000 		.4byte	.LFB0
- 207 0004 0C000000 		.4byte	.LFE0
- 208 0008 00000000 		.4byte	0
- 209 000c 00000000 		.4byte	0
- 210              		.section	.debug_line,"",%progbits
- 211              	.Ldebug_line0:
- 212 0000 55000000 		.section	.debug_str,"MS",%progbits,1
- 212      02003D00 
- 212      00000201 
- 212      FB0E0D00 
- 212      01010101 
- 213              	.LASF12:
- 214 0000 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 214      4320342E 
- 214      392E3320 
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccubzHAv.s 			page 6
+ 157 0097 08       		.byte	0x8
+ 158 0098 04       		.byte	0x4
+ 159 0099 4F010000 		.4byte	.LASF13
+ 160 009d 02       		.uleb128 0x2
+ 161 009e 01       		.byte	0x1
+ 162 009f 08       		.byte	0x8
+ 163 00a0 A9010000 		.4byte	.LASF14
+ 164 00a4 04       		.uleb128 0x4
+ 165 00a5 07010000 		.4byte	.LASF15
+ 166 00a9 02       		.byte	0x2
+ 167 00aa 3C02     		.2byte	0x23c
+ 168 00ac B0000000 		.4byte	0xb0
+ 169 00b0 05       		.uleb128 0x5
+ 170 00b1 6B000000 		.4byte	0x6b
+ 171 00b5 04       		.uleb128 0x4
+ 172 00b6 00000000 		.4byte	.LASF16
+ 173 00ba 02       		.byte	0x2
+ 174 00bb 3D02     		.2byte	0x23d
+ 175 00bd C1000000 		.4byte	0xc1
+ 176 00c1 05       		.uleb128 0x5
+ 177 00c2 77000000 		.4byte	0x77
+ 178 00c6 06       		.uleb128 0x6
+ 179 00c7 FA010000 		.4byte	.LASF24
+ 180 00cb 01       		.byte	0x1
+ 181 00cc 36       		.byte	0x36
+ 182 00cd 00000000 		.4byte	.LFB0
+ 183 00d1 4C000000 		.4byte	.LFE0-.LFB0
+ 184 00d5 01       		.uleb128 0x1
+ 185 00d6 9C       		.byte	0x9c
+ 186 00d7 07       		.uleb128 0x7
+ 187 00d8 06000000 		.4byte	.LASF17
+ 188 00dc 01       		.byte	0x1
+ 189 00dd 1C       		.byte	0x1c
+ 190 00de 83000000 		.4byte	0x83
+ 191 00e2 07       		.uleb128 0x7
+ 192 00e3 8B010000 		.4byte	.LASF18
+ 193 00e7 01       		.byte	0x1
+ 194 00e8 1D       		.byte	0x1d
+ 195 00e9 6B000000 		.4byte	0x6b
+ 196 00ed 07       		.uleb128 0x7
+ 197 00ee 0C010000 		.4byte	.LASF19
+ 198 00f2 01       		.byte	0x1
+ 199 00f3 1E       		.byte	0x1e
+ 200 00f4 6B000000 		.4byte	0x6b
+ 201 00f8 07       		.uleb128 0x7
+ 202 00f9 81010000 		.4byte	.LASF20
+ 203 00fd 01       		.byte	0x1
+ 204 00fe 1F       		.byte	0x1f
+ 205 00ff 6B000000 		.4byte	0x6b
+ 206 0103 00       		.byte	0
+ 207              		.section	.debug_abbrev,"",%progbits
+ 208              	.Ldebug_abbrev0:
+ 209 0000 01       		.uleb128 0x1
+ 210 0001 11       		.uleb128 0x11
+ 211 0002 01       		.byte	0x1
+ 212 0003 25       		.uleb128 0x25
+ 213 0004 0E       		.uleb128 0xe
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccBPx29a.s 			page 6
 
 
- 214      32303135 
- 214      30333033 
- 215 0033 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 215      20726576 
- 215      6973696F 
- 215      6E203232 
- 215      31323230 
- 216 0066 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
- 216      66756E63 
- 216      74696F6E 
- 216      2D736563 
- 216      74696F6E 
- 217              	.LASF9:
- 218 008e 666C6F61 		.ascii	"float\000"
- 218      7400
- 219              	.LASF1:
- 220 0094 756E7369 		.ascii	"unsigned char\000"
- 220      676E6564 
- 220      20636861 
- 220      7200
- 221              	.LASF5:
- 222 00a2 6C6F6E67 		.ascii	"long unsigned int\000"
- 222      20756E73 
- 222      69676E65 
- 222      6420696E 
- 222      7400
- 223              	.LASF3:
- 224 00b4 73686F72 		.ascii	"short unsigned int\000"
- 224      7420756E 
- 224      7369676E 
- 224      65642069 
- 224      6E7400
- 225              	.LASF10:
- 226 00c7 646F7562 		.ascii	"double\000"
- 226      6C6500
- 227              	.LASF8:
- 228 00ce 756E7369 		.ascii	"unsigned int\000"
- 228      676E6564 
- 228      20696E74 
- 228      00
- 229              	.LASF7:
- 230 00db 6C6F6E67 		.ascii	"long long unsigned int\000"
- 230      206C6F6E 
- 230      6720756E 
- 230      7369676E 
- 230      65642069 
- 231              	.LASF6:
- 232 00f2 6C6F6E67 		.ascii	"long long int\000"
- 232      206C6F6E 
- 232      6720696E 
- 232      7400
- 233              	.LASF14:
- 234 0100 433A5C55 		.ascii	"C:\\Users\\ben\\Documents\\PSoC Creator\\DACTEST\\A"
- 234      73657273 
- 234      5C62656E 
- 234      5C446F63 
- 234      756D656E 
-ARM GAS  C:\Users\ben\AppData\Local\Temp\ccubzHAv.s 			page 7
+ 214 0005 13       		.uleb128 0x13
+ 215 0006 0B       		.uleb128 0xb
+ 216 0007 03       		.uleb128 0x3
+ 217 0008 0E       		.uleb128 0xe
+ 218 0009 1B       		.uleb128 0x1b
+ 219 000a 0E       		.uleb128 0xe
+ 220 000b 55       		.uleb128 0x55
+ 221 000c 17       		.uleb128 0x17
+ 222 000d 11       		.uleb128 0x11
+ 223 000e 01       		.uleb128 0x1
+ 224 000f 10       		.uleb128 0x10
+ 225 0010 17       		.uleb128 0x17
+ 226 0011 00       		.byte	0
+ 227 0012 00       		.byte	0
+ 228 0013 02       		.uleb128 0x2
+ 229 0014 24       		.uleb128 0x24
+ 230 0015 00       		.byte	0
+ 231 0016 0B       		.uleb128 0xb
+ 232 0017 0B       		.uleb128 0xb
+ 233 0018 3E       		.uleb128 0x3e
+ 234 0019 0B       		.uleb128 0xb
+ 235 001a 03       		.uleb128 0x3
+ 236 001b 0E       		.uleb128 0xe
+ 237 001c 00       		.byte	0
+ 238 001d 00       		.byte	0
+ 239 001e 03       		.uleb128 0x3
+ 240 001f 24       		.uleb128 0x24
+ 241 0020 00       		.byte	0
+ 242 0021 0B       		.uleb128 0xb
+ 243 0022 0B       		.uleb128 0xb
+ 244 0023 3E       		.uleb128 0x3e
+ 245 0024 0B       		.uleb128 0xb
+ 246 0025 03       		.uleb128 0x3
+ 247 0026 08       		.uleb128 0x8
+ 248 0027 00       		.byte	0
+ 249 0028 00       		.byte	0
+ 250 0029 04       		.uleb128 0x4
+ 251 002a 16       		.uleb128 0x16
+ 252 002b 00       		.byte	0
+ 253 002c 03       		.uleb128 0x3
+ 254 002d 0E       		.uleb128 0xe
+ 255 002e 3A       		.uleb128 0x3a
+ 256 002f 0B       		.uleb128 0xb
+ 257 0030 3B       		.uleb128 0x3b
+ 258 0031 05       		.uleb128 0x5
+ 259 0032 49       		.uleb128 0x49
+ 260 0033 13       		.uleb128 0x13
+ 261 0034 00       		.byte	0
+ 262 0035 00       		.byte	0
+ 263 0036 05       		.uleb128 0x5
+ 264 0037 35       		.uleb128 0x35
+ 265 0038 00       		.byte	0
+ 266 0039 49       		.uleb128 0x49
+ 267 003a 13       		.uleb128 0x13
+ 268 003b 00       		.byte	0
+ 269 003c 00       		.byte	0
+ 270 003d 06       		.uleb128 0x6
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccBPx29a.s 			page 7
 
 
- 235 012d 44435F44 		.ascii	"DC_DAC.cydsn\000"
- 235      41432E63 
- 235      7964736E 
- 235      00
- 236              	.LASF11:
- 237 013a 63686172 		.ascii	"char\000"
- 237      00
- 238              	.LASF13:
- 239 013f 47656E65 		.ascii	"Generated_Source\\PSoC5\\ADC_SAR_1_INT.c\000"
- 239      72617465 
- 239      645F536F 
- 239      75726365 
- 239      5C50536F 
- 240              	.LASF2:
- 241 0166 73686F72 		.ascii	"short int\000"
- 241      7420696E 
- 241      7400
- 242              	.LASF4:
- 243 0170 6C6F6E67 		.ascii	"long int\000"
- 243      20696E74 
- 243      00
- 244              	.LASF0:
- 245 0179 7369676E 		.ascii	"signed char\000"
- 245      65642063 
- 245      68617200 
- 246              	.LASF15:
- 247 0185 4144435F 		.ascii	"ADC_SAR_1_ISR\000"
- 247      5341525F 
- 247      315F4953 
- 247      5200
- 248              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ 271 003e 2E       		.uleb128 0x2e
+ 272 003f 00       		.byte	0
+ 273 0040 3F       		.uleb128 0x3f
+ 274 0041 19       		.uleb128 0x19
+ 275 0042 03       		.uleb128 0x3
+ 276 0043 0E       		.uleb128 0xe
+ 277 0044 3A       		.uleb128 0x3a
+ 278 0045 0B       		.uleb128 0xb
+ 279 0046 3B       		.uleb128 0x3b
+ 280 0047 0B       		.uleb128 0xb
+ 281 0048 27       		.uleb128 0x27
+ 282 0049 19       		.uleb128 0x19
+ 283 004a 11       		.uleb128 0x11
+ 284 004b 01       		.uleb128 0x1
+ 285 004c 12       		.uleb128 0x12
+ 286 004d 06       		.uleb128 0x6
+ 287 004e 40       		.uleb128 0x40
+ 288 004f 18       		.uleb128 0x18
+ 289 0050 9742     		.uleb128 0x2117
+ 290 0052 19       		.uleb128 0x19
+ 291 0053 00       		.byte	0
+ 292 0054 00       		.byte	0
+ 293 0055 07       		.uleb128 0x7
+ 294 0056 34       		.uleb128 0x34
+ 295 0057 00       		.byte	0
+ 296 0058 03       		.uleb128 0x3
+ 297 0059 0E       		.uleb128 0xe
+ 298 005a 3A       		.uleb128 0x3a
+ 299 005b 0B       		.uleb128 0xb
+ 300 005c 3B       		.uleb128 0x3b
+ 301 005d 0B       		.uleb128 0xb
+ 302 005e 49       		.uleb128 0x49
+ 303 005f 13       		.uleb128 0x13
+ 304 0060 3F       		.uleb128 0x3f
+ 305 0061 19       		.uleb128 0x19
+ 306 0062 3C       		.uleb128 0x3c
+ 307 0063 19       		.uleb128 0x19
+ 308 0064 00       		.byte	0
+ 309 0065 00       		.byte	0
+ 310 0066 00       		.byte	0
+ 311              		.section	.debug_aranges,"",%progbits
+ 312 0000 1C000000 		.4byte	0x1c
+ 313 0004 0200     		.2byte	0x2
+ 314 0006 00000000 		.4byte	.Ldebug_info0
+ 315 000a 04       		.byte	0x4
+ 316 000b 00       		.byte	0
+ 317 000c 0000     		.2byte	0
+ 318 000e 0000     		.2byte	0
+ 319 0010 00000000 		.4byte	.LFB0
+ 320 0014 4C000000 		.4byte	.LFE0-.LFB0
+ 321 0018 00000000 		.4byte	0
+ 322 001c 00000000 		.4byte	0
+ 323              		.section	.debug_ranges,"",%progbits
+ 324              	.Ldebug_ranges0:
+ 325 0000 00000000 		.4byte	.LFB0
+ 326 0004 4C000000 		.4byte	.LFE0
+ 327 0008 00000000 		.4byte	0
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccBPx29a.s 			page 8
+
+
+ 328 000c 00000000 		.4byte	0
+ 329              		.section	.debug_line,"",%progbits
+ 330              	.Ldebug_line0:
+ 331 0000 65000000 		.section	.debug_str,"MS",%progbits,1
+ 331      02004A00 
+ 331      00000201 
+ 331      FB0E0D00 
+ 331      01010101 
+ 332              	.LASF16:
+ 333 0000 72656731 		.ascii	"reg16\000"
+ 333      3600
+ 334              	.LASF17:
+ 335 0006 61756469 		.ascii	"audio_result\000"
+ 335      6F5F7265 
+ 335      73756C74 
+ 335      00
+ 336              	.LASF21:
+ 337 0013 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 337      4320342E 
+ 337      392E3320 
+ 337      32303135 
+ 337      30333033 
+ 338 0046 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 338      20726576 
+ 338      6973696F 
+ 338      6E203232 
+ 338      31323230 
+ 339 0079 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 339      66756E63 
+ 339      74696F6E 
+ 339      2D736563 
+ 339      74696F6E 
+ 340              	.LASF12:
+ 341 00a1 666C6F61 		.ascii	"float\000"
+ 341      7400
+ 342              	.LASF23:
+ 343 00a7 433A5C55 		.ascii	"C:\\Users\\ben\\Documents\\PSoC Creator\\New Pedal "
+ 343      73657273 
+ 343      5C62656E 
+ 343      5C446F63 
+ 343      756D656E 
+ 344 00d5 5468696E 		.ascii	"Thingz\\PSOC_BIT_MANGLER\\BIT-MANGLER\\ADC_DAC.cyds"
+ 344      677A5C50 
+ 344      534F435F 
+ 344      4249545F 
+ 344      4D414E47 
+ 345 0105 6E00     		.ascii	"n\000"
+ 346              	.LASF15:
+ 347 0107 72656738 		.ascii	"reg8\000"
+ 347      00
+ 348              	.LASF19:
+ 349 010c 61756469 		.ascii	"audio_lsb\000"
+ 349      6F5F6C73 
+ 349      6200
+ 350              	.LASF11:
+ 351 0116 696E7431 		.ascii	"int16\000"
+ 351      3600
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccBPx29a.s 			page 9
+
+
+ 352              	.LASF5:
+ 353 011c 6C6F6E67 		.ascii	"long unsigned int\000"
+ 353      20756E73 
+ 353      69676E65 
+ 353      6420696E 
+ 353      7400
+ 354              	.LASF3:
+ 355 012e 73686F72 		.ascii	"short unsigned int\000"
+ 355      7420756E 
+ 355      7369676E 
+ 355      65642069 
+ 355      6E7400
+ 356              	.LASF1:
+ 357 0141 756E7369 		.ascii	"unsigned char\000"
+ 357      676E6564 
+ 357      20636861 
+ 357      7200
+ 358              	.LASF13:
+ 359 014f 646F7562 		.ascii	"double\000"
+ 359      6C6500
+ 360              	.LASF10:
+ 361 0156 75696E74 		.ascii	"uint16\000"
+ 361      313600
+ 362              	.LASF8:
+ 363 015d 756E7369 		.ascii	"unsigned int\000"
+ 363      676E6564 
+ 363      20696E74 
+ 363      00
+ 364              	.LASF7:
+ 365 016a 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 365      206C6F6E 
+ 365      6720756E 
+ 365      7369676E 
+ 365      65642069 
+ 366              	.LASF20:
+ 367 0181 61756469 		.ascii	"audio_msb\000"
+ 367      6F5F6D73 
+ 367      6200
+ 368              	.LASF18:
+ 369 018b 61756469 		.ascii	"audio_dataReady\000"
+ 369      6F5F6461 
+ 369      74615265 
+ 369      61647900 
+ 370              	.LASF6:
+ 371 019b 6C6F6E67 		.ascii	"long long int\000"
+ 371      206C6F6E 
+ 371      6720696E 
+ 371      7400
+ 372              	.LASF14:
+ 373 01a9 63686172 		.ascii	"char\000"
+ 373      00
+ 374              	.LASF22:
+ 375 01ae 47656E65 		.ascii	"Generated_Source\\PSoC5\\ADC_SAR_1_INT.c\000"
+ 375      72617465 
+ 375      645F536F 
+ 375      75726365 
+ 375      5C50536F 
+ARM GAS  C:\Users\ben\AppData\Local\Temp\ccBPx29a.s 			page 10
+
+
+ 376              	.LASF2:
+ 377 01d5 73686F72 		.ascii	"short int\000"
+ 377      7420696E 
+ 377      7400
+ 378              	.LASF9:
+ 379 01df 75696E74 		.ascii	"uint8\000"
+ 379      3800
+ 380              	.LASF4:
+ 381 01e5 6C6F6E67 		.ascii	"long int\000"
+ 381      20696E74 
+ 381      00
+ 382              	.LASF0:
+ 383 01ee 7369676E 		.ascii	"signed char\000"
+ 383      65642063 
+ 383      68617200 
+ 384              	.LASF24:
+ 385 01fa 4144435F 		.ascii	"ADC_SAR_1_ISR\000"
+ 385      5341525F 
+ 385      315F4953 
+ 385      5200
+ 386              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

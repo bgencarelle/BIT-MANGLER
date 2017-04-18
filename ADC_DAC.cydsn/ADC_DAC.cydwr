@@ -708,7 +708,7 @@
       <Data key="6d4164d1-41ea-478d-a77c-76844dbb8161" value="MUX_11_10" />
       <Data key="8bef9627-f335-4b5a-bd5b-36c7d86790ea/dea208d9-07b0-438b-a5e0-ac5d207f2658/16a808f6-2e13-45b9-bce0-b001c8655113" value="ADC_SAR_Seq_SAR_Bypass" />
       <Data key="8d318d8b-cf7b-4b6b-b02c-ab1c5c49d0ba" value="MISO_IN" />
-      <Data key="8f09d42b-4252-4fd9-9747-e1e6888f0885" value="DIV_MUX_CONTROL" />
+      <Data key="8f09d42b-4252-4fd9-9747-e1e6888f0885" value="DIV_AMT_CONTROL" />
       <Data key="09bc7baa-1eb4-4cde-99ce-3835dbcb9acd/232398c5-3876-4e07-8f5b-7cd7657055e2" value="CapSense_1_CmodCH0" />
       <Data key="09bc7baa-1eb4-4cde-99ce-3835dbcb9acd/dd9c1af8-be5a-4b9e-b10c-b2d9f11dc9fc" value="CapSense_1_PortCH0" />
       <Data key="9f13bc36-39c4-4680-822e-39c557785145" value="MUX_BUS" />
@@ -720,7 +720,7 @@
       <Data key="177aaffd-317a-4beb-ba81-0c5cd70e7e93" value="VREF_BUFF" />
       <Data key="567efdc5-6e1f-49af-8b38-a8ea734b7a70" value="MUX_7_4" />
       <Data key="0955fde2-55af-474a-9ab7-f0e90c156300" value="PIN6_1" />
-      <Data key="958c95b3-19f2-4750-b7c4-23383f3cc89e" value="MASK_OFF_CONTROL" />
+      <Data key="958c95b3-19f2-4750-b7c4-23383f3cc89e" value="DIV_DEPTH_CONTROL" />
       <Data key="3590c30a-4219-4774-b664-f8765af8e815" value="PIN15_5" />
       <Data key="00004970-9d21-4f0e-875c-675190db8bba" value="DEPTH_PIN" />
       <Data key="5570b52e-a6df-4185-bd70-714b44e0cf01" value="VREF_IN" />
@@ -741,7 +741,7 @@
       <Data key="d36a7244-7a3f-433e-b221-620434f657fb" value="gjf" />
       <Data key="d4800fd3-8119-45eb-a848-56e581c272c5" value="PIN6_3" />
       <Data key="e851a3b9-efb8-48be-bbb8-b303b216c393" value="MOSI_OUT" />
-      <Data key="ec958407-0043-4499-b7d2-fed1a912b659" value="PWM_1_CONTROL" />
+      <Data key="ec958407-0043-4499-b7d2-fed1a912b659" value="MASK_CONTROL" />
       <Data key="efccb368-07a4-4cd5-862a-a07319c85a4c/ed092b9b-d398-4703-be89-cebf998501f6" value="LCD_Char_1_LCDPort" />
       <Data key="fe06ede2-63c8-422c-a6f7-d7603b8d92d0" value="SCLK_OUT" />
     </Group>
@@ -1532,6 +1532,11 @@
         <Data key="Port Format" value="12,2" />
       </Group>
     </Group>
+    <Group key="8f09d42b-4252-4fd9-9747-e1e6888f0885">
+      <Group key="0">
+        <Data key="Port Format" value="4,2" />
+      </Group>
+    </Group>
     <Group key="84d4d184-9977-427d-bde8-f5771fdb2c44">
       <Group key="0">
         <Data key="Port Format" value="12,3" />
@@ -1554,7 +1559,7 @@
     </Group>
     <Group key="958c95b3-19f2-4750-b7c4-23383f3cc89e">
       <Group key="0">
-        <Data key="Port Format" value="4,4" />
+        <Data key="Port Format" value="4,1" />
       </Group>
     </Group>
     <Group key="3590c30a-4219-4774-b664-f8765af8e815">

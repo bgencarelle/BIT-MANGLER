@@ -18,45 +18,52 @@
 
 
 void PWM_Start(void);
-void PWM_Set(uint16 counterdiv);
-uint16 BIT_MASK_CTRL = 0;
-uint16 DIV_MASK_CTRL = 0;
-uint16 OLD_BIT_MASK_DEPTH = 0;
-uint16 OLD_DIV_MASK_DEPTH = 0;
-        
-uint16 MASK_CTRL = 0;
-uint16 OLD_MASK_DEPTH = 0;
-uint8 MASK_EFFECT = 0;
-uint16 Effect(uint16 depth);
-int32 AUDIO_IN = 0;
-uint16 FRQ_CTRL = 0;
-int main()
+void PWM_Set(uint8 PWMin);
+
+
+uint16  BIT_MASK_CTRL = 0;
+uint16  DIV_MASK_CTRL = 0;
+uint16  OLD_BIT_MASK_DEPTH = 0;
+uint16  OLD_DIV_MASK_DEPTH = 0;
+uint16  FINAL_OUT = 0;        
+uint16  MASK_CTRL = 0;
+uint16  OLD_MASK_DEPTH = 0;
+uint8   MASK_EFFECT = 0;
+uint16  Effect(uint16 depth);
+uint16  SAR_ADCResultArray[ADC_SAR_Seq_NUMBER_OF_CHANNELS];
+uint8   seq_sar_dataReady; 
+int32   audio_result;
+uint8   audio_dataReady;   
+uint8   audio_lsb;
+uint8   audio_msb;
+uint16  FRQ_CTRL = 0;
+
+
+int main(void)
 {
-    uint16 DIV_DEPTH = 0;
-    uint16 CTR = 0;
-    uint32 Filt_ADC;
+    int32   Filt_ADC;
+    
     /* Start the components */
     Opamp_1_Start();
     Opamp_2_Start();
     PWM_Start();
     PWM_ADC_CK_Enable();
     PWM_ADC_CK_Start();
-//  PGA_1_Start();
-//  Opamp_4_Start();
     LCD_Char_1_Start();
- //   ADC_DelSig_1_Start();
+//   ADC_DelSig_1_Start();
     Filter_Start();
     ADC_SAR_1_Start();
-    ADC_SAR_1_shift;
+    ADC_SAR_1_IRQ_Enable();
     ADC_SAR_Seq_Start();
+    ADC_SAR_Seq_IRQ_Enable();
     ADC_SAR_Seq_StartConvert();
-  //  CapSense_1_Start();
+    
+ //  CapSense_1_Start();
     SPI_DAC_Start();
+    
     /* Start ISRs */
     /* Enable global interrupts */
-   CyGlobalIntEnable;
-    /* Start ADC conversion */
- //   ADC_SAR_1_StartConvert();
+    CyGlobalIntEnable;
     ADC_SAR_Seq_StartConvert();
     LCD_Char_1_Position(0u, 0u);
     LCD_Char_1_PrintString("ADC1 ");
@@ -68,49 +75,42 @@ int main()
     {
     
     
-    if (ADC_SAR_1_IsEndConversion(1))
-    {
-    
-        SPI_DAC_WriteTxData(AUDIO_IN| 0b1111000000000000); 
-     
+    if (audio_dataReady !=0)
+    {   
+    ADC_1_OUT_LSB_Write(audio_lsb);
+    ADC_1_OUT_MSB_Write((audio_msb));
+    FINAL_OUT = (((DAC_IN_MSB_Read()<<8) | DAC_IN_LSB_Read()));
+    SPI_DAC_WriteTxData((FINAL_OUT)| 0b1111000000000000);
+        audio_dataReady = 0;
+    }
+      if (seq_sar_dataReady !=0)
+        {   
 
-        OLD_BIT_MASK_DEPTH = BIT_MASK_CTRL;
+    PWM_ADC_CK_WritePeriod((SAR_ADCResultArray[0]>>3)+1);//sample rate control
+    PWM_ADC_CK_WriteCompare((SAR_ADCResultArray[0]>>4));//SAR_ADCResultArray[0]>>1);//compare for 50% duty
+    DIV_MASK_LSB_Write(0);//SAR_ADCResultArray[1] & 0xFF);//frequency div depth LSB;
+    DIV_MASK_MSB_Write(0);//SAR_ADCResultArray[1]>>8u);//frequency div depth MSB;
+    PWM_Set(1);//SAR_ADCResultArray[2]>>7)+1);//div value
+    BIT_MASK_CTRL = 0;//Effect(SAR_ADCResultArray[3]>>7);
+    seq_sar_dataReady=0;
+        }  
+
+    
+    if (1 == 0)
+    {
         
-        ADC_1_OUT_LSB_Write(ADC_SAR_1_SAR_WRK0_REG);
-        ADC_1_OUT_MSB_Write((ADC_SAR_1_SAR_WRK1_REG & 0x0F));
-        uint16 FINAL_OUT = (((DAC_IN_MSB_Read()<<8) | DAC_IN_LSB_Read()));
-   
-    
-  if (ADC_SAR_Seq_IsEndConversion(1)){
-       
-    FRQ_CTRL=(1);
-    PWM_ADC_CK_WritePeriod(FRQ_CTRL);
-    PWM_ADC_CK_WriteCompare(FRQ_CTRL>>2);
-    //ADC_SAR_Seq_GetResult16(3)>>8);
-    DIV_MASK_CTRL = 0x000;//ADC_SAR_Seq_GetResult16(2);
-    DIV_MASK_LSB_Write(DIV_MASK_CTRL & 0xFF);
-    DIV_MASK_MSB_Write(DIV_MASK_CTRL>>8u);
-    //    BIT_DIV_Write(0x0u);//ADC_SAR_Seq_GetResult16(3) >>9);
-    BIT_MASK_CTRL = Effect(ADC_SAR_Seq_GetResult16(1));
-}
-}
-   /*     
-
-
-   _S
-    if (CTR == 5)
-    {
     LCD_Char_1_Position(0u, strlen("ADC1 "));
     LCD_Char_1_PrintInt16(FRQ_CTRL); 
     LCD_Char_1_Position(1u, strlen("ADC2 "));
     LCD_Char_1_PrintInt16(MASK_CTRL); 
     
     }
-    CTR++;
     
-    */
+    
     }
 }
+
+
 uint16 Effect(uint16 depth)
 {
             uint16 mask;
@@ -181,15 +181,15 @@ uint16 Effect(uint16 depth)
         default:
             mask= 0xFFFFu;
         }
-    return mask;
+    return mask | 0xF000u;
 }
 void PWM_Start(void)
 {
     
-//    PWM_1_Enable();
-//    PWM_2_Enable();
-//    PWM_3_Enable();
-   PWM_4_Enable();
+//  PWM_1_Enable();
+//  PWM_2_Enable();
+//  PWM_3_Enable();
+    PWM_4_Enable();
     PWM_5_Enable();
     PWM_6_Enable();
     PWM_7_Enable();
@@ -198,9 +198,9 @@ void PWM_Start(void)
     PWM_10_Enable();
     PWM_11_Enable();
     
-//    PWM_1_Start();
-//    PWM_2_Start();
-//    PWM_3_Start();
+//  PWM_1_Start();
+//  PWM_2_Start();
+//  PWM_3_Start();
     PWM_4_Start();
     PWM_5_Start();
     PWM_6_Start();
@@ -211,8 +211,8 @@ void PWM_Start(void)
     PWM_11_Start();
     return;
 }
-void PWM_Set(uint16 PWMin){
-   uint16 PWMdiv = PWMin>>1;
+void PWM_Set(uint8 PWMin){
+   uint8 PWMdiv = PWMin>>1;
 //  division
     PWM_4_WritePeriod(PWMin);
     PWM_5_WritePeriod(PWMin);

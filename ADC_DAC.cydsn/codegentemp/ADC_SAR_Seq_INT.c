@@ -25,7 +25,9 @@
 *   #START and #END tags
 ******************************************************************************/
 /* `#START SEQ_ADC_SYS_VAR`  */
-
+extern uint16 SAR_ADCResultArray[ADC_SAR_Seq_NUMBER_OF_CHANNELS];
+extern uint8 seq_sar_dataReady;  
+uint8 chan = 0;
 /* `#END`  */
 
 #if(ADC_SAR_Seq_IRQ_REMOVE == 0u)
@@ -60,7 +62,12 @@
         *  - add user ISR code between the following #START and #END tags
         *************************************************************************/
           /* `#START MAIN_SEQ_ADC_ISR`  */
-
+			for(chan = 0; chan < ADC_SAR_Seq_NUMBER_OF_CHANNELS; chan++)
+            {
+				SAR_ADCResultArray[ADC_SAR_Seq_NUMBER_OF_CHANNELS - chan -1] = ADC_SAR_Seq_GetResult16(chan);
+            }
+            seq_sar_dataReady = 1;
+        
           /* `#END`  */
     }
 

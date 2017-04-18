@@ -20,26 +20,60 @@ Archive member included because of file (symbol)
                               .\ARM_GCC_493\Debug\main.o (Opamp_1_Start)
 .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_2.o)
                               .\ARM_GCC_493\Debug\main.o (Opamp_2_Start)
-.\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_theACLK.o)
-                              .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1.o) (ADC_SAR_1_theACLK_SetModeRegister)
-.\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2.o)
-                              .\ARM_GCC_493\Debug\main.o (ADC_SAR_2_Start)
-.\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2_INT.o)
-                              .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2.o) (ADC_SAR_2_ISR)
-.\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2_theACLK.o)
-                              .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2.o) (ADC_SAR_2_theACLK_SetModeRegister)
+.\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_IRQ.o)
+                              .\ARM_GCC_493\Debug\main.o (ADC_SAR_1_IRQ_Enable)
 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter.o)
                               .\ARM_GCC_493\Debug\main.o (Filter_Start)
 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter_PVT.o)
                               .\ARM_GCC_493\Debug\ADC_DAC.a(Filter.o) (Filter_SetInterruptMode)
 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter_RAM_Data.o)
                               .\ARM_GCC_493\Debug\ADC_DAC.a(Filter.o) (Filter_control)
-.\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_3.o)
-                              .\ARM_GCC_493\Debug\main.o (Opamp_3_Start)
 .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC.o)
                               .\ARM_GCC_493\Debug\main.o (SPI_DAC_Start)
 .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC_IntClock.o)
                               .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC.o) (SPI_DAC_IntClock_Start)
+.\ARM_GCC_493\Debug\ADC_DAC.a(ADC_1_OUT_LSB.o)
+                              .\ARM_GCC_493\Debug\main.o (ADC_1_OUT_LSB_Write)
+.\ARM_GCC_493\Debug\ADC_DAC.a(ADC_1_OUT_MSB.o)
+                              .\ARM_GCC_493\Debug\main.o (ADC_1_OUT_MSB_Write)
+.\ARM_GCC_493\Debug\ADC_DAC.a(DAC_IN_MSB.o)
+                              .\ARM_GCC_493\Debug\main.o (DAC_IN_MSB_Read)
+.\ARM_GCC_493\Debug\ADC_DAC.a(DAC_IN_LSB.o)
+                              .\ARM_GCC_493\Debug\main.o (DAC_IN_LSB_Read)
+.\ARM_GCC_493\Debug\ADC_DAC.a(PWM_ADC_CK.o)
+                              .\ARM_GCC_493\Debug\main.o (PWM_ADC_CK_Start)
+.\ARM_GCC_493\Debug\ADC_DAC.a(PWM_11.o)
+                              .\ARM_GCC_493\Debug\main.o (PWM_11_Start)
+.\ARM_GCC_493\Debug\ADC_DAC.a(PWM_7.o)
+                              .\ARM_GCC_493\Debug\main.o (PWM_7_Start)
+.\ARM_GCC_493\Debug\ADC_DAC.a(PWM_9.o)
+                              .\ARM_GCC_493\Debug\main.o (PWM_9_Start)
+.\ARM_GCC_493\Debug\ADC_DAC.a(PWM_8.o)
+                              .\ARM_GCC_493\Debug\main.o (PWM_8_Start)
+.\ARM_GCC_493\Debug\ADC_DAC.a(PWM_6.o)
+                              .\ARM_GCC_493\Debug\main.o (PWM_6_Start)
+.\ARM_GCC_493\Debug\ADC_DAC.a(PWM_10.o)
+                              .\ARM_GCC_493\Debug\main.o (PWM_10_Start)
+.\ARM_GCC_493\Debug\ADC_DAC.a(PWM_4.o)
+                              .\ARM_GCC_493\Debug\main.o (PWM_4_Start)
+.\ARM_GCC_493\Debug\ADC_DAC.a(PWM_5.o)
+                              .\ARM_GCC_493\Debug\main.o (PWM_5_Start)
+.\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq.o)
+                              .\ARM_GCC_493\Debug\main.o (ADC_SAR_Seq_Start)
+.\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_INT.o)
+                              .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq.o) (ADC_SAR_Seq_ISR)
+.\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
+                              .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq.o) (ADC_SAR_Seq_SAR_shift)
+.\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_TempBuf_dma.o)
+                              .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq.o) (ADC_SAR_Seq_TempBuf_DmaInitialize)
+.\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_FinalBuf_dma.o)
+                              .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq.o) (ADC_SAR_Seq_FinalBuf_DmaInitialize)
+.\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_IRQ.o)
+                              .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq.o) (ADC_SAR_Seq_IRQ_SetVector)
+.\ARM_GCC_493\Debug\ADC_DAC.a(DIV_MASK_MSB.o)
+                              .\ARM_GCC_493\Debug\main.o (DIV_MASK_MSB_Write)
+.\ARM_GCC_493\Debug\ADC_DAC.a(DIV_MASK_LSB.o)
+                              .\ARM_GCC_493\Debug\main.o (DIV_MASK_LSB_Write)
 .\ARM_GCC_493\Debug\ADC_DAC.a(CyBootAsmGnu.o)
                               .\ARM_GCC_493\Debug\ADC_DAC.a(cyfitter_cfg.o) (CyDelayCycles)
 .\ARM_GCC_493\Debug\ADC_DAC.a(CyFlash.o)
@@ -78,19 +112,27 @@ Common symbol       size              file
 
 ADC_SAR_1_countsPerVolt
                     0x2               .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1.o)
-ADC_SAR_2_countsPer10Volt
-                    0x4               .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2.o)
+seq_sar_dataReady   0x1               .\ARM_GCC_493\Debug\main.o
 ADC_SAR_1_shift     0x2               .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1.o)
+ADC_SAR_Seq_SAR_offset
+                    0x2               .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
 SPI_DAC_swStatusRx  0x1               .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC.o)
-POT_READ_SCALED     0x2               .\ARM_GCC_493\Debug\main.o
+audio_dataReady     0x1               .\ARM_GCC_493\Debug\main.o
 SPI_DAC_swStatusTx  0x1               .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC.o)
 ADC_SAR_1_countsPer10Volt
                     0x4               .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1.o)
-ADC_SAR_2_shift     0x2               .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2.o)
-ADC_SAR_2_offset    0x2               .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2.o)
-EFFECT_ADC          0x2               .\ARM_GCC_493\Debug\main.o
-ADC_SAR_2_countsPerVolt
-                    0x2               .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2.o)
+audio_result        0x4               .\ARM_GCC_493\Debug\main.o
+audio_msb           0x1               .\ARM_GCC_493\Debug\main.o
+ADC_SAR_Seq_SAR_countsPerVolt
+                    0x2               .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
+audio_lsb           0x1               .\ARM_GCC_493\Debug\main.o
+ADC_SAR_Seq_SAR_countsPer10Volt
+                    0x4               .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
+ADC_SAR_Seq_finalArray
+                    0x8               .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq.o)
+SAR_ADCResultArray  0x8               .\ARM_GCC_493\Debug\main.o
+ADC_SAR_Seq_SAR_shift
+                    0x2               .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
 dieTemperature      0x2               .\ARM_GCC_493\Debug\ADC_DAC.a(CyFlash.o)
 ADC_SAR_1_offset    0x2               .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1.o)
 
@@ -107,6 +149,7 @@ Discarded input sections
  .ARM.exidx     0x00000000        0x8 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/crt0.o
  .text          0x00000000        0x0 .\ARM_GCC_493\Debug\main.o
  .data          0x00000000        0x0 .\ARM_GCC_493\Debug\main.o
+ .text.Effect   0x00000000      0x160 .\ARM_GCC_493\Debug\main.o
  .text          0x00000000        0x0 .\ARM_GCC_493\Debug\cymetadata.o
  .data          0x00000000        0x0 .\ARM_GCC_493\Debug\cymetadata.o
  .bss           0x00000000        0x0 .\ARM_GCC_493\Debug\cymetadata.o
@@ -152,38 +195,20 @@ Discarded input sections
                 0x00000000       0x64 .\ARM_GCC_493\Debug\ADC_DAC.a(CyDmac.o)
  .text.CyDmaChFree
                 0x00000000       0x4c .\ARM_GCC_493\Debug\ADC_DAC.a(CyDmac.o)
- .text.CyDmaChEnable
-                0x00000000       0x8c .\ARM_GCC_493\Debug\ADC_DAC.a(CyDmac.o)
  .text.CyDmaChDisable
                 0x00000000       0x64 .\ARM_GCC_493\Debug\ADC_DAC.a(CyDmac.o)
- .text.CyDmaClearPendingDrq
-                0x00000000       0x64 .\ARM_GCC_493\Debug\ADC_DAC.a(CyDmac.o)
- .text.CyDmaChPriority
-                0x00000000       0x60 .\ARM_GCC_493\Debug\ADC_DAC.a(CyDmac.o)
- .text.CyDmaChSetExtendedAddress
-                0x00000000       0x7c .\ARM_GCC_493\Debug\ADC_DAC.a(CyDmac.o)
- .text.CyDmaChSetInitialTd
-                0x00000000       0x3c .\ARM_GCC_493\Debug\ADC_DAC.a(CyDmac.o)
  .text.CyDmaChSetRequest
                 0x00000000       0x58 .\ARM_GCC_493\Debug\ADC_DAC.a(CyDmac.o)
  .text.CyDmaChGetRequest
                 0x00000000       0x38 .\ARM_GCC_493\Debug\ADC_DAC.a(CyDmac.o)
  .text.CyDmaChStatus
                 0x00000000       0x60 .\ARM_GCC_493\Debug\ADC_DAC.a(CyDmac.o)
- .text.CyDmaChSetConfiguration
-                0x00000000       0xa0 .\ARM_GCC_493\Debug\ADC_DAC.a(CyDmac.o)
- .text.CyDmaTdAllocate
-                0x00000000       0x5c .\ARM_GCC_493\Debug\ADC_DAC.a(CyDmac.o)
  .text.CyDmaTdFree
                 0x00000000       0x54 .\ARM_GCC_493\Debug\ADC_DAC.a(CyDmac.o)
  .text.CyDmaTdFreeCount
                 0x00000000       0x1c .\ARM_GCC_493\Debug\ADC_DAC.a(CyDmac.o)
- .text.CyDmaTdSetConfiguration
-                0x00000000       0x80 .\ARM_GCC_493\Debug\ADC_DAC.a(CyDmac.o)
  .text.CyDmaTdGetConfiguration
                 0x00000000       0x88 .\ARM_GCC_493\Debug\ADC_DAC.a(CyDmac.o)
- .text.CyDmaTdSetAddress
-                0x00000000       0x5c .\ARM_GCC_493\Debug\ADC_DAC.a(CyDmac.o)
  .text.CyDmaTdGetAddress
                 0x00000000       0x6c .\ARM_GCC_493\Debug\ADC_DAC.a(CyDmac.o)
  .text.CyDmaChRoundRobin
@@ -381,13 +406,15 @@ Discarded input sections
  .text          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1.o)
  .data          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1.o)
  .text.ADC_SAR_1_Stop
-                0x00000000       0x80 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1.o)
+                0x00000000       0x58 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1.o)
  .text.ADC_SAR_1_SetPower
                 0x00000000       0x40 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1.o)
- .text.ADC_SAR_1_StopConvert
-                0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1.o)
+ .text.ADC_SAR_1_IsEndConversion
+                0x00000000       0x40 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1.o)
  .text.ADC_SAR_1_GetResult8
                 0x00000000       0x2c .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1.o)
+ .text.ADC_SAR_1_GetResult16
+                0x00000000       0x34 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1.o)
  .text.ADC_SAR_1_SetOffset
                 0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1.o)
  .text.ADC_SAR_1_SetGain
@@ -411,81 +438,33 @@ Discarded input sections
  .data          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_2.o)
  .text.Opamp_2_Stop
                 0x00000000       0x54 .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_2.o)
- .text          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_theACLK.o)
- .data          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_theACLK.o)
- .bss           0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_theACLK.o)
- .text.ADC_SAR_1_theACLK_Start
-                0x00000000       0x34 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_theACLK.o)
- .text.ADC_SAR_1_theACLK_Stop
-                0x00000000       0x34 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_theACLK.o)
- .text.ADC_SAR_1_theACLK_StopBlock
-                0x00000000       0xb0 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_theACLK.o)
- .text.ADC_SAR_1_theACLK_StandbyPower
-                0x00000000       0x40 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_theACLK.o)
- .text.ADC_SAR_1_theACLK_SetDividerRegister
-                0x00000000      0x160 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_theACLK.o)
- .text.ADC_SAR_1_theACLK_GetDividerRegister
-                0x00000000       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_theACLK.o)
- .text.ADC_SAR_1_theACLK_ClearModeRegister
-                0x00000000       0x34 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_theACLK.o)
- .text.ADC_SAR_1_theACLK_GetModeRegister
-                0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_theACLK.o)
- .text.ADC_SAR_1_theACLK_SetSourceRegister
-                0x00000000       0xbc .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_theACLK.o)
- .text.ADC_SAR_1_theACLK_GetSourceRegister
-                0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_theACLK.o)
- .text          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2.o)
- .data          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2.o)
- .text.ADC_SAR_2_Stop
-                0x00000000       0x80 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2.o)
- .text.ADC_SAR_2_SetPower
-                0x00000000       0x40 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2.o)
- .text.ADC_SAR_2_StopConvert
-                0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2.o)
- .text.ADC_SAR_2_IsEndConversion
-                0x00000000       0x40 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2.o)
- .text.ADC_SAR_2_GetResult8
-                0x00000000       0x2c .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2.o)
- .text.ADC_SAR_2_GetResult16
-                0x00000000       0x34 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2.o)
- .text.ADC_SAR_2_SetOffset
-                0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2.o)
- .text.ADC_SAR_2_SetGain
-                0x00000000       0x2c .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2.o)
- .text.ADC_SAR_2_SetScaledGain
-                0x00000000       0x1c .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2.o)
- .text.ADC_SAR_2_CountsTo_mVolts
-                0x00000000       0x8c .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2.o)
- .text.ADC_SAR_2_CountsTo_uVolts
-                0x00000000       0x94 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2.o)
- .text.ADC_SAR_2_CountsTo_Volts
-                0x00000000       0x84 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2.o)
- .text          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2_INT.o)
- .data          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2_INT.o)
- .bss           0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2_INT.o)
- .text          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2_theACLK.o)
- .data          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2_theACLK.o)
- .bss           0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2_theACLK.o)
- .text.ADC_SAR_2_theACLK_Start
-                0x00000000       0x34 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2_theACLK.o)
- .text.ADC_SAR_2_theACLK_Stop
-                0x00000000       0x34 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2_theACLK.o)
- .text.ADC_SAR_2_theACLK_StopBlock
-                0x00000000       0xb0 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2_theACLK.o)
- .text.ADC_SAR_2_theACLK_StandbyPower
-                0x00000000       0x40 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2_theACLK.o)
- .text.ADC_SAR_2_theACLK_SetDividerRegister
-                0x00000000      0x160 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2_theACLK.o)
- .text.ADC_SAR_2_theACLK_GetDividerRegister
-                0x00000000       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2_theACLK.o)
- .text.ADC_SAR_2_theACLK_ClearModeRegister
-                0x00000000       0x34 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2_theACLK.o)
- .text.ADC_SAR_2_theACLK_GetModeRegister
-                0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2_theACLK.o)
- .text.ADC_SAR_2_theACLK_SetSourceRegister
-                0x00000000       0xbc .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2_theACLK.o)
- .text.ADC_SAR_2_theACLK_GetSourceRegister
-                0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2_theACLK.o)
+ .text          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_IRQ.o)
+ .data          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_IRQ.o)
+ .bss           0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_IRQ.o)
+ .text.ADC_SAR_1_IRQ_Start
+                0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_IRQ.o)
+ .text.ADC_SAR_1_IRQ_StartEx
+                0x00000000       0x24 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_IRQ.o)
+ .text.ADC_SAR_1_IRQ_Stop
+                0x00000000       0x14 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_IRQ.o)
+ .text.ADC_SAR_1_IRQ_Interrupt
+                0x00000000        0xc .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_IRQ.o)
+ .text.ADC_SAR_1_IRQ_SetVector
+                0x00000000       0x24 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_IRQ.o)
+ .text.ADC_SAR_1_IRQ_GetVector
+                0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_IRQ.o)
+ .text.ADC_SAR_1_IRQ_SetPriority
+                0x00000000       0x24 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_IRQ.o)
+ .text.ADC_SAR_1_IRQ_GetPriority
+                0x00000000       0x24 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_IRQ.o)
+ .text.ADC_SAR_1_IRQ_GetState
+                0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_IRQ.o)
+ .text.ADC_SAR_1_IRQ_Disable
+                0x00000000       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_IRQ.o)
+ .text.ADC_SAR_1_IRQ_SetPending
+                0x00000000       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_IRQ.o)
+ .text.ADC_SAR_1_IRQ_ClearPending
+                0x00000000       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_IRQ.o)
  .text          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter.o)
  .data          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter.o)
  .text.Filter_Stop
@@ -514,10 +493,6 @@ Discarded input sections
  .text          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter_RAM_Data.o)
  .data          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter_RAM_Data.o)
  .bss           0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter_RAM_Data.o)
- .text          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_3.o)
- .data          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_3.o)
- .text.Opamp_3_Stop
-                0x00000000       0x54 .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_3.o)
  .text          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC.o)
  .data          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC.o)
  .text.SPI_DAC_Stop
@@ -574,6 +549,274 @@ Discarded input sections
                 0x00000000       0xbc .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC_IntClock.o)
  .text.SPI_DAC_IntClock_GetSourceRegister
                 0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC_IntClock.o)
+ .text          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_1_OUT_LSB.o)
+ .data          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_1_OUT_LSB.o)
+ .bss           0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_1_OUT_LSB.o)
+ .text.ADC_1_OUT_LSB_Read
+                0x00000000       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_1_OUT_LSB.o)
+ .text          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_1_OUT_MSB.o)
+ .data          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_1_OUT_MSB.o)
+ .bss           0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_1_OUT_MSB.o)
+ .text.ADC_1_OUT_MSB_Read
+                0x00000000       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_1_OUT_MSB.o)
+ .text          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(DAC_IN_MSB.o)
+ .data          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(DAC_IN_MSB.o)
+ .bss           0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(DAC_IN_MSB.o)
+ .text.DAC_IN_MSB_InterruptEnable
+                0x00000000       0x30 .\ARM_GCC_493\Debug\ADC_DAC.a(DAC_IN_MSB.o)
+ .text.DAC_IN_MSB_InterruptDisable
+                0x00000000       0x30 .\ARM_GCC_493\Debug\ADC_DAC.a(DAC_IN_MSB.o)
+ .text.DAC_IN_MSB_WriteMask
+                0x00000000       0x28 .\ARM_GCC_493\Debug\ADC_DAC.a(DAC_IN_MSB.o)
+ .text.DAC_IN_MSB_ReadMask
+                0x00000000       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(DAC_IN_MSB.o)
+ .text          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(DAC_IN_LSB.o)
+ .data          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(DAC_IN_LSB.o)
+ .bss           0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(DAC_IN_LSB.o)
+ .text.DAC_IN_LSB_InterruptEnable
+                0x00000000       0x30 .\ARM_GCC_493\Debug\ADC_DAC.a(DAC_IN_LSB.o)
+ .text.DAC_IN_LSB_InterruptDisable
+                0x00000000       0x30 .\ARM_GCC_493\Debug\ADC_DAC.a(DAC_IN_LSB.o)
+ .text.DAC_IN_LSB_WriteMask
+                0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(DAC_IN_LSB.o)
+ .text.DAC_IN_LSB_ReadMask
+                0x00000000       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(DAC_IN_LSB.o)
+ .text          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_ADC_CK.o)
+ .data          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_ADC_CK.o)
+ .text.PWM_ADC_CK_Stop
+                0x00000000       0x48 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_ADC_CK.o)
+ .text.PWM_ADC_CK_ReadStatusRegister
+                0x00000000       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_ADC_CK.o)
+ .text.PWM_ADC_CK_ReadControlRegister
+                0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_ADC_CK.o)
+ .text.PWM_ADC_CK_WriteControlRegister
+                0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_ADC_CK.o)
+ .text.PWM_ADC_CK_ReadCompare
+                0x00000000       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_ADC_CK.o)
+ .text.PWM_ADC_CK_ReadPeriod
+                0x00000000       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_ADC_CK.o)
+ .text          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_11.o)
+ .data          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_11.o)
+ .text.PWM_11_Stop
+                0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_11.o)
+ .text.PWM_11_ReadCounter
+                0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_11.o)
+ .text.PWM_11_ReadControlRegister
+                0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_11.o)
+ .text.PWM_11_WriteControlRegister
+                0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_11.o)
+ .text.PWM_11_ReadCapture
+                0x00000000       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_11.o)
+ .text.PWM_11_ReadCompare
+                0x00000000       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_11.o)
+ .text.PWM_11_ReadPeriod
+                0x00000000       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_11.o)
+ .text          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_7.o)
+ .data          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_7.o)
+ .text.PWM_7_Stop
+                0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_7.o)
+ .text.PWM_7_ReadCounter
+                0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_7.o)
+ .text.PWM_7_ReadControlRegister
+                0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_7.o)
+ .text.PWM_7_WriteControlRegister
+                0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_7.o)
+ .text.PWM_7_ReadCapture
+                0x00000000       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_7.o)
+ .text.PWM_7_ReadCompare
+                0x00000000       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_7.o)
+ .text.PWM_7_ReadPeriod
+                0x00000000       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_7.o)
+ .text          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_9.o)
+ .data          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_9.o)
+ .text.PWM_9_Stop
+                0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_9.o)
+ .text.PWM_9_ReadCounter
+                0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_9.o)
+ .text.PWM_9_ReadControlRegister
+                0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_9.o)
+ .text.PWM_9_WriteControlRegister
+                0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_9.o)
+ .text.PWM_9_ReadCapture
+                0x00000000       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_9.o)
+ .text.PWM_9_ReadCompare
+                0x00000000       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_9.o)
+ .text.PWM_9_ReadPeriod
+                0x00000000       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_9.o)
+ .text          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_8.o)
+ .data          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_8.o)
+ .text.PWM_8_Stop
+                0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_8.o)
+ .text.PWM_8_ReadCounter
+                0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_8.o)
+ .text.PWM_8_ReadControlRegister
+                0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_8.o)
+ .text.PWM_8_WriteControlRegister
+                0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_8.o)
+ .text.PWM_8_ReadCapture
+                0x00000000       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_8.o)
+ .text.PWM_8_ReadCompare
+                0x00000000       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_8.o)
+ .text.PWM_8_ReadPeriod
+                0x00000000       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_8.o)
+ .text          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_6.o)
+ .data          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_6.o)
+ .text.PWM_6_Stop
+                0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_6.o)
+ .text.PWM_6_ReadCounter
+                0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_6.o)
+ .text.PWM_6_ReadControlRegister
+                0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_6.o)
+ .text.PWM_6_WriteControlRegister
+                0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_6.o)
+ .text.PWM_6_ReadCapture
+                0x00000000       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_6.o)
+ .text.PWM_6_ReadCompare
+                0x00000000       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_6.o)
+ .text.PWM_6_ReadPeriod
+                0x00000000       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_6.o)
+ .text          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_10.o)
+ .data          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_10.o)
+ .text.PWM_10_Stop
+                0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_10.o)
+ .text.PWM_10_ReadCounter
+                0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_10.o)
+ .text.PWM_10_ReadControlRegister
+                0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_10.o)
+ .text.PWM_10_WriteControlRegister
+                0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_10.o)
+ .text.PWM_10_ReadCapture
+                0x00000000       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_10.o)
+ .text.PWM_10_ReadCompare
+                0x00000000       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_10.o)
+ .text.PWM_10_ReadPeriod
+                0x00000000       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_10.o)
+ .text          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_4.o)
+ .data          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_4.o)
+ .text.PWM_4_Stop
+                0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_4.o)
+ .text.PWM_4_ReadCounter
+                0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_4.o)
+ .text.PWM_4_ReadControlRegister
+                0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_4.o)
+ .text.PWM_4_WriteControlRegister
+                0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_4.o)
+ .text.PWM_4_ReadCapture
+                0x00000000       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_4.o)
+ .text.PWM_4_ReadCompare
+                0x00000000       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_4.o)
+ .text.PWM_4_ReadPeriod
+                0x00000000       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_4.o)
+ .text          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_5.o)
+ .data          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_5.o)
+ .text.PWM_5_Stop
+                0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_5.o)
+ .text.PWM_5_ReadCounter
+                0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_5.o)
+ .text.PWM_5_ReadControlRegister
+                0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_5.o)
+ .text.PWM_5_WriteControlRegister
+                0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_5.o)
+ .text.PWM_5_ReadCapture
+                0x00000000       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_5.o)
+ .text.PWM_5_ReadCompare
+                0x00000000       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_5.o)
+ .text.PWM_5_ReadPeriod
+                0x00000000       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_5.o)
+ .text          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq.o)
+ .text.ADC_SAR_Seq_Disable
+                0x00000000       0x60 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq.o)
+ .text.ADC_SAR_Seq_Stop
+                0x00000000       0x10 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq.o)
+ .text.ADC_SAR_Seq_StopConvert
+                0x00000000        0xc .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq.o)
+ .text.ADC_SAR_Seq_IsEndConversion
+                0x00000000       0x30 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq.o)
+ .text.ADC_SAR_Seq_GetAdcResult
+                0x00000000       0x10 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq.o)
+ .text.ADC_SAR_Seq_SetOffset
+                0x00000000       0x1c .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq.o)
+ .text.ADC_SAR_Seq_SetResolution
+                0x00000000       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq.o)
+ .text.ADC_SAR_Seq_SetGain
+                0x00000000       0x1c .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq.o)
+ .text.ADC_SAR_Seq_SetScaledGain
+                0x00000000       0x14 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq.o)
+ .text.ADC_SAR_Seq_CountsTo_mVolts
+                0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq.o)
+ .text.ADC_SAR_Seq_CountsTo_uVolts
+                0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq.o)
+ .text.ADC_SAR_Seq_CountsTo_Volts
+                0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq.o)
+ .text          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_INT.o)
+ .data          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_INT.o)
+ .text          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
+ .data          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
+ .text.ADC_SAR_Seq_SAR_Stop
+                0x00000000       0x58 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
+ .text.ADC_SAR_Seq_SAR_SetPower
+                0x00000000       0x40 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
+ .text.ADC_SAR_Seq_SAR_StopConvert
+                0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
+ .text.ADC_SAR_Seq_SAR_IsEndConversion
+                0x00000000       0x40 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
+ .text.ADC_SAR_Seq_SAR_GetResult8
+                0x00000000       0x2c .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
+ .text.ADC_SAR_Seq_SAR_GetResult16
+                0x00000000       0x34 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
+ .text.ADC_SAR_Seq_SAR_SetOffset
+                0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
+ .text.ADC_SAR_Seq_SAR_SetGain
+                0x00000000       0x2c .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
+ .text.ADC_SAR_Seq_SAR_SetScaledGain
+                0x00000000       0x1c .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
+ .text.ADC_SAR_Seq_SAR_CountsTo_mVolts
+                0x00000000       0x8c .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
+ .text.ADC_SAR_Seq_SAR_CountsTo_uVolts
+                0x00000000       0x94 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
+ .text.ADC_SAR_Seq_SAR_CountsTo_Volts
+                0x00000000       0x84 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
+ .text          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_TempBuf_dma.o)
+ .bss           0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_TempBuf_dma.o)
+ .text.ADC_SAR_Seq_TempBuf_DmaRelease
+                0x00000000       0x14 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_TempBuf_dma.o)
+ .text          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_FinalBuf_dma.o)
+ .bss           0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_FinalBuf_dma.o)
+ .text.ADC_SAR_Seq_FinalBuf_DmaRelease
+                0x00000000       0x14 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_FinalBuf_dma.o)
+ .text          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_IRQ.o)
+ .data          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_IRQ.o)
+ .bss           0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_IRQ.o)
+ .text.ADC_SAR_Seq_IRQ_Start
+                0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_IRQ.o)
+ .text.ADC_SAR_Seq_IRQ_StartEx
+                0x00000000       0x24 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_IRQ.o)
+ .text.ADC_SAR_Seq_IRQ_Stop
+                0x00000000       0x14 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_IRQ.o)
+ .text.ADC_SAR_Seq_IRQ_Interrupt
+                0x00000000        0xc .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_IRQ.o)
+ .text.ADC_SAR_Seq_IRQ_GetVector
+                0x00000000       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_IRQ.o)
+ .text.ADC_SAR_Seq_IRQ_GetPriority
+                0x00000000       0x24 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_IRQ.o)
+ .text.ADC_SAR_Seq_IRQ_GetState
+                0x00000000       0x24 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_IRQ.o)
+ .text.ADC_SAR_Seq_IRQ_Disable
+                0x00000000       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_IRQ.o)
+ .text.ADC_SAR_Seq_IRQ_SetPending
+                0x00000000       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_IRQ.o)
+ .text.ADC_SAR_Seq_IRQ_ClearPending
+                0x00000000       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_IRQ.o)
+ .text          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(DIV_MASK_MSB.o)
+ .data          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(DIV_MASK_MSB.o)
+ .bss           0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(DIV_MASK_MSB.o)
+ .text.DIV_MASK_MSB_Read
+                0x00000000       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(DIV_MASK_MSB.o)
+ .text          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(DIV_MASK_LSB.o)
+ .data          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(DIV_MASK_LSB.o)
+ .bss           0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(DIV_MASK_LSB.o)
+ .text.DIV_MASK_LSB_Read
+                0x00000000       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(DIV_MASK_LSB.o)
  .data          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(CyBootAsmGnu.o)
  .bss           0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(CyBootAsmGnu.o)
  .text          0x00000000        0x0 .\ARM_GCC_493\Debug\ADC_DAC.a(CyFlash.o)
@@ -732,7 +975,7 @@ END GROUP
                 0x00000040                CY_METADATA_SIZE = 0x40
                 0x00000000                CY_APPL_LOADABLE = 0x0
                 0x00000000                CY_CHECKSUM_EXCLUDE_SIZE = ALIGN (0x0, CY_FLASH_ROW_SIZE)
-                0x1fff81d0                PROVIDE (__cy_heap_start, _end)
+                0x1fff8218                PROVIDE (__cy_heap_start, _end)
                 0x00000001                PROVIDE (__cy_region_num, ((__cy_regions_end - __cy_regions) / 0x10))
                 0x20008000                PROVIDE (__cy_stack, (ORIGIN (ram) + 0x10000))
                 0x20007800                PROVIDE (__cy_heap_end, (__cy_stack - 0x800))
@@ -747,7 +990,7 @@ END GROUP
                 0x00000800                ee_size = (CY_APPL_LOADABLE && ! (CY_EE_IN_BTLDR))?(CY_EE_SIZE / CY_APPL_MAX):CY_EE_SIZE
                 0x00000000                PROVIDE (CY_ECC_OFFSET, ecc_offset)
 
-.text           0x00000000     0x19de
+.text           0x00000000     0x2966
  CREATE_OBJECT_SYMBOLS
                 0x00000000                PROVIDE (__cy_interrupt_vector, RomVectors)
  *(.romvectors)
@@ -764,227 +1007,443 @@ END GROUP
                 0x00000001                ASSERT ((((appl_start + .) <= 0x10000) || 0x1), DMA Init must be within the first 64k of flash)
  *(.text .text.* .gnu.linkonce.t.*)
  .text          0x00000028       0x5c c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
- .text.main     0x00000084       0xa0 .\ARM_GCC_493\Debug\main.o
+ .text.main     0x00000084      0x11c .\ARM_GCC_493\Debug\main.o
                 0x00000084                main
- .text.Effect   0x00000124      0x104 .\ARM_GCC_493\Debug\main.o
-                0x00000124                Effect
+ .text.PWM_Start
+                0x000001a0       0x48 .\ARM_GCC_493\Debug\main.o
+                0x000001a0                PWM_Start
+ .text.PWM_Set  0x000001e8       0x98 .\ARM_GCC_493\Debug\main.o
+                0x000001e8                PWM_Set
  .text.IntDefaultHandler
-                0x00000228       0x14 .\ARM_GCC_493\Debug\Cm3Start.o
-                0x00000228                IntDefaultHandler
- .text.Start_c  0x0000023c       0x98 .\ARM_GCC_493\Debug\Cm3Start.o
-                0x0000023c                Start_c
+                0x00000280       0x14 .\ARM_GCC_493\Debug\Cm3Start.o
+                0x00000280                IntDefaultHandler
+ .text.Start_c  0x00000294       0x98 .\ARM_GCC_493\Debug\Cm3Start.o
+                0x00000294                Start_c
  .text.initialize_psoc
-                0x000002d4       0x90 .\ARM_GCC_493\Debug\Cm3Start.o
-                0x000002d4                initialize_psoc
+                0x0000032c       0x90 .\ARM_GCC_493\Debug\Cm3Start.o
+                0x0000032c                initialize_psoc
  .text.CYMEMZERO
-                0x00000364       0x1c .\ARM_GCC_493\Debug\ADC_DAC.a(cyfitter_cfg.o)
+                0x000003bc       0x1c .\ARM_GCC_493\Debug\ADC_DAC.a(cyfitter_cfg.o)
  .text.CYCONFIGCPY
-                0x00000380       0x1c .\ARM_GCC_493\Debug\ADC_DAC.a(cyfitter_cfg.o)
+                0x000003d8       0x1c .\ARM_GCC_493\Debug\ADC_DAC.a(cyfitter_cfg.o)
  .text.CyClockStartupError
-                0x0000039c        0xc .\ARM_GCC_493\Debug\ADC_DAC.a(cyfitter_cfg.o)
+                0x000003f4        0xc .\ARM_GCC_493\Debug\ADC_DAC.a(cyfitter_cfg.o)
  .text.cfg_write_bytes32
-                0x000003a8       0x74 .\ARM_GCC_493\Debug\ADC_DAC.a(cyfitter_cfg.o)
+                0x00000400       0x74 .\ARM_GCC_493\Debug\ADC_DAC.a(cyfitter_cfg.o)
  .text.ClockSetup
-                0x0000041c      0x13c .\ARM_GCC_493\Debug\ADC_DAC.a(cyfitter_cfg.o)
+                0x00000474      0x128 .\ARM_GCC_493\Debug\ADC_DAC.a(cyfitter_cfg.o)
  .text.AnalogSetDefault
-                0x00000558      0x118 .\ARM_GCC_493\Debug\ADC_DAC.a(cyfitter_cfg.o)
+                0x0000059c      0x118 .\ARM_GCC_493\Debug\ADC_DAC.a(cyfitter_cfg.o)
  .text.cyfitter_cfg
-                0x00000670      0x1a4 .\ARM_GCC_493\Debug\ADC_DAC.a(cyfitter_cfg.o)
-                0x00000670                cyfitter_cfg
+                0x000006b4      0x1ac .\ARM_GCC_493\Debug\ADC_DAC.a(cyfitter_cfg.o)
+                0x000006b4                cyfitter_cfg
  .text.LCD_Char_1_Init
-                0x00000814       0x78 .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1.o)
-                0x00000814                LCD_Char_1_Init
+                0x00000860       0x78 .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1.o)
+                0x00000860                LCD_Char_1_Init
  .text.LCD_Char_1_Enable
-                0x0000088c       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1.o)
-                0x0000088c                LCD_Char_1_Enable
+                0x000008d8       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1.o)
+                0x000008d8                LCD_Char_1_Enable
  .text.LCD_Char_1_Start
-                0x000008a4       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1.o)
-                0x000008a4                LCD_Char_1_Start
+                0x000008f0       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1.o)
+                0x000008f0                LCD_Char_1_Start
  .text.LCD_Char_1_Position
-                0x000008c4       0x6c .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1.o)
-                0x000008c4                LCD_Char_1_Position
+                0x00000910       0x6c .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1.o)
+                0x00000910                LCD_Char_1_Position
  .text.LCD_Char_1_PrintString
-                0x00000930       0x38 .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1.o)
-                0x00000930                LCD_Char_1_PrintString
+                0x0000097c       0x38 .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1.o)
+                0x0000097c                LCD_Char_1_PrintString
  .text.LCD_Char_1_WriteData
-                0x00000968       0x34 .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1.o)
-                0x00000968                LCD_Char_1_WriteData
+                0x000009b4       0x34 .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1.o)
+                0x000009b4                LCD_Char_1_WriteData
  .text.LCD_Char_1_WriteControl
-                0x0000099c       0x34 .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1.o)
-                0x0000099c                LCD_Char_1_WriteControl
+                0x000009e8       0x34 .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1.o)
+                0x000009e8                LCD_Char_1_WriteControl
  .text.LCD_Char_1_IsReady
-                0x000009d0      0x178 .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1.o)
-                0x000009d0                LCD_Char_1_IsReady
+                0x00000a1c      0x178 .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1.o)
+                0x00000a1c                LCD_Char_1_IsReady
  .text.LCD_Char_1_WrDatNib
-                0x00000b48       0x78 .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1.o)
+                0x00000b94       0x78 .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1.o)
  .text.LCD_Char_1_WrCntrlNib
-                0x00000bc0       0x60 .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1.o)
+                0x00000c0c       0x60 .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1.o)
  .text.LCD_Char_1_LoadCustomFonts
-                0x00000c20       0x44 .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1_CustChars.o)
-                0x00000c20                LCD_Char_1_LoadCustomFonts
+                0x00000c6c       0x44 .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1_CustChars.o)
+                0x00000c6c                LCD_Char_1_LoadCustomFonts
  .text.CyDmacConfigure
-                0x00000c64       0x5c .\ARM_GCC_493\Debug\ADC_DAC.a(CyDmac.o)
-                0x00000c64                CyDmacConfigure
- .text.CyHalt   0x00000cc0       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(CyLib.o)
-                0x00000cc0                CyHalt
- .text.CyDelay  0x00000cd8       0x44 .\ARM_GCC_493\Debug\ADC_DAC.a(CyLib.o)
-                0x00000cd8                CyDelay
+                0x00000cb0       0x5c .\ARM_GCC_493\Debug\ADC_DAC.a(CyDmac.o)
+                0x00000cb0                CyDmacConfigure
+ .text.CyDmaChEnable
+                0x00000d0c       0x8c .\ARM_GCC_493\Debug\ADC_DAC.a(CyDmac.o)
+                0x00000d0c                CyDmaChEnable
+ .text.CyDmaClearPendingDrq
+                0x00000d98       0x64 .\ARM_GCC_493\Debug\ADC_DAC.a(CyDmac.o)
+                0x00000d98                CyDmaClearPendingDrq
+ .text.CyDmaChPriority
+                0x00000dfc       0x60 .\ARM_GCC_493\Debug\ADC_DAC.a(CyDmac.o)
+                0x00000dfc                CyDmaChPriority
+ .text.CyDmaChSetExtendedAddress
+                0x00000e5c       0x7c .\ARM_GCC_493\Debug\ADC_DAC.a(CyDmac.o)
+                0x00000e5c                CyDmaChSetExtendedAddress
+ .text.CyDmaChSetInitialTd
+                0x00000ed8       0x3c .\ARM_GCC_493\Debug\ADC_DAC.a(CyDmac.o)
+                0x00000ed8                CyDmaChSetInitialTd
+ .text.CyDmaChSetConfiguration
+                0x00000f14       0xa0 .\ARM_GCC_493\Debug\ADC_DAC.a(CyDmac.o)
+                0x00000f14                CyDmaChSetConfiguration
+ .text.CyDmaTdAllocate
+                0x00000fb4       0x5c .\ARM_GCC_493\Debug\ADC_DAC.a(CyDmac.o)
+                0x00000fb4                CyDmaTdAllocate
+ .text.CyDmaTdSetConfiguration
+                0x00001010       0x80 .\ARM_GCC_493\Debug\ADC_DAC.a(CyDmac.o)
+                0x00001010                CyDmaTdSetConfiguration
+ .text.CyDmaTdSetAddress
+                0x00001090       0x5c .\ARM_GCC_493\Debug\ADC_DAC.a(CyDmac.o)
+                0x00001090                CyDmaTdSetAddress
+ .text.CyHalt   0x000010ec       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(CyLib.o)
+                0x000010ec                CyHalt
+ .text.CyDelay  0x00001104       0x44 .\ARM_GCC_493\Debug\ADC_DAC.a(CyLib.o)
+                0x00001104                CyDelay
  .text.CyDelayUs
-                0x00000d1c       0x24 .\ARM_GCC_493\Debug\ADC_DAC.a(CyLib.o)
-                0x00000d1c                CyDelayUs
+                0x00001148       0x24 .\ARM_GCC_493\Debug\ADC_DAC.a(CyLib.o)
+                0x00001148                CyDelayUs
  .text.CyIntSetVector
-                0x00000d40       0x50 .\ARM_GCC_493\Debug\ADC_DAC.a(CyLib.o)
-                0x00000d40                CyIntSetVector
+                0x0000116c       0x50 .\ARM_GCC_493\Debug\ADC_DAC.a(CyLib.o)
+                0x0000116c                CyIntSetVector
  .text.CyIntSetPriority
-                0x00000d90       0x44 .\ARM_GCC_493\Debug\ADC_DAC.a(CyLib.o)
-                0x00000d90                CyIntSetPriority
+                0x000011bc       0x44 .\ARM_GCC_493\Debug\ADC_DAC.a(CyLib.o)
+                0x000011bc                CyIntSetPriority
  .text.ADC_SAR_1_Start
-                0x00000dd4       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1.o)
-                0x00000dd4                ADC_SAR_1_Start
+                0x00001200       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1.o)
+                0x00001200                ADC_SAR_1_Start
  .text.ADC_SAR_1_Init
-                0x00000df4       0x44 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1.o)
-                0x00000df4                ADC_SAR_1_Init
+                0x00001220       0x40 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1.o)
+                0x00001220                ADC_SAR_1_Init
  .text.ADC_SAR_1_Enable
-                0x00000e38       0xf4 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1.o)
-                0x00000e38                ADC_SAR_1_Enable
+                0x00001260       0xcc .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1.o)
+                0x00001260                ADC_SAR_1_Enable
  .text.ADC_SAR_1_SetResolution
-                0x00000f2c       0x50 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1.o)
-                0x00000f2c                ADC_SAR_1_SetResolution
- .text.ADC_SAR_1_StartConvert
-                0x00000f7c       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1.o)
-                0x00000f7c                ADC_SAR_1_StartConvert
- .text.ADC_SAR_1_IsEndConversion
-                0x00000f9c       0x40 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1.o)
-                0x00000f9c                ADC_SAR_1_IsEndConversion
- .text.ADC_SAR_1_GetResult16
-                0x00000fdc       0x34 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1.o)
-                0x00000fdc                ADC_SAR_1_GetResult16
+                0x0000132c       0x50 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1.o)
+                0x0000132c                ADC_SAR_1_SetResolution
  .text.ADC_SAR_1_CalcGain
-                0x00001010       0x80 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1.o)
+                0x0000137c       0x80 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1.o)
  .text.ADC_SAR_1_ISR
-                0x00001090        0xc .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_INT.o)
-                0x00001090                ADC_SAR_1_ISR
+                0x000013fc       0x4c .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_INT.o)
+                0x000013fc                ADC_SAR_1_ISR
  .text.Opamp_1_Init
-                0x0000109c        0xc .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_1.o)
-                0x0000109c                Opamp_1_Init
+                0x00001448        0xc .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_1.o)
+                0x00001448                Opamp_1_Init
  .text.Opamp_1_Enable
-                0x000010a8       0x48 .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_1.o)
-                0x000010a8                Opamp_1_Enable
+                0x00001454       0x48 .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_1.o)
+                0x00001454                Opamp_1_Enable
  .text.Opamp_1_Start
-                0x000010f0       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_1.o)
-                0x000010f0                Opamp_1_Start
+                0x0000149c       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_1.o)
+                0x0000149c                Opamp_1_Start
  .text.Opamp_1_SetPower
-                0x00001110       0x40 .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_1.o)
-                0x00001110                Opamp_1_SetPower
+                0x000014bc       0x40 .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_1.o)
+                0x000014bc                Opamp_1_SetPower
  .text.Opamp_2_Init
-                0x00001150        0xc .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_2.o)
-                0x00001150                Opamp_2_Init
+                0x000014fc        0xc .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_2.o)
+                0x000014fc                Opamp_2_Init
  .text.Opamp_2_Enable
-                0x0000115c       0x48 .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_2.o)
-                0x0000115c                Opamp_2_Enable
+                0x00001508       0x48 .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_2.o)
+                0x00001508                Opamp_2_Enable
  .text.Opamp_2_Start
-                0x000011a4       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_2.o)
-                0x000011a4                Opamp_2_Start
+                0x00001550       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_2.o)
+                0x00001550                Opamp_2_Start
  .text.Opamp_2_SetPower
-                0x000011c4       0x40 .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_2.o)
-                0x000011c4                Opamp_2_SetPower
- .text.ADC_SAR_1_theACLK_SetModeRegister
-                0x00001204       0x34 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_theACLK.o)
-                0x00001204                ADC_SAR_1_theACLK_SetModeRegister
- .text.ADC_SAR_2_Start
-                0x00001238       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2.o)
-                0x00001238                ADC_SAR_2_Start
- .text.ADC_SAR_2_Init
-                0x00001258       0x44 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2.o)
-                0x00001258                ADC_SAR_2_Init
- .text.ADC_SAR_2_Enable
-                0x0000129c       0xf4 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2.o)
-                0x0000129c                ADC_SAR_2_Enable
- .text.ADC_SAR_2_SetResolution
-                0x00001390       0x50 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2.o)
-                0x00001390                ADC_SAR_2_SetResolution
- .text.ADC_SAR_2_StartConvert
-                0x000013e0       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2.o)
-                0x000013e0                ADC_SAR_2_StartConvert
- .text.ADC_SAR_2_CalcGain
-                0x00001400       0x80 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2.o)
- .text.ADC_SAR_2_ISR
-                0x00001480        0xc .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2_INT.o)
-                0x00001480                ADC_SAR_2_ISR
- .text.ADC_SAR_2_theACLK_SetModeRegister
-                0x0000148c       0x34 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2_theACLK.o)
-                0x0000148c                ADC_SAR_2_theACLK_SetModeRegister
+                0x00001570       0x40 .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_2.o)
+                0x00001570                Opamp_2_SetPower
+ .text.ADC_SAR_1_IRQ_Enable
+                0x000015b0       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_IRQ.o)
+                0x000015b0                ADC_SAR_1_IRQ_Enable
  .text.Filter_Init
-                0x000014c0      0x11c .\ARM_GCC_493\Debug\ADC_DAC.a(Filter.o)
-                0x000014c0                Filter_Init
+                0x000015c8      0x11c .\ARM_GCC_493\Debug\ADC_DAC.a(Filter.o)
+                0x000015c8                Filter_Init
  .text.Filter_Enable
-                0x000015dc       0x48 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter.o)
-                0x000015dc                Filter_Enable
+                0x000016e4       0x48 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter.o)
+                0x000016e4                Filter_Enable
  .text.Filter_Start
-                0x00001624       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter.o)
-                0x00001624                Filter_Start
+                0x0000172c       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter.o)
+                0x0000172c                Filter_Start
  .text.Filter_SetInterruptMode
-                0x00001644       0x28 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter_PVT.o)
-                0x00001644                Filter_SetInterruptMode
+                0x0000174c       0x28 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter_PVT.o)
+                0x0000174c                Filter_SetInterruptMode
  .text.Filter_SetDMAMode
-                0x0000166c       0x28 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter_PVT.o)
-                0x0000166c                Filter_SetDMAMode
- .text.Opamp_3_Init
-                0x00001694        0xc .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_3.o)
-                0x00001694                Opamp_3_Init
- .text.Opamp_3_Enable
-                0x000016a0       0x48 .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_3.o)
-                0x000016a0                Opamp_3_Enable
- .text.Opamp_3_Start
-                0x000016e8       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_3.o)
-                0x000016e8                Opamp_3_Start
- .text.Opamp_3_SetPower
-                0x00001708       0x40 .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_3.o)
-                0x00001708                Opamp_3_SetPower
+                0x00001774       0x28 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter_PVT.o)
+                0x00001774                Filter_SetDMAMode
  .text.SPI_DAC_Init
-                0x00001748       0x30 .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC.o)
-                0x00001748                SPI_DAC_Init
+                0x0000179c       0x30 .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC.o)
+                0x0000179c                SPI_DAC_Init
  .text.SPI_DAC_Enable
-                0x00001778       0x64 .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC.o)
-                0x00001778                SPI_DAC_Enable
+                0x000017cc       0x64 .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC.o)
+                0x000017cc                SPI_DAC_Enable
  .text.SPI_DAC_Start
-                0x000017dc       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC.o)
-                0x000017dc                SPI_DAC_Start
+                0x00001830       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC.o)
+                0x00001830                SPI_DAC_Start
  .text.SPI_DAC_EnableTxInt
-                0x000017fc        0xc .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC.o)
-                0x000017fc                SPI_DAC_EnableTxInt
+                0x00001850        0xc .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC.o)
+                0x00001850                SPI_DAC_EnableTxInt
  .text.SPI_DAC_EnableRxInt
-                0x00001808        0xc .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC.o)
-                0x00001808                SPI_DAC_EnableRxInt
+                0x0000185c        0xc .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC.o)
+                0x0000185c                SPI_DAC_EnableRxInt
  .text.SPI_DAC_ReadTxStatus
-                0x00001814       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC.o)
-                0x00001814                SPI_DAC_ReadTxStatus
+                0x00001868       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC.o)
+                0x00001868                SPI_DAC_ReadTxStatus
  .text.SPI_DAC_ReadRxStatus
-                0x00001834       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC.o)
-                0x00001834                SPI_DAC_ReadRxStatus
+                0x00001888       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC.o)
+                0x00001888                SPI_DAC_ReadRxStatus
  .text.SPI_DAC_WriteTxData
-                0x00001854       0x34 .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC.o)
-                0x00001854                SPI_DAC_WriteTxData
+                0x000018a8       0x34 .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC.o)
+                0x000018a8                SPI_DAC_WriteTxData
  .text.SPI_DAC_ClearFIFO
-                0x00001888       0x80 .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC.o)
-                0x00001888                SPI_DAC_ClearFIFO
+                0x000018dc       0x80 .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC.o)
+                0x000018dc                SPI_DAC_ClearFIFO
  .text.SPI_DAC_IntClock_Start
-                0x00001908       0x34 .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC_IntClock.o)
-                0x00001908                SPI_DAC_IntClock_Start
- *fill*         0x0000193c        0x4 
- .text          0x00001940       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(CyBootAsmGnu.o)
-                0x00001940                CyDelayCycles
-                0x00001950                CyEnterCriticalSection
-                0x00001958                CyExitCriticalSection
- .text.__errno  0x00001960        0xc c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
-                0x00001960                __errno
+                0x0000195c       0x34 .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC_IntClock.o)
+                0x0000195c                SPI_DAC_IntClock_Start
+ .text.ADC_1_OUT_LSB_Write
+                0x00001990       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_1_OUT_LSB.o)
+                0x00001990                ADC_1_OUT_LSB_Write
+ .text.ADC_1_OUT_MSB_Write
+                0x000019b0       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_1_OUT_MSB.o)
+                0x000019b0                ADC_1_OUT_MSB_Write
+ .text.DAC_IN_MSB_Read
+                0x000019d0       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(DAC_IN_MSB.o)
+                0x000019d0                DAC_IN_MSB_Read
+ .text.DAC_IN_LSB_Read
+                0x000019e8       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(DAC_IN_LSB.o)
+                0x000019e8                DAC_IN_LSB_Read
+ .text.PWM_ADC_CK_Start
+                0x00001a00       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_ADC_CK.o)
+                0x00001a00                PWM_ADC_CK_Start
+ .text.PWM_ADC_CK_Init
+                0x00001a20       0xbc .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_ADC_CK.o)
+                0x00001a20                PWM_ADC_CK_Init
+ .text.PWM_ADC_CK_Enable
+                0x00001adc       0x48 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_ADC_CK.o)
+                0x00001adc                PWM_ADC_CK_Enable
+ .text.PWM_ADC_CK_WritePeriod
+                0x00001b24       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_ADC_CK.o)
+                0x00001b24                PWM_ADC_CK_WritePeriod
+ .text.PWM_ADC_CK_WriteCompare
+                0x00001b44       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_ADC_CK.o)
+                0x00001b44                PWM_ADC_CK_WriteCompare
+ .text.PWM_ADC_CK_SetInterruptMode
+                0x00001b64       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_ADC_CK.o)
+                0x00001b64                PWM_ADC_CK_SetInterruptMode
+ .text.PWM_11_Start
+                0x00001b84       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_11.o)
+                0x00001b84                PWM_11_Start
+ .text.PWM_11_Init
+                0x00001ba4       0x50 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_11.o)
+                0x00001ba4                PWM_11_Init
+ .text.PWM_11_Enable
+                0x00001bf4       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_11.o)
+                0x00001bf4                PWM_11_Enable
+ .text.PWM_11_WriteCounter
+                0x00001c14       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_11.o)
+                0x00001c14                PWM_11_WriteCounter
+ .text.PWM_11_WritePeriod
+                0x00001c34       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_11.o)
+                0x00001c34                PWM_11_WritePeriod
+ .text.PWM_11_WriteCompare
+                0x00001c54       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_11.o)
+                0x00001c54                PWM_11_WriteCompare
+ .text.PWM_7_Start
+                0x00001c74       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_7.o)
+                0x00001c74                PWM_7_Start
+ .text.PWM_7_Init
+                0x00001c94       0x50 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_7.o)
+                0x00001c94                PWM_7_Init
+ .text.PWM_7_Enable
+                0x00001ce4       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_7.o)
+                0x00001ce4                PWM_7_Enable
+ .text.PWM_7_WriteCounter
+                0x00001d04       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_7.o)
+                0x00001d04                PWM_7_WriteCounter
+ .text.PWM_7_WritePeriod
+                0x00001d24       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_7.o)
+                0x00001d24                PWM_7_WritePeriod
+ .text.PWM_7_WriteCompare
+                0x00001d44       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_7.o)
+                0x00001d44                PWM_7_WriteCompare
+ .text.PWM_9_Start
+                0x00001d64       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_9.o)
+                0x00001d64                PWM_9_Start
+ .text.PWM_9_Init
+                0x00001d84       0x50 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_9.o)
+                0x00001d84                PWM_9_Init
+ .text.PWM_9_Enable
+                0x00001dd4       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_9.o)
+                0x00001dd4                PWM_9_Enable
+ .text.PWM_9_WriteCounter
+                0x00001df4       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_9.o)
+                0x00001df4                PWM_9_WriteCounter
+ .text.PWM_9_WritePeriod
+                0x00001e14       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_9.o)
+                0x00001e14                PWM_9_WritePeriod
+ .text.PWM_9_WriteCompare
+                0x00001e34       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_9.o)
+                0x00001e34                PWM_9_WriteCompare
+ .text.PWM_8_Start
+                0x00001e54       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_8.o)
+                0x00001e54                PWM_8_Start
+ .text.PWM_8_Init
+                0x00001e74       0x50 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_8.o)
+                0x00001e74                PWM_8_Init
+ .text.PWM_8_Enable
+                0x00001ec4       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_8.o)
+                0x00001ec4                PWM_8_Enable
+ .text.PWM_8_WriteCounter
+                0x00001ee4       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_8.o)
+                0x00001ee4                PWM_8_WriteCounter
+ .text.PWM_8_WritePeriod
+                0x00001f04       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_8.o)
+                0x00001f04                PWM_8_WritePeriod
+ .text.PWM_8_WriteCompare
+                0x00001f24       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_8.o)
+                0x00001f24                PWM_8_WriteCompare
+ .text.PWM_6_Start
+                0x00001f44       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_6.o)
+                0x00001f44                PWM_6_Start
+ .text.PWM_6_Init
+                0x00001f64       0x50 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_6.o)
+                0x00001f64                PWM_6_Init
+ .text.PWM_6_Enable
+                0x00001fb4       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_6.o)
+                0x00001fb4                PWM_6_Enable
+ .text.PWM_6_WriteCounter
+                0x00001fd4       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_6.o)
+                0x00001fd4                PWM_6_WriteCounter
+ .text.PWM_6_WritePeriod
+                0x00001ff4       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_6.o)
+                0x00001ff4                PWM_6_WritePeriod
+ .text.PWM_6_WriteCompare
+                0x00002014       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_6.o)
+                0x00002014                PWM_6_WriteCompare
+ .text.PWM_10_Start
+                0x00002034       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_10.o)
+                0x00002034                PWM_10_Start
+ .text.PWM_10_Init
+                0x00002054       0x50 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_10.o)
+                0x00002054                PWM_10_Init
+ .text.PWM_10_Enable
+                0x000020a4       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_10.o)
+                0x000020a4                PWM_10_Enable
+ .text.PWM_10_WriteCounter
+                0x000020c4       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_10.o)
+                0x000020c4                PWM_10_WriteCounter
+ .text.PWM_10_WritePeriod
+                0x000020e4       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_10.o)
+                0x000020e4                PWM_10_WritePeriod
+ .text.PWM_10_WriteCompare
+                0x00002104       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_10.o)
+                0x00002104                PWM_10_WriteCompare
+ .text.PWM_4_Start
+                0x00002124       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_4.o)
+                0x00002124                PWM_4_Start
+ .text.PWM_4_Init
+                0x00002144       0x50 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_4.o)
+                0x00002144                PWM_4_Init
+ .text.PWM_4_Enable
+                0x00002194       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_4.o)
+                0x00002194                PWM_4_Enable
+ .text.PWM_4_WriteCounter
+                0x000021b4       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_4.o)
+                0x000021b4                PWM_4_WriteCounter
+ .text.PWM_4_WritePeriod
+                0x000021d4       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_4.o)
+                0x000021d4                PWM_4_WritePeriod
+ .text.PWM_4_WriteCompare
+                0x000021f4       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_4.o)
+                0x000021f4                PWM_4_WriteCompare
+ .text.PWM_5_Start
+                0x00002214       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_5.o)
+                0x00002214                PWM_5_Start
+ .text.PWM_5_Init
+                0x00002234       0x50 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_5.o)
+                0x00002234                PWM_5_Init
+ .text.PWM_5_Enable
+                0x00002284       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_5.o)
+                0x00002284                PWM_5_Enable
+ .text.PWM_5_WriteCounter
+                0x000022a4       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_5.o)
+                0x000022a4                PWM_5_WriteCounter
+ .text.PWM_5_WritePeriod
+                0x000022c4       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_5.o)
+                0x000022c4                PWM_5_WritePeriod
+ .text.PWM_5_WriteCompare
+                0x000022e4       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_5.o)
+                0x000022e4                PWM_5_WriteCompare
+ .text.ADC_SAR_Seq_Init
+                0x00002304       0x50 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq.o)
+                0x00002304                ADC_SAR_Seq_Init
+ .text.ADC_SAR_Seq_Enable
+                0x00002354      0x13c .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq.o)
+                0x00002354                ADC_SAR_Seq_Enable
+ .text.ADC_SAR_Seq_Start
+                0x00002490       0x2c .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq.o)
+                0x00002490                ADC_SAR_Seq_Start
+ .text.ADC_SAR_Seq_StartConvert
+                0x000024bc        0xc .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq.o)
+                0x000024bc                ADC_SAR_Seq_StartConvert
+ .text.ADC_SAR_Seq_GetResult16
+                0x000024c8       0x3c .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq.o)
+                0x000024c8                ADC_SAR_Seq_GetResult16
+ .text.ADC_SAR_Seq_ISR
+                0x00002504       0x54 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_INT.o)
+                0x00002504                ADC_SAR_Seq_ISR
+ .text.ADC_SAR_Seq_SAR_Start
+                0x00002558       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
+                0x00002558                ADC_SAR_Seq_SAR_Start
+ .text.ADC_SAR_Seq_SAR_Init
+                0x00002578       0x2c .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
+                0x00002578                ADC_SAR_Seq_SAR_Init
+ .text.ADC_SAR_Seq_SAR_Enable
+                0x000025a4       0xc0 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
+                0x000025a4                ADC_SAR_Seq_SAR_Enable
+ .text.ADC_SAR_Seq_SAR_SetResolution
+                0x00002664       0x50 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
+                0x00002664                ADC_SAR_Seq_SAR_SetResolution
+ .text.ADC_SAR_Seq_SAR_StartConvert
+                0x000026b4       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
+                0x000026b4                ADC_SAR_Seq_SAR_StartConvert
+ .text.ADC_SAR_Seq_SAR_CalcGain
+                0x000026d4       0x80 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
+ .text.ADC_SAR_Seq_TempBuf_DmaInitialize
+                0x00002754       0x68 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_TempBuf_dma.o)
+                0x00002754                ADC_SAR_Seq_TempBuf_DmaInitialize
+ .text.ADC_SAR_Seq_FinalBuf_DmaInitialize
+                0x000027bc       0x68 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_FinalBuf_dma.o)
+                0x000027bc                ADC_SAR_Seq_FinalBuf_DmaInitialize
+ .text.ADC_SAR_Seq_IRQ_SetVector
+                0x00002824       0x24 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_IRQ.o)
+                0x00002824                ADC_SAR_Seq_IRQ_SetVector
+ .text.ADC_SAR_Seq_IRQ_SetPriority
+                0x00002848       0x24 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_IRQ.o)
+                0x00002848                ADC_SAR_Seq_IRQ_SetPriority
+ .text.ADC_SAR_Seq_IRQ_Enable
+                0x0000286c       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_IRQ.o)
+                0x0000286c                ADC_SAR_Seq_IRQ_Enable
+ .text.DIV_MASK_MSB_Write
+                0x00002884       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(DIV_MASK_MSB.o)
+                0x00002884                DIV_MASK_MSB_Write
+ .text.DIV_MASK_LSB_Write
+                0x000028a4       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(DIV_MASK_LSB.o)
+                0x000028a4                DIV_MASK_LSB_Write
+ *fill*         0x000028c4        0x4 
+ .text          0x000028c8       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(CyBootAsmGnu.o)
+                0x000028c8                CyDelayCycles
+                0x000028d8                CyEnterCriticalSection
+                0x000028e0                CyExitCriticalSection
+ .text.__errno  0x000028e8        0xc c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
+                0x000028e8                __errno
  .text.__libc_init_array
-                0x0000196c       0x4c c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
-                0x0000196c                __libc_init_array
- .text.memcpy   0x000019b8       0x16 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy.o)
-                0x000019b8                memcpy
- .text.memset   0x000019ce       0x10 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
-                0x000019ce                memset
+                0x000028f4       0x4c c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
+                0x000028f4                __libc_init_array
+ .text.memcpy   0x00002940       0x16 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy.o)
+                0x00002940                memcpy
+ .text.memset   0x00002956       0x10 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
+                0x00002956                memset
  *(.plt)
  *(.gnu.warning)
  *(.glue_7t)
@@ -997,89 +1456,89 @@ END GROUP
  *(.ARM.extab* .gnu.linkonce.armextab.*)
  *(.gcc_except_table)
 
-.v4_bx          0x000019e0        0x0
+.v4_bx          0x00002968        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x000019e0        0x0
+.iplt           0x00002968        0x0
  .iplt          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
 
 .eh_frame_hdr
  *(.eh_frame_hdr)
 
-.eh_frame       0x000019e0        0x4
+.eh_frame       0x00002968        0x4
  *(.eh_frame)
- .eh_frame      0x000019e0        0x0 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
- .eh_frame      0x000019e0        0x4 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtend.o
-                0x000019e4                PROVIDE (__exidx_start, .)
+ .eh_frame      0x00002968        0x0 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
+ .eh_frame      0x00002968        0x4 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtend.o
+                0x0000296c                PROVIDE (__exidx_start, .)
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x000019e4                __exidx_end = .
+                0x0000296c                __exidx_end = .
 
-.rodata         0x000019e4      0x704
+.rodata         0x0000296c      0x704
  *(.rodata .rodata.* .gnu.linkonce.r.*)
- .rodata        0x000019e4       0x10 .\ARM_GCC_493\Debug\main.o
- .rodata        0x000019f4       0x3c .\ARM_GCC_493\Debug\ADC_DAC.a(cyfitter_cfg.o)
- .rodata        0x00001a30       0x40 .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1_CustChars.o)
-                0x00001a30                LCD_Char_1_customFonts
- .rodata        0x00001a70      0x640 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter_RAM_Data.o)
-                0x00001a70                Filter_control
-                0x00001b70                Filter_data_a
-                0x00001d70                Filter_data_b
-                0x00001f70                Filter_acu
-                0x00001fb0                Filter_cfsm
+ .rodata        0x0000296c       0x10 .\ARM_GCC_493\Debug\main.o
+ .rodata        0x0000297c       0x3c .\ARM_GCC_493\Debug\ADC_DAC.a(cyfitter_cfg.o)
+ .rodata        0x000029b8       0x40 .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1_CustChars.o)
+                0x000029b8                LCD_Char_1_customFonts
+ .rodata        0x000029f8      0x640 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter_RAM_Data.o)
+                0x000029f8                Filter_control
+                0x00002af8                Filter_data_a
+                0x00002cf8                Filter_data_b
+                0x00002ef8                Filter_acu
+                0x00002f38                Filter_cfsm
  .rodata.str1.1
-                0x000020b0        0x2 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
-                0x000020b4                . = ALIGN (0x4)
- *fill*         0x000020b2        0x2 
+                0x00003038        0x2 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
+                0x0000303c                . = ALIGN (0x4)
+ *fill*         0x0000303a        0x2 
  *(.init)
- .init          0x000020b4        0x4 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crti.o
-                0x000020b4                _init
- .init          0x000020b8        0x8 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtn.o
-                0x000020c0                . = ALIGN (0x4)
-                0x000020c0                __preinit_array_start = .
+ .init          0x0000303c        0x4 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crti.o
+                0x0000303c                _init
+ .init          0x00003040        0x8 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtn.o
+                0x00003048                . = ALIGN (0x4)
+                0x00003048                __preinit_array_start = .
  *(.preinit_array)
-                0x000020c0                __preinit_array_end = .
-                0x000020c0                . = ALIGN (0x4)
-                0x000020c0                __init_array_start = .
+                0x00003048                __preinit_array_end = .
+                0x00003048                . = ALIGN (0x4)
+                0x00003048                __init_array_start = .
  *(SORT(.init_array.*))
  *(.init_array)
- .init_array    0x000020c0        0x4 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
- .init_array    0x000020c4        0x4 .\ARM_GCC_493\Debug\Cm3Start.o
-                0x000020c8                __init_array_end = .
-                0x000020c8                . = ALIGN (0x4)
+ .init_array    0x00003048        0x4 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
+ .init_array    0x0000304c        0x4 .\ARM_GCC_493\Debug\Cm3Start.o
+                0x00003050                __init_array_end = .
+                0x00003050                . = ALIGN (0x4)
  *(.fini)
- .fini          0x000020c8        0x4 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crti.o
-                0x000020c8                _fini
- .fini          0x000020cc        0x8 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtn.o
-                0x000020d4                . = ALIGN (0x4)
-                0x000020d4                __fini_array_start = .
+ .fini          0x00003050        0x4 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crti.o
+                0x00003050                _fini
+ .fini          0x00003054        0x8 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtn.o
+                0x0000305c                . = ALIGN (0x4)
+                0x0000305c                __fini_array_start = .
  *(.fini_array)
- .fini_array    0x000020d4        0x4 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
+ .fini_array    0x0000305c        0x4 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
  *(SORT(.fini_array.*))
-                0x000020d8                __fini_array_end = .
-                0x000020d8                . = ALIGN (0x4)
+                0x00003060                __fini_array_end = .
+                0x00003060                . = ALIGN (0x4)
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT(.ctors.*))
  *crtend.o(.ctors)
-                0x000020d8                . = ALIGN (0x4)
+                0x00003060                . = ALIGN (0x4)
  *crtbegin.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT(.dtors.*))
  *crtend.o(.dtors)
-                0x000020d8                . = ALIGN (0x4)
-                0x000020d8                __cy_regions = .
-                0x000020d8        0x4 LONG 0x20e8 __cy_region_init_ram
-                0x000020dc        0x4 LONG 0x1fff8108 __cy_region_start_data
-                0x000020e0        0x4 LONG 0x80 __cy_region_init_size_ram
-                0x000020e4        0x4 LONG 0x48 __cy_region_zero_size_ram
-                0x000020e8                __cy_regions_end = .
-                0x000020e8                . = ALIGN (0x8)
-                0x000020e8                _etext = .
+                0x00003060                . = ALIGN (0x4)
+                0x00003060                __cy_regions = .
+                0x00003060        0x4 LONG 0x3070 __cy_region_init_ram
+                0x00003064        0x4 LONG 0x1fff8108 __cy_region_start_data
+                0x00003068        0x4 LONG 0x88 __cy_region_init_size_ram
+                0x0000306c        0x4 LONG 0x88 __cy_region_zero_size_ram
+                0x00003070                __cy_regions_end = .
+                0x00003070                . = ALIGN (0x8)
+                0x00003070                _etext = .
 
 .cy_checksum_exclude
-                0x000020e8        0x0
+                0x00003070        0x0
  *(.cy_checksum_exclude)
 
 .ramvectors     0x1fff8000      0x100
@@ -1094,7 +1553,7 @@ END GROUP
  .noinit        0x1fff8104        0x1 .\ARM_GCC_493\Debug\ADC_DAC.a(CyLib.o)
                 0x1fff8104                CyResetStatus
 
-.data           0x1fff8108       0x80 load address 0x000020e8
+.data           0x1fff8108       0x88 load address 0x00003070
                 0x1fff8108                __cy_region_start_data = .
  *(.jcr)
  .jcr           0x1fff8108        0x0 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
@@ -1109,75 +1568,115 @@ END GROUP
                 0x1fff8118                cydelay_freq_khz
                 0x1fff811c                cydelay_freq_mhz
                 0x1fff8120                cydelay_32k_ms
+ .data          0x1fff8124        0x2 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq.o)
+ .data          0x1fff8126        0x1 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_TempBuf_dma.o)
+                0x1fff8126                ADC_SAR_Seq_TempBuf_DmaHandle
+ .data          0x1fff8127        0x1 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_FinalBuf_dma.o)
+                0x1fff8127                ADC_SAR_Seq_FinalBuf_DmaHandle
  .data.impure_data
-                0x1fff8124       0x60 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
+                0x1fff8128       0x60 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
  .data._impure_ptr
-                0x1fff8184        0x4 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
-                0x1fff8184                _impure_ptr
-                0x1fff8188                . = ALIGN (0x8)
+                0x1fff8188        0x4 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
+                0x1fff8188                _impure_ptr
+                0x1fff8190                . = ALIGN (0x8)
+ *fill*         0x1fff818c        0x4 
  *(.ram)
-                0x1fff8188                _edata = .
+                0x1fff8190                _edata = .
 
-.igot.plt       0x1fff8188        0x0 load address 0x00002168
+.igot.plt       0x1fff8190        0x0 load address 0x000030f8
  .igot.plt      0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
 
-.bss            0x1fff8188       0x48 load address 0x00002168
-                0x1fff8188                PROVIDE (__bss_start__, .)
+.bss            0x1fff8190       0x88 load address 0x000030f8
+                0x1fff8190                PROVIDE (__bss_start__, .)
  *(.shbss)
  *(.bss .bss.* .gnu.linkonce.b.*)
- .bss           0x1fff8188       0x1c c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
- .bss           0x1fff81a4        0x2 .\ARM_GCC_493\Debug\main.o
-                0x1fff81a4                val
-                0x1fff81a5                dataready
- .bss           0x1fff81a6        0x2 .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1.o)
-                0x1fff81a6                LCD_Char_1_enableState
-                0x1fff81a7                LCD_Char_1_initVar
- .bss           0x1fff81a8        0x1 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1.o)
-                0x1fff81a8                ADC_SAR_1_initVar
- .bss           0x1fff81a9        0x1 .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_1.o)
-                0x1fff81a9                Opamp_1_initVar
- .bss           0x1fff81aa        0x1 .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_2.o)
-                0x1fff81aa                Opamp_2_initVar
- .bss           0x1fff81ab        0x1 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2.o)
-                0x1fff81ab                ADC_SAR_2_initVar
- .bss           0x1fff81ac        0x1 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter.o)
-                0x1fff81ac                Filter_initVar
- .bss           0x1fff81ad        0x1 .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_3.o)
-                0x1fff81ad                Opamp_3_initVar
- .bss           0x1fff81ae        0x1 .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC.o)
-                0x1fff81ae                SPI_DAC_initVar
+ .bss           0x1fff8190       0x1c c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
+ .bss           0x1fff81ac       0x12 .\ARM_GCC_493\Debug\main.o
+                0x1fff81ac                BIT_MASK_CTRL
+                0x1fff81ae                DIV_MASK_CTRL
+                0x1fff81b0                OLD_BIT_MASK_DEPTH
+                0x1fff81b2                OLD_DIV_MASK_DEPTH
+                0x1fff81b4                FINAL_OUT
+                0x1fff81b6                MASK_CTRL
+                0x1fff81b8                OLD_MASK_DEPTH
+                0x1fff81ba                MASK_EFFECT
+                0x1fff81bc                FRQ_CTRL
+ .bss           0x1fff81be        0x2 .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1.o)
+                0x1fff81be                LCD_Char_1_enableState
+                0x1fff81bf                LCD_Char_1_initVar
+ .bss           0x1fff81c0        0x1 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1.o)
+                0x1fff81c0                ADC_SAR_1_initVar
+ .bss           0x1fff81c1        0x1 .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_1.o)
+                0x1fff81c1                Opamp_1_initVar
+ .bss           0x1fff81c2        0x1 .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_2.o)
+                0x1fff81c2                Opamp_2_initVar
+ .bss           0x1fff81c3        0x1 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter.o)
+                0x1fff81c3                Filter_initVar
+ .bss           0x1fff81c4        0x1 .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC.o)
+                0x1fff81c4                SPI_DAC_initVar
+ .bss           0x1fff81c5        0x1 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_ADC_CK.o)
+                0x1fff81c5                PWM_ADC_CK_initVar
+ .bss           0x1fff81c6        0x1 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_11.o)
+                0x1fff81c6                PWM_11_initVar
+ .bss           0x1fff81c7        0x1 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_7.o)
+                0x1fff81c7                PWM_7_initVar
+ .bss           0x1fff81c8        0x1 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_9.o)
+                0x1fff81c8                PWM_9_initVar
+ .bss           0x1fff81c9        0x1 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_8.o)
+                0x1fff81c9                PWM_8_initVar
+ .bss           0x1fff81ca        0x1 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_6.o)
+                0x1fff81ca                PWM_6_initVar
+ .bss           0x1fff81cb        0x1 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_10.o)
+                0x1fff81cb                PWM_10_initVar
+ .bss           0x1fff81cc        0x1 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_4.o)
+                0x1fff81cc                PWM_4_initVar
+ .bss           0x1fff81cd        0x1 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_5.o)
+                0x1fff81cd                PWM_5_initVar
+ *fill*         0x1fff81ce        0x2 
+ .bss           0x1fff81d0       0x10 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq.o)
+                0x1fff81d0                ADC_SAR_Seq_initVar
+ .bss           0x1fff81e0        0x1 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_INT.o)
+                0x1fff81e0                chan
+ .bss           0x1fff81e1        0x1 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
+                0x1fff81e1                ADC_SAR_Seq_SAR_initVar
  *(COMMON)
- *fill*         0x1fff81af        0x1 
- COMMON         0x1fff81b0        0x4 .\ARM_GCC_493\Debug\main.o
-                0x1fff81b0                POT_READ_SCALED
-                0x1fff81b2                EFFECT_ADC
- COMMON         0x1fff81b4        0xa .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1.o)
-                0x1fff81b4                ADC_SAR_1_countsPerVolt
-                0x1fff81b6                ADC_SAR_1_shift
-                0x1fff81b8                ADC_SAR_1_countsPer10Volt
-                0x1fff81bc                ADC_SAR_1_offset
- *fill*         0x1fff81be        0x2 
- COMMON         0x1fff81c0        0xa .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2.o)
-                0x1fff81c0                ADC_SAR_2_countsPer10Volt
-                0x1fff81c4                ADC_SAR_2_shift
-                0x1fff81c6                ADC_SAR_2_offset
-                0x1fff81c8                ADC_SAR_2_countsPerVolt
-                0x1fff81d0                . = ALIGN (0x8)
- *fill*         0x1fff81ca        0x6 
+ *fill*         0x1fff81e2        0x2 
+ COMMON         0x1fff81e4       0x14 .\ARM_GCC_493\Debug\main.o
+                0x1fff81e4                seq_sar_dataReady
+                0x1fff81e5                audio_dataReady
+                0x1fff81e8                audio_result
+                0x1fff81ec                audio_msb
+                0x1fff81ed                audio_lsb
+                0x1fff81f0                SAR_ADCResultArray
+ COMMON         0x1fff81f8        0xa .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1.o)
+                0x1fff81f8                ADC_SAR_1_countsPerVolt
+                0x1fff81fa                ADC_SAR_1_shift
+                0x1fff81fc                ADC_SAR_1_countsPer10Volt
+                0x1fff8200                ADC_SAR_1_offset
+ *fill*         0x1fff8202        0x2 
+ COMMON         0x1fff8204        0x8 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq.o)
+                0x1fff8204                ADC_SAR_Seq_finalArray
+ COMMON         0x1fff820c        0xa .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
+                0x1fff820c                ADC_SAR_Seq_SAR_offset
+                0x1fff820e                ADC_SAR_Seq_SAR_countsPerVolt
+                0x1fff8210                ADC_SAR_Seq_SAR_countsPer10Volt
+                0x1fff8214                ADC_SAR_Seq_SAR_shift
+                0x1fff8218                . = ALIGN (0x8)
+ *fill*         0x1fff8216        0x2 
  *(.ram.b)
-                0x1fff81d0                _end = .
-                0x1fff81d0                __end = .
-                0x1fff81d0                PROVIDE (end, .)
-                0x1fff81d0                PROVIDE (__bss_end__, .)
-                0x000020e8                __cy_region_init_ram = LOADADDR (.data)
-                0x00000080                __cy_region_init_size_ram = (_edata - ADDR (.data))
-                0x00000048                __cy_region_zero_size_ram = (_end - _edata)
+                0x1fff8218                _end = .
+                0x1fff8218                __end = .
+                0x1fff8218                PROVIDE (end, .)
+                0x1fff8218                PROVIDE (__bss_end__, .)
+                0x00003070                __cy_region_init_ram = LOADADDR (.data)
+                0x00000088                __cy_region_init_size_ram = (_edata - ADDR (.data))
+                0x00000088                __cy_region_zero_size_ram = (_end - _edata)
 
-.heap           0x1fff81d0       0x80 load address 0x00002168
-                0x1fff81d0                . = _end
-                0x1fff8250                . = (. + 0x80)
- *fill*         0x1fff81d0       0x80 
-                0x1fff8250                __cy_heap_limit = .
+.heap           0x1fff8218       0x80 load address 0x000030f8
+                0x1fff8218                . = _end
+                0x1fff8298                . = (. + 0x80)
+ *fill*         0x1fff8218       0x80 
+                0x1fff8298                __cy_heap_limit = .
 
 .stack          0x20007800      0x800
                 0x20007800                __cy_stack_limit = .
@@ -1193,9 +1692,9 @@ END GROUP
 .cyloadablemeta
  *(.cyloadablemeta)
 
-.cyconfigecc    0x80000000      0x5d8
+.cyconfigecc    0x80000000      0xd08
  *(.cyconfigecc)
- .cyconfigecc   0x80000000      0x5d8 .\ARM_GCC_493\Debug\cymetadata.o
+ .cyconfigecc   0x80000000      0xd08 .\ARM_GCC_493\Debug\cymetadata.o
                 0x80000000                cy_meta_configecc
 
 .cycustnvl      0x90000000        0x4
@@ -1224,7 +1723,7 @@ END GROUP
  .cymeta        0x90500000        0xc .\ARM_GCC_493\Debug\cymetadata.o
                 0x90500000                cy_metadata
 
-.rel.dyn        0x00002168        0x0 load address 0x9050000c
+.rel.dyn        0x000030f8        0x0 load address 0x9050000c
  .rel.iplt      0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
 
 .stab
@@ -1245,28 +1744,28 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000      0xc00
+.debug_aranges  0x00000000     0x1268
  *(.debug_aranges)
  .debug_aranges
-                0x00000000       0x28 .\ARM_GCC_493\Debug\main.o
+                0x00000000       0x38 .\ARM_GCC_493\Debug\main.o
  .debug_aranges
-                0x00000028       0x18 .\ARM_GCC_493\Debug\cymetadata.o
+                0x00000038       0x18 .\ARM_GCC_493\Debug\cymetadata.o
  .debug_aranges
-                0x00000040       0x48 .\ARM_GCC_493\Debug\Cm3Start.o
+                0x00000050       0x48 .\ARM_GCC_493\Debug\Cm3Start.o
  .debug_aranges
-                0x00000088       0x60 .\ARM_GCC_493\Debug\ADC_DAC.a(cyfitter_cfg.o)
+                0x00000098       0x60 .\ARM_GCC_493\Debug\ADC_DAC.a(cyfitter_cfg.o)
  .debug_aranges
-                0x000000e8       0x98 .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1.o)
+                0x000000f8       0x98 .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1.o)
  .debug_aranges
-                0x00000180       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1_CustChars.o)
+                0x00000190       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1_CustChars.o)
  .debug_aranges
-                0x000001a0       0xd8 .\ARM_GCC_493\Debug\ADC_DAC.a(CyDmac.o)
+                0x000001b0       0xd8 .\ARM_GCC_493\Debug\ADC_DAC.a(CyDmac.o)
  .debug_aranges
-                0x00000278      0x2a0 .\ARM_GCC_493\Debug\ADC_DAC.a(CyLib.o)
+                0x00000288      0x2a0 .\ARM_GCC_493\Debug\ADC_DAC.a(CyLib.o)
  .debug_aranges
-                0x00000518       0x98 .\ARM_GCC_493\Debug\ADC_DAC.a(cyPm.o)
+                0x00000528       0x98 .\ARM_GCC_493\Debug\ADC_DAC.a(cyPm.o)
  .debug_aranges
-                0x000005b0       0xa8 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1.o)
+                0x000005c0       0x98 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1.o)
  .debug_aranges
                 0x00000658       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_INT.o)
  .debug_aranges
@@ -1274,209 +1773,345 @@ END GROUP
  .debug_aranges
                 0x000006b8       0x40 .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_2.o)
  .debug_aranges
-                0x000006f8       0x70 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_theACLK.o)
+                0x000006f8       0x80 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_IRQ.o)
  .debug_aranges
-                0x00000768       0xa8 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2.o)
+                0x00000778       0x80 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter.o)
  .debug_aranges
-                0x00000810       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2_INT.o)
+                0x000007f8       0x28 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter_PVT.o)
  .debug_aranges
-                0x00000830       0x70 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2_theACLK.o)
+                0x00000820       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter_RAM_Data.o)
  .debug_aranges
-                0x000008a0       0x80 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter.o)
+                0x00000838       0xd8 .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC.o)
  .debug_aranges
-                0x00000920       0x28 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter_PVT.o)
+                0x00000910       0x70 .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC_IntClock.o)
  .debug_aranges
-                0x00000948       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter_RAM_Data.o)
+                0x00000980       0x28 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_1_OUT_LSB.o)
  .debug_aranges
-                0x00000960       0x40 .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_3.o)
+                0x000009a8       0x28 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_1_OUT_MSB.o)
  .debug_aranges
-                0x000009a0       0xd8 .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC.o)
+                0x000009d0       0x40 .\ARM_GCC_493\Debug\ADC_DAC.a(DAC_IN_MSB.o)
  .debug_aranges
-                0x00000a78       0x70 .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC_IntClock.o)
+                0x00000a10       0x40 .\ARM_GCC_493\Debug\ADC_DAC.a(DAC_IN_LSB.o)
  .debug_aranges
-                0x00000ae8       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(CyBootAsmGnu.o)
+                0x00000a50       0x78 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_ADC_CK.o)
  .debug_aranges
-                0x00000b08       0x80 .\ARM_GCC_493\Debug\ADC_DAC.a(CyFlash.o)
+                0x00000ac8       0x80 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_11.o)
  .debug_aranges
-                0x00000b88       0x78 .\ARM_GCC_493\Debug\ADC_DAC.a(CySpc.o)
+                0x00000b48       0x80 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_7.o)
+ .debug_aranges
+                0x00000bc8       0x80 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_9.o)
+ .debug_aranges
+                0x00000c48       0x80 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_8.o)
+ .debug_aranges
+                0x00000cc8       0x80 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_6.o)
+ .debug_aranges
+                0x00000d48       0x80 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_10.o)
+ .debug_aranges
+                0x00000dc8       0x80 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_4.o)
+ .debug_aranges
+                0x00000e48       0x80 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_5.o)
+ .debug_aranges
+                0x00000ec8       0xa0 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq.o)
+ .debug_aranges
+                0x00000f68       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_INT.o)
+ .debug_aranges
+                0x00000f88       0xa8 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
+ .debug_aranges
+                0x00001030       0x28 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_TempBuf_dma.o)
+ .debug_aranges
+                0x00001058       0x28 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_FinalBuf_dma.o)
+ .debug_aranges
+                0x00001080       0x80 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_IRQ.o)
+ .debug_aranges
+                0x00001100       0x28 .\ARM_GCC_493\Debug\ADC_DAC.a(DIV_MASK_MSB.o)
+ .debug_aranges
+                0x00001128       0x28 .\ARM_GCC_493\Debug\ADC_DAC.a(DIV_MASK_LSB.o)
+ .debug_aranges
+                0x00001150       0x20 .\ARM_GCC_493\Debug\ADC_DAC.a(CyBootAsmGnu.o)
+ .debug_aranges
+                0x00001170       0x80 .\ARM_GCC_493\Debug\ADC_DAC.a(CyFlash.o)
+ .debug_aranges
+                0x000011f0       0x78 .\ARM_GCC_493\Debug\ADC_DAC.a(CySpc.o)
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x5238
+.debug_info     0x00000000     0x715e
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x00000000      0x198 .\ARM_GCC_493\Debug\main.o
- .debug_info    0x00000198      0x13d .\ARM_GCC_493\Debug\cymetadata.o
- .debug_info    0x000002d5      0x319 .\ARM_GCC_493\Debug\Cm3Start.o
- .debug_info    0x000005ee      0x47a .\ARM_GCC_493\Debug\ADC_DAC.a(cyfitter_cfg.o)
- .debug_info    0x00000a68      0x3e8 .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1.o)
- .debug_info    0x00000e50       0xf7 .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1_CustChars.o)
- .debug_info    0x00000f47      0x8b4 .\ARM_GCC_493\Debug\ADC_DAC.a(CyDmac.o)
- .debug_info    0x000017fb      0xe4a .\ARM_GCC_493\Debug\ADC_DAC.a(CyLib.o)
- .debug_info    0x00002645      0x561 .\ARM_GCC_493\Debug\ADC_DAC.a(cyPm.o)
- .debug_info    0x00002ba6      0x478 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1.o)
- .debug_info    0x0000301e       0x92 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_INT.o)
- .debug_info    0x000030b0      0x11e .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_1.o)
- .debug_info    0x000031ce      0x11e .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_2.o)
- .debug_info    0x000032ec      0x25d .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_theACLK.o)
- .debug_info    0x00003549      0x478 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2.o)
- .debug_info    0x000039c1       0x92 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2_INT.o)
- .debug_info    0x00003a53      0x25d .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2_theACLK.o)
- .debug_info    0x00003cb0      0x3aa .\ARM_GCC_493\Debug\ADC_DAC.a(Filter.o)
- .debug_info    0x0000405a       0xe9 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter_PVT.o)
- .debug_info    0x00004143      0x12b .\ARM_GCC_493\Debug\ADC_DAC.a(Filter_RAM_Data.o)
- .debug_info    0x0000426e      0x11e .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_3.o)
- .debug_info    0x0000438c      0x40a .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC.o)
- .debug_info    0x00004796      0x25d .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC_IntClock.o)
- .debug_info    0x000049f3       0x88 .\ARM_GCC_493\Debug\ADC_DAC.a(CyBootAsmGnu.o)
- .debug_info    0x00004a7b      0x36a .\ARM_GCC_493\Debug\ADC_DAC.a(CyFlash.o)
- .debug_info    0x00004de5      0x453 .\ARM_GCC_493\Debug\ADC_DAC.a(CySpc.o)
+ .debug_info    0x00000000      0x280 .\ARM_GCC_493\Debug\main.o
+ .debug_info    0x00000280      0x13f .\ARM_GCC_493\Debug\cymetadata.o
+ .debug_info    0x000003bf      0x319 .\ARM_GCC_493\Debug\Cm3Start.o
+ .debug_info    0x000006d8      0x469 .\ARM_GCC_493\Debug\ADC_DAC.a(cyfitter_cfg.o)
+ .debug_info    0x00000b41      0x3e8 .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1.o)
+ .debug_info    0x00000f29       0xf7 .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1_CustChars.o)
+ .debug_info    0x00001020      0x8b4 .\ARM_GCC_493\Debug\ADC_DAC.a(CyDmac.o)
+ .debug_info    0x000018d4      0xe4a .\ARM_GCC_493\Debug\ADC_DAC.a(CyLib.o)
+ .debug_info    0x0000271e      0x561 .\ARM_GCC_493\Debug\ADC_DAC.a(cyPm.o)
+ .debug_info    0x00002c7f      0x454 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1.o)
+ .debug_info    0x000030d3      0x104 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_INT.o)
+ .debug_info    0x000031d7      0x11e .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_1.o)
+ .debug_info    0x000032f5      0x11e .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_2.o)
+ .debug_info    0x00003413      0x23a .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_IRQ.o)
+ .debug_info    0x0000364d      0x3aa .\ARM_GCC_493\Debug\ADC_DAC.a(Filter.o)
+ .debug_info    0x000039f7       0xe9 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter_PVT.o)
+ .debug_info    0x00003ae0      0x12b .\ARM_GCC_493\Debug\ADC_DAC.a(Filter_RAM_Data.o)
+ .debug_info    0x00003c0b      0x40a .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC.o)
+ .debug_info    0x00004015      0x25d .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC_IntClock.o)
+ .debug_info    0x00004272       0xd7 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_1_OUT_LSB.o)
+ .debug_info    0x00004349       0xd7 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_1_OUT_MSB.o)
+ .debug_info    0x00004420      0x13b .\ARM_GCC_493\Debug\ADC_DAC.a(DAC_IN_MSB.o)
+ .debug_info    0x0000455b      0x13b .\ARM_GCC_493\Debug\ADC_DAC.a(DAC_IN_LSB.o)
+ .debug_info    0x00004696      0x22e .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_ADC_CK.o)
+ .debug_info    0x000048c4      0x227 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_11.o)
+ .debug_info    0x00004aeb      0x227 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_7.o)
+ .debug_info    0x00004d12      0x227 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_9.o)
+ .debug_info    0x00004f39      0x227 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_8.o)
+ .debug_info    0x00005160      0x227 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_6.o)
+ .debug_info    0x00005387      0x227 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_10.o)
+ .debug_info    0x000055ae      0x227 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_4.o)
+ .debug_info    0x000057d5      0x227 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_5.o)
+ .debug_info    0x000059fc      0x3a4 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq.o)
+ .debug_info    0x00005da0       0xe8 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_INT.o)
+ .debug_info    0x00005e88      0x45b .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
+ .debug_info    0x000062e3      0x114 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_TempBuf_dma.o)
+ .debug_info    0x000063f7      0x114 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_FinalBuf_dma.o)
+ .debug_info    0x0000650b      0x23a .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_IRQ.o)
+ .debug_info    0x00006745       0xd7 .\ARM_GCC_493\Debug\ADC_DAC.a(DIV_MASK_MSB.o)
+ .debug_info    0x0000681c       0xd7 .\ARM_GCC_493\Debug\ADC_DAC.a(DIV_MASK_LSB.o)
+ .debug_info    0x000068f3       0xae .\ARM_GCC_493\Debug\ADC_DAC.a(CyBootAsmGnu.o)
+ .debug_info    0x000069a1      0x36a .\ARM_GCC_493\Debug\ADC_DAC.a(CyFlash.o)
+ .debug_info    0x00006d0b      0x453 .\ARM_GCC_493\Debug\ADC_DAC.a(CySpc.o)
 
-.debug_abbrev   0x00000000     0x1aa3
+.debug_abbrev   0x00000000     0x2abe
  *(.debug_abbrev)
- .debug_abbrev  0x00000000       0xd2 .\ARM_GCC_493\Debug\main.o
- .debug_abbrev  0x000000d2       0x77 .\ARM_GCC_493\Debug\cymetadata.o
- .debug_abbrev  0x00000149      0x1b6 .\ARM_GCC_493\Debug\Cm3Start.o
- .debug_abbrev  0x000002ff      0x1b7 .\ARM_GCC_493\Debug\ADC_DAC.a(cyfitter_cfg.o)
- .debug_abbrev  0x000004b6      0x131 .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1.o)
- .debug_abbrev  0x000005e7       0xa2 .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1_CustChars.o)
- .debug_abbrev  0x00000689      0x194 .\ARM_GCC_493\Debug\ADC_DAC.a(CyDmac.o)
- .debug_abbrev  0x0000081d      0x217 .\ARM_GCC_493\Debug\ADC_DAC.a(CyLib.o)
- .debug_abbrev  0x00000a34      0x161 .\ARM_GCC_493\Debug\ADC_DAC.a(cyPm.o)
- .debug_abbrev  0x00000b95      0x173 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1.o)
- .debug_abbrev  0x00000d08       0x42 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_INT.o)
- .debug_abbrev  0x00000d4a       0xa8 .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_1.o)
- .debug_abbrev  0x00000df2       0xa8 .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_2.o)
- .debug_abbrev  0x00000e9a      0x11d .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_theACLK.o)
- .debug_abbrev  0x00000fb7      0x173 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2.o)
- .debug_abbrev  0x0000112a       0x42 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2_INT.o)
- .debug_abbrev  0x0000116c      0x11d .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2_theACLK.o)
- .debug_abbrev  0x00001289      0x15e .\ARM_GCC_493\Debug\ADC_DAC.a(Filter.o)
- .debug_abbrev  0x000013e7       0x7f .\ARM_GCC_493\Debug\ADC_DAC.a(Filter_PVT.o)
- .debug_abbrev  0x00001466       0x66 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter_RAM_Data.o)
- .debug_abbrev  0x000014cc       0xa8 .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_3.o)
- .debug_abbrev  0x00001574      0x156 .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC.o)
- .debug_abbrev  0x000016ca      0x11d .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC_IntClock.o)
- .debug_abbrev  0x000017e7       0x14 .\ARM_GCC_493\Debug\ADC_DAC.a(CyBootAsmGnu.o)
- .debug_abbrev  0x000017fb      0x13c .\ARM_GCC_493\Debug\ADC_DAC.a(CyFlash.o)
- .debug_abbrev  0x00001937      0x16c .\ARM_GCC_493\Debug\ADC_DAC.a(CySpc.o)
+ .debug_abbrev  0x00000000      0x114 .\ARM_GCC_493\Debug\main.o
+ .debug_abbrev  0x00000114       0x77 .\ARM_GCC_493\Debug\cymetadata.o
+ .debug_abbrev  0x0000018b      0x1b6 .\ARM_GCC_493\Debug\Cm3Start.o
+ .debug_abbrev  0x00000341      0x1b7 .\ARM_GCC_493\Debug\ADC_DAC.a(cyfitter_cfg.o)
+ .debug_abbrev  0x000004f8      0x131 .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1.o)
+ .debug_abbrev  0x00000629       0xa2 .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1_CustChars.o)
+ .debug_abbrev  0x000006cb      0x194 .\ARM_GCC_493\Debug\ADC_DAC.a(CyDmac.o)
+ .debug_abbrev  0x0000085f      0x217 .\ARM_GCC_493\Debug\ADC_DAC.a(CyLib.o)
+ .debug_abbrev  0x00000a76      0x161 .\ARM_GCC_493\Debug\ADC_DAC.a(cyPm.o)
+ .debug_abbrev  0x00000bd7      0x15b .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1.o)
+ .debug_abbrev  0x00000d32       0x67 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_INT.o)
+ .debug_abbrev  0x00000d99       0xa8 .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_1.o)
+ .debug_abbrev  0x00000e41       0xa8 .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_2.o)
+ .debug_abbrev  0x00000ee9      0x172 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_IRQ.o)
+ .debug_abbrev  0x0000105b      0x15e .\ARM_GCC_493\Debug\ADC_DAC.a(Filter.o)
+ .debug_abbrev  0x000011b9       0x7f .\ARM_GCC_493\Debug\ADC_DAC.a(Filter_PVT.o)
+ .debug_abbrev  0x00001238       0x66 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter_RAM_Data.o)
+ .debug_abbrev  0x0000129e      0x156 .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC.o)
+ .debug_abbrev  0x000013f4      0x11d .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC_IntClock.o)
+ .debug_abbrev  0x00001511       0x81 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_1_OUT_LSB.o)
+ .debug_abbrev  0x00001592       0x81 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_1_OUT_MSB.o)
+ .debug_abbrev  0x00001613       0xaa .\ARM_GCC_493\Debug\ADC_DAC.a(DAC_IN_MSB.o)
+ .debug_abbrev  0x000016bd       0xaa .\ARM_GCC_493\Debug\ADC_DAC.a(DAC_IN_LSB.o)
+ .debug_abbrev  0x00001767      0x116 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_ADC_CK.o)
+ .debug_abbrev  0x0000187d      0x116 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_11.o)
+ .debug_abbrev  0x00001993      0x116 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_7.o)
+ .debug_abbrev  0x00001aa9      0x116 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_9.o)
+ .debug_abbrev  0x00001bbf      0x116 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_8.o)
+ .debug_abbrev  0x00001cd5      0x116 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_6.o)
+ .debug_abbrev  0x00001deb      0x116 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_10.o)
+ .debug_abbrev  0x00001f01      0x116 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_4.o)
+ .debug_abbrev  0x00002017      0x116 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_5.o)
+ .debug_abbrev  0x0000212d      0x155 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq.o)
+ .debug_abbrev  0x00002282       0x83 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_INT.o)
+ .debug_abbrev  0x00002305      0x173 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
+ .debug_abbrev  0x00002478       0x8b .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_TempBuf_dma.o)
+ .debug_abbrev  0x00002503       0x8b .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_FinalBuf_dma.o)
+ .debug_abbrev  0x0000258e      0x172 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_IRQ.o)
+ .debug_abbrev  0x00002700       0x81 .\ARM_GCC_493\Debug\ADC_DAC.a(DIV_MASK_MSB.o)
+ .debug_abbrev  0x00002781       0x81 .\ARM_GCC_493\Debug\ADC_DAC.a(DIV_MASK_LSB.o)
+ .debug_abbrev  0x00002802       0x14 .\ARM_GCC_493\Debug\ADC_DAC.a(CyBootAsmGnu.o)
+ .debug_abbrev  0x00002816      0x13c .\ARM_GCC_493\Debug\ADC_DAC.a(CyFlash.o)
+ .debug_abbrev  0x00002952      0x16c .\ARM_GCC_493\Debug\ADC_DAC.a(CySpc.o)
 
-.debug_line     0x00000000     0x2c58
+.debug_line     0x00000000     0x3ce0
  *(.debug_line)
- .debug_line    0x00000000      0x1b2 .\ARM_GCC_493\Debug\main.o
- .debug_line    0x000001b2       0x51 .\ARM_GCC_493\Debug\cymetadata.o
- .debug_line    0x00000203      0x1db .\ARM_GCC_493\Debug\Cm3Start.o
- .debug_line    0x000003de      0x238 .\ARM_GCC_493\Debug\ADC_DAC.a(cyfitter_cfg.o)
- .debug_line    0x00000616      0x1f9 .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1.o)
- .debug_line    0x0000080f       0x82 .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1_CustChars.o)
- .debug_line    0x00000891      0x2b5 .\ARM_GCC_493\Debug\ADC_DAC.a(CyDmac.o)
- .debug_line    0x00000b46      0x882 .\ARM_GCC_493\Debug\ADC_DAC.a(CyLib.o)
- .debug_line    0x000013c8      0x37f .\ARM_GCC_493\Debug\ADC_DAC.a(cyPm.o)
- .debug_line    0x00001747      0x20d .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1.o)
- .debug_line    0x00001954       0x59 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_INT.o)
- .debug_line    0x000019ad       0xaf .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_1.o)
- .debug_line    0x00001a5c       0xaf .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_2.o)
- .debug_line    0x00001b0b      0x1ac .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_theACLK.o)
- .debug_line    0x00001cb7      0x20d .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2.o)
- .debug_line    0x00001ec4       0x59 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2_INT.o)
- .debug_line    0x00001f1d      0x1ac .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2_theACLK.o)
- .debug_line    0x000020c9      0x180 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter.o)
- .debug_line    0x00002249       0x76 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter_PVT.o)
- .debug_line    0x000022bf       0x56 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter_RAM_Data.o)
- .debug_line    0x00002315       0xaf .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_3.o)
- .debug_line    0x000023c4      0x269 .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC.o)
- .debug_line    0x0000262d      0x1ab .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC_IntClock.o)
- .debug_line    0x000027d8       0x66 .\ARM_GCC_493\Debug\ADC_DAC.a(CyBootAsmGnu.o)
- .debug_line    0x0000283e      0x205 .\ARM_GCC_493\Debug\ADC_DAC.a(CyFlash.o)
- .debug_line    0x00002a43      0x215 .\ARM_GCC_493\Debug\ADC_DAC.a(CySpc.o)
+ .debug_line    0x00000000      0x206 .\ARM_GCC_493\Debug\main.o
+ .debug_line    0x00000206       0x51 .\ARM_GCC_493\Debug\cymetadata.o
+ .debug_line    0x00000257      0x1db .\ARM_GCC_493\Debug\Cm3Start.o
+ .debug_line    0x00000432      0x236 .\ARM_GCC_493\Debug\ADC_DAC.a(cyfitter_cfg.o)
+ .debug_line    0x00000668      0x1f9 .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1.o)
+ .debug_line    0x00000861       0x82 .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1_CustChars.o)
+ .debug_line    0x000008e3      0x2b5 .\ARM_GCC_493\Debug\ADC_DAC.a(CyDmac.o)
+ .debug_line    0x00000b98      0x882 .\ARM_GCC_493\Debug\ADC_DAC.a(CyLib.o)
+ .debug_line    0x0000141a      0x37f .\ARM_GCC_493\Debug\ADC_DAC.a(cyPm.o)
+ .debug_line    0x00001799      0x1e8 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1.o)
+ .debug_line    0x00001981       0x69 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_INT.o)
+ .debug_line    0x000019ea       0xaf .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_1.o)
+ .debug_line    0x00001a99       0xaf .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_2.o)
+ .debug_line    0x00001b48      0x148 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_IRQ.o)
+ .debug_line    0x00001c90      0x180 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter.o)
+ .debug_line    0x00001e10       0x76 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter_PVT.o)
+ .debug_line    0x00001e86       0x56 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter_RAM_Data.o)
+ .debug_line    0x00001edc      0x269 .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC.o)
+ .debug_line    0x00002145      0x1ab .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC_IntClock.o)
+ .debug_line    0x000022f0       0x76 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_1_OUT_LSB.o)
+ .debug_line    0x00002366       0x76 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_1_OUT_MSB.o)
+ .debug_line    0x000023dc       0xae .\ARM_GCC_493\Debug\ADC_DAC.a(DAC_IN_MSB.o)
+ .debug_line    0x0000248a       0xad .\ARM_GCC_493\Debug\ADC_DAC.a(DAC_IN_LSB.o)
+ .debug_line    0x00002537      0x145 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_ADC_CK.o)
+ .debug_line    0x0000267c      0x148 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_11.o)
+ .debug_line    0x000027c4      0x147 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_7.o)
+ .debug_line    0x0000290b      0x147 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_9.o)
+ .debug_line    0x00002a52      0x147 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_8.o)
+ .debug_line    0x00002b99      0x147 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_6.o)
+ .debug_line    0x00002ce0      0x148 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_10.o)
+ .debug_line    0x00002e28      0x147 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_4.o)
+ .debug_line    0x00002f6f      0x147 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_5.o)
+ .debug_line    0x000030b6      0x1cf .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq.o)
+ .debug_line    0x00003285       0x7b .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_INT.o)
+ .debug_line    0x00003300      0x20f .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
+ .debug_line    0x0000350f       0x86 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_TempBuf_dma.o)
+ .debug_line    0x00003595       0x87 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_FinalBuf_dma.o)
+ .debug_line    0x0000361c      0x15a .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_IRQ.o)
+ .debug_line    0x00003776       0x75 .\ARM_GCC_493\Debug\ADC_DAC.a(DIV_MASK_MSB.o)
+ .debug_line    0x000037eb       0x75 .\ARM_GCC_493\Debug\ADC_DAC.a(DIV_MASK_LSB.o)
+ .debug_line    0x00003860       0x66 .\ARM_GCC_493\Debug\ADC_DAC.a(CyBootAsmGnu.o)
+ .debug_line    0x000038c6      0x205 .\ARM_GCC_493\Debug\ADC_DAC.a(CyFlash.o)
+ .debug_line    0x00003acb      0x215 .\ARM_GCC_493\Debug\ADC_DAC.a(CySpc.o)
 
-.debug_frame    0x00000000     0x3008
+.debug_frame    0x00000000     0x474c
  *(.debug_frame)
- .debug_frame   0x00000000       0x58 .\ARM_GCC_493\Debug\main.o
- .debug_frame   0x00000058       0xd8 .\ARM_GCC_493\Debug\Cm3Start.o
- .debug_frame   0x00000130      0x16c .\ARM_GCC_493\Debug\ADC_DAC.a(cyfitter_cfg.o)
- .debug_frame   0x0000029c      0x260 .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1.o)
- .debug_frame   0x000004fc       0x38 .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1_CustChars.o)
- .debug_frame   0x00000534      0x3d0 .\ARM_GCC_493\Debug\ADC_DAC.a(CyDmac.o)
- .debug_frame   0x00000904      0xc0c .\ARM_GCC_493\Debug\ADC_DAC.a(CyLib.o)
- .debug_frame   0x00001510      0x234 .\ARM_GCC_493\Debug\ADC_DAC.a(cyPm.o)
- .debug_frame   0x00001744      0x2c0 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1.o)
+ .debug_frame   0x00000000       0xa0 .\ARM_GCC_493\Debug\main.o
+ .debug_frame   0x000000a0       0xd8 .\ARM_GCC_493\Debug\Cm3Start.o
+ .debug_frame   0x00000178      0x16c .\ARM_GCC_493\Debug\ADC_DAC.a(cyfitter_cfg.o)
+ .debug_frame   0x000002e4      0x260 .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1.o)
+ .debug_frame   0x00000544       0x38 .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1_CustChars.o)
+ .debug_frame   0x0000057c      0x3d0 .\ARM_GCC_493\Debug\ADC_DAC.a(CyDmac.o)
+ .debug_frame   0x0000094c      0xc0c .\ARM_GCC_493\Debug\ADC_DAC.a(CyLib.o)
+ .debug_frame   0x00001558      0x234 .\ARM_GCC_493\Debug\ADC_DAC.a(cyPm.o)
+ .debug_frame   0x0000178c      0x278 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1.o)
  .debug_frame   0x00001a04       0x34 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_INT.o)
  .debug_frame   0x00001a38       0xb8 .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_1.o)
  .debug_frame   0x00001af0       0xb8 .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_2.o)
- .debug_frame   0x00001ba8      0x1b4 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_theACLK.o)
- .debug_frame   0x00001d5c      0x2c0 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2.o)
- .debug_frame   0x0000201c       0x34 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2_INT.o)
- .debug_frame   0x00002050      0x1b4 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2_theACLK.o)
- .debug_frame   0x00002204      0x204 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter.o)
- .debug_frame   0x00002408       0x60 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter_PVT.o)
- .debug_frame   0x00002468       0xb8 .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_3.o)
- .debug_frame   0x00002520      0x38c .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC.o)
- .debug_frame   0x000028ac      0x1b4 .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC_IntClock.o)
- .debug_frame   0x00002a60      0x210 .\ARM_GCC_493\Debug\ADC_DAC.a(CyFlash.o)
- .debug_frame   0x00002c70      0x1f8 .\ARM_GCC_493\Debug\ADC_DAC.a(CySpc.o)
- .debug_frame   0x00002e68       0x28 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_aeabi_ldivmod.o)
- .debug_frame   0x00002e90       0x54 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(bpabi.o)
- .debug_frame   0x00002ee4       0x34 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_divdi3.o)
- .debug_frame   0x00002f18       0x34 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_udivdi3.o)
- .debug_frame   0x00002f4c       0x20 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
- .debug_frame   0x00002f6c       0x28 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-exit.o)
- .debug_frame   0x00002f94       0x2c c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
- .debug_frame   0x00002fc0       0x28 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy.o)
- .debug_frame   0x00002fe8       0x20 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
+ .debug_frame   0x00001ba8      0x1e8 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_IRQ.o)
+ .debug_frame   0x00001d90      0x204 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter.o)
+ .debug_frame   0x00001f94       0x60 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter_PVT.o)
+ .debug_frame   0x00001ff4      0x38c .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC.o)
+ .debug_frame   0x00002380      0x1b4 .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC_IntClock.o)
+ .debug_frame   0x00002534       0x5c .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_1_OUT_LSB.o)
+ .debug_frame   0x00002590       0x5c .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_1_OUT_MSB.o)
+ .debug_frame   0x000025ec       0xd0 .\ARM_GCC_493\Debug\ADC_DAC.a(DAC_IN_MSB.o)
+ .debug_frame   0x000026bc       0xd0 .\ARM_GCC_493\Debug\ADC_DAC.a(DAC_IN_LSB.o)
+ .debug_frame   0x0000278c      0x1d0 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_ADC_CK.o)
+ .debug_frame   0x0000295c      0x1f4 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_11.o)
+ .debug_frame   0x00002b50      0x1f4 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_7.o)
+ .debug_frame   0x00002d44      0x1f4 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_9.o)
+ .debug_frame   0x00002f38      0x1f4 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_8.o)
+ .debug_frame   0x0000312c      0x1f4 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_6.o)
+ .debug_frame   0x00003320      0x1f4 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_10.o)
+ .debug_frame   0x00003514      0x1f4 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_4.o)
+ .debug_frame   0x00003708      0x1f4 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_5.o)
+ .debug_frame   0x000038fc      0x264 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq.o)
+ .debug_frame   0x00003b60       0x34 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_INT.o)
+ .debug_frame   0x00003b94      0x2c0 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
+ .debug_frame   0x00003e54       0x58 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_TempBuf_dma.o)
+ .debug_frame   0x00003eac       0x58 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_FinalBuf_dma.o)
+ .debug_frame   0x00003f04      0x1e8 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_IRQ.o)
+ .debug_frame   0x000040ec       0x5c .\ARM_GCC_493\Debug\ADC_DAC.a(DIV_MASK_MSB.o)
+ .debug_frame   0x00004148       0x5c .\ARM_GCC_493\Debug\ADC_DAC.a(DIV_MASK_LSB.o)
+ .debug_frame   0x000041a4      0x210 .\ARM_GCC_493\Debug\ADC_DAC.a(CyFlash.o)
+ .debug_frame   0x000043b4      0x1f8 .\ARM_GCC_493\Debug\ADC_DAC.a(CySpc.o)
+ .debug_frame   0x000045ac       0x28 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_aeabi_ldivmod.o)
+ .debug_frame   0x000045d4       0x54 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(bpabi.o)
+ .debug_frame   0x00004628       0x34 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_divdi3.o)
+ .debug_frame   0x0000465c       0x34 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_udivdi3.o)
+ .debug_frame   0x00004690       0x20 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
+ .debug_frame   0x000046b0       0x28 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-exit.o)
+ .debug_frame   0x000046d8       0x2c c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
+ .debug_frame   0x00004704       0x28 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy.o)
+ .debug_frame   0x0000472c       0x20 c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
 
-.debug_str      0x00000000     0x27b8
+.debug_str      0x00000000     0x382e
  *(.debug_str)
- .debug_str     0x00000000      0x1bd .\ARM_GCC_493\Debug\main.o
+ .debug_str     0x00000000      0x284 .\ARM_GCC_493\Debug\main.o
+                                0x2d5 (size before relaxing)
+ .debug_str     0x00000284       0x75 .\ARM_GCC_493\Debug\cymetadata.o
+                                0x208 (size before relaxing)
+ .debug_str     0x000002f9      0x13c .\ARM_GCC_493\Debug\Cm3Start.o
+                                0x2e9 (size before relaxing)
+ .debug_str     0x00000435      0x183 .\ARM_GCC_493\Debug\ADC_DAC.a(cyfitter_cfg.o)
+                                0x34a (size before relaxing)
+ .debug_str     0x000005b8      0x214 .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1.o)
+                                0x3ce (size before relaxing)
+ .debug_str     0x000007cc       0x54 .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1_CustChars.o)
+                                0x206 (size before relaxing)
+ .debug_str     0x00000820      0x375 .\ARM_GCC_493\Debug\ADC_DAC.a(CyDmac.o)
+                                0x52f (size before relaxing)
+ .debug_str     0x00000b95      0x7ca .\ARM_GCC_493\Debug\ADC_DAC.a(CyLib.o)
+                                0x9fc (size before relaxing)
+ .debug_str     0x0000135f      0x365 .\ARM_GCC_493\Debug\ADC_DAC.a(cyPm.o)
+                                0x549 (size before relaxing)
+ .debug_str     0x000016c4      0x233 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1.o)
+                                0x422 (size before relaxing)
+ .debug_str     0x000018f7       0x35 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_INT.o)
+                                0x208 (size before relaxing)
+ .debug_str     0x0000192c       0x79 .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_1.o)
+                                0x217 (size before relaxing)
+ .debug_str     0x000019a5       0x79 .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_2.o)
+                                0x217 (size before relaxing)
+ .debug_str     0x00001a1e      0x156 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_IRQ.o)
+                                0x328 (size before relaxing)
+ .debug_str     0x00001b74      0x157 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter.o)
+                                0x31d (size before relaxing)
+ .debug_str     0x00001ccb       0x55 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter_PVT.o)
+                                0x1ed (size before relaxing)
+ .debug_str     0x00001d20       0x29 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter_RAM_Data.o)
                                 0x1fe (size before relaxing)
- .debug_str     0x000001bd       0x75 .\ARM_GCC_493\Debug\cymetadata.o
-                                0x1e2 (size before relaxing)
- .debug_str     0x00000232      0x13c .\ARM_GCC_493\Debug\Cm3Start.o
-                                0x2c3 (size before relaxing)
- .debug_str     0x0000036e      0x183 .\ARM_GCC_493\Debug\ADC_DAC.a(cyfitter_cfg.o)
-                                0x32a (size before relaxing)
- .debug_str     0x000004f1      0x214 .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1.o)
-                                0x3a8 (size before relaxing)
- .debug_str     0x00000705       0x54 .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1_CustChars.o)
-                                0x1e0 (size before relaxing)
- .debug_str     0x00000759      0x375 .\ARM_GCC_493\Debug\ADC_DAC.a(CyDmac.o)
-                                0x509 (size before relaxing)
- .debug_str     0x00000ace      0x7ca .\ARM_GCC_493\Debug\ADC_DAC.a(CyLib.o)
-                                0x9d6 (size before relaxing)
- .debug_str     0x00001298      0x365 .\ARM_GCC_493\Debug\ADC_DAC.a(cyPm.o)
-                                0x523 (size before relaxing)
- .debug_str     0x000015fd      0x260 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1.o)
-                                0x429 (size before relaxing)
- .debug_str     0x0000185d       0x35 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_INT.o)
-                                0x193 (size before relaxing)
- .debug_str     0x00001892       0x79 .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_1.o)
-                                0x1f1 (size before relaxing)
- .debug_str     0x0000190b       0x79 .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_2.o)
-                                0x1f1 (size before relaxing)
- .debug_str     0x00001984      0x1da .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_theACLK.o)
-                                0x35e (size before relaxing)
- .debug_str     0x00001b5e      0x202 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2.o)
-                                0x429 (size before relaxing)
- .debug_str     0x00001d60       0x35 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2_INT.o)
-                                0x193 (size before relaxing)
- .debug_str     0x00001d95      0x18f .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2_theACLK.o)
-                                0x35e (size before relaxing)
- .debug_str     0x00001f24      0x157 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter.o)
-                                0x2f7 (size before relaxing)
- .debug_str     0x0000207b       0x55 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter_PVT.o)
-                                0x1c7 (size before relaxing)
- .debug_str     0x000020d0       0x29 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter_RAM_Data.o)
-                                0x1d8 (size before relaxing)
- .debug_str     0x000020f9       0x79 .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_3.o)
-                                0x1f1 (size before relaxing)
- .debug_str     0x00002172      0x266 .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC.o)
-                                0x405 (size before relaxing)
- .debug_str     0x000023d8      0x183 .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC_IntClock.o)
-                                0x352 (size before relaxing)
- .debug_str     0x0000255b      0x13e .\ARM_GCC_493\Debug\ADC_DAC.a(CyFlash.o)
+ .debug_str     0x00001d49      0x266 .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC.o)
+                                0x42b (size before relaxing)
+ .debug_str     0x00001faf      0x1ce .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC_IntClock.o)
+                                0x378 (size before relaxing)
+ .debug_str     0x0000217d       0x4e .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_1_OUT_LSB.o)
+                                0x1e5 (size before relaxing)
+ .debug_str     0x000021cb       0x4e .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_1_OUT_MSB.o)
+                                0x1e5 (size before relaxing)
+ .debug_str     0x00002219       0x94 .\ARM_GCC_493\Debug\ADC_DAC.a(DAC_IN_MSB.o)
+                                0x240 (size before relaxing)
+ .debug_str     0x000022ad       0x94 .\ARM_GCC_493\Debug\ADC_DAC.a(DAC_IN_LSB.o)
+                                0x240 (size before relaxing)
+ .debug_str     0x00002341      0x171 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_ADC_CK.o)
+                                0x325 (size before relaxing)
+ .debug_str     0x000024b2      0x127 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_11.o)
                                 0x2e2 (size before relaxing)
- .debug_str     0x00002699      0x11f .\ARM_GCC_493\Debug\ADC_DAC.a(CySpc.o)
-                                0x2df (size before relaxing)
+ .debug_str     0x000025d9      0x110 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_7.o)
+                                0x2d3 (size before relaxing)
+ .debug_str     0x000026e9      0x110 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_9.o)
+                                0x2d3 (size before relaxing)
+ .debug_str     0x000027f9      0x110 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_8.o)
+                                0x2d3 (size before relaxing)
+ .debug_str     0x00002909      0x110 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_6.o)
+                                0x2d3 (size before relaxing)
+ .debug_str     0x00002a19      0x11f .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_10.o)
+                                0x2e2 (size before relaxing)
+ .debug_str     0x00002b38      0x110 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_4.o)
+                                0x2d3 (size before relaxing)
+ .debug_str     0x00002c48      0x110 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_5.o)
+                                0x2d3 (size before relaxing)
+ .debug_str     0x00002d58      0x25d .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq.o)
+                                0x461 (size before relaxing)
+ .debug_str     0x00002fb5       0x39 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_INT.o)
+                                0x1fd (size before relaxing)
+ .debug_str     0x00002fee      0x27c .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
+                                0x4d2 (size before relaxing)
+ .debug_str     0x0000326a       0xcb .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_TempBuf_dma.o)
+                                0x265 (size before relaxing)
+ .debug_str     0x00003335       0x94 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_FinalBuf_dma.o)
+                                0x269 (size before relaxing)
+ .debug_str     0x000033c9      0x172 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_IRQ.o)
+                                0x344 (size before relaxing)
+ .debug_str     0x0000353b       0x4b .\ARM_GCC_493\Debug\ADC_DAC.a(DIV_MASK_MSB.o)
+                                0x1e2 (size before relaxing)
+ .debug_str     0x00003586       0x4b .\ARM_GCC_493\Debug\ADC_DAC.a(DIV_MASK_LSB.o)
+                                0x1e2 (size before relaxing)
+ .debug_str     0x000035d1      0x13e .\ARM_GCC_493\Debug\ADC_DAC.a(CyFlash.o)
+                                0x308 (size before relaxing)
+ .debug_str     0x0000370f      0x11f .\ARM_GCC_493\Debug\ADC_DAC.a(CySpc.o)
+                                0x305 (size before relaxing)
 
 .debug_loc
  *(.debug_loc)
@@ -1484,31 +2119,48 @@ END GROUP
 .debug_macinfo
  *(.debug_macinfo)
 
-.debug_ranges   0x00000000      0xa40
+.debug_ranges   0x00000000      0xf98
  *(.debug_ranges)
- .debug_ranges  0x00000000       0x18 .\ARM_GCC_493\Debug\main.o
- .debug_ranges  0x00000018       0x38 .\ARM_GCC_493\Debug\Cm3Start.o
- .debug_ranges  0x00000050       0x50 .\ARM_GCC_493\Debug\ADC_DAC.a(cyfitter_cfg.o)
- .debug_ranges  0x000000a0       0x88 .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1.o)
- .debug_ranges  0x00000128       0x10 .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1_CustChars.o)
- .debug_ranges  0x00000138       0xc8 .\ARM_GCC_493\Debug\ADC_DAC.a(CyDmac.o)
- .debug_ranges  0x00000200      0x290 .\ARM_GCC_493\Debug\ADC_DAC.a(CyLib.o)
- .debug_ranges  0x00000490       0x88 .\ARM_GCC_493\Debug\ADC_DAC.a(cyPm.o)
- .debug_ranges  0x00000518       0x98 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1.o)
+ .debug_ranges  0x00000000       0x28 .\ARM_GCC_493\Debug\main.o
+ .debug_ranges  0x00000028       0x38 .\ARM_GCC_493\Debug\Cm3Start.o
+ .debug_ranges  0x00000060       0x50 .\ARM_GCC_493\Debug\ADC_DAC.a(cyfitter_cfg.o)
+ .debug_ranges  0x000000b0       0x88 .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1.o)
+ .debug_ranges  0x00000138       0x10 .\ARM_GCC_493\Debug\ADC_DAC.a(LCD_Char_1_CustChars.o)
+ .debug_ranges  0x00000148       0xc8 .\ARM_GCC_493\Debug\ADC_DAC.a(CyDmac.o)
+ .debug_ranges  0x00000210      0x290 .\ARM_GCC_493\Debug\ADC_DAC.a(CyLib.o)
+ .debug_ranges  0x000004a0       0x88 .\ARM_GCC_493\Debug\ADC_DAC.a(cyPm.o)
+ .debug_ranges  0x00000528       0x88 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1.o)
  .debug_ranges  0x000005b0       0x10 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_INT.o)
  .debug_ranges  0x000005c0       0x30 .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_1.o)
  .debug_ranges  0x000005f0       0x30 .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_2.o)
- .debug_ranges  0x00000620       0x60 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_theACLK.o)
- .debug_ranges  0x00000680       0x98 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2.o)
- .debug_ranges  0x00000718       0x10 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2_INT.o)
- .debug_ranges  0x00000728       0x60 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2_theACLK.o)
- .debug_ranges  0x00000788       0x70 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter.o)
- .debug_ranges  0x000007f8       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter_PVT.o)
- .debug_ranges  0x00000810       0x30 .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_3.o)
- .debug_ranges  0x00000840       0xc8 .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC.o)
- .debug_ranges  0x00000908       0x60 .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC_IntClock.o)
- .debug_ranges  0x00000968       0x70 .\ARM_GCC_493\Debug\ADC_DAC.a(CyFlash.o)
- .debug_ranges  0x000009d8       0x68 .\ARM_GCC_493\Debug\ADC_DAC.a(CySpc.o)
+ .debug_ranges  0x00000620       0x70 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_IRQ.o)
+ .debug_ranges  0x00000690       0x70 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter.o)
+ .debug_ranges  0x00000700       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter_PVT.o)
+ .debug_ranges  0x00000718       0xc8 .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC.o)
+ .debug_ranges  0x000007e0       0x60 .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC_IntClock.o)
+ .debug_ranges  0x00000840       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_1_OUT_LSB.o)
+ .debug_ranges  0x00000858       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_1_OUT_MSB.o)
+ .debug_ranges  0x00000870       0x30 .\ARM_GCC_493\Debug\ADC_DAC.a(DAC_IN_MSB.o)
+ .debug_ranges  0x000008a0       0x30 .\ARM_GCC_493\Debug\ADC_DAC.a(DAC_IN_LSB.o)
+ .debug_ranges  0x000008d0       0x68 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_ADC_CK.o)
+ .debug_ranges  0x00000938       0x70 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_11.o)
+ .debug_ranges  0x000009a8       0x70 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_7.o)
+ .debug_ranges  0x00000a18       0x70 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_9.o)
+ .debug_ranges  0x00000a88       0x70 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_8.o)
+ .debug_ranges  0x00000af8       0x70 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_6.o)
+ .debug_ranges  0x00000b68       0x70 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_10.o)
+ .debug_ranges  0x00000bd8       0x70 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_4.o)
+ .debug_ranges  0x00000c48       0x70 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_5.o)
+ .debug_ranges  0x00000cb8       0x90 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq.o)
+ .debug_ranges  0x00000d48       0x10 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_INT.o)
+ .debug_ranges  0x00000d58       0x98 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
+ .debug_ranges  0x00000df0       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_TempBuf_dma.o)
+ .debug_ranges  0x00000e08       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_FinalBuf_dma.o)
+ .debug_ranges  0x00000e20       0x70 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_IRQ.o)
+ .debug_ranges  0x00000e90       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(DIV_MASK_MSB.o)
+ .debug_ranges  0x00000ea8       0x18 .\ARM_GCC_493\Debug\ADC_DAC.a(DIV_MASK_LSB.o)
+ .debug_ranges  0x00000ec0       0x70 .\ARM_GCC_493\Debug\ADC_DAC.a(CyFlash.o)
+ .debug_ranges  0x00000f30       0x68 .\ARM_GCC_493\Debug\ADC_DAC.a(CySpc.o)
 
 .comment        0x00000000       0x70
  .comment       0x00000000       0x70 .\ARM_GCC_493\Debug\main.o
@@ -1525,16 +2177,33 @@ END GROUP
  .comment       0x00000000       0x71 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_INT.o)
  .comment       0x00000000       0x71 .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_1.o)
  .comment       0x00000000       0x71 .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_2.o)
- .comment       0x00000000       0x71 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_theACLK.o)
- .comment       0x00000000       0x71 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2.o)
- .comment       0x00000000       0x71 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2_INT.o)
- .comment       0x00000000       0x71 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2_theACLK.o)
+ .comment       0x00000000       0x71 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_IRQ.o)
  .comment       0x00000000       0x71 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter.o)
  .comment       0x00000000       0x71 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter_PVT.o)
  .comment       0x00000000       0x71 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter_RAM_Data.o)
- .comment       0x00000000       0x71 .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_3.o)
  .comment       0x00000000       0x71 .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC.o)
  .comment       0x00000000       0x71 .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC_IntClock.o)
+ .comment       0x00000000       0x71 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_1_OUT_LSB.o)
+ .comment       0x00000000       0x71 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_1_OUT_MSB.o)
+ .comment       0x00000000       0x71 .\ARM_GCC_493\Debug\ADC_DAC.a(DAC_IN_MSB.o)
+ .comment       0x00000000       0x71 .\ARM_GCC_493\Debug\ADC_DAC.a(DAC_IN_LSB.o)
+ .comment       0x00000000       0x71 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_ADC_CK.o)
+ .comment       0x00000000       0x71 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_11.o)
+ .comment       0x00000000       0x71 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_7.o)
+ .comment       0x00000000       0x71 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_9.o)
+ .comment       0x00000000       0x71 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_8.o)
+ .comment       0x00000000       0x71 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_6.o)
+ .comment       0x00000000       0x71 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_10.o)
+ .comment       0x00000000       0x71 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_4.o)
+ .comment       0x00000000       0x71 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_5.o)
+ .comment       0x00000000       0x71 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq.o)
+ .comment       0x00000000       0x71 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_INT.o)
+ .comment       0x00000000       0x71 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
+ .comment       0x00000000       0x71 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_TempBuf_dma.o)
+ .comment       0x00000000       0x71 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_FinalBuf_dma.o)
+ .comment       0x00000000       0x71 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_IRQ.o)
+ .comment       0x00000000       0x71 .\ARM_GCC_493\Debug\ADC_DAC.a(DIV_MASK_MSB.o)
+ .comment       0x00000000       0x71 .\ARM_GCC_493\Debug\ADC_DAC.a(DIV_MASK_LSB.o)
  .comment       0x00000000       0x71 .\ARM_GCC_493\Debug\ADC_DAC.a(CyFlash.o)
  .comment       0x00000000       0x71 .\ARM_GCC_493\Debug\ADC_DAC.a(CySpc.o)
 
@@ -1589,61 +2258,95 @@ END GROUP
  .ARM.attributes
                 0x000002c9       0x33 .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_2.o)
  .ARM.attributes
-                0x000002fc       0x33 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_theACLK.o)
+                0x000002fc       0x33 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_1_IRQ.o)
  .ARM.attributes
-                0x0000032f       0x33 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2.o)
+                0x0000032f       0x33 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter.o)
  .ARM.attributes
-                0x00000362       0x33 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2_INT.o)
+                0x00000362       0x33 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter_PVT.o)
  .ARM.attributes
-                0x00000395       0x33 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_2_theACLK.o)
+                0x00000395       0x33 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter_RAM_Data.o)
  .ARM.attributes
-                0x000003c8       0x33 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter.o)
+                0x000003c8       0x33 .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC.o)
  .ARM.attributes
-                0x000003fb       0x33 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter_PVT.o)
+                0x000003fb       0x33 .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC_IntClock.o)
  .ARM.attributes
-                0x0000042e       0x33 .\ARM_GCC_493\Debug\ADC_DAC.a(Filter_RAM_Data.o)
+                0x0000042e       0x33 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_1_OUT_LSB.o)
  .ARM.attributes
-                0x00000461       0x33 .\ARM_GCC_493\Debug\ADC_DAC.a(Opamp_3.o)
+                0x00000461       0x33 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_1_OUT_MSB.o)
  .ARM.attributes
-                0x00000494       0x33 .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC.o)
+                0x00000494       0x33 .\ARM_GCC_493\Debug\ADC_DAC.a(DAC_IN_MSB.o)
  .ARM.attributes
-                0x000004c7       0x33 .\ARM_GCC_493\Debug\ADC_DAC.a(SPI_DAC_IntClock.o)
+                0x000004c7       0x33 .\ARM_GCC_493\Debug\ADC_DAC.a(DAC_IN_LSB.o)
  .ARM.attributes
-                0x000004fa       0x21 .\ARM_GCC_493\Debug\ADC_DAC.a(CyBootAsmGnu.o)
+                0x000004fa       0x33 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_ADC_CK.o)
  .ARM.attributes
-                0x0000051b       0x33 .\ARM_GCC_493\Debug\ADC_DAC.a(CyFlash.o)
+                0x0000052d       0x33 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_11.o)
  .ARM.attributes
-                0x0000054e       0x33 .\ARM_GCC_493\Debug\ADC_DAC.a(CySpc.o)
+                0x00000560       0x33 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_7.o)
  .ARM.attributes
-                0x00000581       0x1d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_addsubsf3.o)
+                0x00000593       0x33 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_9.o)
  .ARM.attributes
-                0x0000059e       0x1d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_muldivsf3.o)
+                0x000005c6       0x33 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_8.o)
  .ARM.attributes
-                0x000005bb       0x1d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_aeabi_ldivmod.o)
+                0x000005f9       0x33 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_6.o)
  .ARM.attributes
-                0x000005d8       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(bpabi.o)
+                0x0000062c       0x33 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_10.o)
  .ARM.attributes
-                0x00000605       0x1d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_dvmd_tls.o)
+                0x0000065f       0x33 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_4.o)
  .ARM.attributes
-                0x00000622       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_divdi3.o)
+                0x00000692       0x33 .\ARM_GCC_493\Debug\ADC_DAC.a(PWM_5.o)
  .ARM.attributes
-                0x0000064f       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_udivdi3.o)
+                0x000006c5       0x33 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq.o)
  .ARM.attributes
-                0x0000067c       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
+                0x000006f8       0x33 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_INT.o)
  .ARM.attributes
-                0x000006a9       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-exit.o)
+                0x0000072b       0x33 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_SAR.o)
  .ARM.attributes
-                0x000006d6       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
+                0x0000075e       0x33 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_TempBuf_dma.o)
  .ARM.attributes
-                0x00000703       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
+                0x00000791       0x33 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_FinalBuf_dma.o)
  .ARM.attributes
-                0x00000730       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy.o)
+                0x000007c4       0x33 .\ARM_GCC_493\Debug\ADC_DAC.a(ADC_SAR_Seq_IRQ.o)
  .ARM.attributes
-                0x0000075d       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
+                0x000007f7       0x33 .\ARM_GCC_493\Debug\ADC_DAC.a(DIV_MASK_MSB.o)
  .ARM.attributes
-                0x0000078a       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtend.o
+                0x0000082a       0x33 .\ARM_GCC_493\Debug\ADC_DAC.a(DIV_MASK_LSB.o)
  .ARM.attributes
-                0x000007b7       0x1d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtn.o
+                0x0000085d       0x21 .\ARM_GCC_493\Debug\ADC_DAC.a(CyBootAsmGnu.o)
+ .ARM.attributes
+                0x0000087e       0x33 .\ARM_GCC_493\Debug\ADC_DAC.a(CyFlash.o)
+ .ARM.attributes
+                0x000008b1       0x33 .\ARM_GCC_493\Debug\ADC_DAC.a(CySpc.o)
+ .ARM.attributes
+                0x000008e4       0x1d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_addsubsf3.o)
+ .ARM.attributes
+                0x00000901       0x1d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_muldivsf3.o)
+ .ARM.attributes
+                0x0000091e       0x1d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_aeabi_ldivmod.o)
+ .ARM.attributes
+                0x0000093b       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(bpabi.o)
+ .ARM.attributes
+                0x00000968       0x1d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_dvmd_tls.o)
+ .ARM.attributes
+                0x00000985       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_divdi3.o)
+ .ARM.attributes
+                0x000009b2       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_udivdi3.o)
+ .ARM.attributes
+                0x000009df       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
+ .ARM.attributes
+                0x00000a0c       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-exit.o)
+ .ARM.attributes
+                0x00000a39       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
+ .ARM.attributes
+                0x00000a66       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
+ .ARM.attributes
+                0x00000a93       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy.o)
+ .ARM.attributes
+                0x00000ac0       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
+ .ARM.attributes
+                0x00000aed       0x2d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtend.o
+ .ARM.attributes
+                0x00000b1a       0x1d c:/program files (x86)/cypress/psoc creator/4.0/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtn.o
 
 /DISCARD/
  *(.note.GNU-stack)
